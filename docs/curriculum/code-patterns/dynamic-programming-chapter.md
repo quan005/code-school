@@ -1,0 +1,1121 @@
+---
+title: "Dynamic Programming"
+chapterSlug: "dynamic-programming"
+order: 15
+audience: "Advanced elementary students (Grades 1–5) with basic coding knowledge"
+estimatedMinutes: 120
+skills:
+  - "Explain why saving smaller answers can make a problem faster"
+  - "Recognize overlapping subproblems"
+  - "Build answers from base cases upward"
+  - "Trace simple dynamic programming tables step by step"
+---
+
+# Dynamic Programming
+
+> Audience: Advanced 1st–5th grade students with basic coding knowledge  
+> Language used in code examples: TypeScript  
+> Big idea: Dynamic programming solves a big problem by using answers to smaller repeated problems and saving those answers so we do not redo work.
+
+---
+
+# Chapter Overview
+
+Imagine climbing a staircase.
+
+If you want to know how many ways there are to reach the top, you might notice something interesting:
+
+To get to step 5, you must come from:
+- step 4
+- or step 3
+
+That means the answer for step 5 depends on smaller answers.
+
+This is the heart of **dynamic programming**, often called **DP**.
+
+That name sounds big, but the idea is friendly:
+
+> solve a small piece once, save it, and use it later
+
+Dynamic programming helps when:
+
+- a big problem can be broken into smaller problems
+- the same smaller problems appear again and again
+- saving those smaller answers avoids repeated work
+
+DP is one of the most powerful patterns in algorithms because many hard problems become easier once you notice the repeated smaller pieces.
+
+In this chapter, we will learn:
+
+1. **Introduction to Dynamic Programming**
+   - Intuition
+   - Overlapping Subproblems
+   - Base Cases
+   - Top-Down vs Bottom-Up
+   - Real-world Example
+2. **Fibonacci Number**
+3. **Climbing Stairs**
+4. **Min Cost Climbing Stairs**
+5. **House Robber**
+6. **Unique Paths**
+7. **Coin Change**
+8. **Chapter Review**
+9. **Mastery Check**
+
+---
+
+# Introduction to Dynamic Programming
+
+## Intuition
+
+Dynamic programming is about solving a big problem by building from smaller answers.
+
+Suppose we want the Fibonacci numbers:
+
+- `F(0) = 0`
+- `F(1) = 1`
+- `F(2) = F(1) + F(0) = 1`
+- `F(3) = F(2) + F(1) = 2`
+- `F(4) = F(3) + F(2) = 3`
+
+Notice how each answer depends on earlier ones.
+
+Now notice something else:
+if we try to compute `F(5)` recursively, we may ask for `F(3)` many different times.
+
+That repeated work is what DP tries to avoid.
+
+---
+
+## Overlapping subproblems
+
+A problem has **overlapping subproblems** when the same smaller question shows up more than once.
+
+In kid words, it means:
+
+> "Oops, I am solving the same little problem again."
+
+Example:
+To compute `F(5)`, we need:
+- `F(4)`
+- `F(3)`
+
+But `F(4)` also needs `F(3)`.
+
+So `F(3)` repeats.
+
+If we save `F(3)` the first time, we do not have to compute it again.
+
+That is a major DP idea.
+
+---
+
+## Base cases
+
+DP needs **base cases**.
+
+These are the simplest known answers.
+
+You can think of base cases as the first tiny answers we already know for sure.
+
+For Fibonacci:
+- `F(0) = 0`
+- `F(1) = 1`
+
+Once we know the base cases, we can build larger answers from them.
+
+Without base cases, the whole structure has nowhere to begin.
+
+---
+
+## Two common DP styles
+
+### 1. Top-down (memoization)
+
+Start with the big problem.
+Use recursion.
+Save answers as you compute them.
+
+This is like:
+- ask the big question
+- break it into smaller ones
+- remember what you already solved
+
+### 2. Bottom-up (tabulation)
+
+Start with the smallest base cases.
+Build upward step by step.
+
+This is like:
+- fill in the little answers first
+- then use them to build larger answers
+
+Both are DP.
+In this chapter, we will often use bottom-up because it is easier to see.
+
+---
+
+## Why dynamic programming is useful
+
+DP is useful when:
+- smaller answers help build larger answers
+- the same smaller answers repeat
+- brute force tries too many repeated possibilities
+
+Instead of solving the same thing again and again, we store answers and reuse them.
+
+---
+
+## When To Use Dynamic Programming
+
+A problem may be a good fit for DP if:
+
+- the answer depends on smaller versions of the same problem
+- you hear phrases like “minimum,” “maximum,” “number of ways”
+- recursive brute force repeats many states
+- the problem can be described with a recurrence rule
+
+A big clue is when you can say something like:
+
+> “The answer for this position depends on one or two earlier positions.”
+
+---
+
+## Real-world Example
+
+### Building with blocks
+
+Imagine you are building a staircase out of blocks.
+
+To know how many ways to build step 6, you may only need to know the number of ways to build step 5 and step 4.
+
+If you already wrote those answers down, then step 6 becomes easy.
+
+That is DP:
+- save the smaller answers
+- build the larger answer
+
+---
+
+## Chapter Outline
+
+In this chapter:
+
+- **Fibonacci Number** teaches the most classic DP pattern
+- **Climbing Stairs** teaches counting ways
+- **Min Cost Climbing Stairs** teaches minimum-cost DP
+- **House Robber** teaches “take or skip” decisions with saved answers
+- **Unique Paths** teaches grid DP
+- **Coin Change** teaches minimum coins using repeated smaller answers
+
+---
+
+# Lesson 1: Fibonacci Number
+
+## Problem
+
+Given `n`, return the `n`th Fibonacci number.
+
+The Fibonacci numbers follow this rule:
+
+- `F(0) = 0`
+- `F(1) = 1`
+- `F(n) = F(n - 1) + F(n - 2)` for `n >= 2`
+
+### Example
+
+**Input:** `n = 6`  
+**Output:** `8`
+
+Because:
+- `0, 1, 1, 2, 3, 5, 8`
+
+---
+
+## Intuition
+
+Each Fibonacci number depends on the two before it.
+
+That means:
+- if we know `F(4)` and `F(5)`
+- then `F(6)` is easy
+
+This is perfect for bottom-up DP.
+
+---
+
+## Walkthrough
+
+To find `F(6)`:
+
+Start with:
+- `F(0) = 0`
+- `F(1) = 1`
+
+Then build:
+- `F(2) = 1`
+- `F(3) = 2`
+- `F(4) = 3`
+- `F(5) = 5`
+- `F(6) = 8`
+
+We keep reusing earlier answers.
+
+---
+
+## TypeScript Solution
+
+```ts
+function fib(n: number): number {
+  if (n === 0) {
+    return 0;
+  }
+
+  if (n === 1) {
+    return 1;
+  }
+
+  const dp = new Array(n + 1).fill(0);
+  dp[0] = 0;
+  dp[1] = 1;
+
+  for (let i = 2; i <= n; i++) {
+    dp[i] = dp[i - 1] + dp[i - 2];
+  }
+
+  return dp[n];
+}
+```
+
+---
+
+## Why it works
+
+Each position uses the exact recurrence rule:
+
+```txt
+dp[i] = dp[i - 1] + dp[i - 2]
+```
+
+The base cases start the process, and every later answer builds from them.
+
+---
+
+## Complexity Analysis
+
+- **Time:** `O(n)`
+- **Space:** `O(n)`
+
+---
+
+## Test Cases
+
+```ts
+fib(0) // 0
+fib(1) // 1
+fib(2) // 1
+fib(6) // 8
+fib(10) // 55
+```
+
+---
+
+## Quick Check
+
+What two earlier values do we need to compute a Fibonacci number?
+
+**Answer:** The two previous Fibonacci numbers.
+
+---
+
+# Lesson 2: Climbing Stairs
+
+## Problem
+
+You are climbing a staircase with `n` steps.
+
+Each time, you may climb:
+- 1 step
+- or 2 steps
+
+Return the number of different ways to reach the top.
+
+### Example 1
+
+**Input:** `n = 2`  
+**Output:** `2`
+
+Ways:
+- `1 + 1`
+- `2`
+
+### Example 2
+
+**Input:** `n = 3`  
+**Output:** `3`
+
+Ways:
+- `1 + 1 + 1`
+- `1 + 2`
+- `2 + 1`
+
+---
+
+## Intuition
+
+To reach step `n`, your last move must have come from:
+
+- step `n - 1` by taking 1 step
+- or step `n - 2` by taking 2 steps
+
+So:
+
+```txt
+ways[n] = ways[n - 1] + ways[n - 2]
+```
+
+That is exactly a DP recurrence.
+
+---
+
+## Walkthrough
+
+For `n = 4`
+
+Ways to step 1:
+- 1
+
+Ways to step 2:
+- 2
+
+Now build:
+- step 3 = step 2 + step 1 = `2 + 1 = 3`
+- step 4 = step 3 + step 2 = `3 + 2 = 5`
+
+So there are 5 ways.
+
+---
+
+## TypeScript Solution
+
+```ts
+function climbStairs(n: number): number {
+  if (n <= 2) {
+    return n;
+  }
+
+  const dp = new Array(n + 1).fill(0);
+  dp[1] = 1;
+  dp[2] = 2;
+
+  for (let i = 3; i <= n; i++) {
+    dp[i] = dp[i - 1] + dp[i - 2];
+  }
+
+  return dp[n];
+}
+```
+
+---
+
+## Why it works
+
+Every path to step `i` must come from:
+- `i - 1`
+- or `i - 2`
+
+So counting both gives the full answer.
+
+---
+
+## Complexity Analysis
+
+- **Time:** `O(n)`
+- **Space:** `O(n)`
+
+---
+
+## Test Cases
+
+```ts
+climbStairs(1) // 1
+climbStairs(2) // 2
+climbStairs(3) // 3
+climbStairs(4) // 5
+climbStairs(5) // 8
+```
+
+---
+
+## Pattern Reminder
+
+This problem feels like Fibonacci because each answer depends on the two before it.
+
+---
+
+# Lesson 3: Min Cost Climbing Stairs
+
+## Problem
+
+You are given an array `cost`, where `cost[i]` is the cost of stepping on step `i`.
+
+You may climb:
+- 1 step
+- or 2 steps
+
+You may start at step 0 or step 1.
+
+Return the minimum cost to reach the top.
+
+### Example
+
+**Input:** `cost = [10, 15, 20]`  
+**Output:** `15`
+
+Because the cheapest way is:
+- start at step 1
+- pay 15
+- jump to the top
+
+---
+
+## Intuition
+
+This is like climbing stairs, but instead of counting ways, we want the cheapest total cost.
+
+To reach step `i`, we must come from:
+- `i - 1`
+- or `i - 2`
+
+So the cheapest way to step `i` is:
+
+```txt
+cost[i] + min(dp[i - 1], dp[i - 2])
+```
+
+At the end, the top is just beyond the last step, so the answer is:
+
+```txt
+min(dp[n - 1], dp[n - 2])
+```
+
+---
+
+## Walkthrough
+
+`cost = [10, 15, 20]`
+
+Base:
+- `dp[0] = 10`
+- `dp[1] = 15`
+
+Step 2:
+- `dp[2] = 20 + min(10, 15) = 30`
+
+Top:
+- `min(dp[1], dp[2]) = min(15, 30) = 15`
+
+Answer: 15
+
+---
+
+## TypeScript Solution
+
+```ts
+function minCostClimbingStairs(cost: number[]): number {
+  const n = cost.length;
+  const dp = new Array(n).fill(0);
+
+  dp[0] = cost[0];
+  dp[1] = cost[1];
+
+  for (let i = 2; i < n; i++) {
+    dp[i] = cost[i] + Math.min(dp[i - 1], dp[i - 2]);
+  }
+
+  return Math.min(dp[n - 1], dp[n - 2]);
+}
+```
+
+---
+
+## Why it works
+
+At each step, we save the cheapest total cost to get there.
+
+Then each new step chooses the cheaper of the two possible earlier paths.
+
+---
+
+## Complexity Analysis
+
+- **Time:** `O(n)`
+- **Space:** `O(n)`
+
+---
+
+## Test Cases
+
+```ts
+minCostClimbingStairs([10, 15, 20]) // 15
+minCostClimbingStairs([1, 100, 1, 1, 1, 100, 1, 1, 100, 1]) // 6
+```
+
+---
+
+## Quick Check
+
+What changes from “Climbing Stairs” to “Min Cost Climbing Stairs”?
+
+**Answer:** Instead of counting ways, we choose the cheaper earlier path.
+
+---
+
+# Lesson 4: House Robber
+
+## Problem
+
+A robber wants to steal money from houses in a row.
+
+Each house has some money.
+
+But if the robber steals from two neighboring houses, an alarm goes off.
+
+Return the maximum money the robber can steal.
+
+### Example
+
+**Input:** `nums = [2, 7, 9, 3, 1]`  
+**Output:** `12`
+
+One best choice is:
+- rob house with 2
+- rob house with 9
+- rob house with 1
+
+Total = 12
+
+---
+
+## Intuition
+
+At each house, we have two choices:
+
+- skip it
+- rob it
+
+If we rob house `i`, we cannot rob house `i - 1`.
+
+So the best answer at index `i` is:
+
+```txt
+max(
+  dp[i - 1],              // skip this house
+  nums[i] + dp[i - 2]     // rob this house
+)
+```
+
+This is a very classic DP choice problem.
+
+---
+
+## Walkthrough
+
+`nums = [2, 7, 9, 3, 1]`
+
+Base:
+- `dp[0] = 2`
+- `dp[1] = max(2, 7) = 7`
+
+Index 2:
+- skip -> 7
+- rob -> 9 + 2 = 11
+- `dp[2] = 11`
+
+Index 3:
+- skip -> 11
+- rob -> 3 + 7 = 10
+- `dp[3] = 11`
+
+Index 4:
+- skip -> 11
+- rob -> 1 + 11 = 12
+- `dp[4] = 12`
+
+Answer: 12
+
+---
+
+## TypeScript Solution
+
+```ts
+function rob(nums: number[]): number {
+  if (nums.length === 0) {
+    return 0;
+  }
+
+  if (nums.length === 1) {
+    return nums[0];
+  }
+
+  const dp = new Array(nums.length).fill(0);
+  dp[0] = nums[0];
+  dp[1] = Math.max(nums[0], nums[1]);
+
+  for (let i = 2; i < nums.length; i++) {
+    dp[i] = Math.max(dp[i - 1], nums[i] + dp[i - 2]);
+  }
+
+  return dp[nums.length - 1];
+}
+```
+
+---
+
+## Why it works
+
+Each house asks:
+- Is it better to skip me?
+- Or rob me and add my money to the best answer from two houses back?
+
+The DP array stores the best answer so far at every position.
+
+---
+
+## Complexity Analysis
+
+- **Time:** `O(n)`
+- **Space:** `O(n)`
+
+---
+
+## Test Cases
+
+```ts
+rob([1, 2, 3, 1]) // 4
+rob([2, 7, 9, 3, 1]) // 12
+rob([2]) // 2
+rob([]) // 0
+```
+
+---
+
+## Pattern Reminder
+
+This is a “take or skip” DP problem, but unlike backtracking, we only want the best score, not all choices.
+
+---
+
+# Lesson 5: Unique Paths
+
+## Problem
+
+A robot is in the top-left corner of an `m x n` grid.
+
+It wants to reach the bottom-right corner.
+
+It may only move:
+- right
+- down
+
+Return the number of unique paths.
+
+### Example
+
+**Input:** `m = 3`, `n = 2`  
+**Output:** `3`
+
+Paths:
+- Right, Down, Down
+- Down, Right, Down
+- Down, Down, Right
+
+---
+
+## Intuition
+
+To reach a cell, the robot must come from:
+- the cell above
+- or the cell to the left
+
+So:
+
+```txt
+dp[r][c] = dp[r - 1][c] + dp[r][c - 1]
+```
+
+That is a classic grid DP rule.
+
+Base idea:
+- first row has only 1 path to each cell
+- first column has only 1 path to each cell
+
+---
+
+## Walkthrough
+
+For a `3 x 3` grid:
+
+Start with:
+
+```txt
+1 1 1
+1 ? ?
+1 ? ?
+```
+
+Now fill:
+- middle cell = top + left = `1 + 1 = 2`
+- next cell = `1 + 2 = 3`
+- next row values continue the same way
+
+Final table:
+
+```txt
+1 1 1
+1 2 3
+1 3 6
+```
+
+Answer: 6
+
+---
+
+## TypeScript Solution
+
+```ts
+function uniquePaths(m: number, n: number): number {
+  const dp = Array.from({ length: m }, () => new Array(n).fill(1));
+
+  for (let r = 1; r < m; r++) {
+    for (let c = 1; c < n; c++) {
+      dp[r][c] = dp[r - 1][c] + dp[r][c - 1];
+    }
+  }
+
+  return dp[m - 1][n - 1];
+}
+```
+
+---
+
+## Why it works
+
+Each cell’s answer depends only on:
+- the cell above
+- the cell to the left
+
+So once smaller cells are filled, larger cells become easy.
+
+---
+
+## Complexity Analysis
+
+- **Time:** `O(m * n)`
+- **Space:** `O(m * n)`
+
+---
+
+## Test Cases
+
+```ts
+uniquePaths(3, 2) // 3
+uniquePaths(3, 3) // 6
+uniquePaths(1, 5) // 1
+```
+
+---
+
+## Quick Check
+
+Why does each cell use the top and left cells?
+
+**Answer:** Because the robot can only move down or right, so those are the only two ways to enter the cell.
+
+---
+
+# Lesson 6: Coin Change
+
+## Problem
+
+You are given coin values and a target amount.
+
+Return the minimum number of coins needed to make that amount.
+
+If it is not possible, return `-1`.
+
+### Example
+
+**Input:** `coins = [1, 2, 5]`, `amount = 11`  
+**Output:** `3`
+
+Because:
+- `5 + 5 + 1 = 11`
+
+---
+
+## Intuition
+
+Let `dp[x]` mean:
+
+> the minimum number of coins needed to make amount `x`
+
+To build amount `x`, we can try each coin.
+
+If we use coin `c`, then we need the best answer for:
+
+```txt
+x - c
+```
+
+So:
+
+```txt
+dp[x] = min(dp[x], dp[x - c] + 1)
+```
+
+We build from smaller amounts up to the target.
+
+---
+
+## Walkthrough
+
+Coins:
+- `[1, 2, 5]`
+Amount:
+- `5`
+
+Start:
+- `dp[0] = 0`
+- other amounts start as “impossible” for now
+
+Build:
+
+For amount 1:
+- use coin 1 -> `dp[1] = 1`
+
+For amount 2:
+- use coin 1 -> `dp[2] = dp[1] + 1 = 2`
+- use coin 2 -> `dp[2] = min(2, dp[0] + 1) = 1`
+
+For amount 3:
+- best becomes 2
+
+For amount 4:
+- best becomes 2
+
+For amount 5:
+- use coin 5 -> `1`
+
+So `dp[5] = 1`.
+
+---
+
+## TypeScript Solution
+
+```ts
+function coinChange(coins: number[], amount: number): number {
+  const dp = new Array(amount + 1).fill(Infinity);
+  dp[0] = 0;
+
+  for (let current = 1; current <= amount; current++) {
+    for (const coin of coins) {
+      if (current - coin >= 0) {
+        dp[current] = Math.min(dp[current], dp[current - coin] + 1);
+      }
+    }
+  }
+
+  return dp[amount] === Infinity ? -1 : dp[amount];
+}
+```
+
+---
+
+## Why it works
+
+Each amount uses smaller solved amounts.
+
+Trying every coin asks:
+- if I use this coin last, what is the best smaller amount left?
+
+The DP table keeps the best minimum answer for every amount.
+
+---
+
+## Complexity Analysis
+
+If there are `n` coin types:
+
+- **Time:** `O(amount * n)`
+- **Space:** `O(amount)`
+
+---
+
+## Test Cases
+
+```ts
+coinChange([1, 2, 5], 11) // 3
+coinChange([2], 3) // -1
+coinChange([1], 0) // 0
+coinChange([1, 3, 4], 6) // 2
+```
+
+---
+
+## Challenge Thought
+
+This problem is a great example of:
+- minimum answer
+- repeated smaller amounts
+- bottom-up DP building
+
+---
+
+# Chapter Review
+
+## What you learned
+
+In this chapter, you learned that dynamic programming helps when:
+
+- a problem has repeated smaller parts
+- saving answers prevents repeated work
+- bigger answers can be built from smaller ones
+
+You learned how to:
+
+- build from base cases
+- fill DP arrays and grids
+- find counts, minimums, and maximums
+- recognize overlapping subproblems
+
+---
+
+## Pattern Summary
+
+### Fibonacci Number
+- each answer uses the two before it
+
+### Climbing Stairs
+- ways to step `n` come from `n - 1` and `n - 2`
+
+### Min Cost Climbing Stairs
+- choose the cheaper earlier path
+
+### House Robber
+- take or skip each house
+
+### Unique Paths
+- each cell uses top and left neighbors
+
+### Coin Change
+- each amount tries all coin choices
+
+---
+
+## When this pattern is a clue
+
+Think about dynamic programming when you see:
+
+- number of ways
+- minimum cost
+- maximum score
+- repeated smaller problems
+- “depends on earlier answers”
+- brute force repeats too much work
+
+---
+
+# Mastery Check
+
+Try these before looking at the answers.
+
+## 1. Fill in the blank
+
+Dynamic programming works well when a problem can be broken into smaller ________ problems.
+
+**Answer:** repeated
+
+---
+
+## 2. True or False
+
+Base cases are important in DP.
+
+**Answer:** True
+
+---
+
+## 3. Short Answer
+
+What is the difference between top-down and bottom-up DP?
+
+**Answer:** Top-down starts with the big problem and saves smaller answers during recursion. Bottom-up starts with the smallest base cases and builds upward.
+
+---
+
+## 4. Short Answer
+
+Why is saving smaller answers useful?
+
+**Answer:** Because it prevents us from solving the same smaller problem again and again.
+
+---
+
+## 5. Fill in the blank
+
+In many DP problems, the answer for one position depends on earlier ________ cases.
+
+**Answer:** smaller
+
+---
+
+## 6. Mini Coding Challenge
+
+Write a function that returns the number of ways to climb `n` stairs if you may take only 1 or 2 steps, using a DP array.
+
+```ts
+function climbWays(n: number): number {
+  if (n <= 2) {
+    return n;
+  }
+
+  const dp = new Array(n + 1).fill(0);
+  dp[1] = 1;
+  dp[2] = 2;
+
+  for (let i = 3; i <= n; i++) {
+    dp[i] = dp[i - 1] + dp[i - 2];
+  }
+
+  return dp[n];
+}
+```
+
+---
+
+## 7. Mini Coding Challenge
+
+Explain in your own words why Fibonacci is a good first DP example.
+
+**Sample answer:** Fibonacci is a good first DP example because each answer depends on smaller earlier answers, and those smaller answers repeat a lot if we do not save them.
+
+---
+
+# Friendly Wrap-up
+
+Dynamic programming teaches an important coding lesson:
+
+> Sometimes the fastest way to solve a big problem  
+> is to save what you learned from the small ones.
+
+That is why DP is so powerful.
+
+The more you practice dynamic programming, the more you will notice:
+
+- when answers repeat
+- when base cases matter
+- when one row or one array can hold the story of a whole problem
+- when building upward is smarter than starting over
+
+That is one of the most powerful patterns in all of algorithms.
