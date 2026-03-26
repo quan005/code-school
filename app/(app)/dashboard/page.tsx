@@ -1,9 +1,11 @@
 import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import { Panel } from "@/components/ui/panel";
-import { chapters } from "@/lib/curriculum";
+import { getChapters } from "@/lib/curriculum";
 
-export default function DashboardPage() {
+export default async function DashboardPage() {
+  const chapters = await getChapters();
+
   return (
     <div className="stack-lg">
       <Panel eyebrow="Dashboard" title="Welcome back">
@@ -16,7 +18,9 @@ export default function DashboardPage() {
         {chapters.map((chapter) => (
           <Card key={chapter.slug}>
             <h2>{chapter.title}</h2>
-            <p>{chapter.lessons.length} lesson routes scaffolded</p>
+            <p>
+              {chapter.lessons.length} lesson entries indexed from MDX content
+            </p>
             <Link href={`/learn/${chapter.slug}/intro`}>Open lesson shell</Link>
           </Card>
         ))}

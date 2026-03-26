@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
+import { LessonFramePreview } from "@/components/mdx/lesson-blocks";
 import { Panel } from "@/components/ui/panel";
-import { getChapterBySlug, getLessonBySlug } from "@/lib/curriculum";
+import { compileLesson } from "@/lib/curriculum";
 
 export default async function ChapterIntroPage({
   params,
@@ -8,22 +9,20 @@ export default async function ChapterIntroPage({
   params: Promise<{ chapterSlug: string }>;
 }) {
   const { chapterSlug } = await params;
-  const chapter = getChapterBySlug(chapterSlug);
-  const introLesson = getLessonBySlug(chapterSlug, "intro");
+  const compiledLesson = await compileLesson(chapterSlug, "intro");
 
-  if (!chapter || !introLesson) {
+  if (!compiledLesson) {
     notFound();
   }
 
   return (
     <div className="stack-lg">
-      <Panel eyebrow="Intro lesson" title={introLesson.title}>
-        <p>{introLesson.summary}</p>
-        <p>
-          This nested lesson layout is separate from chapter landing pages so
-          the app can reuse a focused reading shell for all lesson types.
-        </p>
+      <Panel eyebrow="Intro lesson" title={compiledLesson.lesson.title}>
+        <div className="mdx-prose">{compiledLesson.content}</div>
       </Panel>
+      {compiledLesson.frames.length > 0 ? (
+        <LessonFramePreview frames={compiledLesson.frames} />
+      ) : null}
     </div>
   );
 }

@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Panel } from "@/components/ui/panel";
 import type { ChapterSummary, LessonSummary } from "@/lib/curriculum";
+import { getLessonHref } from "@/lib/curriculum";
 
 type LessonShellProps = {
   chapter: ChapterSummary;
@@ -27,10 +28,6 @@ export function LessonShell({
           <ul className="lesson-list">
             {chapter.lessons.map((lesson, index) => {
               const active = lesson.slug === currentLessonSlug;
-              const href =
-                lesson.kind === "intro"
-                  ? `/learn/${chapter.slug}/intro`
-                  : `/learn/${chapter.slug}/${lesson.slug}`;
 
               return (
                 <li key={lesson.slug}>
@@ -38,7 +35,7 @@ export function LessonShell({
                     className={
                       active ? "lesson-link lesson-link-active" : "lesson-link"
                     }
-                    href={href}
+                    href={getLessonHref(chapter.slug, lesson)}
                   >
                     <span>{index + 1}</span>
                     <span>{lesson.title}</span>
@@ -57,33 +54,21 @@ export function LessonShell({
             <p>{chapter.summary}</p>
           </div>
           <div className="progress-meta">
-            <Badge>6 lessons</Badge>
-            <Badge>Chapter 1 of MVP</Badge>
+            <Badge>{chapter.lessons.length} lessons</Badge>
+            <Badge>{chapter.track}</Badge>
           </div>
         </Card>
         {children}
         <div className="lesson-pagination">
           {previousLesson ? (
-            <Link
-              href={
-                previousLesson.kind === "intro"
-                  ? `/learn/${chapter.slug}/intro`
-                  : `/learn/${chapter.slug}/${previousLesson.slug}`
-              }
-            >
+            <Link href={getLessonHref(chapter.slug, previousLesson)}>
               Previous: {previousLesson.title}
             </Link>
           ) : (
             <span />
           )}
           {nextLesson ? (
-            <Link
-              href={
-                nextLesson.kind === "intro"
-                  ? `/learn/${chapter.slug}/intro`
-                  : `/learn/${chapter.slug}/${nextLesson.slug}`
-              }
-            >
+            <Link href={getLessonHref(chapter.slug, nextLesson)}>
               Next: {nextLesson.title}
             </Link>
           ) : null}

@@ -346,7 +346,8 @@ select {
 
 .app-nav,
 .lesson-list,
-.chapter-outline {
+.chapter-outline,
+.frame-preview-list {
   display: grid;
   gap: var(--space-2);
   list-style: none;
@@ -391,6 +392,68 @@ select {
 
 .chapter-outline a strong {
   color: var(--color-ink);
+}
+
+.frame-preview-list li {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+}
+
+.mdx-prose {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.mdx-prose > * {
+  margin: 0;
+}
+
+.mdx-prose code {
+  background: rgba(33, 53, 71, 0.08);
+  border-radius: 0.5rem;
+  font-family: var(--font-mono);
+  padding: 0.15rem 0.35rem;
+}
+
+.tip-card {
+  background: linear-gradient(
+    135deg,
+    rgba(61, 132, 255, 0.12),
+    rgba(44, 157, 143, 0.12)
+  );
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+.lesson-table {
+  border-collapse: collapse;
+  min-width: 100%;
+}
+
+.lesson-table th,
+.lesson-table td {
+  border-bottom: 1px solid var(--color-border);
+  padding: 0.8rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.hint-toggle {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  font-weight: 700;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+  padding: 0;
+  width: 100%;
 }
 
 .status-screen {

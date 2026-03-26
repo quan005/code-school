@@ -1,0 +1,7 @@
+{
+  "slug": "two-pointers",
+  "title": "Two Pointers",
+  "order": 1,
+  "track": "Code Patterns",
+  "summary": "Learn how two moving positions can scan arrays faster than checking every pair."
+}

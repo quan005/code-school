@@ -11,14 +11,17 @@ export default async function LearnChapterLayout({
   params: Promise<{ chapterSlug: string; lessonSlug?: string }>;
 }) {
   const { chapterSlug, lessonSlug } = await params;
-  const chapter = getChapterBySlug(chapterSlug);
+  const chapter = await getChapterBySlug(chapterSlug);
 
   if (!chapter) {
     notFound();
   }
 
   const currentLessonSlug = lessonSlug ?? "intro";
-  const { next, previous } = getAdjacentLessons(chapterSlug, currentLessonSlug);
+  const { next, previous } = await getAdjacentLessons(
+    chapterSlug,
+    currentLessonSlug,
+  );
 
   return (
     <LessonShell

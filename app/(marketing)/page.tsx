@@ -1,9 +1,11 @@
 import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import { buttonStyles } from "@/components/ui/button";
-import { chapters } from "@/lib/curriculum";
+import { getChapters } from "@/lib/curriculum";
 
-export default function HomePage() {
+export default async function HomePage() {
+  const chapters = await getChapters();
+
   return (
     <div className="marketing-home">
       <section className="hero-panel">

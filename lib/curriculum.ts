@@ -1,155 +1,254 @@
-export type LessonSummary = {
-  slug: string;
-  title: string;
-  kind: "intro" | "problem" | "review" | "mastery";
-  difficulty: "easy" | "medium";
-  estimatedMinutes: number;
-  summary: string;
+import { readdir, readFile } from "node:fs/promises";
+import path from "node:path";
+import type { ReactNode } from "react";
+import { cache } from "react";
+import matter from "gray-matter";
+import { compileMDX } from "next-mdx-remote/rsc";
+import { z } from "zod";
+import { getLessonMDXComponents } from "@/lib/content/mdx-components";
+import { lessonFrameSchema, type LessonFrame } from "@/lib/content/frames";
+
+const chapterMetadataSchema = z.object({
+  slug: z
+    .string()
+    .min(1)
+    .regex(/^[a-z0-9-]+$/),
+  title: z.string().min(1),
+  order: z.number().int().positive(),
+  track: z.string().min(1),
+  summary: z.string().min(1),
+});
+
+const lessonMetadataSchema = z.object({
+  slug: z
+    .string()
+    .min(1)
+    .regex(/^[a-z0-9-]+$/),
+  title: z.string().min(1),
+  order: z.number().int().positive(),
+  lessonType: z.enum(["intro", "problem", "review", "mastery"]),
+  difficulty: z.enum(["easy", "medium", "hard"]),
+  estimatedMinutes: z.number().int().positive(),
+  concepts: z.array(z.string().min(1)).min(1),
+  skills: z.array(z.string().min(1)).min(1),
+  prerequisites: z.array(z.string().min(1)).default([]),
+  summary: z.string().min(1),
+});
+
+export type ChapterMetadata = z.infer<typeof chapterMetadataSchema>;
+export type LessonMetadata = z.infer<typeof lessonMetadataSchema>;
+
+export type LessonSummary = LessonMetadata & {
+  frames: LessonFrame[];
+  sourcePath: string;
 };
 
-export type ChapterSummary = {
-  slug: string;
-  title: string;
-  track: string;
-  accent: "sunrise" | "sky" | "mint";
-  summary: string;
+export type ChapterSummary = ChapterMetadata & {
   lessons: LessonSummary[];
 };
 
-export const chapters: ChapterSummary[] = [
-  {
-    slug: "two-pointers",
-    title: "Two Pointers",
-    track: "Code Patterns",
-    accent: "sunrise",
-    summary:
-      "Learn how two moving positions can scan arrays faster than checking every pair.",
-    lessons: [
-      {
-        slug: "intro",
-        title: "Introduction",
-        kind: "intro",
-        difficulty: "easy",
-        estimatedMinutes: 8,
-        summary:
-          "Meet left and right pointers and learn when moving them saves time.",
-      },
-      {
-        slug: "pair-sum-sorted",
-        title: "Pair Sum - Sorted",
-        kind: "problem",
-        difficulty: "easy",
-        estimatedMinutes: 12,
-        summary: "Use sorted order to decide which pointer should move.",
-      },
-      {
-        slug: "triplet-sum",
-        title: "Triplet Sum",
-        kind: "problem",
-        difficulty: "medium",
-        estimatedMinutes: 15,
-        summary: "Lock one number and use two pointers for the other two.",
-      },
-      {
-        slug: "largest-container",
-        title: "Largest Container",
-        kind: "problem",
-        difficulty: "medium",
-        estimatedMinutes: 14,
-        summary:
-          "Compare widths and heights while squeezing the window inward.",
-      },
-      {
-        slug: "review",
-        title: "Review",
-        kind: "review",
-        difficulty: "easy",
-        estimatedMinutes: 10,
-        summary: "Recap the pointer patterns and common move rules.",
-      },
-      {
-        slug: "mastery-check",
-        title: "Mastery Check",
-        kind: "mastery",
-        difficulty: "medium",
-        estimatedMinutes: 12,
-        summary:
-          "Check whether you can choose the right pointer move on your own.",
-      },
-    ],
-  },
-  {
-    slug: "linked-lists",
-    title: "Linked Lists",
-    track: "Code Patterns",
-    accent: "sky",
-    summary:
-      "Follow boxes and arrows through lists, then learn to reconnect them safely.",
-    lessons: [
-      {
-        slug: "intro",
-        title: "Introduction",
-        kind: "intro",
-        difficulty: "easy",
-        estimatedMinutes: 8,
-        summary: "See how nodes and next pointers form a chain.",
-      },
-      {
-        slug: "traverse",
-        title: "Traverse a Linked List",
-        kind: "problem",
-        difficulty: "easy",
-        estimatedMinutes: 10,
-        summary: "Walk one node at a time from head to null.",
-      },
-    ],
-  },
-  {
-    slug: "sliding-windows",
-    title: "Sliding Windows",
-    track: "Code Patterns",
-    accent: "mint",
-    summary:
-      "Track a moving window and update the answer without restarting each time.",
-    lessons: [
-      {
-        slug: "intro",
-        title: "Introduction",
-        kind: "intro",
-        difficulty: "easy",
-        estimatedMinutes: 9,
-        summary: "Use a moving frame to watch part of an array at a time.",
-      },
-    ],
-  },
-];
+type LessonModule = {
+  content: ReactNode;
+  frames: LessonFrame[];
+  lesson: LessonSummary;
+};
 
-export function getChapters(): ChapterSummary[] {
-  return chapters;
+const CONTENT_ROOT = path.join(process.cwd(), "content", "chapters");
+
+function buildLessonHref(chapterSlug: string, lesson: LessonSummary): string {
+  if (lesson.lessonType === "intro") {
+    return `/learn/${chapterSlug}/intro`;
+  }
+
+  if (lesson.lessonType === "review") {
+    return `/review/${chapterSlug}`;
+  }
+
+  if (lesson.lessonType === "mastery") {
+    return `/mastery/${chapterSlug}`;
+  }
+
+  return `/learn/${chapterSlug}/${lesson.slug}`;
 }
 
-export function getChapterBySlug(
+function validateUniqueLessonOrdering(
+  chapter: ChapterMetadata,
+  lessons: LessonSummary[],
+) {
+  const slugSet = new Set<string>();
+  const orderSet = new Set<number>();
+
+  for (const lesson of lessons) {
+    if (slugSet.has(lesson.slug)) {
+      throw new Error(
+        `Duplicate lesson slug "${lesson.slug}" found in chapter "${chapter.slug}".`,
+      );
+    }
+
+    if (orderSet.has(lesson.order)) {
+      throw new Error(
+        `Duplicate lesson order "${lesson.order}" found in chapter "${chapter.slug}".`,
+      );
+    }
+
+    slugSet.add(lesson.slug);
+    orderSet.add(lesson.order);
+  }
+
+  const sortedOrders = [...orderSet].sort((left, right) => left - right);
+  sortedOrders.forEach((order, index) => {
+    const expected = index + 1;
+
+    if (order !== expected) {
+      throw new Error(
+        `Invalid lesson ordering in chapter "${chapter.slug}". Expected lesson order ${expected} but found ${order}.`,
+      );
+    }
+  });
+}
+
+async function readFrameSet(
   chapterSlug: string,
-): ChapterSummary | undefined {
+  lessonSlug: string,
+): Promise<LessonFrame[]> {
+  const framePath = path.join(
+    CONTENT_ROOT,
+    chapterSlug,
+    "frames",
+    `${lessonSlug}.json`,
+  );
+
+  try {
+    const source = await readFile(framePath, "utf8");
+    const parsed = JSON.parse(source) as unknown;
+    return z.array(lessonFrameSchema).parse(parsed);
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code === "ENOENT") {
+      return [];
+    }
+
+    throw error;
+  }
+}
+
+async function readLessonSummary(
+  chapterSlug: string,
+  absolutePath: string,
+): Promise<LessonSummary> {
+  const source = await readFile(absolutePath, "utf8");
+  const { data } = matter(source);
+  const lesson = lessonMetadataSchema.parse(data);
+
+  if (path.basename(absolutePath, ".mdx") !== lesson.slug) {
+    throw new Error(
+      `Lesson file "${absolutePath}" does not match metadata slug "${lesson.slug}".`,
+    );
+  }
+
+  return {
+    ...lesson,
+    frames: await readFrameSet(chapterSlug, lesson.slug),
+    sourcePath: absolutePath,
+  };
+}
+
+const loadChapterIndex = cache(async (): Promise<ChapterSummary[]> => {
+  const chapterDirs = await readdir(CONTENT_ROOT, { withFileTypes: true });
+  const chapters: ChapterSummary[] = [];
+
+  for (const entry of chapterDirs) {
+    if (!entry.isDirectory()) {
+      continue;
+    }
+
+    const chapterDir = path.join(CONTENT_ROOT, entry.name);
+    const chapterSource = await readFile(
+      path.join(chapterDir, "chapter.json"),
+      "utf8",
+    );
+    const chapter = chapterMetadataSchema.parse(
+      JSON.parse(chapterSource) as unknown,
+    );
+    const lessonDir = path.join(chapterDir, "lessons");
+    const lessonFiles = (await readdir(lessonDir))
+      .filter((fileName) => fileName.endsWith(".mdx"))
+      .sort();
+
+    const lessons = await Promise.all(
+      lessonFiles.map((fileName) =>
+        readLessonSummary(chapter.slug, path.join(lessonDir, fileName)),
+      ),
+    );
+
+    lessons.sort((left, right) => left.order - right.order);
+    validateUniqueLessonOrdering(chapter, lessons);
+
+    chapters.push({
+      ...chapter,
+      lessons,
+    });
+  }
+
+  const seenChapterSlugs = new Set<string>();
+  const seenOrders = new Set<number>();
+
+  chapters.sort((left, right) => left.order - right.order);
+
+  for (const chapter of chapters) {
+    if (seenChapterSlugs.has(chapter.slug)) {
+      throw new Error(
+        `Duplicate chapter slug "${chapter.slug}" found in content/chapters.`,
+      );
+    }
+
+    if (seenOrders.has(chapter.order)) {
+      throw new Error(
+        `Duplicate chapter order "${chapter.order}" found in content/chapters.`,
+      );
+    }
+
+    seenChapterSlugs.add(chapter.slug);
+    seenOrders.add(chapter.order);
+  }
+
+  return chapters;
+});
+
+export async function getChapters(): Promise<ChapterSummary[]> {
+  return loadChapterIndex();
+}
+
+export async function getChapterBySlug(
+  chapterSlug: string,
+): Promise<ChapterSummary | undefined> {
+  const chapters = await getChapters();
   return chapters.find((chapter) => chapter.slug === chapterSlug);
 }
 
-export function getLessonBySlug(
+export async function getLessonBySlug(
   chapterSlug: string,
   lessonSlug: string,
-): LessonSummary | undefined {
-  const chapter = getChapterBySlug(chapterSlug);
+): Promise<LessonSummary | undefined> {
+  const chapter = await getChapterBySlug(chapterSlug);
   return chapter?.lessons.find((lesson) => lesson.slug === lessonSlug);
 }
 
-export function getAdjacentLessons(
+export async function getLessonByType(
+  chapterSlug: string,
+  lessonType: LessonSummary["lessonType"],
+): Promise<LessonSummary | undefined> {
+  const chapter = await getChapterBySlug(chapterSlug);
+  return chapter?.lessons.find((lesson) => lesson.lessonType === lessonType);
+}
+
+export async function getAdjacentLessons(
   chapterSlug: string,
   lessonSlug: string,
-): {
-  previous?: LessonSummary;
+): Promise<{
   next?: LessonSummary;
-} {
-  const chapter = getChapterBySlug(chapterSlug);
+  previous?: LessonSummary;
+}> {
+  const chapter = await getChapterBySlug(chapterSlug);
 
   if (!chapter) {
     return {};
@@ -167,4 +266,45 @@ export function getAdjacentLessons(
     previous: chapter.lessons[index - 1],
     next: chapter.lessons[index + 1],
   };
+}
+
+export async function compileLesson(
+  chapterSlug: string,
+  lessonSlug: string,
+): Promise<LessonModule | undefined> {
+  const lesson = await getLessonBySlug(chapterSlug, lessonSlug);
+
+  if (!lesson) {
+    return undefined;
+  }
+
+  const source = await readFile(lesson.sourcePath, "utf8");
+  const compiled = await compileMDX<LessonMetadata>({
+    source,
+    components: getLessonMDXComponents(),
+    options: {
+      parseFrontmatter: true,
+    },
+  });
+
+  const validatedFrontmatter = lessonMetadataSchema.parse(compiled.frontmatter);
+
+  if (validatedFrontmatter.slug !== lesson.slug) {
+    throw new Error(
+      `Lesson metadata drift detected for "${lesson.slug}". Frontmatter does not match the indexed lesson record.`,
+    );
+  }
+
+  return {
+    content: compiled.content,
+    frames: lesson.frames,
+    lesson,
+  };
+}
+
+export function getLessonHref(
+  chapterSlug: string,
+  lesson: LessonSummary,
+): string {
+  return buildLessonHref(chapterSlug, lesson);
 }

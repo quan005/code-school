@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
 import { Panel } from "@/components/ui/panel";
-import { getChapterBySlug } from "@/lib/curriculum";
+import { getChapterBySlug, getLessonHref } from "@/lib/curriculum";
 
 export default async function ChapterPage({
   params,
@@ -10,7 +10,7 @@ export default async function ChapterPage({
   params: Promise<{ chapterSlug: string }>;
 }) {
   const { chapterSlug } = await params;
-  const chapter = getChapterBySlug(chapterSlug);
+  const chapter = await getChapterBySlug(chapterSlug);
 
   if (!chapter) {
     notFound();
@@ -28,13 +28,7 @@ export default async function ChapterPage({
       <ul className="chapter-outline">
         {chapter.lessons.map((lesson) => (
           <li key={lesson.slug}>
-            <Link
-              href={
-                lesson.kind === "intro"
-                  ? `/learn/${chapter.slug}/intro`
-                  : `/learn/${chapter.slug}/${lesson.slug}`
-              }
-            >
+            <Link href={getLessonHref(chapter.slug, lesson)}>
               <strong>{lesson.title}</strong>
               <span>{lesson.summary}</span>
             </Link>

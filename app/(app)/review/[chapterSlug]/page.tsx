@@ -1,6 +1,10 @@
 import { notFound } from "next/navigation";
 import { Panel } from "@/components/ui/panel";
-import { getChapterBySlug } from "@/lib/curriculum";
+import {
+  compileLesson,
+  getChapterBySlug,
+  getLessonByType,
+} from "@/lib/curriculum";
 
 export default async function ReviewPage({
   params,
@@ -8,18 +12,19 @@ export default async function ReviewPage({
   params: Promise<{ chapterSlug: string }>;
 }) {
   const { chapterSlug } = await params;
-  const chapter = getChapterBySlug(chapterSlug);
+  const chapter = await getChapterBySlug(chapterSlug);
+  const reviewLesson = await getLessonByType(chapterSlug, "review");
+  const compiledLesson = reviewLesson
+    ? await compileLesson(chapterSlug, reviewLesson.slug)
+    : undefined;
 
-  if (!chapter) {
+  if (!chapter || !compiledLesson) {
     notFound();
   }
 
   return (
-    <Panel eyebrow="Review" title={`${chapter.title} review`}>
-      <p>
-        This route scaffold is ready for review cards, recall prompts, and
-        spaced practice.
-      </p>
+    <Panel eyebrow="Review" title={compiledLesson.lesson.title}>
+      <div className="mdx-prose">{compiledLesson.content}</div>
     </Panel>
   );
 }

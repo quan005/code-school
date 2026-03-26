@@ -1,9 +1,11 @@
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
-import { chapters } from "@/lib/curriculum";
+import { getChapters } from "@/lib/curriculum";
 
-export default function ChaptersPage() {
+export default async function ChaptersPage() {
+  const chapters = await getChapters();
+
   return (
     <div className="stack-lg">
       <header className="section-header">

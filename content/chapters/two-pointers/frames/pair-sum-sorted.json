@@ -1,0 +1,33 @@
+[
+  {
+    "id": "frame-1",
+    "narration": "Start with one pointer at the left end and one at the right end.",
+    "decision": "Add the two numbers and compare the total to the target.",
+    "highlightIndexes": [0, 5],
+    "pointers": {
+      "left": 0,
+      "right": 5
+    }
+  },
+  {
+    "id": "frame-2",
+    "narration": "If the sum is too small, move the left pointer right to make the total bigger.",
+    "decision": "Moving the right pointer would only make the total smaller.",
+    "highlightIndexes": [1, 5],
+    "pointers": {
+      "left": 1,
+      "right": 5
+    },
+    "quizPrompt": "Which pointer should move when the sum is too small?"
+  },
+  {
+    "id": "frame-3",
+    "narration": "Keep squeezing inward until the pair matches the target or the pointers cross.",
+    "decision": "Every move throws away pairs that can no longer work.",
+    "highlightIndexes": [1, 4],
+    "pointers": {
+      "left": 1,
+      "right": 4
+    }
+  }
+]

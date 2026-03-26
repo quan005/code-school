@@ -1,0 +1,60 @@
+---
+title: "Pair Sum - Sorted"
+slug: "pair-sum-sorted"
+order: 2
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 12
+concepts:
+  - "pair sum"
+  - "sorted array"
+skills:
+  - "Move the left pointer when the sum is too small"
+  - "Move the right pointer when the sum is too large"
+prerequisites:
+  - "intro"
+summary: "Use sorted order to decide which pointer should move next."
+---
+
+<ProblemStatement title="Find the target pair">
+  You are given a sorted array of numbers and a target sum. Return the indexes
+  of the two numbers that add up to the target.
+</ProblemStatement>
+
+<Intuition title="Use the sorted order as a clue">
+  When the list is sorted, the left pointer points to a smaller number and the
+  right pointer points to a bigger number. If the total is too small, only the
+  left side can help make it bigger. If the total is too big, only the right
+  side can help make it smaller.
+</Intuition>
+
+<InterviewTip>
+  This is a good two-pointer problem because every pointer move removes many
+  impossible pairs at once.
+</InterviewTip>
+
+<ComplexityCard
+  time="O(n)"
+  space="O(1)"
+  notes="The pointers never move backward, so no index is visited more than once by each pointer."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "nums = [1, 2, 4, 6, 8, 9], target = 10",
+      expected: "[0, 5]",
+      why: "The first and last numbers match right away.",
+    },
+    {
+      input: "nums = [1, 3, 4, 5, 7, 10], target = 9",
+      expected: "[2, 3]",
+      why: "The pointers need to adjust before landing on the answer.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Need a move rule?">
+  If `nums[left] + nums[right]` is smaller than the target, move `left`. If it
+  is bigger than the target, move `right`.
+</HintDrawer>

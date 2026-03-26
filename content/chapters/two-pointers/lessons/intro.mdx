@@ -1,0 +1,43 @@
+---
+title: "Introduction"
+slug: "intro"
+order: 1
+lessonType: "intro"
+difficulty: "easy"
+estimatedMinutes: 8
+concepts:
+  - "pointer"
+  - "sorted order"
+skills:
+  - "Explain what a pointer tracks"
+  - "Spot when two pointers might help"
+prerequisites: []
+summary: "Meet left and right pointers and learn why moving them with a reason saves time."
+---
+
+<ProblemStatement title="Two pointers in one sentence">
+  Two pointers means keeping track of two places in the same list at the same
+  time.
+</ProblemStatement>
+
+<Intuition title="Think of two fingers on a number line">
+  Put one finger on the left and one on the right. Each move should teach you
+  something. In a sorted array, moving one side can throw away many impossible
+  answers without checking them one by one.
+</Intuition>
+
+<InterviewTip>
+  When the list is sorted, ask: "If my sum is too small, which side can make it
+  bigger?" That question usually tells you which pointer should move.
+</InterviewTip>
+
+<ComplexityCard
+  time="O(n)"
+  space="O(1)"
+  notes="Each pointer moves across the list at most once, so the work grows in a straight line."
+/>
+
+<HintDrawer title="What should I picture in my head?">
+  Picture two kids standing at the ends of a row of stepping stones. They keep
+  moving inward based on the rule of the puzzle.
+</HintDrawer>

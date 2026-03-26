@@ -1,6 +1,10 @@
 import { notFound } from "next/navigation";
 import { Panel } from "@/components/ui/panel";
-import { getChapterBySlug } from "@/lib/curriculum";
+import {
+  compileLesson,
+  getChapterBySlug,
+  getLessonByType,
+} from "@/lib/curriculum";
 
 export default async function MasteryPage({
   params,
@@ -8,18 +12,19 @@ export default async function MasteryPage({
   params: Promise<{ chapterSlug: string }>;
 }) {
   const { chapterSlug } = await params;
-  const chapter = getChapterBySlug(chapterSlug);
+  const chapter = await getChapterBySlug(chapterSlug);
+  const masteryLesson = await getLessonByType(chapterSlug, "mastery");
+  const compiledLesson = masteryLesson
+    ? await compileLesson(chapterSlug, masteryLesson.slug)
+    : undefined;
 
-  if (!chapter) {
+  if (!chapter || !compiledLesson) {
     notFound();
   }
 
   return (
-    <Panel eyebrow="Mastery" title={`${chapter.title} mastery`}>
-      <p>
-        This route scaffold is ready for mastery checks and unlock logic in
-        later epics.
-      </p>
+    <Panel eyebrow="Mastery" title={compiledLesson.lesson.title}>
+      <div className="mdx-prose">{compiledLesson.content}</div>
     </Panel>
   );
 }

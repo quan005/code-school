@@ -1,0 +1,32 @@
+---
+title: "Mastery Check"
+slug: "mastery-check"
+order: 4
+lessonType: "mastery"
+difficulty: "medium"
+estimatedMinutes: 12
+concepts:
+  - "self check"
+  - "pointer decisions"
+skills:
+  - "Choose the correct pointer move without hints"
+  - "Explain why a move is safe"
+prerequisites:
+  - "review"
+summary: "Check whether you can choose the right pointer move on your own."
+---
+
+<ProblemStatement title="Mastery prompt">
+  You are looking at a sorted array and your current sum is too large. Which
+  pointer should move, and why?
+</ProblemStatement>
+
+<Intuition title="Explain the safe move">
+  The right pointer should move left, because the sorted order guarantees that
+  moving it left can only make the sum smaller.
+</Intuition>
+
+<HintDrawer title="Still unsure?">
+  The left pointer can only keep the same number or move to a bigger one, so it
+  cannot fix a total that is already too large.
+</HintDrawer>
