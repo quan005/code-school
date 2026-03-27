@@ -1,0 +1,56 @@
+[
+  {
+    "id": "unique-1",
+    "narration": "The first pass builds a frequency map for every letter in the word.",
+    "arrayValues": ["l", "o", "v", "e", "l", "e", "e", "t", "c", "o", "d", "e"],
+    "callout": "The map now knows how many times each character appears.",
+    "decision": "Do not answer yet. The first pass only prepares the counts.",
+    "highlightIndexes": [0, 1, 2, 3],
+    "pointers": {
+      "current": 3
+    }
+  },
+  {
+    "id": "unique-2",
+    "narration": "The second pass uses the original order to find the first count that equals 1.",
+    "arrayValues": ["l", "o", "v", "e", "l", "e", "e", "t", "c", "o", "d", "e"],
+    "callout": "l is not unique, and o is not unique, so keep moving.",
+    "decision": "The first letter with count 1 is the answer.",
+    "highlightIndexes": [0, 1, 2],
+    "pointers": {
+      "current": 2
+    },
+    "predictionPrompt": {
+      "prompt": "What count should the first answer letter have?",
+      "choices": [
+        {
+          "id": "1",
+          "label": "It should have count 1",
+          "isCorrect": true,
+          "feedback": "Correct. Unique means it appears exactly once."
+        },
+        {
+          "id": "2",
+          "label": "It should have count 2",
+          "isCorrect": false,
+          "feedback": "Not this one. Count 2 means the character repeats."
+        }
+      ]
+    }
+  },
+  {
+    "id": "unique-3",
+    "narration": "In loveleetcode, v is the first character whose count is exactly 1.",
+    "arrayValues": ["l", "o", "v", "e", "l", "e", "e", "t", "c", "o", "d", "e"],
+    "callout": "That is why the answer is index 2 instead of some later unique character.",
+    "decision": "Count first, then scan left to right.",
+    "highlightIndexes": [2],
+    "pointers": {
+      "current": 2
+    },
+    "reflectionPrompt": {
+      "prompt": "Why can’t we just return any unique character we find later?",
+      "placeholder": "Because the problem asks for..."
+    }
+  }
+]

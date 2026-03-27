@@ -1,0 +1,135 @@
+---
+title: "Two Sum"
+slug: "two-sum"
+order: 3
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 13
+concepts:
+  - "hash map"
+  - "lookup by need"
+  - "index storage"
+skills:
+  - "Store value-to-index matches in a map"
+  - "Find the partner a number needs to reach the target"
+prerequisites:
+  - "contains-duplicate"
+summary: "Use a map to remember earlier numbers and find the partner needed for the target."
+---
+
+<ProblemStatement title="Find the pair that makes the target">
+  Given an array of integers <code>nums</code> and an integer{" "}
+  <code>target</code>, return the indexes of two numbers that add up to the
+  target.
+</ProblemStatement>
+
+## Examples
+
+```txt
+nums = [2, 7, 11, 15], target = 9 -> [0, 1]
+nums = [3, 2, 4], target = 6 -> [1, 2]
+```
+
+<Intuition title="Ask what number you need">
+  If the target is 9 and the current number is 2, then the partner you need is
+  7. A map can remember earlier numbers and the index where each one was found.
+</Intuition>
+
+<InterviewTip>
+  Two Sum is not a set problem because we need more than presence. We need to
+  remember the index of the earlier partner.
+</InterviewTip>
+
+## Brute Force Idea
+
+The slow plan checks every pair of indexes. It works, but it takes about
+
+<code>O(n²)</code> time.
+
+## Better Plan
+
+1. Make a map called <code>seen</code>.
+2. For each number, compute the partner you need.
+3. If that partner is already in the map, return the saved index and the
+   current index.
+4. Otherwise, store the current number and index in the map.
+
+## Walkthrough
+
+For <code>nums = [2, 7, 11, 15]</code> and <code>target = 9</code>:
+
+1. Start with an empty map.
+2. At index 0, the number is 2, so the needed partner is 7. It is not in the
+   map yet, so store <code>2 -&gt; 0</code>.
+3. At index 1, the number is 7, so the needed partner is 2. That partner is
+   already in the map at index 0.
+4. Return <code>[0, 1]</code>.
+
+## TypeScript Solution
+
+```ts
+function twoSum(nums: number[], target: number): number[] {
+  const seen = new Map<number, number>();
+
+  for (let i = 0; i < nums.length; i++) {
+    const num = nums[i];
+    const need = target - num;
+
+    if (seen.has(need)) {
+      return [seen.get(need)!, i];
+    }
+
+    seen.set(num, i);
+  }
+
+  return [];
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(n)"
+  notes="The map lets us check the needed partner quickly instead of rescanning the whole list."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "nums = [2, 7, 11, 15], target = 9",
+      expected: "[0, 1]",
+      why: "2 and 7 make the target.",
+    },
+    {
+      input: "nums = [3, 3], target = 6",
+      expected: "[0, 1]",
+      why: "The same value can work from two different indexes.",
+    },
+    {
+      input: "nums = [1, 5, 8], target = 100",
+      expected: "[]",
+      why: "No pair reaches the target.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Storing before checking",
+      fix: "Check for the needed partner first so you do not accidentally use the same index twice.",
+    },
+    {
+      title: "Using a set instead of a map",
+      fix: "You need the earlier index, so the map should store number to index.",
+    },
+  ]}
+/>
+
+<HintDrawer title="What is the key question?">
+  Do not ask “What pair can I find?” Ask “What number do I need right now, and
+  have I already seen it?”
+</HintDrawer>
+
+## Reflection
+
+Why does Two Sum need a map instead of only a set?

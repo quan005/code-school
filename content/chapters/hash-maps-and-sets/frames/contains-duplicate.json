@@ -1,0 +1,56 @@
+[
+  {
+    "id": "contains-1",
+    "narration": "Start with an empty set and read the array one value at a time.",
+    "arrayValues": [3, 1, 4, 2, 1],
+    "callout": "The set will remember every value we have already passed.",
+    "decision": "If the current number is not in the set, add it.",
+    "highlightIndexes": [0],
+    "pointers": {
+      "current": 0
+    }
+  },
+  {
+    "id": "contains-2",
+    "narration": "Keep growing the set while the numbers stay new.",
+    "arrayValues": [3, 1, 4, 2, 1],
+    "callout": "After reading 3, 1, 4, and 2, the set would contain those four values.",
+    "decision": "The job is still only seen-before checking, so a set is enough.",
+    "highlightIndexes": [0, 1, 2, 3],
+    "pointers": {
+      "current": 3
+    },
+    "predictionPrompt": {
+      "prompt": "When the current value is already in the set, what should happen?",
+      "choices": [
+        {
+          "id": "true",
+          "label": "Return true",
+          "isCorrect": true,
+          "feedback": "Correct. A repeated value means the array contains a duplicate."
+        },
+        {
+          "id": "keep-going",
+          "label": "Keep scanning",
+          "isCorrect": false,
+          "feedback": "Not this one. The answer is already known."
+        }
+      ]
+    }
+  },
+  {
+    "id": "contains-3",
+    "narration": "At the final 1, the set already remembers that value, so the duplicate is found.",
+    "arrayValues": [3, 1, 4, 2, 1],
+    "callout": "The set does not need to count anything. It only answers whether the value was seen before.",
+    "decision": "Return true as soon as the repeated 1 appears.",
+    "highlightIndexes": [1, 4],
+    "pointers": {
+      "current": 4
+    },
+    "reflectionPrompt": {
+      "prompt": "Why is a set enough for Contains Duplicate?",
+      "placeholder": "A set is enough because..."
+    }
+  }
+]

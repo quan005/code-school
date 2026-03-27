@@ -1,0 +1,53 @@
+{
+  "practiceChallenge": {
+    "title": "Fill in the memory helper",
+    "description": "Complete the helper so it picks the correct memory tool for each kind of problem.",
+    "language": "javascript",
+    "starterCode": "export function chooseMemoryTool(problemType) {\n  const seenBeforeTool = \"TODO\";\n  const countTool = \"TODO\";\n  const lookupTool = \"TODO\";\n\n  if (problemType === \"seen-before\") {\n    return seenBeforeTool;\n  }\n\n  if (problemType === \"count\") {\n    return countTool;\n  }\n\n  return lookupTool;\n}\n",
+    "hints": [
+      "Seen-before checking is a set job.",
+      "Counting is a map job.",
+      "Two Sum uses fast lookup by need, which is also a map job."
+    ],
+    "successMessage": "Nice work. You matched the problem types to the right memory tool.",
+    "retryMessage": "Not yet. Recheck which jobs need only presence and which jobs need extra information.",
+    "completionBehavior": "mark_complete",
+    "blanks": [
+      {
+        "key": "seenBeforeTool",
+        "label": "Tool for seen-before checking",
+        "expectedValues": ["set"]
+      },
+      {
+        "key": "countTool",
+        "label": "Tool for counting",
+        "expectedValues": ["map", "hash map"]
+      },
+      {
+        "key": "lookupTool",
+        "label": "Tool for lookup by need",
+        "expectedValues": ["map", "hash map"]
+      }
+    ],
+    "visibleTests": [
+      {
+        "label": "Seen-before check",
+        "scenario": "problemType = seen-before",
+        "blankKey": "seenBeforeTool",
+        "expected": "set"
+      },
+      {
+        "label": "Counting",
+        "scenario": "problemType = count",
+        "blankKey": "countTool",
+        "expected": "map"
+      },
+      {
+        "label": "Lookup by need",
+        "scenario": "problemType = lookup",
+        "blankKey": "lookupTool",
+        "expected": "map"
+      }
+    ]
+  }
+}

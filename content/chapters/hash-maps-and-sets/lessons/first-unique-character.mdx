@@ -1,0 +1,125 @@
+---
+title: "First Unique Character"
+slug: "first-unique-character"
+order: 5
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 12
+concepts:
+  - "frequency map"
+  - "two-pass scan"
+  - "first unique item"
+skills:
+  - "Count first and search second"
+  - "Use the original order to find the first unique character"
+prerequisites:
+  - "valid-anagram"
+summary: "Count letters with a map, then scan the word again to find the first one with count 1."
+---
+
+<ProblemStatement title="Find the first character that appears exactly once">
+  Given a string <code>s</code>, return the index of the first character that
+  appears exactly once. If there is no such character, return <code>-1</code>.
+</ProblemStatement>
+
+## Examples
+
+```txt
+"leetcode" -> 0
+"aabb" -> -1
+```
+
+<Intuition title="This problem has two jobs">
+  First count how many times each letter appears. Then use the original string
+  order to find the first letter whose count is exactly 1.
+</Intuition>
+
+<InterviewTip>
+  This is a great example of a two-pass plan. One pass builds the map. The next
+  pass uses the map to answer the real question.
+</InterviewTip>
+
+## Plan
+
+1. Make a map of character counts.
+2. Read the whole string once and fill the map.
+3. Read the string again from left to right.
+4. Return the first index whose character has count 1.
+
+## Walkthrough
+
+For <code>"loveleetcode"</code>:
+
+1. Count every letter first.
+2. Start scanning from the beginning.
+3. <code>l</code> is not unique, and <code>o</code> is not unique.
+4. <code>v</code> has count 1, so return index 2.
+
+## TypeScript Solution
+
+```ts
+function firstUniqueChar(s: string): number {
+  const counts = new Map<string, number>();
+
+  for (const ch of s) {
+    counts.set(ch, (counts.get(ch) ?? 0) + 1);
+  }
+
+  for (let i = 0; i < s.length; i++) {
+    if (counts.get(s[i]) === 1) {
+      return i;
+    }
+  }
+
+  return -1;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(k)"
+  notes="The map gives us the counts, and the second pass preserves the original order."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: 's = "leetcode"',
+      expected: "0",
+      why: "l is unique and appears first.",
+    },
+    {
+      input: 's = "loveleetcode"',
+      expected: "2",
+      why: "v is the first letter with count 1.",
+    },
+    {
+      input: 's = "aabb"',
+      expected: "-1",
+      why: "No character appears exactly once.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Finding a unique letter but not the first one",
+      fix: "After counting, always scan the original string from left to right.",
+    },
+    {
+      title: "Trying to solve it with only one scan",
+      fix: "The map must know all the counts before you can tell which unique letter comes first.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Why keep the original string order?">
+  The map remembers counts, but the string remembers position. You need both to
+  answer “which unique letter comes first?”
+</HintDrawer>
+
+## Reflection
+
+Why does this problem need the map and the original string order working
+together?

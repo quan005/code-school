@@ -1,0 +1,56 @@
+[
+  {
+    "id": "two-sum-1",
+    "narration": "At each step, ask what partner the current number needs to reach the target.",
+    "arrayValues": [2, 7, 11, 15],
+    "callout": "With target 9 and current number 2, the needed partner is 7.",
+    "decision": "Check whether that needed number is already in the map.",
+    "highlightIndexes": [0],
+    "pointers": {
+      "current": 0
+    }
+  },
+  {
+    "id": "two-sum-2",
+    "narration": "If the partner is not there yet, store the current number and its index in the map.",
+    "arrayValues": [2, 7, 11, 15],
+    "callout": "After index 0, the map remembers 2 -> 0.",
+    "decision": "The map is storing value to index, not just value to true or false.",
+    "highlightIndexes": [0, 1],
+    "pointers": {
+      "current": 1
+    },
+    "predictionPrompt": {
+      "prompt": "At index 1, the current number is 7. What partner does it need to reach 9?",
+      "choices": [
+        {
+          "id": "2",
+          "label": "It needs 2",
+          "isCorrect": true,
+          "feedback": "Correct. 9 - 7 = 2."
+        },
+        {
+          "id": "16",
+          "label": "It needs 16",
+          "isCorrect": false,
+          "feedback": "Not this one. We subtract the current number from the target."
+        }
+      ]
+    }
+  },
+  {
+    "id": "two-sum-3",
+    "narration": "Now the needed partner 2 is already in the map, so the answer is found.",
+    "arrayValues": [2, 7, 11, 15],
+    "callout": "The map lets us jump straight to the earlier index instead of checking every pair.",
+    "decision": "Return [0, 1].",
+    "highlightIndexes": [0, 1],
+    "pointers": {
+      "current": 1
+    },
+    "reflectionPrompt": {
+      "prompt": "Why does Two Sum need a map instead of only a set?",
+      "placeholder": "Because we need to remember..."
+    }
+  }
+]

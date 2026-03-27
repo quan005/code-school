@@ -1,0 +1,56 @@
+[
+  {
+    "id": "freq-1",
+    "narration": "A frequency map gives every distinct number its own count bucket.",
+    "arrayValues": [4, 4, 2, 7, 2, 2],
+    "callout": "The key is the number, and the value is how many times that number has appeared.",
+    "decision": "When a number is new, start its count at 1.",
+    "highlightIndexes": [0],
+    "pointers": {
+      "current": 0
+    }
+  },
+  {
+    "id": "freq-2",
+    "narration": "When the same number appears again, increase that number’s count.",
+    "arrayValues": [4, 4, 2, 7, 2, 2],
+    "callout": "After the second 4, the count for 4 becomes 2.",
+    "decision": "Each repeat updates the same bucket instead of making a new one.",
+    "highlightIndexes": [0, 1],
+    "pointers": {
+      "current": 1
+    },
+    "predictionPrompt": {
+      "prompt": "If the count for 2 is already 2 and we see another 2, what should the new count be?",
+      "choices": [
+        {
+          "id": "3",
+          "label": "3",
+          "isCorrect": true,
+          "feedback": "Correct. The new count is old count plus 1."
+        },
+        {
+          "id": "2",
+          "label": "2",
+          "isCorrect": false,
+          "feedback": "Not this one. The count must grow when the number appears again."
+        }
+      ]
+    }
+  },
+  {
+    "id": "freq-3",
+    "narration": "By the end, the map remembers 4 -> 2, 2 -> 3, and 7 -> 1.",
+    "arrayValues": [4, 4, 2, 7, 2, 2],
+    "callout": "This counting pattern becomes the starting point for many later problems.",
+    "decision": "Return the completed map of counts.",
+    "highlightIndexes": [2, 3, 4, 5],
+    "pointers": {
+      "current": 5
+    },
+    "reflectionPrompt": {
+      "prompt": "Why does counting with a map help in many different problems?",
+      "placeholder": "Because once we know the counts..."
+    }
+  }
+]

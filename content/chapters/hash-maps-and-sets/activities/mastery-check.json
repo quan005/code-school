@@ -1,0 +1,74 @@
+{
+  "recapPrompt": {
+    "prompt": "Which lesson is the best example of a seen-before set problem?",
+    "choices": [
+      {
+        "id": "contains-duplicate",
+        "label": "Contains Duplicate",
+        "isCorrect": true,
+        "feedback": "Correct. The whole job is checking whether a value was seen already."
+      },
+      {
+        "id": "valid-anagram",
+        "label": "Valid Anagram",
+        "isCorrect": false,
+        "feedback": "Not this one. Valid Anagram needs counts, so it is a map problem."
+      }
+    ]
+  },
+  "reflectionPrompt": {
+    "prompt": "Explain why Two Sum needs a map instead of only a set.",
+    "placeholder": "Two Sum needs a map because..."
+  },
+  "practiceChallenge": {
+    "title": "Mastery check: rebuild the rule",
+    "description": "Complete the helper so it returns the right memory tool without the walkthrough.",
+    "language": "javascript",
+    "starterCode": "export function chooseMemoryTool(problemType) {\n  const seenBeforeTool = \"TODO\";\n  const countTool = \"TODO\";\n  const lookupTool = \"TODO\";\n\n  if (problemType === \"seen-before\") {\n    return seenBeforeTool;\n  }\n\n  if (problemType === \"count\") {\n    return countTool;\n  }\n\n  return lookupTool;\n}\n",
+    "hints": [
+      "Seen-before checking only needs presence.",
+      "Counting needs stored values.",
+      "Two Sum is a lookup-by-need map problem."
+    ],
+    "successMessage": "Pass. You chose the correct memory tool for each chapter pattern.",
+    "retryMessage": "Needs practice. Recheck whether each job needs presence only or extra information.",
+    "completionBehavior": "mark_complete",
+    "blanks": [
+      {
+        "key": "seenBeforeTool",
+        "label": "Tool for seen-before checking",
+        "expectedValues": ["set"]
+      },
+      {
+        "key": "countTool",
+        "label": "Tool for counting",
+        "expectedValues": ["map", "hash map"]
+      },
+      {
+        "key": "lookupTool",
+        "label": "Tool for lookup by need",
+        "expectedValues": ["map", "hash map"]
+      }
+    ],
+    "visibleTests": [
+      {
+        "label": "Mastery test 1",
+        "scenario": "problemType = seen-before",
+        "blankKey": "seenBeforeTool",
+        "expected": "set"
+      },
+      {
+        "label": "Mastery test 2",
+        "scenario": "problemType = count",
+        "blankKey": "countTool",
+        "expected": "map"
+      },
+      {
+        "label": "Mastery test 3",
+        "scenario": "problemType = lookup",
+        "blankKey": "lookupTool",
+        "expected": "map"
+      }
+    ]
+  }
+}

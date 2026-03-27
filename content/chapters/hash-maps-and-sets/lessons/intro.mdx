@@ -1,0 +1,93 @@
+---
+title: "Introduction"
+slug: "intro"
+order: 1
+lessonType: "intro"
+difficulty: "easy"
+estimatedMinutes: 9
+concepts:
+  - "hash map"
+  - "set"
+  - "keys and values"
+  - "seen-before checking"
+skills:
+  - "Explain the difference between a map and a set"
+  - "Spot when a problem needs remembering"
+  - "Choose whether presence or extra information matters"
+prerequisites: []
+summary: "Meet maps and sets, learn the four main strategies, and practice deciding which tool fits a problem."
+---
+
+<ProblemStatement title="Maps remember, sets notice">
+  A <strong>hash map</strong> remembers extra information about something. A{" "}
+  <strong>set</strong> only remembers whether that thing has been seen.
+</ProblemStatement>
+
+<Intuition title="Picture cubbies and a sticker board">
+  A map is like classroom cubbies with labels. The label is the key, and the
+  stuff inside is the value. A set is like a sticker board that only keeps one
+  copy of each sticker no matter how many times you add it.
+</Intuition>
+
+<InterviewTip>
+  Ask one question first: do I only care whether the thing exists, or do I need
+  extra information like a count, an index, or a match?
+</InterviewTip>
+
+<ComplexityCard
+  time="Often O(n)"
+  space="Often O(n)"
+  notes="Maps and sets use extra memory so you can stop rescanning the whole list again and again."
+/>
+
+## Four Main Strategies
+
+- <strong>Seen-before checking</strong> uses a set.
+- <strong>Counting</strong> uses a map.
+- <strong>Lookup by need</strong> uses a map.
+- <strong>Matching between collections</strong> uses a set or a map.
+
+## Real-world picture
+
+A teacher can use:
+
+- a <strong>set</strong> to track who already checked in
+- a <strong>map</strong> to track how many times each student visited the
+  reading station
+
+That is exactly how these tools work in code.
+
+<PredictionPrompt
+  prompt={{
+    prompt:
+      "You only need to know whether a number has already appeared. Which tool fits best?",
+    choices: [
+      {
+        id: "set",
+        label: "Use a set",
+        isCorrect: true,
+        feedback:
+          "Correct. A set is perfect when presence is all you care about.",
+      },
+      {
+        id: "map",
+        label: "Use a map",
+        isCorrect: false,
+        feedback:
+          "A map could work, but it is more than you need if you only care about seen-before checking.",
+      },
+    ],
+  }}
+/>
+
+## Tiny Practice
+
+- If the problem asks, “How many times did each letter appear?” use a{" "}
+  <strong>map</strong>.
+- If the problem asks, “Have I seen this before?” use a <strong>set</strong>.
+
+## Lesson Summary
+
+- Use a set when you only care if something exists.
+- Use a map when you need counts, indexes, or matches.
+- These tools often replace slow nested loops with faster lookups.

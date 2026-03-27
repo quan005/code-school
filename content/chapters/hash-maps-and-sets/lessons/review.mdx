@@ -1,0 +1,71 @@
+---
+title: "Review"
+slug: "review"
+order: 8
+lessonType: "review"
+difficulty: "medium"
+estimatedMinutes: 12
+concepts:
+  - "set vs map"
+  - "chapter recap"
+  - "pattern matching"
+skills:
+  - "Choose the correct memory tool for a problem"
+  - "Explain why a lesson uses a map or set"
+prerequisites:
+  - "count-the-frequencies"
+summary: "Review the chapter tools, match each lesson to its best strategy, and recap when sets or maps are the better fit."
+---
+
+<ProblemStatement title="Two memory tools to remember">
+  This chapter taught two main tools: sets for presence and maps for extra
+  information.
+</ProblemStatement>
+
+<Intuition title="The best question to ask">
+  Ask: do I only care whether something exists, or do I need a count, index, or
+  match? That question usually tells you whether to use a set or a map.
+</Intuition>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "Contains Duplicate",
+      expected: "Set",
+      why: "We only care if a value was seen before.",
+    },
+    {
+      input: "Two Sum",
+      expected: "Map",
+      why: "We need to remember an earlier index for the partner.",
+    },
+    {
+      input: "Valid Anagram",
+      expected: "Map",
+      why: "We must count each letter.",
+    },
+    {
+      input: "Intersection of Two Arrays",
+      expected: "Set",
+      why: "We need membership checks and unique results.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Using a set when counts matter",
+      fix: "If the problem asks how many times something appears, use a map.",
+    },
+    {
+      title: "Using a map when only presence matters",
+      fix: "A set is simpler when the only job is checking whether something exists.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Pattern questions">
+  Ask: Have I seen this before? How many times did it appear? Do I need a fast
+  partner lookup? Am I matching two collections?
+</HintDrawer>

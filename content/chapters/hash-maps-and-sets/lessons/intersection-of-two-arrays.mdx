@@ -1,0 +1,123 @@
+---
+title: "Intersection of Two Arrays"
+slug: "intersection-of-two-arrays"
+order: 6
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 11
+concepts:
+  - "set"
+  - "matching between collections"
+  - "unique results"
+skills:
+  - "Use a set for fast membership checking"
+  - "Build a unique result from two arrays"
+prerequisites:
+  - "first-unique-character"
+summary: "Use one set to check whether values appear in the other array, and a second set to keep the answer unique."
+---
+
+<ProblemStatement title="Return the common values">
+  Given two arrays of integers, return an array of their common values. Each
+  value should appear only once in the result.
+</ProblemStatement>
+
+## Examples
+
+```txt
+nums1 = [1, 2, 2, 1], nums2 = [2, 2] -> [2]
+nums1 = [4, 9, 5], nums2 = [9, 4, 9, 8, 4] -> [4, 9] or [9, 4]
+```
+
+<Intuition title="Compare one collection to another">
+  Put the first array into a set so membership checks are quick. Then read the
+  second array and add shared values into a result set so duplicates disappear
+  automatically.
+</Intuition>
+
+<InterviewTip>
+  This is a set problem because the key jobs are membership checking and unique
+  answers.
+</InterviewTip>
+
+## Plan
+
+1. Build a set from the first array.
+2. Make an empty result set.
+3. Loop through the second array.
+4. If the number is in the first set, add it to the result set.
+
+## Walkthrough
+
+For <code>nums1 = [1, 2, 2, 1]</code> and <code>nums2 = [2, 2]</code>:
+
+1. The first set becomes <code>{1, 2}</code>.
+2. Read the first 2 from the second array and add it to the result.
+3. Read the next 2, but the result set still keeps only one 2.
+4. Return <code>[2]</code>.
+
+## TypeScript Solution
+
+```ts
+function intersection(nums1: number[], nums2: number[]): number[] {
+  const set1 = new Set<number>(nums1);
+  const result = new Set<number>();
+
+  for (const num of nums2) {
+    if (set1.has(num)) {
+      result.add(num);
+    }
+  }
+
+  return Array.from(result);
+}
+```
+
+<ComplexityCard
+  time="O(n + m)"
+  space="O(n + r)"
+  notes="The first set makes membership checks fast, and the result set keeps the answers unique."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "nums1 = [1, 2, 2, 1], nums2 = [2, 2]",
+      expected: "[2]",
+      why: "2 is the only shared value.",
+    },
+    {
+      input: "nums1 = [1, 2, 3], nums2 = [4, 5, 6]",
+      expected: "[]",
+      why: "There are no shared values.",
+    },
+    {
+      input: "nums1 = [], nums2 = [1, 2]",
+      expected: "[]",
+      why: "An empty first array has nothing to match.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Using an array for membership checks",
+      fix: "A set is better because it can answer “is this here?” quickly.",
+    },
+    {
+      title: "Letting duplicates into the answer",
+      fix: "Use a result set so the shared values stay unique.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Why are there two sets?">
+  The first set checks membership. The second set protects the final answer from
+  duplicates.
+</HintDrawer>
+
+## Reflection
+
+Why is a set better than a list for checking whether one array contains a value
+from the other array?

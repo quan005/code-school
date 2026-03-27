@@ -1,0 +1,120 @@
+---
+title: "Count the Frequencies"
+slug: "count-the-frequencies"
+order: 7
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 11
+concepts:
+  - "frequency map"
+  - "counting"
+  - "key-value buckets"
+skills:
+  - "Build a map of value counts"
+  - "Update a stored count as new values appear"
+prerequisites:
+  - "intersection-of-two-arrays"
+summary: "Build a frequency map so each number remembers how many times it appeared."
+---
+
+<ProblemStatement title="Count how many times each number appears">
+  Given an array of numbers, return a map-like result showing how many times
+  each number appears.
+</ProblemStatement>
+
+## Example
+
+```txt
+nums = [4, 4, 2, 7, 2, 2]
+4 -> 2
+2 -> 3
+7 -> 1
+```
+
+<Intuition title="Give each number its own bucket">
+  A map can give every number its own bucket. Each time that number appears, we
+  add 1 to the value in the bucket.
+</Intuition>
+
+<InterviewTip>
+  The counting pattern shows up everywhere: letters, votes, visits, scores, and
+  most-common-item problems all start with a frequency map.
+</InterviewTip>
+
+## Plan
+
+1. Start with an empty map.
+2. Read each number in the array.
+3. Look up its old count, or use 0 if it is new.
+4. Store the new count as old count plus 1.
+
+## Walkthrough
+
+For <code>nums = [4, 4, 2, 7, 2, 2]</code>:
+
+1. See 4 and store <code>4 -&gt; 1</code>.
+2. See 4 again and update it to <code>4 -&gt; 2</code>.
+3. See 2 and store <code>2 -&gt; 1</code>.
+4. Keep updating each bucket until every number is counted.
+
+## TypeScript Solution
+
+```ts
+function countFrequencies(nums: number[]): Map<number, number> {
+  const counts = new Map<number, number>();
+
+  for (const num of nums) {
+    counts.set(num, (counts.get(num) ?? 0) + 1);
+  }
+
+  return counts;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(k)"
+  notes="The map stores one entry per distinct number, not one entry per position."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "nums = [4, 4, 2, 7, 2, 2]",
+      expected: "4 -> 2, 2 -> 3, 7 -> 1",
+      why: "Each number gets its own count bucket.",
+    },
+    {
+      input: "nums = []",
+      expected: "empty map",
+      why: "No values means no buckets.",
+    },
+    {
+      input: "nums = [9]",
+      expected: "9 -> 1",
+      why: "A single value appears one time.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Starting every count at 0 and never adding 1",
+      fix: "When a number appears, its new count must become old count plus 1.",
+    },
+    {
+      title: "Using a set for counting",
+      fix: "A set can only remember presence. Counting needs a map so each key can store a number.",
+    },
+  ]}
+/>
+
+<HintDrawer title="What should the map remember?">
+  The key is the number itself. The value is how many times that number has been
+  seen so far.
+</HintDrawer>
+
+## Reflection
+
+Why does this pattern make many harder problems easier later?

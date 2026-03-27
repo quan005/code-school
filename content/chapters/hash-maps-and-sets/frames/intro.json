@@ -1,0 +1,56 @@
+[
+  {
+    "id": "hms-intro-1",
+    "narration": "A set is like a memory board that only cares whether something has shown up.",
+    "arrayValues": ["cat", "dog", "cat"],
+    "callout": "Even if cat appears twice in the list, the set would still only keep one cat.",
+    "decision": "Use a set when presence is all you need.",
+    "highlightIndexes": [0, 2],
+    "pointers": {
+      "current": 2
+    }
+  },
+  {
+    "id": "hms-intro-2",
+    "narration": "A map stores extra information, like a count or an index, for each key.",
+    "arrayValues": ["Maya:3", "Leo:7", "Maya:4"],
+    "callout": "The label is the key, and the stored information is the value.",
+    "decision": "Use a map when you need more than yes-or-no memory.",
+    "highlightIndexes": [0, 1],
+    "pointers": {
+      "current": 0
+    },
+    "predictionPrompt": {
+      "prompt": "If the job is “How many times did each thing appear?”, which tool fits best?",
+      "choices": [
+        {
+          "id": "map",
+          "label": "Use a map",
+          "isCorrect": true,
+          "feedback": "Correct. Counting needs a key with a stored value."
+        },
+        {
+          "id": "set",
+          "label": "Use a set",
+          "isCorrect": false,
+          "feedback": "Not this time. A set forgets the count."
+        }
+      ]
+    }
+  },
+  {
+    "id": "hms-intro-3",
+    "narration": "Many slow nested-loop problems become faster once you remember the right thing in a map or set.",
+    "arrayValues": ["seen?", "count?", "need?", "match?"],
+    "callout": "Those four questions lead to the four chapter strategies: seen-before, counting, lookup by need, and matching between collections.",
+    "decision": "The right memory tool helps you stop rescanning the whole list.",
+    "highlightIndexes": [0, 1, 2, 3],
+    "pointers": {
+      "current": 1
+    },
+    "reflectionPrompt": {
+      "prompt": "Why can extra memory sometimes make a program faster?",
+      "placeholder": "Because the map or set can remember..."
+    }
+  }
+]

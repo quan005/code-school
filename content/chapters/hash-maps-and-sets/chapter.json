@@ -1,0 +1,7 @@
+{
+  "slug": "hash-maps-and-sets",
+  "title": "Hash Maps And Sets",
+  "order": 2,
+  "track": "Code Patterns",
+  "summary": "Learn when to remember counts, when to remember seen values, and how maps and sets can replace slow nested loops."
+}

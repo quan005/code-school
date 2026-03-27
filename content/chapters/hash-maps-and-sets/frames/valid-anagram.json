@@ -1,0 +1,57 @@
+[
+  {
+    "id": "anagram-1",
+    "narration": "An anagram problem starts by counting letters in the first word.",
+    "arrayValues": ["l", "i", "s", "t", "e", "n"],
+    "callout": "The map stores each letter as the key and the count as the value.",
+    "decision": "After this pass, every needed letter count is ready.",
+    "highlightIndexes": [0, 1, 2, 3, 4, 5],
+    "pointers": {
+      "current": 5
+    }
+  },
+  {
+    "id": "anagram-2",
+    "narration": "Then read the second word and subtract from those counts.",
+    "arrayValues": ["s", "i", "l", "e", "n", "t"],
+    "callout": "Every matching letter uses up one count from the map.",
+    "decision": "If a letter is missing or goes below zero, the words are not anagrams.",
+    "highlightIndexes": [0, 1, 2],
+    "pointers": {
+      "current": 2
+    },
+    "predictionPrompt": {
+      "prompt": "Why is a set not enough for this lesson?",
+      "choices": [
+        {
+          "id": "counts",
+          "label": "Because we need counts",
+          "isCorrect": true,
+          "feedback": "Correct. The same letter can appear more than once."
+        },
+        {
+          "id": "order",
+          "label": "Because we need to sort the letters",
+          "isCorrect": false,
+          "feedback": "Sorting is one possible method, but the key reason here is that we need counts."
+        }
+      ]
+    }
+  },
+  {
+    "id": "anagram-3",
+    "narration": "If every subtraction balances correctly, the two words use the same letters the same number of times.",
+    "arrayValues": ["listen", "silent"],
+    "callout": "The counts matched all the way to the end.",
+    "decision": "Return true.",
+    "highlightIndexes": [0, 1],
+    "pointers": {
+      "left": 0,
+      "right": 1
+    },
+    "reflectionPrompt": {
+      "prompt": "Why is counting more useful than only checking whether a letter exists?",
+      "placeholder": "Counting matters because..."
+    }
+  }
+]

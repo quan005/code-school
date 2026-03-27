@@ -1,7 +1,7 @@
 # Interactive Learning App Jira Backlog
 
 ## Scope
-This backlog covers the MVP plan for a content-first, interactive learning app built with Next.js App Router, MDX-authored curriculum, a persisted student progress model, and a full `Two Pointers` reference chapter.
+This backlog covers the MVP plan for a content-first, interactive learning app built with Next.js App Router, MDX-authored curriculum, a persisted student progress model, and the full `Code Patterns` chapter sequence authored from the curriculum docs.
 
 ## Planning Assumptions
 - Story points use a Fibonacci scale: `1, 2, 3, 5, 8, 13`.
@@ -19,10 +19,27 @@ This backlog covers the MVP plan for a content-first, interactive learning app b
 | `EPIC-4` | Progress and Mastery | Persist student state and mastery logic | `13` |
 | `EPIC-5` | Practice and Review | Support coding, review, and mastery check flows | `13` |
 | `EPIC-6` | Two Pointers Chapter | Deliver the full reference chapter content | `13` |
-| `EPIC-7` | Child Safety and Account Model | Establish privacy-safe child-directed account constraints | `8` |
-| `EPIC-8` | Quality and Delivery | Add testing and launch readiness | `8` |
+| `EPIC-7` | Hash Maps And Sets Chapter | Author the second Code Patterns chapter from curriculum source | `13` |
+| `EPIC-8` | Linked Lists Chapter | Author the third Code Patterns chapter from curriculum source | `13` |
+| `EPIC-9` | Fast and Slow Pointers Chapter | Author the fourth Code Patterns chapter from curriculum source | `13` |
+| `EPIC-10` | Sliding Windows Chapter | Author the fifth Code Patterns chapter from curriculum source | `13` |
+| `EPIC-11` | Binary Search Chapter | Author the sixth Code Patterns chapter from curriculum source | `13` |
+| `EPIC-12` | Stacks Chapter | Author the seventh Code Patterns chapter from curriculum source | `13` |
+| `EPIC-13` | Heaps Chapter | Author the eighth Code Patterns chapter from curriculum source | `13` |
+| `EPIC-14` | Intervals Chapter | Author the ninth Code Patterns chapter from curriculum source | `13` |
+| `EPIC-15` | Prefix Sums Chapter | Author the tenth Code Patterns chapter from curriculum source | `13` |
+| `EPIC-16` | Trees Chapter | Author the eleventh Code Patterns chapter from curriculum source | `13` |
+| `EPIC-17` | Tries Chapter | Author the twelfth Code Patterns chapter from curriculum source | `13` |
+| `EPIC-18` | Graphs Chapter | Author the thirteenth Code Patterns chapter from curriculum source | `13` |
+| `EPIC-19` | Backtracking Chapter | Author the fourteenth Code Patterns chapter from curriculum source | `13` |
+| `EPIC-20` | Dynamic Programming Chapter | Author the fifteenth Code Patterns chapter from curriculum source | `13` |
+| `EPIC-21` | Greedy Chapter | Author the sixteenth Code Patterns chapter from curriculum source | `13` |
+| `EPIC-22` | Sort and Search Chapter | Author the seventeenth Code Patterns chapter from curriculum source | `13` |
+| `EPIC-23` | Bit Manipulation Chapter | Author the eighteenth Code Patterns chapter from curriculum source | `13` |
+| `EPIC-24` | Child Safety and Account Model | Establish privacy-safe child-directed account constraints | `8` |
+| `EPIC-25` | Quality and Delivery | Add testing and launch readiness | `8` |
 
-Total planned points: `102`
+Total planned points: `310`
 
 ---
 
@@ -589,7 +606,1672 @@ Source both from the `Chapter Review` and `Mastery Check` sections in `docs/curr
 
 ---
 
-## EPIC-7: Child Safety and Account Model
+## EPIC-7: Hash Maps And Sets Chapter
+
+Source of truth for chapter sequencing and instructional content:
+- `docs/curriculum/code-patterns/hash-maps-and-sets-chapter.md`
+
+### `CONTENT-HMS-1` Author Chapter Landing and Intro Lesson
+**Story Points:** `3`
+
+**Description**  
+Author the `Hash Maps And Sets` chapter landing page and intro lesson that explain what sets and maps remember, when to use each one, and how the chapter flows.
+Pull the lesson structure, concepts, and kid-facing explanations from `docs/curriculum/code-patterns/hash-maps-and-sets-chapter.md`.
+
+**Acceptance Criteria**
+- Chapter landing page includes summary, lesson list, and entry point.
+- Intro lesson covers the chapter big idea, when to use a set vs a map, and a simple real-world example.
+- Intro lesson includes a mini checkpoint.
+- Content uses the standard MDX and lesson shell system.
+
+**Technical Details**
+- Author under `content/chapters/hash-maps-and-sets`.
+- Use `docs/curriculum/code-patterns/hash-maps-and-sets-chapter.md` as the source document for chapter goals, outline, and intro lesson content.
+- Include at least one interactive visual block or prompt.
+- Export typed metadata.
+
+**Out of Scope**
+- Other chapters.
+- Teacher-facing lesson variants.
+- Localization.
+
+### `CONTENT-HMS-2` Author Early Lesson Bundle
+**Story Points:** `5`
+
+**Description**  
+Author the first half of the `Hash Maps And Sets` lesson sequence listed in `docs/curriculum/code-patterns/hash-maps-and-sets-chapter.md`.
+
+**Acceptance Criteria**
+- The early lesson bundle is authored in MDX with complete metadata.
+- Each lesson follows the standard problem lesson structure.
+- Each lesson includes at least one interactive visual, walkthrough, or prompt.
+- Lessons appear in the correct chapter order and are navigable.
+
+**Technical Details**
+- Pull lesson explanations, examples, and sequencing from `docs/curriculum/code-patterns/hash-maps-and-sets-chapter.md`.
+- Reuse lesson frame schema, prompt widgets, and practice conventions where appropriate.
+- Keep reading density low and the set-vs-map distinction clear for children.
+
+**Out of Scope**
+- Other pattern families.
+- Audio narration.
+- Challenge problems not listed in the chapter source.
+
+### `CONTENT-HMS-3` Author Late Lesson Bundle
+**Story Points:** `3`
+
+**Description**  
+Author the second half of the `Hash Maps And Sets` lesson sequence listed in `docs/curriculum/code-patterns/hash-maps-and-sets-chapter.md`.
+
+**Acceptance Criteria**
+- The late lesson bundle is authored in MDX with complete metadata.
+- Each lesson follows the standard problem lesson structure.
+- Each lesson includes at least one interactive visual, walkthrough, or prompt.
+- Lessons remain aligned with the chapter progression and chapter order.
+
+**Technical Details**
+- Reuse the established chapter authoring pattern from the early lesson bundle.
+- Adapt the chapter source language into low-reading-load, kid-friendly lesson blocks.
+- Prefer content-driven review, prompt, and practice composition instead of hardcoded page logic.
+
+**Out of Scope**
+- Cross-chapter recap.
+- Alternate implementations in multiple languages.
+- Teacher answer views.
+
+### `CONTENT-HMS-4` Author Chapter Review and Mastery Content
+**Story Points:** `2`
+
+**Description**  
+Author the review and mastery content needed to complete the `Hash Maps And Sets` chapter end to end.
+Source both from the `Chapter Review` and `Mastery Check` sections in `docs/curriculum/code-patterns/hash-maps-and-sets-chapter.md`.
+
+**Acceptance Criteria**
+- Review content exists and is reachable from chapter flow.
+- Mastery content exists and is reachable after review.
+- Both content types follow the chapter metadata conventions.
+- Chapter flow is complete from intro through mastery.
+
+**Technical Details**
+- Use `review` and `mastery` lesson/content conventions.
+- Adapt the review and mastery prompts from `docs/curriculum/code-patterns/hash-maps-and-sets-chapter.md` into MDX and activity configs.
+- Include recap prompts, concept summaries, and chapter-end evaluation content.
+
+**Out of Scope**
+- Adaptive mastery branching.
+- Printable packets.
+- Subsequent chapters.
+
+---
+
+## EPIC-8: Linked Lists Chapter
+
+Source of truth for chapter sequencing and instructional content:
+- `docs/curriculum/code-patterns/linked-lists-chapter.md`
+
+### `CONTENT-LL-1` Author Chapter Landing and Intro Lesson
+**Story Points:** `3`
+
+**Description**  
+Author the `Linked Lists` chapter landing page and intro lesson that explain nodes, pointers, and why a linked list acts like a chain.
+Pull the lesson structure, concepts, and kid-facing explanations from `docs/curriculum/code-patterns/linked-lists-chapter.md`.
+
+**Acceptance Criteria**
+- Chapter landing page includes summary, lesson list, and entry point.
+- Intro lesson covers the chapter big idea, core vocabulary, and a simple real-world example.
+- Intro lesson includes a mini checkpoint.
+- Content uses the standard MDX and lesson shell system.
+
+**Technical Details**
+- Author under `content/chapters/linked-lists`.
+- Use `docs/curriculum/code-patterns/linked-lists-chapter.md` as the source document for chapter goals, outline, and intro lesson content.
+- Include at least one interactive visual block or prompt.
+- Export typed metadata.
+
+**Out of Scope**
+- Other chapters.
+- Teacher-facing lesson variants.
+- Localization.
+
+### `CONTENT-LL-2` Author Early Lesson Bundle
+**Story Points:** `5`
+
+**Description**  
+Author the first half of the `Linked Lists` lesson sequence listed in `docs/curriculum/code-patterns/linked-lists-chapter.md`.
+
+**Acceptance Criteria**
+- The early lesson bundle is authored in MDX with complete metadata.
+- Each lesson follows the standard problem lesson structure.
+- Each lesson includes at least one interactive visual, walkthrough, or prompt.
+- Lessons appear in the correct chapter order and are navigable.
+
+**Technical Details**
+- Pull lesson explanations, examples, and sequencing from `docs/curriculum/code-patterns/linked-lists-chapter.md`.
+- Reuse lesson frame schema, prompt widgets, and practice conventions where appropriate.
+- Keep child-facing explanations concrete for node and pointer movement.
+
+**Out of Scope**
+- Other pattern families.
+- Audio narration.
+- Challenge problems not listed in the chapter source.
+
+### `CONTENT-LL-3` Author Late Lesson Bundle
+**Story Points:** `3`
+
+**Description**  
+Author the second half of the `Linked Lists` lesson sequence listed in `docs/curriculum/code-patterns/linked-lists-chapter.md`.
+
+**Acceptance Criteria**
+- The late lesson bundle is authored in MDX with complete metadata.
+- Each lesson follows the standard problem lesson structure.
+- Each lesson includes at least one interactive visual, walkthrough, or prompt.
+- Lessons remain aligned with the chapter progression and chapter order.
+
+**Technical Details**
+- Reuse the established chapter authoring pattern from the early lesson bundle.
+- Adapt the chapter source language into low-reading-load, kid-friendly lesson blocks.
+- Prefer content-driven review, prompt, and practice composition instead of hardcoded page logic.
+
+**Out of Scope**
+- Cross-chapter recap.
+- Alternate implementations in multiple languages.
+- Teacher answer views.
+
+### `CONTENT-LL-4` Author Chapter Review and Mastery Content
+**Story Points:** `2`
+
+**Description**  
+Author the review and mastery content needed to complete the `Linked Lists` chapter end to end.
+Source both from the `Chapter Review` and `Mastery Check` sections in `docs/curriculum/code-patterns/linked-lists-chapter.md`.
+
+**Acceptance Criteria**
+- Review content exists and is reachable from chapter flow.
+- Mastery content exists and is reachable after review.
+- Both content types follow the chapter metadata conventions.
+- Chapter flow is complete from intro through mastery.
+
+**Technical Details**
+- Use `review` and `mastery` lesson/content conventions.
+- Adapt the review and mastery prompts from `docs/curriculum/code-patterns/linked-lists-chapter.md` into MDX and activity configs.
+- Include recap prompts, concept summaries, and chapter-end evaluation content.
+
+**Out of Scope**
+- Adaptive mastery branching.
+- Printable packets.
+- Subsequent chapters.
+
+---
+
+## EPIC-9: Fast and Slow Pointers Chapter
+
+Source of truth for chapter sequencing and instructional content:
+- `docs/curriculum/code-patterns/fast-and-slow-pointers-chapter.md`
+
+### `CONTENT-FSP-1` Author Chapter Landing and Intro Lesson
+**Story Points:** `3`
+
+**Description**  
+Author the `Fast and Slow Pointers` chapter landing page and intro lesson that explain why two pointers moving at different speeds reveal patterns.
+Pull the lesson structure, concepts, and kid-facing explanations from `docs/curriculum/code-patterns/fast-and-slow-pointers-chapter.md`.
+
+**Acceptance Criteria**
+- Chapter landing page includes summary, lesson list, and entry point.
+- Intro lesson covers the chapter big idea, pointer-speed intuition, and a simple real-world example.
+- Intro lesson includes a mini checkpoint.
+- Content uses the standard MDX and lesson shell system.
+
+**Technical Details**
+- Author under `content/chapters/fast-and-slow-pointers`.
+- Use `docs/curriculum/code-patterns/fast-and-slow-pointers-chapter.md` as the source document for chapter goals, outline, and intro lesson content.
+- Include at least one interactive visual block or prompt.
+- Export typed metadata.
+
+**Out of Scope**
+- Other chapters.
+- Teacher-facing lesson variants.
+- Localization.
+
+### `CONTENT-FSP-2` Author Early Lesson Bundle
+**Story Points:** `5`
+
+**Description**  
+Author the first half of the `Fast and Slow Pointers` lesson sequence listed in `docs/curriculum/code-patterns/fast-and-slow-pointers-chapter.md`.
+
+**Acceptance Criteria**
+- The early lesson bundle is authored in MDX with complete metadata.
+- Each lesson follows the standard problem lesson structure.
+- Each lesson includes at least one interactive visual, walkthrough, or prompt.
+- Lessons appear in the correct chapter order and are navigable.
+
+**Technical Details**
+- Pull lesson explanations, examples, and sequencing from `docs/curriculum/code-patterns/fast-and-slow-pointers-chapter.md`.
+- Reuse lesson frame schema, prompt widgets, and practice conventions where appropriate.
+- Keep speed-difference explanations concrete and child-readable.
+
+**Out of Scope**
+- Other pattern families.
+- Audio narration.
+- Challenge problems not listed in the chapter source.
+
+### `CONTENT-FSP-3` Author Late Lesson Bundle
+**Story Points:** `3`
+
+**Description**  
+Author the second half of the `Fast and Slow Pointers` lesson sequence listed in `docs/curriculum/code-patterns/fast-and-slow-pointers-chapter.md`.
+
+**Acceptance Criteria**
+- The late lesson bundle is authored in MDX with complete metadata.
+- Each lesson follows the standard problem lesson structure.
+- Each lesson includes at least one interactive visual, walkthrough, or prompt.
+- Lessons remain aligned with the chapter progression and chapter order.
+
+**Technical Details**
+- Reuse the established chapter authoring pattern from the early lesson bundle.
+- Adapt the chapter source language into low-reading-load, kid-friendly lesson blocks.
+- Prefer content-driven review, prompt, and practice composition instead of hardcoded page logic.
+
+**Out of Scope**
+- Cross-chapter recap.
+- Alternate implementations in multiple languages.
+- Teacher answer views.
+
+### `CONTENT-FSP-4` Author Chapter Review and Mastery Content
+**Story Points:** `2`
+
+**Description**  
+Author the review and mastery content needed to complete the `Fast and Slow Pointers` chapter end to end.
+Source both from the `Chapter Review` and `Mastery Check` sections in `docs/curriculum/code-patterns/fast-and-slow-pointers-chapter.md`.
+
+**Acceptance Criteria**
+- Review content exists and is reachable from chapter flow.
+- Mastery content exists and is reachable after review.
+- Both content types follow the chapter metadata conventions.
+- Chapter flow is complete from intro through mastery.
+
+**Technical Details**
+- Use `review` and `mastery` lesson/content conventions.
+- Adapt the review and mastery prompts from `docs/curriculum/code-patterns/fast-and-slow-pointers-chapter.md` into MDX and activity configs.
+- Include recap prompts, concept summaries, and chapter-end evaluation content.
+
+**Out of Scope**
+- Adaptive mastery branching.
+- Printable packets.
+- Subsequent chapters.
+
+---
+
+## EPIC-10: Sliding Windows Chapter
+
+Source of truth for chapter sequencing and instructional content:
+- `docs/curriculum/code-patterns/sliding-windows-chapter.md`
+
+### `CONTENT-SW-1` Author Chapter Landing and Intro Lesson
+**Story Points:** `3`
+
+**Description**  
+Author the `Sliding Windows` chapter landing page and intro lesson that explain a moving range, window size, and why growing or shrinking a window can save work.
+Pull the lesson structure, concepts, and kid-facing explanations from `docs/curriculum/code-patterns/sliding-windows-chapter.md`.
+
+**Acceptance Criteria**
+- Chapter landing page includes summary, lesson list, and entry point.
+- Intro lesson covers the chapter big idea, when to grow or shrink the window, and a simple real-world example.
+- Intro lesson includes a mini checkpoint.
+- Content uses the standard MDX and lesson shell system.
+
+**Technical Details**
+- Author under `content/chapters/sliding-windows`.
+- Use `docs/curriculum/code-patterns/sliding-windows-chapter.md` as the source document for chapter goals, outline, and intro lesson content.
+- Include at least one interactive visual block or prompt.
+- Export typed metadata.
+
+**Out of Scope**
+- Other chapters.
+- Teacher-facing lesson variants.
+- Localization.
+
+### `CONTENT-SW-2` Author Early Lesson Bundle
+**Story Points:** `5`
+
+**Description**  
+Author the first half of the `Sliding Windows` lesson sequence listed in `docs/curriculum/code-patterns/sliding-windows-chapter.md`.
+
+**Acceptance Criteria**
+- The early lesson bundle is authored in MDX with complete metadata.
+- Each lesson follows the standard problem lesson structure.
+- Each lesson includes at least one interactive visual, walkthrough, or prompt.
+- Lessons appear in the correct chapter order and are navigable.
+
+**Technical Details**
+- Pull lesson explanations, examples, and sequencing from `docs/curriculum/code-patterns/sliding-windows-chapter.md`.
+- Reuse lesson frame schema, prompt widgets, and practice conventions where appropriate.
+- Keep explanations of `k`, counts, and window movement child-friendly.
+
+**Out of Scope**
+- Other pattern families.
+- Audio narration.
+- Challenge problems not listed in the chapter source.
+
+### `CONTENT-SW-3` Author Late Lesson Bundle
+**Story Points:** `3`
+
+**Description**  
+Author the second half of the `Sliding Windows` lesson sequence listed in `docs/curriculum/code-patterns/sliding-windows-chapter.md`.
+
+**Acceptance Criteria**
+- The late lesson bundle is authored in MDX with complete metadata.
+- Each lesson follows the standard problem lesson structure.
+- Each lesson includes at least one interactive visual, walkthrough, or prompt.
+- Lessons remain aligned with the chapter progression and chapter order.
+
+**Technical Details**
+- Reuse the established chapter authoring pattern from the early lesson bundle.
+- Adapt the chapter source language into low-reading-load, kid-friendly lesson blocks.
+- Prefer content-driven review, prompt, and practice composition instead of hardcoded page logic.
+
+**Out of Scope**
+- Cross-chapter recap.
+- Alternate implementations in multiple languages.
+- Teacher answer views.
+
+### `CONTENT-SW-4` Author Chapter Review and Mastery Content
+**Story Points:** `2`
+
+**Description**  
+Author the review and mastery content needed to complete the `Sliding Windows` chapter end to end.
+Source both from the `Chapter Review` and `Mastery Check` sections in `docs/curriculum/code-patterns/sliding-windows-chapter.md`.
+
+**Acceptance Criteria**
+- Review content exists and is reachable from chapter flow.
+- Mastery content exists and is reachable after review.
+- Both content types follow the chapter metadata conventions.
+- Chapter flow is complete from intro through mastery.
+
+**Technical Details**
+- Use `review` and `mastery` lesson/content conventions.
+- Adapt the review and mastery prompts from `docs/curriculum/code-patterns/sliding-windows-chapter.md` into MDX and activity configs.
+- Include recap prompts, concept summaries, and chapter-end evaluation content.
+
+**Out of Scope**
+- Adaptive mastery branching.
+- Printable packets.
+- Subsequent chapters.
+
+---
+
+## EPIC-11: Binary Search Chapter
+
+Source of truth for chapter sequencing and instructional content:
+- `docs/curriculum/code-patterns/binary-search-chapter.md`
+
+### `CONTENT-BS-1` Author Chapter Landing and Intro Lesson
+**Story Points:** `3`
+
+**Description**  
+Author the `Binary Search` chapter landing page and intro lesson that explain sorted order, middle choice, and why cutting the search space in half is powerful.
+Pull the lesson structure, concepts, and kid-facing explanations from `docs/curriculum/code-patterns/binary-search-chapter.md`.
+
+**Acceptance Criteria**
+- Chapter landing page includes summary, lesson list, and entry point.
+- Intro lesson covers the chapter big idea, left-middle-right roles, and a simple real-world example.
+- Intro lesson includes a mini checkpoint.
+- Content uses the standard MDX and lesson shell system.
+
+**Technical Details**
+- Author under `content/chapters/binary-search`.
+- Use `docs/curriculum/code-patterns/binary-search-chapter.md` as the source document for chapter goals, outline, and intro lesson content.
+- Include at least one interactive visual block or prompt.
+- Export typed metadata.
+
+**Out of Scope**
+- Other chapters.
+- Teacher-facing lesson variants.
+- Localization.
+
+### `CONTENT-BS-2` Author Early Lesson Bundle
+**Story Points:** `5`
+
+**Description**  
+Author the first half of the `Binary Search` lesson sequence listed in `docs/curriculum/code-patterns/binary-search-chapter.md`.
+
+**Acceptance Criteria**
+- The early lesson bundle is authored in MDX with complete metadata.
+- Each lesson follows the standard problem lesson structure.
+- Each lesson includes at least one interactive visual, walkthrough, or prompt.
+- Lessons appear in the correct chapter order and are navigable.
+
+**Technical Details**
+- Pull lesson explanations, examples, and sequencing from `docs/curriculum/code-patterns/binary-search-chapter.md`.
+- Reuse lesson frame schema, prompt widgets, and practice conventions where appropriate.
+- Keep midpoint and half-search explanations concrete for children.
+
+**Out of Scope**
+- Other pattern families.
+- Audio narration.
+- Challenge problems not listed in the chapter source.
+
+### `CONTENT-BS-3` Author Late Lesson Bundle
+**Story Points:** `3`
+
+**Description**  
+Author the second half of the `Binary Search` lesson sequence listed in `docs/curriculum/code-patterns/binary-search-chapter.md`.
+
+**Acceptance Criteria**
+- The late lesson bundle is authored in MDX with complete metadata.
+- Each lesson follows the standard problem lesson structure.
+- Each lesson includes at least one interactive visual, walkthrough, or prompt.
+- Lessons remain aligned with the chapter progression and chapter order.
+
+**Technical Details**
+- Reuse the established chapter authoring pattern from the early lesson bundle.
+- Adapt the chapter source language into low-reading-load, kid-friendly lesson blocks.
+- Prefer content-driven review, prompt, and practice composition instead of hardcoded page logic.
+
+**Out of Scope**
+- Cross-chapter recap.
+- Alternate implementations in multiple languages.
+- Teacher answer views.
+
+### `CONTENT-BS-4` Author Chapter Review and Mastery Content
+**Story Points:** `2`
+
+**Description**  
+Author the review and mastery content needed to complete the `Binary Search` chapter end to end.
+Source both from the `Chapter Review` and `Mastery Check` sections in `docs/curriculum/code-patterns/binary-search-chapter.md`.
+
+**Acceptance Criteria**
+- Review content exists and is reachable from chapter flow.
+- Mastery content exists and is reachable after review.
+- Both content types follow the chapter metadata conventions.
+- Chapter flow is complete from intro through mastery.
+
+**Technical Details**
+- Use `review` and `mastery` lesson/content conventions.
+- Adapt the review and mastery prompts from `docs/curriculum/code-patterns/binary-search-chapter.md` into MDX and activity configs.
+- Include recap prompts, concept summaries, and chapter-end evaluation content.
+
+**Out of Scope**
+- Adaptive mastery branching.
+- Printable packets.
+- Subsequent chapters.
+
+---
+
+## EPIC-12: Stacks Chapter
+
+Source of truth for chapter sequencing and instructional content:
+- `docs/curriculum/code-patterns/stacks-chapter.md`
+
+### `CONTENT-STK-1` Author Chapter Landing and Intro Lesson
+**Story Points:** `3`
+
+**Description**  
+Author the `Stacks` chapter landing page and intro lesson that explain last-in-first-out behavior and when stacking helps solve a problem.
+Pull the lesson structure, concepts, and kid-facing explanations from `docs/curriculum/code-patterns/stacks-chapter.md`.
+
+**Acceptance Criteria**
+- Chapter landing page includes summary, lesson list, and entry point.
+- Intro lesson covers the chapter big idea, push/pop/peek intuition, and a simple real-world example.
+- Intro lesson includes a mini checkpoint.
+- Content uses the standard MDX and lesson shell system.
+
+**Technical Details**
+- Author under `content/chapters/stacks`.
+- Use `docs/curriculum/code-patterns/stacks-chapter.md` as the source document for chapter goals, outline, and intro lesson content.
+- Include at least one interactive visual block or prompt.
+- Export typed metadata.
+
+**Out of Scope**
+- Other chapters.
+- Teacher-facing lesson variants.
+- Localization.
+
+### `CONTENT-STK-2` Author Early Lesson Bundle
+**Story Points:** `5`
+
+**Description**  
+Author the first half of the `Stacks` lesson sequence listed in `docs/curriculum/code-patterns/stacks-chapter.md`.
+
+**Acceptance Criteria**
+- The early lesson bundle is authored in MDX with complete metadata.
+- Each lesson follows the standard problem lesson structure.
+- Each lesson includes at least one interactive visual, walkthrough, or prompt.
+- Lessons appear in the correct chapter order and are navigable.
+
+**Technical Details**
+- Pull lesson explanations, examples, and sequencing from `docs/curriculum/code-patterns/stacks-chapter.md`.
+- Reuse lesson frame schema, prompt widgets, and practice conventions where appropriate.
+- Keep stack state visible and child-readable.
+
+**Out of Scope**
+- Other pattern families.
+- Audio narration.
+- Challenge problems not listed in the chapter source.
+
+### `CONTENT-STK-3` Author Late Lesson Bundle
+**Story Points:** `3`
+
+**Description**  
+Author the second half of the `Stacks` lesson sequence listed in `docs/curriculum/code-patterns/stacks-chapter.md`.
+
+**Acceptance Criteria**
+- The late lesson bundle is authored in MDX with complete metadata.
+- Each lesson follows the standard problem lesson structure.
+- Each lesson includes at least one interactive visual, walkthrough, or prompt.
+- Lessons remain aligned with the chapter progression and chapter order.
+
+**Technical Details**
+- Reuse the established chapter authoring pattern from the early lesson bundle.
+- Adapt the chapter source language into low-reading-load, kid-friendly lesson blocks.
+- Prefer content-driven review, prompt, and practice composition instead of hardcoded page logic.
+
+**Out of Scope**
+- Cross-chapter recap.
+- Alternate implementations in multiple languages.
+- Teacher answer views.
+
+### `CONTENT-STK-4` Author Chapter Review and Mastery Content
+**Story Points:** `2`
+
+**Description**  
+Author the review and mastery content needed to complete the `Stacks` chapter end to end.
+Source both from the `Chapter Review` and `Mastery Check` sections in `docs/curriculum/code-patterns/stacks-chapter.md`.
+
+**Acceptance Criteria**
+- Review content exists and is reachable from chapter flow.
+- Mastery content exists and is reachable after review.
+- Both content types follow the chapter metadata conventions.
+- Chapter flow is complete from intro through mastery.
+
+**Technical Details**
+- Use `review` and `mastery` lesson/content conventions.
+- Adapt the review and mastery prompts from `docs/curriculum/code-patterns/stacks-chapter.md` into MDX and activity configs.
+- Include recap prompts, concept summaries, and chapter-end evaluation content.
+
+**Out of Scope**
+- Adaptive mastery branching.
+- Printable packets.
+- Subsequent chapters.
+
+---
+
+## EPIC-13: Heaps Chapter
+
+Source of truth for chapter sequencing and instructional content:
+- `docs/curriculum/code-patterns/heaps-chapter.md`
+
+### `CONTENT-HEAP-1` Author Chapter Landing and Intro Lesson
+**Story Points:** `3`
+
+**Description**  
+Author the `Heaps` chapter landing page and intro lesson that explain min-heaps, max-heaps, and why a heap helps find a top item quickly.
+Pull the lesson structure, concepts, and kid-facing explanations from `docs/curriculum/code-patterns/heaps-chapter.md`.
+
+**Acceptance Criteria**
+- Chapter landing page includes summary, lesson list, and entry point.
+- Intro lesson covers the chapter big idea, heap shape intuition, and a simple real-world example.
+- Intro lesson includes a mini checkpoint.
+- Content uses the standard MDX and lesson shell system.
+
+**Technical Details**
+- Author under `content/chapters/heaps`.
+- Use `docs/curriculum/code-patterns/heaps-chapter.md` as the source document for chapter goals, outline, and intro lesson content.
+- Include at least one interactive visual block or prompt.
+- Export typed metadata.
+
+**Out of Scope**
+- Other chapters.
+- Teacher-facing lesson variants.
+- Localization.
+
+### `CONTENT-HEAP-2` Author Early Lesson Bundle
+**Story Points:** `5`
+
+**Description**  
+Author the first half of the `Heaps` lesson sequence listed in `docs/curriculum/code-patterns/heaps-chapter.md`.
+
+**Acceptance Criteria**
+- The early lesson bundle is authored in MDX with complete metadata.
+- Each lesson follows the standard problem lesson structure.
+- Each lesson includes at least one interactive visual, walkthrough, or prompt.
+- Lessons appear in the correct chapter order and are navigable.
+
+**Technical Details**
+- Pull lesson explanations, examples, and sequencing from `docs/curriculum/code-patterns/heaps-chapter.md`.
+- Reuse lesson frame schema, prompt widgets, and practice conventions where appropriate.
+- Keep top-k language and heap operations concrete for children.
+
+**Out of Scope**
+- Other pattern families.
+- Audio narration.
+- Challenge problems not listed in the chapter source.
+
+### `CONTENT-HEAP-3` Author Late Lesson Bundle
+**Story Points:** `3`
+
+**Description**  
+Author the second half of the `Heaps` lesson sequence listed in `docs/curriculum/code-patterns/heaps-chapter.md`.
+
+**Acceptance Criteria**
+- The late lesson bundle is authored in MDX with complete metadata.
+- Each lesson follows the standard problem lesson structure.
+- Each lesson includes at least one interactive visual, walkthrough, or prompt.
+- Lessons remain aligned with the chapter progression and chapter order.
+
+**Technical Details**
+- Reuse the established chapter authoring pattern from the early lesson bundle.
+- Adapt the chapter source language into low-reading-load, kid-friendly lesson blocks.
+- Prefer content-driven review, prompt, and practice composition instead of hardcoded page logic.
+
+**Out of Scope**
+- Cross-chapter recap.
+- Alternate implementations in multiple languages.
+- Teacher answer views.
+
+### `CONTENT-HEAP-4` Author Chapter Review and Mastery Content
+**Story Points:** `2`
+
+**Description**  
+Author the review and mastery content needed to complete the `Heaps` chapter end to end.
+Source both from the `Chapter Review` and `Mastery Check` sections in `docs/curriculum/code-patterns/heaps-chapter.md`.
+
+**Acceptance Criteria**
+- Review content exists and is reachable from chapter flow.
+- Mastery content exists and is reachable after review.
+- Both content types follow the chapter metadata conventions.
+- Chapter flow is complete from intro through mastery.
+
+**Technical Details**
+- Use `review` and `mastery` lesson/content conventions.
+- Adapt the review and mastery prompts from `docs/curriculum/code-patterns/heaps-chapter.md` into MDX and activity configs.
+- Include recap prompts, concept summaries, and chapter-end evaluation content.
+
+**Out of Scope**
+- Adaptive mastery branching.
+- Printable packets.
+- Subsequent chapters.
+
+---
+
+## EPIC-14: Intervals Chapter
+
+Source of truth for chapter sequencing and instructional content:
+- `docs/curriculum/code-patterns/intervals-chapter.md`
+
+### `CONTENT-INT-1` Author Chapter Landing and Intro Lesson
+**Story Points:** `3`
+
+**Description**  
+Author the `Intervals` chapter landing page and intro lesson that explain starts, ends, overlap, and why sorting ranges helps.
+Pull the lesson structure, concepts, and kid-facing explanations from `docs/curriculum/code-patterns/intervals-chapter.md`.
+
+**Acceptance Criteria**
+- Chapter landing page includes summary, lesson list, and entry point.
+- Intro lesson covers the chapter big idea, what intervals represent, and a simple real-world example.
+- Intro lesson includes a mini checkpoint.
+- Content uses the standard MDX and lesson shell system.
+
+**Technical Details**
+- Author under `content/chapters/intervals`.
+- Use `docs/curriculum/code-patterns/intervals-chapter.md` as the source document for chapter goals, outline, and intro lesson content.
+- Include at least one interactive visual block or prompt.
+- Export typed metadata.
+
+**Out of Scope**
+- Other chapters.
+- Teacher-facing lesson variants.
+- Localization.
+
+### `CONTENT-INT-2` Author Early Lesson Bundle
+**Story Points:** `5`
+
+**Description**  
+Author the first half of the `Intervals` lesson sequence listed in `docs/curriculum/code-patterns/intervals-chapter.md`.
+
+**Acceptance Criteria**
+- The early lesson bundle is authored in MDX with complete metadata.
+- Each lesson follows the standard problem lesson structure.
+- Each lesson includes at least one interactive visual, walkthrough, or prompt.
+- Lessons appear in the correct chapter order and are navigable.
+
+**Technical Details**
+- Pull lesson explanations, examples, and sequencing from `docs/curriculum/code-patterns/intervals-chapter.md`.
+- Reuse lesson frame schema, prompt widgets, and practice conventions where appropriate.
+- Keep overlap and merge language concrete and visual.
+
+**Out of Scope**
+- Other pattern families.
+- Audio narration.
+- Challenge problems not listed in the chapter source.
+
+### `CONTENT-INT-3` Author Late Lesson Bundle
+**Story Points:** `3`
+
+**Description**  
+Author the second half of the `Intervals` lesson sequence listed in `docs/curriculum/code-patterns/intervals-chapter.md`.
+
+**Acceptance Criteria**
+- The late lesson bundle is authored in MDX with complete metadata.
+- Each lesson follows the standard problem lesson structure.
+- Each lesson includes at least one interactive visual, walkthrough, or prompt.
+- Lessons remain aligned with the chapter progression and chapter order.
+
+**Technical Details**
+- Reuse the established chapter authoring pattern from the early lesson bundle.
+- Adapt the chapter source language into low-reading-load, kid-friendly lesson blocks.
+- Prefer content-driven review, prompt, and practice composition instead of hardcoded page logic.
+
+**Out of Scope**
+- Cross-chapter recap.
+- Alternate implementations in multiple languages.
+- Teacher answer views.
+
+### `CONTENT-INT-4` Author Chapter Review and Mastery Content
+**Story Points:** `2`
+
+**Description**  
+Author the review and mastery content needed to complete the `Intervals` chapter end to end.
+Source both from the `Chapter Review` and `Mastery Check` sections in `docs/curriculum/code-patterns/intervals-chapter.md`.
+
+**Acceptance Criteria**
+- Review content exists and is reachable from chapter flow.
+- Mastery content exists and is reachable after review.
+- Both content types follow the chapter metadata conventions.
+- Chapter flow is complete from intro through mastery.
+
+**Technical Details**
+- Use `review` and `mastery` lesson/content conventions.
+- Adapt the review and mastery prompts from `docs/curriculum/code-patterns/intervals-chapter.md` into MDX and activity configs.
+- Include recap prompts, concept summaries, and chapter-end evaluation content.
+
+**Out of Scope**
+- Adaptive mastery branching.
+- Printable packets.
+- Subsequent chapters.
+
+---
+
+## EPIC-15: Prefix Sums Chapter
+
+Source of truth for chapter sequencing and instructional content:
+- `docs/curriculum/code-patterns/prefix-sums-chapter.md`
+
+### `CONTENT-PS-1` Author Chapter Landing and Intro Lesson
+**Story Points:** `3`
+
+**Description**  
+Author the `Prefix Sums` chapter landing page and intro lesson that explain running totals and why precomputing can make later questions faster.
+Pull the lesson structure, concepts, and kid-facing explanations from `docs/curriculum/code-patterns/prefix-sums-chapter.md`.
+
+**Acceptance Criteria**
+- Chapter landing page includes summary, lesson list, and entry point.
+- Intro lesson covers the chapter big idea, running-total intuition, and a simple real-world example.
+- Intro lesson includes a mini checkpoint.
+- Content uses the standard MDX and lesson shell system.
+
+**Technical Details**
+- Author under `content/chapters/prefix-sums`.
+- Use `docs/curriculum/code-patterns/prefix-sums-chapter.md` as the source document for chapter goals, outline, and intro lesson content.
+- Include at least one interactive visual block or prompt.
+- Export typed metadata.
+
+**Out of Scope**
+- Other chapters.
+- Teacher-facing lesson variants.
+- Localization.
+
+### `CONTENT-PS-2` Author Early Lesson Bundle
+**Story Points:** `5`
+
+**Description**  
+Author the first half of the `Prefix Sums` lesson sequence listed in `docs/curriculum/code-patterns/prefix-sums-chapter.md`.
+
+**Acceptance Criteria**
+- The early lesson bundle is authored in MDX with complete metadata.
+- Each lesson follows the standard problem lesson structure.
+- Each lesson includes at least one interactive visual, walkthrough, or prompt.
+- Lessons appear in the correct chapter order and are navigable.
+
+**Technical Details**
+- Pull lesson explanations, examples, and sequencing from `docs/curriculum/code-patterns/prefix-sums-chapter.md`.
+- Reuse lesson frame schema, prompt widgets, and practice conventions where appropriate.
+- Keep range-sum and running-total explanations concrete for children.
+
+**Out of Scope**
+- Other pattern families.
+- Audio narration.
+- Challenge problems not listed in the chapter source.
+
+### `CONTENT-PS-3` Author Late Lesson Bundle
+**Story Points:** `3`
+
+**Description**  
+Author the second half of the `Prefix Sums` lesson sequence listed in `docs/curriculum/code-patterns/prefix-sums-chapter.md`.
+
+**Acceptance Criteria**
+- The late lesson bundle is authored in MDX with complete metadata.
+- Each lesson follows the standard problem lesson structure.
+- Each lesson includes at least one interactive visual, walkthrough, or prompt.
+- Lessons remain aligned with the chapter progression and chapter order.
+
+**Technical Details**
+- Reuse the established chapter authoring pattern from the early lesson bundle.
+- Adapt the chapter source language into low-reading-load, kid-friendly lesson blocks.
+- Prefer content-driven review, prompt, and practice composition instead of hardcoded page logic.
+
+**Out of Scope**
+- Cross-chapter recap.
+- Alternate implementations in multiple languages.
+- Teacher answer views.
+
+### `CONTENT-PS-4` Author Chapter Review and Mastery Content
+**Story Points:** `2`
+
+**Description**  
+Author the review and mastery content needed to complete the `Prefix Sums` chapter end to end.
+Source both from the `Chapter Review` and `Mastery Check` sections in `docs/curriculum/code-patterns/prefix-sums-chapter.md`.
+
+**Acceptance Criteria**
+- Review content exists and is reachable from chapter flow.
+- Mastery content exists and is reachable after review.
+- Both content types follow the chapter metadata conventions.
+- Chapter flow is complete from intro through mastery.
+
+**Technical Details**
+- Use `review` and `mastery` lesson/content conventions.
+- Adapt the review and mastery prompts from `docs/curriculum/code-patterns/prefix-sums-chapter.md` into MDX and activity configs.
+- Include recap prompts, concept summaries, and chapter-end evaluation content.
+
+**Out of Scope**
+- Adaptive mastery branching.
+- Printable packets.
+- Subsequent chapters.
+
+---
+
+## EPIC-16: Trees Chapter
+
+Source of truth for chapter sequencing and instructional content:
+- `docs/curriculum/code-patterns/trees-chapter.md`
+
+### `CONTENT-TREE-1` Author Chapter Landing and Intro Lesson
+**Story Points:** `3`
+
+**Description**  
+Author the `Trees` chapter landing page and intro lesson that explain roots, children, leaves, and why a tree branches from one starting point.
+Pull the lesson structure, concepts, and kid-facing explanations from `docs/curriculum/code-patterns/trees-chapter.md`.
+
+**Acceptance Criteria**
+- Chapter landing page includes summary, lesson list, and entry point.
+- Intro lesson covers the chapter big idea, core vocabulary, and a simple real-world example.
+- Intro lesson includes a mini checkpoint.
+- Content uses the standard MDX and lesson shell system.
+
+**Technical Details**
+- Author under `content/chapters/trees`.
+- Use `docs/curriculum/code-patterns/trees-chapter.md` as the source document for chapter goals, outline, and intro lesson content.
+- Include at least one interactive visual block or prompt.
+- Export typed metadata.
+
+**Out of Scope**
+- Other chapters.
+- Teacher-facing lesson variants.
+- Localization.
+
+### `CONTENT-TREE-2` Author Early Lesson Bundle
+**Story Points:** `5`
+
+**Description**  
+Author the first half of the `Trees` lesson sequence listed in `docs/curriculum/code-patterns/trees-chapter.md`.
+
+**Acceptance Criteria**
+- The early lesson bundle is authored in MDX with complete metadata.
+- Each lesson follows the standard problem lesson structure.
+- Each lesson includes at least one interactive visual, walkthrough, or prompt.
+- Lessons appear in the correct chapter order and are navigable.
+
+**Technical Details**
+- Pull lesson explanations, examples, and sequencing from `docs/curriculum/code-patterns/trees-chapter.md`.
+- Reuse lesson frame schema, prompt widgets, and practice conventions where appropriate.
+- Keep node and traversal explanations concrete for children.
+
+**Out of Scope**
+- Other pattern families.
+- Audio narration.
+- Challenge problems not listed in the chapter source.
+
+### `CONTENT-TREE-3` Author Late Lesson Bundle
+**Story Points:** `3`
+
+**Description**  
+Author the second half of the `Trees` lesson sequence listed in `docs/curriculum/code-patterns/trees-chapter.md`.
+
+**Acceptance Criteria**
+- The late lesson bundle is authored in MDX with complete metadata.
+- Each lesson follows the standard problem lesson structure.
+- Each lesson includes at least one interactive visual, walkthrough, or prompt.
+- Lessons remain aligned with the chapter progression and chapter order.
+
+**Technical Details**
+- Reuse the established chapter authoring pattern from the early lesson bundle.
+- Adapt the chapter source language into low-reading-load, kid-friendly lesson blocks.
+- Prefer content-driven review, prompt, and practice composition instead of hardcoded page logic.
+
+**Out of Scope**
+- Cross-chapter recap.
+- Alternate implementations in multiple languages.
+- Teacher answer views.
+
+### `CONTENT-TREE-4` Author Chapter Review and Mastery Content
+**Story Points:** `2`
+
+**Description**  
+Author the review and mastery content needed to complete the `Trees` chapter end to end.
+Source both from the `Chapter Review` and `Mastery Check` sections in `docs/curriculum/code-patterns/trees-chapter.md`.
+
+**Acceptance Criteria**
+- Review content exists and is reachable from chapter flow.
+- Mastery content exists and is reachable after review.
+- Both content types follow the chapter metadata conventions.
+- Chapter flow is complete from intro through mastery.
+
+**Technical Details**
+- Use `review` and `mastery` lesson/content conventions.
+- Adapt the review and mastery prompts from `docs/curriculum/code-patterns/trees-chapter.md` into MDX and activity configs.
+- Include recap prompts, concept summaries, and chapter-end evaluation content.
+
+**Out of Scope**
+- Adaptive mastery branching.
+- Printable packets.
+- Subsequent chapters.
+
+---
+
+## EPIC-17: Tries Chapter
+
+Source of truth for chapter sequencing and instructional content:
+- `docs/curriculum/code-patterns/tries-chapter.md`
+
+### `CONTENT-TRIE-1` Author Chapter Landing and Intro Lesson
+**Story Points:** `3`
+
+**Description**  
+Author the `Tries` chapter landing page and intro lesson that explain letter-by-letter word storage and why prefix searching becomes easier.
+Pull the lesson structure, concepts, and kid-facing explanations from `docs/curriculum/code-patterns/tries-chapter.md`.
+
+**Acceptance Criteria**
+- Chapter landing page includes summary, lesson list, and entry point.
+- Intro lesson covers the chapter big idea, prefix intuition, and a simple real-world example.
+- Intro lesson includes a mini checkpoint.
+- Content uses the standard MDX and lesson shell system.
+
+**Technical Details**
+- Author under `content/chapters/tries`.
+- Use `docs/curriculum/code-patterns/tries-chapter.md` as the source document for chapter goals, outline, and intro lesson content.
+- Include at least one interactive visual block or prompt.
+- Export typed metadata.
+
+**Out of Scope**
+- Other chapters.
+- Teacher-facing lesson variants.
+- Localization.
+
+### `CONTENT-TRIE-2` Author Early Lesson Bundle
+**Story Points:** `5`
+
+**Description**  
+Author the first half of the `Tries` lesson sequence listed in `docs/curriculum/code-patterns/tries-chapter.md`.
+
+**Acceptance Criteria**
+- The early lesson bundle is authored in MDX with complete metadata.
+- Each lesson follows the standard problem lesson structure.
+- Each lesson includes at least one interactive visual, walkthrough, or prompt.
+- Lessons appear in the correct chapter order and are navigable.
+
+**Technical Details**
+- Pull lesson explanations, examples, and sequencing from `docs/curriculum/code-patterns/tries-chapter.md`.
+- Reuse lesson frame schema, prompt widgets, and practice conventions where appropriate.
+- Keep prefix and path-tracing language concrete for children.
+
+**Out of Scope**
+- Other pattern families.
+- Audio narration.
+- Challenge problems not listed in the chapter source.
+
+### `CONTENT-TRIE-3` Author Late Lesson Bundle
+**Story Points:** `3`
+
+**Description**  
+Author the second half of the `Tries` lesson sequence listed in `docs/curriculum/code-patterns/tries-chapter.md`.
+
+**Acceptance Criteria**
+- The late lesson bundle is authored in MDX with complete metadata.
+- Each lesson follows the standard problem lesson structure.
+- Each lesson includes at least one interactive visual, walkthrough, or prompt.
+- Lessons remain aligned with the chapter progression and chapter order.
+
+**Technical Details**
+- Reuse the established chapter authoring pattern from the early lesson bundle.
+- Adapt the chapter source language into low-reading-load, kid-friendly lesson blocks.
+- Prefer content-driven review, prompt, and practice composition instead of hardcoded page logic.
+
+**Out of Scope**
+- Cross-chapter recap.
+- Alternate implementations in multiple languages.
+- Teacher answer views.
+
+### `CONTENT-TRIE-4` Author Chapter Review and Mastery Content
+**Story Points:** `2`
+
+**Description**  
+Author the review and mastery content needed to complete the `Tries` chapter end to end.
+Source both from the `Chapter Review` and `Mastery Check` sections in `docs/curriculum/code-patterns/tries-chapter.md`.
+
+**Acceptance Criteria**
+- Review content exists and is reachable from chapter flow.
+- Mastery content exists and is reachable after review.
+- Both content types follow the chapter metadata conventions.
+- Chapter flow is complete from intro through mastery.
+
+**Technical Details**
+- Use `review` and `mastery` lesson/content conventions.
+- Adapt the review and mastery prompts from `docs/curriculum/code-patterns/tries-chapter.md` into MDX and activity configs.
+- Include recap prompts, concept summaries, and chapter-end evaluation content.
+
+**Out of Scope**
+- Adaptive mastery branching.
+- Printable packets.
+- Subsequent chapters.
+
+---
+
+## EPIC-18: Graphs Chapter
+
+Source of truth for chapter sequencing and instructional content:
+- `docs/curriculum/code-patterns/graphs-chapter.md`
+
+### `CONTENT-GRAPH-1` Author Chapter Landing and Intro Lesson
+**Story Points:** `3`
+
+**Description**  
+Author the `Graphs` chapter landing page and intro lesson that explain nodes, edges, and why graphs model connections and routes.
+Pull the lesson structure, concepts, and kid-facing explanations from `docs/curriculum/code-patterns/graphs-chapter.md`.
+
+**Acceptance Criteria**
+- Chapter landing page includes summary, lesson list, and entry point.
+- Intro lesson covers the chapter big idea, core vocabulary, and a simple real-world example.
+- Intro lesson includes a mini checkpoint.
+- Content uses the standard MDX and lesson shell system.
+
+**Technical Details**
+- Author under `content/chapters/graphs`.
+- Use `docs/curriculum/code-patterns/graphs-chapter.md` as the source document for chapter goals, outline, and intro lesson content.
+- Include at least one interactive visual block or prompt.
+- Export typed metadata.
+
+**Out of Scope**
+- Other chapters.
+- Teacher-facing lesson variants.
+- Localization.
+
+### `CONTENT-GRAPH-2` Author Early Lesson Bundle
+**Story Points:** `5`
+
+**Description**  
+Author the first half of the `Graphs` lesson sequence listed in `docs/curriculum/code-patterns/graphs-chapter.md`.
+
+**Acceptance Criteria**
+- The early lesson bundle is authored in MDX with complete metadata.
+- Each lesson follows the standard problem lesson structure.
+- Each lesson includes at least one interactive visual, walkthrough, or prompt.
+- Lessons appear in the correct chapter order and are navigable.
+
+**Technical Details**
+- Pull lesson explanations, examples, and sequencing from `docs/curriculum/code-patterns/graphs-chapter.md`.
+- Reuse lesson frame schema, prompt widgets, and practice conventions where appropriate.
+- Keep graph vocabulary and traversal explanations child-friendly.
+
+**Out of Scope**
+- Other pattern families.
+- Audio narration.
+- Challenge problems not listed in the chapter source.
+
+### `CONTENT-GRAPH-3` Author Late Lesson Bundle
+**Story Points:** `3`
+
+**Description**  
+Author the second half of the `Graphs` lesson sequence listed in `docs/curriculum/code-patterns/graphs-chapter.md`.
+
+**Acceptance Criteria**
+- The late lesson bundle is authored in MDX with complete metadata.
+- Each lesson follows the standard problem lesson structure.
+- Each lesson includes at least one interactive visual, walkthrough, or prompt.
+- Lessons remain aligned with the chapter progression and chapter order.
+
+**Technical Details**
+- Reuse the established chapter authoring pattern from the early lesson bundle.
+- Adapt the chapter source language into low-reading-load, kid-friendly lesson blocks.
+- Prefer content-driven review, prompt, and practice composition instead of hardcoded page logic.
+
+**Out of Scope**
+- Cross-chapter recap.
+- Alternate implementations in multiple languages.
+- Teacher answer views.
+
+### `CONTENT-GRAPH-4` Author Chapter Review and Mastery Content
+**Story Points:** `2`
+
+**Description**  
+Author the review and mastery content needed to complete the `Graphs` chapter end to end.
+Source both from the `Chapter Review` and `Mastery Check` sections in `docs/curriculum/code-patterns/graphs-chapter.md`.
+
+**Acceptance Criteria**
+- Review content exists and is reachable from chapter flow.
+- Mastery content exists and is reachable after review.
+- Both content types follow the chapter metadata conventions.
+- Chapter flow is complete from intro through mastery.
+
+**Technical Details**
+- Use `review` and `mastery` lesson/content conventions.
+- Adapt the review and mastery prompts from `docs/curriculum/code-patterns/graphs-chapter.md` into MDX and activity configs.
+- Include recap prompts, concept summaries, and chapter-end evaluation content.
+
+**Out of Scope**
+- Adaptive mastery branching.
+- Printable packets.
+- Subsequent chapters.
+
+---
+
+## EPIC-19: Backtracking Chapter
+
+Source of truth for chapter sequencing and instructional content:
+- `docs/curriculum/code-patterns/backtracking-chapter.md`
+
+### `CONTENT-BT-1` Author Chapter Landing and Intro Lesson
+**Story Points:** `3`
+
+**Description**  
+Author the `Backtracking` chapter landing page and intro lesson that explain choose-explore-undo and why trying many paths sometimes needs safe reversal.
+Pull the lesson structure, concepts, and kid-facing explanations from `docs/curriculum/code-patterns/backtracking-chapter.md`.
+
+**Acceptance Criteria**
+- Chapter landing page includes summary, lesson list, and entry point.
+- Intro lesson covers the chapter big idea, choose-explore-undo intuition, and a simple real-world example.
+- Intro lesson includes a mini checkpoint.
+- Content uses the standard MDX and lesson shell system.
+
+**Technical Details**
+- Author under `content/chapters/backtracking`.
+- Use `docs/curriculum/code-patterns/backtracking-chapter.md` as the source document for chapter goals, outline, and intro lesson content.
+- Include at least one interactive visual block or prompt.
+- Export typed metadata.
+
+**Out of Scope**
+- Other chapters.
+- Teacher-facing lesson variants.
+- Localization.
+
+### `CONTENT-BT-2` Author Early Lesson Bundle
+**Story Points:** `5`
+
+**Description**  
+Author the first half of the `Backtracking` lesson sequence listed in `docs/curriculum/code-patterns/backtracking-chapter.md`.
+
+**Acceptance Criteria**
+- The early lesson bundle is authored in MDX with complete metadata.
+- Each lesson follows the standard problem lesson structure.
+- Each lesson includes at least one interactive visual, walkthrough, or prompt.
+- Lessons appear in the correct chapter order and are navigable.
+
+**Technical Details**
+- Pull lesson explanations, examples, and sequencing from `docs/curriculum/code-patterns/backtracking-chapter.md`.
+- Reuse lesson frame schema, prompt widgets, and practice conventions where appropriate.
+- Keep recursion and undo steps concrete and child-readable.
+
+**Out of Scope**
+- Other pattern families.
+- Audio narration.
+- Challenge problems not listed in the chapter source.
+
+### `CONTENT-BT-3` Author Late Lesson Bundle
+**Story Points:** `3`
+
+**Description**  
+Author the second half of the `Backtracking` lesson sequence listed in `docs/curriculum/code-patterns/backtracking-chapter.md`.
+
+**Acceptance Criteria**
+- The late lesson bundle is authored in MDX with complete metadata.
+- Each lesson follows the standard problem lesson structure.
+- Each lesson includes at least one interactive visual, walkthrough, or prompt.
+- Lessons remain aligned with the chapter progression and chapter order.
+
+**Technical Details**
+- Reuse the established chapter authoring pattern from the early lesson bundle.
+- Adapt the chapter source language into low-reading-load, kid-friendly lesson blocks.
+- Prefer content-driven review, prompt, and practice composition instead of hardcoded page logic.
+
+**Out of Scope**
+- Cross-chapter recap.
+- Alternate implementations in multiple languages.
+- Teacher answer views.
+
+### `CONTENT-BT-4` Author Chapter Review and Mastery Content
+**Story Points:** `2`
+
+**Description**  
+Author the review and mastery content needed to complete the `Backtracking` chapter end to end.
+Source both from the `Chapter Review` and `Mastery Check` sections in `docs/curriculum/code-patterns/backtracking-chapter.md`.
+
+**Acceptance Criteria**
+- Review content exists and is reachable from chapter flow.
+- Mastery content exists and is reachable after review.
+- Both content types follow the chapter metadata conventions.
+- Chapter flow is complete from intro through mastery.
+
+**Technical Details**
+- Use `review` and `mastery` lesson/content conventions.
+- Adapt the review and mastery prompts from `docs/curriculum/code-patterns/backtracking-chapter.md` into MDX and activity configs.
+- Include recap prompts, concept summaries, and chapter-end evaluation content.
+
+**Out of Scope**
+- Adaptive mastery branching.
+- Printable packets.
+- Subsequent chapters.
+
+---
+
+## EPIC-20: Dynamic Programming Chapter
+
+Source of truth for chapter sequencing and instructional content:
+- `docs/curriculum/code-patterns/dynamic-programming-chapter.md`
+
+### `CONTENT-DP-1` Author Chapter Landing and Intro Lesson
+**Story Points:** `3`
+
+**Description**  
+Author the `Dynamic Programming` chapter landing page and intro lesson that explain repeated subproblems, saving answers, and building from base cases.
+Pull the lesson structure, concepts, and kid-facing explanations from `docs/curriculum/code-patterns/dynamic-programming-chapter.md`.
+
+**Acceptance Criteria**
+- Chapter landing page includes summary, lesson list, and entry point.
+- Intro lesson covers the chapter big idea, smaller-answer intuition, and a simple real-world example.
+- Intro lesson includes a mini checkpoint.
+- Content uses the standard MDX and lesson shell system.
+
+**Technical Details**
+- Author under `content/chapters/dynamic-programming`.
+- Use `docs/curriculum/code-patterns/dynamic-programming-chapter.md` as the source document for chapter goals, outline, and intro lesson content.
+- Include at least one interactive visual block or prompt.
+- Export typed metadata.
+
+**Out of Scope**
+- Other chapters.
+- Teacher-facing lesson variants.
+- Localization.
+
+### `CONTENT-DP-2` Author Early Lesson Bundle
+**Story Points:** `5`
+
+**Description**  
+Author the first half of the `Dynamic Programming` lesson sequence listed in `docs/curriculum/code-patterns/dynamic-programming-chapter.md`.
+
+**Acceptance Criteria**
+- The early lesson bundle is authored in MDX with complete metadata.
+- Each lesson follows the standard problem lesson structure.
+- Each lesson includes at least one interactive visual, walkthrough, or prompt.
+- Lessons appear in the correct chapter order and are navigable.
+
+**Technical Details**
+- Pull lesson explanations, examples, and sequencing from `docs/curriculum/code-patterns/dynamic-programming-chapter.md`.
+- Reuse lesson frame schema, prompt widgets, and practice conventions where appropriate.
+- Keep base cases, saved answers, and table-building explanations child-friendly.
+
+**Out of Scope**
+- Other pattern families.
+- Audio narration.
+- Challenge problems not listed in the chapter source.
+
+### `CONTENT-DP-3` Author Late Lesson Bundle
+**Story Points:** `3`
+
+**Description**  
+Author the second half of the `Dynamic Programming` lesson sequence listed in `docs/curriculum/code-patterns/dynamic-programming-chapter.md`.
+
+**Acceptance Criteria**
+- The late lesson bundle is authored in MDX with complete metadata.
+- Each lesson follows the standard problem lesson structure.
+- Each lesson includes at least one interactive visual, walkthrough, or prompt.
+- Lessons remain aligned with the chapter progression and chapter order.
+
+**Technical Details**
+- Reuse the established chapter authoring pattern from the early lesson bundle.
+- Adapt the chapter source language into low-reading-load, kid-friendly lesson blocks.
+- Prefer content-driven review, prompt, and practice composition instead of hardcoded page logic.
+
+**Out of Scope**
+- Cross-chapter recap.
+- Alternate implementations in multiple languages.
+- Teacher answer views.
+
+### `CONTENT-DP-4` Author Chapter Review and Mastery Content
+**Story Points:** `2`
+
+**Description**  
+Author the review and mastery content needed to complete the `Dynamic Programming` chapter end to end.
+Source both from the `Chapter Review` and `Mastery Check` sections in `docs/curriculum/code-patterns/dynamic-programming-chapter.md`.
+
+**Acceptance Criteria**
+- Review content exists and is reachable from chapter flow.
+- Mastery content exists and is reachable after review.
+- Both content types follow the chapter metadata conventions.
+- Chapter flow is complete from intro through mastery.
+
+**Technical Details**
+- Use `review` and `mastery` lesson/content conventions.
+- Adapt the review and mastery prompts from `docs/curriculum/code-patterns/dynamic-programming-chapter.md` into MDX and activity configs.
+- Include recap prompts, concept summaries, and chapter-end evaluation content.
+
+**Out of Scope**
+- Adaptive mastery branching.
+- Printable packets.
+- Subsequent chapters.
+
+---
+
+## EPIC-21: Greedy Chapter
+
+Source of truth for chapter sequencing and instructional content:
+- `docs/curriculum/code-patterns/greedy-chapter.md`
+
+### `CONTENT-GRD-1` Author Chapter Landing and Intro Lesson
+**Story Points:** `3`
+
+**Description**  
+Author the `Greedy` chapter landing page and intro lesson that explain best-now choices and when local choices can still lead to the best answer.
+Pull the lesson structure, concepts, and kid-facing explanations from `docs/curriculum/code-patterns/greedy-chapter.md`.
+
+**Acceptance Criteria**
+- Chapter landing page includes summary, lesson list, and entry point.
+- Intro lesson covers the chapter big idea, greedy-choice intuition, and a simple real-world example.
+- Intro lesson includes a mini checkpoint.
+- Content uses the standard MDX and lesson shell system.
+
+**Technical Details**
+- Author under `content/chapters/greedy`.
+- Use `docs/curriculum/code-patterns/greedy-chapter.md` as the source document for chapter goals, outline, and intro lesson content.
+- Include at least one interactive visual block or prompt.
+- Export typed metadata.
+
+**Out of Scope**
+- Other chapters.
+- Teacher-facing lesson variants.
+- Localization.
+
+### `CONTENT-GRD-2` Author Early Lesson Bundle
+**Story Points:** `5`
+
+**Description**  
+Author the first half of the `Greedy` lesson sequence listed in `docs/curriculum/code-patterns/greedy-chapter.md`.
+
+**Acceptance Criteria**
+- The early lesson bundle is authored in MDX with complete metadata.
+- Each lesson follows the standard problem lesson structure.
+- Each lesson includes at least one interactive visual, walkthrough, or prompt.
+- Lessons appear in the correct chapter order and are navigable.
+
+**Technical Details**
+- Pull lesson explanations, examples, and sequencing from `docs/curriculum/code-patterns/greedy-chapter.md`.
+- Reuse lesson frame schema, prompt widgets, and practice conventions where appropriate.
+- Keep best-now vs best-overall tradeoffs understandable for children.
+
+**Out of Scope**
+- Other pattern families.
+- Audio narration.
+- Challenge problems not listed in the chapter source.
+
+### `CONTENT-GRD-3` Author Late Lesson Bundle
+**Story Points:** `3`
+
+**Description**  
+Author the second half of the `Greedy` lesson sequence listed in `docs/curriculum/code-patterns/greedy-chapter.md`.
+
+**Acceptance Criteria**
+- The late lesson bundle is authored in MDX with complete metadata.
+- Each lesson follows the standard problem lesson structure.
+- Each lesson includes at least one interactive visual, walkthrough, or prompt.
+- Lessons remain aligned with the chapter progression and chapter order.
+
+**Technical Details**
+- Reuse the established chapter authoring pattern from the early lesson bundle.
+- Adapt the chapter source language into low-reading-load, kid-friendly lesson blocks.
+- Prefer content-driven review, prompt, and practice composition instead of hardcoded page logic.
+
+**Out of Scope**
+- Cross-chapter recap.
+- Alternate implementations in multiple languages.
+- Teacher answer views.
+
+### `CONTENT-GRD-4` Author Chapter Review and Mastery Content
+**Story Points:** `2`
+
+**Description**  
+Author the review and mastery content needed to complete the `Greedy` chapter end to end.
+Source both from the `Chapter Review` and `Mastery Check` sections in `docs/curriculum/code-patterns/greedy-chapter.md`.
+
+**Acceptance Criteria**
+- Review content exists and is reachable from chapter flow.
+- Mastery content exists and is reachable after review.
+- Both content types follow the chapter metadata conventions.
+- Chapter flow is complete from intro through mastery.
+
+**Technical Details**
+- Use `review` and `mastery` lesson/content conventions.
+- Adapt the review and mastery prompts from `docs/curriculum/code-patterns/greedy-chapter.md` into MDX and activity configs.
+- Include recap prompts, concept summaries, and chapter-end evaluation content.
+
+**Out of Scope**
+- Adaptive mastery branching.
+- Printable packets.
+- Subsequent chapters.
+
+---
+
+## EPIC-22: Sort and Search Chapter
+
+Source of truth for chapter sequencing and instructional content:
+- `docs/curriculum/code-patterns/sort-and-search-chapter.md`
+
+### `CONTENT-SS-1` Author Chapter Landing and Intro Lesson
+**Story Points:** `3`
+
+**Description**  
+Author the `Sort and Search` chapter landing page and intro lesson that explain how ordering and finding work together.
+Pull the lesson structure, concepts, and kid-facing explanations from `docs/curriculum/code-patterns/sort-and-search-chapter.md`.
+
+**Acceptance Criteria**
+- Chapter landing page includes summary, lesson list, and entry point.
+- Intro lesson covers the chapter big idea, search-vs-sort intuition, and a simple real-world example.
+- Intro lesson includes a mini checkpoint.
+- Content uses the standard MDX and lesson shell system.
+
+**Technical Details**
+- Author under `content/chapters/sort-and-search`.
+- Use `docs/curriculum/code-patterns/sort-and-search-chapter.md` as the source document for chapter goals, outline, and intro lesson content.
+- Include at least one interactive visual block or prompt.
+- Export typed metadata.
+
+**Out of Scope**
+- Other chapters.
+- Teacher-facing lesson variants.
+- Localization.
+
+### `CONTENT-SS-2` Author Early Lesson Bundle
+**Story Points:** `5`
+
+**Description**  
+Author the first half of the `Sort and Search` lesson sequence listed in `docs/curriculum/code-patterns/sort-and-search-chapter.md`.
+
+**Acceptance Criteria**
+- The early lesson bundle is authored in MDX with complete metadata.
+- Each lesson follows the standard problem lesson structure.
+- Each lesson includes at least one interactive visual, walkthrough, or prompt.
+- Lessons appear in the correct chapter order and are navigable.
+
+**Technical Details**
+- Pull lesson explanations, examples, and sequencing from `docs/curriculum/code-patterns/sort-and-search-chapter.md`.
+- Reuse lesson frame schema, prompt widgets, and practice conventions where appropriate.
+- Keep sorting steps and search choices visible and concrete.
+
+**Out of Scope**
+- Other pattern families.
+- Audio narration.
+- Challenge problems not listed in the chapter source.
+
+### `CONTENT-SS-3` Author Late Lesson Bundle
+**Story Points:** `3`
+
+**Description**  
+Author the second half of the `Sort and Search` lesson sequence listed in `docs/curriculum/code-patterns/sort-and-search-chapter.md`.
+
+**Acceptance Criteria**
+- The late lesson bundle is authored in MDX with complete metadata.
+- Each lesson follows the standard problem lesson structure.
+- Each lesson includes at least one interactive visual, walkthrough, or prompt.
+- Lessons remain aligned with the chapter progression and chapter order.
+
+**Technical Details**
+- Reuse the established chapter authoring pattern from the early lesson bundle.
+- Adapt the chapter source language into low-reading-load, kid-friendly lesson blocks.
+- Prefer content-driven review, prompt, and practice composition instead of hardcoded page logic.
+
+**Out of Scope**
+- Cross-chapter recap.
+- Alternate implementations in multiple languages.
+- Teacher answer views.
+
+### `CONTENT-SS-4` Author Chapter Review and Mastery Content
+**Story Points:** `2`
+
+**Description**  
+Author the review and mastery content needed to complete the `Sort and Search` chapter end to end.
+Source both from the `Chapter Review` and `Mastery Check` sections in `docs/curriculum/code-patterns/sort-and-search-chapter.md`.
+
+**Acceptance Criteria**
+- Review content exists and is reachable from chapter flow.
+- Mastery content exists and is reachable after review.
+- Both content types follow the chapter metadata conventions.
+- Chapter flow is complete from intro through mastery.
+
+**Technical Details**
+- Use `review` and `mastery` lesson/content conventions.
+- Adapt the review and mastery prompts from `docs/curriculum/code-patterns/sort-and-search-chapter.md` into MDX and activity configs.
+- Include recap prompts, concept summaries, and chapter-end evaluation content.
+
+**Out of Scope**
+- Adaptive mastery branching.
+- Printable packets.
+- Subsequent chapters.
+
+---
+
+## EPIC-23: Bit Manipulation Chapter
+
+Source of truth for chapter sequencing and instructional content:
+- `docs/curriculum/code-patterns/bit-manipulation-chapter.md`
+
+### `CONTENT-BIT-1` Author Chapter Landing and Intro Lesson
+**Story Points:** `3`
+
+**Description**  
+Author the `Bit Manipulation` chapter landing page and intro lesson that explain binary pieces, 0s and 1s, and why bit tricks can simplify some problems.
+Pull the lesson structure, concepts, and kid-facing explanations from `docs/curriculum/code-patterns/bit-manipulation-chapter.md`.
+
+**Acceptance Criteria**
+- Chapter landing page includes summary, lesson list, and entry point.
+- Intro lesson covers the chapter big idea, bits intuition, and a simple real-world example.
+- Intro lesson includes a mini checkpoint.
+- Content uses the standard MDX and lesson shell system.
+
+**Technical Details**
+- Author under `content/chapters/bit-manipulation`.
+- Use `docs/curriculum/code-patterns/bit-manipulation-chapter.md` as the source document for chapter goals, outline, and intro lesson content.
+- Include at least one interactive visual block or prompt.
+- Export typed metadata.
+
+**Out of Scope**
+- Other chapters.
+- Teacher-facing lesson variants.
+- Localization.
+
+### `CONTENT-BIT-2` Author Early Lesson Bundle
+**Story Points:** `5`
+
+**Description**  
+Author the first half of the `Bit Manipulation` lesson sequence listed in `docs/curriculum/code-patterns/bit-manipulation-chapter.md`.
+
+**Acceptance Criteria**
+- The early lesson bundle is authored in MDX with complete metadata.
+- Each lesson follows the standard problem lesson structure.
+- Each lesson includes at least one interactive visual, walkthrough, or prompt.
+- Lessons appear in the correct chapter order and are navigable.
+
+**Technical Details**
+- Pull lesson explanations, examples, and sequencing from `docs/curriculum/code-patterns/bit-manipulation-chapter.md`.
+- Reuse lesson frame schema, prompt widgets, and practice conventions where appropriate.
+- Keep binary representations and operator explanations kid-friendly and visual.
+
+**Out of Scope**
+- Other pattern families.
+- Audio narration.
+- Challenge problems not listed in the chapter source.
+
+### `CONTENT-BIT-3` Author Late Lesson Bundle
+**Story Points:** `3`
+
+**Description**  
+Author the second half of the `Bit Manipulation` lesson sequence listed in `docs/curriculum/code-patterns/bit-manipulation-chapter.md`.
+
+**Acceptance Criteria**
+- The late lesson bundle is authored in MDX with complete metadata.
+- Each lesson follows the standard problem lesson structure.
+- Each lesson includes at least one interactive visual, walkthrough, or prompt.
+- Lessons remain aligned with the chapter progression and chapter order.
+
+**Technical Details**
+- Reuse the established chapter authoring pattern from the early lesson bundle.
+- Adapt the chapter source language into low-reading-load, kid-friendly lesson blocks.
+- Prefer content-driven review, prompt, and practice composition instead of hardcoded page logic.
+
+**Out of Scope**
+- Cross-chapter recap.
+- Alternate implementations in multiple languages.
+- Teacher answer views.
+
+### `CONTENT-BIT-4` Author Chapter Review and Mastery Content
+**Story Points:** `2`
+
+**Description**  
+Author the review and mastery content needed to complete the `Bit Manipulation` chapter end to end.
+Source both from the `Chapter Review` and `Mastery Check` sections in `docs/curriculum/code-patterns/bit-manipulation-chapter.md`.
+
+**Acceptance Criteria**
+- Review content exists and is reachable from chapter flow.
+- Mastery content exists and is reachable after review.
+- Both content types follow the chapter metadata conventions.
+- Chapter flow is complete from intro through mastery.
+
+**Technical Details**
+- Use `review` and `mastery` lesson/content conventions.
+- Adapt the review and mastery prompts from `docs/curriculum/code-patterns/bit-manipulation-chapter.md` into MDX and activity configs.
+- Include recap prompts, concept summaries, and chapter-end evaluation content.
+
+**Out of Scope**
+- Adaptive mastery branching.
+- Printable packets.
+- Subsequent chapters.
+
+---
+## EPIC-24: Child Safety and Account Model
 
 ### `SAFETY-1` Design Adult-Managed Child Account Model
 **Story Points:** `5`
@@ -637,7 +2319,7 @@ Implement baseline product restrictions so the MVP avoids unsafe child-directed 
 
 ---
 
-## EPIC-8: Quality and Delivery
+## EPIC-25: Quality and Delivery
 
 ### `QUALITY-1` Add Test Strategy for App Router Platform
 **Story Points:** `5`

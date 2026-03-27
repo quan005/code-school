@@ -1,0 +1,56 @@
+[
+  {
+    "id": "intersection-1",
+    "narration": "Put the first array into a set so membership checks become quick.",
+    "arrayValues": [1, 2, 2, 1],
+    "callout": "The set keeps only unique values, so it becomes {1, 2}.",
+    "decision": "Now we can compare the second array against that remembered set.",
+    "highlightIndexes": [0, 1, 2, 3],
+    "pointers": {
+      "current": 3
+    }
+  },
+  {
+    "id": "intersection-2",
+    "narration": "Read the second array and add shared values to a result set.",
+    "arrayValues": [2, 2],
+    "callout": "The first 2 is in the first set, so add 2 to the result set.",
+    "decision": "The result set protects the answer from duplicates.",
+    "highlightIndexes": [0],
+    "pointers": {
+      "current": 0
+    },
+    "predictionPrompt": {
+      "prompt": "Why do we use a result set instead of a normal list?",
+      "choices": [
+        {
+          "id": "unique",
+          "label": "To keep the answer unique",
+          "isCorrect": true,
+          "feedback": "Correct. A set automatically ignores duplicate answers."
+        },
+        {
+          "id": "sorted",
+          "label": "To sort the answer",
+          "isCorrect": false,
+          "feedback": "Not this one. The set is for uniqueness, not sorting."
+        }
+      ]
+    }
+  },
+  {
+    "id": "intersection-3",
+    "narration": "When the second 2 appears, the result set still keeps only one copy.",
+    "arrayValues": [2, 2],
+    "callout": "That is why the final answer is [2] instead of [2, 2].",
+    "decision": "Return the unique shared values as an array.",
+    "highlightIndexes": [1],
+    "pointers": {
+      "current": 1
+    },
+    "reflectionPrompt": {
+      "prompt": "Why are two sets useful in this lesson?",
+      "placeholder": "One set checks membership, and the other..."
+    }
+  }
+]

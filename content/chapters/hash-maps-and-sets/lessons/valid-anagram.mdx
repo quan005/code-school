@@ -1,0 +1,136 @@
+---
+title: "Valid Anagram"
+slug: "valid-anagram"
+order: 4
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 12
+concepts:
+  - "counting"
+  - "frequency map"
+  - "letter comparison"
+skills:
+  - "Count how many times each letter appears"
+  - "Compare two words with a map"
+prerequisites:
+  - "two-sum"
+summary: "Use a map to count letters so you can check whether two words use the same letters the same number of times."
+---
+
+<ProblemStatement title="Check whether two words use the same letters">
+  Two strings are anagrams if they use the same letters the same number of
+  times. Return <code>true</code> if <code>t</code> is an anagram of{" "}
+  <code>s</code>. Otherwise, return <code>false</code>.
+</ProblemStatement>
+
+## Examples
+
+```txt
+s = "listen", t = "silent" -> true
+s = "rat", t = "car" -> false
+```
+
+<Intuition title="This is a counting problem">
+  A set is not enough because a set would only tell us whether a letter exists.
+  Anagrams need the exact number of each letter, so we use a map of letter to
+  count.
+</Intuition>
+
+<InterviewTip>
+  If two words have different lengths, you can return false right away. They
+  cannot possibly use the same letters the same number of times.
+</InterviewTip>
+
+## Better Plan
+
+1. If the lengths are different, return <code>false</code>.
+2. Count the letters in the first word.
+3. Walk through the second word and subtract from those counts.
+4. If a letter is missing or goes below zero, return <code>false</code>.
+
+## Walkthrough
+
+For <code>s = "listen"</code> and <code>t = "silent"</code>:
+
+1. Count the letters in <code>listen</code>.
+2. Read <code>silent</code> one letter at a time.
+3. Each matching letter lowers the correct count.
+4. Because every letter balances correctly, the words are anagrams.
+
+## TypeScript Solution
+
+```ts
+function validAnagram(s: string, t: string): boolean {
+  if (s.length !== t.length) {
+    return false;
+  }
+
+  const counts = new Map<string, number>();
+
+  for (const ch of s) {
+    counts.set(ch, (counts.get(ch) ?? 0) + 1);
+  }
+
+  for (const ch of t) {
+    if (!counts.has(ch)) {
+      return false;
+    }
+
+    counts.set(ch, counts.get(ch)! - 1);
+
+    if (counts.get(ch)! < 0) {
+      return false;
+    }
+  }
+
+  return true;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(k)"
+  notes="The map only stores the different letters that appear, not every position in the word."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: 's = "listen", t = "silent"',
+      expected: "true",
+      why: "They use the same letters the same number of times.",
+    },
+    {
+      input: 's = "rat", t = "car"',
+      expected: "false",
+      why: "The letters do not match.",
+    },
+    {
+      input: 's = "hello", t = "helloo"',
+      expected: "false",
+      why: "The lengths are different.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Using a set to compare words",
+      fix: "A set forgets how many times each letter appears. Anagrams need counts, so use a map.",
+    },
+    {
+      title: "Forgetting the early length check",
+      fix: "Different lengths mean the answer is false before any counting starts.",
+    },
+  ]}
+/>
+
+<HintDrawer title="What does the map store?">
+  The key is the letter. The value is how many copies of that letter are still
+  needed to make the words match.
+</HintDrawer>
+
+## Reflection
+
+Why is counting more important than only checking whether a letter exists?

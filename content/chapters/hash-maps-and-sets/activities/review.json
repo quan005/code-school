@@ -1,0 +1,19 @@
+{
+  "recapPrompt": {
+    "prompt": "A problem asks, \"How many times did each letter appear?\" Which tool fits best?",
+    "choices": [
+      {
+        "id": "map",
+        "label": "Use a map",
+        "isCorrect": true,
+        "feedback": "Correct. Counting needs a key with a stored value."
+      },
+      {
+        "id": "set",
+        "label": "Use a set",
+        "isCorrect": false,
+        "feedback": "Not this time. A set can tell you presence, but not counts."
+      }
+    ]
+  }
+}
