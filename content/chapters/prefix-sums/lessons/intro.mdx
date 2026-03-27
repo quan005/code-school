@@ -1,0 +1,75 @@
+---
+title: "Introduction"
+slug: "intro"
+order: 1
+lessonType: "intro"
+difficulty: "easy"
+estimatedMinutes: 9
+concepts:
+  - "prefix sum"
+  - "running total"
+  - "precomputing"
+skills:
+  - "Explain what a prefix sum stores"
+  - "Build a running total from left to right"
+  - "Explain why precomputing saves repeated work"
+prerequisites: []
+summary: "Meet prefix sums, learn running-total thinking, and see why doing a little setup first can make later questions easier."
+---
+
+<ProblemStatement title="A prefix sum stores the total so far">
+  A prefix sum stores the running total from the beginning up to each position.
+</ProblemStatement>
+
+<Intuition title="Think about adding as you walk">
+  If the numbers are <code>[2, 4, 1, 3]</code>, the running totals become
+  <code>[2, 6, 7, 10]</code>. Each new total remembers everything from the start
+  up to that spot.
+</Intuition>
+
+<InterviewTip>
+  Prefix sums are a clue when problems ask many range sums, cumulative totals,
+  left sum versus right sum, or repeated “sum from here to there” questions.
+</InterviewTip>
+
+<ComplexityCard
+  time="Build once in O(n), then many questions may become O(1)"
+  space="Often O(n) for the helper array"
+  notes="The big idea is precomputing: do a little setup once so later work becomes faster."
+/>
+
+## Helpful formula
+
+To get the sum from <code>left</code> to <code>right</code>:
+
+- use <code>prefix[right]</code>
+- subtract the total before <code>left</code>
+
+<PredictionPrompt
+  prompt={{
+    prompt:
+      "If prefix[4] is 15 and prefix[1] is 6, what is the sum from index 2 to 4?",
+    choices: [
+      {
+        id: "nine",
+        label: "9",
+        isCorrect: true,
+        feedback: "Correct. 15 - 6 = 9.",
+      },
+      {
+        id: "twentyone",
+        label: "21",
+        isCorrect: false,
+        feedback:
+          "Not this one. We subtract the part before the range, not add it.",
+      },
+    ],
+  }}
+/>
+
+## Lesson Summary
+
+- A prefix sum stores the running total from the beginning.
+- It helps answer later range questions quickly.
+- Precomputing means doing setup once to save time later.
+- Running totals are one of the main clues for this pattern.

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "range-1",
+    "narration": "We first build the prefix array [2, 6, 7, 10, 15] from nums = [2, 4, 1, 3, 5].",
+    "arrayValues": [2, 6, 7, 10, 15],
+    "callout": "Each prefix value stores the total from the beginning up to that index.",
+    "highlightIndexes": [0, 1, 2, 3, 4],
+    "pointers": {
+      "current": 4
+    }
+  },
+  {
+    "id": "range-2",
+    "narration": "To find the sum from index 2 to 4, we use prefix[4] = 15 and subtract prefix[1] = 6.",
+    "arrayValues": [2, 6, 7, 10, 15],
+    "decision": "15 - 6 = 9",
+    "highlightIndexes": [1, 4],
+    "pointers": {
+      "left": 1,
+      "right": 4
+    }
+  },
+  {
+    "id": "range-3",
+    "narration": "Subtracting removes the extra left part, leaving only the chosen range.",
+    "arrayValues": ["wanted range = 9"],
+    "callout": "One subtraction can replace several additions.",
+    "highlightIndexes": [0],
+    "pointers": {
+      "current": 0
+    },
+    "reflectionPrompt": {
+      "prompt": "Why does prefix[right] contain too much before we subtract?",
+      "placeholder": "It contains too much because..."
+    }
+  }
+]

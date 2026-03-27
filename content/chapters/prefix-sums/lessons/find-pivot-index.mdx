@@ -1,0 +1,115 @@
+---
+title: "Find Pivot Index"
+slug: "find-pivot-index"
+order: 4
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 13
+concepts:
+  - "left sum"
+  - "right sum"
+  - "total sum"
+skills:
+  - "Track a running left sum"
+  - "Compute the right sum quickly from the total"
+prerequisites:
+  - "count-the-running-totals"
+summary: "Use the total sum and a running left sum to find where the left and right sides match."
+---
+
+<ProblemStatement title="Find the balance point">
+  Given an array <code>nums</code>, return the pivot index where the sum on the
+  left equals the sum on the right. If none exists, return <code>-1</code>.
+</ProblemStatement>
+
+## Example
+
+```txt
+nums = [1, 7, 3, 6, 5, 6]
+answer = 3
+```
+
+<Intuition title="Use one whole total and one running left total">
+  We do not need to rebuild the left and right sums at every position. The total
+  sum tells us the whole array, and the running left sum tells us the left side.
+  The right side becomes what is left over.
+</Intuition>
+
+<InterviewTip>
+  This is a common pattern: total sum plus running left sum equals quick access
+  to the right sum.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function pivotIndex(nums: number[]): number {
+  let total = 0;
+
+  for (const num of nums) {
+    total += num;
+  }
+
+  let leftSum = 0;
+
+  for (let i = 0; i < nums.length; i++) {
+    const rightSum = total - leftSum - nums[i];
+
+    if (leftSum === rightSum) {
+      return i;
+    }
+
+    leftSum += nums[i];
+  }
+
+  return -1;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(1)"
+  notes="Each index gets checked in constant time once the total is known."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "nums = [1, 7, 3, 6, 5, 6]",
+      expected: "3",
+      why: "At index 3, both sides sum to 11.",
+    },
+    {
+      input: "nums = [1, 2, 3]",
+      expected: "-1",
+      why: "No position balances the two sides.",
+    },
+    {
+      input: "nums = [2, 1, -1]",
+      expected: "0",
+      why: "The left side is empty and counts as 0, matching the right side.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Forgetting to remove the current value from the right side",
+      fix: "Right sum is total - leftSum - current value.",
+    },
+    {
+      title: "Updating leftSum too early",
+      fix: "Check the current index first, then add nums[i] to leftSum.",
+    },
+  ]}
+/>
+
+<HintDrawer title="What is left after removing left and current?">
+  The right side is just the whole total minus everything on the left and minus
+  the current number.
+</HintDrawer>
+
+## Reflection
+
+Why is total - leftSum - nums[i] the right way to get the right sum?

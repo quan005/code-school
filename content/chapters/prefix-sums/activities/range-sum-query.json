@@ -1,0 +1,65 @@
+{
+  "practiceChallenge": {
+    "title": "Fill in the prefix-sum range rule",
+    "description": "Complete the helper so it returns the right idea for building and using a prefix array.",
+    "language": "javascript",
+    "starterCode": "export function prefixRangeRule(job) {\n  const buildRule = \"TODO\";\n  const queryRule = \"TODO\";\n  const zeroRule = \"TODO\";\n\n  if (job === \"build\") {\n    return buildRule;\n  }\n\n  if (job === \"query\") {\n    return queryRule;\n  }\n\n  return zeroRule;\n}\n",
+    "hints": [
+      "Build a running total from left to right.",
+      "Range sum uses prefix[right] minus the total before left.",
+      "If left is 0, there is nothing earlier to subtract."
+    ],
+    "successMessage": "Nice work. You rebuilt the main prefix-sum range rule.",
+    "retryMessage": "Not yet. Recheck how the helper array is built and how subtraction answers a range.",
+    "completionBehavior": "mark_complete",
+    "blanks": [
+      {
+        "key": "buildRule",
+        "label": "Main build rule",
+        "expectedValues": [
+          "running total",
+          "build running total",
+          "prefix totals"
+        ]
+      },
+      {
+        "key": "queryRule",
+        "label": "Main query rule",
+        "expectedValues": [
+          "subtract left part",
+          "prefix[right] minus before left",
+          "subtract earlier prefix"
+        ]
+      },
+      {
+        "key": "zeroRule",
+        "label": "Rule when left is 0",
+        "expectedValues": [
+          "use prefix[right]",
+          "just prefix[right]",
+          "no subtraction"
+        ]
+      }
+    ],
+    "visibleTests": [
+      {
+        "label": "Build rule",
+        "scenario": "job = build",
+        "blankKey": "buildRule",
+        "expected": "running total"
+      },
+      {
+        "label": "Query rule",
+        "scenario": "job = query",
+        "blankKey": "queryRule",
+        "expected": "subtract left part"
+      },
+      {
+        "label": "Left zero rule",
+        "scenario": "job = zero",
+        "blankKey": "zeroRule",
+        "expected": "use prefix[right]"
+      }
+    ]
+  }
+}

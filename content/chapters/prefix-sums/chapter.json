@@ -1,0 +1,7 @@
+{
+  "slug": "prefix-sums",
+  "title": "Prefix Sums",
+  "order": 10,
+  "track": "Code Patterns",
+  "summary": "Learn how running totals and precomputing help answer range and cumulative questions much faster."
+}

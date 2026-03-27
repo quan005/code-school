@@ -1,0 +1,32 @@
+[
+  {
+    "id": "running-1",
+    "narration": "We begin with total = 0 and add each number one by one.",
+    "arrayValues": [1, 2, 3, 4],
+    "callout": "The running total grows as we move left to right.",
+    "highlightIndexes": [0, 1, 2, 3],
+    "pointers": {
+      "current": 0
+    }
+  },
+  {
+    "id": "running-2",
+    "narration": "After seeing 1 and 2, the running totals are [1, 3].",
+    "arrayValues": [1, 3],
+    "decision": "Each new result saves the total so far.",
+    "highlightIndexes": [0, 1],
+    "pointers": {
+      "right": 1
+    }
+  },
+  {
+    "id": "running-3",
+    "narration": "By the end, the running totals become [1, 3, 6, 10].",
+    "arrayValues": [1, 3, 6, 10],
+    "callout": "This is the simplest form of a prefix array.",
+    "highlightIndexes": [0, 1, 2, 3],
+    "pointers": {
+      "current": 3
+    }
+  }
+]

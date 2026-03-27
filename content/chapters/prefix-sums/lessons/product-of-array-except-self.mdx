@@ -1,0 +1,115 @@
+---
+title: "Product of Array Except Self"
+slug: "product-of-array-except-self"
+order: 7
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 14
+concepts:
+  - "prefix product"
+  - "suffix product"
+  - "everything except self"
+skills:
+  - "Build left-side products"
+  - "Combine left-side and right-side information for each position"
+prerequisites:
+  - "range-sum-query"
+summary: "Use prefix products and suffix products to build the product of all other numbers without division."
+---
+
+<ProblemStatement title="Multiply everything except the current spot">
+  Given an array <code>nums</code>, return an array where each answer at index{" "}
+  <code>i</code> is the product of all numbers except <code>nums[i]</code>. Do
+  not use division.
+</ProblemStatement>
+
+## Example
+
+```txt
+nums = [1, 2, 3, 4]
+answer = [24, 12, 8, 6]
+```
+
+<Intuition title="Think left side and right side">
+  This is like prefix sums, but with multiplication. For each position, we want:
+</Intuition>
+
+```txt
+product before it * product after it
+```
+
+<InterviewTip>
+  This lesson belongs near prefix sums because it uses the same left-side and
+  right-side precomputing idea, just with products instead of sums.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function productExceptSelf(nums: number[]): number[] {
+  const result = new Array(nums.length).fill(1);
+
+  let prefix = 1;
+  for (let i = 0; i < nums.length; i++) {
+    result[i] = prefix;
+    prefix *= nums[i];
+  }
+
+  let suffix = 1;
+  for (let i = nums.length - 1; i >= 0; i--) {
+    result[i] *= suffix;
+    suffix *= nums[i];
+  }
+
+  return result;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(1) extra if the output array does not count"
+  notes="The first pass stores left-side products, and the second pass multiplies in right-side products."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "nums = [1, 2, 3, 4]",
+      expected: "[24, 12, 8, 6]",
+      why: "Each answer uses everything except the current value.",
+    },
+    {
+      input: "nums = [2, 3]",
+      expected: "[3, 2]",
+      why: "Each position gets the other value.",
+    },
+    {
+      input: "nums = [-1, 1, 0, -3, 3]",
+      expected: "[0, 0, 9, 0, 0]",
+      why: "The zero changes which positions keep a nonzero product.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Trying to include the current value in the product",
+      fix: "Store only the product before the index first, then multiply by the product after it.",
+    },
+    {
+      title: "Forgetting the suffix pass",
+      fix: "You need both left-side and right-side information to get everything except self.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Two passes, two sides">
+  First store what is on the left of each index, then walk from the right and
+  multiply in what is on the right.
+</HintDrawer>
+
+## Reflection
+
+Why does each answer need information from both the left side and the right
+side?

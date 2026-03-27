@@ -1,0 +1,118 @@
+---
+title: "Subarray Sum Equals K"
+slug: "subarray-sum-equals-k"
+order: 5
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 15
+concepts:
+  - "goal sum"
+  - "current prefix sum"
+  - "prefix sum plus hash map"
+skills:
+  - "Use prefix sums to compare differences between totals"
+  - "Use a map to count how many helpful earlier totals exist"
+prerequisites:
+  - "range-sum-query"
+summary: "Use a running prefix sum and a hash map to count how many side-by-side groups add up to k."
+---
+
+<ProblemStatement title="How many side-by-side groups make the goal sum?">
+  Given an array <code>nums</code> and a goal sum <code>k</code>, return how
+  many subarrays have a sum equal to <code>k</code>.
+</ProblemStatement>
+
+## Example
+
+```txt
+nums = [1, 1, 1]
+k = 2
+answer = 2
+```
+
+<Intuition title="Look for an earlier total that makes the difference work">
+  Let <code>currentSum</code> be the running total so far. If a subarray should
+  add to <code>k</code>, then we want an earlier prefix sum so that:
+</Intuition>
+
+```txt
+currentSum - earlierPrefix = k
+```
+
+<InterviewTip>
+  This is one of the most important “prefix sum + hash map” patterns. The map
+  stores how many times each earlier prefix sum has appeared.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function subarraySumEqualsK(nums: number[], k: number): number {
+  const counts = new Map<number, number>();
+  counts.set(0, 1);
+
+  let currentSum = 0;
+  let totalCount = 0;
+
+  for (const num of nums) {
+    currentSum += num;
+
+    const need = currentSum - k;
+    totalCount += counts.get(need) ?? 0;
+
+    counts.set(currentSum, (counts.get(currentSum) ?? 0) + 1);
+  }
+
+  return totalCount;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(n)"
+  notes="The map helps count useful earlier prefix sums in constant time."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "nums = [1, 1, 1], k = 2",
+      expected: "2",
+      why: "There are two side-by-side groups that add to 2.",
+    },
+    {
+      input: "nums = [1, 2, 3], k = 3",
+      expected: "2",
+      why: "The groups [1,2] and [3] both make 3.",
+    },
+    {
+      input: "nums = [3, 4, 7, 2, -3, 1, 4, 2], k = 7",
+      expected: "4",
+      why: "Several earlier prefix sums help later ranges make 7.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Starting with an empty map",
+      fix: "Store prefix sum 0 once at the start so ranges beginning at index 0 are counted.",
+    },
+    {
+      title: "Saving the current sum before counting matches",
+      fix: "Count the needed earlier sums first, then store the current sum.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Need = currentSum - k">
+  The map answers one question over and over: how many earlier prefix sums equal
+  the value we need?
+</HintDrawer>
+
+## Reflection
+
+Why does an earlier prefix sum of currentSum - k help create a subarray sum of
+
+<code>k</code>?

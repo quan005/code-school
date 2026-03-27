@@ -1,0 +1,104 @@
+---
+title: "Find the Largest Altitude"
+slug: "find-the-largest-altitude"
+order: 6
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 11
+concepts:
+  - "altitude"
+  - "gain"
+  - "highest running total"
+skills:
+  - "Treat altitude as a running total"
+  - "Track the highest value reached so far"
+prerequisites:
+  - "count-the-running-totals"
+summary: "Use a running total of gains to track the biker's current altitude and highest altitude."
+---
+
+<ProblemStatement title="Track the highest point reached">
+  A biker starts at altitude 0. You are given gains and losses after each step.
+  Return the highest altitude the biker reaches.
+</ProblemStatement>
+
+## Example
+
+```txt
+gain = [-5, 1, 5, 0, -7]
+answer = 1
+```
+
+<Intuition title="Altitude is just a running total">
+  Each new altitude is the old altitude plus the next gain or loss. That means
+  altitude behaves like a prefix sum of the gain array.
+</Intuition>
+
+<InterviewTip>
+  Not every prefix-sum problem needs a full prefix array. Sometimes one running
+  total and one best-so-far value are enough.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function largestAltitude(gain: number[]): number {
+  let altitude = 0;
+  let highest = 0;
+
+  for (const change of gain) {
+    altitude += change;
+    highest = Math.max(highest, altitude);
+  }
+
+  return highest;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(1)"
+  notes="We only need the current altitude and the highest altitude so far."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "gain = [-5, 1, 5, 0, -7]",
+      expected: "1",
+      why: "The running altitude reaches 1 at its highest point.",
+    },
+    {
+      input: "gain = [-4, -3, -2, -1, 4, 3, 2]",
+      expected: "0",
+      why: "The biker never goes above the starting altitude.",
+    },
+    {
+      input: "gain = [1, 2, 3]",
+      expected: "6",
+      why: "The running altitude keeps rising.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Forgetting the starting altitude 0",
+      fix: "Start altitude and highest at 0 before reading any gains.",
+    },
+    {
+      title: "Tracking only the final altitude",
+      fix: "Keep the best altitude seen anywhere along the way, not just at the end.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Highest so far">
+  After every change, update the current altitude and compare it with the best
+  altitude seen so far.
+</HintDrawer>
+
+## Reflection
+
+Why can the highest altitude be different from the final altitude?

@@ -1,0 +1,38 @@
+---
+title: "Mastery Check"
+slug: "mastery-check"
+order: 9
+lessonType: "mastery"
+difficulty: "medium"
+estimatedMinutes: 10
+concepts:
+  - "beginning to here"
+  - "range subtraction"
+  - "precompute first"
+skills:
+  - "Recall the main prefix-sum clues without a walkthrough"
+  - "Explain why precomputing can save time"
+prerequisites:
+  - "review"
+summary: "Show that you can recognize prefix-sum clues, remember the key subtraction idea, and rebuild the main ideas on your own."
+---
+
+<ProblemStatement title="Can you rebuild the prefix-sum clues from memory?">
+  This mastery check asks you to remember how running totals, subtraction, and
+  precomputing work together.
+</ProblemStatement>
+
+<Intuition title="Store totals from the beginning, then reuse them">
+  Prefix-sum problems become easier when you stop rebuilding the same totals
+  over and over.
+</Intuition>
+
+<ComplexityCard
+  time="Often O(n) setup, then faster later answers"
+  space="Often O(n) for a helper array"
+  notes="The big lesson is that extra setup can make repeated questions much easier."
+/>
+
+## Reflection
+
+Explain in your own words why doing extra setup first can make later work faster.

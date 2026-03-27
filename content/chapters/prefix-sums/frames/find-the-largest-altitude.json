@@ -1,0 +1,32 @@
+[
+  {
+    "id": "altitude-1",
+    "narration": "The biker starts at altitude 0, and each gain changes the running altitude.",
+    "arrayValues": [-5, 1, 5, 0, -7],
+    "callout": "Altitude behaves like a running total.",
+    "highlightIndexes": [0, 1, 2, 3, 4],
+    "pointers": {
+      "current": 0
+    }
+  },
+  {
+    "id": "altitude-2",
+    "narration": "After the gains -5, 1, and 5, the altitude rises to 1, which becomes the highest so far.",
+    "arrayValues": [-5, -4, 1, 1, -6],
+    "decision": "Track the highest altitude seen anywhere along the path.",
+    "highlightIndexes": [2, 3],
+    "pointers": {
+      "current": 2
+    }
+  },
+  {
+    "id": "altitude-3",
+    "narration": "The final altitude can go back down, but the highest point reached still stays 1.",
+    "arrayValues": ["highest = 1"],
+    "callout": "Best-so-far and final value are not always the same.",
+    "highlightIndexes": [0],
+    "pointers": {
+      "current": 0
+    }
+  }
+]

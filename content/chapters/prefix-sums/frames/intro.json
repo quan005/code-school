@@ -1,0 +1,55 @@
+[
+  {
+    "id": "intro-1",
+    "narration": "A prefix sum stores the running total from the beginning up to each position.",
+    "arrayValues": [2, 6, 7, 10],
+    "callout": "These totals come from nums = [2, 4, 1, 3].",
+    "highlightIndexes": [0, 1, 2, 3],
+    "pointers": {
+      "current": 3
+    }
+  },
+  {
+    "id": "intro-2",
+    "narration": "If we want the sum from index 1 to 3, we can subtract the total before index 1 from the total at index 3.",
+    "arrayValues": [2, 6, 7, 10],
+    "decision": "10 - 2 = 8",
+    "highlightIndexes": [0, 3],
+    "pointers": {
+      "left": 0,
+      "right": 3
+    },
+    "predictionPrompt": {
+      "prompt": "If left is 0, what should happen?",
+      "choices": [
+        {
+          "id": "just-right",
+          "label": "Use prefix[right] directly",
+          "isCorrect": true,
+          "feedback": "Correct. There is nothing on the left side to subtract away."
+        },
+        {
+          "id": "subtract-zero",
+          "label": "Always subtract prefix[left - 1] anyway",
+          "isCorrect": false,
+          "feedback": "Not this one. When left is 0, there is no earlier prefix index."
+        }
+      ]
+    }
+  },
+  {
+    "id": "intro-3",
+    "narration": "This saves time because we do setup once, then later questions reuse the saved totals.",
+    "arrayValues": ["build once", "answer fast later"],
+    "callout": "That idea is called precomputing.",
+    "highlightIndexes": [0, 1],
+    "pointers": {
+      "left": 0,
+      "right": 1
+    },
+    "reflectionPrompt": {
+      "prompt": "Why is prefix-sum setup worth it when many questions are coming?",
+      "placeholder": "It is worth it because..."
+    }
+  }
+]

@@ -1,0 +1,47 @@
+---
+title: "Review"
+slug: "review"
+order: 8
+lessonType: "review"
+difficulty: "easy"
+estimatedMinutes: 8
+concepts:
+  - "running total"
+  - "range sum"
+  - "precomputing"
+skills:
+  - "Review the main prefix-sum clues"
+  - "Tell different prefix-sum jobs apart"
+prerequisites:
+  - "product-of-array-except-self"
+summary: "Review the big prefix-sum ideas, especially running totals, range subtraction, and left-side/right-side precomputing."
+---
+
+<ProblemStatement title="When should prefix-sum thinking appear?">
+  This review lesson helps you remember the strongest clues that point to prefix
+  sums.
+</ProblemStatement>
+
+<Intuition title="Do a little work once, save a lot later">
+  Prefix sums are powerful because they replace repeated adding with one setup
+  step and faster later answers.
+</Intuition>
+
+<ComplexityCard
+  time="Often O(n) setup, then fast later checks"
+  space="Depends on whether a full helper array is stored"
+  notes="The main pattern is precomputing information from the left so later questions become easier."
+/>
+
+## Pattern Summary
+
+- Range sum: build a prefix array and subtract.
+- Running totals: keep the total so far.
+- Pivot index: total sum plus running left sum.
+- Subarray sum equals k: prefix sums plus a hash map.
+- Largest altitude: running total only.
+- Product except self: left-side and right-side products.
+
+## Reflection
+
+Which prefix-sum clue feels easiest for you to notice now?

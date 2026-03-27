@@ -1,0 +1,54 @@
+[
+  {
+    "id": "subarray-1",
+    "narration": "We keep a running prefix sum and a map that counts how many times earlier prefix sums have appeared.",
+    "arrayValues": [1, 1, 1],
+    "callout": "The map starts with prefix sum 0 seen once.",
+    "highlightIndexes": [0, 1, 2],
+    "pointers": {
+      "current": 0
+    }
+  },
+  {
+    "id": "subarray-2",
+    "narration": "When currentSum becomes 2 and k is 2, we need an earlier prefix sum of 0. The map says that happened once, so count goes up.",
+    "arrayValues": ["currentSum = 2", "need = 0", "count = 1"],
+    "decision": "Need = currentSum - k",
+    "highlightIndexes": [0, 1, 2],
+    "pointers": {
+      "left": 1,
+      "right": 2
+    },
+    "predictionPrompt": {
+      "prompt": "If currentSum is 3 and k is 2, what earlier prefix sum do we need?",
+      "choices": [
+        {
+          "id": "one",
+          "label": "1",
+          "isCorrect": true,
+          "feedback": "Correct. 3 - 2 = 1."
+        },
+        {
+          "id": "five",
+          "label": "5",
+          "isCorrect": false,
+          "feedback": "Not this one. We subtract k from the current sum."
+        }
+      ]
+    }
+  },
+  {
+    "id": "subarray-3",
+    "narration": "The map lets us count how many helpful earlier totals exist without searching backward each time.",
+    "arrayValues": ["map of earlier prefix sums"],
+    "callout": "Prefix sum plus hash map is the key pattern here.",
+    "highlightIndexes": [0],
+    "pointers": {
+      "current": 0
+    },
+    "reflectionPrompt": {
+      "prompt": "Why is the map needed in addition to the running total?",
+      "placeholder": "The map is needed because..."
+    }
+  }
+]

@@ -1,0 +1,36 @@
+[
+  {
+    "id": "pivot-1",
+    "narration": "First we compute the total sum of the whole array, which is 28.",
+    "arrayValues": [1, 7, 3, 6, 5, 6],
+    "callout": "The whole total helps us figure out the right side later.",
+    "highlightIndexes": [0, 1, 2, 3, 4, 5],
+    "pointers": {
+      "current": 3
+    }
+  },
+  {
+    "id": "pivot-2",
+    "narration": "At index 3, leftSum is 11. The rightSum becomes 28 - 11 - 6 = 11.",
+    "arrayValues": [1, 7, 3, 6, 5, 6],
+    "decision": "leftSum equals rightSum here, so index 3 is the pivot.",
+    "highlightIndexes": [0, 1, 2, 3, 4, 5],
+    "pointers": {
+      "current": 3
+    }
+  },
+  {
+    "id": "pivot-3",
+    "narration": "The current value is removed from the right side because it belongs to the pivot itself, not to either side.",
+    "arrayValues": ["right = total - left - current"],
+    "callout": "That formula keeps the two sides fair.",
+    "highlightIndexes": [0],
+    "pointers": {
+      "current": 0
+    },
+    "reflectionPrompt": {
+      "prompt": "Why would the right sum be too big if we forgot to subtract the current value?",
+      "placeholder": "It would be too big because..."
+    }
+  }
+]

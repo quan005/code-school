@@ -1,0 +1,37 @@
+[
+  {
+    "id": "product-1",
+    "narration": "The first pass stores the product of everything to the left of each index.",
+    "arrayValues": [1, 1, 2, 6],
+    "callout": "For nums = [1, 2, 3, 4], these are the left-side products.",
+    "highlightIndexes": [0, 1, 2, 3],
+    "pointers": {
+      "current": 3
+    }
+  },
+  {
+    "id": "product-2",
+    "narration": "The second pass moves from the right and multiplies in the product of everything to the right.",
+    "arrayValues": [24, 12, 8, 6],
+    "decision": "Left-side product times right-side product gives everything except self.",
+    "highlightIndexes": [0, 1, 2, 3],
+    "pointers": {
+      "current": 2
+    }
+  },
+  {
+    "id": "product-3",
+    "narration": "Each answer needs both sides because the current value must be left out completely.",
+    "arrayValues": ["left side", "right side"],
+    "callout": "One side alone is never enough for this problem.",
+    "highlightIndexes": [0, 1],
+    "pointers": {
+      "left": 0,
+      "right": 1
+    },
+    "reflectionPrompt": {
+      "prompt": "Why would using only the left-side products miss part of the answer?",
+      "placeholder": "It would miss part because..."
+    }
+  }
+]

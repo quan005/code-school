@@ -1,0 +1,116 @@
+---
+title: "Range Sum Query"
+slug: "range-sum-query"
+order: 2
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 13
+concepts:
+  - "range sum"
+  - "prefix array"
+  - "subtract the extra left part"
+skills:
+  - "Build a prefix array"
+  - "Answer a sum query with subtraction instead of re-adding everything"
+prerequisites: []
+summary: "Build a prefix array once and use subtraction to answer range-sum questions quickly."
+---
+
+<ProblemStatement title="Answer many sum questions quickly">
+  Given an array <code>nums</code>, answer queries asking for the sum from index{" "}
+  <code>left</code> to index <code>right</code>.
+</ProblemStatement>
+
+## Example
+
+```txt
+nums = [2, 4, 1, 3, 5]
+left = 1
+right = 3
+answer = 8
+```
+
+<Intuition title="Use a helper array instead of re-adding every time">
+  If many queries are coming, it is better to build a prefix sum array once.
+  Then each range sum can be answered with one subtraction.
+</Intuition>
+
+<InterviewTip>
+  Prefix sums shine when many questions reuse the same array and the brute-force
+  method would keep adding the same values again and again.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function buildPrefix(nums: number[]): number[] {
+  if (nums.length === 0) {
+    return [];
+  }
+
+  const prefix = new Array(nums.length);
+  prefix[0] = nums[0];
+
+  for (let i = 1; i < nums.length; i++) {
+    prefix[i] = prefix[i - 1] + nums[i];
+  }
+
+  return prefix;
+}
+
+function rangeSum(prefix: number[], left: number, right: number): number {
+  if (left === 0) {
+    return prefix[right];
+  }
+
+  return prefix[right] - prefix[left - 1];
+}
+```
+
+<ComplexityCard
+  time="Build prefix: O(n), each query: O(1)"
+  space="O(n)"
+  notes="The setup work happens once, and the later queries become fast."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "nums = [2, 4, 1, 3, 5], left = 1, right = 3",
+      expected: "8",
+      why: "4 + 1 + 3 = 8, and prefix subtraction finds the same result.",
+    },
+    {
+      input: "nums = [2, 4, 1, 3, 5], left = 0, right = 2",
+      expected: "7",
+      why: "A range starting at 0 is just prefix[right].",
+    },
+    {
+      input: "nums = [2, 4, 1, 3, 5], left = 2, right = 4",
+      expected: "9",
+      why: "Subtract the total before index 2 from the total at index 4.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Adding the left side instead of subtracting it",
+      fix: "Subtract the total before the range so only the wanted section stays.",
+    },
+    {
+      title: "Forgetting the special case when left is 0",
+      fix: "If the range starts at the beginning, the answer is just prefix[right].",
+    },
+  ]}
+/>
+
+<HintDrawer title="Remove what came before">
+  Prefix[right] includes too much. Subtract the total before left to keep only
+  the chosen range.
+</HintDrawer>
+
+## Reflection
+
+Why does subtracting one prefix total from another leave only the wanted range?

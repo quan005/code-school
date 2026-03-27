@@ -1,0 +1,86 @@
+{
+  "recapPrompt": {
+    "prompt": "To get a range sum from left to right, what do we usually subtract from prefix[right]?",
+    "choices": [
+      {
+        "id": "before-left",
+        "label": "The prefix total before left",
+        "isCorrect": true,
+        "feedback": "Correct. That removes the extra numbers before the range."
+      },
+      {
+        "id": "current",
+        "label": "The current value at right",
+        "isCorrect": false,
+        "feedback": "Not this one. We subtract the earlier prefix total, not the current value."
+      }
+    ]
+  },
+  "reflectionPrompt": {
+    "prompt": "Explain in your own words why precomputing can make later work faster.",
+    "placeholder": "Precomputing helps because..."
+  },
+  "practiceChallenge": {
+    "title": "Mastery check: rebuild the prefix-sum clues",
+    "description": "Complete the helper so it returns the main clue for each kind of prefix-sum job.",
+    "language": "javascript",
+    "starterCode": "export function prefixClue(goal) {\n  const rangeClue = \"TODO\";\n  const pivotClue = \"TODO\";\n  const mapClue = \"TODO\";\n\n  if (goal === \"range\") {\n    return rangeClue;\n  }\n\n  if (goal === \"pivot\") {\n    return pivotClue;\n  }\n\n  return mapClue;\n}\n",
+    "hints": [
+      "Range sums use subtraction between prefix totals.",
+      "Pivot index compares left sum and right sum using the whole total.",
+      "Subarray Sum Equals K uses prefix sums with a hash map."
+    ],
+    "successMessage": "Pass. You rebuilt the main prefix-sum clues from memory.",
+    "retryMessage": "Needs practice. Recheck the subtraction idea, the pivot formula, and the hash-map combo.",
+    "completionBehavior": "mark_complete",
+    "blanks": [
+      {
+        "key": "rangeClue",
+        "label": "Main clue for range sums",
+        "expectedValues": [
+          "subtract prefix totals",
+          "subtract earlier prefix",
+          "range subtraction"
+        ]
+      },
+      {
+        "key": "pivotClue",
+        "label": "Main clue for pivot index",
+        "expectedValues": [
+          "total minus left minus current",
+          "use total and left sum",
+          "left equals right"
+        ]
+      },
+      {
+        "key": "mapClue",
+        "label": "Main clue for subarray sum equals k",
+        "expectedValues": [
+          "prefix sums plus hash map",
+          "use a hash map",
+          "count earlier prefix sums"
+        ]
+      }
+    ],
+    "visibleTests": [
+      {
+        "label": "Range clue",
+        "scenario": "goal = range",
+        "blankKey": "rangeClue",
+        "expected": "subtract prefix totals"
+      },
+      {
+        "label": "Pivot clue",
+        "scenario": "goal = pivot",
+        "blankKey": "pivotClue",
+        "expected": "total minus left minus current"
+      },
+      {
+        "label": "Map clue",
+        "scenario": "goal = map",
+        "blankKey": "mapClue",
+        "expected": "prefix sums plus hash map"
+      }
+    ]
+  }
+}

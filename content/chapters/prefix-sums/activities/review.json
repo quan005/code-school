@@ -1,0 +1,23 @@
+{
+  "recapPrompt": {
+    "prompt": "What is one of the strongest clues that prefix sums might help?",
+    "choices": [
+      {
+        "id": "repeated-sums",
+        "label": "The problem keeps asking many sum or cumulative questions",
+        "isCorrect": true,
+        "feedback": "Correct. Prefix sums help when repeated totals would otherwise repeat work."
+      },
+      {
+        "id": "single-compare",
+        "label": "The problem only asks for one simple comparison with no totals",
+        "isCorrect": false,
+        "feedback": "Not this one. Prefix sums are strongest when totals keep appearing."
+      }
+    ]
+  },
+  "reflectionPrompt": {
+    "prompt": "Explain how prefix sums save time by reusing earlier work.",
+    "placeholder": "Prefix sums save time because..."
+  }
+}
