@@ -406,6 +406,18 @@ select {
   gap: var(--space-4);
 }
 
+.status-control-row {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  justify-content: space-between;
+  padding: var(--space-4);
+}
+
 .step-player-header {
   align-items: center;
   display: flex;

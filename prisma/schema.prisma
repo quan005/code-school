@@ -1,0 +1,95 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  ACCOUNT_HOLDER
+  ADMIN
+}
+
+enum LessonStatus {
+  NOT_STARTED
+  IN_PROGRESS
+  COMPLETED
+}
+
+enum ChapterStatus {
+  NOT_STARTED
+  IN_PROGRESS
+  COMPLETED
+  MASTERED
+}
+
+model User {
+  id              String           @id @default(cuid())
+  email           String           @unique
+  role            UserRole         @default(ACCOUNT_HOLDER)
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+  studentProfiles StudentProfile[]
+}
+
+model StudentProfile {
+  id              String            @id @default(cuid())
+  accountHolderId String
+  displayName     String
+  gradeLevel      Int?
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  accountHolder   User              @relation(fields: [accountHolderId], references: [id], onDelete: Cascade)
+  lessonProgress  LessonProgress[]
+  chapterProgress ChapterProgress[]
+  submissions     Submission[]
+
+  @@index([accountHolderId])
+}
+
+model LessonProgress {
+  id               String        @id @default(cuid())
+  studentProfileId String
+  chapterSlug      String
+  lessonSlug       String
+  status           LessonStatus  @default(NOT_STARTED)
+  startedAt        DateTime?
+  completedAt      DateTime?
+  createdAt        DateTime      @default(now())
+  updatedAt        DateTime      @updatedAt
+  studentProfile   StudentProfile @relation(fields: [studentProfileId], references: [id], onDelete: Cascade)
+
+  @@unique([studentProfileId, chapterSlug, lessonSlug])
+  @@index([chapterSlug, lessonSlug])
+}
+
+model ChapterProgress {
+  id               String         @id @default(cuid())
+  studentProfileId String
+  chapterSlug      String
+  status           ChapterStatus  @default(NOT_STARTED)
+  progressPercent  Int            @default(0)
+  masteryScore     Int            @default(0)
+  masteredAt       DateTime?
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
+  studentProfile   StudentProfile @relation(fields: [studentProfileId], references: [id], onDelete: Cascade)
+
+  @@unique([studentProfileId, chapterSlug])
+  @@index([chapterSlug])
+}
+
+model Submission {
+  id               String         @id @default(cuid())
+  studentProfileId String
+  chapterSlug      String
+  lessonSlug       String
+  codeSnapshot     String
+  resultSummary    String
+  createdAt        DateTime       @default(now())
+  studentProfile   StudentProfile @relation(fields: [studentProfileId], references: [id], onDelete: Cascade)
+
+  @@index([studentProfileId, chapterSlug, lessonSlug, createdAt(sort: Desc)])
+}

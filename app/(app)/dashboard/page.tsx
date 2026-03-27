@@ -1,26 +1,33 @@
 import Link from "next/link";
+import { ChapterProgressCard } from "@/components/progress/chapter-progress-card";
 import { Card } from "@/components/ui/card";
 import { Panel } from "@/components/ui/panel";
+import { getChapterProgressSummary } from "@/db/progress";
 import { getChapters } from "@/lib/curriculum";
 
 export default async function DashboardPage() {
   const chapters = await getChapters();
+  const progressSummaries = await Promise.all(
+    chapters.map(async (chapter) => ({
+      chapter,
+      summary: await getChapterProgressSummary(chapter.slug),
+    })),
+  );
 
   return (
     <div className="stack-lg">
       <Panel eyebrow="Dashboard" title="Welcome back">
         <p>
-          Track what is live in the app shell today and jump back into the
-          current MVP chapter.
+          Track chapter progress, mastery, and the next lesson to pick up across
+          the current MVP curriculum.
         </p>
       </Panel>
       <section className="card-grid">
-        {chapters.map((chapter) => (
+        {progressSummaries.map(({ chapter, summary }) => (
           <Card key={chapter.slug}>
             <h2>{chapter.title}</h2>
-            <p>
-              {chapter.lessons.length} lesson entries indexed from MDX content
-            </p>
+            <p>{chapter.summary}</p>
+            {summary ? <ChapterProgressCard summary={summary} /> : null}
             <Link href={`/learn/${chapter.slug}/intro`}>Open lesson shell</Link>
           </Card>
         ))}

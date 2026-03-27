@@ -1,8 +1,13 @@
 import { notFound } from "next/navigation";
 import { StepPlayer } from "@/components/learning/step-player";
+import { LessonStatusControls } from "@/components/progress/lesson-status-controls";
 import { Badge } from "@/components/ui/badge";
 import { Panel } from "@/components/ui/panel";
 import { ArrayVisualizer } from "@/components/visualizers/array-visualizer";
+import {
+  getLatestSubmissionForLesson,
+  getLessonProgressState,
+} from "@/db/progress";
 import { compileLesson, getChapterBySlug } from "@/lib/curriculum";
 
 export default async function LessonPage({
@@ -13,6 +18,10 @@ export default async function LessonPage({
   const { chapterSlug, lessonSlug } = await params;
   const chapter = await getChapterBySlug(chapterSlug);
   const compiledLesson = await compileLesson(chapterSlug, lessonSlug);
+  const [progress, latestSubmission] = await Promise.all([
+    getLessonProgressState(chapterSlug, lessonSlug),
+    getLatestSubmissionForLesson(chapterSlug, lessonSlug),
+  ]);
 
   if (
     !chapter ||
@@ -24,13 +33,27 @@ export default async function LessonPage({
 
   return (
     <div className="stack-lg">
+      <LessonStatusControls
+        chapterSlug={chapterSlug}
+        lessonSlug={lessonSlug}
+        status={progress.status}
+      />
       <Panel eyebrow={chapter.title} title={compiledLesson.lesson.title}>
         <div className="inline-cluster">
           <Badge>{compiledLesson.lesson.lessonType}</Badge>
           <Badge>{compiledLesson.lesson.difficulty}</Badge>
           <Badge>{compiledLesson.lesson.estimatedMinutes} min</Badge>
+          <Badge>Status: {progress.status.replaceAll("_", " ")}</Badge>
         </div>
         <div className="mdx-prose">{compiledLesson.content}</div>
+        {latestSubmission ? (
+          <div className="inline-cluster">
+            <Badge>Latest submission saved</Badge>
+            <Badge>
+              {new Date(latestSubmission.updatedAt).toLocaleDateString()}
+            </Badge>
+          </div>
+        ) : null}
       </Panel>
       {compiledLesson.frames.length > 0 ? (
         <StepPlayer

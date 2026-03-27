@@ -8,10 +8,10 @@
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
-    "test": "node --test",
+    "test": "node --experimental-strip-types --test tests/**/*.test.ts",
     "db:generate": "prisma generate",
-    "format": "prettier --write \"app/**/*.{ts,tsx,css}\" \"components/**/*.{ts,tsx}\" \"content/**/*.{mdx,json}\" \"db/**/*.{ts,tsx,md}\" \"lib/**/*.{ts,tsx}\" \"prisma/**/*.{prisma,sql}\" \"tests/**/*.{ts,tsx,mts}\" \"*.{json,md,ts}\"",
-    "format:check": "prettier --check \"app/**/*.{ts,tsx,css}\" \"components/**/*.{ts,tsx}\" \"content/**/*.{mdx,json}\" \"db/**/*.{ts,tsx,md}\" \"lib/**/*.{ts,tsx}\" \"prisma/**/*.{prisma,sql}\" \"tests/**/*.{ts,tsx,mts}\" \"*.{json,md,ts}\""
+    "format": "prettier --write \"app/**/*.{ts,tsx,css}\" \"components/**/*.{ts,tsx}\" \"content/**/*.{mdx,json}\" \"db/**/*.{ts,tsx,md}\" \"lib/**/*.{ts,tsx}\" \"tests/**/*.{ts,tsx,mts}\" \"*.{json,md,ts}\"",
+    "format:check": "prettier --check \"app/**/*.{ts,tsx,css}\" \"components/**/*.{ts,tsx}\" \"content/**/*.{mdx,json}\" \"db/**/*.{ts,tsx,md}\" \"lib/**/*.{ts,tsx}\" \"tests/**/*.{ts,tsx,mts}\" \"*.{json,md,ts}\""
   },
   "dependencies": {
     "@prisma/client": "^6.6.0",

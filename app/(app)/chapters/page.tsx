@@ -1,10 +1,17 @@
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
+import { getChapterProgressSummary } from "@/db/progress";
 import { getChapters } from "@/lib/curriculum";
 
 export default async function ChaptersPage() {
   const chapters = await getChapters();
+  const progressSummaries = await Promise.all(
+    chapters.map(async (chapter) => ({
+      chapter,
+      summary: await getChapterProgressSummary(chapter.slug),
+    })),
+  );
 
   return (
     <div className="stack-lg">
@@ -15,11 +22,17 @@ export default async function ChaptersPage() {
         </div>
       </header>
       <section className="card-grid">
-        {chapters.map((chapter) => (
+        {progressSummaries.map(({ chapter, summary }) => (
           <Card key={chapter.slug}>
             <div className="inline-cluster">
               <Badge>{chapter.track}</Badge>
               <Badge>{chapter.lessons.length} lessons</Badge>
+              {summary ? (
+                <Badge>{summary.percentComplete}% complete</Badge>
+              ) : null}
+              {summary ? (
+                <Badge>{summary.status.replaceAll("_", " ")}</Badge>
+              ) : null}
             </div>
             <h2>{chapter.title}</h2>
             <p>{chapter.summary}</p>
