@@ -1,0 +1,82 @@
+{
+  "recapPrompt": {
+    "prompt": "When two intervals overlap, how do we find the shared part?",
+    "choices": [
+      {
+        "id": "shared",
+        "label": "Use the bigger start and the smaller end",
+        "isCorrect": true,
+        "feedback": "Correct. The shared part begins later and ends earlier."
+      },
+      {
+        "id": "outer",
+        "label": "Use the smaller start and the bigger end",
+        "isCorrect": false,
+        "feedback": "Not this one. That would give the outer merged range, not the shared part."
+      }
+    ]
+  },
+  "reflectionPrompt": {
+    "prompt": "Explain in your own words why sorting by start time helps so many interval problems.",
+    "placeholder": "Sorting by start helps because..."
+  },
+  "practiceChallenge": {
+    "title": "Mastery check: rebuild the interval clues",
+    "description": "Complete the helper so it returns the main interval clue for each kind of job.",
+    "language": "javascript",
+    "starterCode": "export function intervalClue(goal) {\n  const overlapClue = \"TODO\";\n  const mergeClue = \"TODO\";\n  const roomsClue = \"TODO\";\n\n  if (goal === \"overlap\") {\n    return overlapClue;\n  }\n\n  if (goal === \"merge\") {\n    return mergeClue;\n  }\n\n  return roomsClue;\n}\n",
+    "hints": [
+      "Overlap depends on how starts compare to ends.",
+      "Merge problems often sort by start time first.",
+      "Meeting-room problems track the earliest ending active meeting."
+    ],
+    "successMessage": "Pass. You rebuilt the main interval clues from memory.",
+    "retryMessage": "Needs practice. Recheck the overlap rule, the merge-first step, and the meeting-room idea.",
+    "completionBehavior": "mark_complete",
+    "blanks": [
+      {
+        "key": "overlapClue",
+        "label": "Main clue for overlap",
+        "expectedValues": [
+          "starts before end",
+          "shared space",
+          "next start before current end"
+        ]
+      },
+      {
+        "key": "mergeClue",
+        "label": "Main clue for merge intervals",
+        "expectedValues": ["sort by start", "sort intervals", "sorted ranges"]
+      },
+      {
+        "key": "roomsClue",
+        "label": "Main clue for meeting rooms",
+        "expectedValues": [
+          "track earliest ending room",
+          "earliest end time",
+          "heap of end times"
+        ]
+      }
+    ],
+    "visibleTests": [
+      {
+        "label": "Overlap clue",
+        "scenario": "goal = overlap",
+        "blankKey": "overlapClue",
+        "expected": "starts before end"
+      },
+      {
+        "label": "Merge clue",
+        "scenario": "goal = merge",
+        "blankKey": "mergeClue",
+        "expected": "sort by start"
+      },
+      {
+        "label": "Rooms clue",
+        "scenario": "goal = rooms",
+        "blankKey": "roomsClue",
+        "expected": "track earliest ending room"
+      }
+    ]
+  }
+}

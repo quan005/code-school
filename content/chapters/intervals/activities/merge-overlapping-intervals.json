@@ -1,0 +1,57 @@
+{
+  "practiceChallenge": {
+    "title": "Fill in the merge rule",
+    "description": "Complete the helper so it describes what to do when sorted intervals overlap or stay separate.",
+    "language": "javascript",
+    "starterCode": "export function intervalMergeRule(caseType) {\n  const firstStep = \"TODO\";\n  const overlapMove = \"TODO\";\n  const separateMove = \"TODO\";\n\n  if (caseType === \"first\") {\n    return firstStep;\n  }\n\n  if (caseType === \"overlap\") {\n    return overlapMove;\n  }\n\n  return separateMove;\n}\n",
+    "hints": [
+      "Most merge-interval problems start by sorting by start time.",
+      "Overlap means extend the current interval.",
+      "No overlap means save the current interval and start a new one."
+    ],
+    "successMessage": "Nice work. You rebuilt the main merge rule for intervals.",
+    "retryMessage": "Not yet. Recheck the first sort step and what each overlap case should do.",
+    "completionBehavior": "mark_complete",
+    "blanks": [
+      {
+        "key": "firstStep",
+        "label": "First step for merge intervals",
+        "expectedValues": ["sort by start", "sort", "sort intervals"]
+      },
+      {
+        "key": "overlapMove",
+        "label": "What to do when intervals overlap",
+        "expectedValues": ["extend current interval", "merge", "grow current"]
+      },
+      {
+        "key": "separateMove",
+        "label": "What to do when intervals do not overlap",
+        "expectedValues": [
+          "save current and start new",
+          "save and start new",
+          "push current start new"
+        ]
+      }
+    ],
+    "visibleTests": [
+      {
+        "label": "Sort first",
+        "scenario": "caseType = first",
+        "blankKey": "firstStep",
+        "expected": "sort by start"
+      },
+      {
+        "label": "Overlap move",
+        "scenario": "caseType = overlap",
+        "blankKey": "overlapMove",
+        "expected": "extend current interval"
+      },
+      {
+        "label": "Separate move",
+        "scenario": "caseType = separate",
+        "blankKey": "separateMove",
+        "expected": "save current and start new"
+      }
+    ]
+  }
+}

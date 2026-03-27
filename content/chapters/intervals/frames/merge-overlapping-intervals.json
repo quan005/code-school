@@ -1,0 +1,36 @@
+[
+  {
+    "id": "merge-1",
+    "narration": "After sorting, we start with the current interval [1, 3].",
+    "arrayValues": ["[1,3]", "[2,6]", "[8,10]", "[15,18]"],
+    "callout": "The first interval becomes the current range.",
+    "highlightIndexes": [0],
+    "pointers": {
+      "current": 0
+    }
+  },
+  {
+    "id": "merge-2",
+    "narration": "The next interval [2, 6] overlaps because 2 starts before 3 ends, so we merge into [1, 6].",
+    "arrayValues": ["[1,6]", "[8,10]", "[15,18]"],
+    "decision": "Overlap means extend the current end.",
+    "highlightIndexes": [0],
+    "pointers": {
+      "current": 0
+    }
+  },
+  {
+    "id": "merge-3",
+    "narration": "When [8, 10] starts after 6, there is no overlap. We save [1, 6] and start a new current interval.",
+    "arrayValues": ["[1,6]", "[8,10]", "[15,18]"],
+    "callout": "No overlap means save the current interval and move on.",
+    "highlightIndexes": [1],
+    "pointers": {
+      "current": 1
+    },
+    "reflectionPrompt": {
+      "prompt": "Why can sorting place possible merge partners next to each other?",
+      "placeholder": "Sorting helps because..."
+    }
+  }
+]

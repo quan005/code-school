@@ -1,0 +1,55 @@
+[
+  {
+    "id": "rooms-1",
+    "narration": "We sort meetings by start time and use a min-heap to store end times of rooms currently in use.",
+    "arrayValues": [30],
+    "callout": "The top end time is the room that frees up earliest.",
+    "highlightIndexes": [0],
+    "pointers": {
+      "current": 0
+    }
+  },
+  {
+    "id": "rooms-2",
+    "narration": "When [5, 10] starts, the earliest room still ends at 30, so we need another room and add end time 10.",
+    "arrayValues": [10, 30],
+    "decision": "If no room is free yet, add a new room end time.",
+    "highlightIndexes": [0, 1],
+    "pointers": {
+      "left": 0,
+      "right": 1
+    },
+    "predictionPrompt": {
+      "prompt": "If the next meeting starts at 15 and the earliest end time is 10, what should happen first?",
+      "choices": [
+        {
+          "id": "reuse",
+          "label": "Remove 10 because that room becomes free",
+          "isCorrect": true,
+          "feedback": "Correct. A room that ends by 10 can be reused for a meeting starting at 15."
+        },
+        {
+          "id": "new-room",
+          "label": "Always add a third room",
+          "isCorrect": false,
+          "feedback": "Not this one. We should reuse rooms that already became free."
+        }
+      ]
+    }
+  },
+  {
+    "id": "rooms-3",
+    "narration": "We keep removing ended meetings and adding new end times. The largest heap size we ever see is the number of rooms needed.",
+    "arrayValues": [20, 30],
+    "callout": "The busiest moment decides the answer.",
+    "highlightIndexes": [0, 1],
+    "pointers": {
+      "left": 0,
+      "right": 1
+    },
+    "reflectionPrompt": {
+      "prompt": "Why does the largest number of active meetings equal the number of rooms needed?",
+      "placeholder": "It equals the rooms because..."
+    }
+  }
+]

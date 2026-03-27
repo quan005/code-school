@@ -1,0 +1,47 @@
+---
+title: "Review"
+slug: "review"
+order: 8
+lessonType: "review"
+difficulty: "easy"
+estimatedMinutes: 8
+concepts:
+  - "range"
+  - "overlap"
+  - "sorting"
+skills:
+  - "Review the main interval clues"
+  - "Tell different interval jobs apart"
+prerequisites:
+  - "remove-covered-intervals"
+summary: "Review the big interval clues, overlap rules, and the main ways sorted ranges get processed."
+---
+
+<ProblemStatement title="What should interval problems make you notice?">
+  This review lesson helps you remember the biggest interval clues and the main
+  moves for handling sorted ranges.
+</ProblemStatement>
+
+<Intuition title="Starts and ends tell the whole story">
+  Once intervals are in a clean order, many problems become about overlap,
+  shared space, gaps, and how ranges fit together.
+</Intuition>
+
+<ComplexityCard
+  time="Often O(n log n) because sorting is the first big step"
+  space="Depends on the result and any helper structures"
+  notes="The main win is turning many separate ranges into a left-to-right story."
+/>
+
+## Pattern Summary
+
+- Merge: sort and grow the current interval.
+- Insert: handle before, overlapping, and after.
+- Meetings: sort and detect conflicts.
+- Meeting rooms: sort and track end times.
+- Intersection: compare two current intervals.
+- Covered intervals: sort carefully and track the farthest end.
+
+## Reflection
+
+Which interval clue feels easiest for you to notice now?

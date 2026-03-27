@@ -1,0 +1,36 @@
+[
+  {
+    "id": "covered-1",
+    "narration": "We sort by start time, and if starts tie, we put the interval with the bigger end first.",
+    "arrayValues": ["[1,4]", "[2,8]", "[3,6]"],
+    "callout": "The bigger covering interval should come first when starts tie or overlap closely.",
+    "highlightIndexes": [0, 1, 2],
+    "pointers": {
+      "current": 1
+    }
+  },
+  {
+    "id": "covered-2",
+    "narration": "We track the farthest end seen so far. When [2, 8] appears, the farthest end becomes 8.",
+    "arrayValues": ["farthestEnd = 8"],
+    "decision": "A new farther end means this interval is not covered.",
+    "highlightIndexes": [0],
+    "pointers": {
+      "current": 0
+    }
+  },
+  {
+    "id": "covered-3",
+    "narration": "When [3, 6] ends at 6, it does not go past 8, so it is covered and should not be counted.",
+    "arrayValues": ["[3,6] covered"],
+    "callout": "If an interval does not extend farther, a stronger interval already covers it.",
+    "highlightIndexes": [0],
+    "pointers": {
+      "current": 0
+    },
+    "reflectionPrompt": {
+      "prompt": "Why does sorting tied starts with larger ends first matter here?",
+      "placeholder": "It matters because..."
+    }
+  }
+]

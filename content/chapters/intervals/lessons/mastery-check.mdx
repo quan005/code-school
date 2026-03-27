@@ -1,0 +1,39 @@
+---
+title: "Mastery Check"
+slug: "mastery-check"
+order: 9
+lessonType: "mastery"
+difficulty: "medium"
+estimatedMinutes: 10
+concepts:
+  - "start and end"
+  - "overlap"
+  - "sorted ranges"
+skills:
+  - "Recall the main interval clues without a walkthrough"
+  - "Explain why sorting often helps interval problems"
+prerequisites:
+  - "review"
+summary: "Show that you can recognize interval clues, remember overlap rules, and rebuild the main ideas on your own."
+---
+
+<ProblemStatement title="Can you rebuild the interval clues from memory?">
+  This mastery check asks you to remember how starts, ends, overlap, and sorting
+  work together in interval problems.
+</ProblemStatement>
+
+<Intuition title="Ranges become easier after sorting">
+  Once ranges are in order, you can compare neighbors, merge shared space, or
+  count how many ranges are active at the same time.
+</Intuition>
+
+<ComplexityCard
+  time="Often O(n log n) for interval work that starts with sorting"
+  space="Depends on the helper data and result"
+  notes="The important idea is not memorizing one answer, but recognizing how sorted ranges behave."
+/>
+
+## Reflection
+
+Explain in your own words why sorting by start time is often such a strong first
+step in interval problems.

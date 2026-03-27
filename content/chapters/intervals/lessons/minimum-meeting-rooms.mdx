@@ -1,0 +1,114 @@
+---
+title: "Minimum Meeting Rooms"
+slug: "minimum-meeting-rooms"
+order: 5
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 14
+concepts:
+  - "active meetings"
+  - "earliest end time"
+  - "rooms in use"
+skills:
+  - "Use a min-heap of meeting end times"
+  - "Track how many meetings are active at once"
+prerequisites:
+  - "can-attend-all-meetings"
+summary: "Sort meetings and use a min-heap of end times to count how many rooms are needed at the busiest moment."
+---
+
+<ProblemStatement title="How many rooms are needed at the busiest moment?">
+  You are given meeting intervals. Return the minimum number of rooms required
+  so all meetings can happen.
+</ProblemStatement>
+
+## Example
+
+```txt
+[[0, 30], [5, 10], [15, 20]]
+answer = 2
+```
+
+<Intuition title="Keep track of when rooms become free">
+  We sort meetings by start time, then use a min-heap to track end times of
+  meetings that are still using rooms. The earliest ending meeting sits on top.
+</Intuition>
+
+<InterviewTip>
+  The heap stores end times, not full meetings. That is enough because we only
+  need to know which room frees up first.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function minMeetingRooms(intervals: [number, number][]): number {
+  if (intervals.length === 0) {
+    return 0;
+  }
+
+  intervals.sort((a, b) => a[0] - b[0]);
+
+  const minHeap = new Heap<number>((a, b) => a < b);
+  let maxRooms = 0;
+
+  for (const [start, end] of intervals) {
+    while (minHeap.size() > 0 && minHeap.peek()! <= start) {
+      minHeap.pop();
+    }
+
+    minHeap.push(end);
+    maxRooms = Math.max(maxRooms, minHeap.size());
+  }
+
+  return maxRooms;
+}
+```
+
+<ComplexityCard
+  time="O(n log n)"
+  space="O(n)"
+  notes="Sorting orders the meetings, and the min-heap keeps the earliest ending room easy to reuse."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "[[0, 30], [5, 10], [15, 20]]",
+      expected: "2",
+      why: "Two meetings overlap while one long meeting is still active.",
+    },
+    {
+      input: "[[7, 10], [2, 4]]",
+      expected: "1",
+      why: "The first room becomes free before the second meeting starts.",
+    },
+    {
+      input: "[]",
+      expected: "0",
+      why: "No meetings means no rooms needed.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Leaving ended meetings in the heap",
+      fix: "Pop end times that are already <= the next meeting start.",
+    },
+    {
+      title: "Tracking only the current heap size at the end",
+      fix: "Keep the largest heap size seen during the scan.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Earliest end on top">
+  The room most likely to become free next is the one whose meeting ends
+  earliest.
+</HintDrawer>
+
+## Reflection
+
+Why does a min-heap of end times help us reuse rooms?

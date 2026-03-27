@@ -1,0 +1,7 @@
+{
+  "slug": "intervals",
+  "title": "Intervals",
+  "order": 9,
+  "track": "Code Patterns",
+  "summary": "Learn how to reason about ranges with starts and ends so you can detect overlap, merge intervals, and solve schedule problems."
+}

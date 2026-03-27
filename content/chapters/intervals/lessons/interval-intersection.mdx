@@ -1,0 +1,121 @@
+---
+title: "Interval Intersection"
+slug: "interval-intersection"
+order: 6
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 14
+concepts:
+  - "shared part"
+  - "bigger start"
+  - "smaller end"
+skills:
+  - "Find the overlap between two current intervals"
+  - "Move the pointer whose interval ends first"
+prerequisites:
+  - "merge-overlapping-intervals"
+summary: "Compare two sorted interval lists and collect the shared parts with a two-pointer scan."
+---
+
+<ProblemStatement title="Find the shared parts of two interval lists">
+  You are given two sorted interval lists. Return all intersections between
+  them.
+</ProblemStatement>
+
+## Example
+
+```txt
+A = [[0, 2], [5, 10], [13, 23], [24, 25]]
+B = [[1, 5], [8, 12], [15, 24], [25, 26]]
+
+answer = [[1, 2], [5, 5], [8, 10], [15, 23], [24, 24], [25, 25]]
+```
+
+<Intuition title="The shared part uses the bigger start and smaller end">
+  When two intervals overlap, the intersection starts at the later start and
+  ends at the earlier end. Then we move forward in the list whose interval ends
+  first.
+</Intuition>
+
+<InterviewTip>
+  This is an interval problem that behaves like two pointers. Each list gives
+  one current interval to compare.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function intervalIntersection(
+  A: [number, number][],
+  B: [number, number][],
+): [number, number][] {
+  const result: [number, number][] = [];
+  let i = 0;
+  let j = 0;
+
+  while (i < A.length && j < B.length) {
+    const start = Math.max(A[i][0], B[j][0]);
+    const end = Math.min(A[i][1], B[j][1]);
+
+    if (start <= end) {
+      result.push([start, end]);
+    }
+
+    if (A[i][1] < B[j][1]) {
+      i++;
+    } else {
+      j++;
+    }
+  }
+
+  return result;
+}
+```
+
+<ComplexityCard
+  time="O(n + m)"
+  space="O(n + m) in the worst case for the result"
+  notes="Each list is scanned once from left to right."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "A = [[1, 3]], B = [[4, 6]]",
+      expected: "[]",
+      why: "The intervals do not overlap at all.",
+    },
+    {
+      input: "A = [], B = [[1, 2]]",
+      expected: "[]",
+      why: "One empty list means no intersections.",
+    },
+    {
+      input: "A = [[0, 2]], B = [[1, 5]]",
+      expected: "[[1, 2]]",
+      why: "The bigger start is 1 and the smaller end is 2.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Using the smaller start for the overlap",
+      fix: "The shared part starts later, so use the bigger start.",
+    },
+    {
+      title: "Moving the wrong pointer",
+      fix: "Move the interval that ends first because it cannot overlap later after its end.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Shared middle only">
+  The overlap is only the part both intervals cover, so use the later start and
+  earlier end.
+</HintDrawer>
+
+## Reflection
+
+Why is it safe to move forward in the list whose interval ends first?

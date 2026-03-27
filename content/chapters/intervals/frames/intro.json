@@ -1,0 +1,55 @@
+[
+  {
+    "id": "intro-1",
+    "narration": "An interval is a range with a start and an end, like [1, 4].",
+    "arrayValues": ["[1,4]", "[3,6]"],
+    "callout": "Each pair tells where a range begins and ends.",
+    "highlightIndexes": [0, 1],
+    "pointers": {
+      "left": 0,
+      "right": 1
+    }
+  },
+  {
+    "id": "intro-2",
+    "narration": "These two intervals overlap because the second one starts before the first one ends.",
+    "arrayValues": ["[1,4]", "[3,6]"],
+    "decision": "If nextStart <= currentEnd, the intervals overlap.",
+    "highlightIndexes": [0, 1],
+    "pointers": {
+      "left": 0,
+      "right": 1
+    },
+    "predictionPrompt": {
+      "prompt": "Do [1, 2] and [3, 5] overlap?",
+      "choices": [
+        {
+          "id": "no",
+          "label": "No, there is a gap",
+          "isCorrect": true,
+          "feedback": "Correct. 3 starts after 2 ends, so there is no shared space."
+        },
+        {
+          "id": "yes",
+          "label": "Yes, they overlap",
+          "isCorrect": false,
+          "feedback": "Not this time. These intervals do not touch or share space."
+        }
+      ]
+    }
+  },
+  {
+    "id": "intro-3",
+    "narration": "Sorting intervals by start time places them in a clean left-to-right order, which makes overlap easier to check.",
+    "arrayValues": ["[1,4]", "[3,6]", "[8,10]"],
+    "callout": "Sorting helps because possible overlap neighbors end up beside each other.",
+    "highlightIndexes": [0, 1, 2],
+    "pointers": {
+      "current": 1
+    },
+    "reflectionPrompt": {
+      "prompt": "Why is left-to-right order so helpful for interval problems?",
+      "placeholder": "It is helpful because..."
+    }
+  }
+]

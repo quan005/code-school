@@ -1,0 +1,114 @@
+---
+title: "Remove Covered Intervals"
+slug: "remove-covered-intervals"
+order: 7
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 13
+concepts:
+  - "covered interval"
+  - "farthest end"
+  - "tie-break sort rule"
+skills:
+  - "Sort with a careful tie-break rule"
+  - "Use the farthest end to detect covered intervals"
+prerequisites:
+  - "merge-overlapping-intervals"
+summary: "Sort carefully, track the farthest end seen so far, and count only intervals that are not hidden inside bigger ones."
+---
+
+<ProblemStatement title="Remove intervals hidden inside bigger ones">
+  Given a list of intervals, remove intervals that are completely covered by
+  another interval. Return the number of intervals left.
+</ProblemStatement>
+
+## Example
+
+```txt
+[[1, 4], [3, 6], [2, 8]]
+answer = 2
+```
+
+<Intuition title="A covered interval ends no farther than a stronger one before it">
+  We sort by start time, and if starts tie, we put the bigger end first. Then we
+  walk left to right and track the farthest end seen so far. Any interval that
+  does not go farther is covered.
+</Intuition>
+
+<InterviewTip>
+  The tie-break rule matters here. If starts tie, the longer interval must come
+  first so it can cover the shorter one.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function removeCoveredIntervals(intervals: [number, number][]): number {
+  intervals.sort((a, b) => {
+    if (a[0] === b[0]) {
+      return b[1] - a[1];
+    }
+    return a[0] - b[0];
+  });
+
+  let count = 0;
+  let farthestEnd = -Infinity;
+
+  for (const [, end] of intervals) {
+    if (end > farthestEnd) {
+      count++;
+      farthestEnd = end;
+    }
+  }
+
+  return count;
+}
+```
+
+<ComplexityCard
+  time="O(n log n)"
+  space="O(1) extra if sorting in place"
+  notes="The careful sort order makes the one-pass farthest-end check work."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "[[1, 4], [3, 6], [2, 8]]",
+      expected: "2",
+      why: "[3, 6] is fully covered by [2, 8].",
+    },
+    {
+      input: "[[1, 4], [2, 3]]",
+      expected: "1",
+      why: "[2, 3] is inside [1, 4].",
+    },
+    {
+      input: "[[1, 2], [1, 4], [3, 4]]",
+      expected: "1",
+      why: "The bigger interval with the same start comes first and covers the others.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Sorting tied starts with shorter ends first",
+      fix: "When starts tie, sort by end descending so the covering interval appears first.",
+    },
+    {
+      title: "Using the current start instead of farthest end",
+      fix: "Coverage depends on whether the end reaches farther than what has already been seen.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Bigger first on ties">
+  If two intervals start together, put the longer one first so it can cover the
+  shorter one during the scan.
+</HintDrawer>
+
+## Reflection
+
+Why does the tie-break rule change whether this scan works correctly?

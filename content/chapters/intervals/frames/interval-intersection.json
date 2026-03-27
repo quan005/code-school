@@ -1,0 +1,37 @@
+[
+  {
+    "id": "intersection-1",
+    "narration": "We compare one interval from A and one interval from B at a time.",
+    "arrayValues": ["A:[0,2]", "B:[1,5]"],
+    "callout": "The current pair might overlap or might miss each other.",
+    "highlightIndexes": [0, 1],
+    "pointers": {
+      "left": 0,
+      "right": 1
+    }
+  },
+  {
+    "id": "intersection-2",
+    "narration": "The overlap starts at the bigger start, 1, and ends at the smaller end, 2. So the shared part is [1, 2].",
+    "arrayValues": ["[1,2]"],
+    "decision": "Overlap = bigger start and smaller end.",
+    "highlightIndexes": [0],
+    "pointers": {
+      "current": 0
+    }
+  },
+  {
+    "id": "intersection-3",
+    "narration": "The interval that ends first cannot help with later overlaps, so we move that pointer forward.",
+    "arrayValues": ["A ends first"],
+    "callout": "Move the side that runs out of space first.",
+    "highlightIndexes": [0],
+    "pointers": {
+      "current": 0
+    },
+    "reflectionPrompt": {
+      "prompt": "Why is the interval that ends first the one we move forward?",
+      "placeholder": "We move it because..."
+    }
+  }
+]

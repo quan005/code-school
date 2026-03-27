@@ -1,0 +1,23 @@
+{
+  "recapPrompt": {
+    "prompt": "What is one of the strongest clues that a problem is about intervals?",
+    "choices": [
+      {
+        "id": "start-end",
+        "label": "The data looks like start and end pairs",
+        "isCorrect": true,
+        "feedback": "Correct. Start/end pairs are one of the clearest interval clues."
+      },
+      {
+        "id": "single-values",
+        "label": "The data is only single numbers with no ranges",
+        "isCorrect": false,
+        "feedback": "Not this one. Interval problems are usually about ranges, not only single values."
+      }
+    ]
+  },
+  "reflectionPrompt": {
+    "prompt": "Explain how sorting helps different interval problems for different reasons.",
+    "placeholder": "Sorting helps because..."
+  }
+}

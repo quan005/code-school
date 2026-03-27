@@ -1,0 +1,122 @@
+---
+title: "Insert Interval"
+slug: "insert-interval"
+order: 3
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 12
+concepts:
+  - "before"
+  - "overlapping"
+  - "after"
+skills:
+  - "Break the problem into three clean parts"
+  - "Merge the new interval with all overlapping intervals"
+prerequisites:
+  - "merge-overlapping-intervals"
+summary: "Insert a new interval by handling the before, overlapping, and after parts in order."
+---
+
+<ProblemStatement title="Place the new interval in the right spot">
+  You are given a sorted, non-overlapping list of intervals and one new
+  interval. Insert the new interval and merge if needed.
+</ProblemStatement>
+
+## Example
+
+```txt
+intervals = [[1, 3], [6, 9]]
+newInterval = [2, 5]
+answer = [[1, 5], [6, 9]]
+```
+
+<Intuition title="This problem naturally breaks into three parts">
+  As we scan the sorted intervals, each one is either before the new interval,
+  overlapping with it, or after it. That gives us a clean one-pass plan.
+</Intuition>
+
+<InterviewTip>
+  Already-sorted, non-overlapping intervals make insertion much easier because
+  the overlap section appears as one block.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function insertInterval(
+  intervals: [number, number][],
+  newInterval: [number, number],
+): [number, number][] {
+  const result: [number, number][] = [];
+  let i = 0;
+
+  while (i < intervals.length && intervals[i][1] < newInterval[0]) {
+    result.push(intervals[i]);
+    i++;
+  }
+
+  while (i < intervals.length && intervals[i][0] <= newInterval[1]) {
+    newInterval[0] = Math.min(newInterval[0], intervals[i][0]);
+    newInterval[1] = Math.max(newInterval[1], intervals[i][1]);
+    i++;
+  }
+
+  result.push(newInterval);
+
+  while (i < intervals.length) {
+    result.push(intervals[i]);
+    i++;
+  }
+
+  return result;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(n)"
+  notes="The intervals are already sorted, so one left-to-right pass is enough."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "intervals = [[1, 3], [6, 9]], newInterval = [2, 5]",
+      expected: "[[1, 5], [6, 9]]",
+      why: "The new interval overlaps with [1, 3].",
+    },
+    {
+      input: "intervals = [], newInterval = [4, 8]",
+      expected: "[[4, 8]]",
+      why: "The new interval becomes the whole answer.",
+    },
+    {
+      input:
+        "intervals = [[1, 2], [3, 5], [6, 7], [8, 10], [12, 16]], newInterval = [4, 8]",
+      expected: "[[1, 2], [3, 10], [12, 16]]",
+      why: "The new interval merges with all intervals it overlaps.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Merging only the first overlap",
+      fix: "Keep merging while intervals still overlap the new interval.",
+    },
+    {
+      title: "Forgetting the clean before and after sections",
+      fix: "Handle intervals before, then overlapping, then after.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Three sections">
+  First save intervals before the new one, then merge overlaps, then copy the
+  rest after it.
+</HintDrawer>
+
+## Reflection
+
+Why does the overlap section appear as one continuous block here?

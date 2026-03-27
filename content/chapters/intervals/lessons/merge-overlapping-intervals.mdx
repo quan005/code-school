@@ -1,0 +1,118 @@
+---
+title: "Merge Overlapping Intervals"
+slug: "merge-overlapping-intervals"
+order: 2
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 13
+concepts:
+  - "merge"
+  - "current interval"
+  - "sorted order"
+skills:
+  - "Sort intervals by start time"
+  - "Extend the current interval when overlap happens"
+prerequisites: []
+summary: "Sort intervals, scan left to right, and merge any ranges that overlap."
+---
+
+<ProblemStatement title="Combine ranges that share space">
+  Given a list of intervals, merge all overlapping intervals and return the
+  merged result.
+</ProblemStatement>
+
+## Example
+
+```txt
+[[1, 3], [2, 6], [8, 10], [15, 18]]
+becomes
+[[1, 6], [8, 10], [15, 18]]
+```
+
+<Intuition title="Keep one current interval and grow it when needed">
+  After sorting by start time, any intervals that overlap will appear next to
+  each other. That lets us keep one current interval and either extend it or
+  save it.
+</Intuition>
+
+<InterviewTip>
+  Sorting is the key first move. It places possible overlap neighbors beside
+  each other.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function mergeIntervals(intervals: [number, number][]): [number, number][] {
+  if (intervals.length <= 1) {
+    return intervals;
+  }
+
+  intervals.sort((a, b) => a[0] - b[0]);
+
+  const result: [number, number][] = [];
+  let [start, end] = intervals[0];
+
+  for (let i = 1; i < intervals.length; i++) {
+    const [nextStart, nextEnd] = intervals[i];
+
+    if (nextStart <= end) {
+      end = Math.max(end, nextEnd);
+    } else {
+      result.push([start, end]);
+      [start, end] = [nextStart, nextEnd];
+    }
+  }
+
+  result.push([start, end]);
+  return result;
+}
+```
+
+<ComplexityCard
+  time="O(n log n)"
+  space="O(n)"
+  notes="Sorting is the expensive step, then the scan itself is linear."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "[[1, 3], [2, 6], [8, 10], [15, 18]]",
+      expected: "[[1, 6], [8, 10], [15, 18]]",
+      why: "The first two intervals overlap and become one larger interval.",
+    },
+    {
+      input: "[[1, 4], [4, 5]]",
+      expected: "[[1, 5]]",
+      why: "Touching intervals can still be merged in this rule set.",
+    },
+    {
+      input: "[[1, 2]]",
+      expected: "[[1, 2]]",
+      why: "One interval stays the same.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Skipping the sort step",
+      fix: "Sort first so possible overlap neighbors are next to each other.",
+    },
+    {
+      title: "Forgetting to push the final current interval",
+      fix: "After the loop, save the last current interval too.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Ask one question each time">
+  Does the next interval start before or at the current end? If yes, merge. If
+  no, save the current interval and start a new one.
+</HintDrawer>
+
+## Reflection
+
+Why does sorting make merging much easier?

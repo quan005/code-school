@@ -1,0 +1,104 @@
+---
+title: "Can Attend All Meetings"
+slug: "can-attend-all-meetings"
+order: 4
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 11
+concepts:
+  - "meeting conflict"
+  - "neighbor comparison"
+  - "sorted meetings"
+skills:
+  - "Sort meetings by start time"
+  - "Detect conflict by comparing neighbors"
+prerequisites:
+  - "merge-overlapping-intervals"
+summary: "Sort meetings and check whether any next meeting starts before the previous one ends."
+---
+
+<ProblemStatement title="Do any meetings collide?">
+  You are given meeting intervals. Return <code>true</code> if one person can
+  attend every meeting, and <code>false</code> if any meetings overlap.
+</ProblemStatement>
+
+## Example
+
+```txt
+[[0, 30], [15, 20]]
+answer = false
+```
+
+<Intuition title="Any conflict must appear between neighbors after sorting">
+  After sorting by start time, we only need to compare each meeting with the one
+  right before it. If the next one starts too early, there is a conflict.
+</Intuition>
+
+<InterviewTip>
+  This is a simpler interval problem because the answer is just yes or no. We do
+  not need to build merged ranges.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function canAttendAllMeetings(intervals: [number, number][]): boolean {
+  intervals.sort((a, b) => a[0] - b[0]);
+
+  for (let i = 1; i < intervals.length; i++) {
+    if (intervals[i][0] < intervals[i - 1][1]) {
+      return false;
+    }
+  }
+
+  return true;
+}
+```
+
+<ComplexityCard
+  time="O(n log n)"
+  space="O(1) extra if sorting in place"
+  notes="Sorting is the main cost. After that, a single scan finds any conflict."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "[[0, 30], [35, 50], [60, 80]]",
+      expected: "true",
+      why: "Each meeting starts after the previous one ends.",
+    },
+    {
+      input: "[[0, 30], [15, 20]]",
+      expected: "false",
+      why: "15 starts before 30, so the meetings overlap.",
+    },
+    {
+      input: "[[5, 10]]",
+      expected: "true",
+      why: "One meeting never conflicts with itself.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Comparing meetings before sorting",
+      fix: "Sort first so neighbor meetings are in time order.",
+    },
+    {
+      title: "Using <= when touching times are allowed",
+      fix: "Use the overlap rule that matches the problem. Here, start < previous end means conflict.",
+    },
+  ]}
+/>
+
+<HintDrawer title="One conflict is enough">
+  As soon as one meeting starts before the earlier one ends, the answer becomes
+  false.
+</HintDrawer>
+
+## Reflection
+
+Why can we stop after finding the first conflict?

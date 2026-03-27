@@ -1,0 +1,77 @@
+---
+title: "Introduction"
+slug: "intro"
+order: 1
+lessonType: "intro"
+difficulty: "easy"
+estimatedMinutes: 9
+concepts:
+  - "interval"
+  - "start"
+  - "end"
+  - "overlap"
+skills:
+  - "Explain what an interval represents"
+  - "Tell when two intervals overlap"
+  - "Explain why sorting often helps interval problems"
+prerequisites: []
+summary: "Meet interval thinking, learn start and end language, and see why sorting ranges makes overlap easier to understand."
+---
+
+<ProblemStatement title="An interval is a range">
+  An interval is a pair like <code>[start, end]</code>. It shows where something
+  begins and where it stops.
+</ProblemStatement>
+
+<Intuition title="Think about a school schedule">
+  A class from 9:00 to 10:00 is one interval. A class from 9:30 to 11:00 is
+  another. If the time blocks share space, they overlap.
+</Intuition>
+
+<InterviewTip>
+  Interval problems often use pairs like <code>[start, end]</code> and ask about
+  overlap, merge, insert, conflicts, rooms, or schedules.
+</InterviewTip>
+
+<ComplexityCard
+  time="Many interval problems start with O(n log n) sorting"
+  space="Depends on the problem"
+  notes="Sorting by start time often turns a messy group of ranges into a clean left-to-right story."
+/>
+
+## Two big questions
+
+- Do these intervals overlap?
+- If they overlap, what should we do next?
+
+## Helpful overlap rule
+
+Two intervals overlap when the next one starts before or at the current end.
+
+<PredictionPrompt
+  prompt={{
+    prompt: "Do [1, 4] and [3, 6] overlap?",
+    choices: [
+      {
+        id: "yes",
+        label: "Yes, they overlap",
+        isCorrect: true,
+        feedback:
+          "Correct. The second interval starts before the first one ends.",
+      },
+      {
+        id: "no",
+        label: "No, there is a gap",
+        isCorrect: false,
+        feedback: "Not this time. These ranges share space from 3 to 4.",
+      },
+    ],
+  }}
+/>
+
+## Lesson Summary
+
+- An interval has a start and an end.
+- Many interval problems ask about overlap or gaps.
+- Sorting by start time often helps a lot.
+- Schedules and ranges are common interval clues.
