@@ -1,0 +1,59 @@
+[
+  {
+    "id": "shift-1",
+    "narration": "In this lesson, the fast pointer reads every value while the slow pointer marks the next open good spot.",
+    "arrayValues": [4, 0, 7, 0, 2],
+    "callout": "At the start, both pointers are at the front.",
+    "decision": "When fast sees a non-zero value, copy it into slow's spot.",
+    "highlightIndexes": [0],
+    "pointers": {
+      "slow": 0,
+      "fast": 0
+    }
+  },
+  {
+    "id": "shift-2",
+    "narration": "Zeros are skipped, so the slow pointer only moves when we keep a useful number.",
+    "arrayValues": [4, 0, 7, 0, 2],
+    "callout": "Fast found 7, so 7 belongs in the next good spot at index 1.",
+    "decision": "That packs all non-zero values together at the front.",
+    "highlightIndexes": [1, 2],
+    "pointers": {
+      "slow": 1,
+      "fast": 2
+    },
+    "predictionPrompt": {
+      "prompt": "Should the slow pointer move when fast is looking at a zero?",
+      "choices": [
+        {
+          "id": "no",
+          "label": "No, keep slow where it is",
+          "isCorrect": true,
+          "feedback": "Correct. Slow only moves after placing a non-zero value."
+        },
+        {
+          "id": "yes",
+          "label": "Yes, move slow too",
+          "isCorrect": false,
+          "feedback": "Not this time. That would leave holes in the packed values."
+        }
+      ]
+    }
+  },
+  {
+    "id": "shift-3",
+    "narration": "After the scan, every slot after the slow pointer gets filled with zero.",
+    "arrayValues": [4, 7, 2, 0, 0],
+    "callout": "The front is packed with useful values and the back is cleared out.",
+    "decision": "This keeps the non-zero order the same.",
+    "highlightIndexes": [0, 1, 2],
+    "pointers": {
+      "slow": 3,
+      "fast": 4
+    },
+    "reflectionPrompt": {
+      "prompt": "Why is this called unidirectional traversal?",
+      "placeholder": "It is called that because..."
+    }
+  }
+]

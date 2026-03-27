@@ -1,0 +1,59 @@
+[
+  {
+    "id": "container-1",
+    "narration": "Start with the widest container so you do not miss a big width.",
+    "arrayValues": [3, 7, 4, 8],
+    "callout": "The width is the distance between the pointers. The height is controlled by the shorter wall.",
+    "decision": "With heights 3 and 8, the area is 3 x 3 = 9.",
+    "highlightIndexes": [0, 3],
+    "pointers": {
+      "left": 0,
+      "right": 3
+    }
+  },
+  {
+    "id": "container-2",
+    "narration": "The shorter wall is the one limiting the water, so that is the wall that must move.",
+    "arrayValues": [3, 7, 4, 8],
+    "callout": "Moving the taller wall would only make the width smaller while the short wall still blocks the height.",
+    "decision": "Since 3 is shorter than 8, move the left pointer inward.",
+    "highlightIndexes": [0, 3],
+    "pointers": {
+      "left": 0,
+      "right": 3
+    },
+    "predictionPrompt": {
+      "prompt": "Which wall should move after checking heights 3 and 8?",
+      "choices": [
+        {
+          "id": "left",
+          "label": "Move the left wall",
+          "isCorrect": true,
+          "feedback": "Correct. The left wall is shorter, so it is the one holding the area back."
+        },
+        {
+          "id": "right",
+          "label": "Move the right wall",
+          "isCorrect": false,
+          "feedback": "Not this time. The taller wall is not the bottleneck."
+        }
+      ]
+    }
+  },
+  {
+    "id": "container-3",
+    "narration": "After moving the short wall, the width shrinks, but the shorter height may improve enough to help.",
+    "arrayValues": [3, 7, 4, 8],
+    "callout": "Now the walls are 7 and 8, so the new area is 2 x 7 = 14.",
+    "decision": "Keep saving the best area while the pointers move inward.",
+    "highlightIndexes": [1, 3],
+    "pointers": {
+      "left": 1,
+      "right": 3
+    },
+    "reflectionPrompt": {
+      "prompt": "Why is it okay to throw away the shorter wall after you measure one container?",
+      "placeholder": "It is okay because..."
+    }
+  }
+]

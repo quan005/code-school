@@ -1,0 +1,62 @@
+[
+  {
+    "id": "triplet-1",
+    "narration": "Triplet Sum begins by locking one number, then turning the rest into a Pair Sum search.",
+    "arrayValues": [-1, 0, 2, 3],
+    "callout": "The current pointer picks the first number. Left and right search for the other two.",
+    "decision": "If the locked number is -1 and the target is 2, the other two numbers must add up to 3.",
+    "highlightIndexes": [0, 1, 3],
+    "pointers": {
+      "current": 0,
+      "left": 1,
+      "right": 3
+    }
+  },
+  {
+    "id": "triplet-2",
+    "narration": "After locking the first number, compare the left and right values like a smaller pair problem.",
+    "arrayValues": [-1, 0, 2, 3],
+    "callout": "Here, 0 + 3 already makes the needed total.",
+    "decision": "That means the triplet -1, 0, and 3 works.",
+    "highlightIndexes": [0, 1, 3],
+    "pointers": {
+      "current": 0,
+      "left": 1,
+      "right": 3
+    },
+    "predictionPrompt": {
+      "prompt": "If the pair total were too small, which pointer would move next?",
+      "choices": [
+        {
+          "id": "left",
+          "label": "Move left right",
+          "isCorrect": true,
+          "feedback": "Correct. In a sorted array, moving left right gives a bigger number."
+        },
+        {
+          "id": "right",
+          "label": "Move right left",
+          "isCorrect": false,
+          "feedback": "Not this time. That would make the pair total smaller."
+        }
+      ]
+    }
+  },
+  {
+    "id": "triplet-3",
+    "narration": "If one locked number does not work, move the current pointer and try a new pair search.",
+    "arrayValues": [-1, 0, 2, 3],
+    "callout": "The outer loop is just choosing a new first number for the pair search.",
+    "decision": "Triplet Sum is really one loop plus the Pair Sum rule inside.",
+    "highlightIndexes": [1, 2, 3],
+    "pointers": {
+      "current": 1,
+      "left": 2,
+      "right": 3
+    },
+    "reflectionPrompt": {
+      "prompt": "Why does sorting help Triplet Sum even though we are looking for three numbers?",
+      "placeholder": "Sorting helps because the last two numbers..."
+    }
+  }
+]

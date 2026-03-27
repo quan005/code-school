@@ -1,0 +1,133 @@
+---
+title: "Next Lexicographical Sequence"
+slug: "next-lexicographical-sequence"
+order: 7
+lessonType: "problem"
+difficulty: "hard"
+estimatedMinutes: 16
+concepts:
+  - "pivot"
+  - "swap spot"
+  - "staged traversal"
+skills:
+  - "Find the pivot from the right"
+  - "Reverse the tail after a swap"
+prerequisites:
+  - "shift-zeros-to-the-end"
+summary: "Find the pivot, swap with the next bigger value, then reverse the tail."
+---
+
+<ProblemStatement title="Build the next bigger ordering">
+  Rearrange an array of numbers into the next lexicographically bigger sequence.
+  If no bigger sequence exists, return the smallest possible order.
+</ProblemStatement>
+
+## Examples
+
+```txt
+[1, 2, 3] -> [1, 3, 2]
+[1, 3, 2] -> [2, 1, 3]
+[3, 2, 1] -> [1, 2, 3]
+```
+
+<Intuition title="This is a staged traversal problem">
+  The job happens in steps: find the pivot, find the next bigger swap spot, and
+  reverse the tail so it becomes as small as possible.
+</Intuition>
+
+<InterviewTip>
+  The important search starts from the right side, because the smallest change
+  to the number sequence usually happens near the end.
+</InterviewTip>
+
+## Step-by-Step Plan
+
+1. Find the first place from the right where the order goes up. That is the pivot.
+2. Find the next bigger value to swap with the pivot.
+3. Reverse the tail to make it as small as possible.
+
+## Walkthrough
+
+For `[1, 3, 2]`:
+
+1. The pivot is `1` at index `0` because `1 < 3`.
+2. The next bigger value on the right is `2`.
+3. Swap to get `[2, 3, 1]`.
+4. Reverse the tail to get `[2, 1, 3]`.
+
+## TypeScript Solution
+
+```ts
+function nextLexicographicalSequence(nums: number[]): number[] {
+  nums = [...nums];
+  let pivot = nums.length - 2;
+
+  while (pivot >= 0 && nums[pivot] >= nums[pivot + 1]) {
+    pivot -= 1;
+  }
+
+  if (pivot >= 0) {
+    let swap = nums.length - 1;
+
+    while (nums[swap] <= nums[pivot]) {
+      swap -= 1;
+    }
+
+    [nums[pivot], nums[swap]] = [nums[swap], nums[pivot]];
+  }
+
+  let left = pivot + 1;
+  let right = nums.length - 1;
+
+  while (left < right) {
+    [nums[left], nums[right]] = [nums[right], nums[left]];
+    left += 1;
+    right -= 1;
+  }
+
+  return nums;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(n)"
+  notes="This version copies the list, then uses a few linear scans to build the next ordering."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "nums = [1, 2, 3]",
+      expected: "[1, 3, 2]",
+      why: "The last two values can swap to make the next bigger order.",
+    },
+    {
+      input: "nums = [3, 2, 1]",
+      expected: "[1, 2, 3]",
+      why: "When everything is descending, you wrap back to the smallest order.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Swapping with the wrong number",
+      fix: "Use the next bigger value on the right, not just any bigger value.",
+    },
+    {
+      title: "Forgetting to reverse the tail",
+      fix: "The tail must become as small as possible after the swap.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Why does reversing the tail work?">
+  After the swap, the tail is still in descending order. Reversing it makes the
+  rest of the sequence as small as possible.
+</HintDrawer>
+
+## Reflection
+
+Why does this problem happen in stages instead of one simple pointer loop?

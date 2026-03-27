@@ -8,18 +8,33 @@ estimatedMinutes: 12
 concepts:
   - "pair sum"
   - "sorted array"
+  - "inward traversal"
 skills:
   - "Move the left pointer when the sum is too small"
   - "Move the right pointer when the sum is too large"
+  - "Compare a brute-force idea to a two-pointer idea"
 prerequisites:
   - "intro"
-summary: "Use sorted order to decide which pointer should move next."
+summary: "Use sorted order to decide which pointer should move next and turn a slow pair search into a fast one."
 ---
 
 <ProblemStatement title="Find the target pair">
-  You are given a sorted array of numbers and a target sum. Return the indexes
-  of the two numbers that add up to the target.
+  Given a sorted array of numbers and a target sum, return the indexes of any
+  pair that adds up to the target. If no pair exists, return an empty array.
 </ProblemStatement>
+
+## Examples
+
+```txt
+nums = [-5, -2, 3, 4, 6], target = 7 -> [2, 3]
+nums = [1, 1, 1], target = 2 -> [0, 1]
+```
+
+## Constraints
+
+- The array is already sorted in ascending order.
+- You need two different indexes.
+- Any correct pair is okay.
 
 <Intuition title="Use the sorted order as a clue">
   When the list is sorted, the left pointer points to a smaller number and the
@@ -32,6 +47,26 @@ summary: "Use sorted order to decide which pointer should move next."
   This is a good two-pointer problem because every pointer move removes many
   impossible pairs at once.
 </InterviewTip>
+
+## Brute Force vs. Better Movement
+
+The slow idea checks every pair with nested loops. That works, but it can take
+about `O(n²)` time.
+
+The smarter idea starts with `left` at the beginning and `right` at the end:
+
+- if the sum is too small, move `left`
+- if the sum is too big, move `right`
+- if the sum matches, return the answer
+
+## Walkthrough
+
+For `nums = [-5, -2, 3, 4, 6]` and `target = 7`:
+
+1. Start with `left = 0` and `right = 4`. The sum is `1`, so move `left`.
+2. Now the sum is `4`, so move `left` again.
+3. Now the sum is `9`, so move `right`.
+4. The sum becomes `7`, so the answer is `[2, 3]`.
 
 <ComplexityCard
   time="O(n)"
@@ -69,5 +104,14 @@ summary: "Use sorted order to decide which pointer should move next."
       title: "Forgetting the array must be sorted",
       fix: "This shortcut only works because the numbers stay in order.",
     },
+    {
+      title: "Using `left <= right`",
+      fix: "Use `left < right` so the two indexes stay different.",
+    },
   ]}
 />
+
+## Reflection
+
+Why is it safe to move only one pointer after every comparison? Say the rule in
+your own words before you open the coding task below.

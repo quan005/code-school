@@ -1,32 +1,52 @@
 ---
 title: "Mastery Check"
 slug: "mastery-check"
-order: 4
+order: 9
 lessonType: "mastery"
 difficulty: "medium"
-estimatedMinutes: 12
+estimatedMinutes: 15
 concepts:
   - "self check"
   - "pointer decisions"
+  - "chapter transfer"
 skills:
   - "Choose the correct pointer move without hints"
   - "Explain why a move is safe"
 prerequisites:
   - "review"
-summary: "Check whether you can choose the right pointer move on your own."
+summary: "Answer chapter-end questions, explain pointer logic, and complete the final move-rule implementation task."
 ---
 
-<ProblemStatement title="Mastery prompt">
-  You are looking at a sorted array and your current sum is too large. Which
-  pointer should move, and why?
+<ProblemStatement title="Mastery flow">
+  This mastery check asks you to choose the right move, explain your reasoning,
+  and finish one last coding task without the walkthrough.
 </ProblemStatement>
 
-<Intuition title="Explain the safe move">
-  The right pointer should move left, because the sorted order guarantees that
-  moving it left can only make the sum smaller.
+<Intuition title="What strong answers sound like">
+  Strong answers explain the clue behind the pattern. They do not just say "move
+  left" or "move right." They explain why the move changes the search in the
+  correct direction.
 </Intuition>
 
 <HintDrawer title="Still unsure?">
-  The left pointer can only keep the same number or move to a bigger one, so it
-  cannot fix a total that is already too large.
+  Remember the chapter questions: What pattern can I trust? What does moving one
+  pointer teach me? Which move keeps the answer possible?
 </HintDrawer>
+
+## Part A: Multiple Choice
+
+- Which clue most strongly suggests Pair Sum - Sorted can use two pointers?
+- In Largest Container, which pointer should move?
+- Which problem uses unidirectional traversal?
+
+## Part B: Short Answer
+
+- What is a pointer?
+- Why can sorted arrays help with two pointers?
+- What job does the `write` pointer do in Shift Zeros to the End?
+
+## Part C: Final Build
+
+Use the mastery challenge below to rebuild the move rule from memory. Passing it
+should mean you can explain and apply the most important chapter idea on your
+own.

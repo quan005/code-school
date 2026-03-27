@@ -1,0 +1,59 @@
+[
+  {
+    "id": "palindrome-1",
+    "narration": "A palindrome uses inward traversal because the useful clues live at both ends of the word.",
+    "arrayValues": ["r", "a", "c", "e", "c", "a", "r"],
+    "callout": "Compare the first and last letters before moving inward.",
+    "decision": "If both letters match, keep going.",
+    "highlightIndexes": [0, 6],
+    "pointers": {
+      "left": 0,
+      "right": 6
+    }
+  },
+  {
+    "id": "palindrome-2",
+    "narration": "Each matching pair lets you squeeze the search area smaller.",
+    "arrayValues": ["r", "a", "c", "e", "c", "a", "r"],
+    "callout": "After matching r with r, move to the next mirrored pair.",
+    "decision": "Now compare a with a.",
+    "highlightIndexes": [1, 5],
+    "pointers": {
+      "left": 1,
+      "right": 5
+    },
+    "predictionPrompt": {
+      "prompt": "What should happen if the letters do not match?",
+      "choices": [
+        {
+          "id": "stop",
+          "label": "Return false right away",
+          "isCorrect": true,
+          "feedback": "Correct. One mismatch proves the word is not a palindrome."
+        },
+        {
+          "id": "keep-going",
+          "label": "Keep checking the rest",
+          "isCorrect": false,
+          "feedback": "Not this one. The palindrome rule is already broken."
+        }
+      ]
+    }
+  },
+  {
+    "id": "palindrome-3",
+    "narration": "When all mirrored pairs match, the middle does not need extra work.",
+    "arrayValues": ["r", "a", "c", "e", "c", "a", "r"],
+    "callout": "The pointers can stop once left is no longer before right.",
+    "decision": "That means the whole word passed the symmetry check.",
+    "highlightIndexes": [2, 4],
+    "pointers": {
+      "left": 2,
+      "right": 4
+    },
+    "reflectionPrompt": {
+      "prompt": "Why can the algorithm stop after the first mismatch?",
+      "placeholder": "It can stop because..."
+    }
+  }
+]

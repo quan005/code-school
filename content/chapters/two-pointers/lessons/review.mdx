@@ -1,32 +1,67 @@
 ---
 title: "Review"
 slug: "review"
-order: 3
+order: 8
 lessonType: "review"
-difficulty: "easy"
-estimatedMinutes: 10
+difficulty: "medium"
+estimatedMinutes: 12
 concepts:
   - "pattern review"
   - "move rules"
+  - "chapter vocabulary"
 skills:
   - "Say the move rule in your own words"
   - "Compare two-pointer strategies"
 prerequisites:
-  - "pair-sum-sorted"
-summary: "Review the move rules and pattern clues for two-pointer lessons."
+  - "next-lexicographical-sequence"
+summary: "Review the three two-pointer styles, chapter vocabulary, and the move rules behind each lesson."
 ---
 
-<ProblemStatement title="Review the pattern clues">
-  A strong two-pointer problem usually gives you a structure you can trust, like
-  sorted order or a mirrored string.
+<ProblemStatement title="Three styles to remember">
+  Two pointers is not one trick. It is a family of movement patterns: inward
+  traversal, unidirectional traversal, and staged traversal.
 </ProblemStatement>
 
-<Intuition title="Ask what each move teaches you">
-  If moving left or right gives you new information, then the pattern is
-  probably worth trying.
+<Intuition title="Fast recap by problem">
+  Pair Sum, Largest Container, and Palindrome use inward traversal. Shift Zeros
+  uses unidirectional traversal. Next Lexicographical Sequence uses staged
+  traversal.
 </Intuition>
 
-<HintDrawer title="Quick self-check">
-  Can you explain why moving the wrong pointer would keep the answer hidden? If
-  yes, you understand the clue behind the pattern.
+<TestCaseTable
+  rows={[
+    {
+      input: "Pair Sum - Sorted",
+      expected: "Move left when the sum is too small",
+      why: "Sorted order tells you how to change the sum.",
+    },
+    {
+      input: "Shift Zeros to the End",
+      expected: "read scans, write stores the next good spot",
+      why: "Both pointers move in the same direction.",
+    },
+    {
+      input: "Next Lexicographical Sequence",
+      expected: "Find the pivot, then the swap spot, then reverse the tail",
+      why: "The job happens in clear stages.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Forgetting the clue behind the movement",
+      fix: "Always ask what new information moving a pointer gives you.",
+    },
+    {
+      title: "Using the same pointer rule for every problem",
+      fix: "Match the strategy to the pattern: inward, unidirectional, or staged.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Big pattern questions">
+  Ask: Is the input an array or string? Is it sorted or predictable? Can I
+  compare two places? Can one pointer search while another tracks?
 </HintDrawer>

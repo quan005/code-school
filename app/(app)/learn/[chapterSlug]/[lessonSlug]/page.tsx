@@ -1,10 +1,9 @@
 import { notFound } from "next/navigation";
-import { StepPlayer } from "@/components/learning/step-player";
+import { ArrayStepPlayer } from "@/components/learning/array-step-player";
 import { PracticePlayground } from "@/components/practice/practice-playground";
 import { LessonStatusControls } from "@/components/progress/lesson-status-controls";
 import { Badge } from "@/components/ui/badge";
 import { Panel } from "@/components/ui/panel";
-import { ArrayVisualizer } from "@/components/visualizers/array-visualizer";
 import {
   getLatestSubmissionForLesson,
   getLessonProgressState,
@@ -62,15 +61,8 @@ export default async function LessonPage({
         ) : null}
       </Panel>
       {compiledLesson.frames.length > 0 ? (
-        <StepPlayer
+        <ArrayStepPlayer
           frames={compiledLesson.frames}
-          renderFrame={(frame) => (
-            <ArrayVisualizer
-              highlightIndexes={frame.highlightIndexes}
-              pointers={frame.pointers}
-              values={frame.arrayValues}
-            />
-          )}
           title="Algorithm walkthrough"
         />
       ) : null}

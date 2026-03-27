@@ -9,6 +9,8 @@ import {
   ProblemStatement,
   TestCaseTable,
 } from "@/components/mdx/lesson-blocks";
+import { PredictionPrompt } from "@/components/learning/prediction-prompt";
+import { ReflectionPrompt } from "@/components/learning/reflection-prompt";
 
 export function getLessonMDXComponents(): MDXComponents {
   return {
@@ -20,5 +22,7 @@ export function getLessonMDXComponents(): MDXComponents {
     HintDrawer,
     CommonMistakesCard,
     LessonFramePreview,
+    PredictionPrompt,
+    ReflectionPrompt,
   };
 }

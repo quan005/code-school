@@ -484,11 +484,15 @@ Create the chapter-end mastery flow combining quizzes, reasoning checks, and imp
 
 ## EPIC-6: Two Pointers Chapter
 
+Source of truth for chapter sequencing and instructional content:
+- `docs/curriculum/code-patterns/two-pointers-chapter.md`
+
 ### `CONTENT-TP-1` Author Chapter Landing and Intro Lesson
 **Story Points:** `3`
 
 **Description**  
 Author the `Two Pointers` chapter landing page and intro lesson that establish the intuition, strategies, and chapter roadmap.
+Pull the lesson structure, concepts, and kid-facing explanations from `docs/curriculum/code-patterns/two-pointers-chapter.md`.
 
 **Acceptance Criteria**
 - Chapter landing page includes summary, lesson list, and entry point.
@@ -498,6 +502,7 @@ Author the `Two Pointers` chapter landing page and intro lesson that establish t
 
 **Technical Details**
 - Author under `content/chapters/two-pointers`.
+- Use `docs/curriculum/code-patterns/two-pointers-chapter.md` as the source document for chapter goals, outline, and intro lesson content.
 - Include at least one interactive visual block.
 - Export typed metadata.
 
@@ -511,6 +516,7 @@ Author the `Two Pointers` chapter landing page and intro lesson that establish t
 
 **Description**  
 Create the canonical `Pair Sum - Sorted` lesson as the reference implementation for problem-based lessons in the app.
+Use `docs/curriculum/code-patterns/two-pointers-chapter.md` as the source for lesson intent, examples, and teaching language.
 
 **Acceptance Criteria**
 - Lesson includes statement, examples, constraints, brute force comparison, optimized intuition, walkthrough, implementation, complexity, tests, and reflection.
@@ -520,6 +526,7 @@ Create the canonical `Pair Sum - Sorted` lesson as the reference implementation 
 
 **Technical Details**
 - Co-locate frame data and sample data with the MDX lesson.
+- Adapt the `Pair Sum - Sorted` material from `docs/curriculum/code-patterns/two-pointers-chapter.md` into the app lesson format.
 - Use metadata for concepts and skills.
 - Treat this lesson as the baseline authoring pattern for later lessons.
 
@@ -538,6 +545,7 @@ Author the remaining MVP problem lessons for `Two Pointers`:
 - `Is Palindrome Valid`
 - `Shift Zeros to the End`
 - `Next Lexicographical Sequence`
+Use `docs/curriculum/code-patterns/two-pointers-chapter.md` as the source list and teaching sequence for these lessons.
 
 **Acceptance Criteria**
 - Each lesson is authored in MDX with complete metadata.
@@ -547,6 +555,7 @@ Author the remaining MVP problem lessons for `Two Pointers`:
 
 **Technical Details**
 - Reuse lesson frame schema and visualizer components.
+- Pull each lesson's core explanation, examples, and progression from `docs/curriculum/code-patterns/two-pointers-chapter.md`.
 - Keep reading density low and visuals prominent.
 - Ensure chapter progression increases complexity coherently.
 
@@ -560,6 +569,7 @@ Author the remaining MVP problem lessons for `Two Pointers`:
 
 **Description**  
 Author the review and mastery content needed to complete the `Two Pointers` chapter end to end.
+Source both from the `Chapter Review` and `Mastery Check` sections in `docs/curriculum/code-patterns/two-pointers-chapter.md`.
 
 **Acceptance Criteria**
 - Review content exists and is reachable from chapter flow.
@@ -569,6 +579,7 @@ Author the review and mastery content needed to complete the `Two Pointers` chap
 
 **Technical Details**
 - Use `review` and `mastery` lesson/content conventions.
+- Adapt the review and mastery prompts from `docs/curriculum/code-patterns/two-pointers-chapter.md` into MDX and activity configs.
 - Include recap prompts, concept summaries, and chapter-end evaluation content.
 
 **Out of Scope**
@@ -742,4 +753,3 @@ Prepare the MVP for deployment with environment management, structured error vis
 - `CONTENT-TP-3`
 - `CONTENT-TP-4`
 - `QUALITY-1`
-

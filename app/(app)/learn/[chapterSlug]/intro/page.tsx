@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { LessonFramePreview } from "@/components/mdx/lesson-blocks";
+import { ArrayStepPlayer } from "@/components/learning/array-step-player";
 import { LessonStatusControls } from "@/components/progress/lesson-status-controls";
 import { Panel } from "@/components/ui/panel";
 import { getLessonProgressState } from "@/db/progress";
@@ -29,7 +29,10 @@ export default async function ChapterIntroPage({
         <div className="mdx-prose">{compiledLesson.content}</div>
       </Panel>
       {compiledLesson.frames.length > 0 ? (
-        <LessonFramePreview frames={compiledLesson.frames} />
+        <ArrayStepPlayer
+          frames={compiledLesson.frames}
+          title="Two-pointer strategy tour"
+        />
       ) : null}
     </div>
   );

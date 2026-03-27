@@ -1,0 +1,119 @@
+---
+title: "Is Palindrome Valid"
+slug: "is-palindrome-valid"
+order: 5
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 12
+concepts:
+  - "palindrome"
+  - "symmetry"
+  - "inward traversal"
+skills:
+  - "Compare mirrored characters"
+  - "Stop early when a mismatch appears"
+prerequisites:
+  - "largest-container"
+summary: "Compare letters from both ends and move inward until they match or fail."
+---
+
+<ProblemStatement title="Check whether a word reads the same both ways">
+  Return `true` if a string is a palindrome and `false` otherwise.
+</ProblemStatement>
+
+## Examples
+
+```txt
+"racecar" -> true
+"rocket" -> false
+```
+
+<Intuition title="Symmetry is the clue">
+  A palindrome is a great fit for two pointers because the first and last
+  letters should match, then the next two, and so on.
+</Intuition>
+
+<InterviewTip>
+  You do not need to build a reversed copy to solve this. Two pointers can
+  compare the word in place.
+</InterviewTip>
+
+## Plan
+
+1. Put `left` at the start.
+2. Put `right` at the end.
+3. Compare the letters.
+4. If they do not match, return `false`.
+5. If they do match, move inward.
+
+## Walkthrough
+
+For `"racecar"`:
+
+1. Compare `r` and `r`.
+2. Compare `a` and `a`.
+3. Compare `c` and `c`.
+4. Every pair matches, so the word is a palindrome.
+
+## TypeScript Solution
+
+```ts
+function isPalindromeValid(word: string): boolean {
+  let left = 0;
+  let right = word.length - 1;
+
+  while (left < right) {
+    if (word[left] !== word[right]) {
+      return false;
+    }
+
+    left += 1;
+    right -= 1;
+  }
+
+  return true;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(1)"
+  notes="You compare each mirrored pair once and do not need extra memory."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: 'word = "racecar"',
+      expected: "true",
+      why: "Every mirrored pair matches.",
+    },
+    {
+      input: 'word = "rocket"',
+      expected: "false",
+      why: "The first mismatch ends the search.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Building a full reversed copy first",
+      fix: "Two pointers can compare the letters directly without extra memory.",
+    },
+    {
+      title: "Using `left <= right`",
+      fix: "You only need to compare while `left < right`.",
+    },
+  ]}
+/>
+
+<HintDrawer title="What makes this an inward traversal problem?">
+  The useful information lives at both ends of the word, so we compare from the
+  outside and move toward the middle.
+</HintDrawer>
+
+## Reflection
+
+Why can the algorithm stop as soon as one mirrored pair does not match?

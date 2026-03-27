@@ -1,0 +1,114 @@
+---
+title: "Shift Zeros to the End"
+slug: "shift-zeros-to-the-end"
+order: 6
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 13
+concepts:
+  - "unidirectional traversal"
+  - "read pointer"
+  - "write pointer"
+skills:
+  - "Keep non-zero values together"
+  - "Use one pointer to scan and one to store"
+prerequisites:
+  - "is-palindrome-valid"
+summary: "Use a read pointer to scan and a write pointer to pack non-zero values at the front."
+---
+
+<ProblemStatement title="Move all zeros to the end">
+  Rearrange an array so that every non-zero value stays in order at the front
+  and all zeros move to the end.
+</ProblemStatement>
+
+## Example
+
+```txt
+nums = [4, 0, 7, 0, 2] -> [4, 7, 2, 0, 0]
+```
+
+<Intuition title="Two pointers, same direction">
+  This is a unidirectional traversal problem. The `read` pointer scans every
+  value. The `write` pointer tracks the next good spot for a non-zero value.
+</Intuition>
+
+<InterviewTip>
+  Do not sort the array. The goal is to keep the original order of the non-zero
+  values.
+</InterviewTip>
+
+## Walkthrough
+
+For `nums = [4, 0, 7, 0, 2]`:
+
+1. `read` sees `4`, so write it at the front and move `write`.
+2. `read` sees `0`, so skip it.
+3. `read` sees `7`, so place it in the next good spot.
+4. After the scan, fill the rest with zeros.
+
+## TypeScript Solution
+
+```ts
+function shiftZerosToTheEnd(nums: number[]): number[] {
+  const result = [...nums];
+  let write = 0;
+
+  for (let read = 0; read < result.length; read++) {
+    if (result[read] !== 0) {
+      result[write] = result[read];
+      write += 1;
+    }
+  }
+
+  while (write < result.length) {
+    result[write] = 0;
+    write += 1;
+  }
+
+  return result;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(n)"
+  notes="This version copies the array first so the original stays untouched."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "nums = [4, 0, 7, 0, 2]",
+      expected: "[4, 7, 2, 0, 0]",
+      why: "The non-zero values keep their order.",
+    },
+    {
+      input: "nums = [0, 0, 0]",
+      expected: "[0, 0, 0]",
+      why: "An all-zero array stays all zero.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Sorting the array",
+      fix: "Sorting changes the order. This problem is about careful movement, not sorting.",
+    },
+    {
+      title: "Moving `write` on zeros",
+      fix: "Only move `write` when you keep a non-zero value.",
+    },
+  ]}
+/>
+
+<HintDrawer title="What job does each pointer have?">
+  `read` looks at every box. `write` remembers where the next useful box should
+  go.
+</HintDrawer>
+
+## Reflection
+
+Why does the `write` pointer move less often than the `read` pointer?

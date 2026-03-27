@@ -1,0 +1,59 @@
+[
+  {
+    "id": "intro-1",
+    "narration": "Inward traversal starts with one pointer at each end of the list.",
+    "arrayValues": [1, 3, 5, 8, 10],
+    "callout": "This works well when the ends tell us something useful, like in a sorted array or a palindrome.",
+    "decision": "Compare both ends, then move the side that helps most.",
+    "highlightIndexes": [0, 4],
+    "pointers": {
+      "left": 0,
+      "right": 4
+    }
+  },
+  {
+    "id": "intro-2",
+    "narration": "Unidirectional traversal sends both pointers the same direction, but they do different jobs.",
+    "arrayValues": [4, 0, 7, 0, 2],
+    "callout": "The fast pointer scans every box. The slow pointer marks the next good spot.",
+    "decision": "This style is great for cleaning, packing, or rearranging data without sorting it.",
+    "highlightIndexes": [0, 2],
+    "pointers": {
+      "slow": 1,
+      "fast": 2
+    },
+    "predictionPrompt": {
+      "prompt": "If the fast pointer finds a useful number, which pointer marks where it should go?",
+      "choices": [
+        {
+          "id": "slow",
+          "label": "The slow pointer",
+          "isCorrect": true,
+          "feedback": "Correct. The slow pointer remembers the next good spot."
+        },
+        {
+          "id": "fast",
+          "label": "The fast pointer",
+          "isCorrect": false,
+          "feedback": "Not this one. The fast pointer is the scanner."
+        }
+      ]
+    }
+  },
+  {
+    "id": "intro-3",
+    "narration": "Staged traversal solves one small mystery first, then uses that answer to finish the job.",
+    "arrayValues": [1, 3, 2],
+    "callout": "Next Lexicographical Sequence first finds the pivot, then finds a swap spot, then fixes the tail.",
+    "decision": "The current pointer marks the pivot where the order first changes.",
+    "highlightIndexes": [0, 1],
+    "pointers": {
+      "current": 0,
+      "right": 2
+    },
+    "reflectionPrompt": {
+      "prompt": "Why do some two-pointer problems happen in stages instead of one single loop?",
+      "placeholder": "Because we first need to find..."
+    }
+  }
+]

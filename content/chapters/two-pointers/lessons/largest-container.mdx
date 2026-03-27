@@ -1,0 +1,126 @@
+---
+title: "Largest Container"
+slug: "largest-container"
+order: 4
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 14
+concepts:
+  - "area"
+  - "inward traversal"
+  - "shorter wall rule"
+skills:
+  - "Compute width times height"
+  - "Move the shorter wall with a reason"
+prerequisites:
+  - "triplet-sum"
+summary: "Start wide, measure area, and move the shorter wall inward."
+---
+
+<ProblemStatement title="Find the biggest water container">
+  You are given wall heights in an array. Pick two walls that can hold the most
+  water together. Return the largest area.
+</ProblemStatement>
+
+## Example
+
+```txt
+heights = [3, 7, 4, 8]
+best area = 9
+```
+
+<Intuition title="Start wide">
+  The container area depends on width and the shorter wall. If you start with
+  the widest choice, the only move that might help is moving the shorter wall.
+</Intuition>
+
+<InterviewTip>
+  This problem is not about the taller wall. The shorter wall controls the
+  height of the water.
+</InterviewTip>
+
+## Brute Force Idea
+
+The slow idea checks every pair of walls, computes the width, and keeps the best
+area. That works, but it takes about `O(n²)` time.
+
+## Better Rule
+
+1. Compute the area.
+2. Save the best area seen so far.
+3. Move the shorter wall inward.
+
+## Walkthrough
+
+For `heights = [3, 7, 4, 8]`:
+
+1. Start with `left = 0` and `right = 3`. Width is `3`, height is `3`, area is `9`.
+2. The left wall is shorter, so move `left`.
+3. Now width is smaller, but the shorter wall may get taller.
+
+## TypeScript Solution
+
+```ts
+function largestContainer(heights: number[]): number {
+  let left = 0;
+  let right = heights.length - 1;
+  let best = 0;
+
+  while (left < right) {
+    const width = right - left;
+    const height = Math.min(heights[left], heights[right]);
+    best = Math.max(best, width * height);
+
+    if (heights[left] < heights[right]) {
+      left += 1;
+    } else {
+      right -= 1;
+    }
+  }
+
+  return best;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(1)"
+  notes="Each pointer moves inward once, so the scan stays linear."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "heights = [3, 7, 4, 8]",
+      expected: "9",
+      why: "The widest good pair uses heights 3 and 8.",
+    },
+    {
+      input: "heights = [1, 1]",
+      expected: "1",
+      why: "Only one container is possible.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Moving the taller wall",
+      fix: "Moving the taller wall cannot help if the shorter wall still limits the water height.",
+    },
+    {
+      title: "Forgetting width",
+      fix: "Area is not just height. It is width times the shorter height.",
+    },
+  ]}
+/>
+
+<HintDrawer title="What is the important rule?">
+  The shorter wall is the one stopping the area from growing. That is why it is
+  the wall that must move.
+</HintDrawer>
+
+## Reflection
+
+Why is it reasonable to throw away one of the widest walls after every check?

@@ -1,0 +1,132 @@
+---
+title: "Triplet Sum"
+slug: "triplet-sum"
+order: 3
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 14
+concepts:
+  - "triplets"
+  - "sorting"
+  - "nested two pointers"
+skills:
+  - "Lock one number, then solve a pair problem"
+  - "Use sorting to make pointer movement logical"
+prerequisites:
+  - "pair-sum-sorted"
+summary: "Pick one number, then use two pointers to search for the other two."
+---
+
+<ProblemStatement title="Find any matching triplet">
+  Given an array of integers and a target value, return `true` if any three
+  numbers add up to the target. Otherwise, return `false`.
+</ProblemStatement>
+
+## Examples
+
+```txt
+nums = [-1, 0, 2, 3], target = 2 -> true
+nums = [1, 2, 4, 9], target = 20 -> false
+```
+
+<Intuition title="One loop plus Pair Sum">
+  This sounds like a bigger problem, but it is really: pick one number, then
+  find a pair that makes the rest. That means one loop plus the two-pointer
+  trick.
+</Intuition>
+
+<InterviewTip>
+  Sort first. After that, every choice for the first number turns into a smaller
+  pair-sum search.
+</InterviewTip>
+
+## Brute Force Idea
+
+The slow idea checks every possible triplet. That works, but it can take about
+`O(n³)` time because there are so many combinations.
+
+## Better Plan
+
+1. Sort the array.
+2. Use `i` to choose the first number.
+3. Use `left` and `right` to find the other two numbers.
+
+## Walkthrough
+
+For `nums = [-1, 0, 2, 3]` and `target = 2`:
+
+1. Pick `i = 0`, so the first number is `-1`.
+2. Now we need two numbers that add up to `3`.
+3. Set `left = 1` and `right = 3`.
+4. `nums[left] + nums[right] = 0 + 3 = 3`, so the triplet exists.
+
+## TypeScript Solution
+
+```ts
+function tripletSum(nums: number[], target: number): boolean {
+  nums = [...nums].sort((a, b) => a - b);
+
+  for (let i = 0; i < nums.length - 2; i++) {
+    let left = i + 1;
+    let right = nums.length - 1;
+    const needed = target - nums[i];
+
+    while (left < right) {
+      const sum = nums[left] + nums[right];
+
+      if (sum < needed) {
+        left += 1;
+      } else if (sum > needed) {
+        right -= 1;
+      } else {
+        return true;
+      }
+    }
+  }
+
+  return false;
+}
+```
+
+<ComplexityCard
+  time="O(n²)"
+  space="O(n)"
+  notes="Sorting plus an outer loop and inner pointer scan is much faster than checking every triplet."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "nums = [-1, 0, 2, 3], target = 2",
+      expected: "true",
+      why: "The triplet -1, 0, and 3 works.",
+    },
+    {
+      input: "nums = [1, 2, 4, 9], target = 20",
+      expected: "false",
+      why: "No three numbers reach the target.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Forgetting to sort first",
+      fix: "Without sorting, moving `left` and `right` has no clear meaning.",
+    },
+    {
+      title: "Starting `left` at 0",
+      fix: "Start `left` at `i + 1` because `i` already picked the first number.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Why does this feel familiar?">
+  Inside each outer-loop turn, you are solving a smaller Pair Sum problem.
+</HintDrawer>
+
+## Reflection
+
+Why does sorting turn Triplet Sum into a problem where moving `left` or `right`
+makes sense?
