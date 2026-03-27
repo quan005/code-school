@@ -1,0 +1,74 @@
+{
+  "recapPrompt": {
+    "prompt": "The current sum is too large. Which pointer move is safe?",
+    "choices": [
+      {
+        "id": "right",
+        "label": "Move the right pointer left",
+        "isCorrect": true,
+        "feedback": "Correct. In sorted order, moving right left makes the total smaller."
+      },
+      {
+        "id": "left",
+        "label": "Move the left pointer right",
+        "isCorrect": false,
+        "feedback": "Not quite. That would make the total larger, not smaller."
+      }
+    ]
+  },
+  "reflectionPrompt": {
+    "prompt": "Explain why the wrong pointer move would hide the answer.",
+    "placeholder": "Because in sorted order..."
+  },
+  "practiceChallenge": {
+    "title": "Mastery check: rebuild the rule",
+    "description": "Complete the move helper without the walkthrough. Passing this marks the mastery lesson complete.",
+    "language": "javascript",
+    "starterCode": "export function masteryMove(currentSum, target) {\n  const tooSmallMove = \"TODO\";\n  const tooLargeMove = \"TODO\";\n  const equalMove = \"TODO\";\n\n  if (currentSum < target) {\n    return tooSmallMove;\n  }\n\n  if (currentSum > target) {\n    return tooLargeMove;\n  }\n\n  return equalMove;\n}\n",
+    "hints": [
+      "Too small means you need a bigger number.",
+      "Too large means you need a smaller number.",
+      "A correct full set is left, right, and found."
+    ],
+    "successMessage": "Pass. You completed the mastery implementation task.",
+    "retryMessage": "Needs practice. Fix the move rule and run the tests again.",
+    "completionBehavior": "mark_complete",
+    "blanks": [
+      {
+        "key": "tooSmallMove",
+        "label": "Move when the sum is too small",
+        "expectedValues": ["left"]
+      },
+      {
+        "key": "tooLargeMove",
+        "label": "Move when the sum is too large",
+        "expectedValues": ["right"]
+      },
+      {
+        "key": "equalMove",
+        "label": "Move when the sum matches the target",
+        "expectedValues": ["found", "done"]
+      }
+    ],
+    "visibleTests": [
+      {
+        "label": "Mastery test 1",
+        "scenario": "currentSum = 4, target = 9",
+        "blankKey": "tooSmallMove",
+        "expected": "left"
+      },
+      {
+        "label": "Mastery test 2",
+        "scenario": "currentSum = 14, target = 9",
+        "blankKey": "tooLargeMove",
+        "expected": "right"
+      },
+      {
+        "label": "Mastery test 3",
+        "scenario": "currentSum = 9, target = 9",
+        "blankKey": "equalMove",
+        "expected": "found"
+      }
+    ]
+  }
+}

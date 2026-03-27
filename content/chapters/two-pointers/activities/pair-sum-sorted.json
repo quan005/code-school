@@ -1,0 +1,53 @@
+{
+  "practiceChallenge": {
+    "title": "Fill in the move rule",
+    "description": "Edit the code so the helper returns the correct pointer move for each comparison.",
+    "language": "javascript",
+    "starterCode": "export function chooseMove(currentSum, target) {\n  const tooSmallMove = \"TODO\";\n  const tooLargeMove = \"TODO\";\n  const equalMove = \"TODO\";\n\n  if (currentSum < target) {\n    return tooSmallMove;\n  }\n\n  if (currentSum > target) {\n    return tooLargeMove;\n  }\n\n  return equalMove;\n}\n",
+    "hints": [
+      "When the sum is too small, you need a bigger number.",
+      "When the sum is too large, you need a smaller number.",
+      "Use the words left, right, and found."
+    ],
+    "successMessage": "Nice work. Your move rule matches the visible tests.",
+    "retryMessage": "Not yet. Recheck which pointer changes the sum in each case.",
+    "completionBehavior": "mark_complete",
+    "blanks": [
+      {
+        "key": "tooSmallMove",
+        "label": "Move when the sum is too small",
+        "expectedValues": ["left"]
+      },
+      {
+        "key": "tooLargeMove",
+        "label": "Move when the sum is too large",
+        "expectedValues": ["right"]
+      },
+      {
+        "key": "equalMove",
+        "label": "Move when the sum matches the target",
+        "expectedValues": ["found", "done"]
+      }
+    ],
+    "visibleTests": [
+      {
+        "label": "Too small total",
+        "scenario": "currentSum = 6, target = 10",
+        "blankKey": "tooSmallMove",
+        "expected": "left"
+      },
+      {
+        "label": "Too large total",
+        "scenario": "currentSum = 12, target = 10",
+        "blankKey": "tooLargeMove",
+        "expected": "right"
+      },
+      {
+        "label": "Exact match",
+        "scenario": "currentSum = 10, target = 10",
+        "blankKey": "equalMove",
+        "expected": "found"
+      }
+    ]
+  }
+}

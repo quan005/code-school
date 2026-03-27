@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { StepPlayer } from "@/components/learning/step-player";
+import { PracticePlayground } from "@/components/practice/practice-playground";
 import { LessonStatusControls } from "@/components/progress/lesson-status-controls";
 import { Badge } from "@/components/ui/badge";
 import { Panel } from "@/components/ui/panel";
@@ -7,7 +8,9 @@ import { ArrayVisualizer } from "@/components/visualizers/array-visualizer";
 import {
   getLatestSubmissionForLesson,
   getLessonProgressState,
+  getSubmissionHistoryForLesson,
 } from "@/db/progress";
+import { getLessonActivity } from "@/lib/content/practice";
 import { compileLesson, getChapterBySlug } from "@/lib/curriculum";
 
 export default async function LessonPage({
@@ -18,10 +21,13 @@ export default async function LessonPage({
   const { chapterSlug, lessonSlug } = await params;
   const chapter = await getChapterBySlug(chapterSlug);
   const compiledLesson = await compileLesson(chapterSlug, lessonSlug);
-  const [progress, latestSubmission] = await Promise.all([
-    getLessonProgressState(chapterSlug, lessonSlug),
-    getLatestSubmissionForLesson(chapterSlug, lessonSlug),
-  ]);
+  const [progress, latestSubmission, submissionHistory, activity] =
+    await Promise.all([
+      getLessonProgressState(chapterSlug, lessonSlug),
+      getLatestSubmissionForLesson(chapterSlug, lessonSlug),
+      getSubmissionHistoryForLesson(chapterSlug, lessonSlug),
+      getLessonActivity(chapterSlug, lessonSlug),
+    ]);
 
   if (
     !chapter ||
@@ -66,6 +72,18 @@ export default async function LessonPage({
             />
           )}
           title="Algorithm walkthrough"
+        />
+      ) : null}
+      {activity?.practiceChallenge ? (
+        <PracticePlayground
+          challenge={activity.practiceChallenge}
+          chapterSlug={chapterSlug}
+          history={submissionHistory}
+          initialCode={
+            latestSubmission?.codeSnapshot ??
+            activity.practiceChallenge.starterCode
+          }
+          lessonSlug={lessonSlug}
         />
       ) : null}
     </div>

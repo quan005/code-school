@@ -1,0 +1,19 @@
+{
+  "recapPrompt": {
+    "prompt": "Your sum is too small in a sorted array. What should happen next?",
+    "choices": [
+      {
+        "id": "move-left",
+        "label": "Move the left pointer right",
+        "isCorrect": true,
+        "feedback": "Correct. A bigger number on the left can increase the total."
+      },
+      {
+        "id": "move-right",
+        "label": "Move the right pointer left",
+        "isCorrect": false,
+        "feedback": "Not this time. That would make the total smaller."
+      }
+    ]
+  }
+}

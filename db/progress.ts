@@ -40,11 +40,25 @@ type CookieProgressState = {
       updatedAt: string;
     }
   >;
+  submissionHistory?: Record<
+    string,
+    Array<{
+      codeSnapshot: string;
+      resultSummary: string;
+      updatedAt: string;
+    }>
+  >;
 };
 
 type LessonProgressSummary = {
   status: LessonStatus;
   updatedAt?: string;
+};
+
+export type LessonSubmissionSummary = {
+  codeSnapshot: string;
+  resultSummary: string;
+  updatedAt: string;
 };
 
 export type ChapterProgressSummary = {
@@ -199,12 +213,11 @@ export async function getLessonProgressState(
 export async function getLatestSubmissionForLesson(
   chapterSlug: string,
   lessonSlug: string,
-): Promise<
-  { codeSnapshot: string; resultSummary: string; updatedAt: string } | undefined
-> {
+): Promise<LessonSubmissionSummary | undefined> {
   if (!isDatabaseConfigured()) {
     const state = await readCookieState();
-    return state.submissions[progressKey(chapterSlug, lessonSlug)];
+    const key = progressKey(chapterSlug, lessonSlug);
+    return state.submissionHistory?.[key]?.[0] ?? state.submissions[key];
   }
 
   const activeStudent = await getActiveStudentContext();
@@ -228,6 +241,38 @@ export async function getLatestSubmissionForLesson(
     : undefined;
 }
 
+export async function getSubmissionHistoryForLesson(
+  chapterSlug: string,
+  lessonSlug: string,
+): Promise<LessonSubmissionSummary[]> {
+  if (!isDatabaseConfigured()) {
+    const state = await readCookieState();
+    const key = progressKey(chapterSlug, lessonSlug);
+    return (
+      state.submissionHistory?.[key] ??
+      (state.submissions[key] ? [state.submissions[key]] : [])
+    );
+  }
+
+  const activeStudent = await getActiveStudentContext();
+  const submissions = await prisma.submission.findMany({
+    where: {
+      chapterSlug,
+      lessonSlug,
+      studentProfileId: activeStudent.studentProfileId,
+    },
+    orderBy: {
+      createdAt: "desc",
+    },
+  });
+
+  return submissions.map((submission) => ({
+    codeSnapshot: submission.codeSnapshot,
+    resultSummary: submission.resultSummary,
+    updatedAt: submission.createdAt.toISOString(),
+  }));
+}
+
 export async function recordSubmission(input: {
   chapterSlug: string;
   codeSnapshot: string;
@@ -244,11 +289,18 @@ export async function recordSubmission(input: {
 
   if (!isDatabaseConfigured()) {
     const state = await readCookieState();
-    state.submissions[progressKey(input.chapterSlug, input.lessonSlug)] = {
+    const key = progressKey(input.chapterSlug, input.lessonSlug);
+    const nextRecord = {
       codeSnapshot: input.codeSnapshot,
       resultSummary: input.resultSummary,
       updatedAt: new Date().toISOString(),
     };
+    state.submissions[key] = nextRecord;
+    state.submissionHistory = state.submissionHistory ?? {};
+    state.submissionHistory[key] = [
+      nextRecord,
+      ...(state.submissionHistory[key] ?? []),
+    ].slice(0, 10);
     await writeCookieState(state);
     return;
   }
@@ -345,9 +397,11 @@ export async function getChapterProgressSummary(
         ];
       }),
     );
-    retryCount = Object.keys(state.submissions).filter((key) =>
-      key.startsWith(`${chapter.slug}:`),
-    ).length;
+    retryCount = Object.entries(state.submissionHistory ?? {}).reduce(
+      (count, [key, history]) =>
+        key.startsWith(`${chapter.slug}:`) ? count + history.length : count,
+      0,
+    );
   } else {
     const activeStudent = await getActiveStudentContext();
     const [progressRecords, submissionCount] = await Promise.all([
