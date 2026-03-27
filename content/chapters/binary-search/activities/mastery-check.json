@@ -1,0 +1,82 @@
+{
+  "recapPrompt": {
+    "prompt": "When binary search is not looking for an exact match, what might it be looking for instead?",
+    "choices": [
+      {
+        "id": "position",
+        "label": "A position or smallest valid answer",
+        "isCorrect": true,
+        "feedback": "Correct. Binary search can find where something belongs or the best answer that still works."
+      },
+      {
+        "id": "random",
+        "label": "A random middle value",
+        "isCorrect": false,
+        "feedback": "Not this one. The search still follows a clear goal."
+      }
+    ]
+  },
+  "reflectionPrompt": {
+    "prompt": "Explain in your own words why checking the middle is a smart move.",
+    "placeholder": "Checking the middle is smart because..."
+  },
+  "practiceChallenge": {
+    "title": "Mastery check: rebuild the binary-search clues",
+    "description": "Complete the helper so it returns the main clue for each kind of binary-search job.",
+    "language": "javascript",
+    "starterCode": "export function binarySearchClue(goal) {\n  const exactClue = \"TODO\";\n  const insertClue = \"TODO\";\n  const duplicateClue = \"TODO\";\n\n  if (goal === \"exact\") {\n    return exactClue;\n  }\n\n  if (goal === \"insert\") {\n    return insertClue;\n  }\n\n  return duplicateClue;\n}\n",
+    "hints": [
+      "Exact search stops when the middle matches.",
+      "Insert-position search returns where left lands.",
+      "Duplicate-position search saves an answer and keeps going."
+    ],
+    "successMessage": "Pass. You rebuilt the main binary-search clues from memory.",
+    "retryMessage": "Needs practice. Recheck how exact search, insert position, and duplicate search differ.",
+    "completionBehavior": "mark_complete",
+    "blanks": [
+      {
+        "key": "exactClue",
+        "label": "Main clue for exact search",
+        "expectedValues": [
+          "match the middle",
+          "stop on match",
+          "find exact target"
+        ]
+      },
+      {
+        "key": "insertClue",
+        "label": "Main clue for insert position",
+        "expectedValues": ["return left", "left lands", "landing spot"]
+      },
+      {
+        "key": "duplicateClue",
+        "label": "Main clue for first or last occurrence",
+        "expectedValues": [
+          "save answer and keep searching",
+          "save and keep going",
+          "keep searching"
+        ]
+      }
+    ],
+    "visibleTests": [
+      {
+        "label": "Exact search clue",
+        "scenario": "goal = exact",
+        "blankKey": "exactClue",
+        "expected": "match the middle"
+      },
+      {
+        "label": "Insert-position clue",
+        "scenario": "goal = insert",
+        "blankKey": "insertClue",
+        "expected": "return left"
+      },
+      {
+        "label": "Duplicate clue",
+        "scenario": "goal = duplicate",
+        "blankKey": "duplicateClue",
+        "expected": "save answer and keep searching"
+      }
+    ]
+  }
+}

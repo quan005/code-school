@@ -1,0 +1,23 @@
+{
+  "recapPrompt": {
+    "prompt": "Which clue is the strongest sign that binary search might work?",
+    "choices": [
+      {
+        "id": "sorted",
+        "label": "The data is sorted or ordered",
+        "isCorrect": true,
+        "feedback": "Correct. Sorted order is what makes the middle useful."
+      },
+      {
+        "id": "random",
+        "label": "The values are random",
+        "isCorrect": false,
+        "feedback": "Not this one. Random order gives the middle no safe clue."
+      }
+    ]
+  },
+  "reflectionPrompt": {
+    "prompt": "Explain how first occurrence and last occurrence change the normal binary-search loop.",
+    "placeholder": "They change the loop by..."
+  }
+}

@@ -1,0 +1,43 @@
+[
+  {
+    "id": "sqrt-1",
+    "title": "Search the answer range",
+    "narration": "For x = 8, the square root must be somewhere between 0 and 8, so that is our search range.",
+    "arrayValues": [0, 1, 2, 3, 4, 5, 6, 7, 8],
+    "callout": "The ordered answer range is from 0 up to x.",
+    "highlightIndexes": [0, 1, 2, 3, 4, 5, 6, 7, 8],
+    "pointers": {
+      "left": 0,
+      "current": 4,
+      "right": 8
+    }
+  },
+  {
+    "id": "sqrt-2",
+    "title": "Too large, go left",
+    "narration": "4 times 4 is 16, which is too large for 8. That means the answer must be smaller than 4.",
+    "arrayValues": [0, 1, 2, 3, 4, 5, 6, 7, 8],
+    "highlightIndexes": [0, 1, 2, 3],
+    "decision": "16 is too big, so right becomes 3.",
+    "pointers": {
+      "right": 3
+    }
+  },
+  {
+    "id": "sqrt-3",
+    "title": "Keep the best small-enough answer",
+    "narration": "2 times 2 is 4, which fits. We save 2 and try farther right to see if a bigger answer still fits.",
+    "arrayValues": [0, 1, 2, 3, 4, 5, 6, 7, 8],
+    "highlightIndexes": [2, 3],
+    "decision": "Save answer = 2, then move left to 3.",
+    "pointers": {
+      "current": 2,
+      "left": 3,
+      "right": 3
+    },
+    "reflectionPrompt": {
+      "prompt": "Why do we save a working answer before searching again?",
+      "placeholder": "We save it because..."
+    }
+  }
+]

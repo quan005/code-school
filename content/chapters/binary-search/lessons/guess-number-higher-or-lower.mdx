@@ -1,0 +1,114 @@
+---
+title: "Guess Number Higher or Lower"
+slug: "guess-number-higher-or-lower"
+order: 7
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 12
+concepts:
+  - "too high"
+  - "too low"
+  - "secret number"
+skills:
+  - "Use feedback to remove half the choices"
+  - "Recognize binary search as a guessing game"
+prerequisites:
+  - "find-a-target-in-a-sorted-array"
+summary: "Use too high and too low clues to find a secret number with as few guesses as possible."
+---
+
+<ProblemStatement title="Play the smart guessing game">
+  A secret number is chosen from <code>1</code> to <code>n</code>. You can ask
+  whether your guess is correct, too high, or too low. Return the secret number
+  using as few guesses as possible.
+</ProblemStatement>
+
+## Example
+
+```txt
+n = 10, secret = 6
+answer = 6
+```
+
+<Intuition title="Every clue cuts away half">
+  This is binary search in game form. Guess the middle. If the clue says too
+  low, keep the higher half. If the clue says too high, keep the lower half.
+</Intuition>
+
+<InterviewTip>
+  When a problem lets you ask “too high or too low,” it often means binary
+  search is the right idea.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+declare function guess(num: number): -1 | 0 | 1;
+
+function guessNumber(n: number): number {
+  let left = 1;
+  let right = n;
+
+  while (left <= right) {
+    const mid = Math.floor((left + right) / 2);
+    const result = guess(mid);
+
+    if (result === 0) {
+      return mid;
+    } else if (result === 1) {
+      left = mid + 1;
+    } else {
+      right = mid - 1;
+    }
+  }
+
+  return -1;
+}
+```
+
+<ComplexityCard
+  time="O(log n)"
+  space="O(1)"
+  notes="Each guess removes about half of the remaining number choices."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "n = 10, secret = 6",
+      expected: "6",
+      why: "The clues lead from the middle to the secret.",
+    },
+    {
+      input: "n = 1, secret = 1",
+      expected: "1",
+      why: "There is only one possible answer.",
+    },
+    {
+      input: "n = 100, secret = 73",
+      expected: "73",
+      why: "Binary search keeps cutting the choices down quickly.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Guessing one by one",
+      fix: "Start at the middle so each clue removes many numbers.",
+    },
+    {
+      title: "Mixing up too high and too low",
+      fix: "Too low means move left up. Too high means move right down.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Middle first">
+  The best next guess is usually the middle of the current possible range.
+</HintDrawer>
+
+## Reflection
+
+Why is the middle a stronger guess than starting at 1?

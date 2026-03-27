@@ -1,0 +1,42 @@
+[
+  {
+    "id": "last-1",
+    "title": "Same duplicates, different goal",
+    "narration": "This time we want the last 2, not the first one.",
+    "arrayValues": [1, 2, 2, 2, 4, 5],
+    "callout": "The goal changed, so one movement rule changes too.",
+    "highlightIndexes": [1, 2, 3],
+    "pointers": {
+      "left": 0,
+      "current": 2,
+      "right": 5
+    }
+  },
+  {
+    "id": "last-2",
+    "title": "Save it and search right",
+    "narration": "We save answer = 2, then move left to mid + 1 because a later copy could still be on the right.",
+    "arrayValues": [1, 2, 2, 2, 4, 5],
+    "highlightIndexes": [2, 3, 4, 5],
+    "decision": "Found target, save answer and move left to 3.",
+    "pointers": {
+      "current": 2,
+      "left": 3
+    }
+  },
+  {
+    "id": "last-3",
+    "title": "The last copy wins",
+    "narration": "We later find index 3 and save it. When the search ends, that is the last occurrence.",
+    "arrayValues": [1, 2, 2, 2, 4, 5],
+    "highlightIndexes": [3],
+    "decision": "Return the latest saved answer.",
+    "pointers": {
+      "current": 3
+    },
+    "reflectionPrompt": {
+      "prompt": "What is the only big difference between first occurrence and last occurrence?",
+      "placeholder": "The big difference is..."
+    }
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "slug": "binary-search",
+  "title": "Binary Search",
+  "order": 6,
+  "track": "Code Patterns",
+  "summary": "Learn how sorted order lets you check the middle, throw away half the choices, and search much faster than going one by one."
+}

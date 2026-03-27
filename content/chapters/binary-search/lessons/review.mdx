@@ -1,0 +1,46 @@
+---
+title: "Review"
+slug: "review"
+order: 8
+lessonType: "review"
+difficulty: "easy"
+estimatedMinutes: 8
+concepts:
+  - "sorted order"
+  - "half"
+  - "position"
+skills:
+  - "Review the main binary search clues"
+  - "Tell different binary search jobs apart"
+prerequisites:
+  - "guess-number-higher-or-lower"
+summary: "Review the key clues that tell you when to use binary search and what kind of answer you are searching for."
+---
+
+<ProblemStatement title="What should binary search make you notice?">
+  This review lesson helps you remember the main binary-search clues and the
+  different jobs the pattern can do.
+</ProblemStatement>
+
+<Intuition title="The pattern changes a little depending on the goal">
+  Sometimes binary search finds an exact target. Sometimes it finds where a
+  number belongs. Sometimes it keeps searching for the first or last good spot.
+</Intuition>
+
+<ComplexityCard
+  time="Usually O(log n)"
+  space="Usually O(1)"
+  notes="The pattern stays fast because each step removes about half of the remaining choices."
+/>
+
+## Pattern Summary
+
+- Exact target: stop when the middle matches.
+- Insert position: return <code>left</code> when the loop ends.
+- First occurrence: save the answer and search left.
+- Last occurrence: save the answer and search right.
+- Answer range: test whether the middle guess is too small or too large.
+
+## Reflection
+
+Which binary-search clue feels easiest for you to notice now?

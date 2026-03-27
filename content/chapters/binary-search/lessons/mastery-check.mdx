@@ -1,0 +1,38 @@
+---
+title: "Mastery Check"
+slug: "mastery-check"
+order: 9
+lessonType: "mastery"
+difficulty: "medium"
+estimatedMinutes: 10
+concepts:
+  - "mid"
+  - "sorted"
+  - "first and last"
+skills:
+  - "Recall the main binary search clues without a walkthrough"
+  - "Explain why the middle is powerful"
+prerequisites:
+  - "review"
+summary: "Show that you can recognize binary search clues, remember the key positions, and rebuild the main ideas on your own."
+---
+
+<ProblemStatement title="Can you rebuild the clues from memory?">
+  This mastery check asks you to remember the big binary-search ideas without
+  step-by-step help.
+</ProblemStatement>
+
+<Intuition title="Use order to remove work">
+  The big idea is simple: if the data is in order, the middle can tell us which
+  half to throw away.
+</Intuition>
+
+<ComplexityCard
+  time="O(log n) for the main search pattern"
+  space="O(1)"
+  notes="Binary search stays fast because one comparison removes many choices."
+/>
+
+## Reflection
+
+Explain why checking the middle is a smart move in your own words.

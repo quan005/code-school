@@ -1,0 +1,53 @@
+{
+  "practiceChallenge": {
+    "title": "Fill in the binary-search moves",
+    "description": "Complete the helper so it says what to do when the middle is equal, too small, or too large.",
+    "language": "javascript",
+    "starterCode": "export function chooseBinaryMove(compareResult) {\n  const foundMove = \"TODO\";\n  const tooSmallMove = \"TODO\";\n  const tooLargeMove = \"TODO\";\n\n  if (compareResult === \"equal\") {\n    return foundMove;\n  }\n\n  if (compareResult === \"too-small\") {\n    return tooSmallMove;\n  }\n\n  return tooLargeMove;\n}\n",
+    "hints": [
+      "Equal means we are done.",
+      "Too small means the target must be farther right.",
+      "Too large means the target must be farther left."
+    ],
+    "successMessage": "Nice work. You rebuilt the three main binary-search moves.",
+    "retryMessage": "Not yet. Recheck what each middle comparison tells you about the target.",
+    "completionBehavior": "mark_complete",
+    "blanks": [
+      {
+        "key": "foundMove",
+        "label": "What to do when the middle matches",
+        "expectedValues": ["return index", "done", "found"]
+      },
+      {
+        "key": "tooSmallMove",
+        "label": "What to do when the middle is too small",
+        "expectedValues": ["move right", "right", "search right"]
+      },
+      {
+        "key": "tooLargeMove",
+        "label": "What to do when the middle is too large",
+        "expectedValues": ["move left", "left", "search left"]
+      }
+    ],
+    "visibleTests": [
+      {
+        "label": "Equal means stop",
+        "scenario": "compareResult = equal",
+        "blankKey": "foundMove",
+        "expected": "return index"
+      },
+      {
+        "label": "Too small means move right",
+        "scenario": "compareResult = too-small",
+        "blankKey": "tooSmallMove",
+        "expected": "move right"
+      },
+      {
+        "label": "Too large means move left",
+        "scenario": "compareResult = too-large",
+        "blankKey": "tooLargeMove",
+        "expected": "move left"
+      }
+    ]
+  }
+}

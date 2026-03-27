@@ -1,0 +1,115 @@
+---
+title: "Integer Square Root"
+slug: "integer-square-root"
+order: 6
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 14
+concepts:
+  - "answer range"
+  - "square"
+  - "largest valid answer"
+skills:
+  - "Use binary search on numbers instead of an array"
+  - "Track the biggest square that still fits"
+prerequisites:
+  - "find-a-target-in-a-sorted-array"
+summary: "Search over possible number answers to find the largest whole number whose square is not too big."
+---
+
+<ProblemStatement title="Find the whole-number square root">
+  Given a non-negative integer <code>x</code>, return the integer part of its
+  square root. Do not use a built-in square root function.
+</ProblemStatement>
+
+## Example
+
+```txt
+x = 8
+answer = 2
+```
+
+<Intuition title="We are searching for the biggest square that fits">
+  We are not searching inside an array this time. We are searching the answer
+  range from <code>0</code> to <code>x</code>. The middle guess tells us whether
+  its square is too small, too big, or perfect.
+</Intuition>
+
+<InterviewTip>
+  Binary search can work on any ordered range where you can test whether a guess
+  is too small or too large.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function integerSqrt(x: number): number {
+  let left = 0;
+  let right = x;
+  let answer = 0;
+
+  while (left <= right) {
+    const mid = Math.floor((left + right) / 2);
+    const square = mid * mid;
+
+    if (square === x) {
+      return mid;
+    } else if (square < x) {
+      answer = mid;
+      left = mid + 1;
+    } else {
+      right = mid - 1;
+    }
+  }
+
+  return answer;
+}
+```
+
+<ComplexityCard
+  time="O(log x)"
+  space="O(1)"
+  notes="We binary search the possible answers, not the original digits."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "x = 0",
+      expected: "0",
+      why: "The square root of 0 is 0.",
+    },
+    {
+      input: "x = 8",
+      expected: "2",
+      why: "2 * 2 fits, but 3 * 3 is too large.",
+    },
+    {
+      input: "x = 16",
+      expected: "4",
+      why: "4 * 4 matches exactly.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Searching digits instead of answer sizes",
+      fix: "Think of the possible whole-number answers from 0 to x.",
+    },
+    {
+      title: "Losing the best small-enough answer",
+      fix: "Store answer when square is still small enough.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Too small, too big, or perfect">
+  Compare <code>mid * mid</code> to <code>x</code>. That tells you which half of
+  the answer range to keep.
+</HintDrawer>
+
+## Reflection
+
+Why is this still binary search even though there is no array?

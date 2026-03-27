@@ -1,0 +1,111 @@
+---
+title: "Find a Target in a Sorted Array"
+slug: "find-a-target-in-a-sorted-array"
+order: 2
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 12
+concepts:
+  - "sorted array"
+  - "mid"
+  - "target"
+skills:
+  - "Use the classic binary search loop"
+  - "Move left or right based on the middle value"
+prerequisites: []
+summary: "Find an exact target in a sorted array by checking the middle and shrinking the search area."
+---
+
+<ProblemStatement title="Find the exact spot">
+  Given a sorted array of integers <code>nums</code> and a target value, return
+  the index of the target if it exists. Otherwise, return <code>-1</code>.
+</ProblemStatement>
+
+## Example
+
+```txt
+nums = [1, 3, 5, 7, 9], target = 7
+answer = 3
+```
+
+<Intuition title="The middle tells us which side still matters">
+  Because the array is sorted, the middle number gives a clue. If the middle is
+  too small, we keep the right half. If the middle is too big, we keep the left
+  half.
+</Intuition>
+
+<InterviewTip>
+  The key promise of sorted order is this: after one comparison, one whole half
+  becomes impossible.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function binarySearch(nums: number[], target: number): number {
+  let left = 0;
+  let right = nums.length - 1;
+
+  while (left <= right) {
+    const mid = Math.floor((left + right) / 2);
+
+    if (nums[mid] === target) {
+      return mid;
+    } else if (nums[mid] < target) {
+      left = mid + 1;
+    } else {
+      right = mid - 1;
+    }
+  }
+
+  return -1;
+}
+```
+
+<ComplexityCard
+  time="O(log n)"
+  space="O(1)"
+  notes="Each comparison throws away about half of the remaining array."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "nums = [1, 3, 5, 7, 9], target = 7",
+      expected: "3",
+      why: "The target is found at index 3.",
+    },
+    {
+      input: "nums = [1, 3, 5, 7, 9], target = 4",
+      expected: "-1",
+      why: "No index holds 4.",
+    },
+    {
+      input: "nums = [], target = 2",
+      expected: "-1",
+      why: "An empty array has nothing to find.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Using binary search on an unsorted array",
+      fix: "Binary search only works when the values stay in order.",
+    },
+    {
+      title: "Forgetting to move past mid",
+      fix: "Use mid + 1 or mid - 1 so the search area keeps shrinking.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Ask one question">
+  Is the middle correct, too small, or too big? That one answer tells you what
+  half to keep.
+</HintDrawer>
+
+## Reflection
+
+Why does the middle number give such a strong clue in a sorted array?

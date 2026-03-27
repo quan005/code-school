@@ -1,0 +1,84 @@
+---
+title: "Introduction"
+slug: "intro"
+order: 1
+lessonType: "intro"
+difficulty: "easy"
+estimatedMinutes: 9
+concepts:
+  - "sorted order"
+  - "left"
+  - "right"
+  - "mid"
+skills:
+  - "Explain why binary search needs sorted data"
+  - "Tell what left, right, and mid mean"
+  - "Describe why checking the middle saves time"
+prerequisites: []
+summary: "Meet binary search, learn the three key positions, and see why sorted order lets us throw away half the choices."
+---
+
+<ProblemStatement title="Look in the middle first">
+  Binary search is a smart way to find something in sorted data. Instead of
+  checking every spot, we check the middle and decide which half can be thrown
+  away.
+</ProblemStatement>
+
+<Intuition title="Think about a dictionary">
+  If you look for a word in a dictionary, you do not start on page 1. You open
+  near the middle, see whether your word comes before or after, and then keep
+  only the half that still makes sense.
+</Intuition>
+
+<InterviewTip>
+  Binary search is usually a clue when the problem says sorted, ordered, first
+  position, last position, insert position, or too high / too low.
+</InterviewTip>
+
+<ComplexityCard
+  time="Often O(log n)"
+  space="Often O(1)"
+  notes="The big win is that one middle check can remove about half of the remaining choices."
+/>
+
+## Three helpful positions
+
+- <code>left</code> is the start of the search area.
+- <code>right</code> is the end of the search area.
+- <code>mid</code> is the middle of the current search area.
+
+## Core rule
+
+- If the middle is exactly the target, we are done.
+- If the middle is too small, move to the right half.
+- If the middle is too large, move to the left half.
+
+<PredictionPrompt
+  prompt={{
+    prompt:
+      "If a sorted list goes from smallest to largest and the middle number is smaller than the target, which side should we keep?",
+    choices: [
+      {
+        id: "right",
+        label: "Keep the right half",
+        isCorrect: true,
+        feedback:
+          "Correct. Everything on the left is even smaller, so it cannot hold the target.",
+      },
+      {
+        id: "left",
+        label: "Keep the left half",
+        isCorrect: false,
+        feedback:
+          "Not this side. If the middle is too small, the answer must be farther right.",
+      },
+    ],
+  }}
+/>
+
+## Lesson Summary
+
+- Binary search needs sorted order.
+- The middle gives useful information.
+- Left, right, and mid describe the current search area.
+- Each smart comparison removes many choices at once.

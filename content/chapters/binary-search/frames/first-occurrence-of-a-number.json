@@ -1,0 +1,55 @@
+[
+  {
+    "id": "first-1",
+    "title": "Duplicates change the goal",
+    "narration": "We found a 2 in the middle, but that might not be the first 2.",
+    "arrayValues": [1, 2, 2, 2, 4, 5],
+    "callout": "Finding any copy is not the same as finding the first copy.",
+    "highlightIndexes": [1, 2, 3],
+    "pointers": {
+      "left": 0,
+      "current": 2,
+      "right": 5
+    }
+  },
+  {
+    "id": "first-2",
+    "title": "Save it and search left",
+    "narration": "When we find the target, we save answer = 2, then keep searching left for an earlier copy.",
+    "arrayValues": [1, 2, 2, 2, 4, 5],
+    "highlightIndexes": [0, 1, 2],
+    "decision": "Found target, save answer and move right to mid - 1.",
+    "pointers": {
+      "current": 2,
+      "right": 1
+    },
+    "predictionPrompt": {
+      "prompt": "After finding a target in a first-occurrence problem, which side should we keep checking?",
+      "choices": [
+        {
+          "id": "left",
+          "label": "Left side",
+          "isCorrect": true,
+          "feedback": "Correct. An earlier copy could still be on the left."
+        },
+        {
+          "id": "right",
+          "label": "Right side",
+          "isCorrect": false,
+          "feedback": "Not this time. Right might hold later copies, not the first one."
+        }
+      ]
+    }
+  },
+  {
+    "id": "first-3",
+    "title": "Find the earliest copy",
+    "narration": "We later land on index 1, save it, and then the loop ends. That is the first occurrence.",
+    "arrayValues": [1, 2, 2, 2, 4, 5],
+    "highlightIndexes": [1],
+    "decision": "Return the best saved answer.",
+    "pointers": {
+      "current": 1
+    }
+  }
+]
