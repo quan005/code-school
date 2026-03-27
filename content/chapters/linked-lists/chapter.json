@@ -1,0 +1,7 @@
+{
+  "slug": "linked-lists",
+  "title": "Linked Lists",
+  "order": 3,
+  "track": "Code Patterns",
+  "summary": "Learn how nodes connect in a chain, how pointers move from head to null, and how to insert, delete, reverse, and merge linked lists safely."
+}

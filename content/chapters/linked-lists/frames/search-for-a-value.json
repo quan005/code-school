@@ -1,0 +1,59 @@
+[
+  {
+    "id": "search-1",
+    "narration": "Searching checks one node at a time from the head forward.",
+    "arrayValues": [2, 5, 9],
+    "visualizer": "linked_list",
+    "callout": "Start by comparing the head value to the target.",
+    "decision": "If the value does not match, move current forward.",
+    "highlightIndexes": [0],
+    "pointers": {
+      "current": 0
+    }
+  },
+  {
+    "id": "search-2",
+    "narration": "At the next node, compare again and keep searching if the target is still missing.",
+    "arrayValues": [2, 5, 9],
+    "visualizer": "linked_list",
+    "callout": "A linked list search cannot skip ahead.",
+    "decision": "Return true right away if current.val matches the target.",
+    "highlightIndexes": [1],
+    "pointers": {
+      "current": 1
+    },
+    "predictionPrompt": {
+      "prompt": "If current.val matches the target, what should happen next?",
+      "choices": [
+        {
+          "id": "true",
+          "label": "Return true",
+          "isCorrect": true,
+          "feedback": "Correct. The target was found."
+        },
+        {
+          "id": "keep-going",
+          "label": "Keep searching",
+          "isCorrect": false,
+          "feedback": "Not this one. Once the target is found, the answer is already known."
+        }
+      ]
+    }
+  },
+  {
+    "id": "search-3",
+    "narration": "If current walks all the way to null, the target is not in the list.",
+    "arrayValues": [2, 5, 9],
+    "visualizer": "linked_list",
+    "callout": "Reaching null means every node was checked.",
+    "decision": "Return false.",
+    "highlightIndexes": [2],
+    "pointers": {
+      "current": 2
+    },
+    "reflectionPrompt": {
+      "prompt": "Why does reaching null prove the target is missing?",
+      "placeholder": "It proves the target is missing because..."
+    }
+  }
+]

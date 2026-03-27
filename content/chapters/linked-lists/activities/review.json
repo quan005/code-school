@@ -1,0 +1,19 @@
+{
+  "recapPrompt": {
+    "prompt": "What does null mean in a linked list?",
+    "choices": [
+      {
+        "id": "end",
+        "label": "There is no next node",
+        "isCorrect": true,
+        "feedback": "Correct. Null marks the end of the chain."
+      },
+      {
+        "id": "zero",
+        "label": "The current value is zero",
+        "isCorrect": false,
+        "feedback": "Not this one. Null is about missing nodes, not about the number zero."
+      }
+    ]
+  }
+}

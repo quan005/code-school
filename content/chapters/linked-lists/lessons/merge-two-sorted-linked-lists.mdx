@@ -1,0 +1,124 @@
+---
+title: "Merge Two Sorted Linked Lists"
+slug: "merge-two-sorted-linked-lists"
+order: 7
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 15
+concepts:
+  - "dummy node"
+  - "tail pointer"
+  - "sorted merge"
+skills:
+  - "Compare the front of two sorted lists"
+  - "Build a merged list with a dummy starter node"
+prerequisites:
+  - "reverse-a-linked-list"
+summary: "Use a dummy node and a tail pointer to weave two sorted linked lists into one sorted result."
+---
+
+<ProblemStatement title="Weave two sorted chains together">
+  Given the heads of two linked lists sorted in ascending order, merge them into
+  one sorted linked list and return the new head.
+</ProblemStatement>
+
+## Example
+
+```txt
+A: 1 -> 4 -> 7 -> null
+B: 2 -> 3 -> 8 -> null
+result -> 1 -> 2 -> 3 -> 4 -> 7 -> 8 -> null
+```
+
+<Intuition title="Compare the two front nodes">
+  At every step, choose the smaller front node and attach it next. A dummy node
+  makes the beginning of the answer easier to build.
+</Intuition>
+
+<InterviewTip>
+  The dummy node is a pretend starter. We do not return the dummy itself. We
+  return <code>dummy.next</code>.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function mergeTwoSortedLists(
+  list1: ListNode | null,
+  list2: ListNode | null,
+): ListNode | null {
+  const dummy = new ListNode(0);
+  let tail = dummy;
+  let a = list1;
+  let b = list2;
+
+  while (a !== null && b !== null) {
+    if (a.val <= b.val) {
+      tail.next = a;
+      a = a.next;
+    } else {
+      tail.next = b;
+      b = b.next;
+    }
+
+    tail = tail.next;
+  }
+
+  if (a !== null) {
+    tail.next = a;
+  } else {
+    tail.next = b;
+  }
+
+  return dummy.next;
+}
+```
+
+<ComplexityCard
+  time="O(n + m)"
+  space="O(1)"
+  notes="Each node from both lists is attached exactly once."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "A = null, B = null",
+      expected: "[]",
+      why: "Two empty lists merge into an empty list.",
+    },
+    {
+      input: "A = [1], B = []",
+      expected: "[1]",
+      why: "If one list is empty, attach the other one.",
+    },
+    {
+      input: "A = [1, 4, 7], B = [2, 3, 8]",
+      expected: "[1, 2, 3, 4, 7, 8]",
+      why: "Each step picks the smaller front node.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Forgetting to move tail",
+      fix: "After attaching a node, move tail forward so the merged list keeps growing.",
+    },
+    {
+      title: "Forgetting the leftover nodes",
+      fix: "When one list runs out, attach the rest of the other list directly.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Why is the dummy helpful?">
+  The dummy node gives the merged list a safe starting place so you do not need
+  special first-step logic.
+</HintDrawer>
+
+## Reflection
+
+Why can the rest of one list be attached directly after the other list runs
+out?

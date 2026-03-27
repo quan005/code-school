@@ -1,0 +1,109 @@
+---
+title: "Insert at the End"
+slug: "insert-at-the-end"
+order: 4
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 12
+concepts:
+  - "tail node"
+  - "new node"
+  - "pointer connection"
+skills:
+  - "Find the last node in a list"
+  - "Connect a new node to the tail"
+prerequisites:
+  - "search-for-a-value"
+summary: "Walk to the tail, then point it at a new node, with a special case for an empty list."
+---
+
+<ProblemStatement title="Add a new node at the tail">
+  Given the <code>head</code> of a linked list and a new value, insert a new
+  node with that value at the end of the list and return the head.
+</ProblemStatement>
+
+## Example
+
+```txt
+1 -> 4 -> null
+insert 9
+result -> 1 -> 4 -> 9 -> null
+```
+
+<Intuition title="Find the tail first">
+  The tail is the node whose <code>next</code> is <code>null</code>. Once you
+  find it, connect its <code>next</code> to the new node.
+</Intuition>
+
+<InterviewTip>
+  The empty-list case matters. If the head is null, the new node becomes the
+  whole list.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function insertAtEnd(head: ListNode | null, value: number): ListNode {
+  const newNode = new ListNode(value);
+
+  if (head === null) {
+    return newNode;
+  }
+
+  let current = head;
+
+  while (current.next !== null) {
+    current = current.next;
+  }
+
+  current.next = newNode;
+  return head;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(1)"
+  notes="The work is finding the tail. Connecting the new node is just one pointer change."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "head = null, value = 5",
+      expected: "[5]",
+      why: "The new node becomes the head.",
+    },
+    {
+      input: "1 -> null, value = 2",
+      expected: "[1, 2]",
+      why: "The old tail points to the new node.",
+    },
+    {
+      input: "1 -> 4 -> null, value = 9",
+      expected: "[1, 4, 9]",
+      why: "The new node is attached after the old tail.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Forgetting the empty-list case",
+      fix: "If head is null, return the new node right away.",
+    },
+    {
+      title: "Stopping at the wrong node",
+      fix: "The tail is the node whose next is null, not the null itself.",
+    },
+  ]}
+/>
+
+<HintDrawer title="What pointer changes here?">
+  Only one arrow changes: the tail’s next pointer should point to the new node.
+</HintDrawer>
+
+## Reflection
+
+Why is insertion really a pointer-connection problem?

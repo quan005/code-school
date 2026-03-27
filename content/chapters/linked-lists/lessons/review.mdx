@@ -1,0 +1,71 @@
+---
+title: "Review"
+slug: "review"
+order: 8
+lessonType: "review"
+difficulty: "medium"
+estimatedMinutes: 12
+concepts:
+  - "pointer recap"
+  - "chapter vocabulary"
+  - "core linked list moves"
+skills:
+  - "Say what each pointer move does"
+  - "Match the right pointer pattern to a problem"
+prerequisites:
+  - "merge-two-sorted-linked-lists"
+summary: "Review linked-list vocabulary, pointer safety, and the main moves behind traversal, insertion, deletion, reversal, and merging."
+---
+
+<ProblemStatement title="Most linked-list problems are pointer problems">
+  Traversal, search, insertion, deletion, reversal, and merging all depend on
+  where one node points next.
+</ProblemStatement>
+
+<Intuition title="The chapter pattern">
+  Linked lists are not about indexes. They are about following arrows and
+  changing arrows safely.
+</Intuition>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "Traverse a Linked List",
+      expected: "Follow next until null",
+      why: "Current keeps walking through the chain.",
+    },
+    {
+      input: "Delete a Node by Value",
+      expected: "Skip over the target node",
+      why: "The previous node’s next pointer changes.",
+    },
+    {
+      input: "Reverse a Linked List",
+      expected: "Save nextNode, then flip one arrow",
+      why: "Saving nextNode protects the rest of the list.",
+    },
+    {
+      input: "Merge Two Sorted Lists",
+      expected: "Use a dummy node and a tail pointer",
+      why: "The merged list grows one node at a time.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Forgetting to check for null",
+      fix: "Always make sure the node exists before using .val or .next.",
+    },
+    {
+      title: "Thinking deletion means erasing a box directly",
+      fix: "Deletion usually means reconnecting the list so one node skips over another.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Best chapter questions">
+  Where is the head? What does current point to right now? What arrow changes in
+  this step? What happens when current becomes null?
+</HintDrawer>

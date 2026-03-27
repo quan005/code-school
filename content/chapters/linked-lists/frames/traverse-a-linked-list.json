@@ -1,0 +1,59 @@
+[
+  {
+    "id": "traverse-1",
+    "narration": "Traversal begins with current at the head of the chain.",
+    "arrayValues": [4, 8, 2],
+    "visualizer": "linked_list",
+    "callout": "Current points at the node you are visiting right now.",
+    "decision": "Use current.val, then move to current.next.",
+    "highlightIndexes": [0],
+    "pointers": {
+      "current": 0
+    }
+  },
+  {
+    "id": "traverse-2",
+    "narration": "After visiting 4, current moves forward to 8.",
+    "arrayValues": [4, 8, 2],
+    "visualizer": "linked_list",
+    "callout": "Traversal always follows the same pattern: use the node, then move forward.",
+    "decision": "Keep going while current is not null.",
+    "highlightIndexes": [1],
+    "pointers": {
+      "current": 1
+    },
+    "predictionPrompt": {
+      "prompt": "What should happen after you read current.val?",
+      "choices": [
+        {
+          "id": "next",
+          "label": "Move to current.next",
+          "isCorrect": true,
+          "feedback": "Correct. That is how traversal walks the chain."
+        },
+        {
+          "id": "head",
+          "label": "Jump back to head",
+          "isCorrect": false,
+          "feedback": "Not this one. Traversal keeps moving forward."
+        }
+      ]
+    }
+  },
+  {
+    "id": "traverse-3",
+    "narration": "When current moves past the final node, it becomes null and the loop stops.",
+    "arrayValues": [4, 8, 2],
+    "visualizer": "linked_list",
+    "callout": "Null means there is no node left to visit.",
+    "decision": "That is the safe stopping rule.",
+    "highlightIndexes": [2],
+    "pointers": {
+      "current": 2
+    },
+    "reflectionPrompt": {
+      "prompt": "Why do we stop when current becomes null?",
+      "placeholder": "We stop because..."
+    }
+  }
+]

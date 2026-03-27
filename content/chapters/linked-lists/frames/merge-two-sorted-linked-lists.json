@@ -1,0 +1,60 @@
+[
+  {
+    "id": "merge-1",
+    "narration": "A dummy node gives the merged list a safe starting place.",
+    "arrayValues": [1, 2],
+    "visualizer": "linked_list",
+    "callout": "Compare the front of list A and list B, then attach the smaller node.",
+    "decision": "Tail always points at the last node in the merged list so far.",
+    "highlightIndexes": [0, 1],
+    "pointers": {
+      "left": 0,
+      "right": 1
+    }
+  },
+  {
+    "id": "merge-2",
+    "narration": "After attaching 1, compare the next front nodes and keep weaving the lists together.",
+    "arrayValues": [1, 2, 3, 4],
+    "visualizer": "linked_list",
+    "callout": "The merged list grows one node at a time in sorted order.",
+    "decision": "Move tail forward after every attachment.",
+    "highlightIndexes": [1, 2],
+    "pointers": {
+      "current": 2
+    },
+    "predictionPrompt": {
+      "prompt": "What should happen when one list runs out of nodes?",
+      "choices": [
+        {
+          "id": "attach-rest",
+          "label": "Attach the rest of the other list",
+          "isCorrect": true,
+          "feedback": "Correct. The remaining nodes are already sorted."
+        },
+        {
+          "id": "start-over",
+          "label": "Start the merge again",
+          "isCorrect": false,
+          "feedback": "Not this one. The rest can be attached directly."
+        }
+      ]
+    }
+  },
+  {
+    "id": "merge-3",
+    "narration": "Once one list ends, the rest of the other list can be attached right away.",
+    "arrayValues": [1, 2, 3, 4, 7, 8],
+    "visualizer": "linked_list",
+    "callout": "That is safe because the leftover nodes are already sorted.",
+    "decision": "Return dummy.next, not the dummy itself.",
+    "highlightIndexes": [3, 4, 5],
+    "pointers": {
+      "current": 5
+    },
+    "reflectionPrompt": {
+      "prompt": "Why is a dummy node helpful when building the merged list?",
+      "placeholder": "A dummy node helps because..."
+    }
+  }
+]

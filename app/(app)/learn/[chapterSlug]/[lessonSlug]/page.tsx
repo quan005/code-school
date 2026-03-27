@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { ArrayStepPlayer } from "@/components/learning/array-step-player";
+import { FrameStepPlayer } from "@/components/learning/frame-step-player";
 import { PracticePlayground } from "@/components/practice/practice-playground";
 import { LessonStatusControls } from "@/components/progress/lesson-status-controls";
 import { Badge } from "@/components/ui/badge";
@@ -61,7 +61,7 @@ export default async function LessonPage({
         ) : null}
       </Panel>
       {compiledLesson.frames.length > 0 ? (
-        <ArrayStepPlayer
+        <FrameStepPlayer
           frames={compiledLesson.frames}
           title="Algorithm walkthrough"
         />

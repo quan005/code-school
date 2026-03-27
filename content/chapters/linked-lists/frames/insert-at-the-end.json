@@ -1,0 +1,60 @@
+[
+  {
+    "id": "insert-1",
+    "narration": "To insert at the end, first walk to the tail node.",
+    "arrayValues": [1, 4],
+    "visualizer": "linked_list",
+    "callout": "The tail is the node whose next pointer is null.",
+    "decision": "Once you find the tail, connect it to the new node.",
+    "highlightIndexes": [1],
+    "pointers": {
+      "current": 1
+    }
+  },
+  {
+    "id": "insert-2",
+    "narration": "Create the new node and point the old tail at it.",
+    "arrayValues": [1, 4, 9],
+    "visualizer": "linked_list",
+    "callout": "Only one arrow changes: 4.next now points to 9.",
+    "decision": "The new node becomes the new tail.",
+    "highlightIndexes": [1, 2],
+    "pointers": {
+      "current": 1,
+      "right": 2
+    },
+    "predictionPrompt": {
+      "prompt": "What special case happens if head is null?",
+      "choices": [
+        {
+          "id": "new-head",
+          "label": "The new node becomes the head",
+          "isCorrect": true,
+          "feedback": "Correct. An empty list has no tail to connect."
+        },
+        {
+          "id": "error",
+          "label": "The insert cannot happen",
+          "isCorrect": false,
+          "feedback": "Not this one. The new node can still become the whole list."
+        }
+      ]
+    }
+  },
+  {
+    "id": "insert-3",
+    "narration": "After the connection, the list keeps its old order and gains one new tail node.",
+    "arrayValues": [1, 4, 9],
+    "visualizer": "linked_list",
+    "callout": "Insertion is a pointer-connection move, not an index-shift move like an array might need.",
+    "decision": "Return the original head unless the list was empty.",
+    "highlightIndexes": [0, 1, 2],
+    "pointers": {
+      "current": 2
+    },
+    "reflectionPrompt": {
+      "prompt": "Why is insert-at-the-end really a pointer problem?",
+      "placeholder": "It is a pointer problem because..."
+    }
+  }
+]

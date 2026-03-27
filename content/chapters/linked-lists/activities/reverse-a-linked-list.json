@@ -1,0 +1,53 @@
+{
+  "practiceChallenge": {
+    "title": "Fill in the reversal roles",
+    "description": "Complete the helper so it names the right linked-list pointer jobs during reversal.",
+    "language": "javascript",
+    "starterCode": "export function reversePointerRoles() {\n  const savedForwardPointer = \"TODO\";\n  const pointerThatBecomesNewHead = \"TODO\";\n  const startingBackwardPointer = \"TODO\";\n\n  return {\n    savedForwardPointer,\n    pointerThatBecomesNewHead,\n    startingBackwardPointer,\n  };\n}\n",
+    "hints": [
+      "Save nextNode before flipping an arrow.",
+      "The pointer that ends as the new head is prev.",
+      "At the beginning of reversal, prev starts as null."
+    ],
+    "successMessage": "Nice work. You matched the reversal pointer roles correctly.",
+    "retryMessage": "Not yet. Recheck which pointer protects the rest of the list and which one becomes the new head.",
+    "completionBehavior": "mark_complete",
+    "blanks": [
+      {
+        "key": "savedForwardPointer",
+        "label": "Pointer that saves the forward path",
+        "expectedValues": ["nextnode", "nextNode"]
+      },
+      {
+        "key": "pointerThatBecomesNewHead",
+        "label": "Pointer that becomes the new head",
+        "expectedValues": ["prev"]
+      },
+      {
+        "key": "startingBackwardPointer",
+        "label": "Starting value for the backward pointer",
+        "expectedValues": ["null"]
+      }
+    ],
+    "visibleTests": [
+      {
+        "label": "Save the rest",
+        "scenario": "Which pointer protects the forward chain?",
+        "blankKey": "savedForwardPointer",
+        "expected": "nextNode"
+      },
+      {
+        "label": "New head",
+        "scenario": "Which pointer is returned at the end?",
+        "blankKey": "pointerThatBecomesNewHead",
+        "expected": "prev"
+      },
+      {
+        "label": "Starting backward pointer",
+        "scenario": "What value does prev start with?",
+        "blankKey": "startingBackwardPointer",
+        "expected": "null"
+      }
+    ]
+  }
+}

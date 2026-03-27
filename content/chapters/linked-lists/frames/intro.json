@@ -1,0 +1,59 @@
+[
+  {
+    "id": "ll-intro-1",
+    "narration": "A linked list starts at the head and moves from node to node like a chain.",
+    "arrayValues": [3, 7, 10],
+    "visualizer": "linked_list",
+    "callout": "Each node stores a value and a next pointer.",
+    "decision": "The head points at the front of the chain.",
+    "highlightIndexes": [0],
+    "pointers": {
+      "current": 0
+    }
+  },
+  {
+    "id": "ll-intro-2",
+    "narration": "Following next moves you forward one node at a time.",
+    "arrayValues": [3, 7, 10],
+    "visualizer": "linked_list",
+    "callout": "Unlike an array, there is no jumping straight to the middle.",
+    "decision": "Movement happens by pointer, not by index.",
+    "highlightIndexes": [1],
+    "pointers": {
+      "current": 1
+    },
+    "predictionPrompt": {
+      "prompt": "What does null mean in a linked list?",
+      "choices": [
+        {
+          "id": "end",
+          "label": "There is no next node",
+          "isCorrect": true,
+          "feedback": "Correct. Null marks the end of the chain."
+        },
+        {
+          "id": "zero",
+          "label": "The value is zero",
+          "isCorrect": false,
+          "feedback": "Not this one. Null is about missing nodes, not about the number zero."
+        }
+      ]
+    }
+  },
+  {
+    "id": "ll-intro-3",
+    "narration": "If the final node points to null, the chain stops there.",
+    "arrayValues": [3, 7, 10],
+    "visualizer": "linked_list",
+    "callout": "That is why null checks are the safety rule for linked lists.",
+    "decision": "Stop before trying to use .val or .next on null.",
+    "highlightIndexes": [2],
+    "pointers": {
+      "current": 2
+    },
+    "reflectionPrompt": {
+      "prompt": "Why is the head pointer so important?",
+      "placeholder": "The head matters because..."
+    }
+  }
+]

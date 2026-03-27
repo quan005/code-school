@@ -1,0 +1,74 @@
+{
+  "recapPrompt": {
+    "prompt": "Which lesson needs prev, current, and nextNode?",
+    "choices": [
+      {
+        "id": "reverse",
+        "label": "Reverse a Linked List",
+        "isCorrect": true,
+        "feedback": "Correct. Those three pointers make reversal safe."
+      },
+      {
+        "id": "traverse",
+        "label": "Traverse a Linked List",
+        "isCorrect": false,
+        "feedback": "Not this one. Traversal usually only needs current."
+      }
+    ]
+  },
+  "reflectionPrompt": {
+    "prompt": "Explain why the head pointer matters so much in linked lists.",
+    "placeholder": "The head matters because..."
+  },
+  "practiceChallenge": {
+    "title": "Mastery check: rebuild the pointer helper",
+    "description": "Complete the helper so it returns the key linked-list safety ideas without the walkthrough.",
+    "language": "javascript",
+    "starterCode": "export function linkedListSafetyRules() {\n  const endMarker = \"TODO\";\n  const frontPointer = \"TODO\";\n  const savedForwardPointer = \"TODO\";\n\n  return {\n    endMarker,\n    frontPointer,\n    savedForwardPointer,\n  };\n}\n",
+    "hints": [
+      "Null marks the end of the list.",
+      "Head is the front pointer.",
+      "nextNode protects the rest of the list during reversal."
+    ],
+    "successMessage": "Pass. You recalled the key linked-list safety rules.",
+    "retryMessage": "Needs practice. Recheck what marks the end, what starts the list, and what protects the forward chain.",
+    "completionBehavior": "mark_complete",
+    "blanks": [
+      {
+        "key": "endMarker",
+        "label": "Value that marks the end of the list",
+        "expectedValues": ["null"]
+      },
+      {
+        "key": "frontPointer",
+        "label": "Pointer at the front of the list",
+        "expectedValues": ["head"]
+      },
+      {
+        "key": "savedForwardPointer",
+        "label": "Pointer that protects the rest of the list",
+        "expectedValues": ["nextnode", "nextNode"]
+      }
+    ],
+    "visibleTests": [
+      {
+        "label": "End marker",
+        "scenario": "What tells us the list is over?",
+        "blankKey": "endMarker",
+        "expected": "null"
+      },
+      {
+        "label": "Front pointer",
+        "scenario": "What points to the front of the list?",
+        "blankKey": "frontPointer",
+        "expected": "head"
+      },
+      {
+        "label": "Saved forward pointer",
+        "scenario": "What saves the rest of the list during reversal?",
+        "blankKey": "savedForwardPointer",
+        "expected": "nextNode"
+      }
+    ]
+  }
+}

@@ -1,0 +1,81 @@
+---
+title: "Introduction"
+slug: "intro"
+order: 1
+lessonType: "intro"
+difficulty: "easy"
+estimatedMinutes: 9
+concepts:
+  - "node"
+  - "head"
+  - "next pointer"
+  - "null"
+skills:
+  - "Explain how a linked list works like a chain"
+  - "Name the important parts of a node"
+  - "Spot the safety rule around null"
+prerequisites: []
+summary: "Meet nodes, head, next, and null, and learn why linked lists act like a chain instead of side-by-side boxes."
+---
+
+<ProblemStatement title="A linked list is a chain of boxes">
+  In a linked list, each node stores a value and a pointer to the next node in
+  the chain.
+</ProblemStatement>
+
+<Intuition title="Picture a treasure hunt or a train">
+  Each clue in a treasure hunt tells you where to go next. Each train car
+  connects to the next train car. A linked list works the same way: one node
+  points to the next node.
+</Intuition>
+
+<InterviewTip>
+  Arrays let you jump by index. Linked lists make you move one node at a time by
+  following pointers from the head.
+</InterviewTip>
+
+<ComplexityCard
+  time="Usually O(n) to walk the list"
+  space="Usually O(1) extra while moving"
+  notes="The big idea is movement by pointer, not by index."
+/>
+
+## Anatomy to remember
+
+- <strong>head</strong> is the front of the list.
+- Each <strong>node</strong> stores a value and a <code>next</code> pointer.
+- <strong>null</strong> means there is no next node.
+
+## Safety rule
+
+Before using <code>.val</code> or <code>.next</code>, make sure the node is not{" "}
+
+<code>null</code>.
+
+<PredictionPrompt
+  prompt={{
+    prompt: "What does null mean in a linked list?",
+    choices: [
+      {
+        id: "end",
+        label: "It means the list ends here",
+        isCorrect: true,
+        feedback: "Correct. Null means there is no next node.",
+      },
+      {
+        id: "zero",
+        label: "It means the value is 0",
+        isCorrect: false,
+        feedback:
+          "Not this one. Null is about missing nodes, not about the number zero.",
+      },
+    ],
+  }}
+/>
+
+## Lesson Summary
+
+- Linked lists are chains of nodes.
+- The list starts at the head.
+- You move forward by following <code>next</code>.
+- Null marks the end of the chain.

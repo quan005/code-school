@@ -29,6 +29,7 @@ export const lessonFrameSchema = z.object({
   id: z.string().min(1),
   narration: z.string().min(1),
   arrayValues: z.array(z.union([z.number(), z.string()])).default([]),
+  visualizer: z.enum(["array", "linked_list"]).default("array"),
   callout: z.string().optional(),
   decision: z.string().optional(),
   highlightIndexes: z.array(z.number().int().nonnegative()).default([]),

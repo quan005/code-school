@@ -1,0 +1,107 @@
+---
+title: "Search for a Value"
+slug: "search-for-a-value"
+order: 3
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 11
+concepts:
+  - "linear search"
+  - "current pointer"
+  - "target match"
+skills:
+  - "Compare each node value to a target"
+  - "Return early when the target is found"
+prerequisites:
+  - "traverse-a-linked-list"
+summary: "Move node by node through the list and stop early if the target value appears."
+---
+
+<ProblemStatement title="Check whether the target is in the chain">
+  Given the <code>head</code> of a linked list and a target value, return{" "}
+  <code>true</code> if the value is in the list. Otherwise, return{" "}
+  <code>false</code>.
+</ProblemStatement>
+
+## Examples
+
+```txt
+2 -> 5 -> 9 -> null, target = 5 -> true
+2 -> 5 -> 9 -> null, target = 7 -> false
+```
+
+<Intuition title="Search feels like checking train cars">
+  You cannot skip to the middle. You must check one node, then the next, then
+  the next until you either find the value or run out of list.
+</Intuition>
+
+<InterviewTip>
+  A linked list search looks like array search, but the movement is different:
+  arrays use indexes, linked lists use pointers.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function searchList(head: ListNode | null, target: number): boolean {
+  let current = head;
+
+  while (current !== null) {
+    if (current.val === target) {
+      return true;
+    }
+
+    current = current.next;
+  }
+
+  return false;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(1)"
+  notes="In the worst case, you may need to check every node."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "head = null, target = 3",
+      expected: "false",
+      why: "An empty list cannot contain the target.",
+    },
+    {
+      input: "2 -> 5 -> 9 -> null, target = 5",
+      expected: "true",
+      why: "The target appears in the middle of the chain.",
+    },
+    {
+      input: "2 -> 5 -> 9 -> null, target = 7",
+      expected: "false",
+      why: "The target never appears before the list ends.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Stopping too early",
+      fix: "Only stop early when the value matches or when current becomes null.",
+    },
+    {
+      title: "Forgetting that linked lists do not jump",
+      fix: "Move one node at a time using current = current.next.",
+    },
+  ]}
+/>
+
+<HintDrawer title="What tells us the answer is false?">
+  Reaching null means the search walked through the whole chain and never found
+  the target.
+</HintDrawer>
+
+## Reflection
+
+Why does reaching null prove the target is not in the list?

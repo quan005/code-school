@@ -1,0 +1,60 @@
+[
+  {
+    "id": "reverse-1",
+    "narration": "Reversal starts by saving the rest of the list before flipping any arrow.",
+    "arrayValues": [1, 2, 3],
+    "visualizer": "linked_list",
+    "callout": "Current is at 1, prev is null, and nextNode should save 2.",
+    "decision": "Save nextNode first so the forward path is not lost.",
+    "highlightIndexes": [0, 1],
+    "pointers": {
+      "current": 0,
+      "left": 1
+    }
+  },
+  {
+    "id": "reverse-2",
+    "narration": "After one flip, 1 points backward to null and prev moves up to 1.",
+    "arrayValues": [1],
+    "visualizer": "linked_list",
+    "callout": "Current then moves to the saved nextNode, which is 2.",
+    "decision": "Every step saves, flips, and moves.",
+    "highlightIndexes": [0],
+    "pointers": {
+      "current": 0
+    },
+    "predictionPrompt": {
+      "prompt": "Why must nextNode be saved before changing current.next?",
+      "choices": [
+        {
+          "id": "save-rest",
+          "label": "To protect the rest of the list",
+          "isCorrect": true,
+          "feedback": "Correct. Without nextNode, the forward chain could be lost."
+        },
+        {
+          "id": "speed",
+          "label": "To make the code run faster",
+          "isCorrect": false,
+          "feedback": "Not this one. The key reason is safety, not speed."
+        }
+      ]
+    }
+  },
+  {
+    "id": "reverse-3",
+    "narration": "When every arrow has flipped, prev points at the new head 3.",
+    "arrayValues": [3, 2, 1],
+    "visualizer": "linked_list",
+    "callout": "The reversed chain now flows 3 to 2 to 1 to null.",
+    "decision": "Return prev.",
+    "highlightIndexes": [0, 1, 2],
+    "pointers": {
+      "current": 0
+    },
+    "reflectionPrompt": {
+      "prompt": "Why is prev the new head after reversal finishes?",
+      "placeholder": "Prev becomes the new head because..."
+    }
+  }
+]

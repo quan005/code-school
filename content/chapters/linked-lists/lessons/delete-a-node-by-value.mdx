@@ -1,0 +1,117 @@
+---
+title: "Delete a Node by Value"
+slug: "delete-a-node-by-value"
+order: 5
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 13
+concepts:
+  - "skip over"
+  - "previous node"
+  - "head case"
+skills:
+  - "Reconnect a list around a removed node"
+  - "Handle deleting the head safely"
+prerequisites:
+  - "insert-at-the-end"
+summary: "Delete the first matching node by changing the previous pointer so the list skips over it."
+---
+
+<ProblemStatement title="Remove the first matching node">
+  Given the <code>head</code> of a linked list and a target value, delete the
+  first node whose value equals the target and return the updated head.
+</ProblemStatement>
+
+## Example
+
+```txt
+3 -> 7 -> 9 -> null
+delete 7
+result -> 3 -> 9 -> null
+```
+
+<Intuition title="Deletion means reconnecting">
+  We usually do not erase the node directly. Instead, we make the node before it
+  skip over it by changing one pointer.
+</Intuition>
+
+<InterviewTip>
+  The head is a special case. If the head holds the target, the answer becomes
+  head.next.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function deleteByValue(head: ListNode | null, target: number): ListNode | null {
+  if (head === null) {
+    return null;
+  }
+
+  if (head.val === target) {
+    return head.next;
+  }
+
+  let current = head;
+
+  while (current.next !== null) {
+    if (current.next.val === target) {
+      current.next = current.next.next;
+      return head;
+    }
+
+    current = current.next;
+  }
+
+  return head;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(1)"
+  notes="We may need to walk until the target appears, but the actual deletion is one pointer change."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "3 -> 7 -> 9 -> null, target = 7",
+      expected: "[3, 9]",
+      why: "The previous node skips over 7.",
+    },
+    {
+      input: "3 -> 7 -> 9 -> null, target = 3",
+      expected: "[7, 9]",
+      why: "Deleting the head returns head.next.",
+    },
+    {
+      input: "3 -> 7 -> 9 -> null, target = 100",
+      expected: "[3, 7, 9]",
+      why: "If the target is missing, the list stays the same.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Forgetting the head case",
+      fix: "If head.val matches the target, return head.next.",
+    },
+    {
+      title: "Looking at current instead of current.next",
+      fix: "To skip a node safely, you need to change the previous node’s next pointer.",
+    },
+  ]}
+/>
+
+<HintDrawer title="What does skipping mean?">
+  If current points to 3 and current.next points to 7, then setting current.next
+  to 7.next makes the chain jump over 7.
+</HintDrawer>
+
+## Reflection
+
+Why does deletion need the previous node’s pointer instead of only the target
+node itself?

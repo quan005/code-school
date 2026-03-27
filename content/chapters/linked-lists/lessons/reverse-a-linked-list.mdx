@@ -1,0 +1,106 @@
+---
+title: "Reverse a Linked List"
+slug: "reverse-a-linked-list"
+order: 6
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 14
+concepts:
+  - "prev"
+  - "current"
+  - "nextNode"
+skills:
+  - "Save the rest of the list before flipping a pointer"
+  - "Reverse all the arrows safely"
+prerequisites:
+  - "delete-a-node-by-value"
+summary: "Reverse the list by saving nextNode, flipping one arrow at a time, and returning the new head."
+---
+
+<ProblemStatement title="Flip the chain around">
+  Given the <code>head</code> of a linked list, reverse the list and return the
+  new head.
+</ProblemStatement>
+
+## Example
+
+```txt
+1 -> 2 -> 3 -> null
+result -> 3 -> 2 -> 1 -> null
+```
+
+<Intuition title="Reverse means flipping arrows">
+  To reverse safely, we need three pointers: <code>prev</code>,{" "}
+  <code>current</code>, and <code>nextNode</code>. We save the rest of the list
+  before flipping the current arrow.
+</Intuition>
+
+<InterviewTip>
+  The key danger is losing the rest of the chain. That is why{" "}
+  <code>nextNode</code> must be saved before changing <code>current.next</code>.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function reverseList(head: ListNode | null): ListNode | null {
+  let prev: ListNode | null = null;
+  let current: ListNode | null = head;
+
+  while (current !== null) {
+    const nextNode = current.next;
+    current.next = prev;
+    prev = current;
+    current = nextNode;
+  }
+
+  return prev;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(1)"
+  notes="Each node is visited once, and only a few pointers are used."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "head = null",
+      expected: "[]",
+      why: "An empty list stays empty.",
+    },
+    {
+      input: "1 -> 2 -> 3 -> null",
+      expected: "[3, 2, 1]",
+      why: "Each arrow flips direction.",
+    },
+    {
+      input: "5 -> null",
+      expected: "[5]",
+      why: "A one-node list already points to null.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Changing current.next before saving nextNode",
+      fix: "Save nextNode first so the rest of the list is not lost.",
+    },
+    {
+      title: "Returning the old head",
+      fix: "After reversal, prev becomes the new head.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Three jobs in each step">
+  Save the next node, flip one arrow, and move the pointers forward.
+</HintDrawer>
+
+## Reflection
+
+Why does saving <code>nextNode</code> make reversal safe?

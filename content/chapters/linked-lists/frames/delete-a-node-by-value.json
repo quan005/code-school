@@ -1,0 +1,60 @@
+[
+  {
+    "id": "delete-1",
+    "narration": "Deletion works by making one node skip over the target node.",
+    "arrayValues": [3, 7, 9],
+    "visualizer": "linked_list",
+    "callout": "Current points at 3, and current.next points at the target 7.",
+    "decision": "Change current.next so it points to 7.next instead.",
+    "highlightIndexes": [0, 1],
+    "pointers": {
+      "current": 0,
+      "right": 1
+    }
+  },
+  {
+    "id": "delete-2",
+    "narration": "After the pointer change, the chain jumps directly from 3 to 9.",
+    "arrayValues": [3, 9],
+    "visualizer": "linked_list",
+    "callout": "That is what it means to delete by skipping over a node.",
+    "decision": "Return the original head because the front of the list did not change.",
+    "highlightIndexes": [0, 1],
+    "pointers": {
+      "current": 0
+    },
+    "predictionPrompt": {
+      "prompt": "What is the special case if the head itself matches the target?",
+      "choices": [
+        {
+          "id": "head-next",
+          "label": "Return head.next",
+          "isCorrect": true,
+          "feedback": "Correct. The new front of the list starts after the deleted head."
+        },
+        {
+          "id": "same-head",
+          "label": "Return the same head",
+          "isCorrect": false,
+          "feedback": "Not this one. The head node is the one being removed."
+        }
+      ]
+    }
+  },
+  {
+    "id": "delete-3",
+    "narration": "Deletion is safe because the list stays connected before and after the skipped node.",
+    "arrayValues": [3, 9],
+    "visualizer": "linked_list",
+    "callout": "The removed node is no longer part of the chain you follow from head.",
+    "decision": "One pointer change can update the whole path of the list.",
+    "highlightIndexes": [0, 1],
+    "pointers": {
+      "current": 0
+    },
+    "reflectionPrompt": {
+      "prompt": "Why do we need the previous node’s pointer to delete safely?",
+      "placeholder": "We need the previous pointer because..."
+    }
+  }
+]

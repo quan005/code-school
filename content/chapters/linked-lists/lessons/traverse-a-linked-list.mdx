@@ -1,0 +1,111 @@
+---
+title: "Traverse a Linked List"
+slug: "traverse-a-linked-list"
+order: 2
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 11
+concepts:
+  - "traversal"
+  - "current pointer"
+  - "null check"
+skills:
+  - "Move from head to null safely"
+  - "Collect or print node values in order"
+prerequisites:
+  - "intro"
+summary: "Start at head, follow next one node at a time, and stop when current becomes null."
+---
+
+<ProblemStatement title="Visit every node from start to end">
+  Given the <code>head</code> of a linked list, print or collect all the values
+  from start to end.
+</ProblemStatement>
+
+## Example
+
+```txt
+head -> 4 -> 8 -> 2 -> null
+output -> [4, 8, 2]
+```
+
+<Intuition title="Follow the chain">
+  Traversing means starting at the head and following <code>next</code> until
+  there is no next node left.
+</Intuition>
+
+<InterviewTip>
+  The most important loop rule is: while the current node is not null, use it,
+  then move forward.
+</InterviewTip>
+
+## Plan
+
+1. Start with <code>current = head</code>.
+2. While <code>current !== null</code>, use <code>current.val</code>.
+3. Move to <code>current.next</code>.
+4. Stop when <code>current</code> becomes <code>null</code>.
+
+## TypeScript Solution
+
+```ts
+function traverseList(head: ListNode | null): number[] {
+  const values: number[] = [];
+  let current = head;
+
+  while (current !== null) {
+    values.push(current.val);
+    current = current.next;
+  }
+
+  return values;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(n)"
+  notes="We visit each node once and store the output values in order."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "head = null",
+      expected: "[]",
+      why: "An empty list has nothing to visit.",
+    },
+    {
+      input: "head -> 5 -> null",
+      expected: "[5]",
+      why: "A one-node list still follows the same rule.",
+    },
+    {
+      input: "head -> 1 -> 2 -> 3 -> null",
+      expected: "[1, 2, 3]",
+      why: "Traversal reads the chain in order.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Forgetting the null check",
+      fix: "Always stop when current becomes null before reading current.val.",
+    },
+    {
+      title: "Never moving current forward",
+      fix: "At the end of each loop, set current = current.next.",
+    },
+  ]}
+/>
+
+<HintDrawer title="What does current do?">
+  Current is your finger on the chain. It points at the node you are visiting
+  right now.
+</HintDrawer>
+
+## Reflection
+
+Why do linked lists need pointer movement instead of array indexes?
