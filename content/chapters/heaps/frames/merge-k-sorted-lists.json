@@ -1,0 +1,36 @@
+[
+  {
+    "id": "merge-1",
+    "narration": "We put the front node of each non-empty list into a min-heap.",
+    "arrayValues": [1, 2, 3],
+    "callout": "Only the current front nodes are candidates for the next answer node.",
+    "highlightIndexes": [0, 1, 2],
+    "pointers": {
+      "current": 0
+    }
+  },
+  {
+    "id": "merge-2",
+    "narration": "We pop 1, attach it to the merged list, then push 4 because 4 becomes the new front node from that same list.",
+    "arrayValues": [2, 3, 4],
+    "decision": "After using one front node, push the next node from that list.",
+    "highlightIndexes": [0, 1, 2],
+    "pointers": {
+      "current": 0
+    }
+  },
+  {
+    "id": "merge-3",
+    "narration": "The heap always holds the smallest front choices, so each pop gives the next correct merged node.",
+    "arrayValues": [2, 3, 4],
+    "callout": "The next smallest answer is always at the top.",
+    "highlightIndexes": [0],
+    "pointers": {
+      "current": 0
+    },
+    "reflectionPrompt": {
+      "prompt": "Why do we only need each list's current front node in the heap?",
+      "placeholder": "We only need front nodes because..."
+    }
+  }
+]

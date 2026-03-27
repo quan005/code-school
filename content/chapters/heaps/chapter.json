@@ -1,0 +1,7 @@
+{
+  "slug": "heaps",
+  "title": "Heaps",
+  "order": 8,
+  "track": "Code Patterns",
+  "summary": "Learn how a heap keeps the smallest or largest important item ready so you can solve top-k, priority, and repeated min or max problems."
+}

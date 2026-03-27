@@ -1,0 +1,23 @@
+{
+  "recapPrompt": {
+    "prompt": "What is the strongest clue that a heap might help?",
+    "choices": [
+      {
+        "id": "important-item",
+        "label": "You need the next smallest, largest, or top-k item often",
+        "isCorrect": true,
+        "feedback": "Correct. Heaps are strong when one important item must stay easy to reach."
+      },
+      {
+        "id": "full-sort",
+        "label": "You need every item in perfect sorted order all the time",
+        "isCorrect": false,
+        "feedback": "Not this one. Full sorting points away from heaps and toward sorting directly."
+      }
+    ]
+  },
+  "reflectionPrompt": {
+    "prompt": "Explain how a heap is different from a fully sorted list.",
+    "placeholder": "A heap is different because..."
+  }
+}

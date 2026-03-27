@@ -1,0 +1,36 @@
+[
+  {
+    "id": "k-largest-1",
+    "narration": "We keep a min-heap that stores only the current best 3 large values.",
+    "arrayValues": [1, 3, 5],
+    "callout": "The smallest of the current top 3 sits on top.",
+    "highlightIndexes": [0],
+    "pointers": {
+      "current": 0
+    }
+  },
+  {
+    "id": "k-largest-2",
+    "narration": "When 12 arrives, the heap becomes too big. We remove 1, the weakest of the current best 4 values.",
+    "arrayValues": [3, 5, 12],
+    "decision": "If heap size goes past k, pop the smallest survivor.",
+    "highlightIndexes": [0, 1, 2],
+    "pointers": {
+      "current": 0
+    }
+  },
+  {
+    "id": "k-largest-3",
+    "narration": "Later 11 arrives, so 3 gets removed and the heap ends with 5, 11, and 12.",
+    "arrayValues": [5, 11, 12],
+    "callout": "Only the k largest numbers survive.",
+    "highlightIndexes": [0, 1, 2],
+    "pointers": {
+      "current": 0
+    },
+    "reflectionPrompt": {
+      "prompt": "Why do we want the weakest of the current best values easy to remove?",
+      "placeholder": "We want that because..."
+    }
+  }
+]

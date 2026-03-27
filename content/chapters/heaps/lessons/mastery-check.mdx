@@ -1,0 +1,39 @@
+---
+title: "Mastery Check"
+slug: "mastery-check"
+order: 9
+lessonType: "mastery"
+difficulty: "medium"
+estimatedMinutes: 10
+concepts:
+  - "min-heap"
+  - "max-heap"
+  - "most important item"
+skills:
+  - "Recall the main heap clues without a walkthrough"
+  - "Explain when to pick min-heap or max-heap"
+prerequisites:
+  - "review"
+summary: "Show that you can recognize heap clues, remember min-heap versus max-heap, and rebuild the main ideas on your own."
+---
+
+<ProblemStatement title="Can you rebuild the heap clues from memory?">
+  This mastery check asks you to remember what heaps keep ready and how heap
+  choice changes with the goal.
+</ProblemStatement>
+
+<Intuition title="The heap keeps the most important current item ready">
+  That might mean the smallest item, the largest item, the farthest survivor to
+  remove, or the weakest of the current top-k group.
+</Intuition>
+
+<ComplexityCard
+  time="Heap push and pop are often O(log n)"
+  space="Depends on how many candidates must be stored"
+  notes="The big benefit is keeping one important item easy to reach without full sorting."
+/>
+
+## Reflection
+
+Explain in your own words when you would choose a min-heap instead of a
+max-heap.

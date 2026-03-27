@@ -1,0 +1,114 @@
+---
+title: "K Closest Points to the Origin"
+slug: "k-closest-points-to-the-origin"
+order: 5
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 13
+concepts:
+  - "distance"
+  - "squared distance"
+  - "max-heap of size k"
+skills:
+  - "Compare points by squared distance"
+  - "Keep only the current k closest points"
+prerequisites:
+  - "find-the-k-largest-numbers"
+summary: "Use a max-heap of size k so the farthest of the current best points is easy to remove."
+---
+
+<ProblemStatement title="Keep the closest points">
+  You are given points like <code>[x, y]</code>. Return the <code>k</code>
+  points closest to the origin <code>(0, 0)</code>.
+</ProblemStatement>
+
+## Example
+
+```txt
+points = [[1, 3], [-2, 2], [2, -1]], k = 2
+answer = [[-2, 2], [2, -1]]
+```
+
+<Intuition title="Keep the k closest, remove the farthest of those best points">
+  To compare closeness, we can use squared distance: <code>x*x + y*y</code>. We
+  keep a max-heap of size <code>k</code> so the farthest of the current best
+  points is easy to remove.
+</Intuition>
+
+<InterviewTip>
+  We use squared distance instead of true distance because it compares points
+  correctly without needing square roots.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function kClosest(points: number[][], k: number): number[][] {
+  const maxHeap = new Heap<[number, number[]]>((a, b) => a[0] > b[0]);
+
+  for (const point of points) {
+    const distance = point[0] * point[0] + point[1] * point[1];
+    maxHeap.push([distance, point]);
+
+    if (maxHeap.size() > k) {
+      maxHeap.pop();
+    }
+  }
+
+  const result: number[][] = [];
+
+  while (maxHeap.size() > 0) {
+    result.push(maxHeap.pop()![1]);
+  }
+
+  return result;
+}
+```
+
+<ComplexityCard
+  time="O(n log k)"
+  space="O(k)"
+  notes="The heap stores only the current k closest points, and the farthest of them stays on top for easy removal."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "points = [[1, 3], [-2, 2], [2, -1]], k = 2",
+      expected: "[[-2, 2], [2, -1]] in any order",
+      why: "These two points have the smallest squared distances.",
+    },
+    {
+      input: "points = [[0, 1]], k = 1",
+      expected: "[[0, 1]]",
+      why: "There is only one point.",
+    },
+    {
+      input: "points = [[3, 3], [5, -1], [-2, 4]], k = 2",
+      expected: "the two closest points",
+      why: "The max-heap removes the farther survivor when needed.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Using a min-heap for the current k closest points",
+      fix: "Use a max-heap so the farthest current survivor is easiest to remove.",
+    },
+    {
+      title: "Using square roots when they are not needed",
+      fix: "Squared distance compares points the same way for this problem.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Store the distance with the point">
+  The heap needs both the point and the value that tells how close it is.
+</HintDrawer>
+
+## Reflection
+
+Why do we want the farthest of the current best <code>k</code> points easy to
+remove?

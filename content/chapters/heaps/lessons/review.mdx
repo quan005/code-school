@@ -1,0 +1,46 @@
+---
+title: "Review"
+slug: "review"
+order: 8
+lessonType: "review"
+difficulty: "easy"
+estimatedMinutes: 8
+concepts:
+  - "top item"
+  - "top k"
+  - "priority"
+skills:
+  - "Review the main heap clues"
+  - "Tell when min-heap and max-heap are the better fit"
+prerequisites:
+  - "connect-ropes-with-minimum-cost"
+summary: "Review the big heap clues, the main lesson patterns, and when to choose min-heap or max-heap."
+---
+
+<ProblemStatement title="When should heap thinking appear?">
+  This review lesson helps you remember the biggest clues that point to heaps.
+</ProblemStatement>
+
+<Intuition title="You often care about the top item, not full order">
+  Heap problems often care about the next best, smallest, largest, or top-k
+  item. That is different from wanting every value fully sorted.
+</Intuition>
+
+<ComplexityCard
+  time="Often O(log n) per push or pop"
+  space="Depends on how many candidates you keep"
+  notes="The heap gives quick access to the most important item while avoiding full sorting."
+/>
+
+## Pattern Summary
+
+- Top k largest: min-heap of size <code>k</code>
+- Kth largest: min-heap of size <code>k</code>, heap top is the answer
+- Top k frequent: count with a map, then heap the best entries
+- K closest points: max-heap of size <code>k</code>
+- Merge k sorted lists: min-heap of current front nodes
+- Connect ropes: min-heap of rope lengths
+
+## Reflection
+
+Which heap clue feels easiest for you to notice now?

@@ -1,0 +1,86 @@
+{
+  "recapPrompt": {
+    "prompt": "In a min-heap, what kind of value sits on top?",
+    "choices": [
+      {
+        "id": "smallest",
+        "label": "The smallest value",
+        "isCorrect": true,
+        "feedback": "Correct. A min-heap keeps the smallest item on top."
+      },
+      {
+        "id": "largest",
+        "label": "The largest value",
+        "isCorrect": false,
+        "feedback": "Not this one. That is the max-heap rule."
+      }
+    ]
+  },
+  "reflectionPrompt": {
+    "prompt": "Explain in your own words when you would choose a min-heap instead of a max-heap.",
+    "placeholder": "I would choose a min-heap when..."
+  },
+  "practiceChallenge": {
+    "title": "Mastery check: rebuild the heap clues",
+    "description": "Complete the helper so it returns the main heap clue for each kind of goal.",
+    "language": "javascript",
+    "starterCode": "export function heapClue(goal) {\n  const minClue = \"TODO\";\n  const maxClue = \"TODO\";\n  const topKClue = \"TODO\";\n\n  if (goal === \"min\") {\n    return minClue;\n  }\n\n  if (goal === \"max\") {\n    return maxClue;\n  }\n\n  return topKClue;\n}\n",
+    "hints": [
+      "Min-heap means the smallest item is easiest to reach.",
+      "Max-heap means the largest item is easiest to reach.",
+      "Top-k often keeps the weakest current survivor easy to remove."
+    ],
+    "successMessage": "Pass. You rebuilt the main heap clues from memory.",
+    "retryMessage": "Needs practice. Recheck what min-heap, max-heap, and top-k heap choices each mean.",
+    "completionBehavior": "mark_complete",
+    "blanks": [
+      {
+        "key": "minClue",
+        "label": "Main clue for a min-heap",
+        "expectedValues": [
+          "smallest on top",
+          "smallest item ready",
+          "smallest first"
+        ]
+      },
+      {
+        "key": "maxClue",
+        "label": "Main clue for a max-heap",
+        "expectedValues": [
+          "largest on top",
+          "largest item ready",
+          "largest first"
+        ]
+      },
+      {
+        "key": "topKClue",
+        "label": "Main clue for many top-k heap problems",
+        "expectedValues": [
+          "remove weakest survivor",
+          "keep weakest of best easy to remove",
+          "top k survivors"
+        ]
+      }
+    ],
+    "visibleTests": [
+      {
+        "label": "Min-heap clue",
+        "scenario": "goal = min",
+        "blankKey": "minClue",
+        "expected": "smallest on top"
+      },
+      {
+        "label": "Max-heap clue",
+        "scenario": "goal = max",
+        "blankKey": "maxClue",
+        "expected": "largest on top"
+      },
+      {
+        "label": "Top-k clue",
+        "scenario": "goal = topk",
+        "blankKey": "topKClue",
+        "expected": "remove weakest survivor"
+      }
+    ]
+  }
+}

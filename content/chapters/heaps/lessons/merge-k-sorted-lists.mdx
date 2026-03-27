@@ -1,0 +1,132 @@
+---
+title: "Merge K Sorted Lists"
+slug: "merge-k-sorted-lists"
+order: 6
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 15
+concepts:
+  - "front node"
+  - "many sorted sources"
+  - "current smallest candidate"
+skills:
+  - "Keep the front node of each list in a min-heap"
+  - "Build one sorted answer by repeatedly taking the smallest front node"
+prerequisites:
+  - "k-closest-points-to-the-origin"
+summary: "Use a min-heap to always take the smallest front node from many sorted linked lists."
+---
+
+<ProblemStatement title="Pull the next smallest node from many lists">
+  You are given <code>k</code> sorted linked lists. Merge them into one sorted
+  linked list and return the head.
+</ProblemStatement>
+
+## Example
+
+```txt
+1 -> 4 -> 7
+2 -> 5
+3 -> 6 -> 8
+
+answer:
+1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
+```
+
+<Intuition title="The next smallest node must be at the front of one list">
+  We do not need every node in a heap at once. We only need the current front
+  node from each non-empty list. The smallest of those front nodes is the next
+  correct node for the merged answer.
+</Intuition>
+
+<InterviewTip>
+  When many sorted sources each have a current smallest candidate, a min-heap is
+  often the right tool.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+class ListNode {
+  val: number;
+  next: ListNode | null;
+
+  constructor(val: number, next: ListNode | null = null) {
+    this.val = val;
+    this.next = next;
+  }
+}
+
+function mergeKLists(lists: Array<ListNode | null>): ListNode | null {
+  const minHeap = new Heap<ListNode>((a, b) => a.val < b.val);
+
+  for (const node of lists) {
+    if (node !== null) {
+      minHeap.push(node);
+    }
+  }
+
+  const dummy = new ListNode(0);
+  let tail = dummy;
+
+  while (minHeap.size() > 0) {
+    const node = minHeap.pop()!;
+    tail.next = node;
+    tail = tail.next;
+
+    if (node.next !== null) {
+      minHeap.push(node.next);
+    }
+  }
+
+  return dummy.next;
+}
+```
+
+<ComplexityCard
+  time="O(n log k)"
+  space="O(k)"
+  notes="The heap stores at most one current front node from each list."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "three sorted lists starting with 1, 2, and 3",
+      expected: "one merged sorted list",
+      why: "The heap always picks the smallest current front node.",
+    },
+    {
+      input: "lists = []",
+      expected: "null",
+      why: "No lists means no merged result.",
+    },
+    {
+      input: "lists = [null, 1 -> null]",
+      expected: "1 -> null",
+      why: "Only one real node exists.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Pushing every node into the heap at the start",
+      fix: "Push only the current front node from each list.",
+    },
+    {
+      title: "Forgetting to push node.next after popping",
+      fix: "When one node is used, the next node from that list becomes the new front candidate.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Front nodes only">
+  Each list already stays sorted, so the only candidate you need from a list is
+  its current front node.
+</HintDrawer>
+
+## Reflection
+
+Why is the next smallest merged node always at the front of one of the lists?

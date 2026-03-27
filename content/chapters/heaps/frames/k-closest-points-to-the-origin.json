@@ -1,0 +1,36 @@
+[
+  {
+    "id": "closest-1",
+    "narration": "We compare points by squared distance so we can tell which ones are closer without using square roots.",
+    "arrayValues": ["[1,3]=10", "[-2,2]=8", "[2,-1]=5"],
+    "callout": "Smaller squared distance means closer to the origin.",
+    "highlightIndexes": [0, 1, 2],
+    "pointers": {
+      "current": 0
+    }
+  },
+  {
+    "id": "closest-2",
+    "narration": "A max-heap of size 2 stores the current closest points, and the farthest of those survivors sits on top.",
+    "arrayValues": ["10:[1,3]", "8:[-2,2]"],
+    "decision": "If a closer point arrives, remove the farthest survivor.",
+    "highlightIndexes": [0, 1],
+    "pointers": {
+      "current": 0
+    }
+  },
+  {
+    "id": "closest-3",
+    "narration": "When [2,-1] with distance 5 arrives, [1,3] with distance 10 gets removed. The two closest points survive.",
+    "arrayValues": ["8:[-2,2]", "5:[2,-1]"],
+    "callout": "The farthest current survivor is the one easiest to remove.",
+    "highlightIndexes": [0, 1],
+    "pointers": {
+      "current": 0
+    },
+    "reflectionPrompt": {
+      "prompt": "Why is a max-heap the right choice for keeping the current k closest points?",
+      "placeholder": "A max-heap is right because..."
+    }
+  }
+]

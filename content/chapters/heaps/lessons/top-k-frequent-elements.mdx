@@ -1,0 +1,118 @@
+---
+title: "Top K Frequent Elements"
+slug: "top-k-frequent-elements"
+order: 4
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 14
+concepts:
+  - "frequency"
+  - "map plus heap"
+  - "pairs"
+skills:
+  - "Count frequencies with a map"
+  - "Keep the top k entries by frequency in a heap"
+prerequisites:
+  - "find-the-k-largest-numbers"
+summary: "Use a map to count and a heap to keep only the most frequent entries."
+---
+
+<ProblemStatement title="Find the numbers that appear the most">
+  Given an array of numbers <code>nums</code>, return the <code>k</code> most
+  frequent elements.
+</ProblemStatement>
+
+## Example
+
+```txt
+nums = [1, 1, 1, 2, 2, 3], k = 2
+answer = [1, 2]
+```
+
+<Intuition title="First count, then keep the best counts">
+  This problem has two jobs. First count how often each value appears. Then use
+  a heap to keep the best <code>k</code> frequency entries.
+</Intuition>
+
+<InterviewTip>
+  Some problems mix patterns. Here, a hash map does the counting and a heap does
+  the top-k filtering.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function topKFrequent(nums: number[], k: number): number[] {
+  const counts = new Map<number, number>();
+
+  for (const num of nums) {
+    counts.set(num, (counts.get(num) ?? 0) + 1);
+  }
+
+  const minHeap = new Heap<[number, number]>((a, b) => a[1] < b[1]);
+
+  for (const entry of counts.entries()) {
+    minHeap.push(entry);
+
+    if (minHeap.size() > k) {
+      minHeap.pop();
+    }
+  }
+
+  const result: number[] = [];
+
+  while (minHeap.size() > 0) {
+    result.push(minHeap.pop()![0]);
+  }
+
+  return result;
+}
+```
+
+<ComplexityCard
+  time="O(n log k)"
+  space="O(n)"
+  notes="The map holds counts, and the heap keeps only the strongest k frequency entries."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "nums = [1, 1, 1, 2, 2, 3], k = 2",
+      expected: "[1, 2] in any order",
+      why: "1 appears 3 times and 2 appears 2 times.",
+    },
+    {
+      input: "nums = [4, 4, 4, 5, 5, 6], k = 1",
+      expected: "[4]",
+      why: "4 is the most frequent.",
+    },
+    {
+      input: "nums = [7], k = 1",
+      expected: "[7]",
+      why: "Only one value appears.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Trying to use a heap before counting",
+      fix: "First count how many times each value appears, then compare those counts.",
+    },
+    {
+      title: "Forgetting what each pair means",
+      fix: "Each heap entry is [number, frequency].",
+    },
+  ]}
+/>
+
+<HintDrawer title="Count first">
+  The heap cannot choose the most frequent items until the frequencies are
+  known.
+</HintDrawer>
+
+## Reflection
+
+Why does this problem need both a map and a heap?

@@ -1,0 +1,57 @@
+{
+  "practiceChallenge": {
+    "title": "Fill in the top-k heap helper",
+    "description": "Complete the helper so it describes the right heap rule for keeping the k largest values.",
+    "language": "javascript",
+    "starterCode": "export function topKHeapRule(job) {\n  const heapType = \"TODO\";\n  const removeRule = \"TODO\";\n  const topMeaning = \"TODO\";\n\n  if (job === \"heap\") {\n    return heapType;\n  }\n\n  if (job === \"remove\") {\n    return removeRule;\n  }\n\n  return topMeaning;\n}\n",
+    "hints": [
+      "Use a min-heap for current top-k largest survivors.",
+      "If the heap grows past k, remove the smallest survivor.",
+      "The top is the weakest of the current best group."
+    ],
+    "successMessage": "Nice work. You rebuilt the main top-k heap rule.",
+    "retryMessage": "Not yet. Recheck which heap keeps the weakest top-k survivor easy to remove.",
+    "completionBehavior": "mark_complete",
+    "blanks": [
+      {
+        "key": "heapType",
+        "label": "Heap type for k largest survivors",
+        "expectedValues": ["min-heap", "min heap"]
+      },
+      {
+        "key": "removeRule",
+        "label": "What to remove when heap size goes past k",
+        "expectedValues": ["smallest", "smallest survivor", "weakest"]
+      },
+      {
+        "key": "topMeaning",
+        "label": "What the top means in the current top-k heap",
+        "expectedValues": [
+          "weakest of the best",
+          "smallest survivor",
+          "smallest of top k"
+        ]
+      }
+    ],
+    "visibleTests": [
+      {
+        "label": "Heap type",
+        "scenario": "job = heap",
+        "blankKey": "heapType",
+        "expected": "min-heap"
+      },
+      {
+        "label": "Remove rule",
+        "scenario": "job = remove",
+        "blankKey": "removeRule",
+        "expected": "smallest"
+      },
+      {
+        "label": "Top meaning",
+        "scenario": "job = top",
+        "blankKey": "topMeaning",
+        "expected": "weakest of the best"
+      }
+    ]
+  }
+}

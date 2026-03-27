@@ -1,0 +1,54 @@
+[
+  {
+    "id": "intro-1",
+    "narration": "A heap keeps one very important item easy to reach at the top.",
+    "arrayValues": [1, 3, 10, 8, 6, 14, 4],
+    "callout": "In this min-heap picture, the smallest value is on top.",
+    "highlightIndexes": [0],
+    "pointers": {
+      "current": 0
+    }
+  },
+  {
+    "id": "intro-2",
+    "narration": "A min-heap keeps the smallest on top. A max-heap keeps the largest on top.",
+    "arrayValues": ["min", "max"],
+    "decision": "Choose the heap type based on what item you need easiest to reach.",
+    "highlightIndexes": [0, 1],
+    "pointers": {
+      "left": 0,
+      "right": 1
+    },
+    "predictionPrompt": {
+      "prompt": "If you keep the current 5 lowest costs and want to remove the biggest of those survivors when a cheaper cost appears, which heap fits best?",
+      "choices": [
+        {
+          "id": "max",
+          "label": "Max-heap",
+          "isCorrect": true,
+          "feedback": "Correct. The biggest of the current best costs should be easy to remove."
+        },
+        {
+          "id": "min",
+          "label": "Min-heap",
+          "isCorrect": false,
+          "feedback": "Not this one. A min-heap would make the smallest survivor easiest to remove."
+        }
+      ]
+    }
+  },
+  {
+    "id": "intro-3",
+    "narration": "A heap is not fully sorted. It mainly promises something special about the top item.",
+    "arrayValues": [1, 3, 10, 8, 6, 14, 4],
+    "callout": "Top ready does not mean everything else is perfectly ordered.",
+    "highlightIndexes": [0, 1, 2],
+    "pointers": {
+      "current": 0
+    },
+    "reflectionPrompt": {
+      "prompt": "Why can a heap still be useful even if every value is not fully sorted?",
+      "placeholder": "It is still useful because..."
+    }
+  }
+]

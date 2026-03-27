@@ -1,0 +1,32 @@
+[
+  {
+    "id": "kth-1",
+    "narration": "The min-heap stores the current 2 largest values as we scan the array.",
+    "arrayValues": [2, 3],
+    "callout": "The top is the smaller of the two survivors.",
+    "highlightIndexes": [0],
+    "pointers": {
+      "current": 0
+    }
+  },
+  {
+    "id": "kth-2",
+    "narration": "When 5 and 6 arrive, weaker survivors get removed and the heap becomes [5, 6].",
+    "arrayValues": [5, 6],
+    "decision": "Keep heap size equal to k.",
+    "highlightIndexes": [0, 1],
+    "pointers": {
+      "current": 0
+    }
+  },
+  {
+    "id": "kth-3",
+    "narration": "The top value 5 is the smallest of the top 2 survivors, which makes it the 2nd largest overall.",
+    "arrayValues": [5, 6],
+    "callout": "Heap top = kth largest answer.",
+    "highlightIndexes": [0],
+    "pointers": {
+      "current": 0
+    }
+  }
+]

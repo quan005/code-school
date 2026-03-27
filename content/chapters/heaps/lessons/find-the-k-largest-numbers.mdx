@@ -1,0 +1,113 @@
+---
+title: "Find the K Largest Numbers"
+slug: "find-the-k-largest-numbers"
+order: 2
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 13
+concepts:
+  - "top k"
+  - "min-heap of size k"
+  - "remove the weakest of the best"
+skills:
+  - "Keep only the current k largest values"
+  - "Use a min-heap to throw away weaker candidates"
+prerequisites: []
+summary: "Use a min-heap of size k to keep only the current largest numbers."
+---
+
+<ProblemStatement title="Keep only the best k values">
+  Given an array of numbers <code>nums</code> and a number <code>k</code>,
+  return the <code>k</code> largest numbers. The result can be in any order.
+</ProblemStatement>
+
+## Example
+
+```txt
+nums = [3, 1, 5, 12, 2, 11], k = 3
+answer = [5, 11, 12]
+```
+
+<Intuition title="Keep the best k, throw away the weakest of those best">
+  We use a min-heap of size at most <code>k</code>. That heap stores the current
+  best <code>k</code> large values. If one more value comes in, we remove the
+  smallest of those best values.
+</Intuition>
+
+<InterviewTip>
+  The min-heap feels backward at first, but it is correct because the smallest
+  of the current top <code>k</code> is the easiest one to throw away.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function kLargestNumbers(nums: number[], k: number): number[] {
+  const minHeap = new Heap<number>((a, b) => a < b);
+
+  for (const num of nums) {
+    minHeap.push(num);
+
+    if (minHeap.size() > k) {
+      minHeap.pop();
+    }
+  }
+
+  const result: number[] = [];
+
+  while (minHeap.size() > 0) {
+    result.push(minHeap.pop()!);
+  }
+
+  return result;
+}
+```
+
+<ComplexityCard
+  time="O(n log k)"
+  space="O(k)"
+  notes="The heap never grows past k, so we avoid sorting the whole array."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "nums = [3, 1, 5, 12, 2, 11], k = 3",
+      expected: "[5, 11, 12] in any order",
+      why: "Only the 3 biggest values survive in the heap.",
+    },
+    {
+      input: "nums = [5, 12, 11, -1, 12], k = 3",
+      expected: "[11, 12, 12] in any order",
+      why: "The weaker values get removed.",
+    },
+    {
+      input: "nums = [1], k = 1",
+      expected: "[1]",
+      why: "One value means one answer.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Using a max-heap for the current top k values",
+      fix: "Use a min-heap so the weakest of the best values is easy to remove.",
+    },
+    {
+      title: "Letting the heap grow past k",
+      fix: "If the heap gets bigger than k, pop right away.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Keep only the survivors">
+  The heap is not trying to hold every number. It is only trying to hold the
+  best k candidates seen so far.
+</HintDrawer>
+
+## Reflection
+
+Why is the smallest of the current top <code>k</code> the one we want easy to
+remove?

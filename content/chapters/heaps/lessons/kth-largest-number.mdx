@@ -1,0 +1,107 @@
+---
+title: "Kth Largest Number"
+slug: "kth-largest-number"
+order: 3
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 12
+concepts:
+  - "kth"
+  - "top of the heap"
+  - "k largest survivors"
+skills:
+  - "Use the same top-k heap idea for kth largest"
+  - "Explain why the heap top becomes the answer"
+prerequisites:
+  - "find-the-k-largest-numbers"
+summary: "Keep the k largest values in a min-heap and use the top as the kth largest answer."
+---
+
+<ProblemStatement title="Find the kth largest, not all of them">
+  Given an array of numbers <code>nums</code> and a number <code>k</code>,
+  return the <strong>kth</strong> largest number.
+</ProblemStatement>
+
+## Example
+
+```txt
+nums = [3, 2, 1, 5, 6, 4], k = 2
+answer = 5
+```
+
+<Intuition title="The smallest of the top k is the kth largest">
+  If a min-heap stores exactly the <code>k</code> largest values, then the top
+  of that heap is the smallest of those survivors. That makes it the kth largest
+  overall.
+</Intuition>
+
+<InterviewTip>
+  Top-k and kth are close cousins. Many kth problems reuse the same heap idea as
+  top-k problems.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function kthLargest(nums: number[], k: number): number {
+  const minHeap = new Heap<number>((a, b) => a < b);
+
+  for (const num of nums) {
+    minHeap.push(num);
+
+    if (minHeap.size() > k) {
+      minHeap.pop();
+    }
+  }
+
+  return minHeap.peek()!;
+}
+```
+
+<ComplexityCard
+  time="O(n log k)"
+  space="O(k)"
+  notes="The heap stores only k survivors, and the top is the kth largest answer."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "nums = [3, 2, 1, 5, 6, 4], k = 2",
+      expected: "5",
+      why: "The two largest values are 6 and 5, so the 2nd largest is 5.",
+    },
+    {
+      input: "nums = [7], k = 1",
+      expected: "7",
+      why: "The 1st largest is the only value.",
+    },
+    {
+      input: "nums = [3, 2, 3, 1, 2, 4, 5, 5, 6], k = 4",
+      expected: "4",
+      why: "The top four values are 6, 5, 5, and 4.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Thinking the heap top should be the largest value",
+      fix: "In this min-heap, the top is the smallest of the top-k survivors.",
+    },
+    {
+      title: "Sorting the whole array by habit",
+      fix: "A heap can solve the problem without fully ordering everything.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Same heap idea, new question">
+  The heap still stores the top k survivors. This time you only need the heap
+  top, not the whole group.
+</HintDrawer>
+
+## Reflection
+
+Why does the top of the min-heap become the kth largest number?

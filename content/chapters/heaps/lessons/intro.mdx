@@ -1,0 +1,83 @@
+---
+title: "Introduction"
+slug: "intro"
+order: 1
+lessonType: "intro"
+difficulty: "easy"
+estimatedMinutes: 10
+concepts:
+  - "heap"
+  - "min-heap"
+  - "max-heap"
+  - "k means how many"
+skills:
+  - "Explain what a heap keeps ready"
+  - "Tell the difference between a min-heap and max-heap"
+  - "Recognize top-k and priority clues"
+prerequisites: []
+summary: "Meet heaps, learn min-heap versus max-heap, and see why a heap helps when only the most important item matters."
+---
+
+<ProblemStatement title="A heap keeps one very important item easy to reach">
+  A heap is a data structure that helps us quickly get the smallest or largest
+  important item without sorting everything.
+</ProblemStatement>
+
+<Intuition title="Think about a prize line">
+  Imagine a contest where you only need to know the current highest score. You
+  do not need every score in perfect order. You just need the top score ready.
+  That is the kind of job a heap is good at.
+</Intuition>
+
+<InterviewTip>
+  Heap problems often say top <code>k</code>, kth, most frequent, closest,
+  cheapest, smallest, largest, or next best. Here, <code>k</code> just means how
+  many.
+</InterviewTip>
+
+<ComplexityCard
+  time="Push and pop are often O(log n), peek is often O(1)"
+  space="Depends on how many items the heap stores"
+  notes="A heap is useful when the top item matters more than having everything fully sorted."
+/>
+
+## Two main kinds
+
+- <strong>Min-heap</strong>: the smallest value is on top.
+- <strong>Max-heap</strong>: the largest value is on top.
+
+## Big reminder
+
+A heap is <strong>not</strong> a fully sorted list. It mainly promises
+something special about the top.
+
+<PredictionPrompt
+  prompt={{
+    prompt:
+      "If you want to keep the current 3 biggest numbers and easily remove the weakest of those 3, which heap helps most?",
+    choices: [
+      {
+        id: "min",
+        label: "Min-heap",
+        isCorrect: true,
+        feedback:
+          "Correct. The smallest of the current top 3 should be easiest to remove.",
+      },
+      {
+        id: "max",
+        label: "Max-heap",
+        isCorrect: false,
+        feedback:
+          "Not this one. A max-heap would make the biggest item easiest to remove instead.",
+      },
+    ],
+  }}
+/>
+
+## Lesson Summary
+
+- A heap keeps the most important item ready at the top.
+- Min-heap means smallest on top.
+- Max-heap means largest on top.
+- <code>k</code> means how many.
+- Heap clues often involve top-k, repeated min or max, or priority.
