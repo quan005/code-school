@@ -1,0 +1,53 @@
+[
+  {
+    "id": "nge-1",
+    "narration": "The stack stores indexes that are still waiting for a bigger value to appear later.",
+    "arrayValues": [2, 1, 2, 4, 3],
+    "callout": "Index 0 is waiting at first.",
+    "highlightIndexes": [0],
+    "pointers": {
+      "current": 0
+    }
+  },
+  {
+    "id": "nge-2",
+    "narration": "When we reach value 2 at index 2, it is bigger than value 1 at index 1, so index 1 finally gets its answer.",
+    "arrayValues": [2, 1, 2, 4, 3],
+    "decision": "Current values can solve older waiting indexes on the stack top.",
+    "highlightIndexes": [1, 2],
+    "pointers": {
+      "current": 2
+    },
+    "predictionPrompt": {
+      "prompt": "If the current value is bigger than the value at the stack top index, what should we do?",
+      "choices": [
+        {
+          "id": "pop-solve",
+          "label": "Pop that index and fill its answer",
+          "isCorrect": true,
+          "feedback": "Correct. The current value becomes that waiting index's next greater value."
+        },
+        {
+          "id": "ignore",
+          "label": "Ignore it and keep waiting",
+          "isCorrect": false,
+          "feedback": "Not this one. A bigger current value means a waiting answer was just found."
+        }
+      ]
+    }
+  },
+  {
+    "id": "nge-3",
+    "narration": "When 4 appears, it solves more than one waiting index. The stack keeps only the positions still waiting.",
+    "arrayValues": [2, 1, 2, 4, 3],
+    "callout": "Unsolved indexes stay in the stack until a bigger value appears.",
+    "highlightIndexes": [2, 3],
+    "pointers": {
+      "current": 3
+    },
+    "reflectionPrompt": {
+      "prompt": "Why does this lesson store indexes instead of only storing numbers?",
+      "placeholder": "It stores indexes because..."
+    }
+  }
+]

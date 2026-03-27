@@ -1,0 +1,119 @@
+---
+title: "Baseball Game"
+slug: "baseball-game"
+order: 5
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 13
+concepts:
+  - "score history"
+  - "most recent scores"
+  - "operations"
+skills:
+  - "Store score history in a stack"
+  - "Use the last one or two scores when an operation asks for them"
+prerequisites:
+  - "implement-a-stack-with-an-array"
+summary: "Use a stack to remember recent scores so game operations can rebuild the total."
+---
+
+<ProblemStatement title="Use the most recent scores">
+  You are given a list of score operations. A number adds that score,{" "}
+  <code>"C"</code> removes the last score, <code>"D"</code> doubles the last
+  score, and <code>"+"</code> adds the last two scores. Return the total score.
+</ProblemStatement>
+
+## Example
+
+```txt
+ops = ["5", "2", "C", "D", "+"]
+answer = 30
+```
+
+<Intuition title="The rules keep asking about recent history">
+  This problem keeps asking for the newest score or the newest two scores. That
+  makes a stack a strong fit because the top always holds the most recent score.
+</Intuition>
+
+<InterviewTip>
+  If the rules keep saying last score or last two scores, think about using a
+  stack to store history.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function calPoints(ops: string[]): number {
+  const stack: number[] = [];
+
+  for (const op of ops) {
+    if (op === "C") {
+      stack.pop();
+    } else if (op === "D") {
+      stack.push(stack[stack.length - 1] * 2);
+    } else if (op === "+") {
+      const last = stack[stack.length - 1];
+      const secondLast = stack[stack.length - 2];
+      stack.push(last + secondLast);
+    } else {
+      stack.push(Number(op));
+    }
+  }
+
+  let total = 0;
+
+  for (const score of stack) {
+    total += score;
+  }
+
+  return total;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(n)"
+  notes="The stack remembers score history, and we add the remaining scores at the end."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: 'ops = ["5", "2", "C", "D", "+"]',
+      expected: "30",
+      why: "The remaining history is [5, 10, 15].",
+    },
+    {
+      input: 'ops = ["1"]',
+      expected: "1",
+      why: "Only one score was added.",
+    },
+    {
+      input: 'ops = ["3", "D"]',
+      expected: "9",
+      why: "The scores become [3, 6].",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Forgetting that C removes the last score",
+      fix: "Pop the stack so the newest score disappears from history.",
+    },
+    {
+      title: "Computing + from the wrong scores",
+      fix: "Use the top two scores because they are the most recent ones.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Treat the stack like score history">
+  The stack is not the total score. It is the list of scores that still count.
+</HintDrawer>
+
+## Reflection
+
+Why is it helpful to save score history instead of only keeping the current
+total?

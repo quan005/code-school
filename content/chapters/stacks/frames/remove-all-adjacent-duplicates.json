@@ -1,0 +1,36 @@
+[
+  {
+    "id": "dup-1",
+    "narration": "The stack holds the characters that have survived so far.",
+    "arrayValues": ["a", "b"],
+    "callout": "The top is the most recent surviving character.",
+    "highlightIndexes": [1],
+    "pointers": {
+      "current": 1
+    }
+  },
+  {
+    "id": "dup-2",
+    "narration": "When the next b arrives, it matches the top b, so the pair disappears and we pop.",
+    "arrayValues": ["a"],
+    "decision": "Matching neighbors cancel out together.",
+    "highlightIndexes": [0],
+    "pointers": {
+      "current": 0
+    }
+  },
+  {
+    "id": "dup-3",
+    "narration": "Later a matches a on top too, so that pair disappears. The surviving letters end up as c and a.",
+    "arrayValues": ["c", "a"],
+    "callout": "The stack becomes the cleaned-up final string.",
+    "highlightIndexes": [0, 1],
+    "pointers": {
+      "current": 1
+    },
+    "reflectionPrompt": {
+      "prompt": "Why can removing one pair create another pair next to each other?",
+      "placeholder": "Removing one pair can create another because..."
+    }
+  }
+]

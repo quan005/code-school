@@ -1,0 +1,119 @@
+---
+title: "Implement a Stack with an Array"
+slug: "implement-a-stack-with-an-array"
+order: 2
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 11
+concepts:
+  - "push"
+  - "pop"
+  - "peek"
+skills:
+  - "Use the end of an array as the stack top"
+  - "Build stack methods with array operations"
+prerequisites: []
+summary: "Build a stack by treating the end of an array like the top."
+---
+
+<ProblemStatement title="Build the basic stack">
+  Create a stack that supports <code>push</code>, <code>pop</code>,{" "}
+  <code>peek</code>, and <code>isEmpty</code>.
+</ProblemStatement>
+
+## Example
+
+```txt
+start: []
+push 3 -> [3]
+push 8 -> [3, 8]
+peek -> 8
+pop -> 8
+stack -> [3]
+```
+
+<Intuition title="Let the array end be the top">
+  The easiest stack in TypeScript uses an array. The last spot in the array acts
+  like the top of the stack.
+</Intuition>
+
+<InterviewTip>
+  When you use an array as a stack, the right end is the top. That keeps the
+  main actions simple.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+class MyStack {
+  private items: number[] = [];
+
+  push(x: number): void {
+    this.items.push(x);
+  }
+
+  pop(): number | undefined {
+    return this.items.pop();
+  }
+
+  peek(): number | undefined {
+    if (this.items.length === 0) {
+      return undefined;
+    }
+
+    return this.items[this.items.length - 1];
+  }
+
+  isEmpty(): boolean {
+    return this.items.length === 0;
+  }
+}
+```
+
+<ComplexityCard
+  time="Push, pop, peek, and isEmpty are O(1) on average"
+  space="O(n)"
+  notes="The array stores the stack values, and the end of the array stays the top."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "push 3, push 8, peek",
+      expected: "8",
+      why: "The newest value is on top.",
+    },
+    {
+      input: "push 3, push 8, pop",
+      expected: "8",
+      why: "Pop removes the top value.",
+    },
+    {
+      input: "empty stack, isEmpty",
+      expected: "true",
+      why: "No values means the stack is empty.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Using the front of the array as the top",
+      fix: "Use the end so push and pop stay simple.",
+    },
+    {
+      title: "Peeking without checking emptiness",
+      fix: "Return undefined if the stack has no items.",
+    },
+  ]}
+/>
+
+<HintDrawer title="One end does all the work">
+  Add, remove, and look at the same end of the array so the stack rules stay
+  clear.
+</HintDrawer>
+
+## Reflection
+
+Why is the end of the array a good place for the stack top?

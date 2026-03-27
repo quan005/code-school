@@ -1,0 +1,36 @@
+[
+  {
+    "id": "rpn-1",
+    "narration": "Numbers wait in the stack until an operator is ready to use them.",
+    "arrayValues": [2, 1],
+    "callout": "The top values are the next ones an operator will use.",
+    "highlightIndexes": [0, 1],
+    "pointers": {
+      "current": 1
+    }
+  },
+  {
+    "id": "rpn-2",
+    "narration": "When + appears, we pop 1 and 2, add them, and push the new result 3 back.",
+    "arrayValues": [3],
+    "decision": "Two numbers out, one result back in.",
+    "highlightIndexes": [0],
+    "pointers": {
+      "current": 0
+    }
+  },
+  {
+    "id": "rpn-3",
+    "narration": "Later * combines 3 and 3 into 9, so the stack ends with one final answer.",
+    "arrayValues": [9],
+    "callout": "One value left means the whole expression is solved.",
+    "highlightIndexes": [0],
+    "pointers": {
+      "current": 0
+    },
+    "reflectionPrompt": {
+      "prompt": "Why does each operator make the stack shorter before it pushes the new result?",
+      "placeholder": "It gets shorter because..."
+    }
+  }
+]

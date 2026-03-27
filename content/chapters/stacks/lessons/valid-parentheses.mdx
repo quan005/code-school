@@ -1,0 +1,119 @@
+---
+title: "Valid Parentheses"
+slug: "valid-parentheses"
+order: 3
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 13
+concepts:
+  - "opening symbol"
+  - "closing symbol"
+  - "matching order"
+skills:
+  - "Push opening symbols"
+  - "Pop and compare when a closing symbol appears"
+prerequisites:
+  - "implement-a-stack-with-an-array"
+summary: "Use a stack to match opening and closing symbols in the correct order."
+---
+
+<ProblemStatement title="Do the symbols close correctly?">
+  Given a string with only <code>()[]{{}}</code> symbols, return{" "}
+  <code>true</code> if every opening symbol is closed in the correct order.
+  Otherwise, return <code>false</code>.
+</ProblemStatement>
+
+## Example
+
+```txt
+s = "([])"
+answer = true
+```
+
+<Intuition title="The newest opening symbol must close first">
+  When we see an opening symbol, we are waiting for its match. The most recent
+  opening symbol is the one that must close next, which is exactly stack order.
+</Intuition>
+
+<InterviewTip>
+  Counting symbols is not enough. The order matters too, which is why a stack
+  fits better than a simple counter.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function isValidParentheses(s: string): boolean {
+  const stack: string[] = [];
+  const pairs = new Map<string, string>([
+    [")", "("],
+    ["]", "["],
+    ["}", "{"],
+  ]);
+
+  for (const ch of s) {
+    if (ch === "(" || ch === "[" || ch === "{") {
+      stack.push(ch);
+    } else {
+      if (stack.length === 0) {
+        return false;
+      }
+
+      const top = stack.pop()!;
+      if (top !== pairs.get(ch)) {
+        return false;
+      }
+    }
+  }
+
+  return stack.length === 0;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(n)"
+  notes="The stack stores unfinished opening symbols until their matches appear."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: 's = "([])"',
+      expected: "true",
+      why: "The symbols close in the correct nested order.",
+    },
+    {
+      input: 's = "([)]"',
+      expected: "false",
+      why: "The order is wrong even though the counts match.",
+    },
+    {
+      input: 's = "("',
+      expected: "false",
+      why: "One opening symbol never gets closed.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Only checking how many opens and closes there are",
+      fix: "The order matters, so compare each closing symbol to the stack top.",
+    },
+    {
+      title: "Popping from an empty stack",
+      fix: "If a closing symbol appears first, return false right away.",
+    },
+  ]}
+/>
+
+<HintDrawer title="The top must be the match">
+  When a closing symbol appears, check the most recent unfinished opening
+  symbol, not an older one.
+</HintDrawer>
+
+## Reflection
+
+Why does the most recent opening symbol have to close first?

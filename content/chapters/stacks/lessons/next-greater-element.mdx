@@ -1,0 +1,108 @@
+---
+title: "Next Greater Element"
+slug: "next-greater-element"
+order: 6
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 15
+concepts:
+  - "unfinished positions"
+  - "next greater value"
+  - "indexes in a stack"
+skills:
+  - "Store waiting indexes in a stack"
+  - "Use the current value to solve older unfinished positions"
+prerequisites:
+  - "implement-a-stack-with-an-array"
+summary: "Use a stack of waiting indexes to find the next bigger value to the right."
+---
+
+<ProblemStatement title="Find the next bigger value to the right">
+  Given an array of numbers, return an array where each position tells the next
+  greater number to the right. If there is none, use <code>-1</code>.
+</ProblemStatement>
+
+## Example
+
+```txt
+nums = [2, 1, 2, 4, 3]
+answer = [4, 2, 4, -1, -1]
+```
+
+<Intuition title="Some positions are still waiting for an answer">
+  We use a stack to store indexes whose next greater value is not known yet.
+  When a bigger current value appears, it can solve the waiting positions on top
+  of the stack.
+</Intuition>
+
+<InterviewTip>
+  This is a more advanced stack pattern because the stack stores unfinished
+  positions, not only direct values.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function nextGreaterElement(nums: number[]): number[] {
+  const answer = new Array(nums.length).fill(-1);
+  const stack: number[] = [];
+
+  for (let i = 0; i < nums.length; i++) {
+    while (stack.length > 0 && nums[i] > nums[stack[stack.length - 1]]) {
+      const index = stack.pop()!;
+      answer[index] = nums[i];
+    }
+
+    stack.push(i);
+  }
+
+  return answer;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(n)"
+  notes="Each index gets pushed once and popped once, so we avoid checking every pair."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "nums = [2, 1, 2, 4, 3]",
+      expected: "[4, 2, 4, -1, -1]",
+      why: "4 solves several waiting positions.",
+    },
+    {
+      input: "nums = [1, 2, 3]",
+      expected: "[2, 3, -1]",
+      why: "Each value finds a bigger one except the last.",
+    },
+    {
+      input: "nums = [3, 2, 1]",
+      expected: "[-1, -1, -1]",
+      why: "No value has a bigger one to its right.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Storing values when you really need positions",
+      fix: "Store indexes so you know where to write the answers.",
+    },
+    {
+      title: "Only popping once",
+      fix: "Keep popping while the current value solves waiting positions on top.",
+    },
+  ]}
+/>
+
+<HintDrawer title="The stack holds unanswered spots">
+  Every index in the stack is still waiting for a bigger value to appear later.
+</HintDrawer>
+
+## Reflection
+
+Why does the stack store indexes instead of just storing the numbers?

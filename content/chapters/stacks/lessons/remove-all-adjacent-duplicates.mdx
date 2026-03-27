@@ -1,0 +1,106 @@
+---
+title: "Remove All Adjacent Duplicates"
+slug: "remove-all-adjacent-duplicates"
+order: 4
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 12
+concepts:
+  - "adjacent"
+  - "top character"
+  - "surviving string"
+skills:
+  - "Compare the current character with the stack top"
+  - "Pop matching neighbors and keep the survivors"
+prerequisites:
+  - "implement-a-stack-with-an-array"
+summary: "Use a stack to remove side-by-side matching letters until none are left."
+---
+
+<ProblemStatement title="Erase matching neighbors">
+  Given a string <code>s</code>, remove all adjacent matching letters again and
+  again until no more such pairs exist. Return the final string.
+</ProblemStatement>
+
+## Example
+
+```txt
+s = "abbaca"
+answer = "ca"
+```
+
+<Intuition title="The top stores the most recent survivor">
+  If the current character matches the stack top, the two characters should
+  disappear together. If not, the current character survives for now and gets
+  pushed.
+</Intuition>
+
+<InterviewTip>
+  This is a stack clue because every new character only needs to compare with
+  the most recent surviving character.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function removeAdjacentDuplicates(s: string): string {
+  const stack: string[] = [];
+
+  for (const ch of s) {
+    if (stack.length > 0 && stack[stack.length - 1] === ch) {
+      stack.pop();
+    } else {
+      stack.push(ch);
+    }
+  }
+
+  return stack.join("");
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(n)"
+  notes="Each character is pushed once and can be popped once."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: 's = "abbaca"',
+      expected: '"ca"',
+      why: "The bb pair disappears, then the aa pair disappears.",
+    },
+    {
+      input: 's = "azxxzy"',
+      expected: '"ay"',
+      why: "The xx pair disappears and that changes what is adjacent next.",
+    },
+    {
+      input: 's = "aaaa"',
+      expected: '""',
+      why: "Every letter disappears in matching pairs.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Only removing one duplicate pair",
+      fix: "Keep processing the whole string because new adjacent pairs can appear after a pop.",
+    },
+    {
+      title: "Comparing with the wrong character",
+      fix: "Always compare with the stack top because it is the most recent survivor.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Stack = current cleaned string">
+  The stack holds the letters that have survived so far, in order.
+</HintDrawer>
+
+## Reflection
+
+Why can a pop create a new matching pair right away?

@@ -1,0 +1,23 @@
+{
+  "recapPrompt": {
+    "prompt": "Which clue is the strongest sign that a stack might help?",
+    "choices": [
+      {
+        "id": "recent",
+        "label": "The most recent unfinished item matters most",
+        "isCorrect": true,
+        "feedback": "Correct. That is one of the clearest stack clues."
+      },
+      {
+        "id": "middle",
+        "label": "The middle item matters most",
+        "isCorrect": false,
+        "feedback": "Not this one. Middle-based thinking points more toward patterns like binary search."
+      }
+    ]
+  },
+  "reflectionPrompt": {
+    "prompt": "Explain how matching symbols and undo history both fit the stack idea.",
+    "placeholder": "They both fit because..."
+  }
+}

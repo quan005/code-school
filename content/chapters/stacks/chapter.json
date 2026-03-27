@@ -1,0 +1,7 @@
+{
+  "slug": "stacks",
+  "title": "Stacks",
+  "order": 7,
+  "track": "Code Patterns",
+  "summary": "Learn how last-in, first-out order works so you can track the top item, undo recent work, and solve matching problems step by step."
+}

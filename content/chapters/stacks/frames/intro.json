@@ -1,0 +1,53 @@
+[
+  {
+    "id": "intro-1",
+    "narration": "A stack is a pile where we add and remove only from the top.",
+    "arrayValues": [2, 7, 5],
+    "callout": "The top item is the one at the end.",
+    "highlightIndexes": [2],
+    "pointers": {
+      "current": 2
+    }
+  },
+  {
+    "id": "intro-2",
+    "narration": "Push means putting a new item on top. After pushing 9, the newest item becomes the top.",
+    "arrayValues": [2, 7, 5, 9],
+    "decision": "Push adds to the top.",
+    "highlightIndexes": [3],
+    "pointers": {
+      "current": 3
+    },
+    "predictionPrompt": {
+      "prompt": "If we pop right now, which value comes out?",
+      "choices": [
+        {
+          "id": "9",
+          "label": "9",
+          "isCorrect": true,
+          "feedback": "Correct. The newest item is on top."
+        },
+        {
+          "id": "2",
+          "label": "2",
+          "isCorrect": false,
+          "feedback": "Not this one. 2 is near the bottom."
+        }
+      ]
+    }
+  },
+  {
+    "id": "intro-3",
+    "narration": "Pop removes the top item, and peek looks at it without removing it.",
+    "arrayValues": [2, 7, 5],
+    "callout": "Stacks follow last in, first out.",
+    "highlightIndexes": [2],
+    "pointers": {
+      "current": 2
+    },
+    "reflectionPrompt": {
+      "prompt": "Why is a pile of plates a good example of a stack?",
+      "placeholder": "It is a good example because..."
+    }
+  }
+]

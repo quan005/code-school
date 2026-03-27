@@ -1,0 +1,51 @@
+[
+  {
+    "id": "paren-1",
+    "narration": "When we see an opening symbol, we push it because we are waiting for its match later.",
+    "arrayValues": ["(", "["],
+    "callout": "The top holds the most recent unfinished opening symbol.",
+    "highlightIndexes": [1],
+    "pointers": {
+      "current": 1
+    }
+  },
+  {
+    "id": "paren-2",
+    "narration": "When ] appears, it must match the top opening symbol [ first.",
+    "arrayValues": ["("],
+    "decision": "A correct match lets us pop the top.",
+    "highlightIndexes": [0],
+    "pointers": {
+      "current": 0
+    },
+    "predictionPrompt": {
+      "prompt": "If the next symbol is ), what should happen?",
+      "choices": [
+        {
+          "id": "pop",
+          "label": "Pop the top (",
+          "isCorrect": true,
+          "feedback": "Correct. ) matches the most recent unfinished (."
+        },
+        {
+          "id": "push",
+          "label": "Push ) onto the stack",
+          "isCorrect": false,
+          "feedback": "Not this one. Closing symbols should match and remove the opening symbol."
+        }
+      ]
+    }
+  },
+  {
+    "id": "paren-3",
+    "narration": "At the end, the stack must be empty. That means every opening symbol found the correct closing match.",
+    "arrayValues": [],
+    "callout": "Empty stack means all symbols matched cleanly.",
+    "highlightIndexes": [],
+    "pointers": {},
+    "reflectionPrompt": {
+      "prompt": "Why is the order of symbols just as important as the count?",
+      "placeholder": "The order matters because..."
+    }
+  }
+]

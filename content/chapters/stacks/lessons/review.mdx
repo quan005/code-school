@@ -1,0 +1,47 @@
+---
+title: "Review"
+slug: "review"
+order: 8
+lessonType: "review"
+difficulty: "easy"
+estimatedMinutes: 8
+concepts:
+  - "top"
+  - "unfinished item"
+  - "recent history"
+skills:
+  - "Review the main stack clues"
+  - "Tell different stack jobs apart"
+prerequisites:
+  - "evaluate-reverse-polish-notation"
+summary: "Review the big stack idea and the main problem types stacks can solve."
+---
+
+<ProblemStatement title="When should stack thinking appear in your mind?">
+  This review lesson helps you remember the main clues that point to stack
+  problems.
+</ProblemStatement>
+
+<Intuition title="The top item keeps showing up">
+  In stack problems, the newest unfinished thing often matters most. That may be
+  a symbol, a score, a character, an index, or a number waiting for an operator.
+</Intuition>
+
+<ComplexityCard
+  time="Usually O(n) for the chapter problems"
+  space="Usually O(n)"
+  notes="The stack stores only the history or unfinished work the problem still needs."
+/>
+
+## Pattern Summary
+
+- Basic stack: use the array end as the top.
+- Matching symbols: push opens, pop on closes.
+- Removing duplicates: compare with the top survivor.
+- Score history: keep recent scores in a stack.
+- Next greater: keep unanswered indexes.
+- RPN: push numbers, pop two when an operator appears.
+
+## Reflection
+
+Which stack job feels most natural to you now?

@@ -1,0 +1,36 @@
+[
+  {
+    "id": "baseball-1",
+    "narration": "We use a stack to store score history, because the rules keep asking about recent scores.",
+    "arrayValues": [5, 2],
+    "callout": "The top score is the most recent score.",
+    "highlightIndexes": [1],
+    "pointers": {
+      "current": 1
+    }
+  },
+  {
+    "id": "baseball-2",
+    "narration": "When C appears, we remove the most recent score from the stack.",
+    "arrayValues": [5],
+    "decision": "C means cancel the top score.",
+    "highlightIndexes": [0],
+    "pointers": {
+      "current": 0
+    }
+  },
+  {
+    "id": "baseball-3",
+    "narration": "D doubles the top score, and + uses the top two scores. The stack ends as [5, 10, 15].",
+    "arrayValues": [5, 10, 15],
+    "callout": "The total comes from the scores still left in the stack.",
+    "highlightIndexes": [1, 2],
+    "pointers": {
+      "current": 2
+    },
+    "reflectionPrompt": {
+      "prompt": "Why is keeping the score history more helpful than only keeping the total?",
+      "placeholder": "Keeping the history helps because..."
+    }
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "id": "stack-array-1",
+    "narration": "We start with an empty array. The end of the array will act like the stack top.",
+    "arrayValues": [],
+    "callout": "An empty stack has no top item yet.",
+    "highlightIndexes": [],
+    "pointers": {}
+  },
+  {
+    "id": "stack-array-2",
+    "narration": "After pushing 3 and then 8, the end of the array holds the top value 8.",
+    "arrayValues": [3, 8],
+    "decision": "Push adds to the array end.",
+    "highlightIndexes": [1],
+    "pointers": {
+      "current": 1
+    }
+  },
+  {
+    "id": "stack-array-3",
+    "narration": "Peek sees 8, and pop removes 8, leaving 3 on top.",
+    "arrayValues": [3],
+    "callout": "Pop removes the most recent value.",
+    "highlightIndexes": [0],
+    "pointers": {
+      "current": 0
+    },
+    "reflectionPrompt": {
+      "prompt": "Why is the array end a better stack top than the front?",
+      "placeholder": "The array end is better because..."
+    }
+  }
+]

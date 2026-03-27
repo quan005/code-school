@@ -1,0 +1,74 @@
+---
+title: "Introduction"
+slug: "intro"
+order: 1
+lessonType: "intro"
+difficulty: "easy"
+estimatedMinutes: 9
+concepts:
+  - "stack"
+  - "top"
+  - "last in, first out"
+skills:
+  - "Explain what last in, first out means"
+  - "Name push, pop, and peek"
+  - "Spot when the newest unfinished item matters most"
+prerequisites: []
+summary: "Meet the stack idea, learn push, pop, and peek, and see why the top item often matters most."
+---
+
+<ProblemStatement title="A stack is a top-only pile">
+  A stack is a data structure where we add to the top and remove from the top.
+  The last thing we put in is the first thing we take out.
+</ProblemStatement>
+
+<Intuition title="Think about a pile of plates">
+  When you stack plates, the newest plate goes on top. When someone takes a
+  plate, they also take the top one. That is how a stack works in code.
+</Intuition>
+
+<InterviewTip>
+  Stacks are a clue when a problem cares about the most recent unfinished item,
+  matching symbols, undo actions, or removing while the top matches a rule.
+</InterviewTip>
+
+<ComplexityCard
+  time="Push and pop are often O(1)"
+  space="Depends on how many items are stored"
+  notes="The big idea is not speed alone. It is that the top item is always the easiest one to use next."
+/>
+
+## Three main actions
+
+- <code>push</code> adds to the top.
+- <code>pop</code> removes from the top.
+- <code>peek</code> looks at the top without removing it.
+
+<PredictionPrompt
+  prompt={{
+    prompt:
+      "If you push 3, then push 8, which value will come out first when you pop?",
+    choices: [
+      {
+        id: "eight",
+        label: "8",
+        isCorrect: true,
+        feedback: "Correct. The newest item is on top.",
+      },
+      {
+        id: "three",
+        label: "3",
+        isCorrect: false,
+        feedback:
+          "Not this one. 3 went in earlier, so it is lower in the stack.",
+      },
+    ],
+  }}
+/>
+
+## Lesson Summary
+
+- A stack follows last in, first out.
+- The top is the most important place.
+- Push adds, pop removes, and peek looks.
+- Stacks help when the newest unfinished thing matters most.

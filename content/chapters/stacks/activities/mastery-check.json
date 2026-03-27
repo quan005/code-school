@@ -1,0 +1,86 @@
+{
+  "recapPrompt": {
+    "prompt": "In a stack, where do push and pop happen?",
+    "choices": [
+      {
+        "id": "top",
+        "label": "At the top",
+        "isCorrect": true,
+        "feedback": "Correct. Both actions happen at the top of the stack."
+      },
+      {
+        "id": "middle",
+        "label": "In the middle",
+        "isCorrect": false,
+        "feedback": "Not this one. Stacks do not usually remove from the middle."
+      }
+    ]
+  },
+  "reflectionPrompt": {
+    "prompt": "Explain in your own words when a stack is a smart choice.",
+    "placeholder": "A stack is smart when..."
+  },
+  "practiceChallenge": {
+    "title": "Mastery check: rebuild the stack clues",
+    "description": "Complete the helper so it returns the main stack clue for each kind of problem.",
+    "language": "javascript",
+    "starterCode": "export function stackClue(problemType) {\n  const symbolClue = \"TODO\";\n  const historyClue = \"TODO\";\n  const recentClue = \"TODO\";\n\n  if (problemType === \"symbols\") {\n    return symbolClue;\n  }\n\n  if (problemType === \"history\") {\n    return historyClue;\n  }\n\n  return recentClue;\n}\n",
+    "hints": [
+      "Symbols use the most recent unfinished opening symbol.",
+      "History problems often need the latest action or score.",
+      "A stack is a clue when the top or newest item matters most."
+    ],
+    "successMessage": "Pass. You rebuilt the main stack clues from memory.",
+    "retryMessage": "Needs practice. Recheck how symbols, history, and recent-first order connect to stacks.",
+    "completionBehavior": "mark_complete",
+    "blanks": [
+      {
+        "key": "symbolClue",
+        "label": "Main clue for symbol matching",
+        "expectedValues": [
+          "match most recent opening",
+          "recent opening",
+          "match top"
+        ]
+      },
+      {
+        "key": "historyClue",
+        "label": "Main clue for score or undo history",
+        "expectedValues": [
+          "use recent history",
+          "latest history",
+          "recent scores"
+        ]
+      },
+      {
+        "key": "recentClue",
+        "label": "Main clue for stack thinking",
+        "expectedValues": [
+          "newest item first",
+          "top item matters",
+          "most recent item matters"
+        ]
+      }
+    ],
+    "visibleTests": [
+      {
+        "label": "Symbols clue",
+        "scenario": "problemType = symbols",
+        "blankKey": "symbolClue",
+        "expected": "match most recent opening"
+      },
+      {
+        "label": "History clue",
+        "scenario": "problemType = history",
+        "blankKey": "historyClue",
+        "expected": "use recent history"
+      },
+      {
+        "label": "Recent-first clue",
+        "scenario": "problemType = recent",
+        "blankKey": "recentClue",
+        "expected": "newest item first"
+      }
+    ]
+  }
+}

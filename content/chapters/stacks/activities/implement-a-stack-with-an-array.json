@@ -1,0 +1,53 @@
+{
+  "practiceChallenge": {
+    "title": "Fill in the stack actions",
+    "description": "Complete the helper so it returns the right stack action for each job.",
+    "language": "javascript",
+    "starterCode": "export function chooseStackAction(job) {\n  const addAction = \"TODO\";\n  const removeAction = \"TODO\";\n  const lookAction = \"TODO\";\n\n  if (job === \"add\") {\n    return addAction;\n  }\n\n  if (job === \"remove\") {\n    return removeAction;\n  }\n\n  return lookAction;\n}\n",
+    "hints": [
+      "Adding to a stack is push.",
+      "Removing from a stack is pop.",
+      "Looking without removing is peek."
+    ],
+    "successMessage": "Nice work. You matched the stack jobs to the correct actions.",
+    "retryMessage": "Not yet. Recheck what push, pop, and peek each do.",
+    "completionBehavior": "mark_complete",
+    "blanks": [
+      {
+        "key": "addAction",
+        "label": "Action for adding to the top",
+        "expectedValues": ["push"]
+      },
+      {
+        "key": "removeAction",
+        "label": "Action for removing the top",
+        "expectedValues": ["pop"]
+      },
+      {
+        "key": "lookAction",
+        "label": "Action for looking at the top",
+        "expectedValues": ["peek"]
+      }
+    ],
+    "visibleTests": [
+      {
+        "label": "Add means push",
+        "scenario": "job = add",
+        "blankKey": "addAction",
+        "expected": "push"
+      },
+      {
+        "label": "Remove means pop",
+        "scenario": "job = remove",
+        "blankKey": "removeAction",
+        "expected": "pop"
+      },
+      {
+        "label": "Look means peek",
+        "scenario": "job = look",
+        "blankKey": "lookAction",
+        "expected": "peek"
+      }
+    ]
+  }
+}
