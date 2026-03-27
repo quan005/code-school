@@ -7,15 +7,27 @@ export default async function ProfilePage() {
 
   return (
     <div className="stack-lg">
-      <Panel eyebrow="Profile" title="Learner profile">
+      <Panel eyebrow="Private learner context" title="Learner settings">
         <p>
-          This active learner context is what lesson progress and mastery
-          updates are scoped to in the MVP.
+          This page is only an internal app view for the active learner context.
+          The MVP does not expose public student profile pages.
         </p>
         <div className="inline-cluster">
           <Badge>{activeStudent.displayName}</Badge>
-          <Badge>Student view</Badge>
-          <Badge>Safety-ready foundation</Badge>
+          <Badge>Adult-managed learner</Badge>
+          <Badge>Private by default</Badge>
+        </div>
+      </Panel>
+      <Panel eyebrow="Safety notes" title="MVP guardrails">
+        <p>
+          Progress, submissions, and mastery updates stay scoped to this learner
+          only. No chat, public sharing, or open student discovery exists in the
+          MVP.
+        </p>
+        <div className="inline-cluster">
+          <Badge>No public profiles</Badge>
+          <Badge>No messaging</Badge>
+          <Badge>Minimal telemetry only</Badge>
         </div>
       </Panel>
     </div>

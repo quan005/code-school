@@ -2,11 +2,16 @@
 
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
-import { recordSubmission, setLessonStatus } from "@/db/progress";
+import {
+  getActiveStudentContext,
+  recordSubmission,
+  setLessonStatus,
+} from "@/db/progress";
 import {
   evaluatePracticeChallenge,
   getLessonActivity,
 } from "@/lib/content/practice";
+import { trackMinimalTelemetryEvent } from "@/lib/telemetry";
 
 const runPracticeChallengeSchema = z.object({
   chapterSlug: z.string().min(1),
@@ -20,6 +25,7 @@ export async function runPracticeChallengeAction(input: {
   lessonSlug: string;
 }) {
   const parsed = runPracticeChallengeSchema.parse(input);
+  const activeStudent = await getActiveStudentContext();
   const activity = await getLessonActivity(
     parsed.chapterSlug,
     parsed.lessonSlug,
@@ -44,6 +50,15 @@ export async function runPracticeChallengeAction(input: {
       passedCount: result.passedCount,
       totalCount: result.totalCount,
     }),
+  });
+  trackMinimalTelemetryEvent({
+    eventName: "practice_run",
+    chapterSlug: parsed.chapterSlug,
+    lessonSlug: parsed.lessonSlug,
+    passedAll: result.passedAll,
+    passedCount: result.passedCount,
+    studentProfileId: activeStudent.studentProfileId,
+    totalCount: result.totalCount,
   });
 
   if (

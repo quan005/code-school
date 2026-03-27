@@ -8,7 +8,8 @@ datasource db {
 }
 
 enum UserRole {
-  ACCOUNT_HOLDER
+  ADULT_ACCOUNT_HOLDER
+  TEACHER
   ADMIN
 }
 
@@ -26,27 +27,42 @@ enum ChapterStatus {
 }
 
 model User {
-  id              String           @id @default(cuid())
-  email           String           @unique
-  role            UserRole         @default(ACCOUNT_HOLDER)
-  createdAt       DateTime         @default(now())
-  updatedAt       DateTime         @updatedAt
-  studentProfiles StudentProfile[]
+  id                 String                    @id @default(cuid())
+  email              String                    @unique
+  role               UserRole                  @default(ADULT_ACCOUNT_HOLDER)
+  createdAt          DateTime                  @default(now())
+  updatedAt          DateTime                  @updatedAt
+  studentProfiles    StudentProfile[]
+  teacherAssignments TeacherStudentAssignment[] @relation("TeacherAssignments")
 }
 
 model StudentProfile {
-  id              String            @id @default(cuid())
-  accountHolderId String
-  displayName     String
-  gradeLevel      Int?
-  createdAt       DateTime          @default(now())
-  updatedAt       DateTime          @updatedAt
-  accountHolder   User              @relation(fields: [accountHolderId], references: [id], onDelete: Cascade)
-  lessonProgress  LessonProgress[]
-  chapterProgress ChapterProgress[]
-  submissions     Submission[]
+  id                 String                    @id @default(cuid())
+  accountHolderId    String
+  displayName        String
+  gradeLevel         Int?
+  isPublic           Boolean                   @default(false)
+  createdAt          DateTime                  @default(now())
+  updatedAt          DateTime                  @updatedAt
+  accountHolder      User                      @relation(fields: [accountHolderId], references: [id], onDelete: Cascade)
+  lessonProgress     LessonProgress[]
+  chapterProgress    ChapterProgress[]
+  submissions        Submission[]
+  teacherAssignments TeacherStudentAssignment[] @relation("StudentAssignments")
 
   @@index([accountHolderId])
+}
+
+model TeacherStudentAssignment {
+  id               String         @id @default(cuid())
+  teacherUserId    String
+  studentProfileId String
+  createdAt        DateTime       @default(now())
+  studentProfile   StudentProfile @relation("StudentAssignments", fields: [studentProfileId], references: [id], onDelete: Cascade)
+  teacher          User           @relation("TeacherAssignments", fields: [teacherUserId], references: [id], onDelete: Cascade)
+
+  @@unique([teacherUserId, studentProfileId])
+  @@index([studentProfileId])
 }
 
 model LessonProgress {

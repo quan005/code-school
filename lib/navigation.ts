@@ -7,5 +7,5 @@ export const marketingNav = [
 export const appNav = [
   { href: "/dashboard", label: "Dashboard" },
   { href: "/chapters", label: "Chapters" },
-  { href: "/profile", label: "Profile" },
+  { href: "/profile", label: "Learner" },
 ];
