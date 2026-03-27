@@ -1,0 +1,59 @@
+[
+  {
+    "id": "perm-1",
+    "narration": "A permutation window must stay the same length as the pattern.",
+    "arrayValues": ["e", "i", "d", "b", "a", "o", "o", "o"],
+    "callout": "If the pattern length is 2, every check window also has length 2.",
+    "decision": "Use a map to track how the current window matches the needed letter counts.",
+    "highlightIndexes": [2, 3],
+    "pointers": {
+      "left": 2,
+      "right": 3
+    }
+  },
+  {
+    "id": "perm-2",
+    "narration": "When the window ba appears, its counts match the pattern ab.",
+    "arrayValues": ["e", "i", "d", "b", "a", "o", "o", "o"],
+    "callout": "The letters are in a different order, but the counts are the same.",
+    "decision": "That means this window is a permutation.",
+    "highlightIndexes": [3, 4],
+    "pointers": {
+      "left": 3,
+      "right": 4
+    },
+    "predictionPrompt": {
+      "prompt": "Why must this lesson use a fixed-size window?",
+      "choices": [
+        {
+          "id": "same-length",
+          "label": "Because a permutation must have the same length as the pattern",
+          "isCorrect": true,
+          "feedback": "Correct. The substring and pattern must be equally long."
+        },
+        {
+          "id": "longer-better",
+          "label": "Because longer windows are always better",
+          "isCorrect": false,
+          "feedback": "Not this one. The key reason is equal length."
+        }
+      ]
+    }
+  },
+  {
+    "id": "perm-3",
+    "narration": "As the window slides, letter counts are updated when characters enter and leave.",
+    "arrayValues": ["e", "i", "d", "b", "a", "o", "o", "o"],
+    "callout": "The map keeps track of which pattern letters are fully matched.",
+    "decision": "Return true when all pattern counts match at the same time.",
+    "highlightIndexes": [3, 4],
+    "pointers": {
+      "left": 3,
+      "right": 4
+    },
+    "reflectionPrompt": {
+      "prompt": "Why does this lesson need both a fixed-size window and a map?",
+      "placeholder": "It needs both because..."
+    }
+  }
+]

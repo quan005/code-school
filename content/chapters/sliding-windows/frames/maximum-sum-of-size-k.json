@@ -1,0 +1,59 @@
+[
+  {
+    "id": "max-sum-1",
+    "narration": "Start by building the first fixed-size window of length 3.",
+    "arrayValues": [2, 1, 5, 1, 3, 2],
+    "callout": "The first window [2, 1, 5] has sum 8.",
+    "decision": "Save that as the current window sum and current best sum.",
+    "highlightIndexes": [0, 1, 2],
+    "pointers": {
+      "left": 0,
+      "right": 2
+    }
+  },
+  {
+    "id": "max-sum-2",
+    "narration": "When the window slides, remove the left value and add the new right value.",
+    "arrayValues": [2, 1, 5, 1, 3, 2],
+    "callout": "Sliding to [1, 5, 1] means subtract 2 and add 1.",
+    "decision": "The new sum becomes 7 without rebuilding the whole window.",
+    "highlightIndexes": [1, 2, 3],
+    "pointers": {
+      "left": 1,
+      "right": 3
+    },
+    "predictionPrompt": {
+      "prompt": "Why do we subtract one value and add one value?",
+      "choices": [
+        {
+          "id": "slide",
+          "label": "Because one value leaves and one enters",
+          "isCorrect": true,
+          "feedback": "Correct. That is the sliding-window update rule."
+        },
+        {
+          "id": "sort",
+          "label": "Because the window needs sorting",
+          "isCorrect": false,
+          "feedback": "Not this one. The rule is about movement, not sorting."
+        }
+      ]
+    }
+  },
+  {
+    "id": "max-sum-3",
+    "narration": "The window [5, 1, 3] reaches the biggest sum, which is 9.",
+    "arrayValues": [2, 1, 5, 1, 3, 2],
+    "callout": "That becomes the best fixed-size window in the array.",
+    "decision": "Return 9.",
+    "highlightIndexes": [2, 3, 4],
+    "pointers": {
+      "left": 2,
+      "right": 4
+    },
+    "reflectionPrompt": {
+      "prompt": "Why does fixed-size sliding let us reuse the current sum?",
+      "placeholder": "We can reuse the sum because..."
+    }
+  }
+]

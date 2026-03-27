@@ -1,0 +1,110 @@
+---
+title: "Longest Substring Without Repeating Characters"
+slug: "longest-substring-without-repeating-characters"
+order: 5
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 13
+concepts:
+  - "dynamic window"
+  - "set"
+  - "repeat removal"
+skills:
+  - "Use a set to track what is inside the window"
+  - "Shrink until repeats are gone"
+prerequisites:
+  - "smallest-subarray-with-sum-at-least-target"
+summary: "Expand the window across the string, and whenever a repeat appears, shrink from the left until the window becomes unique again."
+---
+
+<ProblemStatement title="Find the longest substring with no repeated characters">
+  Given a string <code>s</code>, return the length of the longest substring that
+  has no repeating characters.
+</ProblemStatement>
+
+## Examples
+
+```txt
+s = "abcabcbb" -> 3
+s = "bbbbb" -> 1
+```
+
+<Intuition title="Keep the window unique">
+  A set can remember which characters are inside the current window. When a
+  repeat appears, shrink from the left until the repeat is gone.
+</Intuition>
+
+<InterviewTip>
+  Use <code>while</code> when shrinking. One left move may not be enough to
+  remove the repeated character.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function lengthOfLongestSubstring(s: string): number {
+  let left = 0;
+  let best = 0;
+  const seen = new Set<string>();
+
+  for (let right = 0; right < s.length; right++) {
+    while (seen.has(s[right])) {
+      seen.delete(s[left]);
+      left++;
+    }
+
+    seen.add(s[right]);
+    best = Math.max(best, right - left + 1);
+  }
+
+  return best;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(k)"
+  notes="The set stores the current window characters, and both pointers only move forward."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: 's = "abcabcbb"',
+      expected: "3",
+      why: "The longest unique substring is abc.",
+    },
+    {
+      input: 's = "bbbbb"',
+      expected: "1",
+      why: "Only one b can stay in a unique window.",
+    },
+    {
+      input: 's = ""',
+      expected: "0",
+      why: "An empty string has no substring.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Removing only one character and stopping",
+      fix: "Keep shrinking until the repeated character is completely gone from the window.",
+    },
+    {
+      title:
+        "Forgetting to update the best length after the window becomes valid",
+      fix: "Measure the window after adding the new right character and restoring uniqueness.",
+    },
+  ]}
+/>
+
+<HintDrawer title="What does the set match?">
+  The set should always match the characters currently inside the window.
+</HintDrawer>
+
+## Reflection
+
+Why is the set a good helper for this lesson?

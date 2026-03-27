@@ -1,0 +1,111 @@
+---
+title: "Smallest Subarray with Sum at Least Target"
+slug: "smallest-subarray-with-sum-at-least-target"
+order: 4
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 12
+concepts:
+  - "dynamic window"
+  - "target sum"
+  - "shrink when valid"
+skills:
+  - "Grow a window until it becomes valid"
+  - "Shrink from the left to find the smallest valid section"
+prerequisites:
+  - "average-of-every-window-of-size-k"
+summary: "Use a dynamic window: grow until the sum is big enough, then shrink to find the smallest valid length."
+---
+
+<ProblemStatement title="Find the shortest valid window">
+  Given an array of positive integers <code>nums</code> and a positive integer{" "}
+  <code>target</code>, return the length of the smallest contiguous subarray
+  whose sum is greater than or equal to <code>target</code>.
+</ProblemStatement>
+
+## Example
+
+```txt
+nums = [2, 1, 5, 2, 3, 2], target = 7 -> 2
+```
+
+<Intuition title="Grow first, then shrink">
+  A fixed-size window will not work because the best answer could have many
+  different lengths. So we grow the window with right until the sum is big
+  enough, then shrink left to make it as small as possible.
+</Intuition>
+
+<InterviewTip>
+  The shrinking phase usually needs a <code>while</code> loop, not an{" "}
+  <code>if</code>, because the window may stay valid after shrinking once.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function smallestSubarrayWithSum(target: number, nums: number[]): number {
+  let left = 0;
+  let windowSum = 0;
+  let minLength = Infinity;
+
+  for (let right = 0; right < nums.length; right++) {
+    windowSum += nums[right];
+
+    while (windowSum >= target) {
+      minLength = Math.min(minLength, right - left + 1);
+      windowSum -= nums[left];
+      left++;
+    }
+  }
+
+  return minLength === Infinity ? 0 : minLength;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(1)"
+  notes="Each pointer only moves forward, even though the window grows and shrinks."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "target = 7, nums = [2, 1, 5, 2, 3, 2]",
+      expected: "2",
+      why: "The window [5, 2] is valid and very short.",
+    },
+    {
+      input: "target = 7, nums = [2, 1, 5, 2, 8]",
+      expected: "1",
+      why: "The single value 8 already meets the target.",
+    },
+    {
+      input: "target = 100, nums = [1, 2, 3]",
+      expected: "0",
+      why: "No window can reach the target.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Shrinking only once",
+      fix: "Keep shrinking while the window is still valid so you can find the smallest length.",
+    },
+    {
+      title: "Using this as a fixed-size problem",
+      fix: "The answer length can change, so the window must be dynamic.",
+    },
+  ]}
+/>
+
+<HintDrawer title="When should the window shrink?">
+  Shrink when the current sum already meets the target and you want to see
+  whether a shorter valid window exists.
+</HintDrawer>
+
+## Reflection
+
+Why does this lesson need a dynamic window instead of a fixed-size one?

@@ -1,0 +1,136 @@
+---
+title: "Permutation in a String"
+slug: "permutation-in-a-string"
+order: 6
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 13
+concepts:
+  - "fixed-size window"
+  - "frequency map"
+  - "matched counts"
+skills:
+  - "Track letter counts inside a moving window"
+  - "Check whether a fixed-size substring matches a pattern"
+prerequisites:
+  - "longest-substring-without-repeating-characters"
+summary: "Use a fixed-size window and a map of needed letter counts to check whether any substring is a permutation of the pattern."
+---
+
+<ProblemStatement title="Check whether the string contains a permutation">
+  Given two strings <code>pattern</code> and <code>s</code>, return{" "}
+  <code>true</code> if any substring of <code>s</code> is a permutation of{" "}
+  <code>pattern</code>.
+</ProblemStatement>
+
+## Examples
+
+```txt
+pattern = "ab", s = "eidbaooo" -> true
+pattern = "ab", s = "eidboaoo" -> false
+```
+
+<Intuition title="The window must have the right size and the right counts">
+  A permutation uses the same letters with the same counts. That means we use a
+  fixed-size window of <code>pattern.length</code> plus a map to track the
+  counts we still need.
+</Intuition>
+
+<InterviewTip>
+  This is a great example of combining a sliding window with a hash map.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function containsPermutation(pattern: string, s: string): boolean {
+  const counts = new Map<string, number>();
+
+  for (const ch of pattern) {
+    counts.set(ch, (counts.get(ch) ?? 0) + 1);
+  }
+
+  let left = 0;
+  let matched = 0;
+
+  for (let right = 0; right < s.length; right++) {
+    const rightChar = s[right];
+
+    if (counts.has(rightChar)) {
+      counts.set(rightChar, counts.get(rightChar)! - 1);
+
+      if (counts.get(rightChar) === 0) {
+        matched++;
+      }
+    }
+
+    if (right >= pattern.length - 1) {
+      if (matched === counts.size) {
+        return true;
+      }
+
+      const leftChar = s[left];
+      left++;
+
+      if (counts.has(leftChar)) {
+        if (counts.get(leftChar) === 0) {
+          matched--;
+        }
+
+        counts.set(leftChar, counts.get(leftChar)! + 1);
+      }
+    }
+  }
+
+  return false;
+}
+```
+
+<ComplexityCard
+  time="O(n + m)"
+  space="O(m)"
+  notes="The map remembers the pattern counts, and the fixed-size window moves across the larger string."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: 'pattern = "ab", s = "eidbaooo"',
+      expected: "true",
+      why: "The substring ba is a permutation of ab.",
+    },
+    {
+      input: 'pattern = "ab", s = "eidboaoo"',
+      expected: "false",
+      why: "No window matches the needed counts.",
+    },
+    {
+      input: 'pattern = "a", s = "a"',
+      expected: "true",
+      why: "A one-letter window can still match.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title:
+        "Forgetting to restore the left character count when the window slides",
+      fix: "When a character leaves the window, its needed count must be updated too.",
+    },
+    {
+      title: "Using a dynamic window instead of a fixed-size one",
+      fix: "Permutations must have the same length as the pattern, so the window size stays fixed.",
+    },
+  ]}
+/>
+
+<HintDrawer title="What does matched mean?">
+  Matched counts how many different letters currently have exactly the right
+  count.
+</HintDrawer>
+
+## Reflection
+
+Why does this lesson need both a fixed-size window and a map of counts?

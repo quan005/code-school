@@ -1,0 +1,74 @@
+{
+  "recapPrompt": {
+    "prompt": "What clue most strongly suggests a fixed-size window?",
+    "choices": [
+      {
+        "id": "k",
+        "label": "The problem says size k",
+        "isCorrect": true,
+        "feedback": "Correct. Size k usually means the window width stays fixed."
+      },
+      {
+        "id": "shortest",
+        "label": "The problem asks for the shortest valid section",
+        "isCorrect": false,
+        "feedback": "Not this one. Shortest valid sections usually use a dynamic window."
+      }
+    ]
+  },
+  "reflectionPrompt": {
+    "prompt": "Explain why sliding windows can be faster than brute force.",
+    "placeholder": "Sliding windows are faster because..."
+  },
+  "practiceChallenge": {
+    "title": "Mastery check: rebuild the window rules",
+    "description": "Complete the helper so it returns the main sliding-window clues from memory.",
+    "language": "javascript",
+    "starterCode": "export function slidingWindowClue(problemType) {\n  const fixedClue = \"TODO\";\n  const dynamicClue = \"TODO\";\n  const shrinkRule = \"TODO\";\n\n  if (problemType === \"size-k\") {\n    return fixedClue;\n  }\n\n  if (problemType === \"changing-length\") {\n    return dynamicClue;\n  }\n\n  return shrinkRule;\n}\n",
+    "hints": [
+      "Size k suggests a fixed window.",
+      "Changing answer lengths suggest a dynamic window.",
+      "Shrink when the current window rule is already satisfied or broken and needs fixing."
+    ],
+    "successMessage": "Pass. You rebuilt the main sliding-window clues from memory.",
+    "retryMessage": "Needs practice. Recheck when windows stay fixed, when they change length, and why shrinking happens.",
+    "completionBehavior": "mark_complete",
+    "blanks": [
+      {
+        "key": "fixedClue",
+        "label": "Clue for a fixed-size window",
+        "expectedValues": ["fixed", "size k", "k"]
+      },
+      {
+        "key": "dynamicClue",
+        "label": "Clue for a dynamic window",
+        "expectedValues": ["dynamic", "changing length", "grow and shrink"]
+      },
+      {
+        "key": "shrinkRule",
+        "label": "Why windows shrink",
+        "expectedValues": ["fix the window", "make it valid", "make it smaller"]
+      }
+    ],
+    "visibleTests": [
+      {
+        "label": "Fixed-size clue",
+        "scenario": "problemType = size-k",
+        "blankKey": "fixedClue",
+        "expected": "fixed"
+      },
+      {
+        "label": "Dynamic clue",
+        "scenario": "problemType = changing-length",
+        "blankKey": "dynamicClue",
+        "expected": "dynamic"
+      },
+      {
+        "label": "Shrink reason",
+        "scenario": "problemType = shrink",
+        "blankKey": "shrinkRule",
+        "expected": "fix the window"
+      }
+    ]
+  }
+}

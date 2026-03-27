@@ -1,0 +1,59 @@
+[
+  {
+    "id": "smallest-1",
+    "narration": "Dynamic windows start by growing right until the current section becomes valid.",
+    "arrayValues": [2, 1, 5, 2, 3, 2],
+    "callout": "When the window [2, 1, 5] reaches sum 8, it is finally valid for target 7.",
+    "decision": "Once valid, try shrinking from the left.",
+    "highlightIndexes": [0, 1, 2],
+    "pointers": {
+      "left": 0,
+      "right": 2
+    }
+  },
+  {
+    "id": "smallest-2",
+    "narration": "Shrink left while the window still stays valid so you can find a smaller answer.",
+    "arrayValues": [2, 1, 5, 2, 3, 2],
+    "callout": "After removing 1 from [1, 5, 2], the window [5, 2] still has sum 7.",
+    "decision": "That smaller valid window gives a better answer length of 2.",
+    "highlightIndexes": [2, 3],
+    "pointers": {
+      "left": 2,
+      "right": 3
+    },
+    "predictionPrompt": {
+      "prompt": "When should the window shrink in this lesson?",
+      "choices": [
+        {
+          "id": "valid",
+          "label": "When the sum is already big enough",
+          "isCorrect": true,
+          "feedback": "Correct. Shrinking tests whether a smaller valid window exists."
+        },
+        {
+          "id": "small",
+          "label": "When the sum is too small",
+          "isCorrect": false,
+          "feedback": "Not this one. If the sum is too small, the window needs to grow."
+        }
+      ]
+    }
+  },
+  {
+    "id": "smallest-3",
+    "narration": "The best answer is the shortest window that still meets the target.",
+    "arrayValues": [2, 1, 5, 2, 3, 2],
+    "callout": "Here that window is [5, 2], so the answer is 2.",
+    "decision": "Return the smallest valid length you found.",
+    "highlightIndexes": [2, 3],
+    "pointers": {
+      "left": 2,
+      "right": 3
+    },
+    "reflectionPrompt": {
+      "prompt": "Why does this lesson need a while loop when shrinking?",
+      "placeholder": "It needs while because..."
+    }
+  }
+]

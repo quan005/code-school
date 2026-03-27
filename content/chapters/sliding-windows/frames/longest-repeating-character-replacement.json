@@ -1,0 +1,59 @@
+[
+  {
+    "id": "replace-1",
+    "narration": "This lesson keeps the longest window that can be fixed with at most k changes.",
+    "arrayValues": ["A", "A", "B", "A"],
+    "callout": "In AABA, the most common letter is A with count 3.",
+    "decision": "The window is valid if window size minus maxCount is at most k.",
+    "highlightIndexes": [0, 1, 2, 3],
+    "pointers": {
+      "left": 0,
+      "right": 3
+    }
+  },
+  {
+    "id": "replace-2",
+    "narration": "For AABA with k = 1, only one change is needed, so the window stays valid.",
+    "arrayValues": ["A", "A", "B", "A"],
+    "callout": "Window size is 4, maxCount is 3, so 4 - 3 = 1 change is needed.",
+    "decision": "Keep growing while the window is still fixable.",
+    "highlightIndexes": [0, 1, 2, 3],
+    "pointers": {
+      "left": 0,
+      "right": 3
+    },
+    "predictionPrompt": {
+      "prompt": "When should this window shrink?",
+      "choices": [
+        {
+          "id": "too-many",
+          "label": "When more than k changes would be needed",
+          "isCorrect": true,
+          "feedback": "Correct. Shrink only when the window is no longer fixable."
+        },
+        {
+          "id": "always",
+          "label": "After every move",
+          "isCorrect": false,
+          "feedback": "Not this one. Valid windows should stay as large as possible."
+        }
+      ]
+    }
+  },
+  {
+    "id": "replace-3",
+    "narration": "The best answer is the longest valid window, not the window that is already all one letter.",
+    "arrayValues": ["A", "A", "B", "A", "B", "B", "A"],
+    "callout": "The rule is about being fixable, not already perfect.",
+    "decision": "Return the longest valid window length.",
+    "highlightIndexes": [0, 1, 2, 3],
+    "pointers": {
+      "left": 0,
+      "right": 3
+    },
+    "reflectionPrompt": {
+      "prompt": "Why does this lesson check whether the window is fixable instead of checking exact equality?",
+      "placeholder": "It checks fixability because..."
+    }
+  }
+]

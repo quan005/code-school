@@ -1,0 +1,112 @@
+---
+title: "Average of Every Window of Size K"
+slug: "average-of-every-window-of-size-k"
+order: 3
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 11
+concepts:
+  - "fixed-size window"
+  - "running sum"
+  - "window average"
+skills:
+  - "Reuse a running sum to compute each average"
+  - "Record results once the window reaches size k"
+prerequisites:
+  - "maximum-sum-of-size-k"
+summary: "Use the same fixed-size running-sum trick, but record every average instead of only the biggest sum."
+---
+
+<ProblemStatement title="Return the average of each fixed-size window">
+  Given an array of numbers <code>nums</code> and an integer <code>k</code>,
+  return an array containing the average of every contiguous subarray of size{" "}
+  <code>k</code>.
+</ProblemStatement>
+
+## Example
+
+```txt
+nums = [1, 3, 2, 6, -1, 4, 1, 8, 2], k = 5
+output = [2.2, 2.8, 2.4, 3.6, 2.8]
+```
+
+<Intuition title="Same window trick, new output">
+  This lesson uses the same running-sum idea as Maximum Sum of Size K. The
+  difference is that we save each window’s average instead of keeping only the
+  best sum.
+</Intuition>
+
+<InterviewTip>
+  Once the window is big enough, record the answer, then slide by removing the
+  leftmost value.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function averagesOfSubarrays(nums: number[], k: number): number[] {
+  const result: number[] = [];
+
+  if (k <= 0 || k > nums.length) {
+    return result;
+  }
+
+  let windowSum = 0;
+  let left = 0;
+
+  for (let right = 0; right < nums.length; right++) {
+    windowSum += nums[right];
+
+    if (right >= k - 1) {
+      result.push(windowSum / k);
+      windowSum -= nums[left];
+      left++;
+    }
+  }
+
+  return result;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(n)"
+  notes="The running sum is reused, and the output array stores one average per window."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "nums = [1, 3, 2, 6, -1, 4, 1, 8, 2], k = 5",
+      expected: "[2.2, 2.8, 2.4, 3.6, 2.8]",
+      why: "Each fixed-size window gets one average.",
+    },
+    {
+      input: "nums = [5, 5, 5], k = 2",
+      expected: "[5, 5]",
+      why: "Both windows have the same average.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Recording the average before the window reaches size k",
+      fix: "Only push an answer once right >= k - 1.",
+    },
+    {
+      title: "Forgetting to slide left after recording",
+      fix: "Remove nums[left] and then move left forward.",
+    },
+  ]}
+/>
+
+<HintDrawer title="What stays the same from the last lesson?">
+  The running sum and fixed-size slide rule are the same. The output rule is the
+  only big change.
+</HintDrawer>
+
+## Reflection
+
+Why is this lesson so similar to Maximum Sum of Size K?

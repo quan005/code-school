@@ -1,0 +1,59 @@
+[
+  {
+    "id": "longest-1",
+    "narration": "Grow the window by adding characters on the right while they stay unique.",
+    "arrayValues": ["a", "b", "c", "a"],
+    "callout": "The window [a, b, c] is valid because the set has no repeats.",
+    "decision": "Measure the window when it stays unique.",
+    "highlightIndexes": [0, 1, 2],
+    "pointers": {
+      "left": 0,
+      "right": 2
+    }
+  },
+  {
+    "id": "longest-2",
+    "narration": "When a repeated character appears, shrink from the left until the repeat is gone.",
+    "arrayValues": ["a", "b", "c", "a"],
+    "callout": "The new a repeats, so the left side must move past the old a.",
+    "decision": "Keep shrinking until the set matches a unique window again.",
+    "highlightIndexes": [1, 2, 3],
+    "pointers": {
+      "left": 1,
+      "right": 3
+    },
+    "predictionPrompt": {
+      "prompt": "Why do we use while instead of if when shrinking?",
+      "choices": [
+        {
+          "id": "repeat-gone",
+          "label": "Because one move may not remove the repeat",
+          "isCorrect": true,
+          "feedback": "Correct. The window may need several left moves."
+        },
+        {
+          "id": "speed",
+          "label": "Because while is faster than if",
+          "isCorrect": false,
+          "feedback": "Not this one. The reason is correctness, not speed."
+        }
+      ]
+    }
+  },
+  {
+    "id": "longest-3",
+    "narration": "The best answer is the longest window that stays unique after every repeat is cleaned out.",
+    "arrayValues": ["a", "b", "c", "a"],
+    "callout": "For abca, the best unique window length is still 3.",
+    "decision": "Return the largest valid window length found.",
+    "highlightIndexes": [1, 2, 3],
+    "pointers": {
+      "left": 1,
+      "right": 3
+    },
+    "reflectionPrompt": {
+      "prompt": "Why is a set helpful for this lesson?",
+      "placeholder": "A set helps because..."
+    }
+  }
+]

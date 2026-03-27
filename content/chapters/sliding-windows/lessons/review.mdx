@@ -1,0 +1,72 @@
+---
+title: "Review"
+slug: "review"
+order: 8
+lessonType: "review"
+difficulty: "medium"
+estimatedMinutes: 12
+concepts:
+  - "fixed window recap"
+  - "dynamic window recap"
+  - "window clues"
+skills:
+  - "Match a problem to the right sliding-window style"
+  - "Explain when a window should grow or shrink"
+prerequisites:
+  - "longest-repeating-character-replacement"
+summary: "Review fixed vs dynamic windows, the most common window clues, and how each chapter lesson uses the pattern."
+---
+
+<ProblemStatement title="Two window styles to remember">
+  Sliding windows usually come in two styles: fixed-size windows and dynamic
+  windows.
+</ProblemStatement>
+
+<Intuition title="Fast recap by problem">
+  Maximum Sum and Average use fixed-size windows. Smallest Subarray, Longest
+  Substring Without Repeats, and Character Replacement use dynamic windows.
+  Permutation in a String is fixed-size plus a map of counts.
+</Intuition>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "Maximum Sum of Size K",
+      expected: "Fixed-size window",
+      why: "The window width is always k.",
+    },
+    {
+      input: "Smallest Subarray with Sum at Least Target",
+      expected: "Dynamic window",
+      why: "The best answer can have different lengths.",
+    },
+    {
+      input: "Longest Substring Without Repeating Characters",
+      expected: "Dynamic window with a set",
+      why: "The window shrinks until repeats disappear.",
+    },
+    {
+      input: "Permutation in a String",
+      expected: "Fixed-size window with a map",
+      why: "The substring must stay the same length as the pattern.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Using a fixed window when the answer length can change",
+      fix: "If the best section might grow or shrink, use a dynamic window.",
+    },
+    {
+      title: "Starting over after every slide",
+      fix: "Reuse the current window’s information instead of rebuilding the whole section.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Pattern questions">
+  Is the section contiguous? Is the width always k? Should the window grow,
+  shrink, or both? What information needs to be tracked inside it?
+</HintDrawer>

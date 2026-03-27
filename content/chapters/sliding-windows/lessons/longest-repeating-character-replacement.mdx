@@ -1,0 +1,121 @@
+---
+title: "Longest Repeating Character Replacement"
+slug: "longest-repeating-character-replacement"
+order: 7
+lessonType: "problem"
+difficulty: "hard"
+estimatedMinutes: 14
+concepts:
+  - "dynamic window"
+  - "most common letter"
+  - "fixable window"
+skills:
+  - "Check whether a window can be fixed with at most k changes"
+  - "Track the longest valid replaceable substring"
+prerequisites:
+  - "permutation-in-a-string"
+summary: "Use a dynamic window, letter counts, and the most common letter count to decide whether the window is still fixable."
+---
+
+<ProblemStatement title="Find the longest fixable substring">
+  You are given a string <code>s</code> and an integer <code>k</code>. You may
+  change at most <code>k</code> characters so that all characters in a substring
+  become the same. Return the length of the longest substring you can make this
+  way.
+</ProblemStatement>
+
+## Example
+
+```txt
+s = "AABABBA", k = 1 -> 4
+```
+
+<Intuition title="A window is valid if it can be fixed">
+  Suppose the current window has size 5 and the most common letter appears 4
+  times. Then only 1 change is needed. The rule is:
+</Intuition>
+
+```txt
+window size - most common letter count <= k
+```
+
+<InterviewTip>
+  This lesson is advanced because the rule is not about exact matching. The
+  window is okay as long as it is still fixable.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function characterReplacement(s: string, k: number): number {
+  const counts = new Map<string, number>();
+  let left = 0;
+  let maxCount = 0;
+  let best = 0;
+
+  for (let right = 0; right < s.length; right++) {
+    const ch = s[right];
+    counts.set(ch, (counts.get(ch) ?? 0) + 1);
+    maxCount = Math.max(maxCount, counts.get(ch)!);
+
+    while (right - left + 1 - maxCount > k) {
+      const leftChar = s[left];
+      counts.set(leftChar, counts.get(leftChar)! - 1);
+      left++;
+    }
+
+    best = Math.max(best, right - left + 1);
+  }
+
+  return best;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(k)"
+  notes="The window grows while it stays fixable and shrinks only when too many changes would be needed."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: 's = "ABAB", k = 2',
+      expected: "4",
+      why: "Two changes can make the whole window the same letter.",
+    },
+    {
+      input: 's = "AABABBA", k = 1',
+      expected: "4",
+      why: "AABA can become AAAA with one change.",
+    },
+    {
+      input: 's = "ABC", k = 0',
+      expected: "1",
+      why: "Without changes, only one same-letter character can stay.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Thinking the window must already be all one letter",
+      fix: "The window only needs to be fixable with at most k changes.",
+    },
+    {
+      title: "Forgetting the window rule",
+      fix: "Keep checking whether window size minus most common count is still <= k.",
+    },
+  ]}
+/>
+
+<HintDrawer title="What does maxCount tell us?">
+  MaxCount tells us how many characters are already the most common letter in
+  the current window. The rest are the ones we would need to change.
+</HintDrawer>
+
+## Reflection
+
+Why does this lesson measure how many changes are needed instead of checking
+exact equality?

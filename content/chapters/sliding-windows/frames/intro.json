@@ -1,0 +1,59 @@
+[
+  {
+    "id": "sw-intro-1",
+    "narration": "A sliding window is a moving section of the array.",
+    "arrayValues": [2, 1, 5, 1, 3, 2],
+    "callout": "Here the first window of size 3 is [2, 1, 5].",
+    "decision": "The window shows only part of the data at one time.",
+    "highlightIndexes": [0, 1, 2],
+    "pointers": {
+      "left": 0,
+      "right": 2
+    }
+  },
+  {
+    "id": "sw-intro-2",
+    "narration": "When the window slides right, one value leaves and one new value enters.",
+    "arrayValues": [2, 1, 5, 1, 3, 2],
+    "callout": "The new window is [1, 5, 1].",
+    "decision": "That is why we can update only what changed instead of rebuilding everything.",
+    "highlightIndexes": [1, 2, 3],
+    "pointers": {
+      "left": 1,
+      "right": 3
+    },
+    "predictionPrompt": {
+      "prompt": "If the problem always says size k, which window style fits best?",
+      "choices": [
+        {
+          "id": "fixed",
+          "label": "Fixed-size window",
+          "isCorrect": true,
+          "feedback": "Correct. The width stays the same."
+        },
+        {
+          "id": "dynamic",
+          "label": "Dynamic window",
+          "isCorrect": false,
+          "feedback": "Not this one. Dynamic windows change width."
+        }
+      ]
+    }
+  },
+  {
+    "id": "sw-intro-3",
+    "narration": "Some windows stay the same width, and some grow and shrink as the rule changes.",
+    "arrayValues": [2, 1, 5, 1, 3, 2],
+    "callout": "Fixed windows care about exact width. Dynamic windows care about whether the current section is valid.",
+    "decision": "Choosing the right window style is the first big step in the chapter.",
+    "highlightIndexes": [2, 3, 4],
+    "pointers": {
+      "left": 2,
+      "right": 4
+    },
+    "reflectionPrompt": {
+      "prompt": "Why can sliding windows be faster than brute force?",
+      "placeholder": "They are faster because..."
+    }
+  }
+]

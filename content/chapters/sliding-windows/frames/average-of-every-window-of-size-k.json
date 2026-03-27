@@ -1,0 +1,59 @@
+[
+  {
+    "id": "avg-1",
+    "narration": "This lesson uses the same fixed-size window idea as Maximum Sum of Size K.",
+    "arrayValues": [1, 3, 2, 6, -1, 4, 1, 8, 2],
+    "callout": "The first window of size 5 is [1, 3, 2, 6, -1].",
+    "decision": "Its sum is 11, so the first average is 11 / 5 = 2.2.",
+    "highlightIndexes": [0, 1, 2, 3, 4],
+    "pointers": {
+      "left": 0,
+      "right": 4
+    }
+  },
+  {
+    "id": "avg-2",
+    "narration": "Slide the window and keep reusing the running sum.",
+    "arrayValues": [1, 3, 2, 6, -1, 4, 1, 8, 2],
+    "callout": "Remove 1, add 4, and the new average becomes 14 / 5 = 2.8.",
+    "decision": "Save every average as the window moves.",
+    "highlightIndexes": [1, 2, 3, 4, 5],
+    "pointers": {
+      "left": 1,
+      "right": 5
+    },
+    "predictionPrompt": {
+      "prompt": "What changes from the last fixed-size lesson?",
+      "choices": [
+        {
+          "id": "record",
+          "label": "We record every window answer instead of only the best one",
+          "isCorrect": true,
+          "feedback": "Correct. The running sum trick stays the same."
+        },
+        {
+          "id": "dynamic",
+          "label": "The window becomes dynamic",
+          "isCorrect": false,
+          "feedback": "Not this one. The width is still fixed."
+        }
+      ]
+    }
+  },
+  {
+    "id": "avg-3",
+    "narration": "Each fixed-size window gives one more average in the result list.",
+    "arrayValues": [1, 3, 2, 6, -1, 4, 1, 8, 2],
+    "callout": "The output array grows as the window slides across the input array.",
+    "decision": "Return all saved averages.",
+    "highlightIndexes": [4, 5, 6, 7, 8],
+    "pointers": {
+      "left": 4,
+      "right": 8
+    },
+    "reflectionPrompt": {
+      "prompt": "Why does this lesson use the same window trick as the maximum-sum lesson?",
+      "placeholder": "It uses the same trick because..."
+    }
+  }
+]

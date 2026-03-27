@@ -1,0 +1,7 @@
+{
+  "slug": "sliding-windows",
+  "title": "Sliding Windows",
+  "order": 5,
+  "track": "Code Patterns",
+  "summary": "Learn how to track a moving section of an array or string so you can grow, shrink, and update windows without starting over."
+}

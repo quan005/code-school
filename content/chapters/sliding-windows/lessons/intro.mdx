@@ -1,0 +1,80 @@
+---
+title: "Introduction"
+slug: "intro"
+order: 1
+lessonType: "intro"
+difficulty: "easy"
+estimatedMinutes: 9
+concepts:
+  - "window"
+  - "left and right pointers"
+  - "fixed-size window"
+  - "dynamic window"
+skills:
+  - "Explain what a sliding window is"
+  - "Tell the difference between fixed and dynamic windows"
+  - "Spot subarray and substring clues"
+prerequisites: []
+summary: "Meet the idea of a moving section, learn fixed vs dynamic windows, and practice the language of left and right pointers."
+---
+
+<ProblemStatement title="A window is a moving section">
+  A sliding window is a part of an array or string that we keep track of while
+  it moves through the data.
+</ProblemStatement>
+
+<Intuition title="Picture a frame sliding across a row">
+  Imagine holding a picture frame over a long row of objects. The frame shows
+  only one section at a time. When the frame slides, one thing leaves and
+  another thing enters.
+</Intuition>
+
+<InterviewTip>
+  Sliding windows are usually a clue when the problem talks about contiguous
+  sections, subarrays, substrings, longest, shortest, or a fixed size
+  <code>k</code>.
+</InterviewTip>
+
+<ComplexityCard
+  time="Often O(n)"
+  space="Often O(1) to O(k)"
+  notes="The main win is reusing work from the current window instead of rebuilding every section from scratch."
+/>
+
+## Two main styles
+
+- <strong>Fixed-size window</strong>: the width stays the same.
+- <strong>Dynamic window</strong>: the width grows and shrinks as needed.
+
+## Helpful variables
+
+- <code>left</code> marks the start of the window.
+- <code>right</code> marks the end of the window.
+
+<PredictionPrompt
+  prompt={{
+    prompt:
+      "If a problem asks for the biggest sum of every group of 3 next-door numbers, which window style fits best?",
+    choices: [
+      {
+        id: "fixed",
+        label: "Fixed-size window",
+        isCorrect: true,
+        feedback: "Correct. The window width stays 3 the whole time.",
+      },
+      {
+        id: "dynamic",
+        label: "Dynamic window",
+        isCorrect: false,
+        feedback: "Not this one. Dynamic windows change width based on a rule.",
+      },
+    ],
+  }}
+/>
+
+## Lesson Summary
+
+- A window is a moving section.
+- Fixed windows keep the same width.
+- Dynamic windows grow and shrink.
+- Left and right pointers describe the current section.

@@ -1,0 +1,116 @@
+---
+title: "Maximum Sum of Size K"
+slug: "maximum-sum-of-size-k"
+order: 2
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 11
+concepts:
+  - "fixed-size window"
+  - "window sum"
+  - "size k"
+skills:
+  - "Update a sum by removing one value and adding one value"
+  - "Track the largest fixed-size window sum"
+prerequisites:
+  - "intro"
+summary: "Keep a fixed-size running sum and update it when one value leaves and another enters."
+---
+
+<ProblemStatement title="Find the biggest sum in any window of size k">
+  Given an array of positive integers <code>nums</code> and a number{" "}
+  <code>k</code>, return the maximum sum of any contiguous subarray of size{" "}
+  <code>k</code>.
+</ProblemStatement>
+
+## Example
+
+```txt
+nums = [2, 1, 5, 1, 3, 2], k = 3 -> 9
+```
+
+<Intuition title="Reuse the current sum">
+  Instead of adding every group of 3 from scratch, build the first window once,
+  then slide right by removing the old left value and adding the new right
+  value.
+</Intuition>
+
+<InterviewTip>
+  In fixed-size windows, ask yourself: what leaves when the window slides, and
+  what enters?
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function maxSumSubarrayOfSizeK(nums: number[], k: number): number {
+  if (k <= 0 || k > nums.length) {
+    return 0;
+  }
+
+  let windowSum = 0;
+
+  for (let i = 0; i < k; i++) {
+    windowSum += nums[i];
+  }
+
+  let maxSum = windowSum;
+
+  for (let right = k; right < nums.length; right++) {
+    windowSum += nums[right];
+    windowSum -= nums[right - k];
+    maxSum = Math.max(maxSum, windowSum);
+  }
+
+  return maxSum;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(1)"
+  notes="The sum is updated in constant time as the window slides."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "nums = [2, 1, 5, 1, 3, 2], k = 3",
+      expected: "9",
+      why: "The window [5, 1, 3] gives the largest sum.",
+    },
+    {
+      input: "nums = [1, 2, 3, 4], k = 2",
+      expected: "7",
+      why: "The best window is [3, 4].",
+    },
+    {
+      input: "nums = [], k = 1",
+      expected: "0",
+      why: "There is no valid window.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Rebuilding the sum from scratch every time",
+      fix: "Slide the window by subtracting the old left value and adding the new right value.",
+    },
+    {
+      title: "Forgetting invalid k values",
+      fix: "If k is 0 or bigger than the array, there is no valid window.",
+    },
+  ]}
+/>
+
+<HintDrawer title="What changes when the window slides?">
+  Only two things change: one value leaves the left side and one value enters
+  the right side.
+</HintDrawer>
+
+## Reflection
+
+Why does this lesson only need one subtraction and one addition when the window
+moves?

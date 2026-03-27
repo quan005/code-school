@@ -1,0 +1,19 @@
+{
+  "recapPrompt": {
+    "prompt": "If the problem says the answer can have many different lengths, which window style is more likely?",
+    "choices": [
+      {
+        "id": "dynamic",
+        "label": "Dynamic window",
+        "isCorrect": true,
+        "feedback": "Correct. Different answer lengths usually mean the window must grow and shrink."
+      },
+      {
+        "id": "fixed",
+        "label": "Fixed-size window",
+        "isCorrect": false,
+        "feedback": "Not this one. Fixed windows stay the same width."
+      }
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "practiceChallenge": {
+    "title": "Fill in the slide rule",
+    "description": "Complete the helper so it describes what leaves and what enters when a fixed-size window slides.",
+    "language": "javascript",
+    "starterCode": "export function fixedWindowMove() {\n  const leavingSide = \"TODO\";\n  const enteringSide = \"TODO\";\n  const windowStyle = \"TODO\";\n\n  return {\n    leavingSide,\n    enteringSide,\n    windowStyle,\n  };\n}\n",
+    "hints": [
+      "When the window moves right, the leftmost value leaves.",
+      "A new value enters on the right.",
+      "This lesson uses a fixed-size window."
+    ],
+    "successMessage": "Nice work. You rebuilt the fixed-size slide rule correctly.",
+    "retryMessage": "Not yet. Recheck what leaves, what enters, and whether the window stays fixed or changes size.",
+    "completionBehavior": "mark_complete",
+    "blanks": [
+      {
+        "key": "leavingSide",
+        "label": "Which side loses a value",
+        "expectedValues": ["left"]
+      },
+      {
+        "key": "enteringSide",
+        "label": "Which side gains a value",
+        "expectedValues": ["right"]
+      },
+      {
+        "key": "windowStyle",
+        "label": "Which window style this lesson uses",
+        "expectedValues": ["fixed", "fixed-size"]
+      }
+    ],
+    "visibleTests": [
+      {
+        "label": "Leaving side",
+        "scenario": "Which side loses a value when the window slides?",
+        "blankKey": "leavingSide",
+        "expected": "left"
+      },
+      {
+        "label": "Entering side",
+        "scenario": "Which side gains a value when the window slides?",
+        "blankKey": "enteringSide",
+        "expected": "right"
+      },
+      {
+        "label": "Window style",
+        "scenario": "What kind of window stays size k?",
+        "blankKey": "windowStyle",
+        "expected": "fixed"
+      }
+    ]
+  }
+}
