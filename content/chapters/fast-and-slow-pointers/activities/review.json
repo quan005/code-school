@@ -1,0 +1,19 @@
+{
+  "recapPrompt": {
+    "prompt": "What does it mean if fast and slow meet in a cycle problem?",
+    "choices": [
+      {
+        "id": "cycle",
+        "label": "There is a cycle",
+        "isCorrect": true,
+        "feedback": "Correct. Meeting means both pointers are moving around the same loop."
+      },
+      {
+        "id": "middle",
+        "label": "Slow is at the middle",
+        "isCorrect": false,
+        "feedback": "Not this one. Meeting is the cycle clue, not the middle clue."
+      }
+    ]
+  }
+}

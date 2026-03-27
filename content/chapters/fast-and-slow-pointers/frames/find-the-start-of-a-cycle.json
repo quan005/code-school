@@ -1,0 +1,62 @@
+[
+  {
+    "id": "cycle-start-1",
+    "narration": "First find a meeting point inside the cycle with fast and slow pointers.",
+    "arrayValues": [1, 2, 3, 4, 5],
+    "visualizer": "linked_list",
+    "callout": "The meeting point is not usually the cycle start.",
+    "decision": "It is just the place where the second phase begins.",
+    "highlightIndexes": [3],
+    "pointers": {
+      "slow": 3,
+      "fast": 3
+    }
+  },
+  {
+    "id": "cycle-start-2",
+    "narration": "Reset one pointer to head and keep the other at the meeting point.",
+    "arrayValues": [1, 2, 3, 4, 5],
+    "visualizer": "linked_list",
+    "callout": "Now both pointers move 1 step at a time.",
+    "decision": "Where they meet next is the cycle entrance.",
+    "highlightIndexes": [0, 3],
+    "pointers": {
+      "left": 0,
+      "right": 3
+    },
+    "predictionPrompt": {
+      "prompt": "After resetting one pointer to head, how should both pointers move?",
+      "choices": [
+        {
+          "id": "one-step",
+          "label": "Both move 1 step at a time",
+          "isCorrect": true,
+          "feedback": "Correct. The second phase uses equal speeds."
+        },
+        {
+          "id": "same-old",
+          "label": "Keep fast at 2 steps and slow at 1 step",
+          "isCorrect": false,
+          "feedback": "Not this one. The second phase changes the movement rule."
+        }
+      ]
+    }
+  },
+  {
+    "id": "cycle-start-3",
+    "narration": "The next meeting happens at the cycle start node.",
+    "arrayValues": [1, 2, 3, 4, 5],
+    "visualizer": "linked_list",
+    "callout": "In this example, both pointers meet at node 3.",
+    "decision": "Return that node.",
+    "highlightIndexes": [2],
+    "pointers": {
+      "left": 2,
+      "right": 2
+    },
+    "reflectionPrompt": {
+      "prompt": "Why does this lesson need a second walking phase after the first meeting?",
+      "placeholder": "The second phase is needed because..."
+    }
+  }
+]

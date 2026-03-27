@@ -1,0 +1,62 @@
+[
+  {
+    "id": "cycle-detect-1",
+    "narration": "If the path ends, the fast pointer eventually reaches null.",
+    "arrayValues": [1, 2, 3, 4],
+    "visualizer": "linked_list",
+    "callout": "That is the no-cycle story.",
+    "decision": "If fast falls off the end, return false.",
+    "highlightIndexes": [3],
+    "pointers": {
+      "slow": 2,
+      "fast": 3
+    }
+  },
+  {
+    "id": "cycle-detect-2",
+    "narration": "If the list loops, both pointers eventually travel inside the same cycle.",
+    "arrayValues": [1, 2, 3, 4, 5],
+    "visualizer": "linked_list",
+    "callout": "Fast keeps gaining on slow inside the loop.",
+    "decision": "Meeting means there is a cycle.",
+    "highlightIndexes": [2, 4],
+    "pointers": {
+      "slow": 2,
+      "fast": 4
+    },
+    "predictionPrompt": {
+      "prompt": "What proves the list has a cycle?",
+      "choices": [
+        {
+          "id": "meet",
+          "label": "Fast meets slow",
+          "isCorrect": true,
+          "feedback": "Correct. Meeting inside the loop proves the pointers are circling."
+        },
+        {
+          "id": "head",
+          "label": "Slow returns to head",
+          "isCorrect": false,
+          "feedback": "Not this one. The key clue is the meeting, not returning to head."
+        }
+      ]
+    }
+  },
+  {
+    "id": "cycle-detect-3",
+    "narration": "Once fast catches slow, the cycle is confirmed.",
+    "arrayValues": [1, 2, 3, 4, 5],
+    "visualizer": "linked_list",
+    "callout": "No extra memory is needed because the meeting itself is the proof.",
+    "decision": "Return true.",
+    "highlightIndexes": [3],
+    "pointers": {
+      "slow": 3,
+      "fast": 3
+    },
+    "reflectionPrompt": {
+      "prompt": "Why does meeting prove a cycle instead of only a coincidence?",
+      "placeholder": "Meeting proves a cycle because..."
+    }
+  }
+]

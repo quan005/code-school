@@ -1,0 +1,59 @@
+[
+  {
+    "id": "happy-1",
+    "narration": "Happy Number creates a path of number states instead of a path of list nodes.",
+    "arrayValues": [19, 82, 68, 100, 1],
+    "callout": "Each number transforms into the next one by squaring digits and adding them.",
+    "decision": "Treat this repeated process like a path that can end or loop.",
+    "highlightIndexes": [0, 1],
+    "pointers": {
+      "slow": 0,
+      "fast": 0
+    }
+  },
+  {
+    "id": "happy-2",
+    "narration": "Slow follows one transformation at a time while fast follows two.",
+    "arrayValues": [19, 82, 68, 100, 1],
+    "callout": "If the path reaches 1, the number is happy.",
+    "decision": "If the path loops somewhere else, fast and slow eventually meet there.",
+    "highlightIndexes": [1, 3],
+    "pointers": {
+      "slow": 1,
+      "fast": 3
+    },
+    "predictionPrompt": {
+      "prompt": "What tells us a number is happy?",
+      "choices": [
+        {
+          "id": "one",
+          "label": "The path reaches 1",
+          "isCorrect": true,
+          "feedback": "Correct. Reaching 1 means the process succeeds."
+        },
+        {
+          "id": "repeat",
+          "label": "Fast meets slow at any number",
+          "isCorrect": false,
+          "feedback": "Not this one. Meeting away from 1 means the process looped instead."
+        }
+      ]
+    }
+  },
+  {
+    "id": "happy-3",
+    "narration": "This shows the pattern works on any repeating process, not only linked lists.",
+    "arrayValues": [4, 16, 37, 58, 89, 145, 42, 20, 4],
+    "callout": "Here the number path loops back to 4 instead of reaching 1.",
+    "decision": "Meeting inside that loop means the number is not happy.",
+    "highlightIndexes": [0, 8],
+    "pointers": {
+      "slow": 4,
+      "fast": 4
+    },
+    "reflectionPrompt": {
+      "prompt": "Why can a number process use the same pattern as a linked-list cycle?",
+      "placeholder": "It works because the process..."
+    }
+  }
+]

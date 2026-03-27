@@ -1,0 +1,62 @@
+[
+  {
+    "id": "middle-1",
+    "narration": "Start slow and fast at the head of the list.",
+    "arrayValues": [1, 2, 3, 4, 5],
+    "visualizer": "linked_list",
+    "callout": "Slow moves 1 step per turn. Fast moves 2 steps.",
+    "decision": "Watch where slow is when fast runs out of path.",
+    "highlightIndexes": [0],
+    "pointers": {
+      "slow": 0,
+      "fast": 0
+    }
+  },
+  {
+    "id": "middle-2",
+    "narration": "After one turn, slow is at 2 and fast is at 3.",
+    "arrayValues": [1, 2, 3, 4, 5],
+    "visualizer": "linked_list",
+    "callout": "Fast is gaining distance twice as quickly.",
+    "decision": "Keep moving until fast cannot take two more steps.",
+    "highlightIndexes": [1, 2],
+    "pointers": {
+      "slow": 1,
+      "fast": 2
+    },
+    "predictionPrompt": {
+      "prompt": "When fast reaches the end, where should slow be?",
+      "choices": [
+        {
+          "id": "middle",
+          "label": "Near the middle",
+          "isCorrect": true,
+          "feedback": "Correct. Slow has taken about half as many steps."
+        },
+        {
+          "id": "head",
+          "label": "Back at the head",
+          "isCorrect": false,
+          "feedback": "Not this one. Slow keeps moving forward."
+        }
+      ]
+    }
+  },
+  {
+    "id": "middle-3",
+    "narration": "Fast can no longer move two steps, so slow is standing on the middle node 3.",
+    "arrayValues": [1, 2, 3, 4, 5],
+    "visualizer": "linked_list",
+    "callout": "That is the one-pass middle trick.",
+    "decision": "Return slow.",
+    "highlightIndexes": [2],
+    "pointers": {
+      "slow": 2,
+      "fast": 4
+    },
+    "reflectionPrompt": {
+      "prompt": "Why does the speed difference make slow land halfway?",
+      "placeholder": "Slow lands halfway because..."
+    }
+  }
+]

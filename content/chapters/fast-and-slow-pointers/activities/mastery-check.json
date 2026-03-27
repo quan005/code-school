@@ -1,0 +1,74 @@
+{
+  "recapPrompt": {
+    "prompt": "If the fast pointer reaches null, what does that tell us?",
+    "choices": [
+      {
+        "id": "end",
+        "label": "The path ended and there is no cycle",
+        "isCorrect": true,
+        "feedback": "Correct. Reaching null means the path does not loop forever."
+      },
+      {
+        "id": "meet",
+        "label": "The cycle start was found",
+        "isCorrect": false,
+        "feedback": "Not this one. Null means the path ended."
+      }
+    ]
+  },
+  "reflectionPrompt": {
+    "prompt": "Explain why speed differences can reveal structure in a path or process.",
+    "placeholder": "Speed differences help because..."
+  },
+  "practiceChallenge": {
+    "title": "Mastery check: rebuild the main clues",
+    "description": "Complete the helper so it returns the main fast-and-slow meanings without the walkthrough.",
+    "language": "javascript",
+    "starterCode": "export function fastSlowClue(outcome) {\n  const endClue = \"TODO\";\n  const meetClue = \"TODO\";\n  const middleClue = \"TODO\";\n\n  if (outcome === \"end\") {\n    return endClue;\n  }\n\n  if (outcome === \"meet\") {\n    return meetClue;\n  }\n\n  return middleClue;\n}\n",
+    "hints": [
+      "End means no cycle.",
+      "Meeting means a loop exists.",
+      "When fast finishes, slow is near the middle."
+    ],
+    "successMessage": "Pass. You rebuilt the main fast-and-slow clues from memory.",
+    "retryMessage": "Needs practice. Recheck what end, meeting, and halfway each mean.",
+    "completionBehavior": "mark_complete",
+    "blanks": [
+      {
+        "key": "endClue",
+        "label": "Meaning when fast reaches the end",
+        "expectedValues": ["no cycle", "end", "no loop"]
+      },
+      {
+        "key": "meetClue",
+        "label": "Meaning when fast meets slow",
+        "expectedValues": ["cycle", "loop"]
+      },
+      {
+        "key": "middleClue",
+        "label": "Meaning when fast finishes before slow",
+        "expectedValues": ["middle", "halfway"]
+      }
+    ],
+    "visibleTests": [
+      {
+        "label": "End means no cycle",
+        "scenario": "outcome = end",
+        "blankKey": "endClue",
+        "expected": "no cycle"
+      },
+      {
+        "label": "Meeting means cycle",
+        "scenario": "outcome = meet",
+        "blankKey": "meetClue",
+        "expected": "cycle"
+      },
+      {
+        "label": "Fast finishing reveals the middle",
+        "scenario": "outcome = middle",
+        "blankKey": "middleClue",
+        "expected": "middle"
+      }
+    ]
+  }
+}

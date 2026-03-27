@@ -1,0 +1,114 @@
+---
+title: "Find the Start of a Cycle"
+slug: "find-the-start-of-a-cycle"
+order: 5
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 13
+concepts:
+  - "cycle entrance"
+  - "meeting point"
+  - "two one-step walkers"
+skills:
+  - "Use the meeting point to locate the cycle start"
+  - "Move one pointer from head and one from the meeting point"
+prerequisites:
+  - "find-the-length-of-a-cycle"
+summary: "After finding a meeting point, walk one pointer from head and one from the meeting point until they meet at the cycle start."
+---
+
+<ProblemStatement title="Return the node where the cycle begins">
+  Given the <code>head</code> of a linked list, return the node where the cycle
+  begins. If there is no cycle, return <code>null</code>.
+</ProblemStatement>
+
+## Example
+
+```txt
+1 -> 2 -> 3 -> 4 -> 5
+          ^         |
+          |_________|
+cycle starts at 3
+```
+
+<Intuition title="Meeting first, then walk together">
+  First use fast and slow pointers to find a meeting point inside the loop. Then
+  put one pointer at the head and keep the other at the meeting point. Move both
+  1 step at a time. Where they meet is the cycle start.
+</Intuition>
+
+<InterviewTip>
+  This is the chapter’s trickiest lesson. The pattern matters more than the math
+  story at first: meet inside the loop, then walk together.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function detectCycleStart(head: ListNode | null): ListNode | null {
+  let slow = head;
+  let fast = head;
+
+  while (fast !== null && fast.next !== null) {
+    slow = slow!.next;
+    fast = fast.next.next;
+
+    if (slow === fast) {
+      let pointer1 = head;
+      let pointer2 = slow;
+
+      while (pointer1 !== pointer2) {
+        pointer1 = pointer1!.next;
+        pointer2 = pointer2!.next;
+      }
+
+      return pointer1;
+    }
+  }
+
+  return null;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(1)"
+  notes="The extra walk after the meeting point still stays linear."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "1 -> 2 -> 3 -> null",
+      expected: "null",
+      why: "No cycle means there is no cycle start.",
+    },
+    {
+      input: "1 -> 2 -> 3 -> 4 -> 5 -> 3 ...",
+      expected: "node 3",
+      why: "The second phase walks both pointers to the loop entrance.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Starting both second-phase pointers at head",
+      fix: "One pointer must start at the meeting point and the other at head.",
+    },
+    {
+      title: "Trying to skip the meeting phase",
+      fix: "The second walk only works after fast and slow have already met inside the cycle.",
+    },
+  ]}
+/>
+
+<HintDrawer title="What is the chapter trick here?">
+  First find a meeting point. Then reset one pointer to head. Moving both one
+  step at a time reveals the cycle entrance.
+</HintDrawer>
+
+## Reflection
+
+Why does this problem need two phases instead of only one?

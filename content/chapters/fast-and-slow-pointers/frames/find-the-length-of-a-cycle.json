@@ -1,0 +1,60 @@
+[
+  {
+    "id": "cycle-length-1",
+    "narration": "After fast and slow meet, we know we are standing inside the loop.",
+    "arrayValues": [1, 2, 3, 4],
+    "visualizer": "linked_list",
+    "callout": "The meeting point is a safe place to start measuring.",
+    "decision": "Now walk around the cycle and count the steps.",
+    "highlightIndexes": [1, 2, 3],
+    "pointers": {
+      "slow": 2,
+      "fast": 2
+    }
+  },
+  {
+    "id": "cycle-length-2",
+    "narration": "Move one pointer around the loop until it returns to the meeting node.",
+    "arrayValues": [1, 2, 3, 4],
+    "visualizer": "linked_list",
+    "callout": "Each step adds 1 to the cycle count.",
+    "decision": "One full trip around the loop gives the length.",
+    "highlightIndexes": [1, 2, 3],
+    "pointers": {
+      "current": 3
+    },
+    "predictionPrompt": {
+      "prompt": "Why can we start counting after the meeting point?",
+      "choices": [
+        {
+          "id": "inside-loop",
+          "label": "Because the meeting point is already inside the loop",
+          "isCorrect": true,
+          "feedback": "Correct. One full walk from there measures the loop."
+        },
+        {
+          "id": "start-head",
+          "label": "Because it is always the head",
+          "isCorrect": false,
+          "feedback": "Not this one. The meeting point is usually not the head."
+        }
+      ]
+    }
+  },
+  {
+    "id": "cycle-length-3",
+    "narration": "When the pointer returns to the same loop node, the count is the cycle length.",
+    "arrayValues": [1, 2, 3, 4],
+    "visualizer": "linked_list",
+    "callout": "In this example, one full trip takes 3 steps.",
+    "decision": "Return 3.",
+    "highlightIndexes": [1, 2, 3],
+    "pointers": {
+      "current": 2
+    },
+    "reflectionPrompt": {
+      "prompt": "Why does one full trip around the loop measure the cycle length exactly?",
+      "placeholder": "It measures the length because..."
+    }
+  }
+]

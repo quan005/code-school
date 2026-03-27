@@ -1,0 +1,76 @@
+---
+title: "Introduction"
+slug: "intro"
+order: 1
+lessonType: "intro"
+difficulty: "easy"
+estimatedMinutes: 9
+concepts:
+  - "slow pointer"
+  - "fast pointer"
+  - "speed difference"
+  - "cycle clue"
+skills:
+  - "Explain why two different pointer speeds reveal structure"
+  - "Spot middle and cycle clues"
+  - "State the fast-pointer safety check"
+prerequisites: []
+summary: "Meet the fast-and-slow pattern, learn why speed differences matter, and practice the safety rules around fast.next.next."
+---
+
+<ProblemStatement title="Two travelers, two speeds">
+  Fast and slow pointers use one pointer that moves 1 step and another that
+  usually moves 2 steps.
+</ProblemStatement>
+
+<Intuition title="Picture two racers on a path">
+  If the path ends, the fast racer reaches the end first. If the path loops, the
+  fast racer eventually catches the slow racer. That one idea solves several
+  important problems.
+</Intuition>
+
+<InterviewTip>
+  Before doing <code>fast = fast.next.next</code>, always check that fast is not
+  null and fast.next is not null.
+</InterviewTip>
+
+<ComplexityCard
+  time="Usually O(n)"
+  space="Usually O(1)"
+  notes="The pattern often replaces extra memory with two pointers moving at different speeds."
+/>
+
+## Big chapter clues
+
+- Use this pattern when you see <strong>middle</strong>, <strong>cycle</strong>,
+  <strong>loop</strong>, or <strong>repeats forever</strong>.
+- The slow pointer usually moves 1 step.
+- The fast pointer usually moves 2 steps.
+
+<PredictionPrompt
+  prompt={{
+    prompt:
+      "If the fast pointer reaches null in a linked list, what does that tell us?",
+    choices: [
+      {
+        id: "no-cycle",
+        label: "The path ended, so there is no cycle",
+        isCorrect: true,
+        feedback: "Correct. Reaching null means the list did not loop forever.",
+      },
+      {
+        id: "middle",
+        label: "Slow must be at the start again",
+        isCorrect: false,
+        feedback:
+          "Not this one. Null tells us the path ended, not that it restarted.",
+      },
+    ],
+  }}
+/>
+
+## Lesson Summary
+
+- Slow and fast move at different speeds.
+- Different speeds can reveal a middle or a cycle.
+- The fast pointer needs extra null checks for safety.

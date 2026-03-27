@@ -1,0 +1,109 @@
+---
+title: "Detect a Cycle in a Linked List"
+slug: "detect-a-cycle-in-a-linked-list"
+order: 3
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 12
+concepts:
+  - "cycle"
+  - "meeting point"
+  - "loop detection"
+skills:
+  - "Use a meeting between slow and fast to detect a cycle"
+  - "Tell the difference between null-ending and looping lists"
+prerequisites:
+  - "find-the-middle-of-a-linked-list"
+summary: "If fast meets slow, there is a cycle. If fast reaches null, there is not."
+---
+
+<ProblemStatement title="Check whether the list loops back">
+  Given the <code>head</code> of a linked list, return <code>true</code> if the
+  list contains a cycle. Otherwise, return <code>false</code>.
+</ProblemStatement>
+
+## Example
+
+```txt
+1 -> 2 -> 3 -> 4
+     ^         |
+     |_________|
+```
+
+<Intuition title="Fast catches slow on a loop">
+  If there is no cycle, fast eventually falls off the end at null. If there is a
+  cycle, both pointers run around the same loop, and the faster one eventually
+  catches the slower one.
+</Intuition>
+
+<InterviewTip>
+  You do not need a set for this pattern. The meeting itself is the clue.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function hasCycle(head: ListNode | null): boolean {
+  let slow = head;
+  let fast = head;
+
+  while (fast !== null && fast.next !== null) {
+    slow = slow!.next;
+    fast = fast.next.next;
+
+    if (slow === fast) {
+      return true;
+    }
+  }
+
+  return false;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(1)"
+  notes="The pattern uses speed differences instead of extra memory."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "head = null",
+      expected: "false",
+      why: "An empty list cannot loop.",
+    },
+    {
+      input: "1 -> 2 -> 3 -> null",
+      expected: "false",
+      why: "Fast reaches null, so there is no cycle.",
+    },
+    {
+      input: "1 -> 2 -> 3 -> 2 ...",
+      expected: "true",
+      why: "Fast and slow eventually meet inside the loop.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Checking slow === fast before the first move",
+      fix: "At the start they both point to head, so only compare after moving them.",
+    },
+    {
+      title: "Skipping the fast.next safety check",
+      fix: "Fast moves two steps, so fast.next must exist before that move.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Two ending stories">
+  Fast reaching null means the list ends. Fast meeting slow means the list
+  loops.
+</HintDrawer>
+
+## Reflection
+
+Why is meeting inside the loop enough to prove a cycle exists?

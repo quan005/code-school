@@ -1,0 +1,139 @@
+---
+title: "Happy Number"
+slug: "happy-number"
+order: 6
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 12
+concepts:
+  - "repeated process"
+  - "number loop"
+  - "state path"
+skills:
+  - "Treat a number process like a path of states"
+  - "Use fast and slow updates on repeated transformations"
+prerequisites:
+  - "find-the-start-of-a-cycle"
+summary: "Use fast and slow pointers on a repeating number process to tell whether it reaches 1 or falls into a loop."
+---
+
+<ProblemStatement title="Decide whether the number reaches 1">
+  A number is <strong>happy</strong> if repeatedly squaring its digits and
+  adding them eventually reaches 1. Return <code>true</code> if <code>n</code>{" "}
+  is happy, otherwise return <code>false</code>.
+</ProblemStatement>
+
+## Example
+
+```txt
+19 -> 82 -> 68 -> 100 -> 1
+```
+
+<Intuition title="This is a path, even without a linked list">
+  Each number turns into the next number, and then the next one after that. That
+  makes a path of states. The path can either reach 1 or get stuck in a loop,
+  just like a linked list can end or cycle.
+</Intuition>
+
+<InterviewTip>
+  Fast and slow pointers are not only for linked lists. They also work on any
+  repeated process that creates one next state from the current one.
+</InterviewTip>
+
+## Helper Function
+
+```ts
+function nextNumber(n: number): number {
+  let total = 0;
+
+  while (n > 0) {
+    const digit = n % 10;
+    total += digit * digit;
+    n = Math.floor(n / 10);
+  }
+
+  return total;
+}
+```
+
+## TypeScript Solution
+
+```ts
+function nextNumber(n: number): number {
+  let total = 0;
+
+  while (n > 0) {
+    const digit = n % 10;
+    total += digit * digit;
+    n = Math.floor(n / 10);
+  }
+
+  return total;
+}
+
+function isHappy(n: number): boolean {
+  let slow = n;
+  let fast = n;
+
+  while (true) {
+    slow = nextNumber(slow);
+    fast = nextNumber(nextNumber(fast));
+
+    if (fast === 1) {
+      return true;
+    }
+
+    if (slow === fast) {
+      return false;
+    }
+  }
+}
+```
+
+<ComplexityCard
+  time="Small and fast in practice"
+  space="O(1)"
+  notes="The process uses only a few number variables while checking for a loop."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "n = 19",
+      expected: "true",
+      why: "The path reaches 1.",
+    },
+    {
+      input: "n = 2",
+      expected: "false",
+      why: "The path gets stuck in a repeating loop instead of reaching 1.",
+    },
+    {
+      input: "n = 1",
+      expected: "true",
+      why: "It already starts at 1.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Thinking the pattern only works on linked lists",
+      fix: "Any repeated next-state process can be treated like a path for fast and slow pointers.",
+    },
+    {
+      title: "Checking only slow === fast and forgetting about 1",
+      fix: "If the process reaches 1, the number is happy and you should return true.",
+    },
+  ]}
+/>
+
+<HintDrawer title="What is the important mental shift?">
+  Instead of physical nodes, think of each number state as one step on a path.
+</HintDrawer>
+
+## Reflection
+
+Why can a repeating number process be solved with the same pattern as a linked
+list loop?

@@ -1,0 +1,71 @@
+---
+title: "Review"
+slug: "review"
+order: 8
+lessonType: "review"
+difficulty: "medium"
+estimatedMinutes: 12
+concepts:
+  - "speed difference recap"
+  - "cycle clue"
+  - "middle clue"
+skills:
+  - "Match the right fast-slow idea to each problem"
+  - "Explain what pointer meetings or endings mean"
+prerequisites:
+  - "is-palindrome-linked-list"
+summary: "Review how speed differences reveal middles, cycles, cycle starts, and loops in repeated processes."
+---
+
+<ProblemStatement title="One pattern, many clues">
+  Fast and slow pointers use the same speed difference idea in several kinds of
+  problems: middles, cycles, repeated loops, and half comparisons.
+</ProblemStatement>
+
+<Intuition title="What the pattern tells us">
+  If fast reaches null, the path ends. If fast meets slow, there is a loop. If
+  fast finishes while slow is still moving, slow is around the middle.
+</Intuition>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "Find the Middle of a Linked List",
+      expected: "Fast reaches the end while slow lands near the middle",
+      why: "Different speeds reveal halfway.",
+    },
+    {
+      input: "Detect a Cycle in a Linked List",
+      expected: "Fast meets slow",
+      why: "Meeting means both are circling the same loop.",
+    },
+    {
+      input: "Happy Number",
+      expected: "The repeated number process reaches 1 or loops",
+      why: "The process behaves like a path of states.",
+    },
+    {
+      input: "Is Palindrome Linked List",
+      expected: "Use fast/slow to split the list before comparing halves",
+      why: "The middle clue helps set up the palindrome check.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Forgetting the fast.next safety check",
+      fix: "Fast moves two steps, so both fast and fast.next must exist first.",
+    },
+    {
+      title: "Thinking the pattern only works on linked lists",
+      fix: "It also works on repeated processes like Happy Number.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Best chapter questions">
+  Is there a middle to find? Could the path loop forever? What does fast
+  reaching null mean? What does fast meeting slow mean?
+</HintDrawer>

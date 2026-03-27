@@ -1,0 +1,7 @@
+{
+  "slug": "fast-and-slow-pointers",
+  "title": "Fast and Slow Pointers",
+  "order": 4,
+  "track": "Code Patterns",
+  "summary": "Learn how one pointer moving one step and another moving two steps can reveal middles, cycles, and repeated loops."
+}

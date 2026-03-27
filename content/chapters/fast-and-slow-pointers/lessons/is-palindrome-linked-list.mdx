@@ -1,0 +1,134 @@
+---
+title: "Is Palindrome Linked List"
+slug: "is-palindrome-linked-list"
+order: 7
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 14
+concepts:
+  - "middle split"
+  - "second-half reversal"
+  - "half comparison"
+skills:
+  - "Use fast and slow to find the middle"
+  - "Compare the first half to a reversed second half"
+prerequisites:
+  - "happy-number"
+summary: "Find the middle, reverse the second half, and compare both halves to check whether the linked list is a palindrome."
+---
+
+<ProblemStatement title="Check whether the list reads the same both ways">
+  Given the <code>head</code> of a linked list, return <code>true</code> if the
+  list reads the same forward and backward. Otherwise, return <code>false</code>
+  .
+</ProblemStatement>
+
+## Examples
+
+```txt
+1 -> 2 -> 2 -> 1 -> null -> true
+1 -> 2 -> 3 -> null -> false
+```
+
+<Intuition title="Find the middle, then compare halves">
+  Linked lists cannot easily look backward, so we use fast and slow pointers to
+  find the middle, reverse the second half, and then compare the two halves.
+</Intuition>
+
+<InterviewTip>
+  This lesson combines two patterns: fast-and-slow pointers and linked-list
+  reversal.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function reverseList(head: ListNode | null): ListNode | null {
+  let prev: ListNode | null = null;
+  let current = head;
+
+  while (current !== null) {
+    const nextNode = current.next;
+    current.next = prev;
+    prev = current;
+    current = nextNode;
+  }
+
+  return prev;
+}
+
+function isPalindromeList(head: ListNode | null): boolean {
+  if (head === null || head.next === null) {
+    return true;
+  }
+
+  let slow: ListNode | null = head;
+  let fast: ListNode | null = head;
+
+  while (fast !== null && fast.next !== null) {
+    slow = slow!.next;
+    fast = fast.next.next;
+  }
+
+  let secondHalf = reverseList(slow);
+  let firstHalf = head;
+
+  while (secondHalf !== null) {
+    if (firstHalf!.val !== secondHalf.val) {
+      return false;
+    }
+
+    firstHalf = firstHalf!.next;
+    secondHalf = secondHalf.next;
+  }
+
+  return true;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(1)"
+  notes="Fast and slow split the list, and the second half is compared in reverse without extra arrays."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "1 -> 2 -> 2 -> 1 -> null",
+      expected: "true",
+      why: "The first half matches the reversed second half.",
+    },
+    {
+      input: "1 -> 2 -> 3 -> null",
+      expected: "false",
+      why: "The halves do not match.",
+    },
+    {
+      input: "head = null",
+      expected: "true",
+      why: "An empty list reads the same both ways.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Trying to compare from both ends without changing the list",
+      fix: "Linked lists do not move backward easily, so reverse the second half first.",
+    },
+    {
+      title: "Skipping the middle-finding step",
+      fix: "Fast and slow pointers tell you where the second half begins.",
+    },
+  ]}
+/>
+
+<HintDrawer title="What does fast and slow do here?">
+  It finds the split point so the second half can be reversed and compared.
+</HintDrawer>
+
+## Reflection
+
+Why does this lesson need both middle-finding and list reversal?

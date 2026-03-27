@@ -1,0 +1,53 @@
+{
+  "practiceChallenge": {
+    "title": "Fill in the fast-and-slow outcomes",
+    "description": "Complete the helper so it returns the right clue for each fast-and-slow pattern outcome.",
+    "language": "javascript",
+    "starterCode": "export function fastSlowClue(outcome) {\n  const endClue = \"TODO\";\n  const meetClue = \"TODO\";\n  const happyClue = \"TODO\";\n\n  if (outcome === \"end\") {\n    return endClue;\n  }\n\n  if (outcome === \"meet\") {\n    return meetClue;\n  }\n\n  return happyClue;\n}\n",
+    "hints": [
+      "If fast reaches the end, there is no cycle.",
+      "If fast meets slow, there is a loop.",
+      "If the number process reaches 1, the number is happy."
+    ],
+    "successMessage": "Nice work. Your fast-and-slow clues match the visible tests.",
+    "retryMessage": "Not yet. Recheck what end, meeting, and reaching 1 each mean.",
+    "completionBehavior": "mark_complete",
+    "blanks": [
+      {
+        "key": "endClue",
+        "label": "Meaning when fast reaches the end",
+        "expectedValues": ["no cycle", "end", "no loop"]
+      },
+      {
+        "key": "meetClue",
+        "label": "Meaning when fast meets slow",
+        "expectedValues": ["cycle", "loop"]
+      },
+      {
+        "key": "happyClue",
+        "label": "Meaning when the number process reaches 1",
+        "expectedValues": ["happy", "happy number"]
+      }
+    ],
+    "visibleTests": [
+      {
+        "label": "End clue",
+        "scenario": "outcome = end",
+        "blankKey": "endClue",
+        "expected": "no cycle"
+      },
+      {
+        "label": "Meeting clue",
+        "scenario": "outcome = meet",
+        "blankKey": "meetClue",
+        "expected": "cycle"
+      },
+      {
+        "label": "Happy clue",
+        "scenario": "outcome = happy",
+        "blankKey": "happyClue",
+        "expected": "happy"
+      }
+    ]
+  }
+}

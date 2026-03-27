@@ -1,0 +1,117 @@
+---
+title: "Find the Length of a Cycle"
+slug: "find-the-length-of-a-cycle"
+order: 4
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 12
+concepts:
+  - "cycle length"
+  - "meeting point"
+  - "loop measurement"
+skills:
+  - "Measure the loop after detecting a cycle"
+  - "Count one full trip around a cycle"
+prerequisites:
+  - "detect-a-cycle-in-a-linked-list"
+summary: "After fast and slow meet inside a loop, walk once around the loop and count the steps."
+---
+
+<ProblemStatement title="Return the cycle length">
+  Given the <code>head</code> of a linked list, return the length of the cycle
+  if one exists. Otherwise, return <code>0</code>.
+</ProblemStatement>
+
+## Example
+
+```txt
+3 -> 4 -> 5 -> back to 3
+cycle length = 3
+```
+
+<Intuition title="Meeting puts you inside the loop">
+  First detect a cycle with fast and slow pointers. If they meet, you already
+  know one node inside the loop. From there, walk around the loop until you come
+  back and count the steps.
+</Intuition>
+
+<InterviewTip>
+  The counting only starts after the meeting point is found. Before that, we do
+  not even know whether a loop exists.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function cycleLength(head: ListNode | null): number {
+  let slow = head;
+  let fast = head;
+
+  while (fast !== null && fast.next !== null) {
+    slow = slow!.next;
+    fast = fast.next.next;
+
+    if (slow === fast) {
+      let count = 1;
+      let current = slow!.next;
+
+      while (current !== slow) {
+        count += 1;
+        current = current!.next;
+      }
+
+      return count;
+    }
+  }
+
+  return 0;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(1)"
+  notes="Detecting the cycle and then counting around it both stay linear overall."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "head = null",
+      expected: "0",
+      why: "No list means no cycle.",
+    },
+    {
+      input: "1 -> 2 -> 3 -> null",
+      expected: "0",
+      why: "A path that ends has no loop length.",
+    },
+    {
+      input: "1 -> 2 -> 3 -> 4 -> 2 ...",
+      expected: "3",
+      why: "The loop is 2 -> 3 -> 4 -> back to 2.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Trying to count before finding a cycle",
+      fix: "You need the meeting point first so you know you are inside the loop.",
+    },
+    {
+      title: "Forgetting to count the first step",
+      fix: "Start the count at 1 when you move away from the meeting node.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Why does this work?">
+  Once you are standing on a loop, one full trip back to the same node measures
+  the loop length.
+</HintDrawer>
+
+## Reflection
+
+Why is the meeting point a safe place to start measuring the cycle?

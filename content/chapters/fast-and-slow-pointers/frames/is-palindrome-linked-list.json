@@ -1,0 +1,62 @@
+[
+  {
+    "id": "pal-list-1",
+    "narration": "Use fast and slow pointers to find the middle of the linked list first.",
+    "arrayValues": [1, 2, 2, 1],
+    "visualizer": "linked_list",
+    "callout": "The middle split tells us where the second half begins.",
+    "decision": "After the split, reverse the second half.",
+    "highlightIndexes": [1, 2],
+    "pointers": {
+      "slow": 2,
+      "fast": 3
+    }
+  },
+  {
+    "id": "pal-list-2",
+    "narration": "After reversing the second half, compare the first half and second half node by node.",
+    "arrayValues": [1, 2, 1, 2],
+    "visualizer": "linked_list",
+    "callout": "The reversed second half now lines up for a forward comparison.",
+    "decision": "If all compared values match, the list is a palindrome.",
+    "highlightIndexes": [0, 2],
+    "pointers": {
+      "left": 0,
+      "right": 2
+    },
+    "predictionPrompt": {
+      "prompt": "Why do we reverse the second half?",
+      "choices": [
+        {
+          "id": "compare",
+          "label": "So we can compare both directions while still moving forward",
+          "isCorrect": true,
+          "feedback": "Correct. Linked lists do not move backward easily."
+        },
+        {
+          "id": "sort",
+          "label": "So the list becomes sorted",
+          "isCorrect": false,
+          "feedback": "Not this one. Reversal is for comparison, not sorting."
+        }
+      ]
+    }
+  },
+  {
+    "id": "pal-list-3",
+    "narration": "When the matching values stay equal through the compared halves, the list reads the same both ways.",
+    "arrayValues": [1, 2, 2, 1],
+    "visualizer": "linked_list",
+    "callout": "This lesson combines middle-finding and linked-list reversal.",
+    "decision": "Return true for the palindrome list.",
+    "highlightIndexes": [0, 1, 2, 3],
+    "pointers": {
+      "left": 1,
+      "right": 2
+    },
+    "reflectionPrompt": {
+      "prompt": "Why does this lesson combine more than one chapter pattern?",
+      "placeholder": "It combines patterns because..."
+    }
+  }
+]

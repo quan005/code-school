@@ -1,0 +1,104 @@
+---
+title: "Find the Middle of a Linked List"
+slug: "find-the-middle-of-a-linked-list"
+order: 2
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 11
+concepts:
+  - "middle node"
+  - "slow and fast"
+  - "one-pass middle"
+skills:
+  - "Use two speeds to find the middle in one pass"
+  - "Return the second middle in even-length lists"
+prerequisites:
+  - "intro"
+summary: "Move slow by 1 and fast by 2 so slow lands in the middle when fast reaches the end."
+---
+
+<ProblemStatement title="Return the middle node">
+  Given the <code>head</code> of a linked list, return the middle node. If there
+  are two middle nodes, return the second one.
+</ProblemStatement>
+
+## Examples
+
+```txt
+1 -> 2 -> 3 -> null -> middle is 2
+1 -> 2 -> 3 -> 4 -> null -> middle is 3
+```
+
+<Intuition title="Fast finishes while slow reaches halfway">
+  If fast takes 2 steps every turn and slow takes 1, then when fast reaches the
+  end, slow has only traveled about half as far.
+</Intuition>
+
+<InterviewTip>
+  This beats the two-pass plan of counting everything first and then walking
+  again.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function middleNode(head: ListNode | null): ListNode | null {
+  let slow = head;
+  let fast = head;
+
+  while (fast !== null && fast.next !== null) {
+    slow = slow!.next;
+    fast = fast.next.next;
+  }
+
+  return slow;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(1)"
+  notes="Both pointers move through the list, but no extra memory is needed."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "head = null",
+      expected: "null",
+      why: "An empty list has no middle node.",
+    },
+    {
+      input: "1 -> 2 -> 3 -> null",
+      expected: "node 2",
+      why: "Slow lands on the center.",
+    },
+    {
+      input: "1 -> 2 -> 3 -> 4 -> null",
+      expected: "node 3",
+      why: "For two middles, return the second one.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Forgetting the fast.next null check",
+      fix: "Fast moves two steps, so make sure both fast and fast.next exist first.",
+    },
+    {
+      title: "Expecting the first middle in even lists",
+      fix: "With this standard loop, slow lands on the second middle node.",
+    },
+  ]}
+/>
+
+<HintDrawer title="What does fast reaching the end mean?">
+  It means slow has only taken about half as many steps, which places it around
+  the middle.
+</HintDrawer>
+
+## Reflection
+
+Why does moving fast by 2 make slow land in the middle?

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "fsp-intro-1",
+    "narration": "Fast and slow pointers are two travelers moving at different speeds on the same path.",
+    "arrayValues": [1, 2, 3, 4, 5],
+    "visualizer": "linked_list",
+    "callout": "Slow moves 1 step. Fast moves 2 steps.",
+    "decision": "The speed difference is the clue we use to learn something about the path.",
+    "highlightIndexes": [0, 1],
+    "pointers": {
+      "slow": 0,
+      "fast": 0
+    }
+  },
+  {
+    "id": "fsp-intro-2",
+    "narration": "On a path that ends, fast reaches the end first while slow is still around halfway.",
+    "arrayValues": [1, 2, 3, 4, 5],
+    "visualizer": "linked_list",
+    "callout": "That is why this pattern helps find middles.",
+    "decision": "When fast finishes, slow is near the middle.",
+    "highlightIndexes": [2, 4],
+    "pointers": {
+      "slow": 2,
+      "fast": 4
+    },
+    "predictionPrompt": {
+      "prompt": "What does it mean if fast reaches null in a linked list?",
+      "choices": [
+        {
+          "id": "end",
+          "label": "The path ended, so there is no cycle",
+          "isCorrect": true,
+          "feedback": "Correct. Reaching null means the list did not loop forever."
+        },
+        {
+          "id": "meet",
+          "label": "Slow must already be at the cycle start",
+          "isCorrect": false,
+          "feedback": "Not this one. Null means the path ends."
+        }
+      ]
+    }
+  },
+  {
+    "id": "fsp-intro-3",
+    "narration": "On a loop, the fast pointer eventually catches the slow pointer.",
+    "arrayValues": [1, 2, 3, 4, 5],
+    "visualizer": "linked_list",
+    "callout": "Meeting means both pointers are circling the same loop.",
+    "decision": "That is why the pattern can detect cycles without extra memory.",
+    "highlightIndexes": [2, 4],
+    "pointers": {
+      "slow": 3,
+      "fast": 3
+    },
+    "reflectionPrompt": {
+      "prompt": "Why can two different speeds reveal structure without extra memory?",
+      "placeholder": "The speed difference helps because..."
+    }
+  }
+]
