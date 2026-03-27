@@ -21,6 +21,13 @@ export function LessonShell({
   nextLesson,
   previousLesson,
 }: LessonShellProps) {
+  const currentLesson =
+    chapter.lessons.find((lesson) => lesson.slug === currentLessonSlug) ??
+    chapter.lessons[0];
+  const currentLessonIndex = currentLesson
+    ? chapter.lessons.findIndex((lesson) => lesson.slug === currentLesson.slug)
+    : 0;
+
   return (
     <div className="lesson-shell">
       <aside className="lesson-sidebar">
@@ -52,10 +59,18 @@ export function LessonShell({
             <p className="ui-eyebrow">Lesson Progress</p>
             <h2>{chapter.title}</h2>
             <p>{chapter.summary}</p>
+            {currentLesson ? (
+              <p>
+                Current lesson: <strong>{currentLesson.title}</strong>
+              </p>
+            ) : null}
           </div>
           <div className="progress-meta">
             <Badge>{chapter.lessons.length} lessons</Badge>
             <Badge>{chapter.track}</Badge>
+            <Badge>
+              Step {currentLessonIndex + 1}/{chapter.lessons.length}
+            </Badge>
           </div>
         </Card>
         {children}

@@ -149,6 +149,29 @@ export function HintDrawer({
 }
 
 /**
+ * Shared warning block for common mistakes and recovery advice.
+ */
+export function CommonMistakesCard({
+  mistakes,
+}: {
+  mistakes: Array<{ title: string; fix?: string }>;
+}) {
+  return (
+    <Card>
+      <p className="ui-eyebrow">Common Mistakes</p>
+      <ul className="mistake-list">
+        {mistakes.map((mistake) => (
+          <li key={mistake.title}>
+            <strong>{mistake.title}</strong>
+            {mistake.fix ? <p>{mistake.fix}</p> : null}
+          </li>
+        ))}
+      </ul>
+    </Card>
+  );
+}
+
+/**
  * Temporary generic preview so frame data can already be rendered before the
  * richer step player lands in the next epic.
  */
@@ -168,7 +191,9 @@ export function LessonFramePreview({ frames }: { frames: LessonFrame[] }) {
               ))}
             </div>
             {frame.decision ? <p>{frame.decision}</p> : null}
-            {frame.quizPrompt ? <p>{frame.quizPrompt}</p> : null}
+            {frame.predictionPrompt ? (
+              <p>{frame.predictionPrompt.prompt}</p>
+            ) : null}
           </li>
         ))}
       </ol>

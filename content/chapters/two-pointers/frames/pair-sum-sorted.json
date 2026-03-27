@@ -2,6 +2,8 @@
   {
     "id": "frame-1",
     "narration": "Start with one pointer at the left end and one at the right end.",
+    "arrayValues": [1, 2, 4, 6, 8, 9],
+    "callout": "The array is sorted, so the left side is always smaller than the right side.",
     "decision": "Add the two numbers and compare the total to the target.",
     "highlightIndexes": [0, 5],
     "pointers": {
@@ -12,22 +14,44 @@
   {
     "id": "frame-2",
     "narration": "If the sum is too small, move the left pointer right to make the total bigger.",
+    "arrayValues": [1, 2, 4, 6, 8, 9],
     "decision": "Moving the right pointer would only make the total smaller.",
     "highlightIndexes": [1, 5],
     "pointers": {
       "left": 1,
       "right": 5
     },
-    "quizPrompt": "Which pointer should move when the sum is too small?"
+    "predictionPrompt": {
+      "prompt": "The current total is too small. Which pointer should move next?",
+      "choices": [
+        {
+          "id": "left",
+          "label": "Move the left pointer right",
+          "isCorrect": true,
+          "feedback": "Correct. A bigger number on the left can increase the total."
+        },
+        {
+          "id": "right",
+          "label": "Move the right pointer left",
+          "isCorrect": false,
+          "feedback": "Not this time. That would make the total even smaller."
+        }
+      ]
+    }
   },
   {
     "id": "frame-3",
     "narration": "Keep squeezing inward until the pair matches the target or the pointers cross.",
+    "arrayValues": [1, 2, 4, 6, 8, 9],
     "decision": "Every move throws away pairs that can no longer work.",
     "highlightIndexes": [1, 4],
     "pointers": {
       "left": 1,
       "right": 4
+    },
+    "reflectionPrompt": {
+      "prompt": "Why is it safe to move only one pointer instead of checking every pair?",
+      "placeholder": "Because the sorted order tells us..."
     }
   }
 ]

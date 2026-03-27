@@ -58,3 +58,16 @@ summary: "Use sorted order to decide which pointer should move next."
   If `nums[left] + nums[right]` is smaller than the target, move `left`. If it
   is bigger than the target, move `right`.
 </HintDrawer>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Moving the wrong pointer",
+      fix: "If the total is too small, move `left`. If the total is too big, move `right`.",
+    },
+    {
+      title: "Forgetting the array must be sorted",
+      fix: "This shortcut only works because the numbers stay in order.",
+    },
+  ]}
+/>

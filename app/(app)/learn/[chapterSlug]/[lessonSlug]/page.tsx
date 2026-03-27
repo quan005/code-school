@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation";
+import { StepPlayer } from "@/components/learning/step-player";
 import { Badge } from "@/components/ui/badge";
-import { LessonFramePreview } from "@/components/mdx/lesson-blocks";
 import { Panel } from "@/components/ui/panel";
+import { ArrayVisualizer } from "@/components/visualizers/array-visualizer";
 import { compileLesson, getChapterBySlug } from "@/lib/curriculum";
 
 export default async function LessonPage({
@@ -32,7 +33,17 @@ export default async function LessonPage({
         <div className="mdx-prose">{compiledLesson.content}</div>
       </Panel>
       {compiledLesson.frames.length > 0 ? (
-        <LessonFramePreview frames={compiledLesson.frames} />
+        <StepPlayer
+          frames={compiledLesson.frames}
+          renderFrame={(frame) => (
+            <ArrayVisualizer
+              highlightIndexes={frame.highlightIndexes}
+              pointers={frame.pointers}
+              values={frame.arrayValues}
+            />
+          )}
+          title="Algorithm walkthrough"
+        />
       ) : null}
     </div>
   );

@@ -1,5 +1,6 @@
 import type { MDXComponents } from "mdx/types";
 import {
+  CommonMistakesCard,
   ComplexityCard,
   HintDrawer,
   InterviewTip,
@@ -17,6 +18,7 @@ export function getLessonMDXComponents(): MDXComponents {
     ComplexityCard,
     TestCaseTable,
     HintDrawer,
+    CommonMistakesCard,
     LessonFramePreview,
   };
 }

@@ -401,6 +401,112 @@ select {
   padding: 1rem;
 }
 
+.step-player {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.step-player-header {
+  align-items: center;
+  display: flex;
+  gap: var(--space-4);
+  justify-content: space-between;
+}
+
+.array-visualizer {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.pointer-grid,
+.array-grid {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.pointer-slot {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 2rem;
+}
+
+.array-cell {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  display: grid;
+  gap: var(--space-2);
+  justify-items: center;
+  min-height: 5.5rem;
+  padding: var(--space-3);
+}
+
+.array-cell-highlight {
+  background: rgba(255, 122, 89, 0.12);
+  border-color: rgba(255, 122, 89, 0.35);
+}
+
+.array-index {
+  color: var(--color-ink-soft);
+  font-size: 0.82rem;
+}
+
+.prediction-choice-list,
+.mistake-list {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.prediction-choice {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font: inherit;
+  padding: 0.8rem 1rem;
+  text-align: left;
+}
+
+.prediction-choice-active {
+  background: rgba(61, 132, 255, 0.12);
+  border-color: rgba(61, 132, 255, 0.3);
+}
+
+.feedback-good {
+  color: #0b7a46;
+  font-weight: 600;
+}
+
+.feedback-note {
+  color: var(--color-brand-strong);
+  font-weight: 600;
+}
+
+.reflection-label {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.reflection-input {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-ink);
+  font: inherit;
+  min-height: 7rem;
+  padding: var(--space-3);
+  resize: vertical;
+}
+
+.mistake-list li {
+  background: rgba(255, 122, 89, 0.08);
+  border: 1px solid rgba(255, 122, 89, 0.18);
+  border-radius: var(--radius-md);
+  padding: 0.9rem 1rem;
+}
+
 .mdx-prose {
   display: grid;
   gap: var(--space-4);
