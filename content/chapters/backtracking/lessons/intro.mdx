@@ -1,0 +1,87 @@
+---
+title: "Introduction"
+slug: "intro"
+order: 1
+lessonType: "intro"
+difficulty: "easy"
+estimatedMinutes: 10
+concepts:
+  - "choose"
+  - "explore"
+  - "undo"
+  - "decision tree"
+skills:
+  - "Explain the choose-explore-undo pattern"
+  - "Describe what backtracking does"
+  - "Recognize return-all clues"
+prerequisites: []
+summary: "Meet backtracking, learn the choose-explore-undo pattern, and see why it helps when many possibilities must be tried."
+---
+
+<ProblemStatement title="Backtracking means try a choice, then step back if needed">
+  Backtracking is a problem-solving pattern where we make one choice, explore
+  what happens, undo that choice, and then try a different one.
+</ProblemStatement>
+
+<Intuition title="Think about trying paths in a maze">
+  You pick a path and walk forward. If that path does not work, you walk back to
+  the last choice point and try another path. That step-back idea is the heart
+  of backtracking.
+</Intuition>
+
+<InterviewTip>
+  A <code>decision tree</code> is just the invisible picture of all the choices
+  you could make. A branch means, "Try this option next."
+</InterviewTip>
+
+<ComplexityCard
+  time="Backtracking can grow quickly because it may try many possibilities"
+  space="Depends on recursion depth plus stored answers"
+  notes="The big idea is not one formula. It is learning how to choose, explore, undo, and try again."
+/>
+
+## Helpful backtracking words
+
+- <strong>choose</strong>: pick one option
+- <strong>explore</strong>: keep solving with that option included
+- <strong>undo</strong>: remove the choice so the next try starts clean
+- <strong>decision tree</strong>: the branching picture of all possible choices
+
+## Strong backtracking clues
+
+- return all
+- find every
+- generate all
+- try each possibility
+- stop if a partial answer cannot work
+
+<PredictionPrompt
+  prompt={{
+    prompt:
+      "Which step makes sure the next choice starts from a clean state in backtracking?",
+    choices: [
+      {
+        id: "undo",
+        label: "Undo the last choice",
+        isCorrect: true,
+        feedback:
+          "Correct. Undo resets the path so the next try does not keep old extra pieces.",
+      },
+      {
+        id: "sort",
+        label: "Sort everything first",
+        isCorrect: false,
+        feedback:
+          "Not this one. Sorting can help in some problems, but it is not the key backtracking step.",
+      },
+    ],
+  }}
+/>
+
+## Lesson Summary
+
+- Backtracking means choose, explore, undo.
+- It is useful when many possibilities must be tried.
+- The decision tree is the hidden picture of all those choices.
+- Undo keeps the path clean for the next try.
+- Backtracking clues often say return all or generate all.

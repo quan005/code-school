@@ -1,0 +1,61 @@
+{
+  "practiceChallenge": {
+    "title": "Fill in the backtracking clues",
+    "description": "Complete the helper so it returns the right idea for subsets, permutations, and undo in backtracking.",
+    "language": "javascript",
+    "starterCode": "export function backtrackingClue(job) {\n  const subsetClue = \"TODO\";\n  const permutationClue = \"TODO\";\n  const undoClue = \"TODO\";\n\n  if (job === \"subset\") {\n    return subsetClue;\n  }\n\n  if (job === \"permutation\") {\n    return permutationClue;\n  }\n\n  return undoClue;\n}\n",
+    "hints": [
+      "Subsets use take or skip.",
+      "Permutations ask who goes next.",
+      "Undo resets the path for the next branch."
+    ],
+    "successMessage": "Nice work. You rebuilt the main backtracking clues.",
+    "retryMessage": "Not yet. Recheck subsets, permutations, and why undo matters.",
+    "completionBehavior": "mark_complete",
+    "blanks": [
+      {
+        "key": "subsetClue",
+        "label": "Main clue for subsets",
+        "expectedValues": ["take or skip", "include or skip", "two branches"]
+      },
+      {
+        "key": "permutationClue",
+        "label": "Main clue for permutations",
+        "expectedValues": [
+          "who goes next",
+          "choose an unused number",
+          "unused next choice"
+        ]
+      },
+      {
+        "key": "undoClue",
+        "label": "Main clue for undo",
+        "expectedValues": [
+          "reset the path",
+          "clean for the next branch",
+          "remove the last choice"
+        ]
+      }
+    ],
+    "visibleTests": [
+      {
+        "label": "Subset clue",
+        "scenario": "job = subset",
+        "blankKey": "subsetClue",
+        "expected": "take or skip"
+      },
+      {
+        "label": "Permutation clue",
+        "scenario": "job = permutation",
+        "blankKey": "permutationClue",
+        "expected": "who goes next"
+      },
+      {
+        "label": "Undo clue",
+        "scenario": "job = undo",
+        "blankKey": "undoClue",
+        "expected": "reset the path"
+      }
+    ]
+  }
+}

@@ -1,0 +1,127 @@
+---
+title: "Letter Combinations of a Phone Number"
+slug: "letter-combinations-of-a-phone-number"
+order: 4
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 14
+concepts:
+  - "digit to letters"
+  - "build a string"
+  - "branching choices"
+skills:
+  - "Generate all letter combinations from digits"
+  - "Build answers one character at a time"
+prerequisites:
+  - "generate-all-permutations"
+summary: "Build all phone-letter combinations by taking one digit at a time and trying each possible letter."
+---
+
+<ProblemStatement title="Return every possible letter combination">
+  Given a string of digits from <code>2</code> to <code>9</code>, return all
+  possible letter combinations that the number could represent.
+</ProblemStatement>
+
+## Example
+
+```txt
+digits = "23"
+answer = ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]
+```
+
+<Intuition title="Each digit offers a small menu of letters">
+  One digit gives a few possible letters. We choose one letter for the current
+  spot, explore deeper, then come back and try the next letter.
+</Intuition>
+
+<InterviewTip>
+  This is a strong backtracking clue because the answer must return all possible
+  strings built from repeated small choices.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function letterCombinations(digits: string): string[] {
+  if (digits.length === 0) {
+    return [];
+  }
+
+  const map = new Map<string, string>([
+    ["2", "abc"],
+    ["3", "def"],
+    ["4", "ghi"],
+    ["5", "jkl"],
+    ["6", "mno"],
+    ["7", "pqrs"],
+    ["8", "tuv"],
+    ["9", "wxyz"],
+  ]);
+
+  const results: string[] = [];
+
+  function backtrack(index: number, path: string): void {
+    if (index === digits.length) {
+      results.push(path);
+      return;
+    }
+
+    const letters = map.get(digits[index]) ?? "";
+
+    for (const letter of letters) {
+      backtrack(index + 1, path + letter);
+    }
+  }
+
+  backtrack(0, "");
+  return results;
+}
+```
+
+<ComplexityCard
+  time="Exponential in the number of digits"
+  space="Depends on recursion depth and output size"
+  notes="Every extra digit adds several more possible branches."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: 'digits = "23"',
+      expected: '["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]',
+      why: "The letters for 2 combine with the letters for 3.",
+    },
+    {
+      input: 'digits = "2"',
+      expected: '["a", "b", "c"]',
+      why: "One digit gives one layer of choices.",
+    },
+    {
+      input: 'digits = ""',
+      expected: "[]",
+      why: "No digits means no combinations.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Pushing an answer before all digits are used",
+      fix: "Only save the path when index reaches digits.length.",
+    },
+    {
+      title: "Thinking one digit gives only one answer",
+      fix: "Each digit can branch into several letters.",
+    },
+  ]}
+/>
+
+<HintDrawer title="One digit, then the next digit">
+  The backtracking level matches the current digit index. Finish one digit
+  choice, then move to the next digit.
+</HintDrawer>
+
+## Reflection
+
+What does one new digit add to the decision tree in this problem?

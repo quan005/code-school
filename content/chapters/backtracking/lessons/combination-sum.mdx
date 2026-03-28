@@ -1,0 +1,120 @@
+---
+title: "Combination Sum"
+slug: "combination-sum"
+order: 7
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 16
+concepts:
+  - "target"
+  - "repeated choices"
+  - "remaining sum"
+skills:
+  - "Build combinations that reach a target"
+  - "Reuse the same choice when allowed"
+  - "Stop when the remaining target becomes too small"
+prerequisites:
+  - "generate-parentheses"
+summary: "Use backtracking to build number combinations that reach a target, allowing repeated choices when the problem says so."
+---
+
+<ProblemStatement title="Return all combinations that reach the target">
+  Given distinct numbers <code>candidates</code> and a target number, return all
+  unique combinations where the chosen numbers add up to the target. You may use
+  the same number more than once.
+</ProblemStatement>
+
+## Example
+
+```txt
+candidates = [2, 3, 6, 7]
+target = 7
+answer = [[2, 2, 3], [7]]
+```
+
+<Intuition title="Choose a number, then see how much target is left">
+  When we pick a number, we subtract it from the remaining target. If the
+  remaining target becomes zero, we found a good answer. If it becomes negative,
+  that branch cannot work.
+</Intuition>
+
+<InterviewTip>
+  In this problem, staying on the same index means the same number can be reused
+  again.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function combinationSum(candidates: number[], target: number): number[][] {
+  const results: number[][] = [];
+
+  function backtrack(index: number, remaining: number, path: number[]): void {
+    if (remaining === 0) {
+      results.push([...path]);
+      return;
+    }
+
+    if (remaining < 0 || index === candidates.length) {
+      return;
+    }
+
+    path.push(candidates[index]);
+    backtrack(index, remaining - candidates[index], path);
+    path.pop();
+
+    backtrack(index + 1, remaining, path);
+  }
+
+  backtrack(0, target, []);
+  return results;
+}
+```
+
+<ComplexityCard
+  time="Can explore many combinations"
+  space="Depends on recursion depth and output size"
+  notes="The remaining target helps us stop branches that already went too far."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "candidates = [2, 3, 6, 7], target = 7",
+      expected: "[[2, 2, 3], [7]]",
+      why: "Those are the combinations that add exactly to 7.",
+    },
+    {
+      input: "A branch whose remaining target becomes -1",
+      expected: "Stop that branch",
+      why: "A negative remaining target cannot recover.",
+    },
+    {
+      input: "A branch where remaining becomes 0",
+      expected: "Save the path",
+      why: "It reached the target exactly.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Moving to the next index too early",
+      fix: "Stay on the same index when the problem allows reusing the same number.",
+    },
+    {
+      title: "Continuing after the remaining target is negative",
+      fix: "Return right away because that branch already failed.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Watch the remaining target">
+  The remaining target tells whether the branch has won, can continue, or must
+  stop.
+</HintDrawer>
+
+## Reflection
+
+Why is the remaining target a good clue for when to stop a branch?

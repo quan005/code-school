@@ -1,0 +1,47 @@
+---
+title: "Review"
+slug: "review"
+order: 8
+lessonType: "review"
+difficulty: "easy"
+estimatedMinutes: 8
+concepts:
+  - "choose-explore-undo"
+  - "decision tree"
+  - "pruning"
+skills:
+  - "Review the main backtracking clues"
+  - "Tell common backtracking jobs apart"
+prerequisites:
+  - "combination-sum"
+summary: "Review the big backtracking ideas, especially choose-explore-undo, decision trees, used tracking, and early stopping."
+---
+
+<ProblemStatement title="What should backtracking problems make you notice?">
+  This review lesson helps you remember the strongest clues that point to
+  backtracking.
+</ProblemStatement>
+
+<Intuition title="Backtracking is about trying possibilities carefully">
+  The path grows one choice at a time. If a branch wins, save it. If a branch
+  fails, undo and try another one.
+</Intuition>
+
+<ComplexityCard
+  time="Backtracking often grows quickly because many possibilities are explored"
+  space="Depends on recursion depth and how many answers are stored"
+  notes="The big win is recognizing when a problem wants many possibilities instead of one straight answer."
+/>
+
+## Pattern Summary
+
+- Subsets: take or skip.
+- Permutations: choose which unused item goes next.
+- Phone letters: choose one letter for each digit.
+- Word Search: try a path, then undo the board mark.
+- Generate Parentheses: stop branches that are already invalid.
+- Combination Sum: track the remaining target and stop failed branches early.
+
+## Reflection
+
+Which backtracking clue feels easiest for you to notice now?

@@ -1,0 +1,39 @@
+[
+  {
+    "id": "combo-1",
+    "narration": "Combination Sum chooses a number and watches how much target is left afterward.",
+    "arrayValues": [2, 3, 6, 7],
+    "callout": "The remaining target tells whether the branch can continue.",
+    "highlightIndexes": [0, 1, 2, 3]
+  },
+  {
+    "id": "combo-2",
+    "narration": "If we choose 2 for target 7, the remaining target becomes 5 and the branch can keep going.",
+    "arrayValues": ["target 7", "choose 2", "remaining 5"],
+    "decision": "Staying on the same index means the same number can be reused again.",
+    "highlightIndexes": [1, 2],
+    "predictionPrompt": {
+      "prompt": "What should happen when the remaining target becomes negative?",
+      "choices": [
+        {
+          "id": "stop",
+          "label": "Stop that branch",
+          "isCorrect": true,
+          "feedback": "Correct. A negative remaining target means the branch already failed."
+        },
+        {
+          "id": "save",
+          "label": "Save the path as an answer",
+          "isCorrect": false,
+          "feedback": "Not this one. Only remaining target 0 means success."
+        }
+      ]
+    }
+  },
+  {
+    "id": "combo-3",
+    "narration": "When the remaining target reaches exactly zero, the current path becomes one finished answer.",
+    "arrayValues": ["[2, 2, 3]", "remaining 0"],
+    "callout": "Winning branches are saved. Failed branches are dropped."
+  }
+]

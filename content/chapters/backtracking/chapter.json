@@ -1,0 +1,7 @@
+{
+  "slug": "backtracking",
+  "title": "Backtracking",
+  "order": 14,
+  "track": "Code Patterns",
+  "summary": "Learn how to choose, explore, and undo so you can generate possibilities, search paths, and solve puzzle-style problems step by step."
+}

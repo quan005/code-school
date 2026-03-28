@@ -1,0 +1,43 @@
+[
+  {
+    "id": "subsets-1",
+    "narration": "For each number, subsets ask the same question: take it or skip it?",
+    "arrayValues": [1, 2],
+    "callout": "Those two choices create two branches for each number.",
+    "highlightIndexes": [0, 1],
+    "pointers": {
+      "current": 0
+    }
+  },
+  {
+    "id": "subsets-2",
+    "narration": "If we take 1, we explore all subset choices for the rest of the array from that path.",
+    "arrayValues": [1, 2],
+    "decision": "One branch adds the number. The other branch leaves it out.",
+    "highlightIndexes": [0],
+    "predictionPrompt": {
+      "prompt": "What are the two choices for the number 2 in subset building?",
+      "choices": [
+        {
+          "id": "take-skip",
+          "label": "Take it or skip it",
+          "isCorrect": true,
+          "feedback": "Correct. Subsets use the same yes-or-no choice for each number."
+        },
+        {
+          "id": "sort-swap",
+          "label": "Sort it or swap it",
+          "isCorrect": false,
+          "feedback": "Not this one. That is not the subset pattern."
+        }
+      ]
+    }
+  },
+  {
+    "id": "subsets-3",
+    "narration": "After exploring the take branch, we undo and explore the skip branch from a clean path.",
+    "arrayValues": [1, 2],
+    "callout": "Undo keeps old choices from leaking into the next branch.",
+    "highlightIndexes": [1]
+  }
+]

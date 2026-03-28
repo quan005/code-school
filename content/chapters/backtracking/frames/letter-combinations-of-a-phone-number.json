@@ -1,0 +1,39 @@
+[
+  {
+    "id": "phone-1",
+    "narration": "Each digit gives a small set of letters, so each digit creates a branching choice.",
+    "arrayValues": ["2: abc", "3: def"],
+    "callout": "The path grows one letter at a time.",
+    "highlightIndexes": [0, 1]
+  },
+  {
+    "id": "phone-2",
+    "narration": "If we choose a for digit 2, then digit 3 can branch into d, e, or f next.",
+    "arrayValues": ["ad", "ae", "af"],
+    "decision": "One letter choice at one level leads to several next-letter choices at the next level.",
+    "highlightIndexes": [0, 1, 2],
+    "predictionPrompt": {
+      "prompt": "If the first digit is 2, which letters can the path start with?",
+      "choices": [
+        {
+          "id": "abc",
+          "label": "a, b, or c",
+          "isCorrect": true,
+          "feedback": "Correct. Digit 2 maps to abc."
+        },
+        {
+          "id": "def",
+          "label": "d, e, or f",
+          "isCorrect": false,
+          "feedback": "Not this one. Those letters belong to digit 3."
+        }
+      ]
+    }
+  },
+  {
+    "id": "phone-3",
+    "narration": "When the path has one letter for every digit, that path becomes a finished answer.",
+    "arrayValues": ["ad", "ae", "af", "bd", "be", "bf"],
+    "callout": "A finished combination uses every digit exactly once."
+  }
+]

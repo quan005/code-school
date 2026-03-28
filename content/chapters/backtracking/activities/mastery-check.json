@@ -1,0 +1,82 @@
+{
+  "recapPrompt": {
+    "prompt": "Why is the undo step important in backtracking?",
+    "choices": [
+      {
+        "id": "clean",
+        "label": "It makes the next branch start clean",
+        "isCorrect": true,
+        "feedback": "Correct. Undo removes the old choice so the next branch does not carry extra leftovers."
+      },
+      {
+        "id": "sort",
+        "label": "It sorts the answers before saving them",
+        "isCorrect": false,
+        "feedback": "Not this one. Undo is about resetting the path, not sorting the answers."
+      }
+    ]
+  },
+  "reflectionPrompt": {
+    "prompt": "Explain in your own words why some backtracking branches should stop early.",
+    "placeholder": "They should stop early because..."
+  },
+  "practiceChallenge": {
+    "title": "Mastery check: rebuild the backtracking clues",
+    "description": "Complete the helper so it returns the main clue for subsets, board path search, and pruning invalid branches.",
+    "language": "javascript",
+    "starterCode": "export function backtrackingMasteryClue(goal) {\n  const subsetClue = \"TODO\";\n  const boardClue = \"TODO\";\n  const pruningClue = \"TODO\";\n\n  if (goal === \"subset\") {\n    return subsetClue;\n  }\n\n  if (goal === \"board\") {\n    return boardClue;\n  }\n\n  return pruningClue;\n}\n",
+    "hints": [
+      "Subsets use take or skip.",
+      "Word Search marks a cell, explores, then restores it.",
+      "Pruning stops branches that are already impossible."
+    ],
+    "successMessage": "Pass. You rebuilt the main backtracking clues from memory.",
+    "retryMessage": "Needs practice. Recheck subsets, board path undo, and early stopping.",
+    "completionBehavior": "mark_complete",
+    "blanks": [
+      {
+        "key": "subsetClue",
+        "label": "Main clue for subsets",
+        "expectedValues": ["take or skip", "include or skip", "two branches"]
+      },
+      {
+        "key": "boardClue",
+        "label": "Main clue for board path search",
+        "expectedValues": [
+          "mark explore restore",
+          "mark then undo",
+          "use and restore the cell"
+        ]
+      },
+      {
+        "key": "pruningClue",
+        "label": "Main clue for pruning",
+        "expectedValues": [
+          "stop impossible branches early",
+          "early stopping",
+          "prune bad branches"
+        ]
+      }
+    ],
+    "visibleTests": [
+      {
+        "label": "Subset clue",
+        "scenario": "goal = subset",
+        "blankKey": "subsetClue",
+        "expected": "take or skip"
+      },
+      {
+        "label": "Board clue",
+        "scenario": "goal = board",
+        "blankKey": "boardClue",
+        "expected": "mark explore restore"
+      },
+      {
+        "label": "Pruning clue",
+        "scenario": "goal = prune",
+        "blankKey": "pruningClue",
+        "expected": "early stopping"
+      }
+    ]
+  }
+}

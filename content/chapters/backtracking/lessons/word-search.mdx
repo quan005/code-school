@@ -1,0 +1,144 @@
+---
+title: "Word Search"
+slug: "word-search"
+order: 5
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 16
+concepts:
+  - "path search"
+  - "mark used"
+  - "undo the mark"
+skills:
+  - "Search a word on a board"
+  - "Move up, down, left, and right"
+  - "Undo a used mark after exploring"
+prerequisites:
+  - "letter-combinations-of-a-phone-number"
+summary: "Search a board path by matching letters, marking used cells, and undoing the mark when a path fails."
+---
+
+<ProblemStatement title="Can the word be found on the board?">
+  Given a board of letters and a target word, return <code>true</code> if the
+  word can be formed by moving up, down, left, or right without reusing the same
+  cell in one path.
+</ProblemStatement>
+
+## Example Board
+
+```txt
+A B C E
+S F C S
+A D E E
+```
+
+```txt
+word = ABCCED
+answer = true
+```
+
+<Intuition title="Try a path, then step back if it fails">
+  Each step must match the next letter of the word. We mark the current cell as
+  used, explore the four directions, and then undo that mark so another path can
+  try the cell later.
+</Intuition>
+
+<InterviewTip>
+  Word Search is backtracking on a grid. The key clue is "do not use the same
+  cell twice in one path."
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function exist(board: string[][], word: string): boolean {
+  const rows = board.length;
+  const cols = board[0]?.length ?? 0;
+
+  function dfs(row: number, col: number, index: number): boolean {
+    if (index === word.length) {
+      return true;
+    }
+
+    if (
+      row < 0 ||
+      row >= rows ||
+      col < 0 ||
+      col >= cols ||
+      board[row][col] !== word[index]
+    ) {
+      return false;
+    }
+
+    const saved = board[row][col];
+    board[row][col] = "#";
+
+    const found =
+      dfs(row + 1, col, index + 1) ||
+      dfs(row - 1, col, index + 1) ||
+      dfs(row, col + 1, index + 1) ||
+      dfs(row, col - 1, index + 1);
+
+    board[row][col] = saved;
+    return found;
+  }
+
+  for (let row = 0; row < rows; row += 1) {
+    for (let col = 0; col < cols; col += 1) {
+      if (dfs(row, col, 0)) {
+        return true;
+      }
+    }
+  }
+
+  return false;
+}
+```
+
+<ComplexityCard
+  time="Can branch in several directions from each cell"
+  space="Depends on recursion depth"
+  notes="The board search can grow quickly because many path tries may be needed before success or failure is known."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "The sample board with word ABCCED",
+      expected: "true",
+      why: "A valid path exists through matching neighbors.",
+    },
+    {
+      input: "A word that needs one cell twice in the same path",
+      expected: "false",
+      why: "The same cell cannot be reused in one search path.",
+    },
+    {
+      input: "A word whose first letter never appears",
+      expected: "false",
+      why: "No starting path is possible.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Forgetting to undo the used mark",
+      fix: "Restore the cell after exploring so later starting paths can use it.",
+    },
+    {
+      title: "Allowing the same cell twice in one path",
+      fix: "Mark the cell during the current path and treat that mark as blocked.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Mark, search, restore">
+  The restore step matters. Without it, one failed path can damage the board for
+  later tries.
+</HintDrawer>
+
+## Reflection
+
+Why must Word Search undo its board mark after exploring a path?

@@ -1,0 +1,39 @@
+[
+  {
+    "id": "word-1",
+    "narration": "Word Search tries one path through the board while matching the word one letter at a time.",
+    "arrayValues": ["A B C E", "S F C S", "A D E E"],
+    "callout": "The next move can go up, down, left, or right.",
+    "highlightIndexes": [0]
+  },
+  {
+    "id": "word-2",
+    "narration": "When a cell is used in the current path, we mark it so the same path cannot reuse it.",
+    "arrayValues": ["A # C E", "S F C S", "A D E E"],
+    "decision": "Mark now, explore neighbors, then restore the cell afterward.",
+    "highlightIndexes": [0],
+    "predictionPrompt": {
+      "prompt": "Why do we mark a board cell while exploring a path?",
+      "choices": [
+        {
+          "id": "no-reuse",
+          "label": "So the same path does not reuse that cell",
+          "isCorrect": true,
+          "feedback": "Correct. One search path cannot use the same cell twice."
+        },
+        {
+          "id": "sort-board",
+          "label": "So the board becomes sorted",
+          "isCorrect": false,
+          "feedback": "Not this one. The mark is only temporary path memory."
+        }
+      ]
+    }
+  },
+  {
+    "id": "word-3",
+    "narration": "If a path fails, undo restores the cell so a different starting path can still use it later.",
+    "arrayValues": ["A B C E", "S F C S", "A D E E"],
+    "callout": "Without restore, one failed path could wrongly block later paths."
+  }
+]

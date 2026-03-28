@@ -1,0 +1,42 @@
+[
+  {
+    "id": "permute-1",
+    "narration": "Permutations ask a different question: which unused number should go next?",
+    "arrayValues": [1, 2, 3],
+    "callout": "The path grows by placing one unused number in the next open spot.",
+    "highlightIndexes": [0, 1, 2],
+    "pointers": {
+      "current": 0
+    }
+  },
+  {
+    "id": "permute-2",
+    "narration": "If 1 is used first, the next branch can only try the remaining unused numbers.",
+    "arrayValues": [1, 2, 3],
+    "decision": "Used tracking tells us which numbers are already inside the path.",
+    "highlightIndexes": [0],
+    "predictionPrompt": {
+      "prompt": "What keeps a permutation from using the same number twice in one path?",
+      "choices": [
+        {
+          "id": "used",
+          "label": "Used tracking",
+          "isCorrect": true,
+          "feedback": "Correct. Used memory blocks numbers that are already in the current arrangement."
+        },
+        {
+          "id": "sum",
+          "label": "A running sum",
+          "isCorrect": false,
+          "feedback": "Not this one. A running sum is not the main tool here."
+        }
+      ]
+    }
+  },
+  {
+    "id": "permute-3",
+    "narration": "After a full arrangement is saved, undo removes the last number so another order can be tried.",
+    "arrayValues": [1, 2, 3],
+    "callout": "Permutation backtracking is about who goes next, not take or skip."
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "recapPrompt": {
+    "prompt": "What is one of the strongest signs that a problem should use backtracking?",
+    "choices": [
+      {
+        "id": "all",
+        "label": "The problem says return all or generate all",
+        "isCorrect": true,
+        "feedback": "Correct. That is a strong clue that many branches may need to be explored."
+      },
+      {
+        "id": "sorted",
+        "label": "The numbers are already sorted",
+        "isCorrect": false,
+        "feedback": "Not this one. Sorted data alone does not point to backtracking."
+      }
+    ]
+  },
+  "reflectionPrompt": {
+    "prompt": "Explain how choose-explore-undo tells the story of a backtracking branch.",
+    "placeholder": "It tells the story because..."
+  }
+}

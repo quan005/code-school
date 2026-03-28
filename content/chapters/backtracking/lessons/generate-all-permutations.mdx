@@ -1,0 +1,123 @@
+---
+title: "Generate All Permutations"
+slug: "generate-all-permutations"
+order: 3
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 15
+concepts:
+  - "permutation"
+  - "used array"
+  - "who goes next"
+skills:
+  - "Generate all permutations"
+  - "Track which choices are already used"
+  - "Explain how permutation building differs from subsets"
+prerequisites:
+  - "generate-all-subsets"
+summary: "Build all permutations by choosing which unused number goes next in the path."
+---
+
+<ProblemStatement title="Return every ordering">
+  Given an array of distinct numbers <code>nums</code>, return all possible
+  permutations.
+</ProblemStatement>
+
+## Example
+
+```txt
+nums = [1, 2, 3]
+answer includes [1, 2, 3], [1, 3, 2], [2, 1, 3], and more
+```
+
+<Intuition title="This time the question is who goes next">
+  A subset problem asks take or skip. A permutation problem asks which unused
+  number should go in the next open spot.
+</Intuition>
+
+<InterviewTip>
+  A <code>used</code> array or set is the clue that tells which choices are
+  already inside the current path.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function permute(nums: number[]): number[][] {
+  const results: number[][] = [];
+  const used = new Array(nums.length).fill(false);
+
+  function backtrack(path: number[]): void {
+    if (path.length === nums.length) {
+      results.push([...path]);
+      return;
+    }
+
+    for (let index = 0; index < nums.length; index += 1) {
+      if (used[index]) {
+        continue;
+      }
+
+      used[index] = true;
+      path.push(nums[index]);
+
+      backtrack(path);
+
+      path.pop();
+      used[index] = false;
+    }
+  }
+
+  backtrack([]);
+  return results;
+}
+```
+
+<ComplexityCard
+  time="About O(n * n!)"
+  space="Depends on recursion depth and output size"
+  notes="Every full arrangement uses all numbers, and there are many possible orders."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "nums = [1, 2]",
+      expected: "[[1, 2], [2, 1]]",
+      why: "Both possible orders are returned.",
+    },
+    {
+      input: "nums = [1]",
+      expected: "[[1]]",
+      why: "Only one order exists.",
+    },
+    {
+      input: "nums = []",
+      expected: "[[]]",
+      why: "The empty arrangement still counts as one finished path.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Forgetting to mark a number as unused again",
+      fix: "Set used[index] back to false during undo.",
+    },
+    {
+      title: "Thinking subsets and permutations are the same",
+      fix: "Subsets ask whether to include something. Permutations ask who goes next in order.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Unused choices only">
+  Each step tries every number that has not already been placed in the current
+  path.
+</HintDrawer>
+
+## Reflection
+
+Why does a permutation problem need used tracking while a subset problem does
+not?

@@ -1,0 +1,111 @@
+---
+title: "Generate All Subsets"
+slug: "generate-all-subsets"
+order: 2
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 14
+concepts:
+  - "take or skip"
+  - "subset"
+  - "decision tree"
+skills:
+  - "Generate every subset"
+  - "Use take-or-skip choices"
+  - "Explain why each number creates two branches"
+prerequisites: []
+summary: "Build all subsets by deciding for each number whether to take it or skip it."
+---
+
+<ProblemStatement title="Return every subset">
+  Given an array of distinct numbers <code>nums</code>, return all possible
+  subsets.
+</ProblemStatement>
+
+## Example
+
+```txt
+nums = [1, 2]
+answer = [[], [1], [2], [1, 2]]
+```
+
+<Intuition title="Each number asks one yes-or-no question">
+  For every number, we have two choices: take it or skip it. Those two choices
+  make two branches in the decision tree.
+</Intuition>
+
+<InterviewTip>
+  Subset problems are one of the clearest backtracking patterns because each
+  item creates a simple include-or-skip choice.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function subsets(nums: number[]): number[][] {
+  const results: number[][] = [];
+
+  function backtrack(index: number, path: number[]): void {
+    if (index === nums.length) {
+      results.push([...path]);
+      return;
+    }
+
+    path.push(nums[index]);
+    backtrack(index + 1, path);
+    path.pop();
+
+    backtrack(index + 1, path);
+  }
+
+  backtrack(0, []);
+  return results;
+}
+```
+
+<ComplexityCard
+  time="O(n * 2^n)"
+  space="Depends on recursion depth and output size"
+  notes="Each number doubles the number of possibilities because we can take it or skip it."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "nums = [1, 2]",
+      expected: "[[], [1], [2], [1, 2]] in any order",
+      why: "Each number can be included or skipped.",
+    },
+    {
+      input: "nums = [1]",
+      expected: "[[], [1]]",
+      why: "One number makes two choices.",
+    },
+    {
+      input: "nums = []",
+      expected: "[[]]",
+      why: "The empty subset still counts.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Forgetting to copy the path into the results",
+      fix: "Push a fresh copy like [...path] so later changes do not change old answers.",
+    },
+    {
+      title: "Skipping the undo step after take",
+      fix: "Pop the number back off before exploring the skip branch.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Two branches every time">
+  Ask the same question for each index: take this number, or skip it?
+</HintDrawer>
+
+## Reflection
+
+Why does one number create exactly two branches in the subset decision tree?

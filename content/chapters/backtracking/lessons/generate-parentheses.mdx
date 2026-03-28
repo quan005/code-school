@@ -1,0 +1,115 @@
+---
+title: "Generate Parentheses"
+slug: "generate-parentheses"
+order: 6
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 15
+concepts:
+  - "valid partial answer"
+  - "open and close counts"
+  - "pruning"
+skills:
+  - "Generate only valid parentheses strings"
+  - "Use rules while building the answer"
+  - "Explain why some branches should stop early"
+prerequisites:
+  - "word-search"
+summary: "Build valid parentheses strings by tracking how many opens and closes have been used and stopping bad branches early."
+---
+
+<ProblemStatement title="Return every valid parentheses string">
+  Given <code>n</code> pairs of parentheses, return all valid combinations.
+</ProblemStatement>
+
+## Example
+
+```txt
+n = 3
+answer includes ((())), (()()), (())(), ()(()), ()()()
+```
+
+<Intuition title="Some partial paths are already broken">
+  We can only place a closing parenthesis if there is already an unmatched open
+  one to close. That lets us stop bad branches early instead of exploring
+  nonsense paths.
+</Intuition>
+
+<InterviewTip>
+  A branch that is already impossible should stop right away. That early stop is
+  often called pruning.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function generateParenthesis(n: number): string[] {
+  const results: string[] = [];
+
+  function backtrack(path: string, open: number, close: number): void {
+    if (path.length === n * 2) {
+      results.push(path);
+      return;
+    }
+
+    if (open < n) {
+      backtrack(path + "(", open + 1, close);
+    }
+
+    if (close < open) {
+      backtrack(path + ")", open, close + 1);
+    }
+  }
+
+  backtrack("", 0, 0);
+  return results;
+}
+```
+
+<ComplexityCard
+  time="Many possible strings are explored, but bad ones are pruned early"
+  space="Depends on recursion depth and output size"
+  notes="The rules help us avoid wasting time on branches that can never become valid."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "n = 1",
+      expected: '["()"]',
+      why: "Only one valid pair exists.",
+    },
+    {
+      input: "n = 2",
+      expected: '["(())", "()()"]',
+      why: "Only the balanced strings are allowed.",
+    },
+    {
+      input: "A partial path with more closes than opens",
+      expected: "Stop that branch",
+      why: "It can never become valid later.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Adding a close parenthesis too early",
+      fix: "Only add ) when close < open.",
+    },
+    {
+      title: "Thinking every length-2n string works",
+      fix: "The string must stay balanced the whole time, not only at the end.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Balance while you build">
+  Do not wait until the end to check validity. Use the rules during building so
+  impossible branches stop early.
+</HintDrawer>
+
+## Reflection
+
+Why is it better to stop a broken branch early instead of waiting until the end?

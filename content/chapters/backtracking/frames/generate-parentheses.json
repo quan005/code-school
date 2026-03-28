@@ -1,0 +1,39 @@
+[
+  {
+    "id": "paren-1",
+    "narration": "Generate Parentheses builds the string one symbol at a time.",
+    "arrayValues": ["(", ")", "path"],
+    "callout": "The path must stay valid while it grows, not only at the end.",
+    "highlightIndexes": [0, 1]
+  },
+  {
+    "id": "paren-2",
+    "narration": "We can always add an open parenthesis if we still have opens left to use.",
+    "arrayValues": ["open = 1", "close = 0", "path = ("],
+    "decision": "A close parenthesis is allowed only when there is an unmatched open one to close.",
+    "highlightIndexes": [0, 1, 2],
+    "predictionPrompt": {
+      "prompt": "When is it safe to add a close parenthesis?",
+      "choices": [
+        {
+          "id": "close-open",
+          "label": "Only when close is still less than open",
+          "isCorrect": true,
+          "feedback": "Correct. That means there is something available to close."
+        },
+        {
+          "id": "always",
+          "label": "Any time",
+          "isCorrect": false,
+          "feedback": "Not this one. Closing too early breaks the path."
+        }
+      ]
+    }
+  },
+  {
+    "id": "paren-3",
+    "narration": "If a partial string is already broken, pruning stops that branch early.",
+    "arrayValues": ["bad branch", "stop early"],
+    "callout": "Early stopping saves work by avoiding impossible branches."
+  }
+]
