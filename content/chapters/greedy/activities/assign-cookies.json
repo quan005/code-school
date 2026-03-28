@@ -1,0 +1,65 @@
+{
+  "practiceChallenge": {
+    "title": "Fill in the greedy clues",
+    "description": "Complete the helper so it returns the right idea for cookie matching, stock gains, and farthest reach.",
+    "language": "javascript",
+    "starterCode": "export function greedyClue(job) {\n  const cookiesClue = \"TODO\";\n  const stockClue = \"TODO\";\n  const jumpClue = \"TODO\";\n\n  if (job === \"cookies\") {\n    return cookiesClue;\n  }\n\n  if (job === \"stock\") {\n    return stockClue;\n  }\n\n  return jumpClue;\n}\n",
+    "hints": [
+      "Cookies use the smallest helpful cookie.",
+      "Stock II takes every positive rise.",
+      "Jump Game tracks the farthest reachable index."
+    ],
+    "successMessage": "Nice work. You rebuilt the main greedy clues.",
+    "retryMessage": "Not yet. Recheck cookie matching, positive rises, and farthest reach.",
+    "completionBehavior": "mark_complete",
+    "blanks": [
+      {
+        "key": "cookiesClue",
+        "label": "Main clue for Assign Cookies",
+        "expectedValues": [
+          "smallest helpful cookie",
+          "match smallest need first",
+          "save big cookies"
+        ]
+      },
+      {
+        "key": "stockClue",
+        "label": "Main clue for Stock II",
+        "expectedValues": [
+          "take every positive rise",
+          "add positive gains",
+          "collect every up step"
+        ]
+      },
+      {
+        "key": "jumpClue",
+        "label": "Main clue for Jump Game",
+        "expectedValues": [
+          "track farthest reach",
+          "farthest reachable index",
+          "best reach so far"
+        ]
+      }
+    ],
+    "visibleTests": [
+      {
+        "label": "Cookies clue",
+        "scenario": "job = cookies",
+        "blankKey": "cookiesClue",
+        "expected": "smallest helpful cookie"
+      },
+      {
+        "label": "Stock clue",
+        "scenario": "job = stock",
+        "blankKey": "stockClue",
+        "expected": "take every positive rise"
+      },
+      {
+        "label": "Jump clue",
+        "scenario": "job = jump",
+        "blankKey": "jumpClue",
+        "expected": "track farthest reach"
+      }
+    ]
+  }
+}

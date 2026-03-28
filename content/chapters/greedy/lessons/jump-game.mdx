@@ -1,0 +1,106 @@
+---
+title: "Jump Game"
+slug: "jump-game"
+order: 4
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 14
+concepts:
+  - "farthest reach"
+  - "reachable so far"
+  - "stuck point"
+skills:
+  - "Track the farthest reachable index"
+  - "Explain why getting past the reach means failure"
+prerequisites:
+  - "best-time-to-buy-and-sell-stock-ii"
+summary: "Keep the farthest reachable index so far, and detect failure as soon as the current index falls beyond that reach."
+---
+
+<ProblemStatement title="Can you reach the last index?">
+  Given an array where each value tells the maximum jump length from that
+  position, return <code>true</code> if you can reach the last index.
+</ProblemStatement>
+
+## Example
+
+```txt
+nums = [2, 3, 1, 1, 4]
+answer = true
+```
+
+<Intuition title="Only one value matters while scanning">
+  Greedy keeps the farthest index reachable so far. If the current position is
+  reachable, it may extend that farthest reach. If the current position is
+  beyond the farthest reach, the game is already lost.
+</Intuition>
+
+<InterviewTip>
+  This is a strong greedy clue because the whole story can be told by one moving
+  best-so-far value.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function canJump(nums: number[]): boolean {
+  let farthest = 0;
+
+  for (let index = 0; index < nums.length; index += 1) {
+    if (index > farthest) {
+      return false;
+    }
+
+    farthest = Math.max(farthest, index + nums[index]);
+  }
+
+  return true;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(1)"
+  notes="One pass is enough because we keep only the best reach so far."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "nums = [2, 3, 1, 1, 4]",
+      expected: "true",
+      why: "The farthest reach grows all the way to the end.",
+    },
+    {
+      input: "nums = [3, 2, 1, 0, 4]",
+      expected: "false",
+      why: "The reach gets stuck before the last index.",
+    },
+    {
+      input: "nums = [0]",
+      expected: "true",
+      why: "You start at the last index already.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Trying every jump path with backtracking",
+      fix: "This greedy problem only needs the farthest reachable index, not every possible route.",
+    },
+    {
+      title: "Continuing after index goes beyond farthest",
+      fix: "If index > farthest, you are already stuck and can stop immediately.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Best reach so far">
+  At each index, ask only one question: how far can we guarantee now?
+</HintDrawer>
+
+## Reflection
+
+Why does one farthest-reach value tell enough of the story in Jump Game?

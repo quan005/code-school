@@ -1,0 +1,23 @@
+{
+  "recapPrompt": {
+    "prompt": "What is one of the strongest signs that a problem may fit greedy thinking?",
+    "choices": [
+      {
+        "id": "best-now",
+        "label": "A simple best-now rule seems to keep the future in good shape",
+        "isCorrect": true,
+        "feedback": "Correct. That is a strong greedy clue."
+      },
+      {
+        "id": "all-answers",
+        "label": "The problem asks for all possible answers",
+        "isCorrect": false,
+        "feedback": "Not this one. That clue points more toward backtracking."
+      }
+    ]
+  },
+  "reflectionPrompt": {
+    "prompt": "Explain how greedy is different from dynamic programming in the kinds of choices it makes.",
+    "placeholder": "Greedy is different because..."
+  }
+}

@@ -1,0 +1,115 @@
+---
+title: "Gas Station"
+slug: "gas-station"
+order: 7
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 16
+concepts:
+  - "running tank"
+  - "total check"
+  - "greedy reset"
+skills:
+  - "Use a total check to detect impossible cases"
+  - "Reset the start when the current path fails"
+prerequisites:
+  - "partition-labels"
+summary: "Use a total-gas check and a greedy reset rule to find the one possible starting station, if it exists."
+---
+
+<ProblemStatement title="Find a starting station that completes the full circle">
+  Given gas at each station and the cost to travel to the next station, return
+  the starting station index if the whole circle can be completed. Otherwise,
+  return <code>-1</code>.
+</ProblemStatement>
+
+## Example
+
+```txt
+gas = [1, 2, 3, 4, 5]
+cost = [3, 4, 5, 1, 2]
+answer = 3
+```
+
+<Intuition title="First check if the whole trip is possible at all">
+  If total gas is less than total cost, no start can ever work. If the whole
+  trip is possible, greedy tracks a running tank. When that tank becomes
+  negative, the current start fails, so we reset the start to the next station.
+</Intuition>
+
+<InterviewTip>
+  The reset rule is the greedy heart of this problem: if one whole section fails
+  from the current start, none of the starts inside that failed section can do
+  better.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function canCompleteCircuit(gas: number[], cost: number[]): number {
+  let total = 0;
+  let tank = 0;
+  let start = 0;
+
+  for (let index = 0; index < gas.length; index += 1) {
+    const diff = gas[index] - cost[index];
+    total += diff;
+    tank += diff;
+
+    if (tank < 0) {
+      start = index + 1;
+      tank = 0;
+    }
+  }
+
+  return total < 0 ? -1 : start;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(1)"
+  notes="One pass handles the total check and the greedy reset rule."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "gas = [1, 2, 3, 4, 5], cost = [3, 4, 5, 1, 2]",
+      expected: "3",
+      why: "The running tank keeps failing until station 3, then the full circle works.",
+    },
+    {
+      input: "gas = [2, 3, 4], cost = [3, 4, 3]",
+      expected: "-1",
+      why: "Total gas is smaller than total cost, so no start can work.",
+    },
+    {
+      input: "gas = [5], cost = [4]",
+      expected: "0",
+      why: "One station works if it has enough gas.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Skipping the total gas check",
+      fix: "If total gas is less than total cost, return -1 right away because the full trip is impossible.",
+    },
+    {
+      title: "Trying every start with brute force",
+      fix: "Use the greedy reset rule: once the current tank goes negative, reset to the next station.",
+    },
+  ]}
+/>
+
+<HintDrawer title="If this start fails, jump ahead">
+  When the running tank goes negative, the next station becomes the only useful
+  new start to try.
+</HintDrawer>
+
+## Reflection
+
+Why does a negative running tank prove the current starting station cannot work?

@@ -1,0 +1,39 @@
+[
+  {
+    "id": "partition-1",
+    "narration": "Partition Labels first records the last position of every letter.",
+    "arrayValues": ["a -> 8", "b -> 5", "c -> 7"],
+    "callout": "Those last positions tell how long a partition must stay open.",
+    "highlightIndexes": [0, 1, 2]
+  },
+  {
+    "id": "partition-2",
+    "narration": "While scanning, the current partition end stretches to the farthest last position of any letter seen so far.",
+    "arrayValues": ["start 0", "current end 8", "cut at 8"],
+    "decision": "When the scan reaches that end, the partition can safely close.",
+    "highlightIndexes": [1, 2],
+    "predictionPrompt": {
+      "prompt": "When is it safe to cut the current partition?",
+      "choices": [
+        {
+          "id": "reach-end",
+          "label": "When the current index reaches the farthest needed end",
+          "isCorrect": true,
+          "feedback": "Correct. That means every letter in the partition is finished."
+        },
+        {
+          "id": "first-repeat",
+          "label": "As soon as a letter repeats",
+          "isCorrect": false,
+          "feedback": "Not this one. A repeat can force the partition to stay open longer."
+        }
+      ]
+    }
+  },
+  {
+    "id": "partition-3",
+    "narration": "Greedy cuts at the earliest safe spot so the string gets as many parts as possible.",
+    "arrayValues": ["cut as soon as safe"],
+    "callout": "That earliest safe cut is the greedy move."
+  }
+]

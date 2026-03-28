@@ -1,0 +1,86 @@
+---
+title: "Introduction"
+slug: "intro"
+order: 1
+lessonType: "intro"
+difficulty: "easy"
+estimatedMinutes: 10
+concepts:
+  - "greedy choice"
+  - "best now"
+  - "local choice"
+  - "future flexibility"
+skills:
+  - "Explain what a greedy choice is"
+  - "Describe what best now means"
+  - "Recognize when a local rule might help"
+prerequisites: []
+summary: "Meet greedy thinking, learn what best-now choices mean, and see why some problems can be solved by making one good local move at a time."
+---
+
+<ProblemStatement title="A greedy algorithm makes the best choice it can right now">
+  A greedy algorithm looks at the current moment, makes the best local choice it
+  can, and then keeps moving forward.
+</ProblemStatement>
+
+<Intuition title="Think about picking the best snack for your bag right now">
+  You cannot test every future packing plan. Instead, you follow one rule and
+  choose the best option you can right now. That is greedy thinking.
+</Intuition>
+
+<InterviewTip>
+  A <code>greedy choice</code> is the best current move by the rule of the
+  problem. It might mean smallest, largest, earliest finish, farthest reach, or
+  the choice that protects future flexibility.
+</InterviewTip>
+
+<ComplexityCard
+  time="Greedy solutions are often fast because they keep moving forward"
+  space="Often small because they do not store many past states"
+  notes="The big idea is choose the best move now, not test every full future plan."
+/>
+
+## Helpful greedy words
+
+- <strong>best now</strong>: the best current move by the problem’s rule
+- <strong>local choice</strong>: one good move at the current step
+- <strong>global answer</strong>: the final whole answer
+- <strong>future flexibility</strong>: leaving good options open for later
+
+## Strong greedy clues
+
+- take the best current option
+- finish as many as possible
+- keep the farthest reach
+- use the smallest helpful resource
+- reset when the current plan becomes impossible
+
+<PredictionPrompt
+  prompt={{
+    prompt: "What is the main question greedy algorithms ask again and again?",
+    choices: [
+      {
+        id: "best-now",
+        label: "What is the best move I can make right now?",
+        isCorrect: true,
+        feedback:
+          "Correct. Greedy keeps choosing the best local move it can see now.",
+      },
+      {
+        id: "all-plans",
+        label: "What are all possible full plans?",
+        isCorrect: false,
+        feedback:
+          "Not this one. That sounds more like brute force or backtracking.",
+      },
+    ],
+  }}
+/>
+
+## Lesson Summary
+
+- Greedy means choose the best move right now.
+- Best now depends on the problem’s rule.
+- Some greedy choices protect future flexibility.
+- Greedy works for some problems, but not all of them.
+- The key is knowing when the local rule can be trusted.

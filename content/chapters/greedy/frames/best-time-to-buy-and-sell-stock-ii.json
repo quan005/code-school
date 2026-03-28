@@ -1,0 +1,39 @@
+[
+  {
+    "id": "stock-1",
+    "narration": "Greedy checks each day-to-day change and keeps every positive rise.",
+    "arrayValues": [7, 1, 5, 3, 6, 4],
+    "callout": "The positive jumps here are 1 to 5 and 3 to 6.",
+    "highlightIndexes": [1, 2, 3, 4]
+  },
+  {
+    "id": "stock-2",
+    "narration": "A rise from one day to the next is always safe to take in this problem.",
+    "arrayValues": ["+4", "+3", "total 7"],
+    "decision": "Adding all positive rises gives the same best total profit.",
+    "highlightIndexes": [0, 1, 2],
+    "predictionPrompt": {
+      "prompt": "What should we do with a day-to-day price drop?",
+      "choices": [
+        {
+          "id": "ignore",
+          "label": "Ignore that change",
+          "isCorrect": true,
+          "feedback": "Correct. Negative or zero changes do not add profit."
+        },
+        {
+          "id": "add",
+          "label": "Add it to the profit anyway",
+          "isCorrect": false,
+          "feedback": "Not this one. A drop does not help the profit."
+        }
+      ]
+    }
+  },
+  {
+    "id": "stock-3",
+    "narration": "This greedy rule works because one long rise and all its small rising pieces add up to the same gain.",
+    "arrayValues": ["rise made of little rises"],
+    "callout": "That is why the local rule is trustworthy here."
+  }
+]

@@ -1,0 +1,122 @@
+---
+title: "Lemonade Change"
+slug: "lemonade-change"
+order: 5
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 14
+concepts:
+  - "change bills"
+  - "protect future flexibility"
+  - "10 plus 5 first"
+skills:
+  - "Track available 5-dollar and 10-dollar bills"
+  - "Explain why 10 + 5 is better than 5 + 5 + 5 when possible"
+prerequisites:
+  - "jump-game"
+summary: "Use a greedy change rule that protects future flexibility by saving 5-dollar bills when possible."
+---
+
+<ProblemStatement title="Can you give the right change to every customer?">
+  Each lemonade costs $5. Customers pay with $5, $10, or $20. Return
+  <code>true</code> if you can give correct change to everyone in order.
+</ProblemStatement>
+
+## Example
+
+```txt
+bills = [5, 5, 5, 10, 20]
+answer = true
+```
+
+<Intuition title="Some bills are more flexible than others">
+  A $5 bill is very useful because both $10 and $20 customers may need it for
+  change. So when a $20 customer comes, greedy prefers giving one $10 and one $5
+  instead of three $5 bills when possible.
+</Intuition>
+
+<InterviewTip>
+  Greedy often works when one local choice clearly protects future flexibility.
+  Here, saving $5 bills helps future customers.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function lemonadeChange(bills: number[]): boolean {
+  let fives = 0;
+  let tens = 0;
+
+  for (const bill of bills) {
+    if (bill === 5) {
+      fives += 1;
+    } else if (bill === 10) {
+      if (fives === 0) {
+        return false;
+      }
+
+      fives -= 1;
+      tens += 1;
+    } else {
+      if (tens > 0 && fives > 0) {
+        tens -= 1;
+        fives -= 1;
+      } else if (fives >= 3) {
+        fives -= 3;
+      } else {
+        return false;
+      }
+    }
+  }
+
+  return true;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(1)"
+  notes="We only track how many 5-dollar and 10-dollar bills are available."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "bills = [5, 5, 5, 10, 20]",
+      expected: "true",
+      why: "The stand can make every needed change in order.",
+    },
+    {
+      input: "bills = [5, 5, 10, 10, 20]",
+      expected: "false",
+      why: "There is not enough correct change for the last customer.",
+    },
+    {
+      input: "bills = [5, 10, 5, 20]",
+      expected: "false",
+      why: "The stand runs out of the right bill mix.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Using three 5-dollar bills for 20 even when 10 + 5 is possible",
+      fix: "Prefer 10 + 5 because it saves more 5-dollar bills for future change.",
+    },
+    {
+      title: "Not tracking both 5-dollar and 10-dollar bills separately",
+      fix: "The kinds of bills matter, not just the total amount of money.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Protect the small bills">
+  Five-dollar bills are the most flexible change tool here, so greedy tries to
+  save them when possible.
+</HintDrawer>
+
+## Reflection
+
+Why is a 5-dollar bill more flexible than a 10-dollar bill in this problem?

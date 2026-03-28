@@ -1,0 +1,39 @@
+[
+  {
+    "id": "lemonade-1",
+    "narration": "Lemonade Change only needs to track how many 5-dollar and 10-dollar bills are available.",
+    "arrayValues": ["fives", "tens"],
+    "callout": "The exact order of bills in your pocket does not matter. The counts do.",
+    "highlightIndexes": [0, 1]
+  },
+  {
+    "id": "lemonade-2",
+    "narration": "For a 20-dollar bill, greedy prefers using 10 plus 5 when possible.",
+    "arrayValues": ["20 customer", "give 10 + 5", "save more fives"],
+    "decision": "Saving 5-dollar bills helps future customers more.",
+    "highlightIndexes": [1, 2],
+    "predictionPrompt": {
+      "prompt": "Why is 10 + 5 better than 5 + 5 + 5 when possible?",
+      "choices": [
+        {
+          "id": "save-fives",
+          "label": "It saves more 5-dollar bills for later",
+          "isCorrect": true,
+          "feedback": "Correct. Fives are the most flexible change bill here."
+        },
+        {
+          "id": "bigger-total",
+          "label": "It gives more total money back",
+          "isCorrect": false,
+          "feedback": "Not this one. Both choices give the same total amount."
+        }
+      ]
+    }
+  },
+  {
+    "id": "lemonade-3",
+    "narration": "This greedy rule protects future flexibility by keeping more small bills available.",
+    "arrayValues": ["protect the fives"],
+    "callout": "That is the best-now choice in this problem."
+  }
+]

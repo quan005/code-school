@@ -1,0 +1,39 @@
+[
+  {
+    "id": "cookies-1",
+    "narration": "After sorting both lists, greedy compares the smallest remaining child with the smallest remaining cookie.",
+    "arrayValues": ["children: 1 2 3", "cookies: 1 1"],
+    "callout": "Sorting creates a clean left-to-right matching story.",
+    "highlightIndexes": [0, 1]
+  },
+  {
+    "id": "cookies-2",
+    "narration": "If the cookie is big enough, use it. If not, try the next bigger cookie.",
+    "arrayValues": ["child needs 2", "cookie size 1", "too small"],
+    "decision": "Do not waste a big cookie on a child who could use a smaller one.",
+    "highlightIndexes": [0, 1, 2],
+    "predictionPrompt": {
+      "prompt": "Why use the smallest cookie that still works?",
+      "choices": [
+        {
+          "id": "save-big",
+          "label": "To save bigger cookies for greedier children",
+          "isCorrect": true,
+          "feedback": "Correct. That local choice protects the future matching options."
+        },
+        {
+          "id": "random",
+          "label": "Because any random cookie is just as good",
+          "isCorrect": false,
+          "feedback": "Not this one. The cookie size choice matters here."
+        }
+      ]
+    }
+  },
+  {
+    "id": "cookies-3",
+    "narration": "This greedy match works because small needs with small useful resources leave more room for harder matches later.",
+    "arrayValues": ["match safely now", "keep options later"],
+    "callout": "That is future flexibility."
+  }
+]

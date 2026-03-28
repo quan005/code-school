@@ -1,0 +1,86 @@
+{
+  "recapPrompt": {
+    "prompt": "Why can saving a 5-dollar bill be better than using three of them right away in Lemonade Change?",
+    "choices": [
+      {
+        "id": "flexible",
+        "label": "Because 5-dollar bills are more flexible for future change",
+        "isCorrect": true,
+        "feedback": "Correct. The greedy rule protects the bill that helps the most future customers."
+      },
+      {
+        "id": "more-money",
+        "label": "Because it returns more money",
+        "isCorrect": false,
+        "feedback": "Not this one. Both ways return the same total amount."
+      }
+    ]
+  },
+  "reflectionPrompt": {
+    "prompt": "Explain in your own words why some greedy problems can be solved with just one best-so-far value.",
+    "placeholder": "They can be solved that way because..."
+  },
+  "practiceChallenge": {
+    "title": "Mastery check: rebuild the greedy clues",
+    "description": "Complete the helper so it returns the main clue for matching greedily, keeping best reach, and resetting after a failed start.",
+    "language": "javascript",
+    "starterCode": "export function greedyMasteryClue(goal) {\n  const matchClue = \"TODO\";\n  const reachClue = \"TODO\";\n  const resetClue = \"TODO\";\n\n  if (goal === \"match\") {\n    return matchClue;\n  }\n\n  if (goal === \"reach\") {\n    return reachClue;\n  }\n\n  return resetClue;\n}\n",
+    "hints": [
+      "Assign Cookies uses the smallest helpful match.",
+      "Jump Game keeps the farthest reach so far.",
+      "Gas Station resets the start after the running tank fails."
+    ],
+    "successMessage": "Pass. You rebuilt the main greedy clues from memory.",
+    "retryMessage": "Needs practice. Recheck matching, farthest reach, and reset rules.",
+    "completionBehavior": "mark_complete",
+    "blanks": [
+      {
+        "key": "matchClue",
+        "label": "Main clue for greedy matching",
+        "expectedValues": [
+          "use the smallest helpful resource",
+          "smallest helpful match",
+          "save bigger resources"
+        ]
+      },
+      {
+        "key": "reachClue",
+        "label": "Main clue for best reach",
+        "expectedValues": [
+          "keep the farthest reach so far",
+          "best reach so far",
+          "track farthest reach"
+        ]
+      },
+      {
+        "key": "resetClue",
+        "label": "Main clue for reset-after-failure problems",
+        "expectedValues": [
+          "reset to the next start after failure",
+          "reset the start",
+          "skip failed start section"
+        ]
+      }
+    ],
+    "visibleTests": [
+      {
+        "label": "Matching clue",
+        "scenario": "goal = match",
+        "blankKey": "matchClue",
+        "expected": "smallest helpful match"
+      },
+      {
+        "label": "Reach clue",
+        "scenario": "goal = reach",
+        "blankKey": "reachClue",
+        "expected": "track farthest reach"
+      },
+      {
+        "label": "Reset clue",
+        "scenario": "goal = reset",
+        "blankKey": "resetClue",
+        "expected": "reset the start"
+      }
+    ]
+  }
+}

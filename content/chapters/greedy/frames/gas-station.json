@@ -1,0 +1,39 @@
+[
+  {
+    "id": "gas-1",
+    "narration": "Gas Station begins with a total check: if total gas is less than total cost, the trip is impossible.",
+    "arrayValues": ["total gas", "total cost"],
+    "callout": "Impossible overall means no starting station can work.",
+    "highlightIndexes": [0, 1]
+  },
+  {
+    "id": "gas-2",
+    "narration": "While scanning, greedy keeps a running tank from the current start.",
+    "arrayValues": ["diffs: -2 -2 -2 +3 +3", "tank drops below 0"],
+    "decision": "If the tank becomes negative, reset the start to the next station.",
+    "highlightIndexes": [0, 1],
+    "predictionPrompt": {
+      "prompt": "What should happen when the running tank becomes negative?",
+      "choices": [
+        {
+          "id": "reset",
+          "label": "Reset the start to the next station",
+          "isCorrect": true,
+          "feedback": "Correct. The current start has failed, so greedy jumps to the next possible start."
+        },
+        {
+          "id": "keep",
+          "label": "Keep the same start anyway",
+          "isCorrect": false,
+          "feedback": "Not this one. A negative tank proves the current start cannot finish this section."
+        }
+      ]
+    }
+  },
+  {
+    "id": "gas-3",
+    "narration": "That reset rule removes many bad starting stations at once, which is why the greedy solution stays fast.",
+    "arrayValues": ["skip failed section"],
+    "callout": "The next station becomes the new useful candidate."
+  }
+]

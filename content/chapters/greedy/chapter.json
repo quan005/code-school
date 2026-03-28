@@ -1,0 +1,7 @@
+{
+  "slug": "greedy",
+  "title": "Greedy",
+  "order": 16,
+  "track": "Code Patterns",
+  "summary": "Learn how greedy algorithms make the best choice right now, and when that local choice can safely lead to the best overall answer."
+}

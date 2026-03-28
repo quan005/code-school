@@ -1,0 +1,117 @@
+---
+title: "Partition Labels"
+slug: "partition-labels"
+order: 6
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 15
+concepts:
+  - "last position"
+  - "keep segment open"
+  - "cut when safe"
+skills:
+  - "Track the last appearance of each letter"
+  - "Explain why the current partition must stay open"
+prerequisites:
+  - "lemonade-change"
+summary: "Record the last position of each letter, then greedily keep each segment open until every letter inside it is finished."
+---
+
+<ProblemStatement title="Split the string into as many safe parts as possible">
+  Given a string <code>s</code>, split it into as many parts as possible so that
+  each letter appears in at most one part. Return the sizes of the parts.
+</ProblemStatement>
+
+## Example
+
+```txt
+s = "ababcbacadefegdehijhklij"
+answer = [9, 7, 8]
+```
+
+<Intuition title="Each seen letter tells how long the current part must stay open">
+  First record the last position of every letter. Then scan from left to right.
+  If a letter’s last position is farther away, the current partition must stay
+  open until that point.
+</Intuition>
+
+<InterviewTip>
+  Greedy cuts the partition at the earliest safe point, which is exactly when
+  all letters inside it are finished.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function partitionLabels(s: string): number[] {
+  const last = new Map<string, number>();
+
+  for (let index = 0; index < s.length; index += 1) {
+    last.set(s[index], index);
+  }
+
+  const result: number[] = [];
+  let start = 0;
+  let end = 0;
+
+  for (let index = 0; index < s.length; index += 1) {
+    end = Math.max(end, last.get(s[index])!);
+
+    if (index === end) {
+      result.push(end - start + 1);
+      start = index + 1;
+    }
+  }
+
+  return result;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(k)"
+  notes="One pass saves last positions, and one pass builds the partitions."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: 's = "ababcbacadefegdehijhklij"',
+      expected: "[9, 7, 8]",
+      why: "Each partition closes as soon as all its letters are finished.",
+    },
+    {
+      input: 's = "eccbbbbdec"',
+      expected: "[10]",
+      why: "The letters keep forcing one big part to stay open.",
+    },
+    {
+      input: 's = "abc"',
+      expected: "[1, 1, 1]",
+      why: "Each letter finishes right away, so every part can close early.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Cutting a partition before all letters inside it are done",
+      fix: "Keep the partition open until the farthest last position of every seen letter.",
+    },
+    {
+      title: "Skipping the first pass that records last positions",
+      fix: "That saved last-position map is what makes the greedy cut safe.",
+    },
+  ]}
+/>
+
+<HintDrawer title="How far must this part stay open?">
+  The answer is the farthest last position of any letter you have seen in the
+  current partition.
+</HintDrawer>
+
+## Reflection
+
+Why is it safe to cut a partition exactly when the current index reaches the
+current farthest end?

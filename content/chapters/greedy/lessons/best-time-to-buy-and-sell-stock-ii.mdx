@@ -1,0 +1,104 @@
+---
+title: "Best Time to Buy and Sell Stock II"
+slug: "best-time-to-buy-and-sell-stock-ii"
+order: 3
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 13
+concepts:
+  - "take every positive gain"
+  - "rising slope"
+  - "local profit"
+skills:
+  - "Add every positive day-to-day gain"
+  - "Explain why all rising pieces can be collected"
+prerequisites:
+  - "assign-cookies"
+summary: "Collect every upward stock step because each positive rise is safe to take."
+---
+
+<ProblemStatement title="Take the maximum total profit with many buys and sells">
+  Given stock prices by day, return the maximum profit when you may buy and sell
+  many times but can hold only one stock at a time.
+</ProblemStatement>
+
+## Example
+
+```txt
+prices = [7, 1, 5, 3, 6, 4]
+answer = 7
+```
+
+<Intuition title="Every positive rise is worth taking">
+  If tomorrow’s price is higher than today’s, that gain can safely be added.
+  Greedy says: take every day-to-day profit jump greater than zero.
+</Intuition>
+
+<InterviewTip>
+  This greedy rule works because a long rise and all its little positive pieces
+  add up to the same total gain.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function maxProfit(prices: number[]): number {
+  let profit = 0;
+
+  for (let day = 1; day < prices.length; day += 1) {
+    if (prices[day] > prices[day - 1]) {
+      profit += prices[day] - prices[day - 1];
+    }
+  }
+
+  return profit;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(1)"
+  notes="We only scan once and add each safe local gain."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "prices = [7, 1, 5, 3, 6, 4]",
+      expected: "7",
+      why: "The positive rises are 4 and 3.",
+    },
+    {
+      input: "prices = [1, 2, 3, 4, 5]",
+      expected: "4",
+      why: "Every daily rise can be collected.",
+    },
+    {
+      input: "prices = [7, 6, 4, 3, 1]",
+      expected: "0",
+      why: "There are no positive rises to take.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Ignoring a small positive rise while waiting for a later one",
+      fix: "Every positive rise is safe to collect here.",
+    },
+    {
+      title: "Trying to hold multiple stocks at once",
+      fix: "This problem still allows only one held stock at a time, but the greedy gain rule already handles that correctly.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Add the ups">
+  Look at each pair of neighboring days. If the price goes up, add that rise to
+  the answer.
+</HintDrawer>
+
+## Reflection
+
+Why does adding all the small positive rises equal the best total profit?

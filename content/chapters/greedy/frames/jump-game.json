@@ -1,0 +1,46 @@
+[
+  {
+    "id": "jump-1",
+    "narration": "Jump Game keeps one best-so-far value: the farthest index reachable right now.",
+    "arrayValues": [2, 3, 1, 1, 4],
+    "callout": "At index 0, the farthest reach is 2.",
+    "highlightIndexes": [0],
+    "pointers": {
+      "current": 0
+    }
+  },
+  {
+    "id": "jump-2",
+    "narration": "If a reachable index extends the farthest reach, greedy updates that value.",
+    "arrayValues": [2, 3, 1, 1, 4],
+    "decision": "At index 1, the farthest reach grows to 4.",
+    "highlightIndexes": [1, 4],
+    "pointers": {
+      "current": 1,
+      "right": 4
+    },
+    "predictionPrompt": {
+      "prompt": "What does it mean if the current index becomes bigger than farthest?",
+      "choices": [
+        {
+          "id": "stuck",
+          "label": "We are stuck",
+          "isCorrect": true,
+          "feedback": "Correct. That index is not reachable anymore."
+        },
+        {
+          "id": "win",
+          "label": "We already won",
+          "isCorrect": false,
+          "feedback": "Not this one. Going beyond farthest means failure, not success."
+        }
+      ]
+    }
+  },
+  {
+    "id": "jump-3",
+    "narration": "The whole problem can be solved with that one moving reach value.",
+    "arrayValues": ["farthest so far"],
+    "callout": "That is what makes this greedy solution so compact."
+  }
+]

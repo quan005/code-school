@@ -1,0 +1,43 @@
+[
+  {
+    "id": "intro-1",
+    "narration": "A greedy algorithm makes the best local choice it can right now.",
+    "arrayValues": ["best now", "move forward", "repeat"],
+    "callout": "It does not test every full future plan first.",
+    "highlightIndexes": [0, 1, 2]
+  },
+  {
+    "id": "intro-2",
+    "narration": "Best now depends on the problem: smallest helpful item, biggest gain, farthest reach, or safest current move.",
+    "arrayValues": ["smallest helpful", "biggest gain", "farthest reach"],
+    "decision": "Greedy is a style of thinking, not one single formula.",
+    "highlightIndexes": [0, 1, 2],
+    "predictionPrompt": {
+      "prompt": "What question does greedy keep asking?",
+      "choices": [
+        {
+          "id": "best-now",
+          "label": "What is the best move right now?",
+          "isCorrect": true,
+          "feedback": "Correct. Greedy keeps making the best current move by the rule of the problem."
+        },
+        {
+          "id": "all-answers",
+          "label": "What are all possible full answers?",
+          "isCorrect": false,
+          "feedback": "Not this one. That is not the main greedy mindset."
+        }
+      ]
+    }
+  },
+  {
+    "id": "intro-3",
+    "narration": "Greedy works best when the local choice keeps the future in a good shape.",
+    "arrayValues": ["good now", "future stays possible"],
+    "callout": "That is why some problems fit greedy well and others do not.",
+    "reflectionPrompt": {
+      "prompt": "Why can a good local choice help the whole future in some problems?",
+      "placeholder": "It can help because..."
+    }
+  }
+]

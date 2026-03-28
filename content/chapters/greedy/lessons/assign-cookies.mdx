@@ -1,0 +1,115 @@
+---
+title: "Assign Cookies"
+slug: "assign-cookies"
+order: 2
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 14
+concepts:
+  - "sort both lists"
+  - "smallest useful match"
+  - "do not waste big resources"
+skills:
+  - "Match children with cookies greedily"
+  - "Explain why smallest useful cookies help"
+prerequisites: []
+summary: "Sort needs and resources, then use the smallest cookie that can satisfy the current child."
+---
+
+<ProblemStatement title="Make as many children happy as possible">
+  Each child has a greed factor and each cookie has a size. A child is happy if
+  the cookie size is at least the greed factor. Return the maximum number of
+  happy children.
+</ProblemStatement>
+
+## Example
+
+```txt
+g = [1, 2, 3]
+s = [1, 1]
+answer = 1
+```
+
+<Intuition title="Do not waste a big cookie on a small need">
+  Sort the children from least greedy to most greedy. Sort the cookies from
+  smallest to biggest. Then give the smallest cookie that can still satisfy the
+  current child.
+</Intuition>
+
+<InterviewTip>
+  This is a classic greedy matching idea: use the smallest helpful resource so
+  the bigger resources stay available for bigger needs later.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function findContentChildren(g: number[], s: number[]): number {
+  g.sort((a, b) => a - b);
+  s.sort((a, b) => a - b);
+
+  let child = 0;
+  let cookie = 0;
+  let happy = 0;
+
+  while (child < g.length && cookie < s.length) {
+    if (s[cookie] >= g[child]) {
+      happy += 1;
+      child += 1;
+      cookie += 1;
+    } else {
+      cookie += 1;
+    }
+  }
+
+  return happy;
+}
+```
+
+<ComplexityCard
+  time="O(n log n + m log m)"
+  space="Depends on sorting"
+  notes="Sorting lets us tell a clean smallest-to-biggest story for both lists."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "g = [1, 2, 3], s = [1, 1]",
+      expected: "1",
+      why: "Only one child can be satisfied.",
+    },
+    {
+      input: "g = [1, 2], s = [1, 2, 3]",
+      expected: "2",
+      why: "The smallest useful cookies can satisfy both children.",
+    },
+    {
+      input: "g = [], s = [1, 2]",
+      expected: "0",
+      why: "No children means no matches to make.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Giving a huge cookie to a child who needed only a tiny one",
+      fix: "Use the smallest cookie that still works so bigger cookies remain for greedier children.",
+    },
+    {
+      title: "Trying to match without sorting first",
+      fix: "Sorting makes the matching rule clear and safe.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Small need, small helpful resource">
+  Greedy matching works best here when each child gets the smallest cookie that
+  still makes them happy.
+</HintDrawer>
+
+## Reflection
+
+Why is it smart to save the bigger cookies for greedier children?
