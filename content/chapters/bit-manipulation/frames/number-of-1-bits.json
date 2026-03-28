@@ -1,0 +1,39 @@
+[
+  {
+    "id": "ones-1",
+    "narration": "To count 1 bits, first inspect the last bit.",
+    "arrayValues": ["1011", "& 0001", "last bit = 1"],
+    "callout": "AND with 1 tells whether the final bit is on.",
+    "highlightIndexes": [0, 1, 2]
+  },
+  {
+    "id": "ones-2",
+    "narration": "Then shift right so the next bit moves into the last position.",
+    "arrayValues": ["1011", "0101", "0010", "0001"],
+    "decision": "Check the last bit, shift right, and repeat.",
+    "highlightIndexes": [0, 1, 2, 3],
+    "predictionPrompt": {
+      "prompt": "What does n & 1 tell us?",
+      "choices": [
+        {
+          "id": "last",
+          "label": "Whether the last bit is 1",
+          "isCorrect": true,
+          "feedback": "Correct. AND with 1 inspects the current last bit."
+        },
+        {
+          "id": "all",
+          "label": "How many 1s are in the whole number",
+          "isCorrect": false,
+          "feedback": "Not this one. It checks only the last bit."
+        }
+      ]
+    }
+  },
+  {
+    "id": "ones-3",
+    "narration": "Eventually every bit gets inspected because the number keeps shrinking to the right.",
+    "arrayValues": ["count every on-switch"],
+    "callout": "That is why the loop finishes after checking all bits."
+  }
+]

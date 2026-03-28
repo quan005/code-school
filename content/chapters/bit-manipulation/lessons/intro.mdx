@@ -1,0 +1,85 @@
+---
+title: "Introduction"
+slug: "intro"
+order: 1
+lessonType: "intro"
+difficulty: "easy"
+estimatedMinutes: 10
+concepts:
+  - "bit"
+  - "binary"
+  - "XOR"
+  - "shift"
+skills:
+  - "Explain what a bit is"
+  - "Describe numbers as 0-and-1 place values"
+  - "Recognize when a bit trick might help"
+prerequisites: []
+summary: "Meet bits, learn how numbers can be written with 0s and 1s, and see why bit tricks can help with some number problems."
+---
+
+<ProblemStatement title="Bit manipulation works with the tiny 0-and-1 pieces inside numbers">
+  Inside a computer, numbers are stored using bits. A bit can only be
+  <code>0</code> or <code>1</code>.
+</ProblemStatement>
+
+<Intuition title="Think about light switches">
+  A bit is like a tiny light switch. <code>0</code> means off, and
+  <code>1</code> means on. When several bits sit together, they can represent a
+  number.
+</Intuition>
+
+<InterviewTip>
+  In binary, the place values are 1, 2, 4, 8, 16, and so on. For example,
+  <code>1011</code> means 8 + 2 + 1, which equals 11.
+</InterviewTip>
+
+<ComplexityCard
+  time="Bit tricks often inspect or change one tiny on-off piece at a time"
+  space="Often O(1)"
+  notes="The big idea is to use simple 0-and-1 rules when the problem has a hidden binary pattern."
+/>
+
+## Helpful bit ideas
+
+- <strong>bit</strong>: one tiny 0 or 1
+- <strong>binary</strong>: writing numbers with bits
+- <strong>AND</strong>: 1 only when both bits are 1
+- <strong>XOR</strong>: 1 when the bits are different
+- <strong>shift</strong>: move bits left or right
+
+## Strong bit clues
+
+- a number appears once while others repeat
+- count how many 1 bits are in a number
+- check whether a number is a power of two
+- compare a full expected set with one missing value
+- build a number one bit at a time
+
+<PredictionPrompt
+  prompt={{
+    prompt: "If a bit is like a light switch, what does 1 mean?",
+    choices: [
+      {
+        id: "on",
+        label: "On",
+        isCorrect: true,
+        feedback: "Correct. In this chapter, 1 means the switch is on.",
+      },
+      {
+        id: "off",
+        label: "Off",
+        isCorrect: false,
+        feedback: "Not this one. 0 means off and 1 means on.",
+      },
+    ],
+  }}
+/>
+
+## Lesson Summary
+
+- A bit is one tiny 0 or 1.
+- Binary writes numbers with bit place values like 1, 2, 4, and 8.
+- XOR, AND, and shifts are common bit tools.
+- Bit tricks work best when the problem matches a binary pattern.
+- Bits can help solve some number problems very neatly.

@@ -1,0 +1,86 @@
+{
+  "recapPrompt": {
+    "prompt": "Why is XOR so good at pair problems?",
+    "choices": [
+      {
+        "id": "cancel",
+        "label": "Because equal values cancel each other out",
+        "isCorrect": true,
+        "feedback": "Correct. XOR turns matching pairs into zero."
+      },
+      {
+        "id": "sort",
+        "label": "Because XOR sorts the numbers first",
+        "isCorrect": false,
+        "feedback": "Not this one. XOR is about canceling and combining bits, not sorting."
+      }
+    ]
+  },
+  "reflectionPrompt": {
+    "prompt": "Explain in your own words why checking the last bit and shifting right make a good team.",
+    "placeholder": "They work well together because..."
+  },
+  "practiceChallenge": {
+    "title": "Mastery check: rebuild the bit clues",
+    "description": "Complete the helper so it returns the main clue for pair canceling, counting 1 bits, and building answers bit by bit.",
+    "language": "javascript",
+    "starterCode": "export function bitMasteryClue(goal) {\n  const pairClue = \"TODO\";\n  const countClue = \"TODO\";\n  const buildClue = \"TODO\";\n\n  if (goal === \"pair\") {\n    return pairClue;\n  }\n\n  if (goal === \"count\") {\n    return countClue;\n  }\n\n  return buildClue;\n}\n",
+    "hints": [
+      "Single Number uses XOR canceling.",
+      "Number of 1 Bits checks the last bit and shifts.",
+      "Reverse Bits builds the answer one bit at a time."
+    ],
+    "successMessage": "Pass. You rebuilt the main bit-manipulation clues from memory.",
+    "retryMessage": "Needs practice. Recheck pair canceling, bit counting, and bit-by-bit building.",
+    "completionBehavior": "mark_complete",
+    "blanks": [
+      {
+        "key": "pairClue",
+        "label": "Main clue for pair-canceling problems",
+        "expectedValues": [
+          "use xor to cancel pairs",
+          "xor canceling",
+          "equal pairs cancel"
+        ]
+      },
+      {
+        "key": "countClue",
+        "label": "Main clue for counting 1 bits",
+        "expectedValues": [
+          "check last bit then shift",
+          "and with 1 then shift",
+          "last bit and shift"
+        ]
+      },
+      {
+        "key": "buildClue",
+        "label": "Main clue for building bit answers",
+        "expectedValues": [
+          "build one bit at a time",
+          "shift and add bits",
+          "grow the answer bit by bit"
+        ]
+      }
+    ],
+    "visibleTests": [
+      {
+        "label": "Pair clue",
+        "scenario": "goal = pair",
+        "blankKey": "pairClue",
+        "expected": "xor canceling"
+      },
+      {
+        "label": "Count clue",
+        "scenario": "goal = count",
+        "blankKey": "countClue",
+        "expected": "check last bit then shift"
+      },
+      {
+        "label": "Build clue",
+        "scenario": "goal = build",
+        "blankKey": "buildClue",
+        "expected": "build one bit at a time"
+      }
+    ]
+  }
+}

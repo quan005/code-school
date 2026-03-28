@@ -1,0 +1,39 @@
+[
+  {
+    "id": "missing-1",
+    "narration": "Missing Number compares the full expected range with the actual array values.",
+    "arrayValues": ["expected: 0 1 2 3", "actual: 3 0 1"],
+    "callout": "The missing value is the one that does not get canceled.",
+    "highlightIndexes": [0, 1]
+  },
+  {
+    "id": "missing-2",
+    "narration": "XOR all indexes and all array values together, and the matching values disappear.",
+    "arrayValues": ["0^1^2^3^3^0^1", "only 2 remains"],
+    "decision": "XOR compare-and-cancel is the whole trick.",
+    "highlightIndexes": [0, 1],
+    "predictionPrompt": {
+      "prompt": "Why does the missing number remain after the XOR canceling?",
+      "choices": [
+        {
+          "id": "no-pair",
+          "label": "Because it has no matching partner to cancel it",
+          "isCorrect": true,
+          "feedback": "Correct. Everything else appears in both sets and cancels."
+        },
+        {
+          "id": "bigger",
+          "label": "Because it is always the biggest number",
+          "isCorrect": false,
+          "feedback": "Not this one. The missing number can be small, middle, or large."
+        }
+      ]
+    }
+  },
+  {
+    "id": "missing-3",
+    "narration": "This works because XOR is comparing what should be present with what really is present.",
+    "arrayValues": ["expected set", "actual set", "one value missing"],
+    "callout": "The missing one is the only uncanceled value."
+  }
+]

@@ -1,0 +1,43 @@
+[
+  {
+    "id": "intro-1",
+    "narration": "Bits are tiny on-off pieces inside numbers.",
+    "arrayValues": ["0 = off", "1 = on"],
+    "callout": "You can think of bits like little light switches.",
+    "highlightIndexes": [0, 1]
+  },
+  {
+    "id": "intro-2",
+    "narration": "In binary, the places are 1, 2, 4, 8, and so on, so 1011 means 8 + 2 + 1.",
+    "arrayValues": ["1 eight", "0 fours", "1 two", "1 one"],
+    "decision": "That is why 1011 equals 11.",
+    "highlightIndexes": [0, 2, 3],
+    "predictionPrompt": {
+      "prompt": "What does the bit 1 mean in our switch idea?",
+      "choices": [
+        {
+          "id": "on",
+          "label": "On",
+          "isCorrect": true,
+          "feedback": "Correct. 1 means the switch is on."
+        },
+        {
+          "id": "off",
+          "label": "Off",
+          "isCorrect": false,
+          "feedback": "Not this one. 0 means off."
+        }
+      ]
+    }
+  },
+  {
+    "id": "intro-3",
+    "narration": "Bit manipulation means using rules about those tiny 0s and 1s to solve problems.",
+    "arrayValues": ["XOR", "AND", "shift"],
+    "callout": "These small rules can lead to clever fast solutions.",
+    "reflectionPrompt": {
+      "prompt": "Why can a tiny rule about 0 and 1 still help solve a big number problem?",
+      "placeholder": "It can help because..."
+    }
+  }
+]

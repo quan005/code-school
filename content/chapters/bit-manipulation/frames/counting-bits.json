@@ -1,0 +1,44 @@
+[
+  {
+    "id": "countbits-1",
+    "narration": "Counting Bits builds the answer array from smaller earlier answers.",
+    "arrayValues": [0, 1, 1, 2, 1, 2],
+    "callout": "Each new value reuses an older one instead of recounting from scratch.",
+    "highlightIndexes": [0, 1, 2, 3, 4, 5]
+  },
+  {
+    "id": "countbits-2",
+    "narration": "For value 5, shift right to get 2 and then add the last bit of 5.",
+    "arrayValues": [
+      "5 = 101",
+      "5 >> 1 = 2",
+      "5 & 1 = 1",
+      "bits[5] = bits[2] + 1"
+    ],
+    "decision": "That is the rule: bits[i] = bits[i >> 1] + (i & 1).",
+    "highlightIndexes": [1, 2, 3],
+    "predictionPrompt": {
+      "prompt": "What does (i & 1) add to the Counting Bits rule?",
+      "choices": [
+        {
+          "id": "last-bit",
+          "label": "Whether the last bit is 1",
+          "isCorrect": true,
+          "feedback": "Correct. It tells what the removed last bit contributed."
+        },
+        {
+          "id": "all-bits",
+          "label": "The whole bit count from scratch",
+          "isCorrect": false,
+          "feedback": "Not this one. The earlier shifted answer already handles the rest."
+        }
+      ]
+    }
+  },
+  {
+    "id": "countbits-3",
+    "narration": "This lesson shows how bit tricks and dynamic programming can work together.",
+    "arrayValues": ["smaller answer", "plus last bit"],
+    "callout": "That combination makes the whole array fast to build."
+  }
+]

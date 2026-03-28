@@ -1,0 +1,101 @@
+---
+title: "Single Number"
+slug: "single-number"
+order: 2
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 13
+concepts:
+  - "XOR canceling"
+  - "pairs disappear"
+  - "single value remains"
+skills:
+  - "Use XOR to cancel pairs"
+  - "Explain why the single number is left over"
+prerequisites: []
+summary: "Use XOR so matching pairs cancel out and the one number without a pair stays behind."
+---
+
+<ProblemStatement title="Find the number that appears only once">
+  Given an array where every number appears twice except for one number that
+  appears once, return the number that appears once.
+</ProblemStatement>
+
+## Example
+
+```txt
+nums = [4, 1, 2, 1, 2]
+answer = 4
+```
+
+<Intuition title="XOR makes matching pairs disappear">
+  XOR has a powerful rule: <code>x ^ x = 0</code> and <code>x ^ 0 = x</code>. So
+  when we XOR every number in the array, the pairs cancel out and the single
+  number stays.
+</Intuition>
+
+<InterviewTip>
+  This is one of the most famous bit tricks. If equal pairs should cancel, think
+  about XOR.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function singleNumber(nums: number[]): number {
+  let result = 0;
+
+  for (const num of nums) {
+    result ^= num;
+  }
+
+  return result;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(1)"
+  notes="We scan once and keep only one running XOR total."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "nums = [2, 2, 1]",
+      expected: "1",
+      why: "The pair of 2s cancels out.",
+    },
+    {
+      input: "nums = [4, 1, 2, 1, 2]",
+      expected: "4",
+      why: "The two 1s cancel and the two 2s cancel.",
+    },
+    {
+      input: "nums = [1]",
+      expected: "1",
+      why: "With no pair to cancel it, 1 stays.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Trying to keep counts when XOR can do the canceling for free",
+      fix: "Use the XOR rules to remove matched pairs directly.",
+    },
+    {
+      title: "Forgetting that XOR with 0 changes nothing",
+      fix: "That is why starting the running result at 0 works so well.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Pairs disappear">
+  Ask yourself: if two equal numbers meet under XOR, what do they become?
+</HintDrawer>
+
+## Reflection
+
+Why is XOR such a perfect fit when matching pairs should cancel out?

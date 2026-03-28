@@ -1,0 +1,39 @@
+[
+  {
+    "id": "reverse-1",
+    "narration": "Reverse Bits reads the original number from the rightmost bit first.",
+    "arrayValues": ["1101", "last bit first"],
+    "callout": "The last bit of the original becomes the first built bit in the reversed answer.",
+    "highlightIndexes": [0, 1]
+  },
+  {
+    "id": "reverse-2",
+    "narration": "Each round shifts the growing result left to make room, then adds the current last bit from the original number.",
+    "arrayValues": ["result << 1", "| last bit", "n >>> 1"],
+    "decision": "The result grows while the original number shrinks.",
+    "highlightIndexes": [0, 1, 2],
+    "predictionPrompt": {
+      "prompt": "Why do we shift the result left during Reverse Bits?",
+      "choices": [
+        {
+          "id": "room",
+          "label": "To make room for the next bit",
+          "isCorrect": true,
+          "feedback": "Correct. The growing answer needs an open spot for the next copied bit."
+        },
+        {
+          "id": "erase",
+          "label": "To erase the answer",
+          "isCorrect": false,
+          "feedback": "Not this one. The shift is helping the answer grow, not disappear."
+        }
+      ]
+    }
+  },
+  {
+    "id": "reverse-3",
+    "narration": "After repeating the process enough times, the reversed answer is complete.",
+    "arrayValues": ["read right", "write left", "repeat"],
+    "callout": "That is the whole bit-reversal story."
+  }
+]

@@ -1,0 +1,103 @@
+---
+title: "Reverse Bits"
+slug: "reverse-bits"
+order: 7
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 16
+concepts:
+  - "build result bit by bit"
+  - "read from right"
+  - "write to left"
+skills:
+  - "Reverse the bits of a number"
+  - "Use shifts to build the answer one bit at a time"
+prerequisites:
+  - "counting-bits"
+summary: "Reverse a number’s bits by reading one last bit at a time and shifting the result to make room for the next one."
+---
+
+<ProblemStatement title="Reverse the 32 bits of the number">
+  Given a 32-bit unsigned integer, reverse its bits and return the result.
+</ProblemStatement>
+
+## Small Example
+
+```txt
+1101 -> 1011
+```
+
+<Intuition title="Read from the right, build on the left">
+  Look at the current last bit of the number. Add that bit to the result, then
+  shift the result left to make room for the next bit. Shift the original number
+  right to move the next bit into place.
+</Intuition>
+
+<InterviewTip>
+  Reverse Bits is like reading the original number one tiny bit at a time and
+  writing a new number in the opposite order.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function reverseBits(n: number): number {
+  let result = 0;
+
+  for (let count = 0; count < 32; count += 1) {
+    result = (result << 1) | (n & 1);
+    n = n >>> 1;
+  }
+
+  return result >>> 0;
+}
+```
+
+<ComplexityCard
+  time="O(32)"
+  space="O(1)"
+  notes="A 32-bit integer always takes the same fixed number of steps."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "A 4-bit example 1101",
+      expected: "1011",
+      why: "The last bit becomes the first, then the next last bit becomes the next, and so on.",
+    },
+    {
+      input: "All zeros",
+      expected: "All zeros",
+      why: "No 1 bits are moved into the result.",
+    },
+    {
+      input: "A number with one 1 bit",
+      expected: "That 1 bit moves to the mirrored position",
+      why: "The building process reverses the bit order exactly.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Shifting the wrong number at the wrong time",
+      fix: "Shift the result left to make room, and shift the original number right to inspect the next bit.",
+    },
+    {
+      title: "Thinking this is about decimal digit reversal",
+      fix: "This problem reverses binary bits, not decimal digits.",
+    },
+  ]}
+/>
+
+<HintDrawer title="One bit at a time">
+  Each round takes the current last bit from the original number and places it
+  into the growing answer.
+</HintDrawer>
+
+## Reflection
+
+Why does Reverse Bits need both a growing result and a shrinking original
+number?

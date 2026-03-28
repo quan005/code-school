@@ -1,0 +1,99 @@
+---
+title: "Power of Two"
+slug: "power-of-two"
+order: 4
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 13
+concepts:
+  - "exactly one 1 bit"
+  - "n and n-1"
+  - "AND trick"
+skills:
+  - "Recognize the binary shape of powers of two"
+  - "Use the n & (n - 1) trick"
+prerequisites:
+  - "number-of-1-bits"
+summary: "Use a classic AND trick to check whether a number has exactly one 1 bit."
+---
+
+<ProblemStatement title="Decide whether the number is a power of two">
+  Given an integer <code>n</code>, return <code>true</code> if it is a power of
+  two. Otherwise, return <code>false</code>.
+</ProblemStatement>
+
+## Example
+
+```txt
+8 = 1000 -> true
+10 = 1010 -> false
+```
+
+<Intuition title="Powers of two have one lonely 1 bit">
+  In binary, powers of two look like 1, 10, 100, 1000, and so on. They have
+  exactly one <code>1</code> bit.
+</Intuition>
+
+<InterviewTip>
+  The trick <code>n & (n - 1)</code> removes the lowest 1 bit. If the result is
+  zero and the number was positive, that means there was only one 1 bit.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function isPowerOfTwo(n: number): boolean {
+  if (n <= 0) {
+    return false;
+  }
+
+  return (n & (n - 1)) === 0;
+}
+```
+
+<ComplexityCard
+  time="O(1)"
+  space="O(1)"
+  notes="This bit trick checks the shape in constant time."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "n = 1",
+      expected: "true",
+      why: "1 is 2^0 and has one 1 bit.",
+    },
+    {
+      input: "n = 8",
+      expected: "true",
+      why: "1000 has exactly one 1 bit.",
+    },
+    {
+      input: "n = 10",
+      expected: "false",
+      why: "1010 has two 1 bits.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Forgetting that zero and negative numbers are not powers of two",
+      fix: "Check n > 0 before using the bit trick.",
+    },
+    {
+      title: "Thinking any even number is a power of two",
+      fix: "Many even numbers have more than one 1 bit in binary.",
+    },
+  ]}
+/>
+
+<HintDrawer title="One 1 bit only">
+  Ask whether the number’s binary shape has one on-switch or more than one.
+</HintDrawer>
+
+## Reflection
+
+Why does having exactly one 1 bit match the idea of a power of two?

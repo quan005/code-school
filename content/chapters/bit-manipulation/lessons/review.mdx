@@ -1,0 +1,47 @@
+---
+title: "Review"
+slug: "review"
+order: 8
+lessonType: "review"
+difficulty: "easy"
+estimatedMinutes: 8
+concepts:
+  - "bits"
+  - "canceling"
+  - "shifts"
+skills:
+  - "Review the main bit clues"
+  - "Tell common bit tricks apart"
+prerequisites:
+  - "reverse-bits"
+summary: "Review the big bit-manipulation ideas, especially bits as switches, XOR canceling, AND checks, and shifts."
+---
+
+<ProblemStatement title="What should bit-manipulation problems make you notice?">
+  This review lesson helps you remember the strongest clues that point to bit
+  thinking.
+</ProblemStatement>
+
+<Intuition title="Bit tricks are small rules with big effects">
+  A simple rule like pair canceling, last-bit checking, or shifting can turn a
+  number problem into a neat one-pass solution.
+</Intuition>
+
+<ComplexityCard
+  time="Many bit tricks run in one pass or a fixed number of bit steps"
+  space="Often O(1)"
+  notes="The big win is noticing when the problem naturally matches a 0-and-1 rule."
+/>
+
+## Pattern Summary
+
+- Single Number: XOR cancels equal pairs.
+- Number of 1 Bits: check the last bit, then shift.
+- Power of Two: one 1 bit means n & (n - 1) becomes zero.
+- Missing Number: XOR the full range with the array.
+- Counting Bits: use a shifted smaller answer plus the last bit.
+- Reverse Bits: build the answer one bit at a time.
+
+## Reflection
+
+Which bit clue feels easiest for you to notice now?

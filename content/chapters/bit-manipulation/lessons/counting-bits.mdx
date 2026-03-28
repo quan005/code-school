@@ -1,0 +1,104 @@
+---
+title: "Counting Bits"
+slug: "counting-bits"
+order: 6
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 15
+concepts:
+  - "smaller shifted answer"
+  - "last bit"
+  - "tiny DP with bits"
+skills:
+  - "Build the answer array from earlier results"
+  - "Use i >> 1 and i & 1 together"
+prerequisites:
+  - "missing-number"
+summary: "Build the bit counts for all numbers up to n by using each smaller shifted answer plus the last bit."
+---
+
+<ProblemStatement title="Return the bit counts for every number from 0 to n">
+  Given an integer <code>n</code>, return an array where
+  <code>answer[i]</code> is the number of <code>1</code> bits in the binary form
+  of <code>i</code>.
+</ProblemStatement>
+
+## Example
+
+```txt
+n = 5
+answer = [0, 1, 1, 2, 1, 2]
+```
+
+<Intuition title="A number is its shifted smaller self plus its last bit">
+  If we shift <code>i</code> right by 1, we remove the last bit. So the bit
+  count for <code>i</code> is the count for <code>i >> 1</code> plus
+  <code>(i & 1)</code>, which tells whether the removed last bit was 1.
+</Intuition>
+
+<InterviewTip>
+  This lesson mixes bit thinking with a tiny dynamic-programming idea because
+  earlier answers help build later ones.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function countBits(n: number): number[] {
+  const result = new Array(n + 1).fill(0);
+
+  for (let value = 1; value <= n; value += 1) {
+    result[value] = result[value >> 1] + (value & 1);
+  }
+
+  return result;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(n)"
+  notes="Each new value reuses an earlier smaller answer."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "n = 0",
+      expected: "[0]",
+      why: "Zero has no 1 bits.",
+    },
+    {
+      input: "n = 2",
+      expected: "[0, 1, 1]",
+      why: "0 has 0 ones, 1 has 1 one, and 2 = 10 has 1 one.",
+    },
+    {
+      input: "n = 5",
+      expected: "[0, 1, 1, 2, 1, 2]",
+      why: "Each count reuses a shifted smaller answer.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Trying to recount every number from scratch",
+      fix: "Reuse the earlier answer for value >> 1 and then add the last bit.",
+    },
+    {
+      title: "Forgetting what (i & 1) tells you",
+      fix: "It tells whether the last bit is 1.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Smaller answer plus last bit">
+  For each value, ask: what is the count for the shifted smaller number, and was
+  the last bit on?
+</HintDrawer>
+
+## Reflection
+
+Why does Counting Bits feel like a tiny dynamic-programming problem?

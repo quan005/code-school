@@ -1,0 +1,39 @@
+[
+  {
+    "id": "single-1",
+    "narration": "XOR makes equal pairs cancel out.",
+    "arrayValues": [4, 1, 2, 1, 2],
+    "callout": "The two 1s cancel and the two 2s cancel.",
+    "highlightIndexes": [1, 2, 3, 4]
+  },
+  {
+    "id": "single-2",
+    "narration": "After all the canceling, the only number left is the one without a pair.",
+    "arrayValues": ["1 ^ 1 = 0", "2 ^ 2 = 0", "4 stays"],
+    "decision": "That is why the running XOR answer becomes the single number.",
+    "highlightIndexes": [0, 1, 2],
+    "predictionPrompt": {
+      "prompt": "What does x ^ x equal?",
+      "choices": [
+        {
+          "id": "zero",
+          "label": "0",
+          "isCorrect": true,
+          "feedback": "Correct. Equal values cancel under XOR."
+        },
+        {
+          "id": "x",
+          "label": "x",
+          "isCorrect": false,
+          "feedback": "Not this one. XOR with the same value becomes 0."
+        }
+      ]
+    }
+  },
+  {
+    "id": "single-3",
+    "narration": "The trick works because XOR keeps canceling matches while leaving the unpaired value untouched.",
+    "arrayValues": ["pairs disappear", "single remains"],
+    "callout": "This is the signature Single Number bit trick."
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "slug": "bit-manipulation",
+  "title": "Bit Manipulation",
+  "order": 18,
+  "track": "Code Patterns",
+  "summary": "Learn how numbers are built from tiny 0-and-1 pieces, and use bit tricks like XOR, AND, and shifts to solve number problems step by step."
+}

@@ -1,0 +1,103 @@
+---
+title: "Number of 1 Bits"
+slug: "number-of-1-bits"
+order: 3
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 13
+concepts:
+  - "last bit"
+  - "AND with 1"
+  - "shift right"
+skills:
+  - "Count how many 1 bits are in a number"
+  - "Use AND to inspect the last bit"
+  - "Use right shift to move through the bits"
+prerequisites:
+  - "single-number"
+summary: "Count the 1 bits by checking the last bit, then shifting right to inspect the next one."
+---
+
+<ProblemStatement title="Count the on switches in the number">
+  Given a positive integer <code>n</code>, return how many <code>1</code> bits
+  are in its binary form.
+</ProblemStatement>
+
+## Example
+
+```txt
+11 = 1011
+answer = 3
+```
+
+<Intuition title="Check the last bit, then shift">
+  Use <code>n & 1</code> to check whether the current last bit is 1. Then shift
+  right so the next bit moves into the last spot.
+</Intuition>
+
+<InterviewTip>
+  <code>& 1</code> asks, “Is the last bit on?” A right shift moves us to the
+  next bit.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function hammingWeight(n: number): number {
+  let count = 0;
+
+  while (n !== 0) {
+    count += n & 1;
+    n = n >>> 1;
+  }
+
+  return count;
+}
+```
+
+<ComplexityCard
+  time="O(number of bits)"
+  space="O(1)"
+  notes="For a normal 32-bit integer, that means at most a small fixed number of steps."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "n = 11",
+      expected: "3",
+      why: "Binary 1011 has three 1 bits.",
+    },
+    {
+      input: "n = 8",
+      expected: "1",
+      why: "Binary 1000 has one 1 bit.",
+    },
+    {
+      input: "n = 0",
+      expected: "0",
+      why: "No bits are on.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Looking at decimal digits instead of binary bits",
+      fix: "This problem counts 1s in the binary form, not the decimal writing.",
+    },
+    {
+      title: "Forgetting to shift right after checking the last bit",
+      fix: "Right shift moves the next bit into place for the next check.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Inspect the last bit">
+  The last bit is easiest to check. After that, shift right and repeat.
+</HintDrawer>
+
+## Reflection
+
+What two tiny actions repeat over and over in this bit-counting problem?

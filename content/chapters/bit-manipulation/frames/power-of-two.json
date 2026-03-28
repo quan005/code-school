@@ -1,0 +1,39 @@
+[
+  {
+    "id": "power-1",
+    "narration": "A power of two has exactly one 1 bit in binary.",
+    "arrayValues": ["1", "10", "100", "1000"],
+    "callout": "Each example has one lonely on-switch.",
+    "highlightIndexes": [0, 1, 2, 3]
+  },
+  {
+    "id": "power-2",
+    "narration": "Subtracting 1 flips that one 1 bit down and turns the smaller bits on.",
+    "arrayValues": ["8 = 1000", "7 = 0111", "1000 & 0111 = 0000"],
+    "decision": "That is why n & (n - 1) becomes zero for powers of two.",
+    "highlightIndexes": [0, 1, 2],
+    "predictionPrompt": {
+      "prompt": "What special binary feature does every power of two have?",
+      "choices": [
+        {
+          "id": "one-bit",
+          "label": "Exactly one 1 bit",
+          "isCorrect": true,
+          "feedback": "Correct. That one-bit shape is the key clue."
+        },
+        {
+          "id": "two-bits",
+          "label": "Exactly two 1 bits",
+          "isCorrect": false,
+          "feedback": "Not this one. Two 1 bits means it is not a power of two."
+        }
+      ]
+    }
+  },
+  {
+    "id": "power-3",
+    "narration": "If more than one 1 bit exists, the AND result will not become zero.",
+    "arrayValues": ["10 = 1010", "9 = 1001", "1010 & 1001 = 1000"],
+    "callout": "That is why 10 is not a power of two."
+  }
+]

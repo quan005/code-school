@@ -1,0 +1,23 @@
+{
+  "recapPrompt": {
+    "prompt": "What is one of the strongest signs that a problem may fit bit manipulation?",
+    "choices": [
+      {
+        "id": "pair",
+        "label": "The problem has a binary-style rule like pair canceling or counting 1 bits",
+        "isCorrect": true,
+        "feedback": "Correct. Problems about pairs, bit counts, powers of two, and shifts are strong bit clues."
+      },
+      {
+        "id": "alphabet",
+        "label": "The values are in alphabetical order",
+        "isCorrect": false,
+        "feedback": "Not this one. Alphabetical order is not a bit clue."
+      }
+    ]
+  },
+  "reflectionPrompt": {
+    "prompt": "Explain how bits being like little switches can help you picture binary numbers.",
+    "placeholder": "The switch idea helps because..."
+  }
+}

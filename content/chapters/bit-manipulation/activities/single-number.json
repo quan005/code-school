@@ -1,0 +1,61 @@
+{
+  "practiceChallenge": {
+    "title": "Fill in the bit-manipulation clues",
+    "description": "Complete the helper so it returns the right idea for XOR canceling, last-bit checking, and powers of two.",
+    "language": "javascript",
+    "starterCode": "export function bitClue(job) {\n  const xorClue = \"TODO\";\n  const lastBitClue = \"TODO\";\n  const powerClue = \"TODO\";\n\n  if (job === \"xor\") {\n    return xorClue;\n  }\n\n  if (job === \"lastBit\") {\n    return lastBitClue;\n  }\n\n  return powerClue;\n}\n",
+    "hints": [
+      "XOR cancels equal pairs.",
+      "AND with 1 checks the last bit.",
+      "A power of two has exactly one 1 bit."
+    ],
+    "successMessage": "Nice work. You rebuilt the main bit clues.",
+    "retryMessage": "Not yet. Recheck XOR canceling, last-bit checking, and the power-of-two shape.",
+    "completionBehavior": "mark_complete",
+    "blanks": [
+      {
+        "key": "xorClue",
+        "label": "Main clue for XOR canceling",
+        "expectedValues": [
+          "equal pairs cancel",
+          "pairs disappear",
+          "xor canceling"
+        ]
+      },
+      {
+        "key": "lastBitClue",
+        "label": "Main clue for checking the last bit",
+        "expectedValues": ["use and with 1", "check the last bit", "n and 1"]
+      },
+      {
+        "key": "powerClue",
+        "label": "Main clue for powers of two",
+        "expectedValues": [
+          "exactly one 1 bit",
+          "one 1 bit",
+          "power-of-two binary shape"
+        ]
+      }
+    ],
+    "visibleTests": [
+      {
+        "label": "XOR clue",
+        "scenario": "job = xor",
+        "blankKey": "xorClue",
+        "expected": "equal pairs cancel"
+      },
+      {
+        "label": "Last-bit clue",
+        "scenario": "job = lastBit",
+        "blankKey": "lastBitClue",
+        "expected": "check the last bit"
+      },
+      {
+        "label": "Power-of-two clue",
+        "scenario": "job = power",
+        "blankKey": "powerClue",
+        "expected": "exactly one 1 bit"
+      }
+    ]
+  }
+}

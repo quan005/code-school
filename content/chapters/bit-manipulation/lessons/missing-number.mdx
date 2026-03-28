@@ -1,0 +1,103 @@
+---
+title: "Missing Number"
+slug: "missing-number"
+order: 5
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 14
+concepts:
+  - "expected range"
+  - "XOR compare"
+  - "cancel matches"
+skills:
+  - "Use XOR to compare the full range with the actual array"
+  - "Explain why the missing value remains"
+prerequisites:
+  - "power-of-two"
+summary: "Use XOR to compare the full expected range with the array so the matching values cancel and the missing one remains."
+---
+
+<ProblemStatement title="Find the one missing value from 0 through n">
+  Given an array containing <code>n</code> distinct numbers from the range
+  <code>0</code> to <code>n</code>, return the one number that is missing.
+</ProblemStatement>
+
+## Example
+
+```txt
+nums = [3, 0, 1]
+answer = 2
+```
+
+<Intuition title="Compare what should exist with what actually exists">
+  XOR together every index from <code>0</code> to <code>n</code> and every value
+  in the array. The matches cancel out, and the missing number is the one value
+  left over.
+</Intuition>
+
+<InterviewTip>
+  XOR is great when you have a full expected set and one incomplete actual set.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function missingNumber(nums: number[]): number {
+  let result = nums.length;
+
+  for (let index = 0; index < nums.length; index += 1) {
+    result ^= index;
+    result ^= nums[index];
+  }
+
+  return result;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(1)"
+  notes="One pass is enough because XOR handles all the canceling for us."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "nums = [3, 0, 1]",
+      expected: "2",
+      why: "0, 1, and 3 cancel from the full range, leaving 2.",
+    },
+    {
+      input: "nums = [0, 1]",
+      expected: "2",
+      why: "The full range is 0 through 2, so 2 is missing.",
+    },
+    {
+      input: "nums = [1]",
+      expected: "0",
+      why: "The range should be 0 through 1, so 0 is missing.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Starting from the wrong full range",
+      fix: "If there are n numbers, the expected full range is 0 through n.",
+    },
+    {
+      title: "Using extra memory when XOR already compares both sets",
+      fix: "The XOR trick can do the compare-and-cancel work in constant extra space.",
+    },
+  ]}
+/>
+
+<HintDrawer title="What should be there?">
+  Think about the full expected set of values, then compare it with what the
+  array really has.
+</HintDrawer>
+
+## Reflection
+
+Why is Missing Number another great match for XOR canceling?
