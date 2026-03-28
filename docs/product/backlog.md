@@ -2271,6 +2271,7 @@ Source both from the `Chapter Review` and `Mastery Check` sections in `docs/curr
 - Subsequent chapters.
 
 ---
+
 ## EPIC-24: Child Safety and Account Model
 
 ### `SAFETY-1` Design Adult-Managed Child Account Model
