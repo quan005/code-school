@@ -1,0 +1,44 @@
+[
+  {
+    "id": "fib-1",
+    "narration": "Fibonacci starts from the two base cases, 0 and 1.",
+    "arrayValues": [0, 1],
+    "callout": "These first two answers let the whole sequence begin.",
+    "highlightIndexes": [0, 1]
+  },
+  {
+    "id": "fib-2",
+    "narration": "Each new position adds the previous two saved answers.",
+    "arrayValues": [0, 1, 1, 2, 3, 5, 8],
+    "decision": "For example, 8 comes from 5 + 3.",
+    "highlightIndexes": [4, 5, 6],
+    "pointers": {
+      "left": 4,
+      "right": 5,
+      "current": 6
+    },
+    "predictionPrompt": {
+      "prompt": "Which two earlier Fibonacci values help make F(6)?",
+      "choices": [
+        {
+          "id": "f5-f4",
+          "label": "F(5) and F(4)",
+          "isCorrect": true,
+          "feedback": "Correct. Each Fibonacci value uses the two before it."
+        },
+        {
+          "id": "f5-only",
+          "label": "Only F(5)",
+          "isCorrect": false,
+          "feedback": "Not this one. Fibonacci needs the previous two answers."
+        }
+      ]
+    }
+  },
+  {
+    "id": "fib-3",
+    "narration": "Because each answer is saved, the later positions can reuse them quickly.",
+    "arrayValues": [0, 1, 1, 2, 3, 5, 8],
+    "callout": "That is the DP win: no repeated recomputing."
+  }
+]

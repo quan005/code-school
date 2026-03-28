@@ -1,0 +1,65 @@
+{
+  "practiceChallenge": {
+    "title": "Fill in the DP clues",
+    "description": "Complete the helper so it returns the right idea for Fibonacci, base cases, and repeated smaller work.",
+    "language": "javascript",
+    "starterCode": "export function dpClue(job) {\n  const fibClue = \"TODO\";\n  const baseClue = \"TODO\";\n  const repeatClue = \"TODO\";\n\n  if (job === \"fib\") {\n    return fibClue;\n  }\n\n  if (job === \"base\") {\n    return baseClue;\n  }\n\n  return repeatClue;\n}\n",
+    "hints": [
+      "Fibonacci uses the previous two answers.",
+      "Base cases are the first known tiny answers.",
+      "Repeated smaller work is a clue for DP."
+    ],
+    "successMessage": "Nice work. You rebuilt the main DP clues.",
+    "retryMessage": "Not yet. Recheck Fibonacci, base cases, and repeated smaller work.",
+    "completionBehavior": "mark_complete",
+    "blanks": [
+      {
+        "key": "fibClue",
+        "label": "Main clue for Fibonacci",
+        "expectedValues": [
+          "use the previous two answers",
+          "two earlier answers",
+          "previous two values"
+        ]
+      },
+      {
+        "key": "baseClue",
+        "label": "Main clue for base cases",
+        "expectedValues": [
+          "first known answers",
+          "start the table",
+          "tiny sure answers"
+        ]
+      },
+      {
+        "key": "repeatClue",
+        "label": "Main clue for overlapping subproblems",
+        "expectedValues": [
+          "the same smaller problem repeats",
+          "repeated smaller work",
+          "save repeated smaller answers"
+        ]
+      }
+    ],
+    "visibleTests": [
+      {
+        "label": "Fibonacci clue",
+        "scenario": "job = fib",
+        "blankKey": "fibClue",
+        "expected": "use the previous two answers"
+      },
+      {
+        "label": "Base-case clue",
+        "scenario": "job = base",
+        "blankKey": "baseClue",
+        "expected": "first known answers"
+      },
+      {
+        "label": "Repeat clue",
+        "scenario": "job = repeat",
+        "blankKey": "repeatClue",
+        "expected": "repeated smaller work"
+      }
+    ]
+  }
+}

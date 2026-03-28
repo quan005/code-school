@@ -1,0 +1,39 @@
+[
+  {
+    "id": "rob-1",
+    "narration": "House Robber asks for the best safe total at each house position.",
+    "arrayValues": [2, 7, 9, 3, 1],
+    "callout": "At each spot, we compare skip-this-house with rob-this-house.",
+    "highlightIndexes": [0, 1, 2, 3, 4]
+  },
+  {
+    "id": "rob-2",
+    "narration": "If we rob the current house, we must jump back two houses before adding its money.",
+    "arrayValues": [2, 7, 11, 11, 12],
+    "decision": "For house 4, compare keeping 11 versus taking 1 plus the best answer from two houses back.",
+    "highlightIndexes": [2, 3, 4],
+    "predictionPrompt": {
+      "prompt": "Why do we look two houses back when we rob the current house?",
+      "choices": [
+        {
+          "id": "neighbor",
+          "label": "Because neighboring houses cannot both be robbed",
+          "isCorrect": true,
+          "feedback": "Correct. Robbing this house blocks the one right before it."
+        },
+        {
+          "id": "sorted",
+          "label": "Because the houses are sorted",
+          "isCorrect": false,
+          "feedback": "Not this one. The rule is about neighbors, not sorting."
+        }
+      ]
+    }
+  },
+  {
+    "id": "rob-3",
+    "narration": "This DP keeps only the best score so far at each position, not every robbery path.",
+    "arrayValues": [2, 7, 11, 11, 12],
+    "callout": "That is why DP is different from backtracking here."
+  }
+]

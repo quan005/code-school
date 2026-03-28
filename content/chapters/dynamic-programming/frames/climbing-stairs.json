@@ -1,0 +1,44 @@
+[
+  {
+    "id": "stairs-1",
+    "narration": "Climbing Stairs counts how many ways reach each step.",
+    "arrayValues": [1, 2, 3, 5],
+    "callout": "The first two step counts are the base cases.",
+    "highlightIndexes": [0, 1]
+  },
+  {
+    "id": "stairs-2",
+    "narration": "To reach a step, the last move must come from one step back or two steps back.",
+    "arrayValues": [1, 2, 3, 5],
+    "decision": "Step 4 has 5 ways because step 3 has 3 ways and step 2 has 2 ways.",
+    "highlightIndexes": [1, 2, 3],
+    "pointers": {
+      "left": 1,
+      "right": 2,
+      "current": 3
+    },
+    "predictionPrompt": {
+      "prompt": "What should we do with the two earlier step counts?",
+      "choices": [
+        {
+          "id": "add",
+          "label": "Add them",
+          "isCorrect": true,
+          "feedback": "Correct. This is a number-of-ways problem."
+        },
+        {
+          "id": "minimum",
+          "label": "Take the smaller one",
+          "isCorrect": false,
+          "feedback": "Not this one. That would fit a minimum-cost problem instead."
+        }
+      ]
+    }
+  },
+  {
+    "id": "stairs-3",
+    "narration": "This is why the problem feels like Fibonacci: each answer uses the two before it.",
+    "arrayValues": [1, 2, 3, 5, 8],
+    "callout": "The pattern repeats from left to right."
+  }
+]

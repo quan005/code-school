@@ -1,0 +1,86 @@
+{
+  "recapPrompt": {
+    "prompt": "Why do base cases matter in dynamic programming?",
+    "choices": [
+      {
+        "id": "start",
+        "label": "They give the first known answers to build from",
+        "isCorrect": true,
+        "feedback": "Correct. Base cases are the little starting answers the rest of the table depends on."
+      },
+      {
+        "id": "sort",
+        "label": "They sort the table from smallest to largest",
+        "isCorrect": false,
+        "feedback": "Not this one. Base cases are about starting knowledge, not sorting."
+      }
+    ]
+  },
+  "reflectionPrompt": {
+    "prompt": "Explain in your own words why saving smaller answers can make a hard problem faster.",
+    "placeholder": "Saving smaller answers helps because..."
+  },
+  "practiceChallenge": {
+    "title": "Mastery check: rebuild the DP clues",
+    "description": "Complete the helper so it returns the main clue for counting DP, minimum DP, and top-plus-left grid DP.",
+    "language": "javascript",
+    "starterCode": "export function dpMasteryClue(goal) {\n  const countingClue = \"TODO\";\n  const minimumClue = \"TODO\";\n  const gridClue = \"TODO\";\n\n  if (goal === \"counting\") {\n    return countingClue;\n  }\n\n  if (goal === \"minimum\") {\n    return minimumClue;\n  }\n\n  return gridClue;\n}\n",
+    "hints": [
+      "Counting DP adds earlier ways.",
+      "Minimum DP chooses the cheaper earlier path.",
+      "Grid DP can use top plus left."
+    ],
+    "successMessage": "Pass. You rebuilt the main dynamic-programming clues from memory.",
+    "retryMessage": "Needs practice. Recheck counting, minimum, and grid DP clues.",
+    "completionBehavior": "mark_complete",
+    "blanks": [
+      {
+        "key": "countingClue",
+        "label": "Main clue for counting DP",
+        "expectedValues": [
+          "add earlier ways",
+          "number of ways",
+          "count paths from earlier answers"
+        ]
+      },
+      {
+        "key": "minimumClue",
+        "label": "Main clue for minimum DP",
+        "expectedValues": [
+          "choose the cheaper earlier path",
+          "take the minimum",
+          "minimum earlier answer"
+        ]
+      },
+      {
+        "key": "gridClue",
+        "label": "Main clue for grid DP",
+        "expectedValues": [
+          "top plus left",
+          "use top and left",
+          "grid neighbors above and left"
+        ]
+      }
+    ],
+    "visibleTests": [
+      {
+        "label": "Counting clue",
+        "scenario": "goal = counting",
+        "blankKey": "countingClue",
+        "expected": "add earlier ways"
+      },
+      {
+        "label": "Minimum clue",
+        "scenario": "goal = minimum",
+        "blankKey": "minimumClue",
+        "expected": "choose the cheaper earlier path"
+      },
+      {
+        "label": "Grid clue",
+        "scenario": "goal = grid",
+        "blankKey": "gridClue",
+        "expected": "top plus left"
+      }
+    ]
+  }
+}

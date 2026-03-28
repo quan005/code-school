@@ -1,0 +1,115 @@
+---
+title: "Coin Change"
+slug: "coin-change"
+order: 7
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 16
+concepts:
+  - "minimum coins"
+  - "amount table"
+  - "impossible states"
+skills:
+  - "Find the minimum number of coins for an amount"
+  - "Build a DP table for every amount up to the goal"
+prerequisites:
+  - "unique-paths"
+summary: "Build the cheapest coin count for each amount from 0 up to the target, and detect when an amount is impossible."
+---
+
+<ProblemStatement title="Use the fewest coins to make the amount">
+  Given coin values and a target amount, return the minimum number of coins
+  needed to make that amount. Return <code>-1</code> if it is impossible.
+</ProblemStatement>
+
+## Example
+
+```txt
+coins = [1, 2, 5]
+amount = 11
+answer = 3
+```
+
+Because:
+
+```txt
+11 = 5 + 5 + 1
+```
+
+<Intuition title="Solve every smaller amount first">
+  If we know the minimum coins for smaller amounts, then amount 11 can try each
+  coin and ask, “What was the best answer for the smaller amount before this
+  coin?”
+</Intuition>
+
+<InterviewTip>
+  Coin Change is a minimum DP problem. The table cell for each amount stores the
+  fewest coins known so far, not all possible combinations.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function coinChange(coins: number[], amount: number): number {
+  const dp = new Array(amount + 1).fill(Infinity);
+  dp[0] = 0;
+
+  for (let value = 1; value <= amount; value += 1) {
+    for (const coin of coins) {
+      if (value - coin >= 0) {
+        dp[value] = Math.min(dp[value], dp[value - coin] + 1);
+      }
+    }
+  }
+
+  return dp[amount] === Infinity ? -1 : dp[amount];
+}
+```
+
+<ComplexityCard
+  time="O(amount * number of coins)"
+  space="O(amount)"
+  notes="Each amount tries each coin and keeps only the smallest coin count found."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "coins = [1, 2, 5], amount = 11",
+      expected: "3",
+      why: "The best answer is 5 + 5 + 1.",
+    },
+    {
+      input: "coins = [2], amount = 3",
+      expected: "-1",
+      why: "No combination of 2s can make 3.",
+    },
+    {
+      input: "amount = 0",
+      expected: "0",
+      why: "Zero amount needs zero coins.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Saving all coin combinations instead of only the smallest count",
+      fix: "Each dp amount cell should keep only the minimum number of coins found so far.",
+    },
+    {
+      title: "Treating impossible amounts like valid answers",
+      fix: "Use a large impossible marker like Infinity and return -1 if it never changes.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Best smaller amount plus one coin">
+  For each amount, try every coin and look back at the smaller amount that would
+  remain before using that coin.
+</HintDrawer>
+
+## Reflection
+
+Why is it useful to keep an impossible marker like Infinity in the DP table?

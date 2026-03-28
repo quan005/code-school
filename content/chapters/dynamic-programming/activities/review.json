@@ -1,0 +1,23 @@
+{
+  "recapPrompt": {
+    "prompt": "What is one of the strongest signs that a problem should use dynamic programming?",
+    "choices": [
+      {
+        "id": "smaller",
+        "label": "The answer depends on earlier smaller answers",
+        "isCorrect": true,
+        "feedback": "Correct. That is one of the biggest DP clues."
+      },
+      {
+        "id": "alphabetical",
+        "label": "The input is already in alphabetical order",
+        "isCorrect": false,
+        "feedback": "Not this one. Alphabetical order alone does not make a problem DP."
+      }
+    ]
+  },
+  "reflectionPrompt": {
+    "prompt": "Explain how a counting DP problem is different from a minimum or maximum DP problem.",
+    "placeholder": "They are different because..."
+  }
+}

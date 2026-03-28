@@ -1,0 +1,39 @@
+[
+  {
+    "id": "coin-1",
+    "narration": "Coin Change stores the minimum coins needed for each amount from 0 up to the target.",
+    "arrayValues": [0, 1, 1, 2, 2, 1],
+    "callout": "For coins [1, 2, 5], amount 5 can be made with just one coin: 5.",
+    "highlightIndexes": [0, 1, 2, 3, 4, 5]
+  },
+  {
+    "id": "coin-2",
+    "narration": "For each amount, try every coin and look back at the smaller amount before using that coin.",
+    "arrayValues": ["amount 11", "try 1", "try 2", "try 5"],
+    "decision": "The table keeps only the smallest coin count found so far.",
+    "highlightIndexes": [1, 2, 3],
+    "predictionPrompt": {
+      "prompt": "What does the DP table store for each amount in Coin Change?",
+      "choices": [
+        {
+          "id": "minimum",
+          "label": "The minimum number of coins",
+          "isCorrect": true,
+          "feedback": "Correct. Each amount keeps only the smallest coin count found."
+        },
+        {
+          "id": "all",
+          "label": "All possible coin lists",
+          "isCorrect": false,
+          "feedback": "Not this one. This DP keeps the best count, not every combination."
+        }
+      ]
+    }
+  },
+  {
+    "id": "coin-3",
+    "narration": "If an amount never finds a valid smaller path, it stays impossible and can return -1 at the end.",
+    "arrayValues": ["possible", "impossible", "Infinity marker"],
+    "callout": "An impossible marker helps the table tell success from failure."
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "intro-1",
+    "narration": "Dynamic programming saves smaller answers so bigger answers do not have to redo the same work.",
+    "arrayValues": ["small answer", "saved", "reuse later"],
+    "callout": "The big idea is solve once, save, and reuse.",
+    "highlightIndexes": [0, 1, 2]
+  },
+  {
+    "id": "intro-2",
+    "narration": "Base cases are the first tiny answers we already know for sure.",
+    "arrayValues": ["F(0)=0", "F(1)=1", "then build up"],
+    "decision": "Without base cases, the DP table has nowhere to start.",
+    "highlightIndexes": [0, 1],
+    "predictionPrompt": {
+      "prompt": "What is the job of a base case?",
+      "choices": [
+        {
+          "id": "start",
+          "label": "Give the first sure answers",
+          "isCorrect": true,
+          "feedback": "Correct. Base cases are the small known answers that let the rest grow."
+        },
+        {
+          "id": "end",
+          "label": "Only describe the final answer",
+          "isCorrect": false,
+          "feedback": "Not this one. Base cases are the beginning of the build."
+        }
+      ]
+    }
+  },
+  {
+    "id": "intro-3",
+    "narration": "Overlapping subproblems means the same smaller question shows up more than once.",
+    "arrayValues": ["F(5)", "needs F(4)", "needs F(3)", "F(4) also needs F(3)"],
+    "callout": "Saving F(3) once keeps us from solving it again and again.",
+    "highlightIndexes": [2, 3],
+    "reflectionPrompt": {
+      "prompt": "Why is repeated smaller work a clue for dynamic programming?",
+      "placeholder": "It is a clue because..."
+    }
+  }
+]

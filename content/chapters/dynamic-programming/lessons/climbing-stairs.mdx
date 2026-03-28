@@ -1,0 +1,108 @@
+---
+title: "Climbing Stairs"
+slug: "climbing-stairs"
+order: 3
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 13
+concepts:
+  - "number of ways"
+  - "previous two steps"
+  - "ways table"
+skills:
+  - "Count how many ways reach each step"
+  - "Explain why the answer uses the two earlier steps"
+prerequisites:
+  - "fibonacci-number"
+summary: "Count staircase paths by building the number of ways for each step from the two earlier steps."
+---
+
+<ProblemStatement title="How many different ways can you reach the top?">
+  You are climbing a staircase with <code>n</code> steps. Each move can go up 1
+  step or 2 steps. Return the number of different ways to reach the top.
+</ProblemStatement>
+
+## Example
+
+```txt
+n = 4
+answer = 5
+```
+
+<Intuition title="The last move must come from one step before or two steps before">
+  To land on step <code>i</code>, the final move must come from
+  <code>i - 1</code> or <code>i - 2</code>. So the number of ways to reach step
+  <code>i</code> is the sum of those two earlier counts.
+</Intuition>
+
+<InterviewTip>
+  This problem feels like Fibonacci because each answer depends on the two steps
+  before it.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function climbStairs(n: number): number {
+  if (n <= 2) {
+    return n;
+  }
+
+  const dp = new Array(n + 1).fill(0);
+  dp[1] = 1;
+  dp[2] = 2;
+
+  for (let step = 3; step <= n; step += 1) {
+    dp[step] = dp[step - 1] + dp[step - 2];
+  }
+
+  return dp[n];
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(n)"
+  notes="We save the number of ways for each step and never need to recompute them."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "n = 2",
+      expected: "2",
+      why: "The ways are 1+1 and 2.",
+    },
+    {
+      input: "n = 3",
+      expected: "3",
+      why: "The ways are 1+1+1, 1+2, and 2+1.",
+    },
+    {
+      input: "n = 4",
+      expected: "5",
+      why: "The count grows from the two earlier steps.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Forgetting the first two step counts",
+      fix: "Start with the base cases dp[1] = 1 and dp[2] = 2.",
+    },
+    {
+      title: "Thinking order does not matter here",
+      fix: "In climbing stairs, 1+2 and 2+1 are different paths.",
+    },
+  ]}
+/>
+
+<HintDrawer title="How could the last move happen?">
+  For each step, ask: did we arrive from one step back or two steps back?
+</HintDrawer>
+
+## Reflection
+
+Why is Climbing Stairs a counting DP problem instead of a minimum DP problem?

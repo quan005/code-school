@@ -1,0 +1,47 @@
+---
+title: "Review"
+slug: "review"
+order: 8
+lessonType: "review"
+difficulty: "easy"
+estimatedMinutes: 8
+concepts:
+  - "base case"
+  - "smaller answers"
+  - "reuse"
+skills:
+  - "Review the main DP clues"
+  - "Tell counting, minimum, and maximum DP jobs apart"
+prerequisites:
+  - "coin-change"
+summary: "Review the big dynamic-programming ideas, especially base cases, repeated smaller work, and building answers from earlier positions."
+---
+
+<ProblemStatement title="What should dynamic programming problems make you notice?">
+  This review lesson helps you remember the strongest clues that point to DP
+  thinking.
+</ProblemStatement>
+
+<Intuition title="DP is about building from saved smaller answers">
+  The smaller answers come first, then the larger answers reuse them instead of
+  doing the same work again and again.
+</Intuition>
+
+<ComplexityCard
+  time="Many DP solutions fill a table in one pass"
+  space="Often uses an array or grid of saved answers"
+  notes="The big win is noticing when repeated smaller answers can be saved and reused."
+/>
+
+## Pattern Summary
+
+- Fibonacci: use the two earlier answers.
+- Climbing Stairs: count the ways from one step back and two steps back.
+- Min Cost Climbing Stairs: choose the cheaper earlier path.
+- House Robber: compare take versus skip.
+- Unique Paths: use top plus left.
+- Coin Change: save the minimum coins for each smaller amount.
+
+## Reflection
+
+Which dynamic-programming clue feels easiest for you to notice now?

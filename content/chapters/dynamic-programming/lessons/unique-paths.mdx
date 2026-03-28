@@ -1,0 +1,104 @@
+---
+title: "Unique Paths"
+slug: "unique-paths"
+order: 6
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 15
+concepts:
+  - "grid dp"
+  - "top plus left"
+  - "number of ways"
+skills:
+  - "Fill a grid DP table"
+  - "Explain why each cell uses top and left"
+prerequisites:
+  - "house-robber"
+summary: "Count robot paths on a grid by filling each cell from the path counts above and to the left."
+---
+
+<ProblemStatement title="How many different routes reach the bottom-right corner?">
+  A robot starts in the top-left of an <code>m x n</code> grid and may move only
+  right or down. Return the number of unique paths to the bottom-right corner.
+</ProblemStatement>
+
+## Example
+
+```txt
+m = 3, n = 3
+answer = 6
+```
+
+<Intuition title="A cell can only be entered from above or from the left">
+  Since the robot can only move right or down, each cell’s path count is the sum
+  of the path count above it and the path count to its left.
+</Intuition>
+
+<InterviewTip>
+  Grid DP often uses a little table. Fill the easy edge cells first, then fill
+  the inside cells from earlier neighbors.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function uniquePaths(m: number, n: number): number {
+  const dp = Array.from({ length: m }, () => new Array(n).fill(1));
+
+  for (let row = 1; row < m; row += 1) {
+    for (let col = 1; col < n; col += 1) {
+      dp[row][col] = dp[row - 1][col] + dp[row][col - 1];
+    }
+  }
+
+  return dp[m - 1][n - 1];
+}
+```
+
+<ComplexityCard
+  time="O(m * n)"
+  space="O(m * n)"
+  notes="We fill each cell once by using the already solved top and left cells."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "m = 3, n = 2",
+      expected: "3",
+      why: "There are three right-down path orders.",
+    },
+    {
+      input: "m = 3, n = 3",
+      expected: "6",
+      why: "The grid fills from smaller edge answers toward the bottom-right.",
+    },
+    {
+      input: "m = 1, n = 5",
+      expected: "1",
+      why: "Only one straight path exists.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Using diagonal neighbors",
+      fix: "The robot can only move right and down, so each cell only uses top and left.",
+    },
+    {
+      title: "Forgetting that the first row and first column are all 1",
+      fix: "The edge cells have only one way to be reached.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Top plus left">
+  For every inside cell, ask: how many ways can enter from above, and how many
+  ways can enter from the left?
+</HintDrawer>
+
+## Reflection
+
+Why do the first row and first column stay full of 1s?

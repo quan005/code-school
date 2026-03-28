@@ -1,0 +1,117 @@
+---
+title: "Fibonacci Number"
+slug: "fibonacci-number"
+order: 2
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 13
+concepts:
+  - "recurrence"
+  - "previous two answers"
+  - "dp array"
+skills:
+  - "Build Fibonacci bottom-up"
+  - "Use base cases to start the table"
+  - "Explain why earlier answers are reused"
+prerequisites: []
+summary: "Use the classic Fibonacci rule to build answers from the previous two saved values."
+---
+
+<ProblemStatement title="Return the nth Fibonacci number">
+  Given <code>n</code>, return the <code>n</code>th Fibonacci number.
+</ProblemStatement>
+
+## Example
+
+```txt
+n = 6
+answer = 8
+```
+
+Because the sequence is:
+
+```txt
+0, 1, 1, 2, 3, 5, 8
+```
+
+<Intuition title="Each answer uses the two before it">
+  Once we know the first two base cases, each later Fibonacci number is just the
+  sum of the previous two saved answers.
+</Intuition>
+
+<InterviewTip>
+  Fibonacci is the friendliest first DP example because the rule is short and
+  the repeated smaller work is easy to see.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function fib(n: number): number {
+  if (n === 0) {
+    return 0;
+  }
+
+  if (n === 1) {
+    return 1;
+  }
+
+  const dp = new Array(n + 1).fill(0);
+  dp[0] = 0;
+  dp[1] = 1;
+
+  for (let index = 2; index <= n; index += 1) {
+    dp[index] = dp[index - 1] + dp[index - 2];
+  }
+
+  return dp[n];
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(n)"
+  notes="We compute each Fibonacci answer once and save it in the table."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "n = 0",
+      expected: "0",
+      why: "That is a base case.",
+    },
+    {
+      input: "n = 1",
+      expected: "1",
+      why: "That is the second base case.",
+    },
+    {
+      input: "n = 6",
+      expected: "8",
+      why: "Each step uses the two earlier saved answers.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Starting without base cases",
+      fix: "Set the first known answers before filling the rest of the table.",
+    },
+    {
+      title: "Recomputing old Fibonacci values over and over",
+      fix: "Save each answer in dp so later positions can reuse it.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Two earlier helpers">
+  To fill position <code>i</code>, look only at <code>i - 1</code> and
+  <code>i - 2</code>.
+</HintDrawer>
+
+## Reflection
+
+Why do Fibonacci numbers make overlapping subproblems easy to notice?

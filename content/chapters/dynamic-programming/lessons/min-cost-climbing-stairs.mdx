@@ -1,0 +1,104 @@
+---
+title: "Min Cost Climbing Stairs"
+slug: "min-cost-climbing-stairs"
+order: 4
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 14
+concepts:
+  - "minimum cost"
+  - "cheaper earlier path"
+  - "dp table"
+skills:
+  - "Track the cheapest way to each step"
+  - "Choose the smaller earlier cost"
+prerequisites:
+  - "climbing-stairs"
+summary: "Turn staircase counting into staircase minimizing by saving the cheapest cost for each step."
+---
+
+<ProblemStatement title="Reach the top as cheaply as possible">
+  Given an array <code>cost</code>, where <code>cost[i]</code> is the price of
+  stepping on step <code>i</code>, return the minimum cost to reach the top.
+</ProblemStatement>
+
+## Example
+
+```txt
+cost = [10, 15, 20]
+answer = 15
+```
+
+<Intuition title="Now we want the cheaper path, not the number of paths">
+  To reach a step, you still come from one step before or two steps before. The
+  difference is that we keep the cheaper total cost instead of counting paths.
+</Intuition>
+
+<InterviewTip>
+  Many DP problems reuse the same shape but change the question from “how many?”
+  to “what is the minimum?” or “what is the maximum?”
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function minCostClimbingStairs(cost: number[]): number {
+  const dp = new Array(cost.length).fill(0);
+  dp[0] = cost[0];
+  dp[1] = cost[1];
+
+  for (let index = 2; index < cost.length; index += 1) {
+    dp[index] = cost[index] + Math.min(dp[index - 1], dp[index - 2]);
+  }
+
+  return Math.min(dp[cost.length - 1], dp[cost.length - 2]);
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(n)"
+  notes="Each step stores the cheapest total cost to get there."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "cost = [10, 15, 20]",
+      expected: "15",
+      why: "Starting at step 1 is cheaper here.",
+    },
+    {
+      input: "A step with two earlier paths costing 5 and 9",
+      expected: "Use the 5 path",
+      why: "We want the minimum total cost.",
+    },
+    {
+      input: "A longer cost list with many small steps",
+      expected: "The DP table chooses cheap earlier paths again and again",
+      why: "Each position reuses the best earlier cost.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Counting ways instead of minimizing cost",
+      fix: "Use Math.min because this problem asks for the cheapest total, not the number of paths.",
+    },
+    {
+      title: "Forgetting the answer is the cheaper of the last two step totals",
+      fix: "The top is beyond the last step, so compare the last two reachable step costs.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Same staircase, different question">
+  The moves are still 1 or 2 steps. What changes is the goal: choose the
+  cheapest earlier path.
+</HintDrawer>
+
+## Reflection
+
+What changed when we moved from Climbing Stairs to Min Cost Climbing Stairs?

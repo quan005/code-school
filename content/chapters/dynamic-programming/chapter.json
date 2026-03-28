@@ -1,0 +1,7 @@
+{
+  "slug": "dynamic-programming",
+  "title": "Dynamic Programming",
+  "order": 15,
+  "track": "Code Patterns",
+  "summary": "Learn how saving smaller answers can help build bigger answers faster, especially for counting, minimum, maximum, and path problems."
+}

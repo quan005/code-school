@@ -1,0 +1,39 @@
+[
+  {
+    "id": "mincost-1",
+    "narration": "Min Cost Climbing Stairs keeps the cheapest total cost to each step.",
+    "arrayValues": [10, 15, 30],
+    "callout": "For cost = [10, 15, 20], the totals become 10, 15, and 30.",
+    "highlightIndexes": [0, 1, 2]
+  },
+  {
+    "id": "mincost-2",
+    "narration": "Each step chooses the cheaper of the two earlier paths, then adds the current step cost.",
+    "arrayValues": [10, 15, 30],
+    "decision": "For the top, compare the cheapest totals from the last two steps.",
+    "highlightIndexes": [0, 1],
+    "predictionPrompt": {
+      "prompt": "What changed from Climbing Stairs to Min Cost Climbing Stairs?",
+      "choices": [
+        {
+          "id": "cheaper",
+          "label": "We choose the cheaper earlier path",
+          "isCorrect": true,
+          "feedback": "Correct. This is now a minimum problem instead of a counting problem."
+        },
+        {
+          "id": "moreways",
+          "label": "We count more paths",
+          "isCorrect": false,
+          "feedback": "Not this one. The goal changed from count to minimum cost."
+        }
+      ]
+    }
+  },
+  {
+    "id": "mincost-3",
+    "narration": "The staircase shape stayed the same, but the question changed from how many to how cheap.",
+    "arrayValues": ["same moves", "different goal"],
+    "callout": "DP often reuses the same shape with a new question."
+  }
+]

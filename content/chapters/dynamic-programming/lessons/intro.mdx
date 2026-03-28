@@ -1,0 +1,87 @@
+---
+title: "Introduction"
+slug: "intro"
+order: 1
+lessonType: "intro"
+difficulty: "easy"
+estimatedMinutes: 10
+concepts:
+  - "dynamic programming"
+  - "overlapping subproblems"
+  - "base case"
+  - "bottom-up"
+skills:
+  - "Explain why saving smaller answers helps"
+  - "Describe what a base case is"
+  - "Recognize repeated smaller work"
+prerequisites: []
+summary: "Meet dynamic programming, learn base cases and repeated smaller problems, and see why saving answers can avoid doing the same work again."
+---
+
+<ProblemStatement title="Dynamic programming saves smaller answers so bigger answers get easier">
+  Dynamic programming, often called <code>DP</code>, solves a big problem by
+  using answers to smaller repeated problems and saving those smaller answers.
+</ProblemStatement>
+
+<Intuition title="Think about climbing stairs one step at a time">
+  If you already know the answer for step 4 and step 5, then step 6 can become
+  easy. DP is the idea of saving those smaller answers instead of recomputing
+  them again and again.
+</Intuition>
+
+<InterviewTip>
+  A <code>base case</code> is one of the first tiny answers we already know for
+  sure. <code>Overlapping subproblems</code> means the same smaller question
+  shows up more than once.
+</InterviewTip>
+
+<ComplexityCard
+  time="DP often turns repeated slow work into one pass of saved smaller answers"
+  space="Often uses an array or table to save earlier results"
+  notes="The big idea is solve a small piece once, save it, and reuse it later."
+/>
+
+## Helpful DP words
+
+- <strong>base case</strong>: the first small answer we already know
+- <strong>overlapping subproblems</strong>: the same smaller question repeats
+- <strong>bottom-up</strong>: start small and build larger answers
+- <strong>top-down</strong>: start big, recurse smaller, and save answers
+
+## Strong DP clues
+
+- number of ways
+- minimum cost
+- maximum score
+- answer depends on earlier positions
+- the same smaller question repeats
+
+<PredictionPrompt
+  prompt={{
+    prompt: "What is the main job of a base case in dynamic programming?",
+    choices: [
+      {
+        id: "start",
+        label: "It gives the first known answers to start building from",
+        isCorrect: true,
+        feedback:
+          "Correct. Base cases are the small sure answers that let the bigger ones grow.",
+      },
+      {
+        id: "sort",
+        label: "It sorts the whole array before DP starts",
+        isCorrect: false,
+        feedback:
+          "Not this one. Sorting may help in some problems, but it is not what a base case means.",
+      },
+    ],
+  }}
+/>
+
+## Lesson Summary
+
+- DP saves smaller answers and reuses them later.
+- A base case is a tiny known answer.
+- Overlapping subproblems mean the same small work repeats.
+- Bottom-up DP builds from the smallest answers upward.
+- DP clues often involve minimum, maximum, or number of ways.

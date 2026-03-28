@@ -1,0 +1,113 @@
+---
+title: "House Robber"
+slug: "house-robber"
+order: 5
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 15
+concepts:
+  - "take or skip"
+  - "maximum"
+  - "two houses back"
+skills:
+  - "Find the maximum safe total"
+  - "Compare skipping a house versus robbing it"
+prerequisites:
+  - "min-cost-climbing-stairs"
+summary: "Choose the maximum safe money by comparing skip-this-house with rob-this-house-and-jump-back-two."
+---
+
+<ProblemStatement title="Take the most money without robbing neighbors">
+  Given an array <code>nums</code> of money in houses, return the maximum amount
+  you can steal without robbing two neighboring houses.
+</ProblemStatement>
+
+## Example
+
+```txt
+nums = [2, 7, 9, 3, 1]
+answer = 12
+```
+
+<Intuition title="Each house asks take me or skip me">
+  If we skip the current house, we keep the best answer from the previous house.
+  If we rob the current house, we must jump back two houses before adding its
+  money.
+</Intuition>
+
+<InterviewTip>
+  This is a take-or-skip pattern too, but unlike backtracking, DP only keeps the
+  best score so far instead of collecting every path.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function rob(nums: number[]): number {
+  if (nums.length === 0) {
+    return 0;
+  }
+
+  if (nums.length === 1) {
+    return nums[0];
+  }
+
+  const dp = new Array(nums.length).fill(0);
+  dp[0] = nums[0];
+  dp[1] = Math.max(nums[0], nums[1]);
+
+  for (let index = 2; index < nums.length; index += 1) {
+    dp[index] = Math.max(dp[index - 1], nums[index] + dp[index - 2]);
+  }
+
+  return dp[nums.length - 1];
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(n)"
+  notes="Each house stores the best safe total up to that point."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "nums = [1, 2, 3, 1]",
+      expected: "4",
+      why: "The best safe choice is 1 + 3.",
+    },
+    {
+      input: "nums = [2, 7, 9, 3, 1]",
+      expected: "12",
+      why: "The best total comes from a safe non-neighbor pattern.",
+    },
+    {
+      input: "nums = []",
+      expected: "0",
+      why: "No houses means no money to take.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Adding neighboring houses together",
+      fix: "If you rob house i, you must use the best safe answer from i - 2, not i - 1.",
+    },
+    {
+      title: "Thinking DP must save every possible robbery path",
+      fix: "This problem only needs the best total so far at each house.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Best if skip, best if take">
+  At each house, compare two choices: keep the earlier best answer, or take this
+  house and add the best answer from two houses back.
+</HintDrawer>
+
+## Reflection
+
+Why does robbing the current house force us to look two houses back?
