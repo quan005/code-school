@@ -1,0 +1,125 @@
+---
+title: "Find if a Path Exists"
+slug: "find-if-a-path-exists"
+order: 3
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 13
+concepts:
+  - "path"
+  - "reachability"
+  - "visited set"
+skills:
+  - "Check whether one node can reach another"
+  - "Stop early when the target is found"
+prerequisites:
+  - "traverse-a-graph-dfs-and-bfs"
+summary: "Use graph traversal to answer whether one node can reach another node at all."
+---
+
+<ProblemStatement title="Can we get from one node to another?">
+  Given a graph, a start node, and a target node, return
+  <code>true</code> if a path exists from start to target.
+</ProblemStatement>
+
+## Example
+
+```txt
+A -- B -- D
+|
+C
+
+path from A to D -> true
+path from C to E -> false
+```
+
+<Intuition title="This is a reachability question">
+  We start walking from the start node. If we ever reach the target, we can stop
+  and return true. If the whole reachable area is explored and the target never
+  appears, the answer is false.
+</Intuition>
+
+<InterviewTip>
+  "Can we get from X to Y?" is one of the clearest graph clues you can get.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function hasPath(
+  graph: Map<string, string[]>,
+  start: string,
+  target: string,
+): boolean {
+  const visited = new Set<string>();
+  const stack = [start];
+
+  while (stack.length > 0) {
+    const node = stack.pop()!;
+
+    if (node === target) {
+      return true;
+    }
+
+    if (visited.has(node)) {
+      continue;
+    }
+
+    visited.add(node);
+
+    for (const neighbor of graph.get(node) ?? []) {
+      stack.push(neighbor);
+    }
+  }
+
+  return false;
+}
+```
+
+<ComplexityCard
+  time="O(V + E)"
+  space="O(V)"
+  notes="In the worst case we may need to explore the whole reachable area before answering."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "A to D in the sample graph",
+      expected: "true",
+      why: "A route exists through B.",
+    },
+    {
+      input: "C to E when E is disconnected",
+      expected: "false",
+      why: "No route reaches E.",
+    },
+    {
+      input: "A to A",
+      expected: "true",
+      why: "A node is always reachable from itself.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Exploring the whole graph even after finding the target",
+      fix: "Return true right away once you reach the target.",
+    },
+    {
+      title: "Not tracking visited nodes",
+      fix: "Use visited memory so cycles do not trap the search.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Stop as soon as you win">
+  This problem does not ask for every path. It only asks whether one path
+  exists.
+</HintDrawer>
+
+## Reflection
+
+Why is finding one path easier than finding every possible path?

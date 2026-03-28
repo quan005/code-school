@@ -1,0 +1,60 @@
+[
+  {
+    "id": "islands-1",
+    "narration": "Number of Islands turns a grid into graph thinking by treating each land cell like a node.",
+    "visualizer": "graph",
+    "graphNodes": ["0,0", "0,1", "1,0", "2,1", "2,2"],
+    "graphEdges": [
+      [0, 1],
+      [0, 2],
+      [3, 4]
+    ],
+    "highlightIndexes": [0, 1, 2],
+    "pointers": {
+      "left": 0,
+      "right": 2
+    }
+  },
+  {
+    "id": "islands-2",
+    "narration": "The first three land cells touch, so they make one island together.",
+    "visualizer": "graph",
+    "graphNodes": ["0,0", "0,1", "1,0", "2,1", "2,2"],
+    "graphEdges": [
+      [0, 1],
+      [0, 2],
+      [3, 4]
+    ],
+    "decision": "Connected land cells belong to one island.",
+    "highlightIndexes": [3, 4],
+    "predictionPrompt": {
+      "prompt": "If the graph has one land group on the left and one on the right, how many islands are there?",
+      "choices": [
+        {
+          "id": "two",
+          "label": "2",
+          "isCorrect": true,
+          "feedback": "Correct. Each connected land group is one island."
+        },
+        {
+          "id": "five",
+          "label": "5",
+          "isCorrect": false,
+          "feedback": "Not this one. We count connected groups, not individual land cells."
+        }
+      ]
+    }
+  },
+  {
+    "id": "islands-3",
+    "narration": "This is really a connected-components idea, just hidden inside a grid picture.",
+    "visualizer": "graph",
+    "graphNodes": ["0,0", "0,1", "1,0", "2,1", "2,2"],
+    "graphEdges": [
+      [0, 1],
+      [0, 2],
+      [3, 4]
+    ],
+    "callout": "The grid outside changes, but the graph idea stays the same."
+  }
+]

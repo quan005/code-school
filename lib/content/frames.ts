@@ -30,7 +30,15 @@ export const lessonFrameSchema = z.object({
   narration: z.string().min(1),
   arrayValues: z.array(z.union([z.number(), z.string()])).default([]),
   treeValues: z.array(z.union([z.number(), z.string(), z.null()])).default([]),
-  visualizer: z.enum(["array", "linked_list", "tree"]).default("array"),
+  graphNodes: z.array(z.union([z.number(), z.string()])).default([]),
+  graphEdges: z
+    .array(
+      z.tuple([z.number().int().nonnegative(), z.number().int().nonnegative()]),
+    )
+    .default([]),
+  visualizer: z
+    .enum(["array", "linked_list", "tree", "graph"])
+    .default("array"),
   callout: z.string().optional(),
   decision: z.string().optional(),
   highlightIndexes: z.array(z.number().int().nonnegative()).default([]),

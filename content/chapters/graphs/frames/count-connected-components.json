@@ -1,0 +1,57 @@
+[
+  {
+    "id": "components-1",
+    "narration": "A connected component is one whole group of nodes that can reach one another.",
+    "visualizer": "graph",
+    "graphNodes": ["A", "B", "C", "D", "E"],
+    "graphEdges": [
+      [0, 1],
+      [2, 3]
+    ],
+    "highlightIndexes": [0, 1],
+    "pointers": {
+      "current": 0
+    }
+  },
+  {
+    "id": "components-2",
+    "narration": "After we finish the first group, finding another unvisited node means we found a new component.",
+    "visualizer": "graph",
+    "graphNodes": ["A", "B", "C", "D", "E"],
+    "graphEdges": [
+      [0, 1],
+      [2, 3]
+    ],
+    "decision": "In this graph, {A, B}, {C, D}, and {E} are three separate groups.",
+    "highlightIndexes": [2, 3, 4],
+    "predictionPrompt": {
+      "prompt": "How many connected components does this graph have?",
+      "choices": [
+        {
+          "id": "three",
+          "label": "3",
+          "isCorrect": true,
+          "feedback": "Correct. There are two pairs and one isolated node."
+        },
+        {
+          "id": "two",
+          "label": "2",
+          "isCorrect": false,
+          "feedback": "Not this one. E also counts as its own component."
+        }
+      ]
+    }
+  },
+  {
+    "id": "components-3",
+    "narration": "Even one lonely node counts as a whole component by itself.",
+    "visualizer": "graph",
+    "graphNodes": ["A", "B", "C", "D", "E"],
+    "graphEdges": [
+      [0, 1],
+      [2, 3]
+    ],
+    "callout": "A component can be large or tiny. Size does not matter here.",
+    "highlightIndexes": [4]
+  }
+]

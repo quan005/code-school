@@ -1,0 +1,130 @@
+---
+title: "Number of Islands"
+slug: "number-of-islands"
+order: 5
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 16
+concepts:
+  - "grid as graph"
+  - "land and water"
+  - "flood fill"
+skills:
+  - "Treat a grid like a graph of connected cells"
+  - "Count islands by marking connected land"
+prerequisites:
+  - "count-connected-components"
+summary: "Turn a land-and-water grid into graph thinking by treating touching land cells as one connected group."
+---
+
+<ProblemStatement title="How many islands of land are there?">
+  Given a grid of land and water, count how many separate islands of land exist.
+  Cells touching up, down, left, or right belong to the same island.
+</ProblemStatement>
+
+## Example
+
+```txt
+1 1 0
+1 0 0
+0 1 1
+
+answer = 2
+```
+
+<Intuition title="Each land cell is like a graph node">
+  We can think of every land cell as a node. Neighboring land cells are
+  connected. Then the job becomes the same as counting connected components.
+</Intuition>
+
+<InterviewTip>
+  Island problems are often graph problems hiding inside a grid.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function numIslands(grid: string[][]): number {
+  const rows = grid.length;
+  const cols = grid[0]?.length ?? 0;
+  let islands = 0;
+
+  function dfs(row: number, col: number): void {
+    if (
+      row < 0 ||
+      row >= rows ||
+      col < 0 ||
+      col >= cols ||
+      grid[row][col] !== "1"
+    ) {
+      return;
+    }
+
+    grid[row][col] = "0";
+
+    dfs(row + 1, col);
+    dfs(row - 1, col);
+    dfs(row, col + 1);
+    dfs(row, col - 1);
+  }
+
+  for (let row = 0; row < rows; row += 1) {
+    for (let col = 0; col < cols; col += 1) {
+      if (grid[row][col] === "1") {
+        islands += 1;
+        dfs(row, col);
+      }
+    }
+  }
+
+  return islands;
+}
+```
+
+<ComplexityCard
+  time="O(rows × cols)"
+  space="Depends on DFS depth"
+  notes="Each cell is visited at most once when it gets marked from land to water."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "The sample grid",
+      expected: "2",
+      why: "There are two separate land groups.",
+    },
+    {
+      input: "All water",
+      expected: "0",
+      why: "No land means no islands.",
+    },
+    {
+      input: "All land connected",
+      expected: "1",
+      why: "Everything belongs to one island.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Counting each land cell as a separate island",
+      fix: "First flood through all connected land so one island is counted once.",
+    },
+    {
+      title: "Connecting diagonal cells by mistake",
+      fix: "Only up, down, left, and right count in this version.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Grid outside, graph inside">
+  Even though the input is a grid, the idea underneath is still connected groups
+  of neighbors.
+</HintDrawer>
+
+## Reflection
+
+Why is Number of Islands really a connected-components problem in disguise?

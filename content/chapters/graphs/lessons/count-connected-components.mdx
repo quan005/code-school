@@ -1,0 +1,119 @@
+---
+title: "Count Connected Components"
+slug: "count-connected-components"
+order: 4
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 15
+concepts:
+  - "component"
+  - "separate groups"
+  - "graph scan"
+skills:
+  - "Count how many separate groups exist in a graph"
+  - "Start a new traversal only for unvisited nodes"
+prerequisites:
+  - "find-if-a-path-exists"
+summary: "Count separate graph groups by starting a traversal each time you find an unvisited node."
+---
+
+<ProblemStatement title="How many separate groups are there?">
+  Given a graph, count how many connected components it has. A connected
+  component is one group of nodes that can all reach one another.
+</ProblemStatement>
+
+## Example
+
+```txt
+A -- B    C -- D    E
+
+answer = 3
+```
+
+<Intuition title="Each new unexplored island of nodes starts a new group">
+  Walk through all nodes. When you find one that has not been visited yet, that
+  means you found a new component. Start a traversal there, mark that whole
+  group, and increase the count by one.
+</Intuition>
+
+<InterviewTip>
+  Component problems often sound like "How many separate groups are there?"
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function countComponents(graph: Map<string, string[]>): number {
+  const visited = new Set<string>();
+  let count = 0;
+
+  function dfs(node: string): void {
+    if (visited.has(node)) {
+      return;
+    }
+
+    visited.add(node);
+
+    for (const neighbor of graph.get(node) ?? []) {
+      dfs(neighbor);
+    }
+  }
+
+  for (const node of graph.keys()) {
+    if (!visited.has(node)) {
+      count += 1;
+      dfs(node);
+    }
+  }
+
+  return count;
+}
+```
+
+<ComplexityCard
+  time="O(V + E)"
+  space="O(V)"
+  notes="Every node joins exactly one component, and we do not need to revisit completed groups."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "A-B, C-D, and E alone",
+      expected: "3",
+      why: "There are three separate connected groups.",
+    },
+    {
+      input: "One big connected graph",
+      expected: "1",
+      why: "Every node belongs to the same group.",
+    },
+    {
+      input: "Four isolated nodes",
+      expected: "4",
+      why: "Each single node is its own component.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Increasing the count for every node",
+      fix: "Increase only when you find an unvisited starting node for a new group.",
+    },
+    {
+      title: "Not finishing the whole group before moving on",
+      fix: "Run DFS or BFS to mark the entire component first.",
+    },
+  ]}
+/>
+
+<HintDrawer title="New unvisited start means new group">
+  If a node is still unvisited when you scan to it, no earlier traversal reached
+  it. That means it belongs to a new component.
+</HintDrawer>
+
+## Reflection
+
+Why should a graph with one isolated node count that node as its own component?

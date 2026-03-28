@@ -1,0 +1,86 @@
+{
+  "recapPrompt": {
+    "prompt": "Why do many graph problems need a visited set?",
+    "choices": [
+      {
+        "id": "loops",
+        "label": "To stop repeated looping through old nodes",
+        "isCorrect": true,
+        "feedback": "Correct. Graphs can connect back to old nodes, so visited memory keeps the walk safe."
+      },
+      {
+        "id": "sorting",
+        "label": "To sort the nodes from smallest to largest",
+        "isCorrect": false,
+        "feedback": "Not this one. Visited memory is about safe traversal, not sorting."
+      }
+    ]
+  },
+  "reflectionPrompt": {
+    "prompt": "Explain in your own words why Number of Islands is really a graph idea hiding inside a grid.",
+    "placeholder": "It is really a graph idea because..."
+  },
+  "practiceChallenge": {
+    "title": "Mastery check: rebuild the graph clues",
+    "description": "Complete the helper so it returns the main clue for path questions, group questions, and dependency-cycle questions.",
+    "language": "javascript",
+    "starterCode": "export function graphMasteryClue(goal) {\n  const pathClue = \"TODO\";\n  const groupClue = \"TODO\";\n  const cycleClue = \"TODO\";\n\n  if (goal === \"path\") {\n    return pathClue;\n  }\n\n  if (goal === \"group\") {\n    return groupClue;\n  }\n\n  return cycleClue;\n}\n",
+    "hints": [
+      "Path questions ask whether one node can reach another.",
+      "Group questions ask how many separate connected parts exist.",
+      "Cycle questions ask whether a loop blocks the plan."
+    ],
+    "successMessage": "Pass. You rebuilt the main graph clues from memory.",
+    "retryMessage": "Needs practice. Recheck path, group, and dependency-cycle graph clues.",
+    "completionBehavior": "mark_complete",
+    "blanks": [
+      {
+        "key": "pathClue",
+        "label": "Main clue for path problems",
+        "expectedValues": [
+          "can x reach y",
+          "reachability",
+          "can one node reach another"
+        ]
+      },
+      {
+        "key": "groupClue",
+        "label": "Main clue for connected-group problems",
+        "expectedValues": [
+          "count separate groups",
+          "connected components",
+          "separate connected parts"
+        ]
+      },
+      {
+        "key": "cycleClue",
+        "label": "Main clue for dependency-cycle problems",
+        "expectedValues": [
+          "a loop blocks the plan",
+          "cycle detection",
+          "dependency loop"
+        ]
+      }
+    ],
+    "visibleTests": [
+      {
+        "label": "Path clue",
+        "scenario": "goal = path",
+        "blankKey": "pathClue",
+        "expected": "reachability"
+      },
+      {
+        "label": "Group clue",
+        "scenario": "goal = group",
+        "blankKey": "groupClue",
+        "expected": "connected components"
+      },
+      {
+        "label": "Cycle clue",
+        "scenario": "goal = cycle",
+        "blankKey": "cycleClue",
+        "expected": "cycle detection"
+      }
+    ]
+  }
+}

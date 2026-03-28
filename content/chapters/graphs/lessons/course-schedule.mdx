@@ -1,0 +1,140 @@
+---
+title: "Course Schedule"
+slug: "course-schedule"
+order: 7
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 16
+concepts:
+  - "directed graph"
+  - "cycle"
+  - "dependency"
+skills:
+  - "Model prerequisites as directed edges"
+  - "Detect why a cycle blocks completion"
+prerequisites:
+  - "find-if-a-path-exists"
+summary: "Use graph thinking on course prerequisites and detect when a cycle makes the plan impossible."
+---
+
+<ProblemStatement title="Can all the classes be finished?">
+  Given courses and prerequisite pairs, return <code>true</code> if you can
+  finish all courses. Return <code>false</code> if a cycle blocks the schedule.
+</ProblemStatement>
+
+## Example
+
+```txt
+Math 1 -> Math 2 -> Math 3
+
+possible
+```
+
+```txt
+A -> B -> C -> A
+
+not possible
+```
+
+<Intuition title="A cycle means you are stuck waiting forever">
+  If course A needs B, B needs C, and C needs A, then there is no first class
+  you can start. That loop is called a cycle.
+</Intuition>
+
+<InterviewTip>
+  Dependency problems often mean directed graph thinking. Cycle detection is the
+  key clue here.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function canFinish(numCourses: number, prerequisites: number[][]): boolean {
+  const graph = Array.from({ length: numCourses }, () => [] as number[]);
+
+  for (const [course, prereq] of prerequisites) {
+    graph[prereq].push(course);
+  }
+
+  const visiting = new Set<number>();
+  const visited = new Set<number>();
+
+  function dfs(course: number): boolean {
+    if (visiting.has(course)) {
+      return false;
+    }
+
+    if (visited.has(course)) {
+      return true;
+    }
+
+    visiting.add(course);
+
+    for (const next of graph[course]) {
+      if (!dfs(next)) {
+        return false;
+      }
+    }
+
+    visiting.delete(course);
+    visited.add(course);
+    return true;
+  }
+
+  for (let course = 0; course < numCourses; course += 1) {
+    if (!dfs(course)) {
+      return false;
+    }
+  }
+
+  return true;
+}
+```
+
+<ComplexityCard
+  time="O(V + E)"
+  space="O(V)"
+  notes="We walk each course and prerequisite edge while checking for a cycle in the dependency graph."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "0 -> 1 -> 2",
+      expected: "true",
+      why: "There is an order that starts at the first prerequisite.",
+    },
+    {
+      input: "0 -> 1, 1 -> 0",
+      expected: "false",
+      why: "That creates a cycle.",
+    },
+    {
+      input: "Several separate course chains with no loop",
+      expected: "true",
+      why: "Separate chains are fine if none of them loop.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Treating prerequisites like undirected edges",
+      fix: "Prerequisites have direction: one class must come before another.",
+    },
+    {
+      title: "Using only one visited set",
+      fix: "Keep one set for currently visiting nodes and one for finished-safe nodes.",
+    },
+  ]}
+/>
+
+<HintDrawer title="A waiting loop is impossible">
+  If a class chain circles back to itself, no one in that loop can be taken
+  first.
+</HintDrawer>
+
+## Reflection
+
+Why does a cycle mean there is no first course to start in that loop?

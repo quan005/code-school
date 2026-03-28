@@ -1,0 +1,137 @@
+---
+title: "Traverse a Graph (DFS and BFS)"
+slug: "traverse-a-graph-dfs-and-bfs"
+order: 2
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 15
+concepts:
+  - "DFS"
+  - "BFS"
+  - "visited set"
+  - "neighbors"
+skills:
+  - "Traverse a graph safely with DFS"
+  - "Traverse a graph safely with BFS"
+  - "Explain why visited tracking matters"
+prerequisites: []
+summary: "Visit every reachable node in a graph by using DFS or BFS and a visited set."
+---
+
+<ProblemStatement title="Visit the connected nodes without getting stuck">
+  Given a graph and a starting node, return the nodes you can visit by using DFS
+  or BFS.
+</ProblemStatement>
+
+## Example Graph
+
+```txt
+A -- B
+|    |
+C -- D
+```
+
+<Intuition title="Graphs can loop, so we need memory">
+  In a graph, you can come back to a node you already visited. That is why we
+  keep a visited set. DFS goes down one route first. BFS looks at the nearby
+  nodes first.
+</Intuition>
+
+<InterviewTip>
+  If the graph can loop back, visited tracking is not optional. It protects you
+  from walking in circles forever.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function dfs(graph: Map<string, string[]>, start: string): string[] {
+  const result: string[] = [];
+  const visited = new Set<string>();
+
+  function walk(node: string): void {
+    if (visited.has(node)) {
+      return;
+    }
+
+    visited.add(node);
+    result.push(node);
+
+    for (const neighbor of graph.get(node) ?? []) {
+      walk(neighbor);
+    }
+  }
+
+  walk(start);
+  return result;
+}
+
+function bfs(graph: Map<string, string[]>, start: string): string[] {
+  const result: string[] = [];
+  const visited = new Set<string>([start]);
+  const queue: string[] = [start];
+
+  while (queue.length > 0) {
+    const node = queue.shift()!;
+    result.push(node);
+
+    for (const neighbor of graph.get(node) ?? []) {
+      if (!visited.has(neighbor)) {
+        visited.add(neighbor);
+        queue.push(neighbor);
+      }
+    }
+  }
+
+  return result;
+}
+```
+
+<ComplexityCard
+  time="O(V + E)"
+  space="O(V)"
+  notes="V means number of nodes and E means number of edges. We visit nodes and edges without repeating work."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "Start at A in the sample graph",
+      expected: "All four nodes are visited",
+      why: "Every node is connected to the same group.",
+    },
+    {
+      input: "A graph with one isolated node",
+      expected: "Only the reachable nodes from the chosen start are visited",
+      why: "Traversal only reaches connected places.",
+    },
+    {
+      input: "A graph with a cycle",
+      expected: "Traversal still finishes",
+      why: "The visited set prevents repeated looping.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Forgetting the visited set",
+      fix: "Use visited memory so the graph walk does not loop forever.",
+    },
+    {
+      title: "Thinking DFS and BFS must return the same order",
+      fix: "They can visit the same nodes in different orders.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Graph loops need memory">
+  Trees usually do not point back upward by themselves. Graphs often do, so keep
+  a visited set.
+</HintDrawer>
+
+## Reflection
+
+Why does a graph walk need a visited set more urgently than a simple array walk
+does?

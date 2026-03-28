@@ -1,0 +1,23 @@
+{
+  "recapPrompt": {
+    "prompt": "What is one of the strongest signs that a problem should be modeled as a graph?",
+    "choices": [
+      {
+        "id": "connections",
+        "label": "The problem is about things being connected",
+        "isCorrect": true,
+        "feedback": "Correct. Routes, neighbors, groups, and dependencies are strong graph clues."
+      },
+      {
+        "id": "topk",
+        "label": "The problem asks for the biggest k values",
+        "isCorrect": false,
+        "feedback": "Not this one. That clue points more toward heaps."
+      }
+    ]
+  },
+  "reflectionPrompt": {
+    "prompt": "Explain how path questions and connected-group questions are two different graph jobs.",
+    "placeholder": "They are different because..."
+  }
+}

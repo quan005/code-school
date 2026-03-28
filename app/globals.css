@@ -492,6 +492,75 @@ select {
   font-size: 0.72rem;
 }
 
+.graph-visualizer {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.graph-stage {
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(33, 53, 71, 0.08);
+  border-radius: var(--radius-xl);
+  min-height: 20rem;
+  overflow: hidden;
+  padding: var(--space-3);
+  position: relative;
+}
+
+.graph-svg {
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.graph-edge {
+  stroke: rgba(33, 53, 71, 0.24);
+  stroke-linecap: round;
+  stroke-width: 3;
+}
+
+.graph-node-slot {
+  align-items: center;
+  display: grid;
+  gap: 0.25rem;
+  justify-items: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.graph-node {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  box-shadow: var(--shadow-soft);
+  display: grid;
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+.graph-node-highlight {
+  background: rgba(255, 122, 89, 0.12);
+  border-color: rgba(255, 122, 89, 0.35);
+}
+
+.graph-node-pointer {
+  color: var(--color-brand-strong);
+  font-size: 0.72rem;
+  font-weight: 700;
+  min-height: 1rem;
+}
+
+.graph-node-pointer-empty {
+  visibility: hidden;
+}
+
+.graph-node-index {
+  color: var(--color-ink-soft);
+  font-size: 0.72rem;
+}
+
 .pointer-grid,
 .array-grid {
   display: grid;

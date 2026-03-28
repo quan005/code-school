@@ -1,0 +1,72 @@
+[
+  {
+    "id": "intro-1",
+    "narration": "A graph is made of nodes, which are the dots, and edges, which are the connections between them.",
+    "visualizer": "graph",
+    "graphNodes": ["A", "B", "C", "D"],
+    "graphEdges": [
+      [0, 1],
+      [0, 2],
+      [1, 3],
+      [2, 3]
+    ],
+    "callout": "Here, A, B, C, and D are nodes.",
+    "highlightIndexes": [0, 1, 2, 3],
+    "pointers": {
+      "current": 0
+    }
+  },
+  {
+    "id": "intro-2",
+    "narration": "The lines show edges, so the graph tells us which places are directly connected.",
+    "visualizer": "graph",
+    "graphNodes": ["A", "B", "C", "D"],
+    "graphEdges": [
+      [0, 1],
+      [0, 2],
+      [1, 3],
+      [2, 3]
+    ],
+    "decision": "Graphs are strong when the problem is about connections.",
+    "highlightIndexes": [0, 1],
+    "pointers": {
+      "left": 0,
+      "right": 1
+    },
+    "predictionPrompt": {
+      "prompt": "What does an edge mean in a graph?",
+      "choices": [
+        {
+          "id": "connection",
+          "label": "A connection between two nodes",
+          "isCorrect": true,
+          "feedback": "Correct. An edge is the link between two graph nodes."
+        },
+        {
+          "id": "group",
+          "label": "A whole group of nodes",
+          "isCorrect": false,
+          "feedback": "Not this one. A group can contain many nodes and edges."
+        }
+      ]
+    }
+  },
+  {
+    "id": "intro-3",
+    "narration": "DFS and BFS are the two big ways to walk through a graph safely.",
+    "visualizer": "graph",
+    "graphNodes": ["A", "B", "C", "D"],
+    "graphEdges": [
+      [0, 1],
+      [0, 2],
+      [1, 3],
+      [2, 3]
+    ],
+    "callout": "Because graphs can loop, we usually keep visited memory.",
+    "highlightIndexes": [0, 1, 3],
+    "reflectionPrompt": {
+      "prompt": "Why do graph problems often feel like map or route problems?",
+      "placeholder": "They feel like map problems because..."
+    }
+  }
+]

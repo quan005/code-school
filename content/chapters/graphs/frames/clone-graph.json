@@ -1,0 +1,62 @@
+[
+  {
+    "id": "clone-1",
+    "narration": "To clone a graph, we walk through the old graph and create matching new nodes.",
+    "visualizer": "graph",
+    "graphNodes": ["A", "B", "C", "D"],
+    "graphEdges": [
+      [0, 1],
+      [1, 2],
+      [2, 3],
+      [3, 0]
+    ],
+    "highlightIndexes": [0, 1],
+    "pointers": {
+      "current": 0
+    }
+  },
+  {
+    "id": "clone-2",
+    "narration": "A map from old node to new node stops us from creating the same clone twice.",
+    "visualizer": "graph",
+    "graphNodes": ["A", "B", "C", "D"],
+    "graphEdges": [
+      [0, 1],
+      [1, 2],
+      [2, 3],
+      [3, 0]
+    ],
+    "decision": "Copy once, then reuse that copy if the old node appears again.",
+    "highlightIndexes": [2, 3],
+    "predictionPrompt": {
+      "prompt": "Why do we need an old-to-new map while cloning?",
+      "choices": [
+        {
+          "id": "reuse",
+          "label": "To reuse the same clone for repeated visits",
+          "isCorrect": true,
+          "feedback": "Correct. The map keeps one clean matching copy for each old node."
+        },
+        {
+          "id": "sort",
+          "label": "To sort the nodes alphabetically",
+          "isCorrect": false,
+          "feedback": "Not this one. Sorting is not the job here."
+        }
+      ]
+    }
+  },
+  {
+    "id": "clone-3",
+    "narration": "That map is especially important in graphs with cycles, where old nodes can show up again and again.",
+    "visualizer": "graph",
+    "graphNodes": ["A", "B", "C", "D"],
+    "graphEdges": [
+      [0, 1],
+      [1, 2],
+      [2, 3],
+      [3, 0]
+    ],
+    "callout": "Without the map, the clone work could loop forever."
+  }
+]

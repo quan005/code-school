@@ -1,0 +1,85 @@
+---
+title: "Introduction"
+slug: "intro"
+order: 1
+lessonType: "intro"
+difficulty: "easy"
+estimatedMinutes: 10
+concepts:
+  - "graph"
+  - "node"
+  - "edge"
+  - "connection"
+skills:
+  - "Explain what a graph represents"
+  - "Tell what nodes and edges mean"
+  - "Recognize connection clues"
+prerequisites: []
+summary: "Meet graphs, learn what nodes and edges mean, and see why graphs help with route and connection problems."
+---
+
+<ProblemStatement title="A graph shows things and the links between them">
+  A graph is a collection of nodes connected by edges. In kid words, nodes are
+  the dots and edges are the lines between them.
+</ProblemStatement>
+
+<Intuition title="Think about rooms and hallways">
+  Each room can be a node. Each hallway can be an edge. Then graph questions
+  sound like, "Can I get from this room to that room?" or "Which rooms are in
+  the same connected area?"
+</Intuition>
+
+<InterviewTip>
+  In this chapter, a <code>node</code> is one dot, place, or person. An
+  <code>edge</code> is the connection between two dots. Graph clues often use
+  words like connected, path, route, group, neighbor, dependency, and cycle.
+</InterviewTip>
+
+<ComplexityCard
+  time="Many graph walks visit each node and edge once"
+  space="Depends on visited storage plus recursion or queue space"
+  notes="The big idea is learning to think about connections instead of one straight list."
+/>
+
+## Helpful graph words
+
+- <strong>graph</strong>: a set of nodes and connections
+- <strong>node</strong>: one dot in the graph
+- <strong>edge</strong>: one connection line
+- <strong>neighbor</strong>: a node directly connected to another node
+- <strong>path</strong>: a route from one node to another
+
+## Two common graph types
+
+- <strong>Undirected</strong>: the connection goes both ways.
+- <strong>Directed</strong>: the connection has a direction.
+
+<PredictionPrompt
+  prompt={{
+    prompt:
+      "If a problem asks, 'Can we get from room A to room D by following hallways?' what kind of thinking fits best?",
+    choices: [
+      {
+        id: "graph",
+        label: "Graph thinking",
+        isCorrect: true,
+        feedback: "Correct. Routes and connections are strong graph clues.",
+      },
+      {
+        id: "heap",
+        label: "Heap thinking",
+        isCorrect: false,
+        feedback:
+          "Not this one. Heaps are about the top smallest or largest item, not connection paths.",
+      },
+    ],
+  }}
+/>
+
+## Lesson Summary
+
+- A graph shows nodes and edges.
+- Nodes are the dots.
+- Edges are the connections.
+- Graph problems are often about routes, groups, and reachability.
+- DFS and BFS are two big tools for walking through graphs.

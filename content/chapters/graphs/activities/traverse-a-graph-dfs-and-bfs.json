@@ -1,0 +1,61 @@
+{
+  "practiceChallenge": {
+    "title": "Fill in the graph-traversal clues",
+    "description": "Complete the helper so it returns the right idea for DFS, BFS, and visited memory in graphs.",
+    "language": "javascript",
+    "starterCode": "export function graphTraversalClue(job) {\n  const dfsClue = \"TODO\";\n  const bfsClue = \"TODO\";\n  const visitedClue = \"TODO\";\n\n  if (job === \"dfs\") {\n    return dfsClue;\n  }\n\n  if (job === \"bfs\") {\n    return bfsClue;\n  }\n\n  return visitedClue;\n}\n",
+    "hints": [
+      "DFS goes down one route first.",
+      "BFS looks at the nearest nodes first.",
+      "Visited memory stops repeated looping."
+    ],
+    "successMessage": "Nice work. You rebuilt the main graph-traversal clues.",
+    "retryMessage": "Not yet. Recheck how DFS, BFS, and visited memory each help in a graph.",
+    "completionBehavior": "mark_complete",
+    "blanks": [
+      {
+        "key": "dfsClue",
+        "label": "Main clue for DFS",
+        "expectedValues": ["go deep first", "one route first", "deep first"]
+      },
+      {
+        "key": "bfsClue",
+        "label": "Main clue for BFS",
+        "expectedValues": [
+          "nearby nodes first",
+          "level by level",
+          "closest first"
+        ]
+      },
+      {
+        "key": "visitedClue",
+        "label": "Main clue for visited memory",
+        "expectedValues": [
+          "stop repeated loops",
+          "avoid looping forever",
+          "remember visited nodes"
+        ]
+      }
+    ],
+    "visibleTests": [
+      {
+        "label": "DFS clue",
+        "scenario": "job = dfs",
+        "blankKey": "dfsClue",
+        "expected": "go deep first"
+      },
+      {
+        "label": "BFS clue",
+        "scenario": "job = bfs",
+        "blankKey": "bfsClue",
+        "expected": "nearby nodes first"
+      },
+      {
+        "label": "Visited clue",
+        "scenario": "job = visited",
+        "blankKey": "visitedClue",
+        "expected": "stop repeated loops"
+      }
+    ]
+  }
+}

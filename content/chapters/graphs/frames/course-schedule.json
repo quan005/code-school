@@ -1,0 +1,58 @@
+[
+  {
+    "id": "schedule-1",
+    "narration": "Course Schedule is a directed graph problem because one class points to the class that depends on it.",
+    "visualizer": "graph",
+    "graphNodes": ["Math 1", "Math 2", "Math 3", "Loop"],
+    "graphEdges": [
+      [0, 1],
+      [1, 2],
+      [3, 3]
+    ],
+    "highlightIndexes": [0, 1, 2],
+    "pointers": {
+      "current": 1
+    }
+  },
+  {
+    "id": "schedule-2",
+    "narration": "A cycle means the classes are stuck waiting on one another, so no starting point exists inside that loop.",
+    "visualizer": "graph",
+    "graphNodes": ["A", "B", "C"],
+    "graphEdges": [
+      [0, 1],
+      [1, 2],
+      [2, 0]
+    ],
+    "decision": "A -> B -> C -> A is impossible because the loop never gives you a first class.",
+    "highlightIndexes": [0, 1, 2],
+    "predictionPrompt": {
+      "prompt": "What does a cycle mean in Course Schedule?",
+      "choices": [
+        {
+          "id": "impossible",
+          "label": "The schedule is impossible",
+          "isCorrect": true,
+          "feedback": "Correct. The loop blocks every class in that cycle."
+        },
+        {
+          "id": "faster",
+          "label": "The schedule finishes faster",
+          "isCorrect": false,
+          "feedback": "Not this one. A cycle causes a dependency problem, not a speed boost."
+        }
+      ]
+    }
+  },
+  {
+    "id": "schedule-3",
+    "narration": "Directed edges and cycle detection are the two biggest clues in this kind of dependency problem.",
+    "visualizer": "graph",
+    "graphNodes": ["Start", "Middle", "End"],
+    "graphEdges": [
+      [0, 1],
+      [1, 2]
+    ],
+    "callout": "A clean one-way chain is fine. The trouble starts when a path loops back."
+  }
+]

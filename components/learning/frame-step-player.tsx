@@ -2,6 +2,7 @@
 
 import { StepPlayer } from "@/components/learning/step-player";
 import { ArrayVisualizer } from "@/components/visualizers/array-visualizer";
+import { GraphVisualizer } from "@/components/visualizers/graph-visualizer";
 import { LinkedListVisualizer } from "@/components/visualizers/linked-list-visualizer";
 import { TreeVisualizer } from "@/components/visualizers/tree-visualizer";
 import type { LessonFrame } from "@/lib/content/frames";
@@ -35,6 +36,17 @@ export function FrameStepPlayer({
               highlightIndexes={frame.highlightIndexes}
               pointers={frame.pointers}
               values={frame.treeValues}
+            />
+          );
+        }
+
+        if (frame.visualizer === "graph") {
+          return (
+            <GraphVisualizer
+              edges={frame.graphEdges}
+              highlightIndexes={frame.highlightIndexes}
+              pointers={frame.pointers}
+              values={frame.graphNodes}
             />
           );
         }

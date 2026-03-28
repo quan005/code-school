@@ -1,0 +1,60 @@
+[
+  {
+    "id": "path-1",
+    "narration": "To check for a path, start from the first node and explore reachable neighbors.",
+    "visualizer": "graph",
+    "graphNodes": ["A", "B", "C", "D", "E"],
+    "graphEdges": [
+      [0, 1],
+      [0, 2],
+      [1, 3]
+    ],
+    "highlightIndexes": [0, 1, 3],
+    "pointers": {
+      "left": 0,
+      "right": 3
+    }
+  },
+  {
+    "id": "path-2",
+    "narration": "If the search reaches the target, we can stop early and answer true.",
+    "visualizer": "graph",
+    "graphNodes": ["A", "B", "C", "D", "E"],
+    "graphEdges": [
+      [0, 1],
+      [0, 2],
+      [1, 3]
+    ],
+    "decision": "This is a reachability question: can one node get to another node?",
+    "highlightIndexes": [3],
+    "predictionPrompt": {
+      "prompt": "If E has no edges, can A reach E in this graph?",
+      "choices": [
+        {
+          "id": "no",
+          "label": "No",
+          "isCorrect": true,
+          "feedback": "Correct. E is disconnected from the rest."
+        },
+        {
+          "id": "yes",
+          "label": "Yes",
+          "isCorrect": false,
+          "feedback": "Not this one. A path needs real connecting edges."
+        }
+      ]
+    }
+  },
+  {
+    "id": "path-3",
+    "narration": "If the reachable area ends without finding the target, the answer is false.",
+    "visualizer": "graph",
+    "graphNodes": ["A", "B", "C", "D", "E"],
+    "graphEdges": [
+      [0, 1],
+      [0, 2],
+      [1, 3]
+    ],
+    "callout": "Disconnected nodes stay unreachable."
+  }
+]

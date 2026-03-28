@@ -1,0 +1,116 @@
+---
+title: "Clone Graph"
+slug: "clone-graph"
+order: 6
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 15
+concepts:
+  - "copy nodes"
+  - "old-to-new map"
+  - "cycles"
+skills:
+  - "Copy a graph without reusing the old nodes"
+  - "Use a map from original node to cloned node"
+prerequisites:
+  - "traverse-a-graph-dfs-and-bfs"
+summary: "Copy a graph safely by remembering which old nodes already have matching new nodes."
+---
+
+<ProblemStatement title="Make a full copy of the graph">
+  Given a node in a connected graph, return a deep copy of the whole graph.
+</ProblemStatement>
+
+## Example Idea
+
+If node <code>A</code> is connected to <code>B</code> and <code>C</code>, the
+clone should create new nodes for <code>A</code>, <code>B</code>, and
+
+<code>C</code>, then connect the new nodes in the same way.
+
+<Intuition title="Use a notebook to match old nodes to new nodes">
+  When graphs can loop, you must not create a fresh copy every time you see the
+  same node again. Keep a map from old node to new node. If a node already has a
+  clone, reuse that clone.
+</Intuition>
+
+<InterviewTip>
+  Clone Graph is a graph-traversal problem plus a hash map memory problem.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function cloneGraph(node: GraphNode | null): GraphNode | null {
+  if (node === null) {
+    return null;
+  }
+
+  const clones = new Map<GraphNode, GraphNode>();
+
+  function dfs(current: GraphNode): GraphNode {
+    if (clones.has(current)) {
+      return clones.get(current)!;
+    }
+
+    const copy = new GraphNode(current.val);
+    clones.set(current, copy);
+
+    for (const neighbor of current.neighbors) {
+      copy.neighbors.push(dfs(neighbor));
+    }
+
+    return copy;
+  }
+
+  return dfs(node);
+}
+```
+
+<ComplexityCard
+  time="O(V + E)"
+  space="O(V)"
+  notes="We create one new node per old node and use the map to avoid copying the same node twice."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "One node with no neighbors",
+      expected: "A new single node",
+      why: "The copy should still be separate from the original.",
+    },
+    {
+      input: "A graph with a cycle",
+      expected: "The clone finishes safely",
+      why: "The old-to-new map stops endless copying.",
+    },
+    {
+      input: "null",
+      expected: "null",
+      why: "No graph means no clone.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Reusing the original nodes in the clone",
+      fix: "Make fresh nodes for the copy and connect those fresh nodes together.",
+    },
+    {
+      title: "Creating a new copy every time you revisit a node",
+      fix: "Use a map so one original node always matches one clone node.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Copy once, reuse afterward">
+  The first time you see a node, build its copy. Later visits should reuse that
+  same copy from the map.
+</HintDrawer>
+
+## Reflection
+
+Why does Clone Graph need both traversal and hash-map memory?

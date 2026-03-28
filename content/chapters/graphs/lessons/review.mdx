@@ -1,0 +1,47 @@
+---
+title: "Review"
+slug: "review"
+order: 8
+lessonType: "review"
+difficulty: "easy"
+estimatedMinutes: 8
+concepts:
+  - "connection"
+  - "path"
+  - "component"
+skills:
+  - "Review the main graph clues"
+  - "Tell traversal, path, and group questions apart"
+prerequisites:
+  - "course-schedule"
+summary: "Review the big graph ideas, especially nodes, edges, path questions, connected groups, and cycles."
+---
+
+<ProblemStatement title="What should graph problems make you notice?">
+  This review lesson helps you remember the strongest clues that point to graph
+  thinking.
+</ProblemStatement>
+
+<Intuition title="Graphs are about connections">
+  Graph problems often ask whether places are connected, whether one place can
+  reach another, how many groups exist, or whether a dependency loop appears.
+</Intuition>
+
+<ComplexityCard
+  time="Many graph walks are O(V + E)"
+  space="Often O(V) for visited memory"
+  notes="The big win is recognizing when a problem is really about connected things."
+/>
+
+## Pattern Summary
+
+- Traverse graph: DFS or BFS plus visited.
+- Path exists: stop when the target is found.
+- Connected components: count each new unvisited group.
+- Number of islands: treat the grid like graph groups.
+- Clone graph: traversal plus old-to-new map.
+- Course schedule: directed graph plus cycle detection.
+
+## Reflection
+
+Which graph clue feels easiest for you to notice now?

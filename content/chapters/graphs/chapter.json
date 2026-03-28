@@ -1,0 +1,7 @@
+{
+  "slug": "graphs",
+  "title": "Graphs",
+  "order": 13,
+  "track": "Code Patterns",
+  "summary": "Learn how nodes and edges model connections so you can traverse graphs, find paths, count groups, and reason about dependency problems."
+}
