@@ -1,0 +1,49 @@
+[
+  {
+    "id": "lcp-1",
+    "narration": "The longest common prefix keeps going only while every word still shares one next letter.",
+    "visualizer": "tree",
+    "treeValues": ["start", "f", null, "l", null, null, null, "o", "i"],
+    "highlightIndexes": [1, 3],
+    "pointers": {
+      "current": 3
+    }
+  },
+  {
+    "id": "lcp-2",
+    "narration": "When the trie branches, the shared beginning stops because the words no longer all agree.",
+    "visualizer": "tree",
+    "treeValues": ["start", "f", null, "l", null, null, null, "o", "i"],
+    "decision": "One road means shared. Two roads mean split.",
+    "highlightIndexes": [7, 8],
+    "predictionPrompt": {
+      "prompt": "If the path after fl splits into o and i, what is the longest common prefix?",
+      "choices": [
+        {
+          "id": "fl",
+          "label": "fl",
+          "isCorrect": true,
+          "feedback": "Correct. The shared path stops before the split."
+        },
+        {
+          "id": "flo",
+          "label": "flo",
+          "isCorrect": false,
+          "feedback": "Not this one. Not every word continues with o."
+        }
+      ]
+    }
+  },
+  {
+    "id": "lcp-3",
+    "narration": "A shorter whole word can also stop the answer, because the shared beginning cannot go past a finished word.",
+    "visualizer": "tree",
+    "treeValues": ["start", "t", null, "o", null, null, null, "p", "y"],
+    "callout": "If one word is to, the common prefix cannot go farther than to.",
+    "highlightIndexes": [1, 3, 7, 8],
+    "reflectionPrompt": {
+      "prompt": "Why does a branch point stop the longest common prefix?",
+      "placeholder": "It stops because..."
+    }
+  }
+]

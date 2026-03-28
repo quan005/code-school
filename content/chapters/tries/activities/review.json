@@ -1,0 +1,19 @@
+{
+  "recapPrompt": {
+    "prompt": "A problem asks, 'Does any stored word begin with pre?' Which idea fits best?",
+    "choices": [
+      {
+        "id": "prefix-path",
+        "label": "Follow the prefix path in a trie",
+        "isCorrect": true,
+        "feedback": "Correct. Starts-with questions are strong trie clues."
+      },
+      {
+        "id": "full-word-only",
+        "label": "Check only whether pre is a whole word",
+        "isCorrect": false,
+        "feedback": "Not this time. Prefix search only cares whether the path exists."
+      }
+    ]
+  }
+}

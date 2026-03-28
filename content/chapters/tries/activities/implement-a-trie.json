@@ -1,0 +1,65 @@
+{
+  "practiceChallenge": {
+    "title": "Fill in the trie-building clues",
+    "description": "Complete the helper so it returns the right idea for inserting, exact search, and prefix search in a trie.",
+    "language": "javascript",
+    "starterCode": "export function trieClue(job) {\n  const insertClue = \"TODO\";\n  const searchClue = \"TODO\";\n  const prefixClue = \"TODO\";\n\n  if (job === \"insert\") {\n    return insertClue;\n  }\n\n  if (job === \"search\") {\n    return searchClue;\n  }\n\n  return prefixClue;\n}\n",
+    "hints": [
+      "Insert builds missing nodes one letter at a time.",
+      "Exact search checks both the path and the word end.",
+      "Prefix search only needs the path."
+    ],
+    "successMessage": "Nice work. You rebuilt the main trie-building clues.",
+    "retryMessage": "Not yet. Recheck what insert, exact search, and prefix search each care about.",
+    "completionBehavior": "mark_complete",
+    "blanks": [
+      {
+        "key": "insertClue",
+        "label": "Main clue for insert",
+        "expectedValues": [
+          "build missing nodes",
+          "make missing child nodes",
+          "create missing nodes"
+        ]
+      },
+      {
+        "key": "searchClue",
+        "label": "Main clue for exact search",
+        "expectedValues": [
+          "check isword",
+          "path plus word end",
+          "exact word end"
+        ]
+      },
+      {
+        "key": "prefixClue",
+        "label": "Main clue for prefix search",
+        "expectedValues": [
+          "path only",
+          "check the path",
+          "follow the prefix path"
+        ]
+      }
+    ],
+    "visibleTests": [
+      {
+        "label": "Insert clue",
+        "scenario": "job = insert",
+        "blankKey": "insertClue",
+        "expected": "build missing nodes"
+      },
+      {
+        "label": "Exact search clue",
+        "scenario": "job = search",
+        "blankKey": "searchClue",
+        "expected": "path plus word end"
+      },
+      {
+        "label": "Prefix search clue",
+        "scenario": "job = prefix",
+        "blankKey": "prefixClue",
+        "expected": "path only"
+      }
+    ]
+  }
+}

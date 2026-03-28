@@ -1,0 +1,86 @@
+{
+  "recapPrompt": {
+    "prompt": "What does the marker isWord mean in a trie?",
+    "choices": [
+      {
+        "id": "whole-word",
+        "label": "A whole word ends at this node",
+        "isCorrect": true,
+        "feedback": "Correct. isWord marks a complete stored word ending."
+      },
+      {
+        "id": "has-children",
+        "label": "This node has children below it",
+        "isCorrect": false,
+        "feedback": "Not this one. Children show next letters, but isWord marks a full word ending."
+      }
+    ]
+  },
+  "reflectionPrompt": {
+    "prompt": "Explain in your own words why tries are strong for autocomplete-style jobs.",
+    "placeholder": "Tries help autocomplete because..."
+  },
+  "practiceChallenge": {
+    "title": "Mastery check: rebuild the trie clues",
+    "description": "Complete the helper so it returns the main clue for exact search, prefix search, and wildcard search.",
+    "language": "javascript",
+    "starterCode": "export function trieMasteryClue(goal) {\n  const exactClue = \"TODO\";\n  const prefixClue = \"TODO\";\n  const wildcardClue = \"TODO\";\n\n  if (goal === \"exact\") {\n    return exactClue;\n  }\n\n  if (goal === \"prefix\") {\n    return prefixClue;\n  }\n\n  return wildcardClue;\n}\n",
+    "hints": [
+      "Exact search needs the path and the word ending marker.",
+      "Prefix search only needs the path.",
+      "Wildcard search tries all children when the dot appears."
+    ],
+    "successMessage": "Pass. You rebuilt the main trie clues from memory.",
+    "retryMessage": "Needs practice. Recheck exact search, prefix search, and wildcard branching.",
+    "completionBehavior": "mark_complete",
+    "blanks": [
+      {
+        "key": "exactClue",
+        "label": "Main clue for exact search",
+        "expectedValues": [
+          "path plus word end",
+          "check isword",
+          "exact word ending"
+        ]
+      },
+      {
+        "key": "prefixClue",
+        "label": "Main clue for prefix search",
+        "expectedValues": [
+          "path only",
+          "follow the prefix path",
+          "just the path"
+        ]
+      },
+      {
+        "key": "wildcardClue",
+        "label": "Main clue for wildcard search",
+        "expectedValues": [
+          "try all children",
+          "branch on dot",
+          "try every child"
+        ]
+      }
+    ],
+    "visibleTests": [
+      {
+        "label": "Exact search clue",
+        "scenario": "goal = exact",
+        "blankKey": "exactClue",
+        "expected": "path plus word end"
+      },
+      {
+        "label": "Prefix search clue",
+        "scenario": "goal = prefix",
+        "blankKey": "prefixClue",
+        "expected": "path only"
+      },
+      {
+        "label": "Wildcard search clue",
+        "scenario": "goal = wildcard",
+        "blankKey": "wildcardClue",
+        "expected": "try all children"
+      }
+    ]
+  }
+}

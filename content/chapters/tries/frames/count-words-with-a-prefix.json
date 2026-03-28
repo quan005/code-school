@@ -1,0 +1,45 @@
+[
+  {
+    "id": "count-1",
+    "narration": "First, follow the prefix path until you reach the node where that beginning ends.",
+    "visualizer": "tree",
+    "treeValues": ["start", "t", null, "o", "e", null, null, "p", "y"],
+    "highlightIndexes": [1, 3],
+    "pointers": {
+      "current": 3
+    }
+  },
+  {
+    "id": "count-2",
+    "narration": "Then count how many whole words live below that node in the smaller subtree.",
+    "visualizer": "tree",
+    "treeValues": ["start", "t", null, "o", "e", null, null, "p", "y"],
+    "decision": "Count word endings, not every node.",
+    "highlightIndexes": [3, 7, 8],
+    "predictionPrompt": {
+      "prompt": "If the trie stores to, top, toy, and ten, how many words start with to?",
+      "choices": [
+        {
+          "id": "three",
+          "label": "3",
+          "isCorrect": true,
+          "feedback": "Correct. The words are to, top, and toy."
+        },
+        {
+          "id": "four",
+          "label": "4",
+          "isCorrect": false,
+          "feedback": "Not this one. Ten does not start with to."
+        }
+      ]
+    }
+  },
+  {
+    "id": "count-3",
+    "narration": "If the prefix path is missing, the answer is zero right away.",
+    "visualizer": "tree",
+    "treeValues": ["start", "t", null, "o", "e", null, null, "p", "y"],
+    "callout": "No prefix path means no words can start there.",
+    "highlightIndexes": [4]
+  }
+]

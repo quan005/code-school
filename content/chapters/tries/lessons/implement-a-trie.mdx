@@ -1,0 +1,130 @@
+---
+title: "Implement a Trie"
+slug: "implement-a-trie"
+order: 2
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 14
+concepts:
+  - "insert"
+  - "children map"
+  - "isWord"
+skills:
+  - "Insert a word one letter at a time"
+  - "Create missing child nodes"
+  - "Mark the end of a whole word"
+prerequisites: []
+summary: "Build a trie by walking through each letter, making missing nodes, and marking where the full word ends."
+---
+
+<ProblemStatement title="Build the word tree one letter at a time">
+  Design a trie that can insert words. Each inserted word should follow existing
+  shared letters when possible and create new nodes only when needed.
+</ProblemStatement>
+
+## Example
+
+```txt
+insert("cat")
+insert("car")
+```
+
+The path for <code>c</code> and <code>a</code> is shared. The last letter
+splits into <code>t</code> and <code>r</code>.
+
+<Intuition title="Reuse what is already there">
+  Start at the root. For each letter, check whether that next letter node
+  already exists. If it does, reuse it. If it does not, create it. After the
+  last letter, mark <code>isWord = true</code>.
+</Intuition>
+
+<InterviewTip>
+  In trie problems, the end marker matters. Just reaching the letter path is not
+  enough to prove a full word exists.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+class TrieNode {
+  children: Map<string, TrieNode>;
+  isWord: boolean;
+
+  constructor() {
+    this.children = new Map();
+    this.isWord = false;
+  }
+}
+
+class Trie {
+  root: TrieNode;
+
+  constructor() {
+    this.root = new TrieNode();
+  }
+
+  insert(word: string): void {
+    let node = this.root;
+
+    for (const letter of word) {
+      if (!node.children.has(letter)) {
+        node.children.set(letter, new TrieNode());
+      }
+
+      node = node.children.get(letter)!;
+    }
+
+    node.isWord = true;
+  }
+}
+```
+
+<ComplexityCard
+  time="O(m)"
+  space="O(m) new nodes in the worst case"
+  notes="Here, m means the number of letters in the word. We take about one step per letter."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: 'insert("cat"), insert("car")',
+      expected: "The path c -> a is shared, then the trie splits.",
+      why: "Shared beginnings reuse the same nodes.",
+    },
+    {
+      input: 'insert("to"), insert("toy")',
+      expected:
+        "The node for o becomes a whole word end, and y continues below it.",
+      why: "One word can end before a longer word continues.",
+    },
+    {
+      input: 'insert("cat") twice',
+      expected:
+        "The path stays the same and the end node stays marked as a word.",
+      why: "Reinserting should not break the structure.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Making a fresh path every time",
+      fix: "Reuse existing child nodes when the letter path is already there.",
+    },
+    {
+      title: "Forgetting the word-end marker",
+      fix: "After the last letter, set isWord to true so the trie knows a whole word ends there.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Only build what is missing">
+  Each letter asks one question: does this next child already exist? If yes, use
+  it. If no, create it.
+</HintDrawer>
+
+## Reflection
+
+Why is the end marker just as important as the letter path?

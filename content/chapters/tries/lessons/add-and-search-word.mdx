@@ -1,0 +1,125 @@
+---
+title: "Add and Search Word"
+slug: "add-and-search-word"
+order: 5
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 16
+concepts:
+  - "wildcard"
+  - "dot means any letter"
+  - "recursion"
+skills:
+  - "Search with a wildcard character"
+  - "Try all children when the dot appears"
+  - "Use recursion for branching search"
+prerequisites:
+  - "starts-with-prefix"
+summary: "Handle wildcard word search by exploring every possible next letter when a dot appears."
+---
+
+<ProblemStatement title="Search words even when one letter is unknown">
+  Design a structure that supports adding words and searching them, where
+  <code>.</code> can match any one letter.
+</ProblemStatement>
+
+## Example
+
+```txt
+stored words: bad, dad, mad
+search(".ad") -> true
+search("b..") -> true
+search("..z") -> false
+```
+
+<Intuition title="A dot means the path can branch">
+  A normal letter gives only one next step. A dot means any child could work, so
+  we try each child and keep going from there. That is why recursion fits well
+  here.
+</Intuition>
+
+<InterviewTip>
+  Wildcards often turn one straight search into a branching search. That is a
+  recursion clue.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+search(word: string): boolean {
+  const dfs = (index: number, node: TrieNode): boolean => {
+    if (index === word.length) {
+      return node.isWord;
+    }
+
+    const letter = word[index];
+
+    if (letter === ".") {
+      for (const child of node.children.values()) {
+        if (dfs(index + 1, child)) {
+          return true;
+        }
+      }
+
+      return false;
+    }
+
+    const nextNode = node.children.get(letter);
+    if (!nextNode) {
+      return false;
+    }
+
+    return dfs(index + 1, nextNode);
+  };
+
+  return dfs(0, this.root);
+}
+```
+
+<ComplexityCard
+  time="Can branch more when dots appear"
+  space="Depends on recursion depth"
+  notes="Normal letters follow one path. Dots may force us to explore several paths."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: 'search(".ad") with bad, dad, mad stored',
+      expected: "true",
+      why: "The dot can match b, d, or m.",
+    },
+    {
+      input: 'search("b..") with bad stored',
+      expected: "true",
+      why: "The first letter is fixed, and the next two can match any letters.",
+    },
+    {
+      input: 'search("..z")',
+      expected: "false",
+      why: "No word ends with z in the right place.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Treating dot like a normal letter",
+      fix: "A dot means try every child, not one exact child.",
+    },
+    {
+      title: "Returning false after only one failed child",
+      fix: "Keep trying children until one works or all fail.",
+    },
+  ]}
+/>
+
+<HintDrawer title="One letter or many choices">
+  A normal letter gives one next node. A dot means, "Try every next letter that
+  exists here."
+</HintDrawer>
+
+## Reflection
+
+Why does the wildcard search need recursion more than exact search does?

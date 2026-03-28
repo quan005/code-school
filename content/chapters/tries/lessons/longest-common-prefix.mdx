@@ -1,0 +1,116 @@
+---
+title: "Longest Common Prefix"
+slug: "longest-common-prefix"
+order: 7
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 15
+concepts:
+  - "shared path"
+  - "single child"
+  - "branch point"
+skills:
+  - "Find the longest shared beginning of many words"
+  - "Stop when the trie branches"
+  - "Explain why a word end can stop the answer"
+prerequisites:
+  - "count-words-with-a-prefix"
+summary: "Use the trie to follow the shared path of all words and stop when the path branches or a word ends."
+---
+
+<ProblemStatement title="Find the biggest shared beginning">
+  Given an array of strings, return the longest prefix shared by all of them.
+</ProblemStatement>
+
+## Example
+
+```txt
+words = ["flower", "flow", "flight"]
+answer = "fl"
+```
+
+<Intuition title="Walk while everyone still agrees">
+  Insert all the words into the trie. Then start at the root and keep walking
+  down as long as there is only one next child and no word ends too soon. The
+  moment the path splits, the shared prefix is over.
+</Intuition>
+
+<InterviewTip>
+  Branching means disagreement. If one node has more than one child, the shared
+  prefix stops there.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function longestCommonPrefix(words: string[]): string {
+  const trie = new Trie();
+
+  for (const word of words) {
+    trie.insert(word);
+  }
+
+  let node = trie.root;
+  let prefix = "";
+
+  while (node.children.size === 1 && !node.isWord) {
+    const [letter, nextNode] = node.children.entries().next().value as [
+      string,
+      TrieNode,
+    ];
+    prefix += letter;
+    node = nextNode;
+  }
+
+  return prefix;
+}
+```
+
+<ComplexityCard
+  time="Build plus walk the shared path"
+  space="Depends on the trie size"
+  notes="The answer grows only while every word keeps sharing the same next letter."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: '["flower", "flow", "flight"]',
+      expected: '"fl"',
+      why: "All words share f then l, but split after that.",
+    },
+    {
+      input: '["dog", "racecar", "car"]',
+      expected: '""',
+      why: "There is no shared beginning.",
+    },
+    {
+      input: '["to", "top", "toy"]',
+      expected: '"to"',
+      why: "All words share to, then the trie branches.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Keeping the prefix after a branch appears",
+      fix: "Stop as soon as the node has more than one child.",
+    },
+    {
+      title: "Ignoring that a shorter whole word can stop the answer",
+      fix: "If node.isWord is true, one word already ended, so the common prefix cannot go farther.",
+    },
+  ]}
+/>
+
+<HintDrawer title="One road means shared, many roads mean split">
+  Keep moving only while there is exactly one next child and no word already
+  ended.
+</HintDrawer>
+
+## Reflection
+
+Why should the answer stop if one whole word ends, even if another longer word
+keeps going?

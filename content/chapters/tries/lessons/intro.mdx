@@ -1,0 +1,88 @@
+---
+title: "Introduction"
+slug: "intro"
+order: 1
+lessonType: "intro"
+difficulty: "easy"
+estimatedMinutes: 10
+concepts:
+  - "trie"
+  - "prefix"
+  - "node"
+  - "isWord"
+skills:
+  - "Explain what a trie stores"
+  - "Tell what a prefix means"
+  - "Describe why shared beginnings matter"
+prerequisites: []
+summary: "Meet tries, learn what prefixes are, and see why a word tree helps words share the same beginning."
+---
+
+<ProblemStatement title="A trie is a word tree">
+  A trie stores words one letter at a time so words with the same beginning can
+  share part of the same path.
+</ProblemStatement>
+
+<Intuition title="Think about many words starting the same way">
+  If we store <code>cat</code>, <code>car</code>, and <code>cap</code>, all
+  three start with <code>ca</code>. A trie keeps that shared beginning together,
+  then splits only when the words become different.
+</Intuition>
+
+<InterviewTip>
+  In this chapter, a <code>prefix</code> is just the beginning of a word. A
+  <code>node</code> is one letter stop in the word tree. <code>isWord</code>
+  means, "A whole word ends here."
+</InterviewTip>
+
+<ComplexityCard
+  time="Trie jobs often take about one step per letter"
+  space="Depends on how many letter nodes you create"
+  notes="The big idea is not a single formula. It is sharing beginnings so prefix questions become easier."
+/>
+
+## Helpful trie words
+
+- <strong>trie</strong>: a word tree
+- <strong>prefix</strong>: the beginning of a word
+- <strong>node</strong>: one letter stop
+- <strong>children</strong>: the next possible letters
+- <strong>isWord</strong>: a marker that says a whole word ends here
+
+## Why tries are useful
+
+- They help exact word search.
+- They help prefix search.
+- They help autocomplete-style jobs.
+- They let many words share the same beginning path.
+
+<PredictionPrompt
+  prompt={{
+    prompt:
+      "If a problem asks, 'Does any word start with ca?' which data structure idea fits best?",
+    choices: [
+      {
+        id: "trie",
+        label: "A trie",
+        isCorrect: true,
+        feedback:
+          "Correct. A trie is built for following shared beginnings letter by letter.",
+      },
+      {
+        id: "plain-array",
+        label: "A plain unsorted array",
+        isCorrect: false,
+        feedback:
+          "Not the best fit. A plain array stores the words, but it does not organize shared prefixes for you.",
+      },
+    ],
+  }}
+/>
+
+## Lesson Summary
+
+- A trie is a word tree.
+- A prefix is the beginning of a word.
+- Words with the same beginning can share one path.
+- <code>isWord</code> marks where a whole word ends.
+- Trie clues often involve words, prefixes, and autocomplete.

@@ -1,0 +1,45 @@
+[
+  {
+    "id": "prefix-1",
+    "narration": "Prefix search walks the letters of the beginning, just like exact search does.",
+    "visualizer": "tree",
+    "treeValues": ["start", "c", null, "a", null, null, null, "t", "r"],
+    "highlightIndexes": [1, 3],
+    "pointers": {
+      "current": 3
+    }
+  },
+  {
+    "id": "prefix-2",
+    "narration": "The big difference is that startsWith only cares about the path, not whether a whole word ends there.",
+    "visualizer": "tree",
+    "treeValues": ["start", "c", null, "a", null, null, null, "t", "r"],
+    "decision": "If the path for ca exists, startsWith('ca') is true.",
+    "highlightIndexes": [1, 3],
+    "predictionPrompt": {
+      "prompt": "If cat and car are stored, is startsWith('ca') true?",
+      "choices": [
+        {
+          "id": "yes",
+          "label": "Yes",
+          "isCorrect": true,
+          "feedback": "Correct. The path c -> a exists."
+        },
+        {
+          "id": "no",
+          "label": "No",
+          "isCorrect": false,
+          "feedback": "Not this one. A prefix does not need to be a whole word."
+        }
+      ]
+    }
+  },
+  {
+    "id": "prefix-3",
+    "narration": "If any prefix letter is missing, the answer becomes false.",
+    "visualizer": "tree",
+    "treeValues": ["start", "c", null, "a", null, null, null, "t", "r"],
+    "callout": "A broken path means no stored word begins that way.",
+    "highlightIndexes": [1, 3, 7, 8]
+  }
+]

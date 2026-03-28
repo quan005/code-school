@@ -1,0 +1,57 @@
+[
+  {
+    "id": "intro-1",
+    "narration": "A trie is a word tree that stores one letter at each stop.",
+    "visualizer": "tree",
+    "treeValues": ["start", "c", null, "a", null, null, null, "t", "r"],
+    "callout": "The path start -> c -> a is shared.",
+    "highlightIndexes": [0, 1, 3],
+    "pointers": {
+      "current": 3
+    }
+  },
+  {
+    "id": "intro-2",
+    "narration": "The words cat and car share the same beginning, then split at the last letter.",
+    "visualizer": "tree",
+    "treeValues": ["start", "c", null, "a", null, null, null, "t", "r"],
+    "decision": "A prefix is the beginning part that words can share.",
+    "highlightIndexes": [7, 8],
+    "pointers": {
+      "left": 7,
+      "right": 8
+    },
+    "predictionPrompt": {
+      "prompt": "Which letters form the shared prefix of cat and car?",
+      "choices": [
+        {
+          "id": "ca",
+          "label": "ca",
+          "isCorrect": true,
+          "feedback": "Correct. Both words share c then a."
+        },
+        {
+          "id": "cat",
+          "label": "cat",
+          "isCorrect": false,
+          "feedback": "Not this one. The words split before the last letter."
+        }
+      ]
+    }
+  },
+  {
+    "id": "intro-3",
+    "narration": "A trie also marks where a whole word ends, so to and top can both be stored correctly.",
+    "visualizer": "tree",
+    "treeValues": ["start", "t", null, "o", null, null, null, "p", "y"],
+    "callout": "The node for o can end one word even while more letters continue below it.",
+    "highlightIndexes": [1, 3, 7, 8],
+    "pointers": {
+      "current": 3
+    },
+    "reflectionPrompt": {
+      "prompt": "Why is a word-end marker important in a trie?",
+      "placeholder": "It is important because..."
+    }
+  }
+]

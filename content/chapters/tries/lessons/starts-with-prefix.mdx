@@ -1,0 +1,109 @@
+---
+title: "Starts With Prefix"
+slug: "starts-with-prefix"
+order: 4
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 12
+concepts:
+  - "prefix path"
+  - "startsWith"
+  - "shared beginning"
+skills:
+  - "Check whether any word begins with a prefix"
+  - "Tell the difference between prefix search and exact search"
+prerequisites:
+  - "search-for-a-word"
+summary: "Answer starts-with questions by checking whether the prefix path exists, even if no word ends there."
+---
+
+<ProblemStatement title="Ask whether any word starts this way">
+  Given a trie and a prefix, return <code>true</code> if at least one stored
+  word starts with that prefix.
+</ProblemStatement>
+
+## Example
+
+```txt
+stored words: cat, car, cap
+startsWith("ca") -> true
+startsWith("cab") -> false
+```
+
+<Intuition title="For prefix search, the path matters more than the ending mark">
+  We only care whether the letters of the prefix can be followed in the trie. We
+  do not need <code>isWord</code> at the end because the prefix can be only the
+  beginning of a longer word.
+</Intuition>
+
+<InterviewTip>
+  Exact search asks, "Is the whole word here?" Prefix search asks, "Can I walk
+  this beginning path?"
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+startsWith(prefix: string): boolean {
+  let node = this.root;
+
+  for (const letter of prefix) {
+    const nextNode = node.children.get(letter);
+
+    if (!nextNode) {
+      return false;
+    }
+
+    node = nextNode;
+  }
+
+  return true;
+}
+```
+
+<ComplexityCard
+  time="O(m)"
+  space="O(1)"
+  notes="We still take one step per prefix letter, but we do not need a final isWord check."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: 'startsWith("ca") with cat, car, cap stored',
+      expected: "true",
+      why: "The path c -> a exists.",
+    },
+    {
+      input: 'startsWith("cat") with cat stored',
+      expected: "true",
+      why: "A whole word can also be a prefix.",
+    },
+    {
+      input: 'startsWith("cab")',
+      expected: "false",
+      why: "The path breaks at b.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Checking isWord for startsWith",
+      fix: "Prefix search only needs the path, not the word-end marker.",
+    },
+    {
+      title: "Thinking a prefix must be a whole word",
+      fix: "A prefix can be only the beginning of a longer word.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Can you keep walking?">
+  If every letter of the prefix has a matching child, the answer is true.
+</HintDrawer>
+
+## Reflection
+
+How is <code>startsWith("ca")</code> different from <code>search("ca")</code>?

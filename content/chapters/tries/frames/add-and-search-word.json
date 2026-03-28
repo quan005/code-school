@@ -1,0 +1,50 @@
+[
+  {
+    "id": "wildcard-1",
+    "narration": "A normal letter follows one next child, but a dot means any one letter can fit there.",
+    "visualizer": "tree",
+    "treeValues": ["start", "b", "d", "a", "a", null, null, "d", "d"],
+    "highlightIndexes": [1, 2, 3, 4, 7, 8],
+    "pointers": {
+      "left": 1,
+      "right": 2
+    }
+  },
+  {
+    "id": "wildcard-2",
+    "narration": "Because a dot can match many children, the search may branch into several possible paths.",
+    "visualizer": "tree",
+    "treeValues": ["start", "b", "d", "a", "a", null, null, "d", "d"],
+    "decision": "This is why recursion helps. It can try one child path, then another.",
+    "highlightIndexes": [1, 2],
+    "predictionPrompt": {
+      "prompt": "When the pattern starts with '.', what should the search do?",
+      "choices": [
+        {
+          "id": "all-children",
+          "label": "Try all children",
+          "isCorrect": true,
+          "feedback": "Correct. The dot can match any one next letter."
+        },
+        {
+          "id": "stop",
+          "label": "Stop right away",
+          "isCorrect": false,
+          "feedback": "Not this one. A dot means more choices, not failure."
+        }
+      ]
+    }
+  },
+  {
+    "id": "wildcard-3",
+    "narration": "The search succeeds if any one of the possible child paths reaches a full word ending.",
+    "visualizer": "tree",
+    "treeValues": ["start", "b", "d", "a", "a", null, null, "d", "d"],
+    "callout": "Only one matching path has to work.",
+    "highlightIndexes": [1, 3, 7],
+    "reflectionPrompt": {
+      "prompt": "Why can a wildcard turn one straight search into a branching search?",
+      "placeholder": "It turns into branching because..."
+    }
+  }
+]

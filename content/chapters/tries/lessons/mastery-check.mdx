@@ -1,0 +1,39 @@
+---
+title: "Mastery Check"
+slug: "mastery-check"
+order: 9
+lessonType: "mastery"
+difficulty: "medium"
+estimatedMinutes: 10
+concepts:
+  - "prefix search"
+  - "word end"
+  - "branching path"
+skills:
+  - "Recall the main trie clues without a walkthrough"
+  - "Explain why shared beginnings help"
+prerequisites:
+  - "review"
+summary: "Show that you can recognize trie clues, explain prefixes, and rebuild the main trie ideas on your own."
+---
+
+<ProblemStatement title="Can you rebuild the trie clues from memory?">
+  This mastery check asks you to remember the main trie ideas without
+  step-by-step help.
+</ProblemStatement>
+
+<Intuition title="A trie is strongest when many words begin the same way">
+  That one fact leads to shared paths, exact search, prefix search, wildcard
+  branching, and autocomplete-style jobs.
+</Intuition>
+
+<ComplexityCard
+  time="Many basic trie jobs follow one letter path at a time"
+  space="Depends on how many letter nodes are stored"
+  notes="The key lesson is learning how word trees make prefix questions easier."
+/>
+
+## Reflection
+
+Explain in your own words why a trie helps more with prefixes than a plain list
+of words does.

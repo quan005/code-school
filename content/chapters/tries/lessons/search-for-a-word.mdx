@@ -1,0 +1,112 @@
+---
+title: "Search for a Word"
+slug: "search-for-a-word"
+order: 3
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 12
+concepts:
+  - "exact match"
+  - "follow the path"
+  - "word end"
+skills:
+  - "Search for an exact word in a trie"
+  - "Explain why a path alone is not enough"
+prerequisites:
+  - "implement-a-trie"
+summary: "Search exactly by following letters and checking whether a whole word ends at the last node."
+---
+
+<ProblemStatement title="Find out whether a whole word exists">
+  Given a trie and a word, return <code>true</code> if the trie stores that
+  whole word. Return <code>false</code> otherwise.
+</ProblemStatement>
+
+## Example
+
+```txt
+stored words: to, top, toy
+search("to") -> true
+search("tom") -> false
+```
+
+<Intuition title="Follow every letter, then check the finish line">
+  Start at the root and follow one child per letter. If a letter path is
+  missing, the word is not there. If the path exists all the way through, we
+  still need to check <code>isWord</code> at the end.
+</Intuition>
+
+<InterviewTip>
+  <code>to</code> and <code>top</code> can share letters. That is why the trie
+  needs a separate word-end check instead of only checking the path.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+search(word: string): boolean {
+  let node = this.root;
+
+  for (const letter of word) {
+    const nextNode = node.children.get(letter);
+
+    if (!nextNode) {
+      return false;
+    }
+
+    node = nextNode;
+  }
+
+  return node.isWord;
+}
+```
+
+<ComplexityCard
+  time="O(m)"
+  space="O(1)"
+  notes="We walk one step per letter and only keep one current node pointer."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: 'search("to") after inserting "to" and "top"',
+      expected: "true",
+      why: "The path exists and the node for o is marked as a full word.",
+    },
+    {
+      input: 'search("tom")',
+      expected: "false",
+      why: "The path breaks because m is missing.",
+    },
+    {
+      input: 'search("t") when only "to" is stored',
+      expected: "false",
+      why: "The path exists, but no full word ends there.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Returning true after finding only the path",
+      fix: "Check the final node's isWord flag too.",
+    },
+    {
+      title: "Not stopping when a letter is missing",
+      fix: "The moment a needed child is missing, return false.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Path plus finish line">
+  Exact search needs two wins: the whole path exists, and the last node says a
+  whole word ends there.
+</HintDrawer>
+
+## Reflection
+
+Why should <code>search("t")</code> be false if the trie only stores
+
+<code>"to"</code>?

@@ -1,0 +1,34 @@
+[
+  {
+    "id": "insert-1",
+    "narration": "To insert cat, start at the root and make a child for c if it is missing.",
+    "visualizer": "tree",
+    "treeValues": ["start", "c"],
+    "highlightIndexes": [0, 1],
+    "pointers": {
+      "current": 1
+    }
+  },
+  {
+    "id": "insert-2",
+    "narration": "Keep going letter by letter. After c comes a, then t.",
+    "visualizer": "tree",
+    "treeValues": ["start", "c", null, "a", null, null, null, "t"],
+    "highlightIndexes": [1, 3, 7],
+    "pointers": {
+      "current": 7
+    }
+  },
+  {
+    "id": "insert-3",
+    "narration": "After the last letter, mark that node as a whole word ending spot.",
+    "visualizer": "tree",
+    "treeValues": ["start", "c", null, "a", null, null, null, "t"],
+    "callout": "The path alone is not enough. The trie must remember that cat ends here.",
+    "highlightIndexes": [7],
+    "reflectionPrompt": {
+      "prompt": "Why should insert reuse old nodes instead of rebuilding the whole path every time?",
+      "placeholder": "It should reuse nodes because..."
+    }
+  }
+]

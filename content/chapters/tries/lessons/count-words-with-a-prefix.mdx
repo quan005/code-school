@@ -1,0 +1,119 @@
+---
+title: "Count Words With a Prefix"
+slug: "count-words-with-a-prefix"
+order: 6
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 15
+concepts:
+  - "prefix subtree"
+  - "counting words"
+  - "DFS"
+skills:
+  - "Find the node for a prefix"
+  - "Count complete words below that node"
+  - "Use DFS on the prefix subtree"
+prerequisites:
+  - "starts-with-prefix"
+summary: "Follow the prefix path, then count how many full words live underneath that part of the trie."
+---
+
+<ProblemStatement title="Count how many words begin the same way">
+  Given a trie and a prefix, return how many stored words start with that
+  prefix.
+</ProblemStatement>
+
+## Example
+
+```txt
+stored words: to, top, toy, ten
+count("to") -> 3
+```
+
+<Intuition title="First find the doorway, then count below it">
+  The prefix path leads us to the node where that beginning ends. From there, we
+  explore all the child paths below it and count every node marked with
+  <code>isWord</code>.
+</Intuition>
+
+<InterviewTip>
+  This is a two-part plan: follow the prefix, then do DFS to count full words in
+  that smaller subtree.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+countWordsWithPrefix(prefix: string): number {
+  let node = this.root;
+
+  for (const letter of prefix) {
+    const nextNode = node.children.get(letter);
+    if (!nextNode) {
+      return 0;
+    }
+
+    node = nextNode;
+  }
+
+  const dfs = (current: TrieNode): number => {
+    let total = current.isWord ? 1 : 0;
+
+    for (const child of current.children.values()) {
+      total += dfs(child);
+    }
+
+    return total;
+  };
+
+  return dfs(node);
+}
+```
+
+<ComplexityCard
+  time="O(p + s)"
+  space="Depends on recursion depth"
+  notes="p is the number of letters in the prefix. s is the number of nodes we visit below that prefix."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: 'count("to") with to, top, toy, ten stored',
+      expected: "3",
+      why: "The words to, top, and toy all start with to.",
+    },
+    {
+      input: 'count("te")',
+      expected: "1",
+      why: "Only ten starts with te.",
+    },
+    {
+      input: 'count("ta")',
+      expected: "0",
+      why: "No path for ta exists.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Counting every node instead of every whole word",
+      fix: "Only add to the count when isWord is true.",
+    },
+    {
+      title: "Skipping the prefix search step",
+      fix: "First find the node where the prefix ends, then count below it.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Prefix first, counting second">
+  You do not count from the root. You count from the node that represents the
+  full prefix.
+</HintDrawer>
+
+## Reflection
+
+Why do we count only nodes marked with <code>isWord</code>?

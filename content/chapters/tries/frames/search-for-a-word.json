@@ -1,0 +1,51 @@
+[
+  {
+    "id": "search-1",
+    "narration": "Exact search follows one child for each letter in the word.",
+    "visualizer": "tree",
+    "treeValues": ["start", "t", null, "o", null, null, null, "p", "y"],
+    "highlightIndexes": [1, 3, 7],
+    "pointers": {
+      "current": 7
+    }
+  },
+  {
+    "id": "search-2",
+    "narration": "If a needed letter is missing, the word is not in the trie.",
+    "visualizer": "tree",
+    "treeValues": ["start", "t", null, "o", null, null, null, "p", "y"],
+    "decision": "A missing child means false right away.",
+    "highlightIndexes": [1, 3],
+    "pointers": {
+      "current": 3
+    },
+    "predictionPrompt": {
+      "prompt": "If the trie stores to, top, and toy, what happens when we search for tom?",
+      "choices": [
+        {
+          "id": "false",
+          "label": "Return false",
+          "isCorrect": true,
+          "feedback": "Correct. The path breaks because m is missing."
+        },
+        {
+          "id": "true",
+          "label": "Return true",
+          "isCorrect": false,
+          "feedback": "Not this one. The trie needs the exact path and word ending."
+        }
+      ]
+    }
+  },
+  {
+    "id": "search-3",
+    "narration": "Even if the path exists, we still check whether a whole word ends at the last node.",
+    "visualizer": "tree",
+    "treeValues": ["start", "t", null, "o", null, null, null, "p", "y"],
+    "callout": "That is why search for t is false when only to is stored.",
+    "highlightIndexes": [1],
+    "pointers": {
+      "current": 1
+    }
+  }
+]

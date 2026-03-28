@@ -1,0 +1,47 @@
+---
+title: "Review"
+slug: "review"
+order: 8
+lessonType: "review"
+difficulty: "easy"
+estimatedMinutes: 8
+concepts:
+  - "prefix"
+  - "word end"
+  - "shared path"
+skills:
+  - "Review the main trie clues"
+  - "Tell exact search apart from prefix search"
+prerequisites:
+  - "longest-common-prefix"
+summary: "Review the main trie clues, especially shared beginnings, prefix paths, word-end markers, and branching search."
+---
+
+<ProblemStatement title="What should trie problems make you notice?">
+  This review lesson helps you remember the strongest clues that point to trie
+  thinking.
+</ProblemStatement>
+
+<Intuition title="Tries are about words that share beginnings">
+  Trie problems often ask about exact words, starts-with checks, autocomplete,
+  wildcard search, or counting words below one shared beginning.
+</Intuition>
+
+<ComplexityCard
+  time="Many trie jobs take about one step per letter, then maybe more for branching or counting"
+  space="Depends on the number of created nodes and any recursion"
+  notes="The big win is organizing words so shared beginnings stay together."
+/>
+
+## Pattern Summary
+
+- Insert: build missing child nodes and mark the end.
+- Exact search: follow the path and check <code>isWord</code>.
+- Prefix search: follow the path only.
+- Wildcard search: try all children when a dot appears.
+- Prefix count: find the prefix node, then count word ends below it.
+- Longest common prefix: keep walking until the trie branches or a word ends.
+
+## Reflection
+
+Which trie clue feels easiest for you to notice now?
