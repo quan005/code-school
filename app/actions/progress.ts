@@ -7,6 +7,7 @@ import {
   lessonStatusSchema,
   setLessonStatus,
 } from "@/db/progress";
+import { reportServerError } from "@/lib/observability";
 import { trackMinimalTelemetryEvent } from "@/lib/telemetry";
 
 const updateLessonProgressSchema = z.object({
@@ -21,22 +22,35 @@ export async function updateLessonProgressAction(input: {
   status: z.infer<typeof lessonStatusSchema>;
 }) {
   const parsed = updateLessonProgressSchema.parse(input);
-  const activeStudent = await getActiveStudentContext();
 
-  await setLessonStatus(parsed);
-  trackMinimalTelemetryEvent({
-    eventName: "lesson_status_updated",
-    chapterSlug: parsed.chapterSlug,
-    lessonSlug: parsed.lessonSlug,
-    status: parsed.status,
-    studentProfileId: activeStudent.studentProfileId,
-  });
+  try {
+    const activeStudent = await getActiveStudentContext();
 
-  revalidatePath("/dashboard");
-  revalidatePath("/chapters");
-  revalidatePath(`/chapters/${parsed.chapterSlug}`);
-  revalidatePath(`/learn/${parsed.chapterSlug}/intro`);
-  revalidatePath(`/learn/${parsed.chapterSlug}/${parsed.lessonSlug}`);
-  revalidatePath(`/review/${parsed.chapterSlug}`);
-  revalidatePath(`/mastery/${parsed.chapterSlug}`);
+    await setLessonStatus(parsed);
+    trackMinimalTelemetryEvent({
+      eventName: "lesson_status_updated",
+      chapterSlug: parsed.chapterSlug,
+      lessonSlug: parsed.lessonSlug,
+      status: parsed.status,
+      studentProfileId: activeStudent.studentProfileId,
+    });
+
+    revalidatePath("/dashboard");
+    revalidatePath("/chapters");
+    revalidatePath(`/chapters/${parsed.chapterSlug}`);
+    revalidatePath(`/learn/${parsed.chapterSlug}/intro`);
+    revalidatePath(`/learn/${parsed.chapterSlug}/${parsed.lessonSlug}`);
+    revalidatePath(`/review/${parsed.chapterSlug}`);
+    revalidatePath(`/mastery/${parsed.chapterSlug}`);
+  } catch (error) {
+    reportServerError(error, {
+      area: "update_lesson_progress",
+      chapterSlug: parsed.chapterSlug,
+      lessonSlug: parsed.lessonSlug,
+      metadata: {
+        status: parsed.status,
+      },
+    });
+    throw error;
+  }
 }

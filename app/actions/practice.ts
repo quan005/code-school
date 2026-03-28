@@ -11,6 +11,7 @@ import {
   evaluatePracticeChallenge,
   getLessonActivity,
 } from "@/lib/content/practice";
+import { reportServerError } from "@/lib/observability";
 import { trackMinimalTelemetryEvent } from "@/lib/telemetry";
 
 const runPracticeChallengeSchema = z.object({
@@ -25,58 +26,68 @@ export async function runPracticeChallengeAction(input: {
   lessonSlug: string;
 }) {
   const parsed = runPracticeChallengeSchema.parse(input);
-  const activeStudent = await getActiveStudentContext();
-  const activity = await getLessonActivity(
-    parsed.chapterSlug,
-    parsed.lessonSlug,
-  );
 
-  if (!activity?.practiceChallenge) {
-    throw new Error("This lesson does not have a practice challenge.");
-  }
+  try {
+    const activeStudent = await getActiveStudentContext();
+    const activity = await getLessonActivity(
+      parsed.chapterSlug,
+      parsed.lessonSlug,
+    );
 
-  const result = evaluatePracticeChallenge(
-    activity.practiceChallenge,
-    parsed.codeSnapshot,
-  );
+    if (!activity?.practiceChallenge) {
+      throw new Error("This lesson does not have a practice challenge.");
+    }
 
-  await recordSubmission({
-    chapterSlug: parsed.chapterSlug,
-    codeSnapshot: parsed.codeSnapshot,
-    lessonSlug: parsed.lessonSlug,
-    resultSummary: JSON.stringify({
-      feedback: result.feedback,
-      passedAll: result.passedAll,
-      passedCount: result.passedCount,
-      totalCount: result.totalCount,
-    }),
-  });
-  trackMinimalTelemetryEvent({
-    eventName: "practice_run",
-    chapterSlug: parsed.chapterSlug,
-    lessonSlug: parsed.lessonSlug,
-    passedAll: result.passedAll,
-    passedCount: result.passedCount,
-    studentProfileId: activeStudent.studentProfileId,
-    totalCount: result.totalCount,
-  });
+    const result = evaluatePracticeChallenge(
+      activity.practiceChallenge,
+      parsed.codeSnapshot,
+    );
 
-  if (
-    result.passedAll &&
-    activity.practiceChallenge.completionBehavior === "mark_complete"
-  ) {
-    await setLessonStatus({
+    await recordSubmission({
+      chapterSlug: parsed.chapterSlug,
+      codeSnapshot: parsed.codeSnapshot,
+      lessonSlug: parsed.lessonSlug,
+      resultSummary: JSON.stringify({
+        feedback: result.feedback,
+        passedAll: result.passedAll,
+        passedCount: result.passedCount,
+        totalCount: result.totalCount,
+      }),
+    });
+    trackMinimalTelemetryEvent({
+      eventName: "practice_run",
       chapterSlug: parsed.chapterSlug,
       lessonSlug: parsed.lessonSlug,
-      status: "completed",
+      passedAll: result.passedAll,
+      passedCount: result.passedCount,
+      studentProfileId: activeStudent.studentProfileId,
+      totalCount: result.totalCount,
     });
+
+    if (
+      result.passedAll &&
+      activity.practiceChallenge.completionBehavior === "mark_complete"
+    ) {
+      await setLessonStatus({
+        chapterSlug: parsed.chapterSlug,
+        lessonSlug: parsed.lessonSlug,
+        status: "completed",
+      });
+    }
+
+    revalidatePath(`/chapters/${parsed.chapterSlug}`);
+    revalidatePath(`/learn/${parsed.chapterSlug}/${parsed.lessonSlug}`);
+    revalidatePath(`/review/${parsed.chapterSlug}`);
+    revalidatePath(`/mastery/${parsed.chapterSlug}`);
+    revalidatePath("/dashboard");
+
+    return result;
+  } catch (error) {
+    reportServerError(error, {
+      area: "run_practice_challenge",
+      chapterSlug: parsed.chapterSlug,
+      lessonSlug: parsed.lessonSlug,
+    });
+    throw error;
   }
-
-  revalidatePath(`/chapters/${parsed.chapterSlug}`);
-  revalidatePath(`/learn/${parsed.chapterSlug}/${parsed.lessonSlug}`);
-  revalidatePath(`/review/${parsed.chapterSlug}`);
-  revalidatePath(`/mastery/${parsed.chapterSlug}`);
-  revalidatePath("/dashboard");
-
-  return result;
 }

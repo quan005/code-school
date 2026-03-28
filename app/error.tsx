@@ -1,5 +1,8 @@
 "use client";
 
+import { useEffect } from "react";
+import { reportClientError } from "@/lib/observability";
+
 export default function GlobalError({
   error,
   reset,
@@ -7,6 +10,15 @@ export default function GlobalError({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
+  useEffect(() => {
+    reportClientError(error, {
+      area: "app_route_error",
+      metadata: {
+        digest: error.digest,
+      },
+    });
+  }, [error]);
+
   return (
     <html lang="en">
       <body>
