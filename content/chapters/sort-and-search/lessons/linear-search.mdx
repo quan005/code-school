@@ -1,0 +1,103 @@
+---
+title: "Linear Search"
+slug: "linear-search"
+order: 2
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 12
+concepts:
+  - "scan one by one"
+  - "target"
+  - "index"
+skills:
+  - "Search an array directly"
+  - "Return the target index or -1"
+  - "Explain when linear search fits"
+prerequisites: []
+summary: "Use the simplest kind of search by checking each item one by one until the target is found."
+---
+
+<ProblemStatement title="Find the target by checking one item at a time">
+  Given an array <code>nums</code> and a target value, return the target’s index
+  if it exists. Otherwise, return <code>-1</code>.
+</ProblemStatement>
+
+## Example
+
+```txt
+nums = [4, 2, 7, 1]
+target = 7
+answer = 2
+```
+
+<Intuition title="Start at the beginning and scan across">
+  Linear search does not need sorted order. It just checks each position one by
+  one until it finds the target or runs out of items.
+</Intuition>
+
+<InterviewTip>
+  Linear search is a good beginner tool when the data is small or unsorted and
+  you simply need to check item by item.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function linearSearch(nums: number[], target: number): number {
+  for (let index = 0; index < nums.length; index += 1) {
+    if (nums[index] === target) {
+      return index;
+    }
+  }
+
+  return -1;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(1)"
+  notes="In the worst case, linear search may need to inspect every item once."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "nums = [4, 2, 7, 1], target = 7",
+      expected: "2",
+      why: "The value 7 is found at index 2.",
+    },
+    {
+      input: "nums = [4, 2, 7, 1], target = 9",
+      expected: "-1",
+      why: "The scan ends without finding 9.",
+    },
+    {
+      input: "nums = []",
+      expected: "-1",
+      why: "No items means nothing can be found.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Returning the value instead of the index",
+      fix: "The problem asks where the target is, so return the index.",
+    },
+    {
+      title: "Stopping too early",
+      fix: "If the target has not been found yet, keep scanning until the array ends.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Check each spot">
+  Linear search is the one-by-one pattern: inspect index 0, then 1, then 2, and
+  so on.
+</HintDrawer>
+
+## Reflection
+
+Why is linear search still useful even though it is simple?

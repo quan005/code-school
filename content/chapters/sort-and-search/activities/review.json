@@ -1,0 +1,23 @@
+{
+  "recapPrompt": {
+    "prompt": "What is one of the strongest signs that sorting first might help a problem?",
+    "choices": [
+      {
+        "id": "order",
+        "label": "The problem becomes clearer once values are in order",
+        "isCorrect": true,
+        "feedback": "Correct. Sorting often helps when order makes comparison or merging easier."
+      },
+      {
+        "id": "smaller",
+        "label": "The array contains only one item",
+        "isCorrect": false,
+        "feedback": "Not this one. A one-item array does not need sorting help."
+      }
+    ]
+  },
+  "reflectionPrompt": {
+    "prompt": "Explain how sorting can make a later search or comparison easier.",
+    "placeholder": "Sorting helps later because..."
+  }
+}

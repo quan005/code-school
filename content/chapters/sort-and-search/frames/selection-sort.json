@@ -1,0 +1,39 @@
+[
+  {
+    "id": "selection-1",
+    "narration": "Selection sort looks for the smallest value in the unsorted part of the array.",
+    "arrayValues": [5, 3, 4, 1, 2],
+    "callout": "The sorted section grows from the left.",
+    "highlightIndexes": [0, 1, 2, 3, 4]
+  },
+  {
+    "id": "selection-2",
+    "narration": "After finding the smallest remaining value, selection sort swaps it into the next correct position.",
+    "arrayValues": [1, 3, 4, 5, 2],
+    "decision": "Now the first position is correct.",
+    "highlightIndexes": [0],
+    "predictionPrompt": {
+      "prompt": "What is the main job of each round in selection sort?",
+      "choices": [
+        {
+          "id": "smallest",
+          "label": "Find the smallest remaining value",
+          "isCorrect": true,
+          "feedback": "Correct. That smallest value gets placed into the next sorted spot."
+        },
+        {
+          "id": "middle",
+          "label": "Find the middle value",
+          "isCorrect": false,
+          "feedback": "Not this one. Selection sort cares about the next smallest remaining value."
+        }
+      ]
+    }
+  },
+  {
+    "id": "selection-3",
+    "narration": "Then the same story repeats for the rest of the unsorted section.",
+    "arrayValues": [1, 2, 3, 4, 5],
+    "callout": "The left side keeps becoming more sorted."
+  }
+]

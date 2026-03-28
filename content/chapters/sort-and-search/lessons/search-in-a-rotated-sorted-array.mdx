@@ -1,0 +1,122 @@
+---
+title: "Search in a Rotated Sorted Array"
+slug: "search-in-a-rotated-sorted-array"
+order: 7
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 16
+concepts:
+  - "rotated sorted array"
+  - "one side is still sorted"
+  - "smart half choice"
+skills:
+  - "Use order clues even after rotation"
+  - "Decide which half stays useful"
+prerequisites:
+  - "sort-colors"
+summary: "Search a rotated sorted array by checking the middle and using the fact that one half is still ordered."
+---
+
+<ProblemStatement title="Find the target in a rotated sorted array">
+  Given a sorted array that was rotated at some unknown point, return the index
+  of the target if it exists. Otherwise, return <code>-1</code>.
+</ProblemStatement>
+
+## Example
+
+```txt
+nums = [4, 5, 6, 7, 0, 1, 2]
+target = 0
+answer = 4
+```
+
+<Intuition title="Even after rotation, one side is still ordered">
+  At any middle point, at least one half is still sorted. That sorted half gives
+  enough information to decide where the target can or cannot be.
+</Intuition>
+
+<InterviewTip>
+  This is still a search-with-order problem. The order looks partly broken, but
+  one side stays trustworthy at each step.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function searchRotated(nums: number[], target: number): number {
+  let left = 0;
+  let right = nums.length - 1;
+
+  while (left <= right) {
+    const mid = Math.floor((left + right) / 2);
+
+    if (nums[mid] === target) {
+      return mid;
+    }
+
+    if (nums[left] <= nums[mid]) {
+      if (nums[left] <= target && target < nums[mid]) {
+        right = mid - 1;
+      } else {
+        left = mid + 1;
+      }
+    } else {
+      if (nums[mid] < target && target <= nums[right]) {
+        left = mid + 1;
+      } else {
+        right = mid - 1;
+      }
+    }
+  }
+
+  return -1;
+}
+```
+
+<ComplexityCard
+  time="O(log n)"
+  space="O(1)"
+  notes="Each step still throws away half of the search space."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "nums = [4, 5, 6, 7, 0, 1, 2], target = 0",
+      expected: "4",
+      why: "The target is found after choosing the correct ordered half each step.",
+    },
+    {
+      input: "nums = [4, 5, 6, 7, 0, 1, 2], target = 3",
+      expected: "-1",
+      why: "The search space ends without finding 3.",
+    },
+    {
+      input: "nums = [1], target = 1",
+      expected: "0",
+      why: "A one-item rotated array still works like a normal search.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Thinking rotation destroys all order",
+      fix: "At every step, one half is still sorted, and that half gives a safe clue.",
+    },
+    {
+      title: "Choosing the wrong side without checking where the target fits",
+      fix: "First find the sorted half, then ask whether the target belongs inside that half.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Which half is still sorted?">
+  After checking the middle, first decide which side is ordered. Then ask if the
+  target belongs there.
+</HintDrawer>
+
+## Reflection
+
+Why is a rotated sorted array still useful for smart searching?

@@ -1,0 +1,45 @@
+[
+  {
+    "id": "linear-1",
+    "narration": "Linear search checks each item one by one until it finds the target.",
+    "arrayValues": [4, 2, 7, 1],
+    "callout": "This works even when the array is not sorted.",
+    "highlightIndexes": [0, 1, 2, 3],
+    "pointers": {
+      "current": 0
+    }
+  },
+  {
+    "id": "linear-2",
+    "narration": "If the first values are not the target, the search simply keeps moving to the next spot.",
+    "arrayValues": [4, 2, 7, 1],
+    "decision": "At index 2, the target 7 is found.",
+    "highlightIndexes": [2],
+    "pointers": {
+      "current": 2
+    },
+    "predictionPrompt": {
+      "prompt": "What should linear search return if the target never appears?",
+      "choices": [
+        {
+          "id": "minus-one",
+          "label": "-1",
+          "isCorrect": true,
+          "feedback": "Correct. That shows the scan finished without finding the target."
+        },
+        {
+          "id": "zero",
+          "label": "0",
+          "isCorrect": false,
+          "feedback": "Not this one. Index 0 would mean the target was found at the start."
+        }
+      ]
+    }
+  },
+  {
+    "id": "linear-3",
+    "narration": "Linear search is simple and dependable when the data is small or unsorted.",
+    "arrayValues": ["small data", "unsorted data"],
+    "callout": "Sometimes the simplest search is the right one."
+  }
+]

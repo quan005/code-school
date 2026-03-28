@@ -1,0 +1,108 @@
+---
+title: "Insertion Sort"
+slug: "insertion-sort"
+order: 4
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 14
+concepts:
+  - "insert into sorted side"
+  - "slide bigger values right"
+  - "cards in your hand"
+skills:
+  - "Sort by inserting one value into the correct place"
+  - "Explain why the left side stays sorted"
+prerequisites:
+  - "selection-sort"
+summary: "Keep the left side sorted and slide each new value backward until it reaches the correct place."
+---
+
+<ProblemStatement title="Sort the array with insertion sort">
+  Given an array of numbers, sort it in ascending order using insertion sort.
+</ProblemStatement>
+
+## Example
+
+```txt
+[5, 3, 4, 1, 2] -> [1, 2, 3, 4, 5]
+```
+
+<Intuition title="Sort like cards in your hand">
+  Insertion sort treats the left side as already sorted. Then it takes one new
+  value and slides it left until it fits in the correct spot.
+</Intuition>
+
+<InterviewTip>
+  If selection sort is “pick the next smallest,” insertion sort is “take one
+  card and slide it into place.”
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function insertionSort(nums: number[]): number[] {
+  const arr = [...nums];
+
+  for (let index = 1; index < arr.length; index += 1) {
+    const current = arr[index];
+    let scan = index - 1;
+
+    while (scan >= 0 && arr[scan] > current) {
+      arr[scan + 1] = arr[scan];
+      scan -= 1;
+    }
+
+    arr[scan + 1] = current;
+  }
+
+  return arr;
+}
+```
+
+<ComplexityCard
+  time="O(n^2) in the worst case"
+  space="O(n) here because we copied the array"
+  notes="Insertion sort is easy to follow and can feel natural when data is almost sorted."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "[5, 3, 4, 1, 2]",
+      expected: "[1, 2, 3, 4, 5]",
+      why: "Each new value slides into the right spot of the sorted left side.",
+    },
+    {
+      input: "[1, 2, 3]",
+      expected: "[1, 2, 3]",
+      why: "Already sorted input needs almost no movement.",
+    },
+    {
+      input: "[2, 1]",
+      expected: "[1, 2]",
+      why: "The second value slides backward before the first.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Forgetting that the left side should stay sorted after each step",
+      fix: "After inserting the current value, the whole left side up to that point should be in order.",
+    },
+    {
+      title: "Swapping randomly instead of sliding larger values right",
+      fix: "Shift bigger values right until the new value finds its correct place.",
+    },
+  ]}
+/>
+
+<HintDrawer title="One new card at a time">
+  The left side is the sorted hand. The current value is the new card being
+  inserted.
+</HintDrawer>
+
+## Reflection
+
+Why is insertion sort often compared to sorting cards in your hand?

@@ -1,0 +1,65 @@
+{
+  "practiceChallenge": {
+    "title": "Fill in the sort-and-search clues",
+    "description": "Complete the helper so it returns the right idea for direct search, selection sort, and sorted merging.",
+    "language": "javascript",
+    "starterCode": "export function sortSearchClue(job) {\n  const searchClue = \"TODO\";\n  const selectionClue = \"TODO\";\n  const mergeClue = \"TODO\";\n\n  if (job === \"search\") {\n    return searchClue;\n  }\n\n  if (job === \"selection\") {\n    return selectionClue;\n  }\n\n  return mergeClue;\n}\n",
+    "hints": [
+      "Linear search checks items one by one.",
+      "Selection sort finds the smallest remaining value.",
+      "Sorted merge compares the two current fronts."
+    ],
+    "successMessage": "Nice work. You rebuilt the main sort-and-search clues.",
+    "retryMessage": "Not yet. Recheck direct search, selection sort, and sorted merging.",
+    "completionBehavior": "mark_complete",
+    "blanks": [
+      {
+        "key": "searchClue",
+        "label": "Main clue for linear search",
+        "expectedValues": [
+          "check one by one",
+          "scan directly",
+          "look at each item"
+        ]
+      },
+      {
+        "key": "selectionClue",
+        "label": "Main clue for selection sort",
+        "expectedValues": [
+          "find the smallest remaining value",
+          "next smallest value",
+          "smallest unsorted value"
+        ]
+      },
+      {
+        "key": "mergeClue",
+        "label": "Main clue for merging sorted arrays",
+        "expectedValues": [
+          "compare the two fronts",
+          "front values only",
+          "two front pointers"
+        ]
+      }
+    ],
+    "visibleTests": [
+      {
+        "label": "Search clue",
+        "scenario": "job = search",
+        "blankKey": "searchClue",
+        "expected": "check one by one"
+      },
+      {
+        "label": "Selection clue",
+        "scenario": "job = selection",
+        "blankKey": "selectionClue",
+        "expected": "find the smallest remaining value"
+      },
+      {
+        "label": "Merge clue",
+        "scenario": "job = merge",
+        "blankKey": "mergeClue",
+        "expected": "compare the two fronts"
+      }
+    ]
+  }
+}

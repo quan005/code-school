@@ -1,0 +1,7 @@
+{
+  "slug": "sort-and-search",
+  "title": "Sort and Search",
+  "order": 17,
+  "track": "Code Patterns",
+  "summary": "Learn the difference between searching and sorting, and see how putting data in order can make later comparison and search work much easier."
+}

@@ -1,0 +1,49 @@
+[
+  {
+    "id": "rotated-1",
+    "narration": "A rotated sorted array still has useful order, even though the smallest value is no longer at the front.",
+    "arrayValues": [4, 5, 6, 7, 0, 1, 2],
+    "callout": "The order looks bent, not destroyed.",
+    "highlightIndexes": [0, 1, 2, 3, 4, 5, 6],
+    "pointers": {
+      "left": 0,
+      "current": 3,
+      "right": 6
+    }
+  },
+  {
+    "id": "rotated-2",
+    "narration": "At each middle point, one side is still sorted, and that sorted side gives a safe clue.",
+    "arrayValues": [4, 5, 6, 7, 0, 1, 2],
+    "decision": "If the target is not inside the sorted left side, search the other side.",
+    "highlightIndexes": [0, 1, 2, 3],
+    "pointers": {
+      "left": 0,
+      "current": 3,
+      "right": 6
+    },
+    "predictionPrompt": {
+      "prompt": "What is the first big question after checking the middle?",
+      "choices": [
+        {
+          "id": "which-side",
+          "label": "Which side is still sorted?",
+          "isCorrect": true,
+          "feedback": "Correct. That ordered half tells us where the target can or cannot be."
+        },
+        {
+          "id": "full-sort",
+          "label": "Should we fully sort the array first?",
+          "isCorrect": false,
+          "feedback": "Not this one. We can use the remaining order without fully resorting it."
+        }
+      ]
+    }
+  },
+  {
+    "id": "rotated-3",
+    "narration": "This problem is a great reminder that even partly broken order can still be useful.",
+    "arrayValues": [4, 5, 6, 7, 0, 1, 2],
+    "callout": "One sorted half is enough to guide the search."
+  }
+]

@@ -1,0 +1,86 @@
+---
+title: "Introduction"
+slug: "intro"
+order: 1
+lessonType: "intro"
+difficulty: "easy"
+estimatedMinutes: 10
+concepts:
+  - "searching"
+  - "sorting"
+  - "order"
+  - "structure"
+skills:
+  - "Explain the difference between searching and sorting"
+  - "Describe why sorted order helps"
+  - "Recognize when sorting first may help"
+prerequisites: []
+summary: "Meet sort-and-search thinking, learn the difference between finding and ordering, and see why sorted structure often makes later work easier."
+---
+
+<ProblemStatement title="Searching finds things and sorting puts things in order">
+  Searching means looking for something. Sorting means arranging things in a
+  clear order.
+</ProblemStatement>
+
+<Intuition title="Think about a messy box of cards">
+  If the cards are messy, you can still search one by one. But if the cards are
+  sorted, it becomes easier to compare neighbors, merge lists, and place new
+  cards in the right spot.
+</Intuition>
+
+<InterviewTip>
+  Searching asks things like “Is this value here?” Sorting asks things like “Can
+  we put these values in a helpful order first?”
+</InterviewTip>
+
+<ComplexityCard
+  time="Sometimes direct search is enough; other times sorting first makes later work much easier"
+  space="Depends on the algorithm"
+  notes="The big idea is that order creates structure, and structure can make later problems clearer."
+/>
+
+## Helpful ideas
+
+- <strong>searching</strong>: look for a value or check whether it exists
+- <strong>sorting</strong>: arrange items in a clear order
+- <strong>order</strong>: a pattern like smallest to largest
+- <strong>structure</strong>: the helpful shape sorted data gives us
+
+## Strong sort-and-search clues
+
+- find a value
+- put values in order
+- compare neighbors
+- merge sorted lists
+- place something where it belongs
+
+<PredictionPrompt
+  prompt={{
+    prompt: "Why can sorted order make later work easier?",
+    choices: [
+      {
+        id: "structure",
+        label: "Because order gives the data a helpful structure",
+        isCorrect: true,
+        feedback:
+          "Correct. Sorted order makes comparison, merging, and searching more organized.",
+      },
+      {
+        id: "random",
+        label: "Because the data becomes random",
+        isCorrect: false,
+        feedback:
+          "Not this one. Sorting removes randomness and creates structure.",
+      },
+    ],
+  }}
+/>
+
+## Lesson Summary
+
+- Searching looks for something.
+- Sorting arranges things in order.
+- Sorted order can make later work easier.
+- Sometimes direct search is enough.
+- Sometimes sorting first is the smarter plan.

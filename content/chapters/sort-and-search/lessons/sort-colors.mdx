@@ -1,0 +1,125 @@
+---
+title: "Sort Colors"
+slug: "sort-colors"
+order: 6
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 13
+concepts:
+  - "counting"
+  - "rewrite in order"
+  - "only three values"
+skills:
+  - "Sort three-value arrays by counting each kind"
+  - "Explain why counting works well here"
+prerequisites:
+  - "merge-two-sorted-arrays"
+summary: "Sort an array of only 0s, 1s, and 2s by counting each kind and then rewriting them in order."
+---
+
+<ProblemStatement title="Sort an array containing only 0, 1, and 2">
+  Given an array containing only <code>0</code>, <code>1</code>, and
+  <code>2</code>, sort it in place so all 0s come first, then 1s, then 2s.
+</ProblemStatement>
+
+## Example
+
+```txt
+[2, 0, 2, 1, 1, 0] -> [0, 0, 1, 1, 2, 2]
+```
+
+<Intuition title="Counting is enough because there are only three kinds">
+  This problem is easier than general sorting because the array contains only
+  three possible values. Count how many of each value there are, then write them
+  back in order.
+</Intuition>
+
+<InterviewTip>
+  When the set of possible values is tiny, counting can sometimes be easier than
+  using a more general sorting algorithm.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function sortColors(nums: number[]): void {
+  let zeros = 0;
+  let ones = 0;
+  let twos = 0;
+
+  for (const num of nums) {
+    if (num === 0) {
+      zeros += 1;
+    } else if (num === 1) {
+      ones += 1;
+    } else {
+      twos += 1;
+    }
+  }
+
+  let index = 0;
+
+  for (let count = 0; count < zeros; count += 1) {
+    nums[index] = 0;
+    index += 1;
+  }
+
+  for (let count = 0; count < ones; count += 1) {
+    nums[index] = 1;
+    index += 1;
+  }
+
+  for (let count = 0; count < twos; count += 1) {
+    nums[index] = 2;
+    index += 1;
+  }
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(1)"
+  notes="We make one pass to count and one pass to rewrite."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "[2, 0, 2, 1, 1, 0]",
+      expected: "[0, 0, 1, 1, 2, 2]",
+      why: "Counting tells how many of each color to write back.",
+    },
+    {
+      input: "[2, 0, 1]",
+      expected: "[0, 1, 2]",
+      why: "The same counting idea works on short arrays too.",
+    },
+    {
+      input: "[1, 1, 1]",
+      expected: "[1, 1, 1]",
+      why: "Only one kind means the array already matches the count order.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Forgetting that the array contains only three kinds",
+      fix: "Use that special fact. Count each kind instead of treating it like a general sorting problem.",
+    },
+    {
+      title: "Writing the values back in the wrong order",
+      fix: "Rewrite all 0s first, then 1s, then 2s.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Count, then rebuild">
+  First learn how many 0s, 1s, and 2s there are. Then rewrite the array in that
+  order.
+</HintDrawer>
+
+## Reflection
+
+Why is counting such a good fit for Sort Colors?

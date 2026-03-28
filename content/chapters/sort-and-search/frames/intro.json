@@ -1,0 +1,43 @@
+[
+  {
+    "id": "intro-1",
+    "narration": "Searching means looking for something, while sorting means putting things in order.",
+    "arrayValues": [7, 2, 9, 1, 5],
+    "callout": "A messy list can still be searched one by one.",
+    "highlightIndexes": [0, 1, 2, 3, 4]
+  },
+  {
+    "id": "intro-2",
+    "narration": "Once the same values are sorted, the list becomes easier to compare and understand.",
+    "arrayValues": [1, 2, 5, 7, 9],
+    "decision": "Sorted order gives the data a helpful structure.",
+    "highlightIndexes": [0, 1, 2, 3, 4],
+    "predictionPrompt": {
+      "prompt": "Why can sorting help even before the real problem starts?",
+      "choices": [
+        {
+          "id": "structure",
+          "label": "Because sorted order creates structure",
+          "isCorrect": true,
+          "feedback": "Correct. That structure can make later work clearer and easier."
+        },
+        {
+          "id": "random",
+          "label": "Because it makes the data more random",
+          "isCorrect": false,
+          "feedback": "Not this one. Sorting does the opposite of making data random."
+        }
+      ]
+    }
+  },
+  {
+    "id": "intro-3",
+    "narration": "Some problems only need a direct search, while others become easier after sorting first.",
+    "arrayValues": ["search directly", "sort first", "use order"],
+    "callout": "The trick is choosing the right plan for the job.",
+    "reflectionPrompt": {
+      "prompt": "How would you explain the difference between searching and sorting to another student?",
+      "placeholder": "Searching is..., but sorting is..."
+    }
+  }
+]

@@ -1,0 +1,86 @@
+{
+  "recapPrompt": {
+    "prompt": "Why can sorted order make merging easier?",
+    "choices": [
+      {
+        "id": "fronts",
+        "label": "Because the next smallest value is always at one of the current fronts",
+        "isCorrect": true,
+        "feedback": "Correct. That is why merging sorted arrays can be done in one clean pass."
+      },
+      {
+        "id": "random",
+        "label": "Because sorted data becomes random enough to guess",
+        "isCorrect": false,
+        "feedback": "Not this one. Sorted order helps because it is structured, not random."
+      }
+    ]
+  },
+  "reflectionPrompt": {
+    "prompt": "Explain in your own words why a rotated sorted array is still useful for smart searching.",
+    "placeholder": "It is still useful because..."
+  },
+  "practiceChallenge": {
+    "title": "Mastery check: rebuild the sort-and-search clues",
+    "description": "Complete the helper so it returns the main clue for direct search, insertion sort, and rotated-array search.",
+    "language": "javascript",
+    "starterCode": "export function sortSearchMasteryClue(goal) {\n  const directClue = \"TODO\";\n  const insertionClue = \"TODO\";\n  const rotatedClue = \"TODO\";\n\n  if (goal === \"direct\") {\n    return directClue;\n  }\n\n  if (goal === \"insertion\") {\n    return insertionClue;\n  }\n\n  return rotatedClue;\n}\n",
+    "hints": [
+      "Linear search checks items one by one.",
+      "Insertion sort slides one value into the sorted left side.",
+      "Rotated search finds which half is still sorted."
+    ],
+    "successMessage": "Pass. You rebuilt the main sort-and-search clues from memory.",
+    "retryMessage": "Needs practice. Recheck direct search, insertion sort, and rotated-order search.",
+    "completionBehavior": "mark_complete",
+    "blanks": [
+      {
+        "key": "directClue",
+        "label": "Main clue for direct search",
+        "expectedValues": [
+          "check one by one",
+          "scan directly",
+          "look at each item"
+        ]
+      },
+      {
+        "key": "insertionClue",
+        "label": "Main clue for insertion sort",
+        "expectedValues": [
+          "slide into the sorted left side",
+          "insert one value into place",
+          "sorted left side"
+        ]
+      },
+      {
+        "key": "rotatedClue",
+        "label": "Main clue for rotated-array search",
+        "expectedValues": [
+          "find which half is still sorted",
+          "one side is still sorted",
+          "use the ordered half"
+        ]
+      }
+    ],
+    "visibleTests": [
+      {
+        "label": "Direct-search clue",
+        "scenario": "goal = direct",
+        "blankKey": "directClue",
+        "expected": "check one by one"
+      },
+      {
+        "label": "Insertion-sort clue",
+        "scenario": "goal = insertion",
+        "blankKey": "insertionClue",
+        "expected": "slide into the sorted left side"
+      },
+      {
+        "label": "Rotated-search clue",
+        "scenario": "goal = rotated",
+        "blankKey": "rotatedClue",
+        "expected": "one side is still sorted"
+      }
+    ]
+  }
+}

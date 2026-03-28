@@ -1,0 +1,39 @@
+[
+  {
+    "id": "insertion-1",
+    "narration": "Insertion sort treats the left side as already sorted.",
+    "arrayValues": [5, 3, 4, 1, 2],
+    "callout": "The current value is the new card we want to insert.",
+    "highlightIndexes": [0, 1]
+  },
+  {
+    "id": "insertion-2",
+    "narration": "If the current value is smaller than values on the left, those bigger values slide right.",
+    "arrayValues": [3, 5, 4, 1, 2],
+    "decision": "Now 3 has been inserted into the correct place.",
+    "highlightIndexes": [0, 1],
+    "predictionPrompt": {
+      "prompt": "What stays sorted during insertion sort?",
+      "choices": [
+        {
+          "id": "left-side",
+          "label": "The left side up to the current position",
+          "isCorrect": true,
+          "feedback": "Correct. Each step keeps that left section in order."
+        },
+        {
+          "id": "right-side",
+          "label": "Only the far right side",
+          "isCorrect": false,
+          "feedback": "Not this one. The sorted part grows from the left."
+        }
+      ]
+    }
+  },
+  {
+    "id": "insertion-3",
+    "narration": "Each new value slides into place just like sorting cards in your hand.",
+    "arrayValues": [1, 2, 3, 4, 5],
+    "callout": "That is why insertion sort feels natural to many beginners."
+  }
+]

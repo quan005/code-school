@@ -1,0 +1,121 @@
+---
+title: "Merge Two Sorted Arrays"
+slug: "merge-two-sorted-arrays"
+order: 5
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 13
+concepts:
+  - "two pointers"
+  - "front comparison"
+  - "sorted merge"
+skills:
+  - "Merge two sorted arrays in one pass"
+  - "Explain why only the two current values matter"
+prerequisites:
+  - "insertion-sort"
+summary: "Use two pointers to merge two already-sorted arrays by always taking the smaller front value next."
+---
+
+<ProblemStatement title="Combine two sorted arrays into one sorted array">
+  Given two arrays already sorted in ascending order, merge them into one sorted
+  array.
+</ProblemStatement>
+
+## Example
+
+```txt
+a = [1, 3, 5]
+b = [2, 4, 6]
+answer = [1, 2, 3, 4, 5, 6]
+```
+
+<Intuition title="Sorted order means the next smallest value is right at the front">
+  Because both arrays are already sorted, the next answer must be whichever
+  current front value is smaller.
+</Intuition>
+
+<InterviewTip>
+  This is a great example of how sorting first can make a later task much
+  easier.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function mergeSortedArrays(a: number[], b: number[]): number[] {
+  const result: number[] = [];
+  let left = 0;
+  let right = 0;
+
+  while (left < a.length && right < b.length) {
+    if (a[left] <= b[right]) {
+      result.push(a[left]);
+      left += 1;
+    } else {
+      result.push(b[right]);
+      right += 1;
+    }
+  }
+
+  while (left < a.length) {
+    result.push(a[left]);
+    left += 1;
+  }
+
+  while (right < b.length) {
+    result.push(b[right]);
+    right += 1;
+  }
+
+  return result;
+}
+```
+
+<ComplexityCard
+  time="O(n + m)"
+  space="O(n + m)"
+  notes="Each pointer moves only forward, so the merge is one clean pass."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "a = [1, 3, 5], b = [2, 4, 6]",
+      expected: "[1, 2, 3, 4, 5, 6]",
+      why: "Each step takes the smaller current front value.",
+    },
+    {
+      input: "a = [], b = [1, 2]",
+      expected: "[1, 2]",
+      why: "If one array is empty, the other array is the answer.",
+    },
+    {
+      input: "a = [1, 2, 2], b = [2, 3]",
+      expected: "[1, 2, 2, 2, 3]",
+      why: "Equal values can be merged in order too.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Trying to sort everything again from scratch",
+      fix: "The arrays are already sorted, so use that order to merge in one pass.",
+    },
+    {
+      title: "Forgetting the leftover items after one array ends",
+      fix: "After one pointer finishes, append the remaining items from the other array.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Compare the two fronts">
+  At every step, ask which current pointer value is smaller, then move that
+  pointer.
+</HintDrawer>
+
+## Reflection
+
+Why is looking at only the two current front values enough in a sorted merge?

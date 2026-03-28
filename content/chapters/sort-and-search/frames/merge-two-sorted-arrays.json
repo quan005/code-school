@@ -1,0 +1,39 @@
+[
+  {
+    "id": "merge-1",
+    "narration": "Because both arrays are sorted, the next smallest value must be at one of the two front pointers.",
+    "arrayValues": ["a: 1 3 5", "b: 2 4 6"],
+    "callout": "Sorted order makes the merge easy to reason about.",
+    "highlightIndexes": [0, 1]
+  },
+  {
+    "id": "merge-2",
+    "narration": "Greedy merge compares the two current front values and takes the smaller one next.",
+    "arrayValues": ["take 1", "then 2", "then 3"],
+    "decision": "Only the two front values matter at each step.",
+    "highlightIndexes": [0, 1, 2],
+    "predictionPrompt": {
+      "prompt": "After taking the smaller front value, what should happen?",
+      "choices": [
+        {
+          "id": "move-pointer",
+          "label": "Move that array's pointer forward",
+          "isCorrect": true,
+          "feedback": "Correct. The next smallest remaining value will be at one of the current pointers again."
+        },
+        {
+          "id": "sort-again",
+          "label": "Sort both arrays again",
+          "isCorrect": false,
+          "feedback": "Not this one. The arrays are already sorted."
+        }
+      ]
+    }
+  },
+  {
+    "id": "merge-3",
+    "narration": "When one array ends, the leftover values from the other array can be appended directly.",
+    "arrayValues": ["leftovers go at the end"],
+    "callout": "Their order is already correct."
+  }
+]

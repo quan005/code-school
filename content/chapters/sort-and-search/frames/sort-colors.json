@@ -1,0 +1,39 @@
+[
+  {
+    "id": "colors-1",
+    "narration": "Sort Colors is simpler than general sorting because there are only three possible values.",
+    "arrayValues": [2, 0, 2, 1, 1, 0],
+    "callout": "That small set of possible values makes counting a great strategy.",
+    "highlightIndexes": [0, 1, 2, 3, 4, 5]
+  },
+  {
+    "id": "colors-2",
+    "narration": "After counting the 0s, 1s, and 2s, we rewrite the array in that order.",
+    "arrayValues": [0, 0, 1, 1, 2, 2],
+    "decision": "Count first, then rebuild the array.",
+    "highlightIndexes": [0, 1, 2, 3, 4, 5],
+    "predictionPrompt": {
+      "prompt": "Why is counting such a good fit here?",
+      "choices": [
+        {
+          "id": "three-values",
+          "label": "Because there are only three possible values",
+          "isCorrect": true,
+          "feedback": "Correct. Counting each kind is enough."
+        },
+        {
+          "id": "random-values",
+          "label": "Because the values are random",
+          "isCorrect": false,
+          "feedback": "Not this one. The key fact is that the values come from only three choices."
+        }
+      ]
+    }
+  },
+  {
+    "id": "colors-3",
+    "narration": "The special structure of the data changes what sorting method makes sense.",
+    "arrayValues": ["special values", "special shortcut"],
+    "callout": "That is an important problem-solving habit."
+  }
+]

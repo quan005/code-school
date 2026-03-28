@@ -1,0 +1,48 @@
+---
+title: "Review"
+slug: "review"
+order: 8
+lessonType: "review"
+difficulty: "easy"
+estimatedMinutes: 8
+concepts:
+  - "search"
+  - "sort"
+  - "order helps"
+skills:
+  - "Review the main sort-and-search clues"
+  - "Tell direct search apart from sort-first strategies"
+prerequisites:
+  - "search-in-a-rotated-sorted-array"
+summary: "Review the big sort-and-search ideas, especially direct scanning, building order, and how sorted structure helps later work."
+---
+
+<ProblemStatement title="What should sort-and-search problems make you notice?">
+  This review lesson helps you remember the strongest clues that point to search
+  and sorting thinking.
+</ProblemStatement>
+
+<Intuition title="Sometimes direct search is enough, and sometimes order changes everything">
+  A problem may begin messy, but once the data is sorted, neighbors, merges, and
+  placements can become much easier.
+</Intuition>
+
+<ComplexityCard
+  time="Some tasks are linear scans, while others become easier after creating order first"
+  space="Depends on the chosen algorithm"
+  notes="The big win is noticing when sorted structure can make the next step simpler."
+/>
+
+## Pattern Summary
+
+- Linear Search: check one by one.
+- Selection Sort: place the next smallest value.
+- Insertion Sort: slide one value into the sorted side.
+- Merge Two Sorted Arrays: compare the two current fronts.
+- Sort Colors: count and rewrite because there are only three values.
+- Rotated Search: use the ordered half that still remains.
+
+## Reflection
+
+Which clue feels easiest for you to notice now: search directly, sort first, or
+use existing sorted order?

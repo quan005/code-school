@@ -1,0 +1,109 @@
+---
+title: "Selection Sort"
+slug: "selection-sort"
+order: 3
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 14
+concepts:
+  - "smallest remaining value"
+  - "swap into place"
+  - "sorted left side"
+skills:
+  - "Sort by repeatedly selecting the smallest remaining value"
+  - "Explain how the sorted section grows"
+prerequisites:
+  - "linear-search"
+summary: "Build sorted order one position at a time by repeatedly finding the smallest remaining value and swapping it into place."
+---
+
+<ProblemStatement title="Sort the array with selection sort">
+  Given an array of numbers, sort it in ascending order using selection sort.
+</ProblemStatement>
+
+## Example
+
+```txt
+[5, 3, 4, 1, 2] -> [1, 2, 3, 4, 5]
+```
+
+<Intuition title="Put the next smallest value into the next correct spot">
+  Selection sort looks through the unsorted part, finds the smallest value, and
+  swaps it into the next open sorted position on the left.
+</Intuition>
+
+<InterviewTip>
+  Selection sort is easy to understand because it tells a very clear story: find
+  the next smallest, place it, then repeat.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function selectionSort(nums: number[]): number[] {
+  const arr = [...nums];
+
+  for (let left = 0; left < arr.length; left += 1) {
+    let minIndex = left;
+
+    for (let scan = left + 1; scan < arr.length; scan += 1) {
+      if (arr[scan] < arr[minIndex]) {
+        minIndex = scan;
+      }
+    }
+
+    [arr[left], arr[minIndex]] = [arr[minIndex], arr[left]];
+  }
+
+  return arr;
+}
+```
+
+<ComplexityCard
+  time="O(n^2)"
+  space="O(n) here because we copied the array"
+  notes="Selection sort is simple to learn, but it is not the fastest for large arrays."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "[5, 3, 4, 1, 2]",
+      expected: "[1, 2, 3, 4, 5]",
+      why: "Each step places the smallest remaining value into the next sorted spot.",
+    },
+    {
+      input: "[1]",
+      expected: "[1]",
+      why: "A one-item array is already sorted.",
+    },
+    {
+      input: "[3, 3, 2]",
+      expected: "[2, 3, 3]",
+      why: "The smallest remaining value still gets picked each round.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title:
+        "Scanning the whole array every time instead of only the unsorted part",
+      fix: "The left side is already sorted, so search only from the current left position onward.",
+    },
+    {
+      title: "Forgetting to swap the smallest value into place",
+      fix: "After finding minIndex, move that value into the next sorted spot.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Find the next smallest">
+  At position <code>left</code>, ask: what is the smallest value from here to
+  the end?
+</HintDrawer>
+
+## Reflection
+
+Why does the sorted section of selection sort grow from left to right?
