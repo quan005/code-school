@@ -1,0 +1,23 @@
+{
+  "recapPrompt": {
+    "prompt": "What is one of the clearest signs that a problem is about trees?",
+    "choices": [
+      {
+        "id": "branching",
+        "label": "The data branches into children from a root",
+        "isCorrect": true,
+        "feedback": "Correct. Root, child, subtree, and branching are strong tree clues."
+      },
+      {
+        "id": "window",
+        "label": "The problem tracks one moving section of an array",
+        "isCorrect": false,
+        "feedback": "Not this one. That clue points more toward sliding windows."
+      }
+    ]
+  },
+  "reflectionPrompt": {
+    "prompt": "Explain how DFS and BFS tell two different stories about the same tree.",
+    "placeholder": "They tell different stories because..."
+  }
+}

@@ -1,0 +1,39 @@
+[
+  {
+    "id": "bst-1",
+    "narration": "In a BST, smaller values go left and larger values go right.",
+    "visualizer": "tree",
+    "treeValues": [8, 3, 10, 1, 6, null, 14],
+    "callout": "That order helps us choose one branch at each step.",
+    "highlightIndexes": [0, 1, 2],
+    "pointers": {
+      "current": 0
+    }
+  },
+  {
+    "id": "bst-2",
+    "narration": "To search for 6, we start at 8. Since 6 is smaller, we go left to 3.",
+    "visualizer": "tree",
+    "treeValues": [8, 3, 10, 1, 6, null, 14],
+    "decision": "Smaller target means go left.",
+    "highlightIndexes": [0, 1],
+    "pointers": {
+      "current": 1
+    }
+  },
+  {
+    "id": "bst-3",
+    "narration": "At 3, the target 6 is larger, so we go right and find it.",
+    "visualizer": "tree",
+    "treeValues": [8, 3, 10, 1, 6, null, 14],
+    "callout": "BST order lets us skip one whole side each time.",
+    "highlightIndexes": [1, 4],
+    "pointers": {
+      "current": 4
+    },
+    "reflectionPrompt": {
+      "prompt": "Why does the BST rule save work compared with searching a normal binary tree?",
+      "placeholder": "It saves work because..."
+    }
+  }
+]

@@ -3,6 +3,7 @@
 import { StepPlayer } from "@/components/learning/step-player";
 import { ArrayVisualizer } from "@/components/visualizers/array-visualizer";
 import { LinkedListVisualizer } from "@/components/visualizers/linked-list-visualizer";
+import { TreeVisualizer } from "@/components/visualizers/tree-visualizer";
 import type { LessonFrame } from "@/lib/content/frames";
 
 type FrameStepPlayerProps = {
@@ -24,6 +25,16 @@ export function FrameStepPlayer({
               highlightIndexes={frame.highlightIndexes}
               pointers={frame.pointers}
               values={frame.arrayValues}
+            />
+          );
+        }
+
+        if (frame.visualizer === "tree") {
+          return (
+            <TreeVisualizer
+              highlightIndexes={frame.highlightIndexes}
+              pointers={frame.pointers}
+              values={frame.treeValues}
             />
           );
         }

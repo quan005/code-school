@@ -435,6 +435,63 @@ select {
   gap: var(--space-3);
 }
 
+.tree-visualizer {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.tree-level {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: repeat(auto-fit, minmax(4.5rem, 1fr));
+}
+
+.tree-node-slot {
+  align-items: center;
+  display: grid;
+  gap: 0.3rem;
+  justify-items: center;
+}
+
+.tree-node {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  box-shadow: var(--shadow-soft);
+  display: grid;
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+.tree-node-empty {
+  background: rgba(255, 255, 255, 0.35);
+  border-style: dashed;
+  box-shadow: none;
+  opacity: 0.45;
+}
+
+.tree-node-highlight {
+  background: rgba(255, 122, 89, 0.12);
+  border-color: rgba(255, 122, 89, 0.35);
+}
+
+.tree-node-pointer {
+  color: var(--color-brand-strong);
+  font-size: 0.72rem;
+  font-weight: 700;
+  min-height: 1rem;
+}
+
+.tree-node-pointer-empty {
+  visibility: hidden;
+}
+
+.tree-node-index {
+  color: var(--color-ink-soft);
+  font-size: 0.72rem;
+}
+
 .pointer-grid,
 .array-grid {
   display: grid;

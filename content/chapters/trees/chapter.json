@@ -1,0 +1,7 @@
+{
+  "slug": "trees",
+  "title": "Trees",
+  "order": 11,
+  "track": "Code Patterns",
+  "summary": "Learn how branching node structures work so you can traverse trees, compare them, measure them, and search inside binary search trees."
+}

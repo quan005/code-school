@@ -1,0 +1,126 @@
+---
+title: "Binary Tree Level Order Traversal"
+slug: "binary-tree-level-order-traversal"
+order: 6
+lessonType: "problem"
+difficulty: "medium"
+estimatedMinutes: 14
+concepts:
+  - "level order"
+  - "queue"
+  - "one row at a time"
+skills:
+  - "Use BFS with a queue"
+  - "Separate nodes by level using the queue size"
+prerequisites:
+  - "traverse-a-tree-dfs-and-bfs"
+summary: "Visit a tree one row at a time by using BFS and the queue size for each level."
+---
+
+<ProblemStatement title="Collect the tree row by row">
+  Given the root of a binary tree, return the values level by level.
+</ProblemStatement>
+
+## Example
+
+```txt
+        3
+       / \
+      9   20
+         /  \
+        15   7
+
+answer = [[3], [9, 20], [15, 7]]
+```
+
+<Intuition title="The queue already knows the current row">
+  In BFS, the queue holds nodes in the order they were discovered. At the start
+  of a level, the queue length tells us how many nodes belong to that row.
+</Intuition>
+
+<InterviewTip>
+  Level-order traversal is one of the clearest queue problems in tree work.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function levelOrder(root: TreeNode | null): number[][] {
+  if (root === null) {
+    return [];
+  }
+
+  const result: number[][] = [];
+  const queue: TreeNode[] = [root];
+
+  while (queue.length > 0) {
+    const levelSize = queue.length;
+    const level: number[] = [];
+
+    for (let i = 0; i < levelSize; i++) {
+      const node = queue.shift()!;
+      level.push(node.val);
+
+      if (node.left !== null) {
+        queue.push(node.left);
+      }
+
+      if (node.right !== null) {
+        queue.push(node.right);
+      }
+    }
+
+    result.push(level);
+  }
+
+  return result;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(n)"
+  notes="Each node enters and leaves the queue once."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "the sample tree",
+      expected: "[[3], [9, 20], [15, 7]]",
+      why: "Each row is collected before the next row starts.",
+    },
+    {
+      input: "one-node tree",
+      expected: "[[1]]",
+      why: "The root is the only row.",
+    },
+    {
+      input: "null tree",
+      expected: "[]",
+      why: "No nodes means no rows.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Forgetting to use the queue size for the current level",
+      fix: "Read the queue size before the loop for that row starts.",
+    },
+    {
+      title: "Mixing nodes from two different levels together",
+      fix: "Process exactly levelSize nodes before starting the next row.",
+    },
+  ]}
+/>
+
+<HintDrawer title="One row at a time">
+  The queue length at the start of the row tells you how many nodes belong to
+  that level.
+</HintDrawer>
+
+## Reflection
+
+Why does the queue size at the start of a level describe one whole row?

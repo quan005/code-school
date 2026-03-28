@@ -1,0 +1,37 @@
+[
+  {
+    "id": "level-1",
+    "narration": "Level order uses BFS, so the root is the whole first row by itself.",
+    "visualizer": "tree",
+    "treeValues": [3, 9, 20, null, null, 15, 7],
+    "callout": "The first queue row is just [3].",
+    "highlightIndexes": [0],
+    "pointers": {
+      "current": 0
+    }
+  },
+  {
+    "id": "level-2",
+    "narration": "The next queue row becomes [9, 20], which is the second tree level.",
+    "visualizer": "tree",
+    "treeValues": [3, 9, 20, null, null, 15, 7],
+    "decision": "Queue size tells how many nodes belong to the current level.",
+    "highlightIndexes": [1, 2],
+    "pointers": {
+      "left": 1,
+      "right": 2
+    }
+  },
+  {
+    "id": "level-3",
+    "narration": "Then [15, 7] becomes the third level. BFS keeps rows separate by processing one queue-length chunk at a time.",
+    "visualizer": "tree",
+    "treeValues": [3, 9, 20, null, null, 15, 7],
+    "callout": "That is how we get [[3], [9, 20], [15, 7]].",
+    "highlightIndexes": [5, 6],
+    "pointers": {
+      "left": 5,
+      "right": 6
+    }
+  }
+]

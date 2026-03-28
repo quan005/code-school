@@ -1,0 +1,53 @@
+[
+  {
+    "id": "traverse-1",
+    "narration": "DFS can use preorder to go node, then left branch, then right branch.",
+    "visualizer": "tree",
+    "treeValues": [8, 3, 10, 1, 6, null, 14],
+    "callout": "A preorder DFS starts at the root and goes down one side.",
+    "highlightIndexes": [0, 1, 3],
+    "pointers": {
+      "current": 3
+    }
+  },
+  {
+    "id": "traverse-2",
+    "narration": "BFS visits level by level, so it sees 8 first, then 3 and 10, then 1, 6, and 14.",
+    "visualizer": "tree",
+    "treeValues": [8, 3, 10, 1, 6, null, 14],
+    "decision": "BFS looks across a whole row before going lower.",
+    "highlightIndexes": [0, 1, 2],
+    "pointers": {
+      "left": 1,
+      "right": 2
+    },
+    "predictionPrompt": {
+      "prompt": "Which strategy uses a queue to stay level by level?",
+      "choices": [
+        {
+          "id": "bfs",
+          "label": "BFS",
+          "isCorrect": true,
+          "feedback": "Correct. BFS uses a queue to keep level order."
+        },
+        {
+          "id": "dfs",
+          "label": "DFS",
+          "isCorrect": false,
+          "feedback": "Not this one. DFS usually goes deep with recursion."
+        }
+      ]
+    }
+  },
+  {
+    "id": "traverse-3",
+    "narration": "Both traversals visit every node, but they tell the story of the tree in different orders.",
+    "visualizer": "tree",
+    "treeValues": [8, 3, 10, 1, 6, null, 14],
+    "callout": "Different visit order can be useful for different jobs.",
+    "highlightIndexes": [0, 1, 2, 3, 4, 6],
+    "pointers": {
+      "current": 6
+    }
+  }
+]

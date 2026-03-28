@@ -1,0 +1,111 @@
+---
+title: "Same Tree"
+slug: "same-tree"
+order: 4
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 12
+concepts:
+  - "same shape"
+  - "matching values"
+  - "compare matching positions"
+skills:
+  - "Compare two trees node by node"
+  - "Check both shape and values"
+prerequisites:
+  - "traverse-a-tree-dfs-and-bfs"
+summary: "Compare two trees by checking matching positions at the same time."
+---
+
+<ProblemStatement title="Do these two trees really match?">
+  Given two binary trees, return <code>true</code> if they are the same. They
+  are the same only if they have the same shape and the same values in matching
+  places.
+</ProblemStatement>
+
+## Example
+
+```txt
+    1         1
+   / \       / \
+  2   3     2   3
+```
+
+<Intuition title="Compare matching nodes together">
+  We compare both trees at the same time. If one side has a node and the other
+  side does not, they are different. If both have nodes but the values do not
+  match, they are different too.
+</Intuition>
+
+<InterviewTip>
+  Same-tree problems are often really “compare left with left and right with
+  right” recursion problems.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function isSameTree(p: TreeNode | null, q: TreeNode | null): boolean {
+  if (p === null && q === null) {
+    return true;
+  }
+
+  if (p === null || q === null) {
+    return false;
+  }
+
+  if (p.val !== q.val) {
+    return false;
+  }
+
+  return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(h)"
+  notes="Each matching position is checked once, and recursion follows the tree height."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "two identical 1-2-3 trees",
+      expected: "true",
+      why: "The shapes and values match everywhere.",
+    },
+    {
+      input: "one tree has a left child where the other has a right child",
+      expected: "false",
+      why: "The shape is different.",
+    },
+    {
+      input: "two null trees",
+      expected: "true",
+      why: "Two empty trees match.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Checking only the values",
+      fix: "The shapes must match too, not just the numbers.",
+    },
+    {
+      title: "Comparing left to right by accident",
+      fix: "Always compare matching positions: left with left and right with right.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Three checks matter">
+  Current nodes must match, left subtrees must match, and right subtrees must
+  match.
+</HintDrawer>
+
+## Reflection
+
+Why are matching values not enough if the shapes are different?

@@ -1,0 +1,36 @@
+[
+  {
+    "id": "depth-1",
+    "narration": "The tree depth depends on the longest path from the root down to a leaf.",
+    "visualizer": "tree",
+    "treeValues": [3, 9, 20, null, null, 15, 7],
+    "callout": "We care about the deepest branch, not the total number of nodes.",
+    "highlightIndexes": [0, 2, 5],
+    "pointers": {
+      "current": 5
+    }
+  },
+  {
+    "id": "depth-2",
+    "narration": "At node 3, the left depth is 1 and the right depth is 2, so we keep the bigger one.",
+    "visualizer": "tree",
+    "treeValues": [3, 9, 20, null, null, 15, 7],
+    "decision": "Depth = 1 + max(leftDepth, rightDepth).",
+    "highlightIndexes": [0, 1, 2, 5, 6],
+    "pointers": {
+      "left": 1,
+      "right": 2
+    }
+  },
+  {
+    "id": "depth-3",
+    "narration": "The answer is 3 because the longest path has three nodes.",
+    "visualizer": "tree",
+    "treeValues": [3, 9, 20, null, null, 15, 7],
+    "callout": "Longer branch wins when measuring depth.",
+    "highlightIndexes": [0, 2, 5],
+    "pointers": {
+      "current": 0
+    }
+  }
+]

@@ -1,0 +1,57 @@
+[
+  {
+    "id": "intro-1",
+    "narration": "A tree starts with a root and branches into children below it.",
+    "visualizer": "tree",
+    "treeValues": [8, 3, 10, 1, 6, null, 14],
+    "callout": "Here, 8 is the root.",
+    "highlightIndexes": [0],
+    "pointers": {
+      "current": 0
+    }
+  },
+  {
+    "id": "intro-2",
+    "narration": "Nodes 3 and 10 are children of 8, and 1, 6, and 14 are leaves because they have no children.",
+    "visualizer": "tree",
+    "treeValues": [8, 3, 10, 1, 6, null, 14],
+    "decision": "Leaves are ending nodes with no children.",
+    "highlightIndexes": [1, 2, 3, 4, 6],
+    "pointers": {
+      "left": 1,
+      "right": 2
+    },
+    "predictionPrompt": {
+      "prompt": "Which node is a leaf in this tree?",
+      "choices": [
+        {
+          "id": "one",
+          "label": "1",
+          "isCorrect": true,
+          "feedback": "Correct. Node 1 has no children."
+        },
+        {
+          "id": "three",
+          "label": "3",
+          "isCorrect": false,
+          "feedback": "Not this one. Node 3 has children below it."
+        }
+      ]
+    }
+  },
+  {
+    "id": "intro-3",
+    "narration": "DFS goes down one branch first, while BFS looks across one row before going lower.",
+    "visualizer": "tree",
+    "treeValues": [8, 3, 10, 1, 6, null, 14],
+    "callout": "Different traversals visit the same tree in different orders.",
+    "highlightIndexes": [0, 1, 3],
+    "pointers": {
+      "current": 3
+    },
+    "reflectionPrompt": {
+      "prompt": "Why does a tree feel different from a linked list?",
+      "placeholder": "It feels different because..."
+    }
+  }
+]

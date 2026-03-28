@@ -1,0 +1,78 @@
+{
+  "recapPrompt": {
+    "prompt": "Which data structure helps BFS stay level by level?",
+    "choices": [
+      {
+        "id": "queue",
+        "label": "A queue",
+        "isCorrect": true,
+        "feedback": "Correct. A queue keeps nodes in discovered order, which matches level order."
+      },
+      {
+        "id": "stack",
+        "label": "A stack",
+        "isCorrect": false,
+        "feedback": "Not this one. A stack pushes toward last-in-first-out behavior instead."
+      }
+    ]
+  },
+  "reflectionPrompt": {
+    "prompt": "Explain in your own words why a queue is useful for level-order traversal.",
+    "placeholder": "A queue is useful because..."
+  },
+  "practiceChallenge": {
+    "title": "Mastery check: rebuild the tree clues",
+    "description": "Complete the helper so it returns the main clue for each kind of tree job.",
+    "language": "javascript",
+    "starterCode": "export function treeClue(goal) {\n  const rootClue = \"TODO\";\n  const bfsClue = \"TODO\";\n  const bstClue = \"TODO\";\n\n  if (goal === \"root\") {\n    return rootClue;\n  }\n\n  if (goal === \"bfs\") {\n    return bfsClue;\n  }\n\n  return bstClue;\n}\n",
+    "hints": [
+      "The root is the top starting node.",
+      "BFS goes level by level with a queue.",
+      "BST search uses smaller-left and larger-right."
+    ],
+    "successMessage": "Pass. You rebuilt the main tree clues from memory.",
+    "retryMessage": "Needs practice. Recheck the root idea, the BFS clue, and the BST search rule.",
+    "completionBehavior": "mark_complete",
+    "blanks": [
+      {
+        "key": "rootClue",
+        "label": "Main clue for the root",
+        "expectedValues": ["top starting node", "top node", "tree start"]
+      },
+      {
+        "key": "bfsClue",
+        "label": "Main clue for BFS",
+        "expectedValues": ["level by level", "queue", "row by row"]
+      },
+      {
+        "key": "bstClue",
+        "label": "Main clue for BST search",
+        "expectedValues": [
+          "smaller left larger right",
+          "use BST order",
+          "go left or right by value"
+        ]
+      }
+    ],
+    "visibleTests": [
+      {
+        "label": "Root clue",
+        "scenario": "goal = root",
+        "blankKey": "rootClue",
+        "expected": "top starting node"
+      },
+      {
+        "label": "BFS clue",
+        "scenario": "goal = bfs",
+        "blankKey": "bfsClue",
+        "expected": "level by level"
+      },
+      {
+        "label": "BST clue",
+        "scenario": "goal = bst",
+        "blankKey": "bstClue",
+        "expected": "smaller left larger right"
+      }
+    ]
+  }
+}

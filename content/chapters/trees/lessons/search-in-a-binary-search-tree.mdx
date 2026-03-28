@@ -1,0 +1,114 @@
+---
+title: "Search in a Binary Search Tree"
+slug: "search-in-a-binary-search-tree"
+order: 7
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 12
+concepts:
+  - "BST rule"
+  - "smaller go left"
+  - "larger go right"
+skills:
+  - "Use BST order to choose one branch"
+  - "Search without exploring both sides"
+prerequisites:
+  - "traverse-a-tree-dfs-and-bfs"
+summary: "Use the BST rule to search left or right instead of checking the whole tree."
+---
+
+<ProblemStatement title="Search smarter using BST order">
+  Given the root of a binary search tree and a value <code>val</code>, return
+  the node where <code>val</code> is found. If it does not exist, return{" "}
+  <code>null</code>.
+</ProblemStatement>
+
+## Example
+
+```txt
+        8
+       / \
+      3   10
+     / \    \
+    1   6    14
+
+search for 6
+```
+
+<Intuition title="The tree order tells us which side can still work">
+  In a BST, smaller values go left and larger values go right. That means each
+  node tells us which one branch still makes sense.
+</Intuition>
+
+<InterviewTip>
+  BST search is like binary-search thinking inside a tree: order helps us skip
+  work.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function searchBST(root: TreeNode | null, val: number): TreeNode | null {
+  let current = root;
+
+  while (current !== null) {
+    if (current.val === val) {
+      return current;
+    } else if (val < current.val) {
+      current = current.left;
+    } else {
+      current = current.right;
+    }
+  }
+
+  return null;
+}
+```
+
+<ComplexityCard
+  time="O(h)"
+  space="O(1)"
+  notes="The search follows just one path from the root down through the tree."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "searchBST(sampleBST, 6)",
+      expected: "node with value 6",
+      why: "6 is smaller than 8, then larger than 3, so it appears on that path.",
+    },
+    {
+      input: "searchBST(sampleBST, 14)",
+      expected: "node with value 14",
+      why: "The BST rule guides the search rightward.",
+    },
+    {
+      input: "searchBST(sampleBST, 100)",
+      expected: "null",
+      why: "The path runs out without finding the value.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Searching both sides like a normal binary tree",
+      fix: "A BST gives order, so only one side can still hold the answer.",
+    },
+    {
+      title: "Mixing up the BST rule",
+      fix: "Smaller targets go left. Larger targets go right.",
+    },
+  ]}
+/>
+
+<HintDrawer title="One branch stays possible">
+  At each step, ask whether the target is smaller, equal, or larger than the
+  current value.
+</HintDrawer>
+
+## Reflection
+
+Why does the BST rule let us skip one whole side at each step?

@@ -1,0 +1,57 @@
+{
+  "practiceChallenge": {
+    "title": "Fill in the tree-traversal clues",
+    "description": "Complete the helper so it returns the right idea for DFS, BFS, and BST-style order clues.",
+    "language": "javascript",
+    "starterCode": "export function treeTraversalClue(job) {\n  const dfsClue = \"TODO\";\n  const bfsClue = \"TODO\";\n  const bstClue = \"TODO\";\n\n  if (job === \"dfs\") {\n    return dfsClue;\n  }\n\n  if (job === \"bfs\") {\n    return bfsClue;\n  }\n\n  return bstClue;\n}\n",
+    "hints": [
+      "DFS goes down one path first.",
+      "BFS looks across a whole level first.",
+      "BST order uses smaller-left and larger-right."
+    ],
+    "successMessage": "Nice work. You rebuilt the main tree-traversal clues.",
+    "retryMessage": "Not yet. Recheck how DFS, BFS, and BST order differ.",
+    "completionBehavior": "mark_complete",
+    "blanks": [
+      {
+        "key": "dfsClue",
+        "label": "Main clue for DFS",
+        "expectedValues": ["go deep first", "one path first", "deep first"]
+      },
+      {
+        "key": "bfsClue",
+        "label": "Main clue for BFS",
+        "expectedValues": ["level by level", "row by row", "across one level"]
+      },
+      {
+        "key": "bstClue",
+        "label": "Main clue for BST search order",
+        "expectedValues": [
+          "smaller left larger right",
+          "left smaller right larger",
+          "use BST order"
+        ]
+      }
+    ],
+    "visibleTests": [
+      {
+        "label": "DFS clue",
+        "scenario": "job = dfs",
+        "blankKey": "dfsClue",
+        "expected": "go deep first"
+      },
+      {
+        "label": "BFS clue",
+        "scenario": "job = bfs",
+        "blankKey": "bfsClue",
+        "expected": "level by level"
+      },
+      {
+        "label": "BST clue",
+        "scenario": "job = bst",
+        "blankKey": "bstClue",
+        "expected": "smaller left larger right"
+      }
+    ]
+  }
+}

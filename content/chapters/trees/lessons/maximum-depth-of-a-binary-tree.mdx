@@ -1,0 +1,107 @@
+---
+title: "Maximum Depth of a Binary Tree"
+slug: "maximum-depth-of-a-binary-tree"
+order: 3
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 12
+concepts:
+  - "depth"
+  - "deepest branch"
+  - "combine left and right answers"
+skills:
+  - "Use recursion to measure tree depth"
+  - "Take the bigger child depth and add one"
+prerequisites:
+  - "traverse-a-tree-dfs-and-bfs"
+summary: "Measure tree height by asking each node for the deeper of its two child branches."
+---
+
+<ProblemStatement title="How tall is the tree?">
+  Given the root of a binary tree, return its maximum depth. The maximum depth
+  is the number of nodes along the longest path from the root down to a leaf.
+</ProblemStatement>
+
+## Example
+
+```txt
+        3
+       / \
+      9   20
+         /  \
+        15   7
+
+answer = 3
+```
+
+<Intuition title="Each node asks its children how deep they are">
+  At each node, we look at the left subtree depth and right subtree depth, keep
+  the bigger one, and add one for the current node.
+</Intuition>
+
+<InterviewTip>
+  Many tree-recursion problems follow the same shape: solve left, solve right,
+  then combine the two answers.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function maxDepth(root: TreeNode | null): number {
+  if (root === null) {
+    return 0;
+  }
+
+  const leftDepth = maxDepth(root.left);
+  const rightDepth = maxDepth(root.right);
+
+  return 1 + Math.max(leftDepth, rightDepth);
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(h)"
+  notes="Each node is visited once, and recursion uses space based on tree height."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "null tree",
+      expected: "0",
+      why: "An empty tree has depth 0.",
+    },
+    {
+      input: "one-node tree",
+      expected: "1",
+      why: "The root counts as one node on the path.",
+    },
+    {
+      input: "the sample tree",
+      expected: "3",
+      why: "The longest path has three nodes.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Adding left depth and right depth together",
+      fix: "Depth uses the longer path, so take the bigger one, not the total of both.",
+    },
+    {
+      title: "Returning 1 for a null node",
+      fix: "A missing node adds no depth, so return 0 for null.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Longer branch wins">
+  Depth is about the longest path from the current node down to a leaf.
+</HintDrawer>
+
+## Reflection
+
+Why do we use the bigger child depth instead of adding both child depths?

@@ -1,0 +1,137 @@
+---
+title: "Traverse a Tree (DFS and BFS)"
+slug: "traverse-a-tree-dfs-and-bfs"
+order: 2
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 15
+concepts:
+  - "DFS"
+  - "BFS"
+  - "preorder"
+  - "queue"
+skills:
+  - "Traverse a tree with DFS"
+  - "Traverse a tree with BFS"
+  - "Explain how deep-first and level-order differ"
+prerequisites: []
+summary: "Visit the same tree in different orders by using depth-first search and breadth-first search."
+---
+
+<ProblemStatement title="Visit every node in a chosen order">
+  Given the root of a binary tree, collect node values using depth-first search
+  and breadth-first search.
+</ProblemStatement>
+
+## Example Tree
+
+```txt
+        8
+       / \
+      3   10
+     / \    \
+    1   6    14
+```
+
+<Intuition title="The same tree can be walked in different ways">
+  DFS keeps going down one branch first. BFS visits one whole level before going
+  lower. Both are useful, but they tell the story of the tree in different
+  orders.
+</Intuition>
+
+<InterviewTip>
+  DFS is often a recursion clue. BFS is often a queue clue.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function preorder(root: TreeNode | null): number[] {
+  const result: number[] = [];
+
+  function dfs(node: TreeNode | null): void {
+    if (node === null) {
+      return;
+    }
+
+    result.push(node.val);
+    dfs(node.left);
+    dfs(node.right);
+  }
+
+  dfs(root);
+  return result;
+}
+
+function bfs(root: TreeNode | null): number[] {
+  if (root === null) {
+    return [];
+  }
+
+  const result: number[] = [];
+  const queue: TreeNode[] = [root];
+
+  while (queue.length > 0) {
+    const node = queue.shift()!;
+    result.push(node.val);
+
+    if (node.left !== null) {
+      queue.push(node.left);
+    }
+
+    if (node.right !== null) {
+      queue.push(node.right);
+    }
+  }
+
+  return result;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(n)"
+  notes="Both traversals visit each node once. DFS uses recursion depth, and BFS uses a queue."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "preorder on the sample tree",
+      expected: "[8, 3, 1, 6, 10, 14]",
+      why: "Preorder visits node, then left branch, then right branch.",
+    },
+    {
+      input: "bfs on the sample tree",
+      expected: "[8, 3, 10, 1, 6, 14]",
+      why: "BFS visits the tree row by row.",
+    },
+    {
+      input: "null tree",
+      expected: "[]",
+      why: "No nodes means nothing to visit.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Thinking DFS and BFS must give the same order",
+      fix: "They visit the same nodes, but not in the same sequence.",
+    },
+    {
+      title: "Using a queue for DFS or recursion for BFS by accident",
+      fix: "DFS usually goes deep with recursion, while BFS usually uses a queue to stay level by level.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Deep first or row first">
+  Ask yourself whether the problem wants one path explored first or one whole
+  level explored first.
+</HintDrawer>
+
+## Reflection
+
+Why can two correct traversals produce different visit orders?

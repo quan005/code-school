@@ -1,0 +1,37 @@
+[
+  {
+    "id": "same-1",
+    "narration": "To compare two trees, we compare matching positions at the same time.",
+    "visualizer": "tree",
+    "treeValues": [1, 2, 3],
+    "callout": "The root positions match first.",
+    "highlightIndexes": [0, 1, 2],
+    "pointers": {
+      "left": 1,
+      "right": 2
+    }
+  },
+  {
+    "id": "same-2",
+    "narration": "If both nodes are missing, that part matches. If one side has a node and the other does not, the trees differ.",
+    "visualizer": "tree",
+    "treeValues": [1, 2, null],
+    "decision": "Shape matters just as much as values.",
+    "highlightIndexes": [1, 2],
+    "pointers": {
+      "left": 1,
+      "right": 2
+    }
+  },
+  {
+    "id": "same-3",
+    "narration": "Two trees are the same only if matching nodes agree in both value and position all the way down.",
+    "visualizer": "tree",
+    "treeValues": [1, 2, 3],
+    "callout": "Same shape plus same values = same tree.",
+    "highlightIndexes": [0, 1, 2],
+    "pointers": {
+      "current": 0
+    }
+  }
+]

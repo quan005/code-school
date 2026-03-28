@@ -1,0 +1,82 @@
+---
+title: "Introduction"
+slug: "intro"
+order: 1
+lessonType: "intro"
+difficulty: "easy"
+estimatedMinutes: 10
+concepts:
+  - "node"
+  - "root"
+  - "child"
+  - "leaf"
+skills:
+  - "Explain what a node is"
+  - "Name the root, children, and leaves of a tree"
+  - "Tell the difference between DFS and BFS"
+prerequisites: []
+summary: "Meet trees, learn the main tree words, and see how branching structures differ from one straight line."
+---
+
+<ProblemStatement title="A tree branches out from one starting point">
+  A tree is a group of connected nodes that branches out from a top starting
+  point called the root.
+</ProblemStatement>
+
+<Intuition title="Think about a family tree or folders on a computer">
+  One top folder can contain smaller folders, and those can contain even more.
+  That branching shape is tree thinking.
+</Intuition>
+
+<InterviewTip>
+  In this chapter, a <code>node</code> is just one little item in the tree, like
+  one circle or box. Tree clues often use words like root, child, leaf, subtree,
+  left, and right.
+</InterviewTip>
+
+<ComplexityCard
+  time="Tree walks often visit each node once"
+  space="Depends on recursion or queue storage"
+  notes="The big idea is not one formula. It is learning how branching structures behave and how to move through them."
+/>
+
+## Helpful tree words
+
+- <strong>root</strong>: the top starting node
+- <strong>parent</strong>: a node above another node
+- <strong>child</strong>: a node below another node
+- <strong>leaf</strong>: a node with no children
+
+## Two big ways to move through a tree
+
+- <strong>DFS</strong>: go deep down one path first.
+- <strong>BFS</strong>: go level by level.
+
+<PredictionPrompt
+  prompt={{
+    prompt:
+      "If you want to visit one whole row of a tree before going lower, which strategy fits best?",
+    choices: [
+      {
+        id: "bfs",
+        label: "Breadth-first search (BFS)",
+        isCorrect: true,
+        feedback: "Correct. BFS looks across a level before going down.",
+      },
+      {
+        id: "dfs",
+        label: "Depth-first search (DFS)",
+        isCorrect: false,
+        feedback: "Not this one. DFS goes down one path first.",
+      },
+    ],
+  }}
+/>
+
+## Lesson Summary
+
+- A tree branches from a root.
+- A node is one item in the tree.
+- Leaves have no children.
+- DFS goes deep first.
+- BFS goes level by level.

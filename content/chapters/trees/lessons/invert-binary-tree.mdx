@@ -1,0 +1,120 @@
+---
+title: "Invert Binary Tree"
+slug: "invert-binary-tree"
+order: 5
+lessonType: "problem"
+difficulty: "easy"
+estimatedMinutes: 12
+concepts:
+  - "swap branches"
+  - "left and right"
+  - "same action at every node"
+skills:
+  - "Swap left and right children at each node"
+  - "Use recursion to apply the same change everywhere"
+prerequisites:
+  - "traverse-a-tree-dfs-and-bfs"
+summary: "Invert a tree by swapping the left and right children at every node."
+---
+
+<ProblemStatement title="Flip the tree like a mirror">
+  Given the root of a binary tree, invert the tree and return its root. To
+  invert means swap the left and right children of every node.
+</ProblemStatement>
+
+## Example
+
+```txt
+        4
+       / \
+      2   7
+     / \ / \
+    1  3 6  9
+```
+
+becomes
+
+```txt
+        4
+       / \
+      7   2
+     / \ / \
+    9  6 3  1
+```
+
+<Intuition title="Do one local swap, then repeat in the subtrees">
+  At every node, the local job is simple: swap left and right. Then do the same
+  thing to the smaller trees below it.
+</Intuition>
+
+<InterviewTip>
+  When the same small action should happen at every node, recursion is often a
+  natural fit.
+</InterviewTip>
+
+## TypeScript Solution
+
+```ts
+function invertTree(root: TreeNode | null): TreeNode | null {
+  if (root === null) {
+    return null;
+  }
+
+  const temp = root.left;
+  root.left = root.right;
+  root.right = temp;
+
+  invertTree(root.left);
+  invertTree(root.right);
+
+  return root;
+}
+```
+
+<ComplexityCard
+  time="O(n)"
+  space="O(h)"
+  notes="Every node is visited once, and each one performs one simple swap."
+/>
+
+<TestCaseTable
+  rows={[
+    {
+      input: "the sample tree",
+      expected: "left and right branches swapped everywhere",
+      why: "Every node mirrors its children.",
+    },
+    {
+      input: "one-node tree",
+      expected: "same one-node tree",
+      why: "A node with no children has nothing to swap.",
+    },
+    {
+      input: "null tree",
+      expected: "null",
+      why: "There is nothing to invert.",
+    },
+  ]}
+/>
+
+<CommonMistakesCard
+  mistakes={[
+    {
+      title: "Swapping only at the root",
+      fix: "The swap must happen at every node, not just the top.",
+    },
+    {
+      title: "Forgetting to recurse after swapping",
+      fix: "After the local swap, invert both subtrees too.",
+    },
+  ]}
+/>
+
+<HintDrawer title="Mirror each node">
+  Think of each node as making a tiny mirror copy by swapping its left and right
+  children.
+</HintDrawer>
+
+## Reflection
+
+Why does doing one simple swap at every node invert the whole tree?
