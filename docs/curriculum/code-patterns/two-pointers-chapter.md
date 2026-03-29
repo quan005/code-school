@@ -55,7 +55,75 @@ By the end of this chapter, you will be able to:
 
 ---
 
-# Lesson 1: Introduction to Two Pointers
+# Introduction to Two Pointers
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that two pointers means watching two places at the same time and moving
+with a reason.
+
+### Habitat
+
+`Mirror Meadow`
+
+### Primary Mascot
+
+`Tango the Turtle`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Mirror Meadow
+- Lesson title: Two Pointers
+- Progress chip: 1/7
+
+Scene:
+- A row of stepping stones
+- One turtle marker on the left
+- One turtle marker on the right
+- A bright center path showing where the markers might meet
+
+Support strip:
+- "A pointer is a finger that points to one spot."
+- "Two pointers help us compare two spots at once."
+
+Action zone:
+- Tap the left marker
+- Tap the right marker
+- Then choose which one should move next
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+- Background: pale meadow with a soft sky band at the top
+- Markers: rounded turtle tokens with one blue scarf and one orange scarf
+- Active stone: warm orange glow
+- Helpful clue text: short bubbles near the active marker
+
+### Interaction Flow
+
+1. Tango says, "Let’s watch two spots at the same time."
+2. The left and right markers appear on the ends of the row.
+3. The child taps each marker to see which value it is watching.
+4. A tiny challenge asks which marker should move when the total is too small.
+5. The words `pointer`, `left`, and `right` appear after the child sees the move.
+
+### Component Usage
+
+- Scene Card
+- Mascot speech bubble
+- Progress chip
+- Hint card
+- Primary CTA button
 
 ## What Is a Pointer?
 
@@ -323,6 +391,73 @@ If the target sum is `13`, should you move `left` or `right`?
 ---
 
 # Lesson 2: Pair Sum - Sorted
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that sorted order lets us move the left or right pointer with a reason.
+
+### Habitat
+
+`Bridge Berry Row`
+
+### Primary Mascot
+
+`Tango the Turtle`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Bridge Berry Row
+- Lesson title: Pair Sum - Sorted
+- Progress chip: 2/7
+
+Scene:
+- Five berry stones in sorted order
+- One left marker and one right marker
+- A target sign showing the goal sum
+- The active pair lights up when selected
+
+Support strip:
+- "If the sum is too small, move left."
+- "If the sum is too big, move right."
+
+Action zone:
+- Tap "Move left"
+- Tap "Move right"
+- Then check whether the pair matches the target
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+- Background: cream bridge path over calm blue water
+- Berry stones: rounded circles with clear number labels
+- Target sign: chunky orange badge
+- Correct answer state: green ring around the winning pair
+
+### Interaction Flow
+
+1. Tango says, "The list is sorted, so each move teaches us something."
+2. The child sees the left and right values add together.
+3. The child chooses which pointer should move.
+4. The wrong move shows a gentle note instead of a harsh error.
+5. The winning pair glows green and the indexes pop into view.
+
+### Component Usage
+
+- Scene Card
+- Pointer chips
+- Target badge
+- Hint card
+- Success badge
 
 ## Problem
 
@@ -592,6 +727,74 @@ When a problem gives you sorted data, stop and ask:
 
 # Lesson 3: Triplet Sum
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that we can fix one number first, then use two pointers to search for the
+other two numbers.
+
+### Habitat
+
+`Picnic Path`
+
+### Primary Mascot
+
+`Tango the Turtle`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Picnic Path
+- Lesson title: Triplet Sum
+- Progress chip: 3/7
+
+Scene:
+- A sorted picnic row of number tiles
+- One fixed flag on the first chosen tile
+- Two moving markers searching the rest of the row
+- A running target bubble for the remaining sum
+
+Support strip:
+- "Pick one number first."
+- "Then solve the smaller pair-sum problem."
+
+Action zone:
+- Tap a fixed first number
+- Move the left or right search marker
+- Decide whether the triplet works
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+- Background: picnic blanket colors with roomy tile spacing
+- Fixed tile: purple flag marker
+- Search markers: blue and orange explorer chips
+- Remaining target bubble: small yellow helper badge
+
+### Interaction Flow
+
+1. Tango says, "Freeze one number first."
+2. The child picks the first tile and sees the new smaller target.
+3. Two search markers appear on the rest of the row.
+4. The child moves the markers until the three-number total matches or fails.
+5. The lesson reveals that the big problem becomes a smaller pair-sum problem.
+
+### Component Usage
+
+- Scene Card
+- Fixed-value flag
+- Pointer chips
+- Hint card
+- Success badge
+
 ## Problem
 
 Given an array of integers and a target value, return `true` if there exists **any three numbers** whose sum equals the target. Otherwise, return `false`.
@@ -853,6 +1056,74 @@ Can you find a triplet?
 
 # Lesson 4: Largest Container
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that the shorter side limits the water, so that is the side we should
+move.
+
+### Habitat
+
+`Harbor Heights`
+
+### Primary Mascot
+
+`Tango the Turtle`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Harbor Heights
+- Lesson title: Largest Container
+- Progress chip: 4/7
+
+Scene:
+- Vertical post bars standing on water
+- One left post and one right post highlighted
+- A pale blue water fill between them
+- A size badge showing current container area
+
+Support strip:
+- "The shorter wall limits the water."
+- "Move the shorter side, not the taller side."
+
+Action zone:
+- Compare the two wall heights
+- Choose which side should move
+- Watch the water area change
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+- Background: harbor sky with a soft blue water band
+- Posts: thick rounded bars with height marks
+- Water: transparent blue fill that rises only to the shorter wall
+- Area badge: large yellow circle near the water
+
+### Interaction Flow
+
+1. Tango says, "The shorter wall is the limit."
+2. Water fills between the two chosen posts.
+3. The child taps the shorter wall to move it inward.
+4. The water redraws to show the new area.
+5. The lesson repeats that a taller wall cannot help if the shorter wall stays short.
+
+### Component Usage
+
+- Scene Card
+- Water-area overlay
+- Decision chips
+- Hint card
+- Success badge
+
 ## Problem
 
 You are given an array `heights`.
@@ -1093,6 +1364,74 @@ heights = [3, 1, 2, 4]
 
 # Lesson 5: Is Palindrome Valid
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that matching from both ends helps us test whether a word or phrase reads
+the same forward and backward.
+
+### Habitat
+
+`Echo Gate`
+
+### Primary Mascot
+
+`Tango the Turtle`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Echo Gate
+- Lesson title: Is Palindrome Valid
+- Progress chip: 5/7
+
+Scene:
+- A row of letter lanterns
+- One left marker on the first letter
+- One right marker on the last letter
+- A mirror arch in the middle
+
+Support strip:
+- "Compare the outside letters first."
+- "Skip spaces and punctuation if the rule says to ignore them."
+
+Action zone:
+- Tap the next left letter
+- Tap the next right letter
+- Decide if the two letters match
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+- Background: twilight path with a glowing mirror gate
+- Letter lanterns: rounded tiles with big lowercase letters
+- Matching letters: soft green pulse
+- Mismatch state: gentle wiggle and helper note
+
+### Interaction Flow
+
+1. Tango says, "Start on the outside."
+2. The child compares the first and last useful letters.
+3. If they match, both markers move inward together.
+4. If they do not match, the screen pauses and explains why the word fails.
+5. The lesson reveals that palindrome checking is inward traversal.
+
+### Component Usage
+
+- Scene Card
+- Letter tiles
+- Mascot speech bubble
+- Hint card
+- Success badge
+
 ## Problem
 
 A palindrome is something that reads the same forward and backward.
@@ -1290,6 +1629,74 @@ Check:
 ---
 
 # Lesson 6: Shift Zeros to the End
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that one pointer can search while another pointer tracks the next good
+spot for a non-zero value.
+
+### Habitat
+
+`Supply Shelf`
+
+### Primary Mascot
+
+`Tango the Turtle`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Supply Shelf
+- Lesson title: Shift Zeros to the End
+- Progress chip: 6/7
+
+Scene:
+- A row of item crates
+- One search marker scanning each crate
+- One storage marker showing the next good spot
+- Zero crates shown as faded empty boxes
+
+Support strip:
+- "The search pointer looks at every box."
+- "The storage pointer marks the next good spot."
+
+Action zone:
+- Tap the next non-zero item
+- Move it to the good spot
+- Leave zero crates for the end
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+- Background: warm wooden shelf scene
+- Non-zero crates: full colorful boxes
+- Zero crates: pale empty boxes with a soft gray label
+- Swap motion: quick slide with a calm bounce
+
+### Interaction Flow
+
+1. Tango says, "Keep the useful boxes together."
+2. The search marker scans one crate at a time.
+3. When the child finds a non-zero item, it slides to the storage marker.
+4. The storage marker moves forward to the next good spot.
+5. The screen shows how zeros naturally end up at the back.
+
+### Component Usage
+
+- Scene Card
+- Dual pointer chips
+- Swap animation cue
+- Hint card
+- Success badge
 
 ## Problem
 
@@ -1494,6 +1901,70 @@ What should fill the last two spots?
 ---
 
 # Lesson 7: Next Lexicographical Sequence
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that this two-pointer lesson happens in stages: find the pivot, swap with the next bigger value, then reverse the tail.
+
+### Habitat
+
+`Flag Parade`
+
+### Primary Mascot
+
+`Tango the Turtle`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Flag Parade
+- Lesson title: Next Lexicographical Sequence
+- Progress chip: 7/7
+
+Scene:
+- A parade road with numbered flags in a row
+- A purple glow around the pivot flag
+- A gold swap marker over the next bigger flag
+- A pale blue outline around the tail section to fix
+
+Support strip:
+- "Find the pivot first."
+- "Then swap and fix the tail."
+
+Action zone:
+- Step 1 card: search from the right for the first drop
+- Step 2 card: pick the next bigger flag
+- Step 3 card: reverse the tail
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+Use a parade road with confetti dots and soft flag poles so the sequence feels playful instead of abstract. The pivot should get a purple spotlight because it is the special turning point. The tail should have a calm blue outline so children can see which part gets reorganized after the swap.
+
+### Interaction Flow
+
+1. Tango says this problem happens in careful stages, not one giant move.
+2. The learner scans from the right until the first "drop" is found.
+3. The next bigger flag glows to show the swap choice.
+4. The tail flips into ascending order with a gentle animation.
+5. The lesson explains that the swap makes the sequence bigger, and the reversed tail keeps it only a little bigger.
+
+### Component Usage
+
+- Scene Card
+- Pivot spotlight chip
+- Tail-group outline
+- Step cards for pivot, swap, and reverse
+- Hint card
 
 ## Problem
 
@@ -1800,6 +2271,70 @@ Try it before looking below.
 
 # Chapter Review
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Review the three two-pointer styles and help the learner choose the right move from visual clues.
+
+### Habitat
+
+`Mirror Meadow Review Board`
+
+### Primary Mascot
+
+`Tango the Turtle`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Mirror Meadow Review Board
+- Screen title: Chapter Review
+- Progress chip: Review
+
+Scene:
+- A classroom board with three mini-scenes
+- Mini-scene 1: inward traversal
+- Mini-scene 2: unidirectional traversal
+- Mini-scene 3: staged traversal
+
+Support strip:
+- "Ask which style fits the clue."
+- "Use the scene before the big vocabulary word."
+
+Action zone:
+- Choose the matching two-pointer style
+- Explain which pointer should move next
+- Match a problem card to a scene card
+
+Navigation:
+- Replay
+- Hint
+- Open mastery
+```
+
+### Visual Details
+
+The review board should feel like a meadow classroom wall with pinned recap cards. Each recap card should reuse the chapter colors so children quickly connect style to visual pattern. Green check bursts should feel celebratory but calm, and retry messages should stay gentle.
+
+### Interaction Flow
+
+1. Tango introduces the review as a style-matching game.
+2. The learner taps a recap card and sees a mini-scene open larger.
+3. The screen asks which two-pointer style fits the clue.
+4. The support strip explains the answer in one short sentence.
+5. A final prompt points the learner toward mastery.
+
+### Component Usage
+
+- Scene Cards
+- Recap choice cards
+- Mascot speech bubble
+- Hint card
+- Next-step panel
+
 ## The Three Two-Pointer Styles
 
 ### 1. Inward Traversal
@@ -1905,6 +2440,70 @@ If yes, try two pointers.
 ---
 
 # Mastery Check
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Check whether the learner can choose and use the correct two-pointer move with much less support.
+
+### Habitat
+
+`Mirror Meadow Challenge Trail`
+
+### Primary Mascot
+
+`Tango the Turtle`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Mirror Meadow Challenge Trail
+- Screen title: Mastery Check
+- Progress chip: Mastery
+
+Scene:
+- One focused challenge scene
+- Two markers already in place
+- A target card near the scene
+- A result badge area for pass or needs-practice
+
+Support strip:
+- "Use the clue, then choose the move."
+- "Try to explain why your move works."
+
+Action zone:
+- Choose the next move on your own
+- Solve one challenge with limited hints
+- Explain the pattern in one short sentence
+
+Navigation:
+- Replay
+- Hint
+- Finish challenge
+```
+
+### Visual Details
+
+This screen should feel a little calmer and more focused than the walkthrough lessons. Keep the same pointer colors from the chapter so the learner can transfer what they already know. Reserve purple and gold for the mastery result area so success feels special without turning the whole screen into a reward explosion.
+
+### Interaction Flow
+
+1. Tango gives a short challenge setup and then steps back.
+2. The learner chooses the next move without a full walkthrough.
+3. The scene updates to show whether that move helps the solution.
+4. A short explanation prompt asks why the move made sense.
+5. The mastery result appears with either a pass badge or a gentle needs-practice message.
+
+### Component Usage
+
+- Scene Card
+- Prediction prompt
+- Reflection prompt
+- Practice challenge card
+- Mastery feedback card
 
 ## Part A: Multiple Choice
 

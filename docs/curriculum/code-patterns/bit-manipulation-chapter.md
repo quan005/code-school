@@ -74,6 +74,69 @@ In this chapter, we will learn:
 
 # Introduction to Bit Manipulation
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that numbers are built from tiny on/off bits, and that bit tricks work by changing or comparing those switches.
+
+### Habitat
+
+`Switchboard Station`
+
+### Primary Mascot
+
+`Blinky the Robot`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Switchboard Station
+- Screen title: Introduction to Bit Manipulation
+- Progress chip: Intro
+
+Scene:
+- A row of glowing on/off bit switches
+- A place-value ladder labeled 1, 2, 4, 8, 16
+- Operator cards for AND, OR, XOR, and shifts
+
+Support strip:
+- "A bit is a tiny off/on switch."
+- "Many switches together can build a number."
+
+Action zone:
+- Toggle bit switches on and off
+- Watch the number value update
+- Test one operator card on two bit rows
+
+Navigation:
+- Replay
+- Hint
+- Start lesson 1
+```
+
+### Visual Details
+
+The switchboard needs to feel playful and readable, with each bit clearly labeled as `0` or `1`. The place-value ladder should make binary value feel concrete. Operator cards should show simple before-and-after state changes rather than dense truth tables.
+
+### Interaction Flow
+
+1. Blinky introduces the bit switches as tiny on/off lights.
+2. The learner toggles switches and watches the number value change.
+3. The place-value ladder explains how those bits add up.
+4. One operator card demonstrates a simple bit rule, such as XOR canceling.
+5. The support strip explains that bit manipulation is about working with these tiny switches directly.
+
+### Component Usage
+
+- Scene Card
+- Bit-switch row
+- Place-value ladder
+- Operator demo cards
+- Start-lesson CTA
+
 ## Intuition
 
 Let’s start with a tiny idea:
@@ -326,6 +389,69 @@ In this chapter:
 
 # Lesson 1: Single Number
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that XOR cancels matching pairs, leaving the single number behind.
+
+### Habitat
+
+`Canceling Circuit Lane`
+
+### Primary Mascot
+
+`Blinky the Robot`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Canceling Circuit Lane
+- Lesson title: Single Number
+- Progress chip: 1/6
+
+Scene:
+- A row of number chips entering an XOR circuit
+- Matching-pair sparks that cancel duplicate values
+- A final survivor chip that remains at the end
+
+Support strip:
+- "Pairs cancel with XOR."
+- "The number without a pair is what stays."
+
+Action zone:
+- Feed numbers into the XOR circuit
+- Watch duplicates cancel
+- Read the surviving value
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The canceling effect should be visual and satisfying. Matching duplicates should disappear in a soft spark so children can see the pair-cancel rule. The survivor chip should stand clearly at the end of the circuit.
+
+### Interaction Flow
+
+1. Blinky sends the number chips through the XOR circuit one at a time.
+2. The learner watches matching pairs cancel.
+3. The running value changes as chips combine.
+4. Duplicate pairs vanish cleanly.
+5. The final remaining chip is revealed as the single number.
+
+### Component Usage
+
+- Scene Card
+- XOR circuit lane
+- Cancel sparks
+- Survivor chip
+- Hint card
+
 ## Problem
 
 Given an array where every number appears twice except for one number that appears once, return the number that appears once.
@@ -438,6 +564,69 @@ Why is XOR perfect for this problem?
 ---
 
 # Lesson 2: Number of 1 Bits
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach how to count how many bit switches are turned on in a number.
+
+### Habitat
+
+`Glow Bit Counter`
+
+### Primary Mascot
+
+`Blinky the Robot`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Glow Bit Counter
+- Lesson title: Number of 1 Bits
+- Progress chip: 2/6
+
+Scene:
+- One binary row of switches
+- A glow counter that increments for every 1 bit
+- A shift marker or scan marker moving across the row
+
+Support strip:
+- "Count the switches that are on."
+- "Each 1 adds one to the total."
+
+Action zone:
+- Scan one bit at a time
+- Add to the glow counter when the bit is 1
+- Continue until all bits are checked
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The bit row should make on bits feel bright and off bits feel dim. The glow counter should increase one step at a time. The scan marker should clearly show which bit is being checked now.
+
+### Interaction Flow
+
+1. Blinky points to the first bit in the row.
+2. The learner checks whether that bit is on or off.
+3. The glow counter increases only for 1 bits.
+4. The scan marker moves across the row.
+5. The lesson ends with the total number of on bits.
+
+### Component Usage
+
+- Scene Card
+- Bit row
+- Scan marker
+- Glow counter
+- Hint card
 
 ## Problem
 
@@ -572,6 +761,69 @@ Bit problems often use:
 ---
 
 # Lesson 3: Power of Two
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that powers of two have exactly one on bit in binary.
+
+### Habitat
+
+`Single Beam Tower`
+
+### Primary Mascot
+
+`Blinky the Robot`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Single Beam Tower
+- Lesson title: Power of Two
+- Progress chip: 3/6
+
+Scene:
+- Several bit rows showing different numbers
+- A one-beam badge for rows with only one on bit
+- An AND-check card showing the famous power-of-two trick
+
+Support strip:
+- "A power of two has one glowing bit."
+- "If more than one bit glows, it is not a power of two."
+
+Action zone:
+- Count the glowing bits
+- Test the AND-check card
+- Decide power of two or not
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The one-beam badge should immediately communicate the single-on-bit idea. Side-by-side bit rows are helpful here because children can compare valid and invalid examples. The AND-check card should stay simple and visual.
+
+### Interaction Flow
+
+1. Blinky shows several numbers in binary rows.
+2. The learner spots whether each row has exactly one glowing bit.
+3. The AND-check card confirms the idea in a second way.
+4. Rows with one glowing bit earn the one-beam badge.
+5. The support strip explains why powers of two look special in binary.
+
+### Component Usage
+
+- Scene Card
+- One-beam badge
+- Bit-row comparison cards
+- AND-check card
+- Hint card
 
 ## Problem
 
@@ -718,6 +970,69 @@ What special thing does a power of two have in binary?
 
 # Lesson 4: Missing Number
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that XOR can also reveal which number is missing when every expected value should be present once.
+
+### Habitat
+
+`Number Gap Workshop`
+
+### Primary Mascot
+
+`Blinky the Robot`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Number Gap Workshop
+- Lesson title: Missing Number
+- Progress chip: 4/6
+
+Scene:
+- An expected number row and an actual number row
+- An XOR wire connecting matching values
+- A missing-slot glow where the absent number is revealed
+
+Support strip:
+- "Match expected numbers with actual numbers."
+- "The missing one is what does not get canceled."
+
+Action zone:
+- XOR expected and actual values
+- Watch matching numbers cancel
+- Reveal the missing value
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+Using two rows helps children understand what is expected versus what was actually given. Matching cancellations should be visible between the two rows. The missing-slot glow should appear only when every pairable value has vanished.
+
+### Interaction Flow
+
+1. Blinky lays out the full expected number row.
+2. The learner compares it with the actual row.
+3. XOR wires cancel matching values away.
+4. One value remains unmatched.
+5. The support strip explains that this is the missing number.
+
+### Component Usage
+
+- Scene Card
+- Expected / actual rows
+- XOR wires
+- Missing-slot glow
+- Hint card
+
 ## Problem
 
 Given an array containing `n` distinct numbers from the range `0` to `n`, return the one number that is missing.
@@ -820,6 +1135,69 @@ XOR is great when:
 ---
 
 # Lesson 5: Counting Bits
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that we can build the count of 1 bits for many numbers by reusing smaller answers.
+
+### Habitat
+
+`Bit Ladder Lab`
+
+### Primary Mascot
+
+`Blinky the Robot`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Bit Ladder Lab
+- Lesson title: Counting Bits
+- Progress chip: 5/6
+
+Scene:
+- A ladder of numbers from 0 up to n
+- A count badge under each number
+- A helper arrow showing how one smaller answer helps the next
+
+Support strip:
+- "Smaller bit answers can help build bigger ones."
+- "Reuse what you already counted."
+
+Action zone:
+- Walk up the number ladder
+- Fill the count badge for each number
+- Use the helper arrow from a related smaller number
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The number ladder should feel incremental and easy to follow. Count badges should be simple and consistent. The helper arrow should reinforce that this lesson uses saved smaller answers, not full recounting every time.
+
+### Interaction Flow
+
+1. Blinky starts at zero with count zero.
+2. The learner moves upward through the number ladder.
+3. A helper arrow points from a smaller known answer.
+4. The next count badge is filled using that smaller result.
+5. The support strip explains that counting bits can build step by step.
+
+### Component Usage
+
+- Scene Card
+- Number ladder
+- Count badges
+- Helper arrows
+- Hint card
 
 ## Problem
 
@@ -941,6 +1319,69 @@ What does `(i & 1)` tell us?
 
 # Lesson 6: Reverse Bits
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that reversing bits means reading a bit row from one side and rebuilding a new row in the opposite order.
+
+### Habitat
+
+`Mirror Switch Tunnel`
+
+### Primary Mascot
+
+`Blinky the Robot`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Mirror Switch Tunnel
+- Lesson title: Reverse Bits
+- Progress chip: 6/6
+
+Scene:
+- An input bit row on the left and an output bit row on the right
+- A shift tunnel moving one bit at a time across
+- A rebuild badge showing the growing reversed value
+
+Support strip:
+- "Take one bit from the input."
+- "Shift the answer and place that bit into the new row."
+
+Action zone:
+- Read the next input bit
+- Shift the output row
+- Add the bit to the reversed result
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The mirror-tunnel layout should make reversal intuitive. The input and output rows need clear left/right separation. The rebuild badge should show the new number growing step by step instead of appearing all at once.
+
+### Interaction Flow
+
+1. Blinky reads one bit from the input row.
+2. The learner shifts the output row to make room.
+3. The chosen bit is placed into the rebuilt output.
+4. The process repeats until every bit has moved across.
+5. The support strip explains that reversing bits builds the answer one step at a time.
+
+### Component Usage
+
+- Scene Card
+- Input / output bit rows
+- Shift tunnel
+- Rebuild badge
+- Hint card
+
 ## Problem
 
 Given a 32-bit unsigned integer, reverse its bits and return the result.
@@ -1054,6 +1495,69 @@ This lesson shows how shifts and bit checks can help build a new number bit by b
 
 # Chapter Review
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Review on/off bits, XOR canceling, counting 1s, one-bit powers, missing-value XOR, and building answers with shifts.
+
+### Habitat
+
+`Switch Review Dock`
+
+### Primary Mascot
+
+`Blinky the Robot`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Switch Review Dock
+- Screen title: Chapter Review
+- Progress chip: Review
+
+Scene:
+- A review wall with six mini bit scenes
+- Tool chips for XOR, count, one-bit, missing, build, reverse
+- A banner that says "bits are tiny on/off clues"
+
+Support strip:
+- "Ask what the bit pattern is trying to tell you."
+- "Then choose the operator or trick that fits."
+
+Action zone:
+- Match each mini-scene to the right bit idea
+- Sort clue chips to the correct lesson
+- Explain what the bits are doing
+
+Navigation:
+- Replay
+- Hint
+- Open mastery
+```
+
+### Visual Details
+
+The review dock should feel like a wall of little switch puzzles. The banner about tiny on/off clues should remain visible because it summarizes the chapter. Mini-scenes should be simple and use the same switchboard language from the lessons.
+
+### Interaction Flow
+
+1. Blinky opens the review wall of bit scenes.
+2. The learner matches each one to the right bit trick.
+3. Clue chips slide into the correct recap panel.
+4. The support strip explains the bit behavior in simple language.
+5. The next-step panel opens mastery.
+
+### Component Usage
+
+- Review board
+- Tool chips
+- Mini bit scenes
+- Mascot speech bubble
+- Next-step panel
+
 ## What you learned
 
 In this chapter, you learned that bit manipulation works with the tiny 0-and-1 pieces inside numbers.
@@ -1107,6 +1611,69 @@ Think about bit manipulation when you see:
 ---
 
 # Mastery Check
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Check whether the learner can read a bit pattern and choose the right bit trick with less support.
+
+### Habitat
+
+`Binary Challenge Bay`
+
+### Primary Mascot
+
+`Blinky the Robot`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Binary Challenge Bay
+- Screen title: Mastery Check
+- Progress chip: Mastery
+
+Scene:
+- One focused bit challenge
+- A visible bit row or operator card
+- A result badge area above the scene
+
+Support strip:
+- "What does this bit pattern suggest?"
+- "Choose the operator or rule that fits best."
+
+Action zone:
+- Predict the next bit move or answer
+- Solve one short bit challenge
+- Explain what the bit clue meant
+
+Navigation:
+- Replay
+- Hint
+- Finish challenge
+```
+
+### Visual Details
+
+This screen should stay focused and uncluttered, with the bit row or operator card as the main object. The result area should stay calm and readable. Keep the switches large enough to reason about quickly.
+
+### Interaction Flow
+
+1. Blinky presents a final bit challenge with limited guidance.
+2. The learner studies the visible bit row or operator.
+3. The learner chooses the right trick or answer.
+4. A short reflection asks what bit clue mattered most.
+5. The mastery result appears.
+
+### Component Usage
+
+- Challenge scene card
+- Bit-row display
+- Prediction prompt
+- Reflection prompt
+- Result feedback card
 
 Try these before looking at the answers.
 

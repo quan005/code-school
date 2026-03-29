@@ -62,6 +62,69 @@ In this chapter, we will learn:
 
 # Introduction to Sort and Search
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach the difference between finding something and putting things in order, and show how order can help later work.
+
+### Habitat
+
+`Card Cabinet Room`
+
+### Primary Mascot
+
+`Piper the Otter`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Card Cabinet Room
+- Screen title: Introduction to Sort and Search
+- Progress chip: Intro
+
+Scene:
+- A messy row of number cards above a neat sorted row
+- A search spotlight and a sort wand toggle
+- A helper panel showing what gets easier after sorting
+
+Support strip:
+- "Searching means find it."
+- "Sorting means put it in order."
+
+Action zone:
+- Search for one target card in the messy row
+- Sort the cards into order
+- Compare what becomes easier after sorting
+
+Navigation:
+- Replay
+- Hint
+- Start lesson 1
+```
+
+### Visual Details
+
+The contrast between messy and ordered rows should be immediate. The search spotlight should feel direct and focused, while the sort wand should animate the rearrangement into order. Keep the helper panel short and concrete.
+
+### Interaction Flow
+
+1. Piper highlights one target in the messy row and shows direct searching.
+2. The learner sorts the row into order.
+3. A compare panel asks what new questions became easier after sorting.
+4. The sorted row demonstrates clearer structure.
+5. The support strip names the difference between searching and sorting.
+
+### Component Usage
+
+- Scene Card
+- Search spotlight
+- Sort toggle
+- Compare helper panel
+- Start-lesson CTA
+
 ## Intuition
 
 Suppose you have these numbers:
@@ -180,6 +243,69 @@ In this chapter:
 
 # Lesson 1: Linear Search
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that linear search checks one item at a time from left to right until it finds the target or runs out.
+
+### Habitat
+
+`Scan Shelf`
+
+### Primary Mascot
+
+`Piper the Otter`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Scan Shelf
+- Lesson title: Linear Search
+- Progress chip: 1/6
+
+Scene:
+- A row of unsorted number cards
+- A target badge above the shelf
+- A scanning marker moving one slot at a time
+
+Support strip:
+- "Check one card, then the next."
+- "Stop when you find the target or reach the end."
+
+Action zone:
+- Compare the current card to the target
+- Move the scan marker right
+- Decide found or not found
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The scanning marker should be the main moving element, so the one-by-one nature of linear search feels obvious. The target badge needs to stay fixed and readable. Found and not-found states should be clear but calm.
+
+### Interaction Flow
+
+1. Piper shows the target badge above the row.
+2. The learner checks the current card.
+3. If it is not the target, the scan marker moves right.
+4. A found badge appears when the target matches.
+5. If the shelf ends first, the result becomes not found.
+
+### Component Usage
+
+- Scene Card
+- Target badge
+- Scan marker
+- Found / not-found badge
+- Hint card
+
 ## Problem
 
 Given an array `nums` and a target value, return the index of the target if it exists.
@@ -277,6 +403,69 @@ When is linear search a good choice?
 ---
 
 # Lesson 2: Selection Sort
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that selection sort finds the smallest remaining item and places it into the next correct spot.
+
+### Habitat
+
+`Line-Up Stage`
+
+### Primary Mascot
+
+`Piper the Otter`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Line-Up Stage
+- Lesson title: Selection Sort
+- Progress chip: 2/6
+
+Scene:
+- A row split into sorted and unsorted sections
+- A smallest-item spotlight in the unsorted section
+- A swap arrow placing the smallest item into the next sorted slot
+
+Support strip:
+- "Find the smallest remaining item."
+- "Put it into the next sorted place."
+
+Action zone:
+- Scan the unsorted section
+- Mark the smallest item
+- Swap it into the next sorted slot
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The sorted and unsorted sections should have different background tones so the boundary is easy to see. The smallest-item spotlight should travel through the unsorted section as the learner scans. The swap arrow should make each placement feel deliberate.
+
+### Interaction Flow
+
+1. Piper marks the first unsorted position.
+2. The learner scans the remaining row to find the smallest item.
+3. The smallest item gets a spotlight.
+4. A swap arrow places it into the next sorted slot.
+5. The sorted section grows one position at a time.
+
+### Component Usage
+
+- Scene Card
+- Sorted / unsorted divider
+- Smallest-item spotlight
+- Swap arrow
+- Hint card
 
 ## Problem
 
@@ -392,6 +581,69 @@ Selection sort is easy to understand, but it is not very fast for large arrays.
 ---
 
 # Lesson 3: Insertion Sort
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that insertion sort takes one card at a time and slides it left until it reaches the correct place.
+
+### Habitat
+
+`Sliding Card Bench`
+
+### Primary Mascot
+
+`Piper the Otter`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Sliding Card Bench
+- Lesson title: Insertion Sort
+- Progress chip: 3/6
+
+Scene:
+- A row where the left side is already sorted
+- A lifted current card ready to insert
+- Shift arrows showing bigger cards sliding right
+
+Support strip:
+- "Take one new card."
+- "Slide it left until it fits."
+
+Action zone:
+- Lift the current card
+- Shift larger cards right
+- Drop the card into the correct gap
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The lifted current card should hover above the row so the insertion action is unmistakable. Shift arrows should appear only when larger cards need to move. The insertion gap should glow softly to invite placement.
+
+### Interaction Flow
+
+1. Piper lifts the next unsorted card.
+2. The learner compares it to the sorted cards on the left.
+3. Larger cards slide right to make room.
+4. The lifted card drops into its proper gap.
+5. The sorted section expands by one card.
+
+### Component Usage
+
+- Scene Card
+- Lifted-card overlay
+- Shift arrows
+- Insertion gap highlight
+- Hint card
 
 ## Problem
 
@@ -511,6 +763,69 @@ What part of the array is treated as already sorted in insertion sort?
 
 # Lesson 4: Merge Two Sorted Arrays
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that two sorted arrays can be combined by always taking the smaller front item next.
+
+### Habitat
+
+`Twin River Merge`
+
+### Primary Mascot
+
+`Piper the Otter`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Twin River Merge
+- Lesson title: Merge Two Sorted Arrays
+- Progress chip: 4/6
+
+Scene:
+- Two sorted rows feeding into one result row
+- Front-card markers on both inputs
+- A merge tray building in sorted order
+
+Support strip:
+- "Look at the front of both rows."
+- "Take the smaller one next."
+
+Action zone:
+- Compare the two front cards
+- Move the smaller card into the result row
+- Advance the pointer for that row
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The twin-row layout should make the side-by-side comparison easy. Front-card markers need strong visual emphasis. The result row should grow steadily so the learner sees the merge building in sorted order.
+
+### Interaction Flow
+
+1. Piper points to the front card of each sorted row.
+2. The learner compares the two values.
+3. The smaller card moves into the merge tray.
+4. Only that row's front marker advances.
+5. The process repeats until all cards are merged.
+
+### Component Usage
+
+- Scene Card
+- Front-card markers
+- Merge tray
+- Compare badge
+- Hint card
+
 ## Problem
 
 Given two arrays already sorted in ascending order, merge them into one sorted array.
@@ -625,6 +940,69 @@ Once data is sorted, merging can often be done in one clean pass.
 ---
 
 # Lesson 5: Sort Colors
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach the special in-place sorting pattern that groups colors into the correct zones.
+
+### Habitat
+
+`Paint Bucket Lane`
+
+### Primary Mascot
+
+`Piper the Otter`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Paint Bucket Lane
+- Lesson title: Sort Colors
+- Progress chip: 5/6
+
+Scene:
+- A row of red, white, and blue paint chips
+- Three zone markers: red zone, current zone, blue zone
+- Swap arrows that move chips into the correct side
+
+Support strip:
+- "Place reds on the left and blues on the right."
+- "Keep the middle for what is still being checked."
+
+Action zone:
+- Read the current color
+- Swap into the left or right zone when needed
+- Move the current marker forward
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The three-zone layout should make this lesson feel like sorting into buckets. The current marker needs to stay very clear so the learner knows which chip is being processed. Swaps should look quick and purposeful.
+
+### Interaction Flow
+
+1. Piper starts with the current marker at the beginning.
+2. The learner reads the color under the marker.
+3. Reds swap left, blues swap right, and whites stay in the middle.
+4. The zone boundaries tighten as sorting progresses.
+5. The support strip explains that the row gets sorted in place.
+
+### Component Usage
+
+- Scene Card
+- Zone markers
+- Current marker
+- Swap arrows
+- Hint card
 
 ## Problem
 
@@ -752,6 +1130,69 @@ Why is counting a good method for this problem?
 ---
 
 # Lesson 6: Search in a Rotated Sorted Array
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that even when a sorted array is rotated, one half is still ordered and can help us decide where to search.
+
+### Habitat
+
+`Twist Shelf Quest`
+
+### Primary Mascot
+
+`Piper the Otter`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Twist Shelf Quest
+- Lesson title: Search in a Rotated Sorted Array
+- Progress chip: 6/6
+
+Scene:
+- A shelf of cards that was once sorted but is now rotated
+- Left, right, and middle markers
+- A sorted-half highlight showing which side is still ordered
+
+Support strip:
+- "Even after the twist, one side is still in order."
+- "Use the ordered half to decide where the target can live."
+
+Action zone:
+- Check the middle card
+- Identify the ordered half
+- Choose the half that could contain the target
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The rotation should be visually noticeable, but the ordered half still needs to be easy to see once highlighted. The left, right, and middle markers should work just like in binary search. Keep the target badge visible throughout.
+
+### Interaction Flow
+
+1. Piper places the target badge above the rotated shelf.
+2. The learner checks the middle card.
+3. A sorted-half highlight shows which side is still ordered.
+4. The learner decides whether the target could be in that ordered half.
+5. The search range shrinks until the target is found or absent.
+
+### Component Usage
+
+- Scene Card
+- Left / right / middle markers
+- Sorted-half highlight
+- Target badge
+- Hint card
 
 ## Problem
 
@@ -904,6 +1345,69 @@ This lesson is a nice example of search using order, even when the order looks p
 
 # Chapter Review
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Review scanning, selecting minimums, inserting into order, merging, color partitioning, and searching with ordered structure.
+
+### Habitat
+
+`Order Review Studio`
+
+### Primary Mascot
+
+`Piper the Otter`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Order Review Studio
+- Screen title: Chapter Review
+- Progress chip: Review
+
+Scene:
+- A review wall with six mini card and row scenes
+- Tool chips for scan, select, insert, merge, zone, ordered-half
+- A banner that says "order can make later work easier"
+
+Support strip:
+- "Ask whether you should search directly or create order first."
+- "Then choose the move that uses that structure best."
+
+Action zone:
+- Match each mini-scene to the right idea
+- Sort clue chips to the correct lesson
+- Explain what order is helping with
+
+Navigation:
+- Replay
+- Hint
+- Open mastery
+```
+
+### Visual Details
+
+The review studio should feel like a wall of sorting and searching demos. The banner about order should remain visible because it summarizes the chapter well. Keep each mini-scene simple and familiar.
+
+### Interaction Flow
+
+1. Piper opens the review wall of search and sort scenes.
+2. The learner matches each scene to its main idea.
+3. Clue chips slide into the right recap panel.
+4. The support strip explains what sorting or searching move is being used.
+5. The next-step panel opens mastery.
+
+### Component Usage
+
+- Review board
+- Tool chips
+- Mini sort/search scenes
+- Mascot speech bubble
+- Next-step panel
+
 ## What you learned
 
 In this chapter, you learned that:
@@ -958,6 +1462,69 @@ Think about sort-and-search ideas when you see:
 ---
 
 # Mastery Check
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Check whether the learner can choose between direct searching and order-based work with less support.
+
+### Habitat
+
+`Order Challenge Shelf`
+
+### Primary Mascot
+
+`Piper the Otter`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Order Challenge Shelf
+- Screen title: Mastery Check
+- Progress chip: Mastery
+
+Scene:
+- One focused sort-or-search challenge
+- A visible row of cards and one active marker or boundary
+- A result badge area above the shelf
+
+Support strip:
+- "Do you need to search now or build order first?"
+- "Use the structure that makes the next move easiest."
+
+Action zone:
+- Predict the next move
+- Solve one short challenge
+- Explain why that move fit the row
+
+Navigation:
+- Replay
+- Hint
+- Finish challenge
+```
+
+### Visual Details
+
+This screen should stay focused on the row and the active marker or boundary. The result area should be simple and readable. Avoid extra decoration so the learner can think clearly about the next move.
+
+### Interaction Flow
+
+1. Piper presents one final row challenge with limited guidance.
+2. The learner studies whether the row is sorted, unsorted, or partly ordered.
+3. The learner chooses the next search or sort move.
+4. A short reflection asks what structure made that move smart.
+5. The mastery result appears.
+
+### Component Usage
+
+- Challenge scene card
+- Active marker or boundary
+- Prediction prompt
+- Reflection prompt
+- Result feedback card
 
 Try these before looking at the answers.
 

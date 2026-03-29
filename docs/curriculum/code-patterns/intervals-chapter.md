@@ -75,6 +75,69 @@ In this chapter, we will learn:
 
 # Introduction to Intervals
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that an interval is a start-to-end range and that interval problems are mostly about overlap, gaps, and fitting ranges together.
+
+### Habitat
+
+`Ribbon Timeline Hall`
+
+### Primary Mascot
+
+`Tilda the Deer`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Ribbon Timeline Hall
+- Screen title: Introduction to Intervals
+- Progress chip: Intro
+
+Scene:
+- A long number-line ribbon with colored interval strips
+- Start and end pins on each strip
+- An overlap glow where two strips share space
+
+Support strip:
+- "An interval has a start and an end."
+- "Look for overlap or gaps."
+
+Action zone:
+- Drag interval strips onto the timeline
+- Compare overlapping and separate strips
+- Toggle unsorted vs sorted order
+
+Navigation:
+- Replay
+- Hint
+- Start lesson 1
+```
+
+### Visual Details
+
+The timeline ribbon should make start and end points feel physical. Keep the strips thick and colorful so overlap is easy to notice. The sorted-order toggle should visually rearrange the strips from messy to clean left-to-right order.
+
+### Interaction Flow
+
+1. Tilda introduces the timeline and interval strips.
+2. The learner places strips on the number line and sees start and end pins.
+3. Overlapping strips glow where they share space.
+4. The scene toggles from unsorted to sorted to show why sorting helps.
+5. The intro closes with the key words `start`, `end`, `overlap`, and `gap`.
+
+### Component Usage
+
+- Scene Card
+- Interval strips
+- Sorted-order toggle
+- Overlap glow
+- Start-lesson CTA
+
 ## Intuition
 
 An interval is a pair of values:
@@ -242,6 +305,69 @@ In this chapter:
 
 # Lesson 1: Merge Overlapping Intervals
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that when intervals overlap, we can stretch one merged interval to cover them both.
+
+### Habitat
+
+`Paint Ribbon Studio`
+
+### Primary Mascot
+
+`Tilda the Deer`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Paint Ribbon Studio
+- Lesson title: Merge Overlapping Intervals
+- Progress chip: 1/6
+
+Scene:
+- A sorted row of colored interval ribbons
+- A current merged ribbon
+- A result tray collecting finished merged ranges
+
+Support strip:
+- "If the next interval starts before the current one ends, they overlap."
+- "Stretch the current ribbon instead of making a new one."
+
+Action zone:
+- Compare current and next interval
+- Extend the current ribbon when they overlap
+- Save the current ribbon when a gap appears
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+Use soft paint ribbons so merging feels like blending one continuous strip. The result tray should collect finished merged intervals clearly. Stretch animations should make it obvious that the end point is being updated.
+
+### Interaction Flow
+
+1. Tilda starts with the first interval as the current ribbon.
+2. The learner compares the next interval's start to the current end.
+3. If they overlap, the current ribbon stretches to the farther end.
+4. If there is a gap, the current ribbon moves to the result tray.
+5. The screen repeats until all ribbons are processed.
+
+### Component Usage
+
+- Scene Card
+- Current-ribbon highlight
+- Result tray
+- Stretch animation
+- Hint card
+
 ## Problem
 
 Given a list of intervals, merge all overlapping intervals and return the merged result.
@@ -373,6 +499,69 @@ Why do we sort first?
 
 # Lesson 2: Insert Interval
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that a new interval can be inserted by finding where it fits and merging if it overlaps nearby intervals.
+
+### Habitat
+
+`Schedule Slot Garden`
+
+### Primary Mascot
+
+`Tilda the Deer`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Schedule Slot Garden
+- Lesson title: Insert Interval
+- Progress chip: 2/6
+
+Scene:
+- A sorted schedule timeline with existing interval cards
+- A new interval card hovering above the line
+- A fit slot or merge glow depending on what happens
+
+Support strip:
+- "First find where the new interval belongs."
+- "If it overlaps, merge as you place it."
+
+Action zone:
+- Scan intervals from left to right
+- Find the insertion zone
+- Merge with overlapping neighbors if needed
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The new interval card should stand out as the active piece being placed. Use a fit-slot glow for no-overlap cases and the same merge glow from the previous lesson for overlap cases. Keep the timeline sorted and calm.
+
+### Interaction Flow
+
+1. Tilda shows the new interval card above the schedule.
+2. The learner walks through the existing intervals in order.
+3. If the new interval overlaps, it begins merging with neighbors.
+4. If not, it slips neatly into the correct slot.
+5. The final schedule stays sorted and complete.
+
+### Component Usage
+
+- Scene Card
+- New-interval hover card
+- Fit-slot highlight
+- Merge glow
+- Hint card
+
 ## Problem
 
 You are given a list of non-overlapping intervals sorted by start time, plus one new interval.
@@ -489,6 +678,69 @@ When intervals are already sorted and non-overlapping, insertion problems often 
 
 # Lesson 3: Can Attend All Meetings
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that if any two meeting intervals overlap, one person cannot attend them all.
+
+### Habitat
+
+`School Bell Calendar`
+
+### Primary Mascot
+
+`Tilda the Deer`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- School Bell Calendar
+- Lesson title: Can Attend All Meetings
+- Progress chip: 3/6
+
+Scene:
+- A daily calendar strip with meeting cards
+- A conflict bell that rings when two meetings overlap
+- A no-conflict path when meetings stay separate
+
+Support strip:
+- "Sort the meetings first."
+- "If one starts before the last one ends, there is a conflict."
+
+Action zone:
+- Walk through the meetings in order
+- Compare each start time to the previous end
+- Decide attend all or conflict
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The calendar strip should feel familiar and readable, like a school schedule. The conflict bell should activate only when overlap happens. No-conflict scenes should stay positive and not feel empty.
+
+### Interaction Flow
+
+1. Tilda sorts the meeting cards by start time.
+2. The learner compares each meeting's start to the last meeting's end.
+3. A conflict bell rings if overlap appears.
+4. If the strip stays clear, the no-conflict path remains open.
+5. The support strip explains why just one overlap is enough to answer no.
+
+### Component Usage
+
+- Scene Card
+- Conflict bell
+- Calendar strip
+- Decision badge
+- Hint card
+
 ## Problem
 
 You are given a list of meeting time intervals.
@@ -593,6 +845,69 @@ What causes a meeting conflict?
 ---
 
 # Lesson 4: Minimum Meeting Rooms
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that we need a new room whenever meetings overlap at the same time.
+
+### Habitat
+
+`Room Lantern Court`
+
+### Primary Mascot
+
+`Tilda the Deer`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Room Lantern Court
+- Lesson title: Minimum Meeting Rooms
+- Progress chip: 4/6
+
+Scene:
+- A timeline of meeting cards
+- A row of room lanterns that turn on when rooms are needed
+- A current-rooms meter showing how many meetings overlap now
+
+Support strip:
+- "A new room is needed only when another meeting is still going."
+- "Turn a room lantern off when a meeting ends."
+
+Action zone:
+- Add meetings in start-time order
+- Release rooms when end times pass
+- Track the highest number of rooms needed
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The room lanterns should make room usage feel visible and countable. Keep the current-rooms meter and max-rooms badge distinct so children understand present overlap versus final answer. The timeline should remain orderly.
+
+### Interaction Flow
+
+1. Tilda starts meetings in order of their start times.
+2. The learner turns on a room lantern when a new room is needed.
+3. As meetings end, lanterns go off and can be reused.
+4. The max-rooms badge updates whenever more rooms are active than before.
+5. The lesson explains that the biggest overlap is the answer.
+
+### Component Usage
+
+- Scene Card
+- Room lantern row
+- Current-rooms meter
+- Max-rooms badge
+- Hint card
 
 ## Problem
 
@@ -806,6 +1121,69 @@ That happens a lot in scheduling problems.
 
 # Lesson 5: Interval Intersection
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that when two interval lists overlap, the shared part becomes the intersection.
+
+### Habitat
+
+`Bridge Overlap Walk`
+
+### Primary Mascot
+
+`Tilda the Deer`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Bridge Overlap Walk
+- Lesson title: Interval Intersection
+- Progress chip: 5/6
+
+Scene:
+- Two timeline rows, one above the other
+- A shared overlap strip appearing in the middle
+- Two list pointers showing which intervals are being compared
+
+Support strip:
+- "Compare one interval from each list."
+- "The shared middle part is the intersection."
+
+Action zone:
+- Compare the current pair of intervals
+- Record the shared overlap if it exists
+- Move the pointer whose interval ends first
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The two rows should stay aligned so the overlap is easy to see vertically. The shared strip should appear only when there is common space. Pointer markers should clearly indicate which interval from each list is active.
+
+### Interaction Flow
+
+1. Tilda places one pointer on each list.
+2. The learner compares the two active intervals.
+3. If they overlap, the shared part appears as a middle strip.
+4. The interval that ends first moves on.
+5. The process repeats until one list is finished.
+
+### Component Usage
+
+- Scene Card
+- Dual timeline rows
+- Shared overlap strip
+- Pointer markers
+- Hint card
+
 ## Problem
 
 You are given two lists of intervals, both sorted and non-overlapping inside themselves.
@@ -934,6 +1312,69 @@ How do we compute the overlap of two intervals?
 
 # Lesson 6: Remove Covered Intervals
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that some intervals are completely hidden inside bigger ones and can be removed.
+
+### Habitat
+
+`Shadow Ribbon Path`
+
+### Primary Mascot
+
+`Tilda the Deer`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Shadow Ribbon Path
+- Lesson title: Remove Covered Intervals
+- Progress chip: 6/6
+
+Scene:
+- A sorted set of interval ribbons on one line
+- A cover shadow showing when one ribbon fully contains another
+- A keep tray for intervals that remain
+
+Support strip:
+- "If one interval is completely inside another, it is covered."
+- "Keep only the intervals that still add something new."
+
+Action zone:
+- Compare the current ribbon to the farthest end seen so far
+- Mark covered ribbons
+- Keep uncovered ribbons
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The cover shadow should make "inside" obvious without extra explanation. Use a calm fade for covered intervals so removal feels like simplification, not punishment. The keep tray should show the useful intervals that remain visible.
+
+### Interaction Flow
+
+1. Tilda processes the sorted ribbons from left to right.
+2. The learner tracks the farthest end seen so far.
+3. If a new ribbon sits fully inside that span, a cover shadow appears.
+4. Covered ribbons fade away while uncovered ones enter the keep tray.
+5. The support strip explains why covered intervals do not change the answer.
+
+### Component Usage
+
+- Scene Card
+- Cover shadow overlay
+- Farthest-end badge
+- Keep tray
+- Hint card
+
 ## Problem
 
 Given a list of intervals, remove intervals that are completely covered by another interval.
@@ -1061,6 +1502,69 @@ Sometimes changing the tie-break rule changes everything.
 
 # Chapter Review
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Review overlap, gaps, merge, insert, conflict, room count, intersection, and covered ranges.
+
+### Habitat
+
+`Timeline Review Gallery`
+
+### Primary Mascot
+
+`Tilda the Deer`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Timeline Review Gallery
+- Screen title: Chapter Review
+- Progress chip: Review
+
+Scene:
+- A gallery wall with six mini timeline scenes
+- Tool chips for overlap, merge, insert, conflict, rooms, intersection, covered
+- A sorting reminder banner at the top
+
+Support strip:
+- "Ask what the intervals are doing to each other."
+- "Sorting usually makes the picture clearer."
+
+Action zone:
+- Match each mini-scene to the right interval idea
+- Sort clue chips to the right lesson
+- Explain whether the active intervals overlap or stay apart
+
+Navigation:
+- Replay
+- Hint
+- Open mastery
+```
+
+### Visual Details
+
+The review gallery should feel like a wall of small timeline posters. Keep the sorting reminder banner visible because it is a central strategy in the chapter. Each mini-scene should reuse the same interval-strip look from the lessons.
+
+### Interaction Flow
+
+1. Tilda opens the gallery of recap scenes.
+2. The learner matches each scene to its main interval idea.
+3. Clue chips slide into the correct poster.
+4. The support strip explains the reasoning in one short sentence.
+5. The next-step panel opens mastery.
+
+### Component Usage
+
+- Review board
+- Tool chips
+- Mini timeline scenes
+- Mascot speech bubble
+- Next-step panel
+
 ## What you learned
 
 In this chapter, you learned that intervals represent ranges with a start and an end.
@@ -1118,6 +1622,69 @@ Think about interval problems when you see:
 ---
 
 # Mastery Check
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Check whether the learner can read interval behavior and choose the correct action with less support.
+
+### Habitat
+
+`Overlap Challenge Lane`
+
+### Primary Mascot
+
+`Tilda the Deer`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Overlap Challenge Lane
+- Screen title: Mastery Check
+- Progress chip: Mastery
+
+Scene:
+- One focused timeline challenge
+- A pair or list of intervals already placed on the line
+- A result badge area above the timeline
+
+Support strip:
+- "What are these intervals doing right now?"
+- "Choose the action: merge, insert, count, keep, or remove."
+
+Action zone:
+- Predict the next interval action
+- Solve one short timeline challenge
+- Explain why that action fits
+
+Navigation:
+- Replay
+- Hint
+- Finish challenge
+```
+
+### Visual Details
+
+This screen should stay clean and focused, with the timeline doing most of the teaching. The result area should be calm and readable. Keep interval strips large enough that overlaps and gaps are instantly visible.
+
+### Interaction Flow
+
+1. Tilda presents one final interval challenge with limited guidance.
+2. The learner studies the visible intervals and predicts the correct action.
+3. The timeline updates to show the result.
+4. A short reflection asks what clue made that action correct.
+5. The mastery result appears.
+
+### Component Usage
+
+- Challenge scene card
+- Timeline strip set
+- Prediction prompt
+- Reflection prompt
+- Result feedback card
 
 Try these before looking at the answers.
 

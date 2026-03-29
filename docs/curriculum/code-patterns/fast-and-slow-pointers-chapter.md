@@ -64,6 +64,69 @@ In this chapter, we will learn:
 
 # Introduction to Fast and Slow Pointers
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that one marker can move slowly and another can move quickly, and that their different speeds reveal useful patterns.
+
+### Habitat
+
+`Loop Track`
+
+### Primary Mascot
+
+`Dash the Rabbit`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Loop Track
+- Screen title: Introduction to Fast and Slow Pointers
+- Progress chip: Intro
+
+Scene:
+- A race track that can switch between straight and looped
+- A blue slow marker and an orange fast marker
+- A finish sign on the straight path and a meet badge on the loop
+
+Support strip:
+- "Slow moves one step."
+- "Fast moves two steps."
+
+Action zone:
+- Toggle between straight path and loop path
+- Step both racers forward
+- Watch what their positions tell us
+
+Navigation:
+- Replay
+- Hint
+- Start lesson 1
+```
+
+### Visual Details
+
+The track should make the speed difference obvious at a glance. Use one consistent color for `slow` and one for `fast` across the whole chapter. The straight-path finish sign and the loop-path meet badge should help children see why the same movement rule answers different questions.
+
+### Interaction Flow
+
+1. Dash introduces the slow and fast racers.
+2. The learner steps them along a straight path and sees fast reach the end first.
+3. The scene switches to a loop and shows that fast eventually catches slow.
+4. A compare card explains middle-finding versus cycle-detection.
+5. The screen closes with a short reminder that speed itself is the tool.
+
+### Component Usage
+
+- Scene Card
+- Path toggle control
+- Slow / fast marker chips
+- Compare panel
+- Start-lesson CTA
+
 ## Intuition
 
 Imagine two kids walking on stepping stones.
@@ -236,6 +299,69 @@ class ListNode {
 
 # Lesson 1: Find the Middle of a Linked List
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that when fast reaches the end, slow lands in the middle.
+
+### Habitat
+
+`Hallway Halfway`
+
+### Primary Mascot
+
+`Dash the Rabbit`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Hallway Halfway
+- Lesson title: Find the Middle of a Linked List
+- Progress chip: 1/6
+
+Scene:
+- A straight hallway of linked-list stepping stones
+- A slow marker and a fast marker starting together
+- A glowing middle badge that appears when fast reaches the end
+
+Support strip:
+- "Fast moves twice as quickly."
+- "When fast reaches the end, slow is near the middle."
+
+Action zone:
+- Step both markers
+- Watch fast approach null
+- Tap the middle node when it is revealed
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+Keep the hallway simple so the learner focuses on movement. The null sign at the end should be clear, and the middle badge should appear calmly when fast finishes. The second-middle rule for even-length lists should be shown with a gentle side note.
+
+### Interaction Flow
+
+1. Dash places both markers on the head node.
+2. The learner advances slow by one and fast by two.
+3. The scene repeats until fast reaches the end.
+4. Slow glows to show the middle node.
+5. A short note explains why even-sized lists return the second middle.
+
+### Component Usage
+
+- Scene Card
+- Slow / fast markers
+- Middle badge
+- Step controls
+- Hint card
+
 ## Problem
 
 Given the `head` of a linked list, return the middle node.
@@ -382,6 +508,69 @@ Why do we move fast by 2?
 
 # Lesson 2: Detect a Cycle in a Linked List
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that if fast and slow ever meet again, the list must have a cycle.
+
+### Habitat
+
+`Carousel Chain`
+
+### Primary Mascot
+
+`Dash the Rabbit`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Carousel Chain
+- Lesson title: Detect a Cycle in a Linked List
+- Progress chip: 2/6
+
+Scene:
+- A linked-list path that can loop back into a carousel
+- A slow marker and a fast marker moving on the chain
+- A meet spark where both land on the same node
+
+Support strip:
+- "If the path loops, fast can catch slow."
+- "A meeting means there is a cycle."
+
+Action zone:
+- Run the markers step by step
+- Watch for a meeting
+- Decide cycle or no cycle
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The looping part of the list should be visually obvious without becoming messy. Use a bright meet spark when both markers land on the same node. The no-cycle version should still feel complete and not like a failure state.
+
+### Interaction Flow
+
+1. Dash starts the two markers on the list.
+2. The learner advances them and watches their relative positions.
+3. In the looped version, fast eventually catches slow.
+4. The meet spark confirms a cycle.
+5. The lesson compares this with a straight list where fast reaches null instead.
+
+### Component Usage
+
+- Scene Card
+- Meet spark badge
+- Cycle / no-cycle toggle
+- Step controls
+- Hint card
+
 ## Problem
 
 Given the `head` of a linked list, return `true` if the list contains a cycle. Otherwise, return `false`.
@@ -515,6 +704,69 @@ The fast and slow meeting itself is enough.
 
 # Lesson 3: Find the Length of a Cycle
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that once fast and slow meet, we can walk around the loop and count how many nodes are inside it.
+
+### Habitat
+
+`Loop Measure Garden`
+
+### Primary Mascot
+
+`Dash the Rabbit`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Loop Measure Garden
+- Lesson title: Find the Length of a Cycle
+- Progress chip: 3/6
+
+Scene:
+- A looped chain with a highlighted meeting point
+- A counting marker walking one step at a time around the loop
+- A cycle-length counter board
+
+Support strip:
+- "Start at the meeting point."
+- "Walk until you return, and count each step."
+
+Action zone:
+- Begin counting from the meet node
+- Advance one step at a time
+- Stop when the marker returns to the start
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The counting route should be clean and circular so the learner sees that only the loop is being measured. The counter board should increase one by one with each move. The meeting point should remain highlighted the whole time.
+
+### Interaction Flow
+
+1. Dash marks the meeting point found by fast and slow.
+2. The learner starts a counting marker there.
+3. The marker walks around the loop one node at a time.
+4. The counter increases until the marker returns to the meeting point.
+5. The lesson explains that this total is the cycle length.
+
+### Component Usage
+
+- Scene Card
+- Meeting-point badge
+- Counting marker
+- Counter board
+- Hint card
+
 ## Problem
 
 Given the `head` of a linked list, return the length of the cycle if one exists. Otherwise, return `0`.
@@ -636,6 +888,69 @@ Why can we count the cycle after slow and fast meet?
 ---
 
 # Lesson 4: Find the Start of a Cycle
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach how one pointer from head and one pointer from the meeting point can meet at the start of the cycle.
+
+### Habitat
+
+`Secret Loop Gate`
+
+### Primary Mascot
+
+`Dash the Rabbit`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Secret Loop Gate
+- Lesson title: Find the Start of a Cycle
+- Progress chip: 4/6
+
+Scene:
+- A linked path entering a hidden loop
+- One marker at head and one marker at the meeting point
+- A glowing gate at the cycle start
+
+Support strip:
+- "Reset one pointer to head."
+- "Move both one step at a time."
+
+Action zone:
+- Place one marker back at head
+- Move both pointers together
+- Watch where they meet
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+This screen should emphasize the mystery of the cycle entrance while still staying readable. The cycle start gate should not glow until the final meeting happens. Keep the two markers distinct so the reset rule is easy to follow.
+
+### Interaction Flow
+
+1. Dash marks the meeting point inside the loop.
+2. One marker jumps back to head.
+3. The learner moves both markers one step at a time.
+4. The markers meet at the glowing loop gate.
+5. The support strip names that node as the cycle start.
+
+### Component Usage
+
+- Scene Card
+- Reset animation
+- Dual-pointer markers
+- Cycle-start gate badge
+- Hint card
 
 ## Problem
 
@@ -769,6 +1084,69 @@ The important thing is to understand the pattern:
 ---
 
 # Lesson 5: Happy Number
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that fast and slow pointers can also track repeating number processes, not just linked lists.
+
+### Habitat
+
+`Number Cloud Mill`
+
+### Primary Mascot
+
+`Dash the Rabbit`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Number Cloud Mill
+- Lesson title: Happy Number
+- Progress chip: 5/6
+
+Scene:
+- A number machine that turns one number into the next
+- A slow bubble and a fast bubble following the number trail
+- A happy sun badge for 1 and a loop cloud for repeated cycles
+
+Support strip:
+- "This is still a loop, even without nodes."
+- "Fast and slow can track repeated number changes."
+
+Action zone:
+- Compute the next number
+- Move slow once and fast twice
+- Decide happy or stuck in a loop
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The number machine should feel magical but structured. Each transformed number should appear in a cloud bubble so the repeated process is easy to track. The `1` ending should feel bright and calm, while looped outcomes should look informative rather than scary.
+
+### Interaction Flow
+
+1. Dash shows how one number turns into the next.
+2. Slow advances one transformation while fast advances two.
+3. The learner watches for either `1` or a repeated meeting.
+4. The happy sun appears if the process reaches `1`.
+5. The lesson explains that loops can happen in number processes too.
+
+### Component Usage
+
+- Scene Card
+- Number transformation bubbles
+- Happy / loop result badges
+- Step controls
+- Hint card
 
 ## Problem
 
@@ -915,6 +1293,69 @@ Why is this chapter pattern useful here even though there is no linked list?
 ---
 
 # Lesson 6: Is Palindrome Linked List
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that we can find the middle, reverse part of the list, and then compare both halves to test for a palindrome.
+
+### Habitat
+
+`Mirror River Chain`
+
+### Primary Mascot
+
+`Dash the Rabbit`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Mirror River Chain
+- Lesson title: Is Palindrome Linked List
+- Progress chip: 6/6
+
+Scene:
+- A linked chain crossing a mirror river
+- A middle marker, a reversed second-half section, and compare glows
+- A reflection badge when both halves match
+
+Support strip:
+- "Find the middle first."
+- "Reverse one side, then compare step by step."
+
+Action zone:
+- Locate the middle
+- Reverse the second half
+- Compare both sides
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The mirror-river metaphor should reinforce the idea of matching halves. Keep the middle marker clear and the reversed half visually distinct. Comparison glows should light up in pairs so children can see the reflection idea.
+
+### Interaction Flow
+
+1. Dash helps the learner find the middle with fast and slow.
+2. The second half reverses beside the river.
+3. The learner compares the two halves node by node.
+4. Matching pairs light up together.
+5. The reflection badge appears if every pair matches.
+
+### Component Usage
+
+- Scene Card
+- Middle marker
+- Reverse-half visual block
+- Pair compare glows
+- Hint card
 
 ## Problem
 
@@ -1085,6 +1526,69 @@ sometimes one problem uses more than one pattern.
 
 # Chapter Review
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Review the core fast-and-slow pointer clues: middle, meeting, cycle, loop length, cycle start, and repeated number processes.
+
+### Habitat
+
+`Speed Strategy Board`
+
+### Primary Mascot
+
+`Dash the Rabbit`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Speed Strategy Board
+- Screen title: Chapter Review
+- Progress chip: Review
+
+Scene:
+- A board with six mini race-track and linked-list scenes
+- Tool chips for middle, cycle, length, start, loop, palindrome
+- A speed legend for slow = 1 and fast = 2
+
+Support strip:
+- "Ask what the different speeds will reveal."
+- "Look for middle or loop clues."
+
+Action zone:
+- Match each mini-scene to the right goal
+- Explain what the meeting means
+- Sort clue cards to the correct pattern
+
+Navigation:
+- Replay
+- Hint
+- Open mastery
+```
+
+### Visual Details
+
+The review board should look like a coach's planning wall with clean mini diagrams and strong marker colors. Keep the speed legend visible so the movement rule stays anchored. Use tiny scene snapshots rather than dense text.
+
+### Interaction Flow
+
+1. Dash introduces the review as a pattern-matching challenge.
+2. The learner taps a mini-scene and names its goal.
+3. Clue cards slide into the correct review slot.
+4. The support strip explains the reasoning in one short sentence.
+5. A next-step card opens mastery.
+
+### Component Usage
+
+- Review board
+- Goal chips
+- Mini scene cards
+- Mascot speech bubble
+- Next-step panel
+
 ## What you learned
 
 In this chapter, you learned that fast and slow pointers help us use **speed differences** to learn things about a structure or process.
@@ -1143,6 +1647,69 @@ Think about fast and slow pointers when you see:
 ---
 
 # Mastery Check
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Check whether the learner can choose and use fast and slow pointers with less guidance.
+
+### Habitat
+
+`Champion Loop Arena`
+
+### Primary Mascot
+
+`Dash the Rabbit`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Champion Loop Arena
+- Screen title: Mastery Check
+- Progress chip: Mastery
+
+Scene:
+- One focused linked-list or number-loop challenge
+- Slow and fast markers already in place
+- A result badge area above the arena
+
+Support strip:
+- "What will the speed difference show here?"
+- "Choose the next move before the answer appears."
+
+Action zone:
+- Predict what happens next
+- Solve one short challenge
+- Explain why the pattern works
+
+Navigation:
+- Replay
+- Hint
+- Finish challenge
+```
+
+### Visual Details
+
+The mastery arena should feel focused and slightly special without becoming loud. Keep the slow and fast colors consistent with the chapter so the learner relies on recognition. The result area should stay clean and readable.
+
+### Interaction Flow
+
+1. Dash presents a challenge with limited coaching.
+2. The learner predicts the next slow and fast positions.
+3. The scene updates and reveals the result.
+4. A short explanation prompt asks what the speed difference showed.
+5. The mastery badge or retry message appears.
+
+### Component Usage
+
+- Challenge scene card
+- Prediction prompt
+- Reflection prompt
+- Result feedback card
+- Hint card
 
 Try these before looking at the answers.
 

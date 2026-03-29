@@ -67,6 +67,70 @@ In this chapter, we will learn:
 
 # Introduction to Linked Lists
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that a linked list is a chain of boxes called nodes, and each node points to where to go next.
+
+### Habitat
+
+`Treasure Trail`
+
+### Primary Mascot
+
+`Tango the Turtle`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Treasure Trail
+- Screen title: Introduction to Linked Lists
+- Progress chip: Intro
+
+Scene:
+- A winding path of treasure chests
+- Each chest shows a value badge
+- A big arrow tag on each chest labeled "next"
+- A head sign at the first chest and a null sign at the end
+
+Support strip:
+- "A node is one box in the chain."
+- "The pointer says where to go next."
+
+Action zone:
+- Tap a chest to reveal value and next
+- Follow the arrows from head to null
+- Compare array vs linked list with a visual card
+
+Navigation:
+- Replay
+- Hint
+- Start lesson 1
+```
+
+### Visual Details
+
+The trail should feel like a treasure hunt so following `next` feels natural. Each node should look like a sturdy little chest with two clear compartments: one for the value and one for the pointer note. The `head` sign and `null` sign should be large and unmistakable.
+
+### Interaction Flow
+
+1. Tango introduces the treasure trail as a chain of clue boxes.
+2. The learner taps a node and sees its value and its `next` arrow.
+3. The path highlights from `head` through each node until `null`.
+4. A compare card shows how arrays sit side by side while linked lists connect one by one.
+5. The lesson ends by naming `node`, `head`, `next`, and `null` in child-friendly language.
+
+### Component Usage
+
+- Scene Card
+- Node detail card
+- Mascot speech bubble
+- Compare panel for array vs linked list
+- Start-lesson CTA
+
 ## Intuition
 
 Imagine a line of treasure chests.
@@ -268,6 +332,69 @@ In this chapter:
 
 # Lesson 1: Traverse a Linked List
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach how to walk through a linked list safely from `head` to `null`.
+
+### Habitat
+
+`Clue Walk`
+
+### Primary Mascot
+
+`Tango the Turtle`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Clue Walk
+- Lesson title: Traverse a Linked List
+- Progress chip: 1/6
+
+Scene:
+- A row of clue stones connected by arrows
+- A current marker standing on one node
+- A finish sign at null
+
+Support strip:
+- "Start at head."
+- "Visit the node, then move to next."
+
+Action zone:
+- Read the current node value
+- Move current to next
+- Stop when current becomes null
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The connected stones should make the one-way path obvious. The current marker should stand clearly on exactly one node at a time. The `null` finish sign should feel like a safe stopping point, not an error.
+
+### Interaction Flow
+
+1. Tango places the current marker on `head`.
+2. The learner reads the value of the current node.
+3. The current marker moves along the arrow to the next node.
+4. The path repeats until the finish sign at `null`.
+5. The lesson explains that traversal means walking the list one node at a time.
+
+### Component Usage
+
+- Scene Card
+- Current-node marker
+- Value readout chip
+- Step controls
+- Hint card
+
 ## Problem
 
 Given the `head` of a linked list, print or collect all the values from start to end.
@@ -415,6 +542,69 @@ Why do we stop when `current === null`?
 
 # Lesson 2: Search for a Value
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach how to search through a linked list by checking each node until the target is found or the list ends.
+
+### Habitat
+
+`Badge Hunt Bridge`
+
+### Primary Mascot
+
+`Tango the Turtle`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Badge Hunt Bridge
+- Lesson title: Search for a Value
+- Progress chip: 2/6
+
+Scene:
+- A chain bridge of linked nodes
+- A target badge shown above the bridge
+- A current marker checking one node at a time
+
+Support strip:
+- "Check this node."
+- "If it is not the target, follow next."
+
+Action zone:
+- Compare current value to target
+- Move to next node
+- Decide found or not found
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+Make the target badge large and persistent so the learner never loses the search goal. Each node check should feel like lifting a little cover and comparing it to the target. Found moments should glow green, and not-found endings should stay calm and clear.
+
+### Interaction Flow
+
+1. Tango shows the target badge before the search begins.
+2. The learner checks the current node value.
+3. If it does not match, the marker follows `next`.
+4. The search ends at either a match or `null`.
+5. The support strip explains why linked lists search one node at a time.
+
+### Component Usage
+
+- Scene Card
+- Target badge
+- Current-node checker
+- Found / not-found feedback card
+- Hint card
+
 ## Problem
 
 Given the `head` of a linked list and a target value, return `true` if the value is in the list. Otherwise, return `false`.
@@ -542,6 +732,69 @@ A linked list search often feels like array search, but remember:
 ---
 
 # Lesson 3: Insert at the End
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that inserting at the end means walking to the last node and changing its pointer to the new node.
+
+### Habitat
+
+`Train Car Yard`
+
+### Primary Mascot
+
+`Tango the Turtle`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Train Car Yard
+- Lesson title: Insert at the End
+- Progress chip: 3/6
+
+Scene:
+- A train of linked cars
+- A new car waiting beside the track
+- A glowing pointer hook on the last car
+
+Support strip:
+- "Walk to the last node first."
+- "Then connect its next pointer to the new node."
+
+Action zone:
+- Traverse to the final car
+- Spot the null pointer
+- Attach the new car
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The train metaphor makes "attach at the end" immediately understandable. The last car should show a clear `null` hook before insertion. When the new car connects, the pointer line should animate into place so the change feels physical.
+
+### Interaction Flow
+
+1. Tango walks the learner through the train one car at a time.
+2. The final car with `null` is highlighted.
+3. The new car is brought into place beside the last car.
+4. The `next` pointer changes to connect the new car.
+5. The lesson repeats that we changed a pointer, not the whole list.
+
+### Component Usage
+
+- Scene Card
+- New-node waiting card
+- Pointer hook highlight
+- Step cards
+- Success badge
 
 ## Problem
 
@@ -678,6 +931,69 @@ If `head` is `null`, there is no last node to connect to.
 ---
 
 # Lesson 4: Delete a Node by Value
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that deleting a node means reconnecting the chain so it skips over the node we want to remove.
+
+### Habitat
+
+`Bridge Repair Bay`
+
+### Primary Mascot
+
+`Tango the Turtle`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Bridge Repair Bay
+- Lesson title: Delete a Node by Value
+- Progress chip: 4/6
+
+Scene:
+- A chain of bridge planks as linked nodes
+- A target plank marked for removal
+- A previous marker and current marker showing the repair move
+
+Support strip:
+- "Find the node before the one you remove."
+- "Reconnect the chain so it skips the target."
+
+Action zone:
+- Track previous and current
+- Identify the target node
+- Update previous.next to skip the target
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+This scene should make the reconnection step easy to see. Use one color for `previous`, one for `current`, and a soft warning outline on the target node. When the repair happens, the chain should visibly skip the removed plank.
+
+### Interaction Flow
+
+1. Tango explains that removal is really a reconnection job.
+2. The learner tracks `previous` and `current` as the scan moves forward.
+3. The target node is found and highlighted.
+4. `previous.next` redraws to point past the target.
+5. The support strip explains that the removed node is no longer in the chain.
+
+### Component Usage
+
+- Scene Card
+- Previous / current markers
+- Reconnect animation
+- Warning outline on target node
+- Hint card
 
 ## Problem
 
@@ -832,6 +1148,69 @@ We are changing which node points to which.
 ---
 
 # Lesson 5: Reverse a Linked List
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that reversing a linked list means changing each pointer so the arrows point backward instead of forward.
+
+### Habitat
+
+`River Turnaround`
+
+### Primary Mascot
+
+`Tango the Turtle`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- River Turnaround
+- Lesson title: Reverse a Linked List
+- Progress chip: 5/6
+
+Scene:
+- A river path of linked rafts
+- Three markers: previous, current, next
+- Arrow ropes that flip direction as the reversal happens
+
+Support strip:
+- "Save next before you change the pointer."
+- "Flip one arrow at a time."
+
+Action zone:
+- Save next
+- Reverse current.next
+- Move previous and current forward
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+Reversal should feel careful, not chaotic. The three markers need strong visual roles so children can track them without getting lost. Each flipped rope should animate slowly enough to show that one pointer is changing at a time.
+
+### Interaction Flow
+
+1. Tango introduces the three helper markers: `previous`, `current`, and `next`.
+2. The learner saves `next` before any pointer flips.
+3. The current arrow rope is reversed.
+4. The markers advance and repeat the process.
+5. The scene ends with the whole river chain pointing the other way.
+
+### Component Usage
+
+- Scene Card
+- Three-marker helper row
+- Rope-flip animation
+- Process step cards
+- Hint card
 
 ## Problem
 
@@ -1011,6 +1390,69 @@ That is why we save `nextNode` first.
 ---
 
 # Lesson 6: Merge Two Sorted Linked Lists
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that merging two sorted linked lists means always choosing the smaller front node and building one new sorted chain.
+
+### Habitat
+
+`Twin Stream Merge`
+
+### Primary Mascot
+
+`Tango the Turtle`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Twin Stream Merge
+- Lesson title: Merge Two Sorted Linked Lists
+- Progress chip: 6/6
+
+Scene:
+- Two sorted node streams flowing toward a middle path
+- Front-node spotlights on both input lists
+- A merged trail growing in the center
+
+Support strip:
+- "Look at the front of both lists."
+- "Pick the smaller one and connect it next."
+
+Action zone:
+- Compare the two front nodes
+- Append the smaller node
+- Move forward in the list you used
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The two-stream layout should make comparison easy at a glance. The merged trail in the middle should grow one node at a time so the learner can watch the sorted result being built. Use calm highlights instead of clutter because there are already three visible chains.
+
+### Interaction Flow
+
+1. Tango shows the front node from both sorted lists.
+2. The learner compares the two values.
+3. The smaller node moves into the merged trail.
+4. Only that list advances to its next node.
+5. The scene repeats until one list ends, then the rest connects.
+
+### Component Usage
+
+- Scene Card
+- Front-node spotlights
+- Growing merged-chain panel
+- Compare badge
+- Hint card
 
 ## Problem
 
@@ -1200,6 +1642,69 @@ When building a linked list answer from left to right, a dummy node often makes 
 
 # Chapter Review
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Review the main linked-list moves: traverse, search, insert, delete, reverse, and merge.
+
+### Habitat
+
+`Pointer Workshop`
+
+### Primary Mascot
+
+`Tango the Turtle`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Pointer Workshop
+- Screen title: Chapter Review
+- Progress chip: Review
+
+Scene:
+- A workshop board with six mini chain scenes
+- Tool chips labeled traverse, search, insert, delete, reverse, merge
+- A head and null legend pinned to the side
+
+Support strip:
+- "Look for the pointer move that changes the chain."
+- "Say what each marker is doing."
+
+Action zone:
+- Match each mini-scene to its pointer move
+- Explain what changed in the chain
+- Sort vocabulary cards to the right example
+
+Navigation:
+- Replay
+- Hint
+- Open mastery
+```
+
+### Visual Details
+
+The review should feel like a workshop wall full of repair cards and chain diagrams. Keep the node visuals consistent with earlier lessons so the learner recognizes the same objects in smaller recap scenes. The legend for `head`, `next`, and `null` should stay visible.
+
+### Interaction Flow
+
+1. Tango opens the workshop board with six mini-scenes.
+2. The learner taps a mini-scene and chooses its pointer move.
+3. Vocabulary cards snap to the correct recap panel.
+4. A short explanation confirms what changed in the chain.
+5. The screen points forward to mastery.
+
+### Component Usage
+
+- Review board
+- Tool chips
+- Mini scene cards
+- Mascot speech bubble
+- Next-step panel
+
 ## What you learned
 
 In this chapter, you learned that:
@@ -1257,6 +1762,70 @@ Compare two lists and build one sorted result.
 ---
 
 # Mastery Check
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Check whether the learner can trace and update linked-list pointers with much less support.
+
+### Habitat
+
+`Pointer Challenge Dock`
+
+### Primary Mascot
+
+`Tango the Turtle`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Pointer Challenge Dock
+- Screen title: Mastery Check
+- Progress chip: Mastery
+
+Scene:
+- One focused linked-list challenge on a dock board
+- Visible head marker
+- A target action card such as insert, delete, or reverse
+- Result badge area
+
+Support strip:
+- "Watch the pointers carefully."
+- "Choose the safe next move."
+
+Action zone:
+- Predict the next pointer change
+- Solve one short chain problem
+- Explain why the chain still works afterward
+
+Navigation:
+- Replay
+- Hint
+- Finish challenge
+```
+
+### Visual Details
+
+This screen should feel focused and slightly more serious than the lessons, but still safe and kid-friendly. Keep the chain large and readable. The result badge should celebrate correct pointer reasoning without adding visual noise.
+
+### Interaction Flow
+
+1. Tango presents a short linked-list challenge with less coaching.
+2. The learner predicts the next safe pointer move.
+3. The chain updates to show the result.
+4. A reflection prompt asks why the list still connects correctly.
+5. The mastery badge or retry message appears.
+
+### Component Usage
+
+- Challenge scene card
+- Prediction prompt
+- Reflection prompt
+- Result feedback card
+- Hint card
 
 Try these before looking at the answers.
 

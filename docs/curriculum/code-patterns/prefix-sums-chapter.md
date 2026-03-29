@@ -66,6 +66,69 @@ In this chapter, we will learn:
 
 # Introduction to Prefix Sums
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that a prefix sum is a running total from the start, and that these stored totals can answer later questions quickly.
+
+### Habitat
+
+`Running Total Trail`
+
+### Primary Mascot
+
+`Poppy the Squirrel`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Running Total Trail
+- Screen title: Introduction to Prefix Sums
+- Progress chip: Intro
+
+Scene:
+- A row of stepping-stone numbers
+- A second row of running-total lanterns building from left to right
+- A subtraction bridge showing how one range answer is found
+
+Support strip:
+- "Build the totals once."
+- "Then answer later questions with subtraction."
+
+Action zone:
+- Step through the array from left to right
+- Watch the running total grow
+- Test one range-sum question with the subtraction bridge
+
+Navigation:
+- Replay
+- Hint
+- Start lesson 1
+```
+
+### Visual Details
+
+The two-row layout should make it obvious that the prefix row is built from the original row. Running-total lanterns should brighten one by one as the sum grows. The subtraction bridge should visually connect "total up to right" and "total before left."
+
+### Interaction Flow
+
+1. Poppy introduces the idea of saving totals as you walk.
+2. The learner moves left to right, building the running-total row.
+3. A range question appears over part of the trail.
+4. The subtraction bridge highlights which prefix totals to use.
+5. The support strip explains that this is precomputing to save time later.
+
+### Component Usage
+
+- Scene Card
+- Running-total lantern row
+- Subtraction bridge callout
+- Query highlight strip
+- Start-lesson CTA
+
 ## Intuition
 
 A **prefix sum** is the total from the start up to a certain position.
@@ -263,6 +326,69 @@ In this chapter:
 
 # Lesson 1: Range Sum Query
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach the core prefix-sum trick: use two stored totals to answer a range-sum question fast.
+
+### Habitat
+
+`Question Bridge`
+
+### Primary Mascot
+
+`Poppy the Squirrel`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Question Bridge
+- Lesson title: Range Sum Query
+- Progress chip: 1/6
+
+Scene:
+- An array row and a matching prefix row
+- A highlighted query range from left to right
+- Two selected prefix totals with a subtraction card between them
+
+Support strip:
+- "The range answer hides inside two stored totals."
+- "Take the big total and subtract what came before."
+
+Action zone:
+- Build or reveal the prefix row
+- Choose left and right for the query
+- Subtract the right pair of totals
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+Keep the query range bright and easy to see. The subtraction card should sit between the two chosen prefix totals so the operation feels physical, not abstract. The `left = 0` shortcut should appear as a small helper note rather than a separate distraction.
+
+### Interaction Flow
+
+1. Poppy highlights the query range on the original array.
+2. The learner finds the prefix total at `right`.
+3. The learner finds the prefix total just before `left`.
+4. The subtraction card produces the range answer.
+5. A helper note explains the special case when `left` is `0`.
+
+### Component Usage
+
+- Scene Card
+- Query highlight strip
+- Prefix-total selectors
+- Subtraction card
+- Hint card
+
 ## Problem
 
 Given an array `nums`, answer queries of this form:
@@ -405,6 +531,69 @@ Why do we subtract `prefix[left - 1]`?
 
 # Lesson 2: Count the Running Totals
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach how to build cumulative totals step by step from left to right.
+
+### Habitat
+
+`Acorn Counter Path`
+
+### Primary Mascot
+
+`Poppy the Squirrel`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Acorn Counter Path
+- Lesson title: Count the Running Totals
+- Progress chip: 2/6
+
+Scene:
+- A path of daily number stones
+- A basket that carries the current total forward
+- A result row filling with running totals
+
+Support strip:
+- "Keep carrying the total forward."
+- "Each new total includes everything before it."
+
+Action zone:
+- Add the next number to the basket total
+- Place the new running total in the result row
+- Compare original numbers to cumulative totals
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+This screen should feel rhythmic and repetitive in a good way. The basket should visually carry the current total from one stone to the next. The result row should grow steadily so the learner sees the pattern.
+
+### Interaction Flow
+
+1. Poppy starts the basket with the first number.
+2. The learner adds the next value to the carried total.
+3. A new cumulative value appears in the result row.
+4. The process repeats until every position has a running total.
+5. The support strip explains that each total remembers everything before it.
+
+### Component Usage
+
+- Scene Card
+- Carry basket
+- Running-total row
+- Step controls
+- Hint card
+
 ## Problem
 
 Given an array of numbers, return an array where each position stores the total sum from the start up to that point.
@@ -507,6 +696,69 @@ A running total is one of the most basic forms of a prefix sum.
 ---
 
 # Lesson 3: Find Pivot Index
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that a pivot index is a balancing point where the left sum and right sum are equal.
+
+### Habitat
+
+`Balance Board Grove`
+
+### Primary Mascot
+
+`Poppy the Squirrel`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Balance Board Grove
+- Lesson title: Find Pivot Index
+- Progress chip: 3/6
+
+Scene:
+- A number row above a seesaw balance board
+- A current pivot marker on one position
+- Left-sum and right-sum bowls on each side of the board
+
+Support strip:
+- "A pivot balances the left side and right side."
+- "Use stored totals so you do not recount everything."
+
+Action zone:
+- Move the pivot marker
+- Compute left sum and right sum
+- Check whether the board balances
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The balance board should make equality feel visual and immediate. The left and right bowls should fill with the sums on each side of the pivot. A balanced glow should appear only when both sides match.
+
+### Interaction Flow
+
+1. Poppy places the pivot marker on one index.
+2. The learner reads the left sum and right sum using stored totals.
+3. The balance board tilts or balances depending on the comparison.
+4. The pivot marker moves until a balanced spot is found or all options are used.
+5. The support strip explains why prefix totals make these comparisons quick.
+
+### Component Usage
+
+- Scene Card
+- Pivot marker
+- Left / right sum bowls
+- Balance board
+- Hint card
 
 ## Problem
 
@@ -655,6 +907,69 @@ How do we compute the right sum quickly?
 ---
 
 # Lesson 4: Subarray Sum Equals K
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that prefix sums plus a hash map can count how many earlier totals make the current total differ by `k`.
+
+### Habitat
+
+`Echo Sum Forest`
+
+### Primary Mascot
+
+`Poppy the Squirrel`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Echo Sum Forest
+- Lesson title: Subarray Sum Equals K
+- Progress chip: 4/6
+
+Scene:
+- A path of prefix-total markers through a forest
+- A target sign for k
+- A memory board that remembers earlier prefix sums
+
+Support strip:
+- "k means the goal sum."
+- "Ask whether an earlier total is exactly current minus k."
+
+Action zone:
+- Walk to the next prefix total
+- Compute current minus k
+- Check the memory board for matching earlier totals
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+This is one of the trickier lessons, so the scene should keep the math visible and concrete. The memory board should look like labeled forest signs storing earlier totals. The `current - k` clue should appear as a friendly helper bubble, not a heavy formula wall.
+
+### Interaction Flow
+
+1. Poppy moves to the next prefix-total marker.
+2. The learner computes `current - k`.
+3. The memory board is checked for earlier matching totals.
+4. Each match means one valid subarray ending here.
+5. The support strip explains that the map remembers which earlier totals we need.
+
+### Component Usage
+
+- Scene Card
+- Prefix-total markers
+- Memory board
+- `Current - k` helper bubble
+- Hint card
 
 ## Problem
 
@@ -807,6 +1122,69 @@ This is one of the most important "prefix sum + hash map" patterns in coding pra
 
 # Lesson 5: Find the Largest Altitude
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that running totals can track height changes and reveal the highest point reached.
+
+### Habitat
+
+`Mountain Glide Path`
+
+### Primary Mascot
+
+`Poppy the Squirrel`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Mountain Glide Path
+- Lesson title: Find the Largest Altitude
+- Progress chip: 5/6
+
+Scene:
+- A trail of height-change arrows
+- A mountain line rising and falling with the running total
+- A highest-peak flag marking the best altitude so far
+
+Support strip:
+- "Add each height change to the current altitude."
+- "Keep the highest altitude you ever reach."
+
+Action zone:
+- Apply each gain or loss
+- Update the altitude line
+- Move the highest-peak flag when needed
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The mountain line should make the cumulative idea feel natural: each step changes the current height rather than replacing it. Gains and losses should use simple up and down arrows. The highest-peak flag should move only when a new maximum appears.
+
+### Interaction Flow
+
+1. Poppy starts at altitude zero.
+2. The learner applies each gain or loss in order.
+3. The mountain line rises or falls with the running total.
+4. A peak flag updates whenever a higher altitude is reached.
+5. The lesson explains that this is a running total in disguise.
+
+### Component Usage
+
+- Scene Card
+- Gain / loss arrows
+- Altitude line
+- Highest-peak flag
+- Hint card
+
 ## Problem
 
 A biker starts at altitude `0`.
@@ -923,6 +1301,69 @@ Sometimes a single running total is enough.
 ---
 
 # Lesson 6: Product of Array Except Self
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that we can build left products and right products so each answer uses everything except the current position.
+
+### Habitat
+
+`Mirror Mill Workshop`
+
+### Primary Mascot
+
+`Poppy the Squirrel`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Mirror Mill Workshop
+- Lesson title: Product of Array Except Self
+- Progress chip: 6/6
+
+Scene:
+- A row of number gears
+- A left-product ribbon and a right-product ribbon
+- A center answer tile for the current position
+
+Support strip:
+- "Use everything to the left and everything to the right."
+- "Skip the current gear itself."
+
+Action zone:
+- Build left products
+- Build right products
+- Combine them for each answer slot
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+This lesson is more advanced, so the left and right ribbons need strong visual separation. The current gear should be clearly skipped while the two ribbons feed into the answer tile. Keep the explanation concrete and avoid overloading the screen with formulas.
+
+### Interaction Flow
+
+1. Poppy builds the left-product ribbon across the row.
+2. A second pass builds the right-product ribbon.
+3. The learner focuses on one current gear at a time.
+4. The left and right ribbons combine into the answer tile while skipping the current gear.
+5. The support strip explains that this is like prefix thinking with products instead of sums.
+
+### Component Usage
+
+- Scene Card
+- Left-product ribbon
+- Right-product ribbon
+- Answer tile
+- Hint card
 
 ## Problem
 
@@ -1061,6 +1502,69 @@ This lesson is not literally a sum problem, but it uses the same “prefix on th
 
 # Chapter Review
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Review running totals, range subtraction, balancing, `k`-difference matching, altitude tracking, and left/right product building.
+
+### Habitat
+
+`Precompute Review Camp`
+
+### Primary Mascot
+
+`Poppy the Squirrel`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Precompute Review Camp
+- Screen title: Chapter Review
+- Progress chip: Review
+
+Scene:
+- A review board with six mini running-total scenes
+- Tool chips for range, running total, pivot, k, altitude, product
+- A banner that says "build once, answer faster"
+
+Support strip:
+- "Ask what you can save ahead of time."
+- "Then use the saved totals or products to answer quickly."
+
+Action zone:
+- Match each lesson to its saved-information idea
+- Sort clue chips to the right mini-scene
+- Explain what was precomputed
+
+Navigation:
+- Replay
+- Hint
+- Open mastery
+```
+
+### Visual Details
+
+The review camp should feel like a planning board for saved work. Keep the precompute banner visible because it summarizes the whole chapter. Each mini-scene should reuse the simple two-row or helper-ribbon visuals from the lessons.
+
+### Interaction Flow
+
+1. Poppy opens the review board of saved-work scenes.
+2. The learner matches each lesson to its main precomputed idea.
+3. Clue chips snap into the right mini-scene.
+4. The support strip explains what information got saved ahead of time.
+5. The next-step panel opens mastery.
+
+### Component Usage
+
+- Review board
+- Tool chips
+- Mini scene cards
+- Mascot speech bubble
+- Next-step panel
+
 ## What you learned
 
 In this chapter, you learned that prefix sums help us answer repeated range questions quickly.
@@ -1113,6 +1617,69 @@ Think about prefix sums when you see:
 ---
 
 # Mastery Check
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Check whether the learner can spot what should be precomputed and how to use it with less support.
+
+### Habitat
+
+`Swift Answer Ridge`
+
+### Primary Mascot
+
+`Poppy the Squirrel`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Swift Answer Ridge
+- Screen title: Mastery Check
+- Progress chip: Mastery
+
+Scene:
+- One focused range or running-total challenge
+- A visible original row and one helper row or board
+- A result badge area above the challenge
+
+Support strip:
+- "What should be saved first?"
+- "How will that saved information answer the question faster?"
+
+Action zone:
+- Predict the helper structure
+- Solve one short challenge
+- Explain why the saved information helped
+
+Navigation:
+- Replay
+- Hint
+- Finish challenge
+```
+
+### Visual Details
+
+This screen should stay focused and clear, with the helper structure as the most important design element. The result area should stay calm and readable. Keep the original row and helper row visually linked.
+
+### Interaction Flow
+
+1. Poppy presents a final precompute challenge with limited guidance.
+2. The learner predicts what helper row or board should be built.
+3. The scene uses that saved information to solve the question.
+4. A short reflection asks why this was faster than recomputing.
+5. The mastery result appears.
+
+### Component Usage
+
+- Challenge scene card
+- Helper-row builder
+- Prediction prompt
+- Reflection prompt
+- Result feedback card
 
 Try these before looking at the answers.
 

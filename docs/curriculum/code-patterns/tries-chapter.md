@@ -72,6 +72,69 @@ In this chapter, we will learn:
 
 # Introduction to Tries
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that a trie is a word tree where shared beginnings use the same path.
+
+### Habitat
+
+`Word Tree Grove`
+
+### Primary Mascot
+
+`Luma the Firefly`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Word Tree Grove
+- Screen title: Introduction to Tries
+- Progress chip: Intro
+
+Scene:
+- A glowing word tree with letter nodes
+- Shared prefix paths lit in one color
+- A word-end sparkle where a full word finishes
+
+Support strip:
+- "A prefix is the beginning of a word."
+- "Words that start the same can share the same path."
+
+Action zone:
+- Add words into the tree
+- Watch shared prefix paths light up
+- Tap a node to see children and word-end status
+
+Navigation:
+- Replay
+- Hint
+- Start lesson 1
+```
+
+### Visual Details
+
+The word tree should feel magical but organized, with each letter node large enough to read. Shared paths should glow clearly so children can see how the trie saves repeated beginnings. Word-end sparkles should feel special without cluttering the tree.
+
+### Interaction Flow
+
+1. Luma introduces the tree as a place where words walk letter by letter.
+2. The learner inserts words like `cat`, `car`, and `cap`.
+3. Shared beginning letters stay on one common path.
+4. Word-end sparkles appear only where a full word finishes.
+5. The support strip explains the idea of a prefix in child-friendly language.
+
+### Component Usage
+
+- Scene Card
+- Shared-path highlight
+- Word-end sparkle
+- Node detail popover
+- Start-lesson CTA
+
 ## Intuition
 
 A trie stores words one letter at a time.
@@ -267,6 +330,69 @@ In this chapter:
 
 # Lesson 1: Implement a Trie
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that inserting a word means walking letter by letter, creating missing nodes, and marking the end of the word.
+
+### Habitat
+
+`Letter Lantern Arbor`
+
+### Primary Mascot
+
+`Luma the Firefly`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Letter Lantern Arbor
+- Lesson title: Implement a Trie
+- Progress chip: 1/6
+
+Scene:
+- A root node at the top and branching letter lanterns below
+- A current-letter token moving through the trie
+- A create-node glow for missing letters
+
+Support strip:
+- "Move one letter at a time."
+- "Create a node only if it is missing."
+
+Action zone:
+- Read the next letter
+- Reuse or create the next node
+- Mark the last node as a whole word
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The create-node glow should make it obvious when the trie grows. Reused letters should light softly instead, showing that no new node was needed. Keep the root visible to anchor every insertion path.
+
+### Interaction Flow
+
+1. Luma starts at the root with a word token.
+2. The learner moves one letter at a time through the trie.
+3. Missing letters create new nodes with a gentle glow.
+4. Existing letters reuse the current path.
+5. The last node gets marked as a complete word ending.
+
+### Component Usage
+
+- Scene Card
+- Current-letter token
+- Create-node glow
+- Word-end marker
+- Hint card
+
 ## Problem
 
 Build a trie that supports:
@@ -407,6 +533,69 @@ Why do `"cat"` and `"car"` share part of the trie?
 
 # Lesson 2: Search for a Word
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that exact word search must follow every letter and end on a node marked as a full word.
+
+### Habitat
+
+`Exact Match Hollow`
+
+### Primary Mascot
+
+`Luma the Firefly`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Exact Match Hollow
+- Lesson title: Search for a Word
+- Progress chip: 2/6
+
+Scene:
+- A trie with a glowing search path
+- A target word badge above the tree
+- A final `isWord` lantern at the ending node
+
+Support strip:
+- "You must follow every letter."
+- "The path is not enough. The last node must end a whole word."
+
+Action zone:
+- Walk through the target letters
+- Check whether each child exists
+- Test the ending node's word flag
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The ending node needs a clear word-end lantern so children see the difference between "path exists" and "full word exists." The target word badge should stay visible throughout the search. Missing-path moments should be clear but gentle.
+
+### Interaction Flow
+
+1. Luma shows the target word above the tree.
+2. The learner follows each letter through the trie.
+3. If a needed child is missing, the search stops.
+4. If the path exists, the last node's `isWord` lantern is checked.
+5. The lesson explains why exact search needs both the path and the word ending.
+
+### Component Usage
+
+- Scene Card
+- Target word badge
+- Search path highlight
+- `isWord` lantern
+- Hint card
+
 ## Problem
 
 Given a trie and a word, return `true` if the exact word exists in the trie. Otherwise, return `false`.
@@ -543,6 +732,69 @@ The final node must also mark a complete word.
 ---
 
 # Lesson 3: Starts With Prefix
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that prefix search only needs the path for the beginning letters, not a full word ending.
+
+### Habitat
+
+`Prefix Path Meadow`
+
+### Primary Mascot
+
+`Luma the Firefly`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Prefix Path Meadow
+- Lesson title: Starts With Prefix
+- Progress chip: 3/6
+
+Scene:
+- A trie with one highlighted beginning path
+- A prefix badge above the tree
+- A branch fan-out showing that more letters may continue afterward
+
+Support strip:
+- "For a prefix, the path is enough."
+- "You do not need to stop at a full word ending."
+
+Action zone:
+- Walk through the prefix letters
+- Check whether the path exists
+- Reveal the possible word branches below
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The branch fan-out should visually communicate that many words can continue after the prefix. Keep the prefix badge short and readable. This screen should feel lighter than exact search because the final `isWord` check is not required.
+
+### Interaction Flow
+
+1. Luma presents a short prefix badge like `ca`.
+2. The learner follows those letters through the trie.
+3. If the path exists, the prefix succeeds immediately.
+4. The scene reveals possible branches that can continue from there.
+5. The support strip explains that prefix search stops earlier than exact word search.
+
+### Component Usage
+
+- Scene Card
+- Prefix badge
+- Path highlight
+- Branch fan-out preview
+- Hint card
 
 ## Problem
 
@@ -681,6 +933,69 @@ Why is a trie especially good at prefix checking?
 ---
 
 # Lesson 4: Add and Search Word
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that wildcard search may branch into more than one possible letter path.
+
+### Habitat
+
+`Mystery Dot Maze`
+
+### Primary Mascot
+
+`Luma the Firefly`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Mystery Dot Maze
+- Lesson title: Add and Search Word
+- Progress chip: 4/6
+
+Scene:
+- A trie with one or more search paths glowing
+- A search badge that may contain a dot wildcard
+- A split-path star where the wildcard can try many branches
+
+Support strip:
+- "A dot means any one letter."
+- "Try every branch that could fit."
+
+Action zone:
+- Insert new words into the trie
+- Search a pattern with or without dots
+- Follow one or many branches until a match is found
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The split-path star is the most important visual here because it shows branching search. Keep the wildcard dot large and obvious in the search badge. Multiple active paths should stay readable and not become a tangled mess.
+
+### Interaction Flow
+
+1. Luma inserts a few words into the trie.
+2. The learner starts searching a pattern with a dot wildcard.
+3. At the dot, the search branches into all possible child paths.
+4. Matching branches continue until a full word ending is found.
+5. The support strip explains that the dot can stand for any single letter.
+
+### Component Usage
+
+- Scene Card
+- Search badge
+- Split-path star
+- Multi-path highlight
+- Hint card
 
 ## Problem
 
@@ -835,6 +1150,69 @@ That is why it is more advanced than basic trie search.
 
 # Lesson 5: Count Words With a Prefix
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that once we reach a prefix node, we can count how many complete words live below it.
+
+### Habitat
+
+`Glow Branch Counting Den`
+
+### Primary Mascot
+
+`Luma the Firefly`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Glow Branch Counting Den
+- Lesson title: Count Words With a Prefix
+- Progress chip: 5/6
+
+Scene:
+- A trie with one prefix node highlighted
+- Word-end sparkles below that prefix
+- A count bubble tallying how many word endings appear in the subtree
+
+Support strip:
+- "Find the prefix first."
+- "Then count full words below that point."
+
+Action zone:
+- Walk to the prefix node
+- Explore the subtree below it
+- Count the word-end markers
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The prefix node should act like a doorway into the subtree we need to count. Keep the word-end sparkles distinct from regular nodes. The count bubble should rise one by one as endings are found.
+
+### Interaction Flow
+
+1. Luma walks the learner to the prefix node.
+2. The subtree below that node lights up.
+3. The learner counts the full-word endings under that branch.
+4. The count bubble updates with each found word.
+5. The lesson explains that the count comes from words starting with that prefix.
+
+### Component Usage
+
+- Scene Card
+- Prefix-node doorway
+- Word-end sparkles
+- Count bubble
+- Hint card
+
 ## Problem
 
 Given a trie and a prefix, return how many stored words begin with that prefix.
@@ -967,6 +1345,69 @@ A trie makes prefix-based counting possible because words sharing the same prefi
 
 # Lesson 6: Longest Common Prefix
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that the longest common prefix is the shared path that all words can follow before splitting.
+
+### Habitat
+
+`Shared Trail Lookout`
+
+### Primary Mascot
+
+`Luma the Firefly`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Shared Trail Lookout
+- Lesson title: Longest Common Prefix
+- Progress chip: 6/6
+
+Scene:
+- A trie built from several words
+- One bright shared trail from the root
+- A split marker where the words stop agreeing
+
+Support strip:
+- "Keep walking while there is only one next letter."
+- "Stop when the paths split or a word ends."
+
+Action zone:
+- Follow the shared trail from the root
+- Watch for a split or word ending
+- Record the letters collected so far
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The shared trail should feel like a single safe walkway through the trie. The split marker needs to be clear because that is where the common prefix stops. The collected-prefix strip should grow letter by letter as the learner walks.
+
+### Interaction Flow
+
+1. Luma starts at the root with multiple words already inserted.
+2. The learner follows the single shared path as long as there is only one choice.
+3. The collected-prefix strip records each shared letter.
+4. When the path splits or a word ends, the walk stops.
+5. The support strip explains that the collected letters are the longest common prefix.
+
+### Component Usage
+
+- Scene Card
+- Shared-trail highlight
+- Split marker
+- Collected-prefix strip
+- Hint card
+
 ## Problem
 
 Given an array of strings, return the longest common prefix shared by all the strings.
@@ -1088,6 +1529,69 @@ When does the longest common prefix stop in the trie?
 
 # Chapter Review
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Review insert, exact search, prefix search, wildcard branching, subtree counting, and longest shared beginnings.
+
+### Habitat
+
+`Word Forest Review Deck`
+
+### Primary Mascot
+
+`Luma the Firefly`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Word Forest Review Deck
+- Screen title: Chapter Review
+- Progress chip: Review
+
+Scene:
+- A review wall with six mini trie scenes
+- Tool chips for insert, exact, prefix, wildcard, count, common prefix
+- A prefix reminder banner across the top
+
+Support strip:
+- "Ask what letters must be shared."
+- "Then decide whether you need a path, a word ending, or a branch search."
+
+Action zone:
+- Match each mini-scene to the right trie idea
+- Sort clue chips to the correct lesson
+- Explain what the highlighted node means
+
+Navigation:
+- Replay
+- Hint
+- Open mastery
+```
+
+### Visual Details
+
+The review deck should feel like a wall of glowing word trails. Keep the prefix reminder banner visible because shared beginnings are the heart of the chapter. Mini-scenes should be simple and not overcrowded with letters.
+
+### Interaction Flow
+
+1. Luma opens the review wall of trie scenes.
+2. The learner matches each scene to its trie idea.
+3. Clue chips slide into the right recap panel.
+4. The support strip explains the reasoning in one short sentence.
+5. The next-step panel opens mastery.
+
+### Component Usage
+
+- Review board
+- Tool chips
+- Mini trie scenes
+- Mascot speech bubble
+- Next-step panel
+
 ## What you learned
 
 In this chapter, you learned that a trie stores words one letter at a time in a tree-like structure.
@@ -1146,6 +1650,69 @@ Think about tries when you see:
 ---
 
 # Mastery Check
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Check whether the learner can read a trie path and choose the right search or prefix action with less support.
+
+### Habitat
+
+`Prefix Challenge Lanterns`
+
+### Primary Mascot
+
+`Luma the Firefly`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Prefix Challenge Lanterns
+- Screen title: Mastery Check
+- Progress chip: Mastery
+
+Scene:
+- One focused trie challenge
+- A highlighted active path and target word or prefix badge
+- A result badge area above the tree
+
+Support strip:
+- "What does this path prove?"
+- "Choose whether you are checking a word, a prefix, or many possible branches."
+
+Action zone:
+- Predict the next path step
+- Solve one short trie challenge
+- Explain what the ending node tells you
+
+Navigation:
+- Replay
+- Hint
+- Finish challenge
+```
+
+### Visual Details
+
+This screen should stay calm and centered on one active path. The target badge should be clear and readable, and the result area should remain simple. Word-end and branch clues need to be visually distinct.
+
+### Interaction Flow
+
+1. Luma presents a final trie challenge with limited guidance.
+2. The learner studies the active path and target badge.
+3. The learner chooses the next step or final answer.
+4. A short reflection asks what the ending node or branch clue meant.
+5. The mastery result appears.
+
+### Component Usage
+
+- Challenge scene card
+- Active-path highlight
+- Target badge
+- Reflection prompt
+- Result feedback card
 
 Try these before looking at the answers.
 

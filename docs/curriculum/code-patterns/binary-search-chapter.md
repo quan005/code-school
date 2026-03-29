@@ -66,6 +66,69 @@ In this chapter, we will learn:
 
 # Introduction to Binary Search
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that sorted order lets us check the middle and throw away half of the remaining choices.
+
+### Habitat
+
+`Maple Library`
+
+### Primary Mascot
+
+`Milo the Owl`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Maple Library
+- Screen title: Introduction to Binary Search
+- Progress chip: Intro
+
+Scene:
+- A long sorted bookshelf of numbered books
+- Left, right, and middle bookmarks
+- A faded overlay on the half we can throw away
+
+Support strip:
+- "Because it is sorted, the middle gives us a clue."
+- "After one check, we can ignore half."
+
+Action zone:
+- Jump to the middle book
+- Compare it to the target
+- Fade out the half that cannot contain the answer
+
+Navigation:
+- Replay
+- Hint
+- Start lesson 1
+```
+
+### Visual Details
+
+The library metaphor should make ordered searching feel calm and smart. Left, right, and middle bookmarks must stay visible the whole time. When a half gets removed, fade it softly rather than making it disappear abruptly so children can still understand what was discarded.
+
+### Interaction Flow
+
+1. Milo introduces a sorted shelf and a target book.
+2. The learner jumps to the middle bookmark.
+3. A compare bubble explains whether the middle is too small, too big, or correct.
+4. The impossible half fades away.
+5. The scene repeats once more so the learner feels the shrinking search area.
+
+### Component Usage
+
+- Scene Card
+- Left / right / middle bookmarks
+- Compare bubble
+- Discarded-half overlay
+- Start-lesson CTA
+
 ## Intuition
 
 Suppose you have this sorted array:
@@ -259,6 +322,69 @@ In this chapter:
 
 # Lesson 1: Find a Target in a Sorted Array
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach the classic binary search move: check the middle and search only the half that still makes sense.
+
+### Habitat
+
+`Target Shelf`
+
+### Primary Mascot
+
+`Milo the Owl`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Target Shelf
+- Lesson title: Find a Target in a Sorted Array
+- Progress chip: 1/6
+
+Scene:
+- A sorted shelf of number books
+- A target badge above the shelf
+- Left, right, and middle markers
+
+Support strip:
+- "Middle first."
+- "Then choose left half or right half."
+
+Action zone:
+- Compute the middle
+- Compare the middle to the target
+- Move left or right inward
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+This screen should keep the shelf simple so the changing search range is easy to follow. The target badge should stay pinned at the top. Each new middle choice should glow briefly before the discarded side fades.
+
+### Interaction Flow
+
+1. Milo places the target badge above the sorted shelf.
+2. The learner checks the middle value.
+3. A compare bubble says too small, too large, or found.
+4. Left or right moves inward to the smaller search zone.
+5. The scene repeats until the target is found or the range disappears.
+
+### Component Usage
+
+- Scene Card
+- Target badge
+- Left / right / middle markers
+- Compare bubble
+- Hint card
+
 ## Problem
 
 Given a sorted array of integers `nums` and a target value, return the index of the target if it exists. Otherwise, return `-1`.
@@ -375,6 +501,69 @@ Why does binary search need the array to be sorted?
 ---
 
 # Lesson 2: Search Insert Position
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that when the target is missing, binary search can still show where it belongs.
+
+### Habitat
+
+`Bookmark Row`
+
+### Primary Mascot
+
+`Milo the Owl`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Bookmark Row
+- Lesson title: Search Insert Position
+- Progress chip: 2/6
+
+Scene:
+- A sorted row of books with open gaps between them
+- Left, right, and middle markers
+- A glowing insert slot when the target is not found
+
+Support strip:
+- "If the number is missing, ask where it should go."
+- "The answer is the first place that fits."
+
+Action zone:
+- Search as usual
+- Narrow the range
+- Reveal the insert slot
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The row should make "where does it belong?" feel visible by showing subtle insertion gaps. The final insert slot should glow gently at the moment the search ends. Keep the tone helpful, not like a miss or failure.
+
+### Interaction Flow
+
+1. Milo starts a normal binary search for the target.
+2. The learner narrows the search zone the same way as before.
+3. When the target is absent, the range closes around its correct location.
+4. A glowing slot appears to show the insert position.
+5. The support strip explains that this position keeps the list sorted.
+
+### Component Usage
+
+- Scene Card
+- Insert-slot highlight
+- Left / right / middle markers
+- Compare bubble
+- Hint card
 
 ## Problem
 
@@ -506,6 +695,69 @@ Sometimes it is about finding the correct place.
 ---
 
 # Lesson 3: First Occurrence of a Number
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that after finding a matching value, we may still need to keep searching left to find the first copy.
+
+### Habitat
+
+`Echo Shelf Left`
+
+### Primary Mascot
+
+`Milo the Owl`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Echo Shelf Left
+- Lesson title: First Occurrence of a Number
+- Progress chip: 3/6
+
+Scene:
+- A sorted shelf with repeated matching books
+- A candidate badge on one found match
+- A left-search arrow showing we should keep checking earlier copies
+
+Support strip:
+- "A match does not always mean stop."
+- "For the first copy, keep searching left."
+
+Action zone:
+- Find a match
+- Save it as a candidate
+- Move right inward to the left half
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The repeated books should make duplicates obvious. The candidate badge should stay on the best answer found so far while the active middle keeps moving. The left-search arrow should gently remind the learner why the search continues.
+
+### Interaction Flow
+
+1. Milo finds a matching middle value.
+2. The learner saves that position as a candidate.
+3. Instead of stopping, the right marker moves left to keep searching earlier positions.
+4. The candidate updates only if an earlier match appears.
+5. The final candidate is revealed as the first occurrence.
+
+### Component Usage
+
+- Scene Card
+- Candidate badge
+- Left-search arrow
+- Left / right / middle markers
+- Hint card
 
 ## Problem
 
@@ -640,6 +892,69 @@ Why do we keep searching left after finding the target?
 
 # Lesson 4: Last Occurrence of a Number
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that after finding a match, we may need to keep searching right to find the last copy.
+
+### Habitat
+
+`Echo Shelf Right`
+
+### Primary Mascot
+
+`Milo the Owl`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Echo Shelf Right
+- Lesson title: Last Occurrence of a Number
+- Progress chip: 4/6
+
+Scene:
+- A sorted shelf with repeated matching books
+- A candidate badge on one found match
+- A right-search arrow showing we should keep checking later copies
+
+Support strip:
+- "A match is only the start."
+- "For the last copy, keep searching right."
+
+Action zone:
+- Find a match
+- Save it as a candidate
+- Move left inward to the right half
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+This screen should mirror the previous lesson closely so the difference between first and last is easy to compare. The right-search arrow needs to be the main change. Repeated copies should stay clearly visible.
+
+### Interaction Flow
+
+1. Milo finds a matching middle value.
+2. The learner saves it as the current candidate.
+3. The left marker moves right to keep searching later copies.
+4. The candidate updates only if a later match is found.
+5. The final candidate is shown as the last occurrence.
+
+### Component Usage
+
+- Scene Card
+- Candidate badge
+- Right-search arrow
+- Left / right / middle markers
+- Hint card
+
 ## Problem
 
 Given a sorted array of integers `nums` that may contain duplicates and a target, return the index of the **last** occurrence of the target.
@@ -753,6 +1068,69 @@ The loop is similar, but the rule for moving left or right changes depending on 
 ---
 
 # Lesson 5: Integer Square Root
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that binary search can work on a number range, not just on an array of values.
+
+### Habitat
+
+`Square Garden`
+
+### Primary Mascot
+
+`Milo the Owl`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Square Garden
+- Lesson title: Integer Square Root
+- Progress chip: 5/6
+
+Scene:
+- A number path from 1 up to the target range
+- A middle guess marker
+- A square tile board that shows mid × mid
+
+Support strip:
+- "Guess the middle number."
+- "Check whether its square is too small or too large."
+
+Action zone:
+- Pick the middle guess
+- Compute mid times mid
+- Move the range left or right
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The square tile board should make `mid × mid` visual, not just numeric. This helps children understand why the comparison matters. The range path should be simple and evenly spaced so number binary search feels familiar.
+
+### Interaction Flow
+
+1. Milo marks the current number range.
+2. The learner chooses the middle guess.
+3. A square tile board builds `mid × mid`.
+4. The range shrinks depending on whether the square is too small or too large.
+5. The final answer is the largest guess whose square does not go over.
+
+### Component Usage
+
+- Scene Card
+- Guess marker
+- Square tile board
+- Left / right / middle range markers
+- Hint card
 
 ## Problem
 
@@ -904,6 +1282,69 @@ It also works when the answer comes from an ordered range of possibilities.
 
 # Lesson 6: Guess Number Higher or Lower
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach binary search as a playful guessing game where each clue removes half the choices.
+
+### Habitat
+
+`Cloud Guess Tower`
+
+### Primary Mascot
+
+`Milo the Owl`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Cloud Guess Tower
+- Lesson title: Guess Number Higher or Lower
+- Progress chip: 6/6
+
+Scene:
+- A tower of numbered cloud doors
+- A current guess badge in the middle
+- A helper sign that says higher, lower, or correct
+
+Support strip:
+- "Always guess near the middle."
+- "Use each clue to throw away half."
+
+Action zone:
+- Make the middle guess
+- Read the higher/lower clue
+- Narrow the range
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+This screen should feel game-like and inviting. The higher/lower clue sign should be large and instant. As ranges shrink, faded cloud doors should make the disappearing choices easy to understand.
+
+### Interaction Flow
+
+1. Milo starts with the full guessing range.
+2. The learner chooses the middle guess.
+3. The clue sign says higher, lower, or correct.
+4. Half of the cloud doors fade away.
+5. The process repeats until the answer is found.
+
+### Component Usage
+
+- Scene Card
+- Guess badge
+- Higher / lower clue sign
+- Faded-range overlay
+- Hint card
+
 ## Problem
 
 A secret number is chosen from `1` to `n`.
@@ -1042,6 +1483,69 @@ Binary search is often the best strategy when your guesses can tell you “too h
 
 # Chapter Review
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Review the main binary-search clues: sorted order, middle check, and how to decide left vs right.
+
+### Habitat
+
+`Library Review Desk`
+
+### Primary Mascot
+
+`Milo the Owl`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Library Review Desk
+- Screen title: Chapter Review
+- Progress chip: Review
+
+Scene:
+- A review desk with six mini shelf and range scenes
+- Tool chips for target, insert, first, last, square root, guess
+- A sorted-order reminder banner
+
+Support strip:
+- "Ask what the middle tells you."
+- "Then decide which half still makes sense."
+
+Action zone:
+- Match each mini-scene to its goal
+- Choose left or right for each clue
+- Explain why sorted order matters
+
+Navigation:
+- Replay
+- Hint
+- Open mastery
+```
+
+### Visual Details
+
+The review desk should feel organized and scholarly without becoming dense. The sorted-order banner should stay visible because it is the most important clue of the whole chapter. Keep mini-scenes simple and familiar.
+
+### Interaction Flow
+
+1. Milo opens the review desk with six mini binary-search scenes.
+2. The learner matches each scene to its problem goal.
+3. Small clue cards ask whether the next move should go left or right.
+4. The support strip confirms the reasoning in short child-friendly language.
+5. The next-step panel opens mastery.
+
+### Component Usage
+
+- Review board
+- Goal chips
+- Mini scene cards
+- Mascot speech bubble
+- Next-step panel
+
 ## What you learned
 
 In this chapter, you learned that binary search uses sorted order to search very quickly.
@@ -1119,6 +1623,69 @@ for large inputs.
 ---
 
 # Mastery Check
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Check whether the learner can use the middle clue to make the next binary-search move independently.
+
+### Habitat
+
+`Halfway Challenge Shelf`
+
+### Primary Mascot
+
+`Milo the Owl`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Halfway Challenge Shelf
+- Screen title: Mastery Check
+- Progress chip: Mastery
+
+Scene:
+- One focused sorted search challenge
+- Left, right, and middle markers already placed
+- A result badge area above the shelf
+
+Support strip:
+- "Read the middle, then choose the half."
+- "Explain why the other half can be ignored."
+
+Action zone:
+- Predict the next move
+- Solve one short search challenge
+- Explain the reason in one sentence
+
+Navigation:
+- Replay
+- Hint
+- Finish challenge
+```
+
+### Visual Details
+
+This screen should stay calm and focused, with the sorted shelf doing most of the teaching. The result area should be clear and not overly celebratory. The ignored half should fade gently after the learner chooses.
+
+### Interaction Flow
+
+1. Milo presents one final sorted search challenge.
+2. The learner reads the middle clue and chooses left, right, or found.
+3. The unused half fades away.
+4. A short reflection asks why that half could be ignored.
+5. The mastery result appears.
+
+### Component Usage
+
+- Challenge scene card
+- Left / right / middle markers
+- Prediction prompt
+- Reflection prompt
+- Result feedback card
 
 Try these before looking at the answers.
 

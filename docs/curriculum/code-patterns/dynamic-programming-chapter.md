@@ -66,6 +66,69 @@ In this chapter, we will learn:
 
 # Introduction to Dynamic Programming
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that dynamic programming solves big problems by saving small answers and building upward from base cases.
+
+### Habitat
+
+`Block Builder Lab`
+
+### Primary Mascot
+
+`Dot the Beaver`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Block Builder Lab
+- Screen title: Introduction to Dynamic Programming
+- Progress chip: Intro
+
+Scene:
+- A staircase or number path built from small answer blocks
+- A base-case shelf holding the first known answers
+- A DP row that fills from left to right
+
+Support strip:
+- "Start with the tiny answers you already know."
+- "Build the next answer from saved smaller ones."
+
+Action zone:
+- Place the base cases
+- Fill the next DP slot
+- Compare repeated work vs saved work
+
+Navigation:
+- Replay
+- Hint
+- Start lesson 1
+```
+
+### Visual Details
+
+The lab should feel constructive and calm. Base cases need their own special shelf so children see that DP has to start somewhere known. The DP row should fill one slot at a time so saving answers feels visual and concrete.
+
+### Interaction Flow
+
+1. Dot places the base-case blocks first.
+2. The learner uses those saved answers to fill the next slot.
+3. A compare card shows how repeated work would happen without saving.
+4. The DP row grows from left to right.
+5. The support strip explains that DP means save and reuse.
+
+### Component Usage
+
+- Scene Card
+- Base-case shelf
+- DP row
+- Compare panel
+- Start-lesson CTA
+
 ## Intuition
 
 Dynamic programming is about solving a big problem by building from smaller answers.
@@ -212,6 +275,69 @@ In this chapter:
 
 # Lesson 1: Fibonacci Number
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that each Fibonacci number is built from the two answers right before it.
+
+### Habitat
+
+`Rabbit Number Run`
+
+### Primary Mascot
+
+`Dot the Beaver`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Rabbit Number Run
+- Lesson title: Fibonacci Number
+- Progress chip: 1/6
+
+Scene:
+- A number path with DP stones from 0 up to n
+- Base-case stones for 0 and 1
+- Two helper arrows feeding into the next Fibonacci stone
+
+Support strip:
+- "Each new number uses the two before it."
+- "Save the old answers so you can build the next one."
+
+Action zone:
+- Read the two previous values
+- Add them to fill the next slot
+- Continue until n is reached
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+Keep the path clean and repetitive so the pattern is obvious. The two helper arrows should always point from `i - 1` and `i - 2` into the next DP stone. Base cases should stay highlighted the whole time.
+
+### Interaction Flow
+
+1. Dot starts with `F(0)` and `F(1)` on the base shelf.
+2. The learner adds the two previous values to create the next one.
+3. The next DP stone fills in.
+4. The process repeats until the target `n` is reached.
+5. The support strip names the recurrence in simple language.
+
+### Component Usage
+
+- Scene Card
+- DP stone row
+- Helper arrows
+- Base-case shelf
+- Hint card
+
 ## Problem
 
 Given `n`, return the `n`th Fibonacci number.
@@ -329,6 +455,69 @@ What two earlier values do we need to compute a Fibonacci number?
 ---
 
 # Lesson 2: Climbing Stairs
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that the number of ways to reach one stair comes from the ways to reach the one-step-below and two-steps-below stairs.
+
+### Habitat
+
+`Step Count Hill`
+
+### Primary Mascot
+
+`Dot the Beaver`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Step Count Hill
+- Lesson title: Climbing Stairs
+- Progress chip: 2/6
+
+Scene:
+- A staircase with one- and two-step hop arrows
+- A DP badge on each stair showing ways to reach it
+- Base-case signs at the first steps
+
+Support strip:
+- "To reach this stair, you came from one step below or two steps below."
+- "Add those saved counts together."
+
+Action zone:
+- Read the previous two stair counts
+- Fill the next stair badge
+- Continue climbing to the top
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The staircase should make the one-step and two-step moves obvious. Each stair badge should display the number of ways to get there. Keep the motion playful so the counting feels like a path-building activity.
+
+### Interaction Flow
+
+1. Dot marks the first small stair answers.
+2. The learner looks one and two stairs back.
+3. Those counts combine to fill the next stair badge.
+4. The process repeats upward.
+5. The top stair shows the total number of ways.
+
+### Component Usage
+
+- Scene Card
+- Stair badges
+- One-step / two-step arrows
+- Base-case signs
+- Hint card
 
 ## Problem
 
@@ -455,6 +644,69 @@ This problem feels like Fibonacci because each answer depends on the two before 
 
 # Lesson 3: Min Cost Climbing Stairs
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that DP can also choose the smaller cost instead of counting ways.
+
+### Habitat
+
+`Coin Step Trail`
+
+### Primary Mascot
+
+`Dot the Beaver`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Coin Step Trail
+- Lesson title: Min Cost Climbing Stairs
+- Progress chip: 3/6
+
+Scene:
+- A staircase with coin costs on each step
+- A DP cost badge for the cheapest way to each step
+- Two incoming arrows showing the possible previous steps
+
+Support strip:
+- "Ask which previous path is cheaper."
+- "Save the smaller total cost."
+
+Action zone:
+- Read the two previous total costs
+- Choose the smaller one plus the current step cost
+- Fill the next cost badge
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The coin costs should be easy to compare at a glance. Keep the DP badge visually different from the raw step cost so children understand "cost on the step" versus "best total cost so far." The smaller path should glow green.
+
+### Interaction Flow
+
+1. Dot shows the cost on each stair.
+2. The learner compares the two possible previous total costs.
+3. The cheaper path is chosen and the current cost is added.
+4. The DP badge for that stair is updated.
+5. The lesson ends with the minimum total cost to reach the top.
+
+### Component Usage
+
+- Scene Card
+- Raw cost labels
+- DP cost badges
+- Smaller-path glow
+- Hint card
+
 ## Problem
 
 You are given an array `cost`, where `cost[i]` is the cost of stepping on step `i`.
@@ -572,6 +824,69 @@ What changes from “Climbing Stairs” to “Min Cost Climbing Stairs”?
 ---
 
 # Lesson 4: House Robber
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that at each house we choose between taking this house or skipping it and keeping the better saved total.
+
+### Habitat
+
+`Lantern Street`
+
+### Primary Mascot
+
+`Dot the Beaver`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Lantern Street
+- Lesson title: House Robber
+- Progress chip: 4/6
+
+Scene:
+- A line of houses with money bags
+- A take-or-skip decision card at each house
+- A best-total badge showing the safest highest amount so far
+
+Support strip:
+- "If you take this house, you must skip the neighbor."
+- "Save the better of take or skip."
+
+Action zone:
+- Compare take vs skip totals
+- Choose the larger saved answer
+- Move to the next house
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The houses should clearly show their money values, and neighboring houses should feel linked so the no-adjacent rule is visible. The take-or-skip card must make both options readable. Avoid crime-heavy visuals; keep it abstract and child-safe.
+
+### Interaction Flow
+
+1. Dot stands at the current house and shows its money bag.
+2. The learner compares the take option to the skip option.
+3. The best-total badge saves the larger answer.
+4. The process continues house by house.
+5. The support strip explains that DP stores the best answer up to each house.
+
+### Component Usage
+
+- Scene Card
+- Take / skip card
+- Best-total badge
+- House value labels
+- Hint card
 
 ## Problem
 
@@ -708,6 +1023,69 @@ This is a “take or skip” DP problem, but unlike backtracking, we only want t
 
 # Lesson 5: Unique Paths
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that each grid cell can inherit its number of paths from the top and left cells.
+
+### Habitat
+
+`Garden Grid Path`
+
+### Primary Mascot
+
+`Dot the Beaver`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Garden Grid Path
+- Lesson title: Unique Paths
+- Progress chip: 5/6
+
+Scene:
+- A garden grid with movement allowed right and down
+- A DP count in each cell
+- Top and left helper arrows feeding into the current cell
+
+Support strip:
+- "This cell gets paths from above and from the left."
+- "Add the saved path counts together."
+
+Action zone:
+- Fill the first row and first column base cases
+- Add top and left counts for each new cell
+- Continue until the bottom-right goal
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The grid should be simple and bright, with movement arrows only to the right and down. Base cases in the first row and first column should be highlighted. Each cell's DP count should be large enough to read easily.
+
+### Interaction Flow
+
+1. Dot fills the easy base-case cells on the top row and left column.
+2. The learner moves through the grid one cell at a time.
+3. Each current cell adds the top and left path counts.
+4. The bottom-right goal cell fills last.
+5. The support strip explains that every cell reuses smaller answers.
+
+### Component Usage
+
+- Scene Card
+- Grid cells
+- Top / left helper arrows
+- Goal cell badge
+- Hint card
+
 ## Problem
 
 A robot is in the top-left corner of an `m x n` grid.
@@ -835,6 +1213,69 @@ Why does each cell use the top and left cells?
 ---
 
 # Lesson 6: Coin Change
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that DP can build the fewest coins needed for each amount from smaller amounts below it.
+
+### Habitat
+
+`Coin Forge Bench`
+
+### Primary Mascot
+
+`Dot the Beaver`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Coin Forge Bench
+- Lesson title: Coin Change
+- Progress chip: 6/6
+
+Scene:
+- A row of amounts from 0 up to the target
+- Coin tools showing allowed denominations
+- A DP badge on each amount showing the fewest coins found so far
+
+Support strip:
+- "Build the best answer for each smaller amount first."
+- "Try each coin and keep the smallest result."
+
+Action zone:
+- Pick a target amount cell
+- Try each coin tool
+- Save the minimum coin count
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The amount row should feel like a workshop bench of target boxes. Coin tools should be clearly labeled by value. The DP badge for impossible or not-yet-solved amounts should stay visually distinct from solved ones.
+
+### Interaction Flow
+
+1. Dot starts from amount `0` as the base case.
+2. The learner moves to the next amount and tests each coin option.
+3. Each coin checks a smaller already-solved amount.
+4. The smallest valid result is saved in the current badge.
+5. The process continues until the target amount is solved.
+
+### Component Usage
+
+- Scene Card
+- Amount row
+- Coin tools
+- Minimum-count badge
+- Hint card
 
 ## Problem
 
@@ -974,6 +1415,69 @@ This problem is a great example of:
 
 # Chapter Review
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Review base cases, repeated subproblems, saved answers, counting DP, minimum DP, and grid DP.
+
+### Habitat
+
+`Builder Review Workshop`
+
+### Primary Mascot
+
+`Dot the Beaver`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Builder Review Workshop
+- Screen title: Chapter Review
+- Progress chip: Review
+
+Scene:
+- A review wall with six mini DP build scenes
+- Tool chips for base case, save, count, minimum, take-or-skip, grid
+- A banner that says "build small, reuse often"
+
+Support strip:
+- "Ask what small answers are needed first."
+- "Then ask how those saved answers build the bigger one."
+
+Action zone:
+- Match each lesson to its DP idea
+- Sort clue chips to the right mini-scene
+- Explain what was saved and reused
+
+Navigation:
+- Replay
+- Hint
+- Open mastery
+```
+
+### Visual Details
+
+The review workshop should feel like a wall of construction plans. The "build small, reuse often" banner should stay visible because it summarizes the chapter well. Mini-scenes should show just enough structure to trigger recognition.
+
+### Interaction Flow
+
+1. Dot opens the review wall of DP scenes.
+2. The learner matches each scene to its main DP idea.
+3. Clue chips slide into the correct recap panel.
+4. The support strip explains what smaller answers were reused.
+5. The next-step panel opens mastery.
+
+### Component Usage
+
+- Review board
+- Tool chips
+- Mini DP scenes
+- Mascot speech bubble
+- Next-step panel
+
 ## What you learned
 
 In this chapter, you learned that dynamic programming helps when:
@@ -1027,6 +1531,69 @@ Think about dynamic programming when you see:
 ---
 
 # Mastery Check
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Check whether the learner can identify the base cases and the build rule for a new DP-style problem with less support.
+
+### Habitat
+
+`Final Build Ridge`
+
+### Primary Mascot
+
+`Dot the Beaver`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Final Build Ridge
+- Screen title: Mastery Check
+- Progress chip: Mastery
+
+Scene:
+- One focused DP challenge
+- A visible base-case area and a partially filled DP row or grid
+- A result badge area above the scene
+
+Support strip:
+- "What tiny answers do you know already?"
+- "What rule builds the next answer?"
+
+Action zone:
+- Predict the base cases
+- Fill one or more DP states
+- Explain the build rule in one sentence
+
+Navigation:
+- Replay
+- Hint
+- Finish challenge
+```
+
+### Visual Details
+
+This screen should stay clear and instructional, with the base-case area and the partially filled DP structure as the main visual anchors. The result badge should be simple and calm. Avoid crowding the scene with too many numbers at once.
+
+### Interaction Flow
+
+1. Dot presents a final DP-style build challenge.
+2. The learner identifies the base cases.
+3. The learner uses the rule to fill the next state or two.
+4. A short reflection asks what smaller answers were reused.
+5. The mastery result appears.
+
+### Component Usage
+
+- Challenge scene card
+- Base-case shelf
+- Partial DP structure
+- Reflection prompt
+- Result feedback card
 
 Try these before looking at the answers.
 

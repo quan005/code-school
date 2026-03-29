@@ -80,6 +80,69 @@ In this chapter, we will learn:
 
 # Introduction to Heaps
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that a heap keeps one most-important item easy to reach, even if the whole collection is not fully sorted.
+
+### Habitat
+
+`Prize Pile Plaza`
+
+### Primary Mascot
+
+`Gizmo the Goat`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Prize Pile Plaza
+- Screen title: Introduction to Heaps
+- Progress chip: Intro
+
+Scene:
+- A playful tree-shaped heap of numbered prizes
+- A glowing top prize pedestal
+- A mode switch for min-heap and max-heap
+
+Support strip:
+- "A heap keeps the top item ready."
+- "k means how many."
+
+Action zone:
+- Toggle min-heap vs max-heap
+- Push a new prize into the heap
+- Pop the top prize and watch the heap fix itself
+
+Navigation:
+- Replay
+- Hint
+- Start lesson 1
+```
+
+### Visual Details
+
+The heap should look like a prize display tree, not a dense technical diagram. The root or top item needs a clear pedestal so children can immediately see what is special about it. The rest of the items should feel grouped but not fully sorted, reinforcing the main idea.
+
+### Interaction Flow
+
+1. Gizmo introduces the heap as a prize pile with one special top spot.
+2. The learner switches between min-heap and max-heap to see the top item change meaning.
+3. A push action adds a new prize and bubbles it into place.
+4. A pop action removes the top prize and shows the heap repairing itself.
+5. The support strip explains that only the top promise matters most.
+
+### Component Usage
+
+- Scene Card
+- Mode toggle
+- Top pedestal badge
+- Push / pop controls
+- Start-lesson CTA
+
 ## Intuition
 
 Suppose you have many numbers:
@@ -353,6 +416,69 @@ In this chapter:
 
 # Lesson 1: Find the K Largest Numbers
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that keeping only `k` big items in a heap is enough when we only care about the top group.
+
+### Habitat
+
+`Trophy Meadow`
+
+### Primary Mascot
+
+`Gizmo the Goat`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Trophy Meadow
+- Lesson title: Find the K Largest Numbers
+- Progress chip: 1/6
+
+Scene:
+- A stream of numbered trophies entering the field
+- A min-heap basket that can hold only k trophies
+- A smallest-in-the-top spotlight inside the basket
+
+Support strip:
+- "Keep only k trophies."
+- "If a bigger one arrives, the smallest of the kept group may leave."
+
+Action zone:
+- Add trophies one by one
+- Check whether the heap size is over k
+- Pop the smallest kept trophy when needed
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The basket should make `k` feel like capacity, not abstract notation. The top of the min-heap needs a spotlight showing that it is the smallest of the kept big group. Use clear keep-or-drop moments when a new trophy arrives.
+
+### Interaction Flow
+
+1. Gizmo begins filling the basket with incoming trophies.
+2. The learner watches the heap grow until it reaches size `k`.
+3. New trophies are compared against the smallest kept trophy.
+4. If the basket gets too full, the smallest kept trophy pops out.
+5. The scene ends with only the `k` largest trophies still kept.
+
+### Component Usage
+
+- Scene Card
+- Capacity basket
+- Heap-size badge
+- Smallest-kept spotlight
+- Hint card
+
 ## Problem
 
 Given an array of numbers `nums` and a number `k`, return the `k` largest numbers.
@@ -553,6 +679,69 @@ Why do we use a min-heap instead of a max-heap here?
 
 # Lesson 2: Kth Largest Number
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that the top of the kept `k`-sized min-heap tells us the kth largest value.
+
+### Habitat
+
+`Medal Ladder`
+
+### Primary Mascot
+
+`Gizmo the Goat`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Medal Ladder
+- Lesson title: Kth Largest Number
+- Progress chip: 2/6
+
+Scene:
+- A row of incoming number medals
+- A min-heap stand holding exactly k medals
+- A kth-place ribbon attached to the heap top
+
+Support strip:
+- "The heap keeps the top k values."
+- "The smallest of those is the kth largest."
+
+Action zone:
+- Fill the heap to size k
+- Replace smaller kept values when bigger ones arrive
+- Read the kth-place ribbon on top
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The kth-place ribbon should make the answer feel explicit. Keep the focus on the top of the min-heap and why it represents the cutoff line for the biggest `k` values. The rest of the medals can stay simple.
+
+### Interaction Flow
+
+1. Gizmo fills the min-heap stand with the first `k` medals.
+2. The learner processes the rest of the medals one by one.
+3. Bigger medals can replace the current smallest kept medal.
+4. The kth-place ribbon remains attached to the heap top.
+5. The support strip explains why the heap top is exactly the kth largest.
+
+### Component Usage
+
+- Scene Card
+- Min-heap stand
+- Kth-place ribbon
+- Incoming medal row
+- Hint card
+
 ## Problem
 
 Given an array of numbers `nums` and a number `k`, return the **kth largest** number.
@@ -673,6 +862,69 @@ Top `k` and kth problems are some of the strongest clues for heaps.
 ---
 
 # Lesson 3: Top K Frequent Elements
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that we can count how often items appear, then use a heap to keep only the top `k` counts.
+
+### Habitat
+
+`Echo Market`
+
+### Primary Mascot
+
+`Gizmo the Goat`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Echo Market
+- Lesson title: Top K Frequent Elements
+- Progress chip: 3/6
+
+Scene:
+- A market shelf of repeated items
+- A count board that turns items into frequency cards
+- A heap podium keeping the top k frequency cards
+
+Support strip:
+- "First count."
+- "Then keep the top k counts."
+
+Action zone:
+- Build the frequency cards
+- Add cards to the heap podium
+- Remove the smallest kept count when needed
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+This screen should have a clear two-stage layout: counting first, heap second. Frequency cards should be easy to read, with the item and its count shown together. The top-`k` podium should feel like a leaderboard.
+
+### Interaction Flow
+
+1. Gizmo counts repeated market items into frequency cards.
+2. The learner places those cards into the heap podium.
+3. The podium keeps only the top `k` frequencies.
+4. Lower-frequency cards fall away when better ones arrive.
+5. The lesson ends by showing the final top `k` frequent items.
+
+### Component Usage
+
+- Scene Card
+- Count board
+- Frequency cards
+- Heap podium
+- Hint card
 
 ## Problem
 
@@ -812,6 +1064,69 @@ That happens a lot in coding practice problems.
 
 # Lesson 4: K Closest Points to the Origin
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that a heap can help keep the `k` closest points while farther points get pushed out.
+
+### Habitat
+
+`Star Field Center`
+
+### Primary Mascot
+
+`Gizmo the Goat`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Star Field Center
+- Lesson title: K Closest Points to the Origin
+- Progress chip: 4/6
+
+Scene:
+- A star field with points scattered around a glowing origin
+- A heap panel keeping the current k closest stars
+- Distance rings around the origin
+
+Support strip:
+- "Measure how far each point is from the center."
+- "Keep only the k closest."
+
+Action zone:
+- Read each point
+- Compare its distance to the farthest kept point
+- Replace the farthest kept point when a closer one appears
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The origin should glow clearly at the center of the field, and the rings should help children feel distance visually before relying on formulas. The heap panel should track the currently kept closest points in a simple list.
+
+### Interaction Flow
+
+1. Gizmo shows the center point and the current candidate stars.
+2. The learner checks each star's distance from the origin.
+3. A closer star can replace the farthest kept candidate.
+4. The heap panel updates the kept group.
+5. The scene finishes with the final `k` closest stars highlighted.
+
+### Component Usage
+
+- Scene Card
+- Distance rings
+- Candidate heap panel
+- Closest-point highlight
+- Hint card
+
 ## Problem
 
 You are given a list of points on a graph.
@@ -939,6 +1254,69 @@ Why do we use squared distance instead of true distance?
 ---
 
 # Lesson 5: Merge K Sorted Lists
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that a min-heap can always tell us which list has the smallest front value next.
+
+### Habitat
+
+`River Merge Mill`
+
+### Primary Mascot
+
+`Gizmo the Goat`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- River Merge Mill
+- Lesson title: Merge K Sorted Lists
+- Progress chip: 5/6
+
+Scene:
+- Several sorted streams feeding into one merge river
+- A min-heap wheel holding the front node from each list
+- An output river growing one value at a time
+
+Support strip:
+- "Put the front value from each list into the heap."
+- "Always take the smallest front value next."
+
+Action zone:
+- Pop the smallest front value
+- Add it to the merged output
+- Push the next value from that same list
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The stream layout should make the idea of many sorted sources feel natural. The heap wheel should clearly represent "front values only," not entire lists. The output river should grow steadily so the merged result feels built in order.
+
+### Interaction Flow
+
+1. Gizmo loads the first value from each stream into the heap wheel.
+2. The learner pops the smallest front value.
+3. That value flows into the output river.
+4. The next value from the same stream enters the heap wheel.
+5. The process repeats until all streams are merged.
+
+### Component Usage
+
+- Scene Card
+- Front-value heap wheel
+- Output river
+- Stream labels
+- Hint card
 
 ## Problem
 
@@ -1105,6 +1483,69 @@ When many sorted sources each have a “current smallest candidate,” a min-hea
 
 # Lesson 6: Connect Ropes with Minimum Cost
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that choosing the two shortest ropes first keeps the total cost as small as possible.
+
+### Habitat
+
+`Rope Workshop`
+
+### Primary Mascot
+
+`Gizmo the Goat`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Rope Workshop
+- Lesson title: Connect Ropes with Minimum Cost
+- Progress chip: 6/6
+
+Scene:
+- A set of rope lengths hanging on hooks
+- A min-heap bin for the shortest ropes
+- A cost meter that increases after each tie
+
+Support strip:
+- "Always tie the two shortest ropes first."
+- "The new combined rope goes back into the heap."
+
+Action zone:
+- Pop the two shortest ropes
+- Add their cost to the meter
+- Push the new combined rope back
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The ropes should be visibly different lengths so the greedy choice is easy to see. The cost meter must update every time two ropes are tied. The new combined rope should look longer and return to the heap bin clearly.
+
+### Interaction Flow
+
+1. Gizmo pulls the two shortest ropes from the min-heap bin.
+2. The learner ties them together and adds that length to the cost meter.
+3. The new combined rope goes back into the heap.
+4. The process repeats until only one rope remains.
+5. The support strip explains why shortest-first keeps the total smaller.
+
+### Component Usage
+
+- Scene Card
+- Min-heap rope bin
+- Cost meter
+- Combined-rope animation
+- Hint card
+
 ## Problem
 
 You are given rope lengths.
@@ -1244,6 +1685,69 @@ That is common in advanced coding practice problems.
 
 # Chapter Review
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Review min-heaps, max-heaps, top-`k`, and the main clues that tell us when a heap is the right tool.
+
+### Habitat
+
+`Priority Review Pavilion`
+
+### Primary Mascot
+
+`Gizmo the Goat`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Priority Review Pavilion
+- Screen title: Chapter Review
+- Progress chip: Review
+
+Scene:
+- A review board with six heap mini-scenes
+- Tool chips for min, max, top-k, priority, merge, cheapest
+- A reminder banner that says "heap top = most important now"
+
+Support strip:
+- "Ask what item should be easiest to get next."
+- "Then choose min-heap or max-heap."
+
+Action zone:
+- Match each lesson to min-heap or max-heap
+- Sort clue chips to the right lesson
+- Explain what the heap top means
+
+Navigation:
+- Replay
+- Hint
+- Open mastery
+```
+
+### Visual Details
+
+The pavilion should feel like a gallery of priority problems. Min and max choices should be visually distinct but not overwhelming. The banner about the heap top should remain visible because it summarizes the chapter's most important idea.
+
+### Interaction Flow
+
+1. Gizmo opens the review board of mini heap scenes.
+2. The learner matches each one to min-heap, max-heap, or top-`k`.
+3. Clue chips snap into place under the right lesson.
+4. The support strip restates the meaning of the heap top.
+5. The next-step panel opens mastery.
+
+### Component Usage
+
+- Review board
+- Tool chips
+- Mini scene cards
+- Mascot speech bubble
+- Next-step panel
+
 ## What you learned
 
 In this chapter, you learned that heaps help us quickly get the most important item:
@@ -1314,6 +1818,69 @@ That is why top-`k` problems often use a heap that may feel reversed at first.
 ---
 
 # Mastery Check
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Check whether the learner can decide what kind of heap to use and what the top item should represent.
+
+### Habitat
+
+`Heap Summit Challenge`
+
+### Primary Mascot
+
+`Gizmo the Goat`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Heap Summit Challenge
+- Screen title: Mastery Check
+- Progress chip: Mastery
+
+Scene:
+- One focused priority challenge
+- A heap mode choice and a visible top pedestal
+- A result badge area above the scene
+
+Support strip:
+- "What should the heap top mean here?"
+- "Pick the heap that makes the next choice easiest."
+
+Action zone:
+- Choose min-heap or max-heap
+- Solve one short challenge
+- Explain why that top item matters
+
+Navigation:
+- Replay
+- Hint
+- Finish challenge
+```
+
+### Visual Details
+
+This screen should stay focused and readable. The top pedestal should remain the visual center because the learner must reason about what belongs there. Keep the result area calm and clear.
+
+### Interaction Flow
+
+1. Gizmo presents a priority problem with minimal coaching.
+2. The learner chooses the heap type and watches the top item update.
+3. A short challenge plays out using that heap.
+4. A reflection prompt asks why the chosen top item helps.
+5. The mastery result appears.
+
+### Component Usage
+
+- Challenge scene card
+- Heap mode toggle
+- Top pedestal
+- Reflection prompt
+- Result feedback card
 
 Try these before looking at the answers.
 

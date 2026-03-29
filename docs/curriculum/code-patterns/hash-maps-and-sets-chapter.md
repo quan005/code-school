@@ -49,6 +49,69 @@ In this chapter, we will learn:
 
 # Introduction to Hash Maps and Sets
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach the difference between a set and a hash map by turning "remembering" into a visible sorting-and-labeling activity.
+
+### Habitat
+
+`Cubby Corner`
+
+### Primary Mascot
+
+`Pico the Fox`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Cubby Corner
+- Screen title: Introduction to Hash Maps and Sets
+- Progress chip: Intro
+
+Scene:
+- A classroom wall with labeled cubbies
+- A sticker board beside the cubbies
+- One "seen" tray and one "remember more" tray
+
+Support strip:
+- "A set remembers if something is here."
+- "A hash map remembers extra information too."
+
+Action zone:
+- Drag an item to the sticker board for set behavior
+- Drag an item to a labeled cubby for map behavior
+- Tap a callout to compare key and value
+
+Navigation:
+- Replay
+- Hint
+- Start lesson 1
+```
+
+### Visual Details
+
+Use a warm classroom scene with big cubby labels and oversized stickers so the difference between "one copy only" and "save extra information" feels physical. The set area should feel simpler and flatter. The cubby area should feel richer because each label opens to reveal stored details.
+
+### Interaction Flow
+
+1. Pico introduces the sticker board and cubbies as two different ways to remember.
+2. The learner places repeated items onto the sticker board and sees duplicates collapse into one.
+3. The learner places named items into cubbies and sees each label hold a value.
+4. A compare panel explains when to choose a set and when to choose a map.
+5. The screen ends with a gentle checkpoint before the first problem lesson.
+
+### Component Usage
+
+- Scene Card
+- Choice cards for set vs map
+- Mascot speech bubble
+- Compare panel
+- Start-lesson CTA
+
 ## Intuition
 
 Imagine your classroom has cubbies.
@@ -262,6 +325,69 @@ In this chapter:
 
 # Lesson 1: Contains Duplicate
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that a set can answer "Have I seen this before?" quickly.
+
+### Habitat
+
+`Sticker Garden`
+
+### Primary Mascot
+
+`Pico the Fox`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Sticker Garden
+- Lesson title: Contains Duplicate
+- Progress chip: 1/6
+
+Scene:
+- A row of number stickers moving onto a garden board
+- A seen basket that holds only one copy of each sticker
+- A duplicate alert bubble when a sticker appears again
+
+Support strip:
+- "Ask: Have I seen this already?"
+- "The set keeps only one copy."
+
+Action zone:
+- Step through each number
+- Watch the set grow
+- Tap when a duplicate appears
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The garden board should feel clean and repetitive so the duplicate moment stands out. Each new sticker should land with a small pop. When a duplicate appears, the alert should glow yellow instead of feeling like an error.
+
+### Interaction Flow
+
+1. Pico places each number sticker into the seen basket.
+2. New numbers slide in and stay on the board.
+3. A repeated number triggers the duplicate bubble immediately.
+4. The learner explains why the set solved the check quickly.
+5. A final card connects the scene back to the word "duplicate."
+
+### Component Usage
+
+- Scene Card
+- Set basket component
+- Duplicate alert chip
+- Step controls
+- Hint card
+
 ## Problem
 
 Given an array of integers, return `true` if any value appears more than once.  
@@ -405,6 +531,69 @@ containsDuplicate([4, 5, 6]) // false
 ---
 
 # Lesson 2: Two Sum
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that a hash map can remember what number we still need and where to find its partner.
+
+### Habitat
+
+`Pairing Post Office`
+
+### Primary Mascot
+
+`Pico the Fox`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Pairing Post Office
+- Lesson title: Two Sum
+- Progress chip: 2/6
+
+Scene:
+- Number packages moving along a post office belt
+- A target sign above the belt
+- Mail slots labeled with needed partner values
+
+Support strip:
+- "Ask: What number do I still need?"
+- "The map helps me look it up fast."
+
+Action zone:
+- Reveal the current number
+- Compute the needed partner
+- Check the mail slots for a match
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+Turn the problem into a postal-matching scene so "lookup" feels concrete. The current number should ride in on a package, and the needed value should appear as a stamped label. Matching slots should glow blue when the answer is ready.
+
+### Interaction Flow
+
+1. Pico reveals the target and the current number package.
+2. The learner computes the missing partner.
+3. The map slots are checked to see if that partner is already there.
+4. If not, the current number gets stored for later.
+5. When a match appears, the belt pauses and celebrates the found pair.
+
+### Component Usage
+
+- Scene Card
+- Target badge
+- Lookup slot map
+- Step card for "current" and "need"
+- Success badge
 
 ## Problem
 
@@ -553,6 +742,69 @@ ask yourself:
 
 # Lesson 3: Valid Anagram
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that counting letters with a hash map helps us compare whether two words use the same letters the same number of times.
+
+### Habitat
+
+`Letter Bakery`
+
+### Primary Mascot
+
+`Pico the Fox`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Letter Bakery
+- Lesson title: Valid Anagram
+- Progress chip: 3/6
+
+Scene:
+- Two word trays filled with letter cookies
+- A counting board with one jar per letter
+- A match meter showing whether the jars end balanced
+
+Support strip:
+- "Count the letters, not just the shapes."
+- "Both words must use the same letters the same number of times."
+
+Action zone:
+- Add cookies from the first tray
+- Remove cookies using the second tray
+- Watch the match meter update
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The bakery metaphor makes counting feel friendly. Each letter cookie should be large and readable. The jar board should make increases and decreases obvious so the learner can see balance rather than memorize rules.
+
+### Interaction Flow
+
+1. Pico pours letter cookies from the first word into matching jars.
+2. The learner watches the counts rise.
+3. The second word removes cookies from those jars.
+4. Balanced jars produce a green match meter.
+5. The lesson ends by naming this idea as counting with a map.
+
+### Component Usage
+
+- Scene Card
+- Counting jars
+- Match meter
+- Mascot helper strip
+- Hint card
+
 ## Problem
 
 Two strings are anagrams if they use the same letters the same number of times.
@@ -694,6 +946,69 @@ Why is a **map** better than a **set** here?
 
 # Lesson 4: First Unique Character
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that we can count first, then scan again to find the first character that appears only once.
+
+### Habitat
+
+`Lantern Lane`
+
+### Primary Mascot
+
+`Pico the Fox`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Lantern Lane
+- Lesson title: First Unique Character
+- Progress chip: 4/6
+
+Scene:
+- A path of glowing letter lanterns
+- A counting board above the path
+- A unique spotlight that lands on the first lantern with count 1
+
+Support strip:
+- "First count everything."
+- "Then walk left to right and find the first count of one."
+
+Action zone:
+- Count each letter
+- Start the second scan
+- Tap the first unique lantern
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The lantern path should encourage a left-to-right walk so the second pass feels natural. The unique spotlight should arrive only after the count board is ready, making the two-pass strategy visible.
+
+### Interaction Flow
+
+1. Pico counts all letters into the board.
+2. The learner sees that counting alone does not answer "first."
+3. A second walk begins along the lantern path.
+4. The first lantern with count `1` gets a bright spotlight.
+5. The support strip explains why this lesson needs two passes.
+
+### Component Usage
+
+- Scene Card
+- Count board
+- Spotlight indicator
+- Two-step process cards
+- Hint card
+
 ## Problem
 
 Given a string `s`, return the index of the first character that appears exactly once.  
@@ -808,6 +1123,69 @@ That is why we count first, and then scan the original string from left to right
 
 # Lesson 5: Intersection of Two Arrays
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that a set can help us find which values appear in both collections.
+
+### Habitat
+
+`Bridge Market`
+
+### Primary Mascot
+
+`Pico the Fox`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Bridge Market
+- Lesson title: Intersection of Two Arrays
+- Progress chip: 5/6
+
+Scene:
+- Two market stalls facing each other
+- A middle bridge tray for shared items
+- A set basket holding the first stall's values
+
+Support strip:
+- "Remember the first group."
+- "Check whether the second group has matches."
+
+Action zone:
+- Load the first stall into the set basket
+- Scan the second stall
+- Drop shared values onto the bridge tray
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+Use two colorful stalls and one bridge tray in the center so "intersection" feels like a meeting place. Shared items should travel across the bridge when matched. Non-shared items should fade back softly instead of feeling rejected.
+
+### Interaction Flow
+
+1. Pico loads all values from the first stall into the set basket.
+2. The learner scans items from the second stall one by one.
+3. Shared items jump onto the bridge tray.
+4. The bridge tray fills with common values only.
+5. The lesson ties the scene back to the word "intersection."
+
+### Component Usage
+
+- Scene Card
+- Set basket
+- Shared-items tray
+- Match chips
+- Hint card
+
 ## Problem
 
 Given two arrays of integers, return an array of their common values.  
@@ -915,6 +1293,69 @@ Why is a set helpful here?
 ---
 
 # Lesson 6: Count the Frequencies
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach how to build a frequency map by increasing the count for each item we see.
+
+### Habitat
+
+`Bell Tower Board`
+
+### Primary Mascot
+
+`Pico the Fox`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Bell Tower Board
+- Lesson title: Count the Frequencies
+- Progress chip: 6/6
+
+Scene:
+- A row of item bells ringing one by one
+- A tally board with labeled count tiles
+- A helper ribbon showing "new item" or "add one more"
+
+Support strip:
+- "If the item is new, start at one."
+- "If it is already there, add one more."
+
+Action zone:
+- Step through the items
+- Watch counts appear and increase
+- Answer what the finished map says
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The tally board should feel neat and rhythmic so frequency-building looks repetitive and learnable. Each count increase should animate as a simple `+1`. Avoid clutter so the learner notices the repeated structure.
+
+### Interaction Flow
+
+1. Pico rings each item bell in order.
+2. New items create a fresh count tile starting at `1`.
+3. Repeated items increase their tile by one.
+4. The learner reads the final board like a summary of the whole list.
+5. The lesson emphasizes that this same pattern powers many later map problems.
+
+### Component Usage
+
+- Scene Card
+- Count tiles
+- `+1` helper ribbon
+- Step controls
+- Summary card
 
 ## Problem
 
@@ -1032,6 +1473,69 @@ If you get good at counting with hash maps, many harder problems become easier.
 
 # Chapter Review
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Review when to choose a set versus a hash map and which strategy fits each problem type.
+
+### Habitat
+
+`Memory Meadow Review Hall`
+
+### Primary Mascot
+
+`Pico the Fox`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Memory Meadow Review Hall
+- Screen title: Chapter Review
+- Progress chip: Review
+
+Scene:
+- A review wall with six problem cards
+- Two large zones: set side and hash map side
+- Tiny icons for seen-before, counting, lookup, and matching
+
+Support strip:
+- "Pick the memory tool that fits the clue."
+- "Start with the question the problem is asking."
+
+Action zone:
+- Sort each problem card into set or map
+- Match strategy icons to lessons
+- Explain one choice in a short sentence
+
+Navigation:
+- Replay
+- Hint
+- Open mastery
+```
+
+### Visual Details
+
+The review hall should feel organized like a museum of memory tools. Keep the set side visually simpler and the map side more information-rich. Strategy icons should be large enough for children to recognize before reading labels.
+
+### Interaction Flow
+
+1. Pico introduces the review as a sorting challenge.
+2. The learner drags lesson cards to the set side or map side.
+3. Strategy icons snap into place under the correct lessons.
+4. The support strip restates why each choice fits.
+5. A next-step card opens the mastery check.
+
+### Component Usage
+
+- Review sorting board
+- Strategy icon chips
+- Problem cards
+- Mascot speech bubble
+- Next-step panel
+
 ## What you learned
 
 In this chapter, you learned that:
@@ -1087,6 +1591,70 @@ In this chapter, you learned that:
 ---
 
 # Mastery Check
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Check whether the learner can independently choose between a set and a hash map and explain why.
+
+### Habitat
+
+`Memory Meadow Challenge Tent`
+
+### Primary Mascot
+
+`Pico the Fox`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Memory Meadow Challenge Tent
+- Screen title: Mastery Check
+- Progress chip: Mastery
+
+Scene:
+- One challenge table with mystery cards
+- A set basket on one side
+- A map cubby board on the other
+- A result badge area above the table
+
+Support strip:
+- "What do you need to remember?"
+- "Choose the tool before you solve the whole problem."
+
+Action zone:
+- Pick set or map
+- Solve a short challenge
+- Explain the choice in one sentence
+
+Navigation:
+- Replay
+- Hint
+- Finish challenge
+```
+
+### Visual Details
+
+The mastery tent should feel focused and slightly special without becoming visually noisy. The set basket and map board should be familiar from earlier screens so the learner can rely on memory rather than fresh instruction. Keep the result area calm and clear.
+
+### Interaction Flow
+
+1. Pico presents a mystery card and gives less guidance than before.
+2. The learner chooses whether the challenge needs a set or a map.
+3. The scene updates to show the chosen tool in action.
+4. A short reflection asks what information had to be remembered.
+5. The result badge shows pass or needs more practice.
+
+### Component Usage
+
+- Challenge scene card
+- Tool choice buttons
+- Reflection prompt
+- Mastery feedback card
+- Hint card
 
 Try answering these before looking at the answers.
 

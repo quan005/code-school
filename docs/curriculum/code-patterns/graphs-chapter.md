@@ -69,6 +69,69 @@ In this chapter, we will learn:
 
 # Introduction to Graphs
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that a graph is a network of nodes and edges, and that graph problems are really questions about connection.
+
+### Habitat
+
+`Connection Map Camp`
+
+### Primary Mascot
+
+`Nova the Fox`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Connection Map Camp
+- Screen title: Introduction to Graphs
+- Progress chip: Intro
+
+Scene:
+- A map of connected cabins as graph nodes
+- Visible path lines as edges
+- A mode switch for directed and undirected arrows
+
+Support strip:
+- "A node is a place or thing."
+- "An edge is the line that connects two nodes."
+
+Action zone:
+- Tap nodes and edges to reveal their roles
+- Toggle directed vs undirected mode
+- Highlight one route through the graph
+
+Navigation:
+- Replay
+- Hint
+- Start lesson 1
+```
+
+### Visual Details
+
+The map should feel playful and clear, like a camp map with cabins and paths. Nodes need to be large and labeled, and edges should be easy to trace visually. Directed mode should add arrowheads without making the map too busy.
+
+### Interaction Flow
+
+1. Nova introduces the map of cabins and paths.
+2. The learner taps a cabin to learn that it is a node.
+3. The learner taps a path to learn that it is an edge.
+4. Directed mode shows one-way arrows, while undirected mode shows two-way connections.
+5. The support strip explains that graph problems ask what is connected to what.
+
+### Component Usage
+
+- Scene Card
+- Node / edge labels
+- Directed-mode toggle
+- Route highlighter
+- Start-lesson CTA
+
 ## Intuition
 
 A graph is a way to show things and the connections between them.
@@ -281,6 +344,69 @@ In this chapter:
 
 # Lesson 1: Traverse a Graph (DFS and BFS)
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that DFS goes deep down one route first, while BFS explores nearby nodes first.
+
+### Habitat
+
+`Trail Network Board`
+
+### Primary Mascot
+
+`Nova the Fox`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Trail Network Board
+- Lesson title: Traverse a Graph (DFS and BFS)
+- Progress chip: 1/6
+
+Scene:
+- A connected graph of trail stops
+- A DFS path marker and a BFS queue tray
+- A visited set badge and visit-order strip
+
+Support strip:
+- "Use visited so you do not loop forever."
+- "DFS goes deep. BFS goes wide."
+
+Action zone:
+- Toggle DFS or BFS mode
+- Step through the graph
+- Watch the visit order build
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+Keep the same graph visible in both modes so the difference comes from traversal behavior. The visited badge should always be present because it is central to safe graph traversal. DFS path highlights should look like one adventurous route, while BFS should light outward layer by layer.
+
+### Interaction Flow
+
+1. Nova starts at one node with an empty visited set.
+2. In DFS mode, the learner follows one path as far as possible.
+3. In BFS mode, the learner uses the queue tray to explore neighbors level by level.
+4. The visit-order strip records each traversal.
+5. The support strip compares deep-first and wide-first movement.
+
+### Component Usage
+
+- Scene Card
+- DFS / BFS toggle
+- Queue tray
+- Visited badge
+- Hint card
+
 ## Problem
 
 Given a graph and a starting node, visit all reachable nodes using:
@@ -462,6 +588,69 @@ Why do graph traversals usually need a visited set?
 
 # Lesson 2: Find if a Path Exists
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that a path exists if we can travel through connected nodes from the start to the goal.
+
+### Habitat
+
+`Bridge Route Quest`
+
+### Primary Mascot
+
+`Nova the Fox`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Bridge Route Quest
+- Lesson title: Find if a Path Exists
+- Progress chip: 2/6
+
+Scene:
+- A graph map with a start flag and a target flag
+- A current route highlight through connected nodes
+- A reachable / blocked result banner
+
+Support strip:
+- "Can you travel from start to target through the connections?"
+- "Keep exploring connected nodes until you find the goal or run out."
+
+Action zone:
+- Start from the source node
+- Explore connected neighbors
+- Decide reachable or not reachable
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The start and target flags need to stand out immediately so the question is concrete. The route highlight should make progress feel visible. A blocked result should show disconnected space, not just a red failure message.
+
+### Interaction Flow
+
+1. Nova places a start flag and a target flag on the map.
+2. The learner explores connected neighbors from the start.
+3. The route highlight grows through reachable nodes.
+4. If the target is reached, the reachable banner appears.
+5. If exploration ends first, the blocked banner explains that no path exists.
+
+### Component Usage
+
+- Scene Card
+- Start / target flags
+- Route highlight
+- Reachable / blocked banner
+- Hint card
+
 ## Problem
 
 Given a graph, a start node, and an end node, return `true` if there is a path from start to end. Otherwise, return `false`.
@@ -593,6 +782,69 @@ hasPath(graph, "A", "X") // false
 ---
 
 # Lesson 3: Count Connected Components
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that connected components are separate groups of nodes that cannot reach each other.
+
+### Habitat
+
+`Friendship Island Board`
+
+### Primary Mascot
+
+`Nova the Fox`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Friendship Island Board
+- Lesson title: Count Connected Components
+- Progress chip: 3/6
+
+Scene:
+- A graph with several disconnected clusters
+- A color fill spreading through one component at a time
+- A component counter banner
+
+Support strip:
+- "One component is one connected group."
+- "Start a new count when you find an unvisited group."
+
+Action zone:
+- Find an unvisited node
+- Traverse its full component
+- Increase the component counter
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+Disconnected clusters should be visually separated enough that the idea of separate groups becomes obvious. The color fill should sweep through one component fully before the next count begins. Keep the component counter visible and steady.
+
+### Interaction Flow
+
+1. Nova spots an unvisited node in one cluster.
+2. The learner explores and colors that whole connected group.
+3. The component counter increases by one.
+4. The process repeats with the next unvisited cluster.
+5. The support strip explains that every new untouched cluster starts a new component.
+
+### Component Usage
+
+- Scene Card
+- Component color fill
+- Counter banner
+- Unvisited-node marker
+- Hint card
 
 ## Problem
 
@@ -728,6 +980,69 @@ Why does each new unvisited start mean a new component?
 ---
 
 # Lesson 4: Number of Islands
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that groups of connected land cells form islands, while water keeps them separated.
+
+### Habitat
+
+`Tide Grid Bay`
+
+### Primary Mascot
+
+`Nova the Fox`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Tide Grid Bay
+- Lesson title: Number of Islands
+- Progress chip: 4/6
+
+Scene:
+- A grid of water and land tiles
+- A flood-fill highlight spreading across one island
+- An island counter badge
+
+Support strip:
+- "Land cells that touch belong to the same island."
+- "Water stops the island from growing."
+
+Action zone:
+- Pick an unvisited land tile
+- Explore all touching land tiles
+- Count one island and continue
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The grid should look like a little bay map, with land and water easy to distinguish. The flood-fill highlight should spread across one island at a time. Keep the island counter calm and readable.
+
+### Interaction Flow
+
+1. Nova finds an unvisited land tile.
+2. The learner flood-fills all connected land around it.
+3. The island counter increases after that region is finished.
+4. The search resumes for the next untouched land tile.
+5. The support strip explains that each separate land region counts once.
+
+### Component Usage
+
+- Scene Card
+- Grid tiles
+- Flood-fill highlight
+- Island counter
+- Hint card
 
 ## Problem
 
@@ -881,6 +1196,69 @@ A grid can often be treated as a graph where each cell connects to neighboring c
 
 # Lesson 5: Clone Graph
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that cloning a graph means making new nodes and reconnecting them in the same pattern without reusing the old nodes.
+
+### Habitat
+
+`Mirror Network Workshop`
+
+### Primary Mascot
+
+`Nova the Fox`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Mirror Network Workshop
+- Lesson title: Clone Graph
+- Progress chip: 5/6
+
+Scene:
+- An original graph on the left and a clone graph on the right
+- A copy map board linking old nodes to new nodes
+- Connection beams recreating edges in the clone
+
+Support strip:
+- "Make a new node for each old node."
+- "Use a map so you do not copy the same node twice."
+
+Action zone:
+- Visit an original node
+- Create its clone if needed
+- Rebuild its neighbor connections on the clone side
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The side-by-side original and clone layout is important for clarity. The copy map board should make the old-to-new pairing visible. Connection beams need to show that the structure is being rebuilt, not shared.
+
+### Interaction Flow
+
+1. Nova selects one original node.
+2. The learner checks the copy map to see whether a clone already exists.
+3. A new clone node is created if needed.
+4. The clone graph gains matching neighbor links.
+5. The support strip explains that the copy should look the same but use different nodes.
+
+### Component Usage
+
+- Scene Card
+- Copy map board
+- Dual-graph layout
+- Connection beams
+- Hint card
+
 ## Problem
 
 Given a node in a connected graph, return a deep copy of the graph.
@@ -1029,6 +1407,69 @@ That is why it is an important graph practice problem.
 ---
 
 # Lesson 6: Course Schedule
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that course prerequisites form a directed graph, and a cycle means the schedule cannot be completed.
+
+### Habitat
+
+`Class Arrow Academy`
+
+### Primary Mascot
+
+`Nova the Fox`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Class Arrow Academy
+- Lesson title: Course Schedule
+- Progress chip: 6/6
+
+Scene:
+- A directed graph of class cards connected by arrow lines
+- A cycle alert loop if prerequisites circle back
+- A finish path banner if the graph stays valid
+
+Support strip:
+- "Arrows mean this class comes first."
+- "A cycle means the plan loops forever."
+
+Action zone:
+- Follow prerequisite arrows
+- Detect whether arrows circle back
+- Decide finishable or not finishable
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+Directed arrows need to be clear and readable because they are the core rule of the lesson. The cycle alert loop should be visually distinct without becoming alarming. The class cards should feel like a real school plan.
+
+### Interaction Flow
+
+1. Nova introduces the class cards and prerequisite arrows.
+2. The learner follows one chain of classes.
+3. If an arrow path circles back, the cycle alert loop appears.
+4. If all arrows move forward cleanly, the finish path banner remains open.
+5. The lesson explains that cycles block completion.
+
+### Component Usage
+
+- Scene Card
+- Directed-arrow graph
+- Cycle alert loop
+- Finish path banner
+- Hint card
 
 ## Problem
 
@@ -1188,6 +1629,69 @@ Why does a cycle make the course schedule impossible?
 
 # Chapter Review
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Review nodes, edges, DFS, BFS, paths, components, islands, graph cloning, and directed dependency cycles.
+
+### Habitat
+
+`Network Review Lodge`
+
+### Primary Mascot
+
+`Nova the Fox`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Network Review Lodge
+- Screen title: Chapter Review
+- Progress chip: Review
+
+Scene:
+- A review wall with six mini graph scenes
+- Tool chips for traverse, path, component, island, clone, cycle
+- A reminder banner that says "graphs are about connections"
+
+Support strip:
+- "Ask what is connected, reachable, or looping."
+- "Then choose the graph idea that matches."
+
+Action zone:
+- Match each mini-scene to the right graph idea
+- Sort clue chips to the correct lesson
+- Explain what the edges are telling you
+
+Navigation:
+- Replay
+- Hint
+- Open mastery
+```
+
+### Visual Details
+
+The review lodge should feel like a map room full of connection sketches. Keep the reminder banner visible because it anchors the whole chapter. Mini-scenes should reuse the same visual language from the lessons to stay familiar.
+
+### Interaction Flow
+
+1. Nova opens the review wall of graph scenes.
+2. The learner matches each scene to its graph concept.
+3. Clue chips slide into the correct recap panel.
+4. The support strip explains the reasoning in one sentence.
+5. The next-step panel opens mastery.
+
+### Component Usage
+
+- Review board
+- Tool chips
+- Mini graph scenes
+- Mascot speech bubble
+- Next-step panel
+
 ## What you learned
 
 In this chapter, you learned that graphs are about nodes and connections.
@@ -1243,6 +1747,69 @@ Think about graphs when you see:
 ---
 
 # Mastery Check
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Check whether the learner can read a graph and choose the right connection-based action with less support.
+
+### Habitat
+
+`Route Challenge Camp`
+
+### Primary Mascot
+
+`Nova the Fox`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Route Challenge Camp
+- Screen title: Mastery Check
+- Progress chip: Mastery
+
+Scene:
+- One focused graph challenge
+- A highlighted start point or active node
+- A result badge area above the graph
+
+Support strip:
+- "What does this graph say about connection?"
+- "Choose the path, group, copy, or cycle answer that fits."
+
+Action zone:
+- Predict the next graph move or answer
+- Solve one short graph challenge
+- Explain what connection clue mattered most
+
+Navigation:
+- Replay
+- Hint
+- Finish challenge
+```
+
+### Visual Details
+
+This screen should stay clean and centered on one graph. The active node or start point must stand out clearly. Keep the result area calm so the graph itself remains the main teacher.
+
+### Interaction Flow
+
+1. Nova presents a final graph challenge with limited guidance.
+2. The learner studies the active node or route.
+3. The learner chooses the next step or final answer.
+4. A short reflection asks which connection clue mattered most.
+5. The mastery result appears.
+
+### Component Usage
+
+- Challenge scene card
+- Active-node highlight
+- Prediction prompt
+- Reflection prompt
+- Result feedback card
 
 Try these before looking at the answers.
 

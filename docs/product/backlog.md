@@ -3,6 +3,8 @@
 ## Scope
 This backlog covers the MVP plan for a content-first, interactive learning app built with Next.js App Router, MDX-authored curriculum, a persisted student progress model, and the full `Code Patterns` chapter sequence authored from the curriculum docs.
 
+For the follow-on lesson redesign pass that aligns every lesson to the sample-lesson screen model in `docs/product/design-system.md`, see [lesson-design-refresh-plan.md](./lesson-design-refresh-plan.md).
+
 ## Planning Assumptions
 - Story points use a Fibonacci scale: `1, 2, 3, 5, 8, 13`.
 - MVP goal: ship one complete chapter end to end with reusable platform primitives.

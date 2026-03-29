@@ -65,6 +65,69 @@ In this chapter, we will learn:
 
 # Introduction to Trees
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that a tree starts at one root and branches into children, leaves, and paths below it.
+
+### Habitat
+
+`Canopy Clearing`
+
+### Primary Mascot
+
+`Birch the Owl`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Canopy Clearing
+- Screen title: Introduction to Trees
+- Progress chip: Intro
+
+Scene:
+- A branching tree with node circles at each branch point
+- Labels for root, parent, child, and leaf
+- A glowing path highlight from the root down one branch
+
+Support strip:
+- "A node is one spot in the tree."
+- "The root is the top starter."
+
+Action zone:
+- Tap nodes to reveal their tree role
+- Highlight one path from root to leaf
+- Compare a tree shape to a linked-list shape
+
+Navigation:
+- Replay
+- Hint
+- Start lesson 1
+```
+
+### Visual Details
+
+The tree should feel warm and storybook-like, with thick branches and large readable node circles. Root and leaf labels need to be especially clear because they anchor the rest of the vocabulary. Keep the compare panel simple so the branching shape stays the focus.
+
+### Interaction Flow
+
+1. Birch introduces the tree from the top root downward.
+2. The learner taps different nodes and sees labels like parent, child, and leaf.
+3. A path highlight traces one route from the root to a leaf.
+4. A compare panel shows how trees branch while linked lists mostly stay in one line.
+5. The intro ends by naming root, child, leaf, edge, and path in simple language.
+
+### Component Usage
+
+- Scene Card
+- Node role labels
+- Path highlighter
+- Compare panel
+- Start-lesson CTA
+
 ## Intuition
 
 A tree starts with a top node called the **root**.
@@ -315,6 +378,69 @@ In this chapter:
 
 # Lesson 1: Traverse a Tree (DFS and BFS)
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that DFS goes deep down one branch first, while BFS visits nodes row by row.
+
+### Habitat
+
+`Trail Choice Tree`
+
+### Primary Mascot
+
+`Birch the Owl`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Trail Choice Tree
+- Lesson title: Traverse a Tree (DFS and BFS)
+- Progress chip: 1/6
+
+Scene:
+- One tree with visible levels
+- A DFS trail marker and a BFS queue tray
+- An order strip that records visited nodes
+
+Support strip:
+- "DFS goes down first."
+- "BFS looks across a whole row first."
+
+Action zone:
+- Toggle DFS or BFS mode
+- Step through node visits
+- Watch the visit order fill in
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The same tree should support both modes so the difference comes from movement, not layout changes. DFS should highlight one path at a time. BFS should light up entire levels more evenly. The visit-order strip should stay visible throughout.
+
+### Interaction Flow
+
+1. Birch starts at the root.
+2. In DFS mode, the learner follows one branch as far as possible before backing up.
+3. In BFS mode, the learner fills the queue tray and visits level by level.
+4. The order strip records the different visit orders.
+5. The support strip compares "go deep" with "go across."
+
+### Component Usage
+
+- Scene Card
+- DFS / BFS toggle
+- Queue tray
+- Visit-order strip
+- Hint card
+
 ## Problem
 
 Given the root of a binary tree, collect the node values using:
@@ -511,6 +637,69 @@ What is the big difference between DFS and BFS?
 
 # Lesson 2: Maximum Depth of a Binary Tree
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that the depth or height of a tree is how many levels it reaches from top to bottom.
+
+### Habitat
+
+`Tall Pine Ridge`
+
+### Primary Mascot
+
+`Birch the Owl`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Tall Pine Ridge
+- Lesson title: Maximum Depth of a Binary Tree
+- Progress chip: 2/6
+
+Scene:
+- A tall layered tree with numbered levels
+- A depth ruler running down the side
+- A deepest-leaf badge at the lowest level
+
+Support strip:
+- "Count how far the deepest leaf is from the root."
+- "The tallest branch decides the answer."
+
+Action zone:
+- Explore left and right subtrees
+- Compare their depths
+- Mark the deepest leaf
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The level lines and depth ruler should make height feel measurable, not mysterious. The deepest-leaf badge should land on the lowest leaf that matters. Keep the tree shape simple enough that the learner can compare left and right depth visually.
+
+### Interaction Flow
+
+1. Birch marks the root as level one.
+2. The learner explores each branch downward.
+3. The depth ruler updates as deeper levels appear.
+4. The tallest branch wins and gets the deepest-leaf badge.
+5. The support strip explains that maximum depth means the longest root-to-leaf path.
+
+### Component Usage
+
+- Scene Card
+- Depth ruler
+- Level labels
+- Deepest-leaf badge
+- Hint card
+
 ## Problem
 
 Given the root of a binary tree, return its maximum depth.
@@ -621,6 +810,69 @@ Tree recursion often follows this pattern:
 ---
 
 # Lesson 3: Same Tree
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that two trees are the same only if their shapes and values match in every corresponding spot.
+
+### Habitat
+
+`Mirror Grove`
+
+### Primary Mascot
+
+`Birch the Owl`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Mirror Grove
+- Lesson title: Same Tree
+- Progress chip: 3/6
+
+Scene:
+- Two trees side by side
+- Pairwise comparison beams connecting matching positions
+- A mismatch spark where values or shapes differ
+
+Support strip:
+- "Match the same spot in both trees."
+- "Both the value and the shape must agree."
+
+Action zone:
+- Compare root to root
+- Move through both trees together
+- Stop at the first mismatch
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The side-by-side layout should make correspondence obvious. Comparison beams should connect equal positions in the two trees. Mismatch sparks should show either a value difference or a missing child clearly.
+
+### Interaction Flow
+
+1. Birch compares the two roots first.
+2. The learner steps through matching left and right children together.
+3. Comparison beams confirm matching positions.
+4. A mismatch spark appears as soon as a value or structure differs.
+5. The lesson explains that both shape and values matter.
+
+### Component Usage
+
+- Scene Card
+- Dual-tree layout
+- Comparison beams
+- Mismatch spark
+- Hint card
 
 ## Problem
 
@@ -746,6 +998,69 @@ What makes two trees the same?
 
 # Lesson 4: Invert Binary Tree
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that inverting a binary tree means swapping every node's left and right children.
+
+### Habitat
+
+`Windmill Orchard`
+
+### Primary Mascot
+
+`Birch the Owl`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Windmill Orchard
+- Lesson title: Invert Binary Tree
+- Progress chip: 4/6
+
+Scene:
+- A tree with left and right branches marked in different colors
+- A swap spinner at each node
+- A before-and-after preview panel
+
+Support strip:
+- "At each node, swap left and right."
+- "Then keep going through the whole tree."
+
+Action zone:
+- Visit a node
+- Swap its left and right children
+- Repeat across the whole tree
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The swap action needs to be unmistakable, so left and right branches should use contrasting colors. The before-and-after preview helps children understand the transformation without losing the whole-tree view. Keep the animation slow enough to follow.
+
+### Interaction Flow
+
+1. Birch starts at the root and opens the swap spinner.
+2. The learner flips the left and right branches.
+3. The same action repeats lower in the tree.
+4. The preview panel updates with the growing inverted tree.
+5. The support strip reinforces that every node gets the same swap rule.
+
+### Component Usage
+
+- Scene Card
+- Swap spinner
+- Before / after panel
+- Left / right branch colors
+- Hint card
+
 ## Problem
 
 Given the root of a binary tree, invert the tree and return its root.
@@ -866,6 +1181,69 @@ When the same action should happen at every node, recursion is often a natural f
 ---
 
 # Lesson 5: Binary Tree Level Order Traversal
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that level order traversal visits the tree one row at a time from top to bottom.
+
+### Habitat
+
+`Level Lantern Grove`
+
+### Primary Mascot
+
+`Birch the Owl`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Level Lantern Grove
+- Lesson title: Binary Tree Level Order Traversal
+- Progress chip: 5/6
+
+Scene:
+- A tree with clear horizontal level bands
+- A queue basket holding nodes to visit next
+- A result board collecting one row per level
+
+Support strip:
+- "Use a queue to remember the next row."
+- "Finish one level before moving lower."
+
+Action zone:
+- Visit all nodes in the current level
+- Fill the queue basket with the next level
+- Record one row at a time
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The level bands should be very clear so "row by row" is visible before any code explanation. The queue basket should feel like a holding place for the next layer of nodes. The result board should build one row at a time.
+
+### Interaction Flow
+
+1. Birch starts with the root in the queue basket.
+2. The learner visits every node in the current row.
+3. Their children enter the basket for the next row.
+4. The result board records the values by level.
+5. The support strip explains that this is BFS on a tree.
+
+### Component Usage
+
+- Scene Card
+- Level bands
+- Queue basket
+- Result board
+- Hint card
 
 ## Problem
 
@@ -1015,6 +1393,69 @@ What data structure helps us do BFS?
 
 # Lesson 6: Search in a Binary Search Tree
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that BST order lets us choose left or right instead of searching every branch.
+
+### Habitat
+
+`Search Orchard`
+
+### Primary Mascot
+
+`Birch the Owl`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Search Orchard
+- Lesson title: Search in a Binary Search Tree
+- Progress chip: 6/6
+
+Scene:
+- A binary search tree with smaller values on the left and larger on the right
+- A target fruit badge
+- A search path highlight that chooses only one branch at a time
+
+Support strip:
+- "Smaller goes left."
+- "Larger goes right."
+
+Action zone:
+- Compare the current node to the target
+- Choose left or right branch
+- Stop when found or when the path ends
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The BST rule should be visible in the scene, with small values on the left and large values on the right. The target fruit badge should stay fixed so the learner always knows what is being searched for. The chosen branch should glow while the unused branch fades back.
+
+### Interaction Flow
+
+1. Birch places the target fruit badge above the tree.
+2. The learner compares the current node's value to the target.
+3. The search path goes left for smaller targets or right for larger ones.
+4. Unused branches stay dim because they are no longer needed.
+5. The lesson ends when the target is found or the path reaches null.
+
+### Component Usage
+
+- Scene Card
+- Target badge
+- Search path highlight
+- BST rule helper chips
+- Hint card
+
 ## Problem
 
 Given the root of a binary search tree and a value `val`, return the node where `val` is found.
@@ -1144,6 +1585,69 @@ A BST gives order inside a tree, and that order helps us search much faster.
 
 # Chapter Review
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Review root, child, leaf, DFS, BFS, depth, comparison, inversion, level order, and BST search.
+
+### Habitat
+
+`Forest Review Deck`
+
+### Primary Mascot
+
+`Birch the Owl`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Forest Review Deck
+- Screen title: Chapter Review
+- Progress chip: Review
+
+Scene:
+- A review wall with six mini tree scenes
+- Tool chips for DFS, BFS, depth, compare, swap, search
+- A root-to-leaf legend pinned to the side
+
+Support strip:
+- "Ask what the tree shape is trying to show."
+- "Then choose the traversal or tree rule that fits."
+
+Action zone:
+- Match each mini-scene to the right tree idea
+- Sort vocabulary chips to the correct example
+- Explain how the tree is being explored or changed
+
+Navigation:
+- Replay
+- Hint
+- Open mastery
+```
+
+### Visual Details
+
+The review deck should feel like a naturalist's wall of tree sketches. Keep mini-scenes simple and readable, and keep the root-to-leaf legend visible because it grounds the chapter vocabulary. Avoid crowding the wall with too much text.
+
+### Interaction Flow
+
+1. Birch opens the review wall of tree scenes.
+2. The learner taps each mini-scene and matches it to the correct idea.
+3. Vocabulary chips slide into the right sketch.
+4. The support strip explains the match in simple language.
+5. The next-step panel opens mastery.
+
+### Component Usage
+
+- Review board
+- Tool chips
+- Mini tree scenes
+- Mascot speech bubble
+- Next-step panel
+
 ## What you learned
 
 In this chapter, you learned that trees are branching structures made of connected nodes.
@@ -1201,6 +1705,69 @@ Think about trees when you see:
 ---
 
 # Mastery Check
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Check whether the learner can read a tree and choose the right traversal or transformation with less support.
+
+### Habitat
+
+`Root Challenge Hollow`
+
+### Primary Mascot
+
+`Birch the Owl`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Root Challenge Hollow
+- Screen title: Mastery Check
+- Progress chip: Mastery
+
+Scene:
+- One focused tree challenge
+- A visible root and highlighted active node
+- A result badge area above the tree
+
+Support strip:
+- "What should happen at this node or level?"
+- "Choose the path, level, or swap that fits."
+
+Action zone:
+- Predict the next move or answer
+- Solve one short tree challenge
+- Explain why that traversal or rule fits
+
+Navigation:
+- Replay
+- Hint
+- Finish challenge
+```
+
+### Visual Details
+
+This screen should stay calm and centered on one tree. The active node should be very clear. The result badge should feel special but not distracting, and the helper text should stay short.
+
+### Interaction Flow
+
+1. Birch presents a final tree challenge with limited guidance.
+2. The learner studies the active node or level.
+3. The learner chooses the next move, answer, or transformation.
+4. A short reflection asks what tree clue mattered most.
+5. The mastery result appears.
+
+### Component Usage
+
+- Challenge scene card
+- Active-node highlight
+- Prediction prompt
+- Reflection prompt
+- Result feedback card
 
 Try these before looking at the answers.
 

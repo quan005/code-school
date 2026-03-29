@@ -64,6 +64,69 @@ In this chapter, we will learn:
 
 # Introduction to Stacks
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that a stack keeps items in last-in, first-out order, and that all the important action happens at the top.
+
+### Habitat
+
+`Plate Tower Kitchen`
+
+### Primary Mascot
+
+`Mabel the Mouse`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Plate Tower Kitchen
+- Screen title: Introduction to Stacks
+- Progress chip: Intro
+
+Scene:
+- A tall stack of colorful plates
+- A glowing top marker
+- Push, pop, and peek labels near the stack
+
+Support strip:
+- "The top is the action spot."
+- "Last in means first out."
+
+Action zone:
+- Add a plate to the top
+- Remove the top plate
+- Peek at the top without removing it
+
+Navigation:
+- Replay
+- Hint
+- Start lesson 1
+```
+
+### Visual Details
+
+The plate tower should feel stable and readable, with the top plate clearly highlighted. Keep all movement vertical so the learner associates stacks with top-only actions. Push, pop, and peek should be shown as distinct but gentle interactions.
+
+### Interaction Flow
+
+1. Mabel introduces the plate tower and points to the top.
+2. The learner pushes a new plate onto the stack.
+3. A peek bubble reveals the top plate without removing it.
+4. A pop action removes that same top plate.
+5. The support strip names this rule as last in, first out.
+
+### Component Usage
+
+- Scene Card
+- Top marker
+- Action buttons for push, pop, peek
+- Peek bubble
+- Start-lesson CTA
+
 ## Intuition
 
 A stack is like a pile of books.
@@ -238,6 +301,70 @@ In this chapter:
 
 # Lesson 1: Implement a Stack with an Array
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that the end of an array can act like the top of a stack.
+
+### Habitat
+
+`Tray Rack Lab`
+
+### Primary Mascot
+
+`Mabel the Mouse`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Tray Rack Lab
+- Lesson title: Implement a Stack with an Array
+- Progress chip: 1/6
+
+Scene:
+- An array tray shown as horizontal slots
+- A top arrow pointing to the last slot
+- Push, pop, peek, and empty-state badges
+
+Support strip:
+- "The last slot is the top of the stack."
+- "Push and pop happen at the end."
+
+Action zone:
+- Push a new value
+- Pop the last value
+- Peek at the last value
+- Check whether the stack is empty
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+Keep the array slots big and simple, with the last slot clearly marked as the top. The end-focused movement should feel obvious so children see why arrays can model stacks well. Empty states should be calm and unambiguous.
+
+### Interaction Flow
+
+1. Mabel starts with an empty tray rack.
+2. The learner pushes values onto the end.
+3. The top arrow follows the last filled slot.
+4. Peek and pop both use that same final slot.
+5. The screen explains that the array end is acting like the stack top.
+
+### Component Usage
+
+- Scene Card
+- Array slot row
+- Top arrow
+- Action badges
+- Hint card
+
 ## Problem
 
 Create a stack that supports these actions:
@@ -369,6 +496,69 @@ What part of the array acts like the top of the stack?
 ---
 
 # Lesson 2: Valid Parentheses
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that a stack can remember opening symbols until the matching closing symbols appear.
+
+### Habitat
+
+`Bracket Castle Gate`
+
+### Primary Mascot
+
+`Mabel the Mouse`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Bracket Castle Gate
+- Lesson title: Valid Parentheses
+- Progress chip: 2/6
+
+Scene:
+- A path of bracket symbols entering a castle gate
+- An opening-symbol stack beside the path
+- A match light that turns on for correct pairs
+
+Support strip:
+- "Push openers."
+- "When a closer arrives, check the top."
+
+Action zone:
+- Push opening symbols
+- Compare a closer with the stack top
+- Decide valid or invalid
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The castle-gate metaphor should make matching feel like opening the correct lock. Each opener should sit visibly in the stack until its matching closer appears. Wrong matches should be explained clearly without feeling punishing.
+
+### Interaction Flow
+
+1. Mabel watches opening symbols arrive and pushes them onto the stack.
+2. A closing symbol arrives at the gate.
+3. The learner checks the top opener for a match.
+4. A correct pair lights up and pops away.
+5. The lesson ends by checking whether the stack is empty and all symbols matched.
+
+### Component Usage
+
+- Scene Card
+- Symbol stack
+- Match light
+- Pair-check bubble
+- Hint card
 
 ## Problem
 
@@ -517,6 +707,69 @@ That is why `"([)]"` is not valid.
 
 # Lesson 3: Remove All Adjacent Duplicates
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that when the new item matches the stack top, both can disappear together.
+
+### Habitat
+
+`Echo Block Alley`
+
+### Primary Mascot
+
+`Mabel the Mouse`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Echo Block Alley
+- Lesson title: Remove All Adjacent Duplicates
+- Progress chip: 3/6
+
+Scene:
+- A stream of letter blocks entering from the right
+- A stack tower in the middle
+- A pop-away effect when two neighbors match
+
+Support strip:
+- "Compare the new block with the top block."
+- "If they match, both disappear."
+
+Action zone:
+- Read the next block
+- Compare it to the stack top
+- Push or pop based on the match
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The pop-away effect should feel satisfying and easy to track. Keep the current incoming block separate from the stack so the decision point is clear. Matching pairs should vanish in one clean motion.
+
+### Interaction Flow
+
+1. Mabel reveals the next incoming block.
+2. The learner compares it to the current top block.
+3. If they match, both disappear.
+4. If they do not match, the new block gets pushed.
+5. The support strip explains that the stack keeps only the unfinished pattern.
+
+### Component Usage
+
+- Scene Card
+- Incoming block tray
+- Stack tower
+- Pop-away animation
+- Hint card
+
 ## Problem
 
 Given a string `s`, remove all pairs of adjacent matching letters again and again until no more such pairs exist.
@@ -640,6 +893,70 @@ This is a good stack problem because we care about the **most recent remaining c
 ---
 
 # Lesson 4: Baseball Game
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that a stack can remember recent scores so later rules can look back at them.
+
+### Habitat
+
+`Scoreboard Dugout`
+
+### Primary Mascot
+
+`Mabel the Mouse`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Scoreboard Dugout
+- Lesson title: Baseball Game
+- Progress chip: 4/6
+
+Scene:
+- A dugout score board with a stack of round scores
+- Action cards for number, `C`, `D`, and `+`
+- A total-score banner across the top
+
+Support strip:
+- "The stack remembers recent scores."
+- "Each special card uses the scores already on top."
+
+Action zone:
+- Push a new score
+- Cancel the last score
+- Double the last score
+- Add the last two scores
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+Use large score chips so the operations feel tangible. The stack should show score history clearly, with the newest score on top. The total-score banner should update live but stay secondary to the stack actions.
+
+### Interaction Flow
+
+1. Mabel reveals the next scoring card.
+2. The learner uses the top of the score stack to apply the rule.
+3. Score chips appear, disappear, or duplicate based on the action.
+4. The total banner updates after each move.
+5. The lesson explains that the stack stores the recent scores we still need.
+
+### Component Usage
+
+- Scene Card
+- Score stack
+- Action cards
+- Total banner
+- Hint card
 
 ## Problem
 
@@ -777,6 +1094,69 @@ Why is a stack helpful here?
 ---
 
 # Lesson 5: Next Greater Element
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that a stack can hold waiting values until a bigger value appears and answers them.
+
+### Habitat
+
+`Hill Watch Path`
+
+### Primary Mascot
+
+`Mabel the Mouse`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Hill Watch Path
+- Lesson title: Next Greater Element
+- Progress chip: 5/6
+
+Scene:
+- A line of numbered hikers on a hill path
+- A waiting stack of hikers who have not found a bigger value yet
+- A discovery flag when a larger number appears
+
+Support strip:
+- "Some values wait for a bigger one."
+- "When a bigger value appears, it answers the stack top."
+
+Action zone:
+- Read the current value
+- Compare it to the top waiting value
+- Pop solved values and assign their answers
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The waiting stack should feel like a line of hikers watching the path ahead. Discovery flags should appear the moment a bigger value arrives. Keep the comparison movement clear so the learner sees why some values wait longer than others.
+
+### Interaction Flow
+
+1. Mabel places early values into the waiting stack.
+2. A new larger value arrives on the path.
+3. The learner resolves one or more waiting values from the stack top.
+4. Answer lines connect solved values to their next greater element.
+5. The lesson explains that the stack stores unfinished questions.
+
+### Component Usage
+
+- Scene Card
+- Waiting-value stack
+- Discovery flags
+- Answer connectors
+- Hint card
 
 ## Problem
 
@@ -919,6 +1299,69 @@ This lesson is more advanced because the stack stores **unfinished positions** i
 ---
 
 # Lesson 6: Evaluate Reverse Polish Notation
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that a stack can hold numbers until an operator arrives and combines the top two values.
+
+### Habitat
+
+`Math Cauldron Workshop`
+
+### Primary Mascot
+
+`Mabel the Mouse`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Math Cauldron Workshop
+- Lesson title: Evaluate Reverse Polish Notation
+- Progress chip: 6/6
+
+Scene:
+- A token row of numbers and operators
+- A number stack beside a bubbling math cauldron
+- An operator card that pulls the top two values into the cauldron
+
+Support strip:
+- "Numbers wait on the stack."
+- "When an operator arrives, use the top two numbers."
+
+Action zone:
+- Push number tokens
+- Pop the top two numbers for an operator
+- Push the new result back
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The cauldron should make the combine step feel magical but understandable. Keep the order of the top two numbers visible so children can see why subtraction and division care about position. The result token should clearly return to the stack.
+
+### Interaction Flow
+
+1. Mabel pushes number tokens onto the stack.
+2. An operator token arrives and calls for the top two values.
+3. The learner combines them in the cauldron.
+4. The result token returns to the stack.
+5. The process repeats until one final answer remains.
+
+### Component Usage
+
+- Scene Card
+- Number stack
+- Operator card
+- Combine cauldron
+- Hint card
 
 ## Problem
 
@@ -1067,6 +1510,69 @@ This is a strong stack problem because the most recent unfinished numbers are th
 
 # Chapter Review
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Review the main stack ideas: top-only actions, unfinished work, matching, canceling, and combining.
+
+### Habitat
+
+`Top Shelf Review Room`
+
+### Primary Mascot
+
+`Mabel the Mouse`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Top Shelf Review Room
+- Screen title: Chapter Review
+- Progress chip: Review
+
+Scene:
+- A review board with six mini stack scenes
+- Tool chips for push, pop, peek, match, cancel, combine
+- A top-of-stack legend pinned beside the board
+
+Support strip:
+- "Ask what the top item is waiting to do."
+- "The top usually decides the next move."
+
+Action zone:
+- Match each lesson to the right stack idea
+- Explain why the top matters
+- Sort vocabulary cards to the correct mini-scene
+
+Navigation:
+- Replay
+- Hint
+- Open mastery
+```
+
+### Visual Details
+
+The review room should feel like a tidy shelf of recap cards. The top-of-stack legend should stay visible because it anchors the whole chapter. Keep the mini-scenes recognizable from the lessons and avoid overloading the screen with text.
+
+### Interaction Flow
+
+1. Mabel opens the review board of mini stack scenes.
+2. The learner matches each lesson to its main stack idea.
+3. Vocabulary cards slide into the right recap panel.
+4. The support strip confirms the reasoning in short child-friendly language.
+5. The next-step panel points toward mastery.
+
+### Component Usage
+
+- Review board
+- Tool chips
+- Mini scene cards
+- Mascot speech bubble
+- Next-step panel
+
 ## What you learned
 
 In this chapter, you learned that a stack follows the rule:
@@ -1123,6 +1629,69 @@ Think about stacks when you see:
 ---
 
 # Mastery Check
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Check whether the learner can decide what the top of the stack should do next with much less support.
+
+### Habitat
+
+`Stack Summit Challenge`
+
+### Primary Mascot
+
+`Mabel the Mouse`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Stack Summit Challenge
+- Screen title: Mastery Check
+- Progress chip: Mastery
+
+Scene:
+- One focused stack challenge
+- A visible stack with a highlighted top
+- A result badge area above the scene
+
+Support strip:
+- "Look at the top first."
+- "Decide whether to push, pop, match, or combine."
+
+Action zone:
+- Predict the next stack move
+- Solve one short challenge
+- Explain why the top item mattered
+
+Navigation:
+- Replay
+- Hint
+- Finish challenge
+```
+
+### Visual Details
+
+This screen should stay focused and readable, with the highlighted top doing most of the teaching. Keep the result badge calm and clear. The action options should be large enough to tap mentally and compare.
+
+### Interaction Flow
+
+1. Mabel presents one final stack challenge.
+2. The learner checks the top and predicts the next move.
+3. The scene updates to show the result.
+4. A short explanation prompt asks why the top determined the action.
+5. The mastery result appears.
+
+### Component Usage
+
+- Challenge scene card
+- Highlighted top marker
+- Prediction prompt
+- Reflection prompt
+- Result feedback card
 
 Try these before looking at the answers.
 

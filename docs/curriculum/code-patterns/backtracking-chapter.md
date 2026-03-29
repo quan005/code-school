@@ -67,6 +67,69 @@ In this chapter, we will learn:
 
 # Introduction to Backtracking
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that backtracking means choose, explore, undo, and try again when there are many possible paths.
+
+### Habitat
+
+`Maze of Choices`
+
+### Primary Mascot
+
+`Scout the Rabbit`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Maze of Choices
+- Screen title: Introduction to Backtracking
+- Progress chip: Intro
+
+Scene:
+- A branching maze with several decision points
+- A current path ribbon showing the choices made so far
+- An undo arrow returning to the last branch point
+
+Support strip:
+- "Choose one path."
+- "If it does not work, undo and try another."
+
+Action zone:
+- Choose a branch
+- Explore the path
+- Step back with undo and try again
+
+Navigation:
+- Replay
+- Hint
+- Start lesson 1
+```
+
+### Visual Details
+
+The maze should make decision points feel inviting, not stressful. The current path ribbon needs to show the exact choices already made. The undo arrow should feel calm and helpful because backtracking is not failure, it is part of the plan.
+
+### Interaction Flow
+
+1. Scout introduces the maze and the first choice point.
+2. The learner chooses one branch and sees the current path ribbon grow.
+3. If the path fails or finishes, the undo arrow returns to the last decision point.
+4. A different branch is then explored.
+5. The support strip names this cycle as choose, explore, undo.
+
+### Component Usage
+
+- Scene Card
+- Current-path ribbon
+- Undo arrow
+- Decision chips
+- Start-lesson CTA
+
 ## Intuition
 
 Backtracking is like trying outfits.
@@ -241,6 +304,69 @@ In this chapter:
 
 # Lesson 1: Generate All Subsets
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that each number gives two choices: take it or skip it.
+
+### Habitat
+
+`Choice Basket Grove`
+
+### Primary Mascot
+
+`Scout the Rabbit`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Choice Basket Grove
+- Lesson title: Generate All Subsets
+- Progress chip: 1/6
+
+Scene:
+- A row of number baskets
+- A branching decision tree with take and skip paths
+- A result shelf collecting finished subsets
+
+Support strip:
+- "For each number, choose take or skip."
+- "Every full path becomes one subset."
+
+Action zone:
+- Take the current number
+- Skip the current number
+- Save the finished subset when choices run out
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The take and skip branches should be visually balanced so both feel like real choices. The current subset should stay visible as a growing basket list. The result shelf should fill with finished subsets in a friendly, orderly way.
+
+### Interaction Flow
+
+1. Scout stands at the first number basket.
+2. The learner chooses take or skip.
+3. The current subset changes depending on that choice.
+4. When all numbers have been decided, the subset moves to the result shelf.
+5. The learner backtracks to try the other branch.
+
+### Component Usage
+
+- Scene Card
+- Take / skip branch cards
+- Current-subset tray
+- Result shelf
+- Hint card
+
 ## Problem
 
 Given an array of distinct numbers `nums`, return all possible subsets.
@@ -366,6 +492,69 @@ What are the two choices for each number in the subset problem?
 ---
 
 # Lesson 2: Generate All Permutations
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that permutations are built by choosing which unused number goes in the next spot.
+
+### Habitat
+
+`Parade Line Plaza`
+
+### Primary Mascot
+
+`Scout the Rabbit`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Parade Line Plaza
+- Lesson title: Generate All Permutations
+- Progress chip: 2/6
+
+Scene:
+- A row of empty parade spots
+- A set of unused number cards
+- A used-card tray and a finished-parade shelf
+
+Support strip:
+- "Pick one unused card for the next spot."
+- "Undo the pick so other orders can be tried."
+
+Action zone:
+- Choose an unused number
+- Place it in the next parade spot
+- Undo and try a different card
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The empty parade spots should make order matter visually. Used cards should clearly move out of the unused pile and into the current arrangement. Finished permutations should line up neatly on the shelf.
+
+### Interaction Flow
+
+1. Scout starts with all cards unused.
+2. The learner chooses one card for the next open spot.
+3. The card moves into the parade line and becomes used.
+4. When the line is full, the permutation moves to the finished shelf.
+5. The learner undoes the last choice and tries another unused card.
+
+### Component Usage
+
+- Scene Card
+- Unused-card tray
+- Parade spot row
+- Finished-permutation shelf
+- Hint card
 
 ## Problem
 
@@ -502,6 +691,69 @@ Permutations decide “who goes next?”
 ---
 
 # Lesson 3: Letter Combinations of a Phone Number
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that each phone digit gives a small set of letters, and backtracking tries every letter choice step by step.
+
+### Habitat
+
+`Phone Garden Gate`
+
+### Primary Mascot
+
+`Scout the Rabbit`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Phone Garden Gate
+- Lesson title: Letter Combinations of a Phone Number
+- Progress chip: 3/6
+
+Scene:
+- A row of phone digits with their letter petals beneath them
+- A growing word vine showing the current combination
+- A result board collecting completed words
+
+Support strip:
+- "Each digit opens a small letter set."
+- "Pick one letter, then move to the next digit."
+
+Action zone:
+- Choose a letter from the current digit
+- Grow the word vine
+- Save a completed combination
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The letter petals should make the digit-to-letter mapping feel playful and easy to scan. The word vine should grow one letter at a time so the combination feels built, not just listed. Keep the result board visible but secondary.
+
+### Interaction Flow
+
+1. Scout reveals the first digit and its letter petals.
+2. The learner chooses one letter and adds it to the word vine.
+3. The process repeats for the next digit.
+4. When every digit has been used, the full combination goes to the result board.
+5. The learner backtracks to try a different letter choice.
+
+### Component Usage
+
+- Scene Card
+- Digit petals
+- Word vine
+- Result board
+- Hint card
 
 ## Problem
 
@@ -652,6 +904,69 @@ What does one digit contribute in this problem?
 ---
 
 # Lesson 4: Word Search
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that we can search a word in a grid by trying paths and undoing when a path stops working.
+
+### Habitat
+
+`Letter Trail Field`
+
+### Primary Mascot
+
+`Scout the Rabbit`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Letter Trail Field
+- Lesson title: Word Search
+- Progress chip: 4/6
+
+Scene:
+- A letter grid with one active path highlighted
+- A target word badge above the grid
+- A visited-cell trail showing which squares are in the current path
+
+Support strip:
+- "Move to neighboring letters only."
+- "If the path breaks, step back and try another direction."
+
+Action zone:
+- Start from a possible first letter
+- Explore neighboring cells
+- Undo visited cells when the path fails
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The grid needs to be large and readable, with the current path easy to trace. Visited cells should be visibly marked so the learner knows they cannot be reused in the same path. Failed-path steps should fade gently when undone.
+
+### Interaction Flow
+
+1. Scout finds a possible starting letter in the grid.
+2. The learner follows one neighboring path trying to match the target word.
+3. The visited-cell trail grows as letters match.
+4. If the path fails, the trail rolls back one step at a time.
+5. The learner tries a new direction or a new start cell.
+
+### Component Usage
+
+- Scene Card
+- Target word badge
+- Visited-cell trail
+- Grid highlight
+- Hint card
 
 ## Problem
 
@@ -821,6 +1136,69 @@ That is why it is one of the most famous backtracking problems.
 
 # Lesson 5: Generate Parentheses
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that we build parentheses strings carefully by keeping them valid as we go.
+
+### Habitat
+
+`Bracket Balance Stage`
+
+### Primary Mascot
+
+`Scout the Rabbit`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Bracket Balance Stage
+- Lesson title: Generate Parentheses
+- Progress chip: 5/6
+
+Scene:
+- A stage showing a growing parentheses string
+- Open-count and close-count meters
+- A validity shield that dims when a move would break the rules
+
+Support strip:
+- "You can only close if there is something open to match."
+- "Build only valid strings as you go."
+
+Action zone:
+- Add an opening parenthesis
+- Add a closing parenthesis when allowed
+- Save a finished valid string
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The open-count and close-count meters should make the rule visible rather than hidden in logic. The validity shield should gently block invalid moves instead of letting the learner wander into broken strings. Finished strings should appear on a neat result banner.
+
+### Interaction Flow
+
+1. Scout begins with an empty string.
+2. The learner adds opening parentheses while there are still openings left.
+3. Closing parentheses become available only when the string stays valid.
+4. A finished valid string is saved when both counts reach the goal.
+5. The learner backtracks to try a different valid path.
+
+### Component Usage
+
+- Scene Card
+- Open / close count meters
+- Validity shield
+- Result banner
+- Hint card
+
 ## Problem
 
 Given `n`, return all combinations of `n` pairs of valid parentheses.
@@ -948,6 +1326,69 @@ Why can we add `")"` only when `close < open`?
 ---
 
 # Lesson 6: Combination Sum
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that we can keep adding choices toward a target sum and backtrack when we go too far.
+
+### Habitat
+
+`Target Trail Market`
+
+### Primary Mascot
+
+`Scout the Rabbit`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Target Trail Market
+- Lesson title: Combination Sum
+- Progress chip: 6/6
+
+Scene:
+- A set of number stalls the learner can choose from
+- A current path basket showing chosen numbers
+- A target-sum meter and over-limit warning
+
+Support strip:
+- "Keep adding choices toward the goal."
+- "If the sum gets too big, undo and try another path."
+
+Action zone:
+- Pick a number
+- Update the current sum
+- Save or undo based on whether the sum hits, misses, or passes the target
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The target-sum meter should make progress toward the goal easy to read. The over-limit warning should be informative rather than punishing. The current path basket should show repeated choices clearly because numbers may be reused.
+
+### Interaction Flow
+
+1. Scout chooses a number stall and adds it to the basket.
+2. The learner watches the target meter move toward the goal.
+3. If the sum hits the target, the combination is saved.
+4. If the sum goes too high, the last choice is undone.
+5. The process continues until all useful paths are explored.
+
+### Component Usage
+
+- Scene Card
+- Current-path basket
+- Target-sum meter
+- Over-limit warning chip
+- Hint card
 
 ## Problem
 
@@ -1078,6 +1519,69 @@ That is called **pruning**.
 
 # Chapter Review
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Review choose-explore-undo, decision trees, valid partial paths, and when backtracking should stop early.
+
+### Habitat
+
+`Choice Review Campfire`
+
+### Primary Mascot
+
+`Scout the Rabbit`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Choice Review Campfire
+- Screen title: Chapter Review
+- Progress chip: Review
+
+Scene:
+- A review wall with six mini decision-tree scenes
+- Tool chips for choose, explore, undo, valid path, stop early, save result
+- A reminder banner that says "try, check, undo"
+
+Support strip:
+- "Ask what choice you are making now."
+- "Then ask whether the partial path can still work."
+
+Action zone:
+- Match each mini-scene to the right backtracking idea
+- Sort clue chips to the correct lesson
+- Explain where the undo step happens
+
+Navigation:
+- Replay
+- Hint
+- Open mastery
+```
+
+### Visual Details
+
+The review wall should feel like a campfire planning board full of branch sketches. The "try, check, undo" banner should stay visible because it summarizes the whole chapter. Mini-scenes should keep one branch highlighted so they stay easy to read.
+
+### Interaction Flow
+
+1. Scout opens the review wall of decision paths.
+2. The learner matches each scene to the right backtracking idea.
+3. Clue chips slide into the correct recap panel.
+4. The support strip explains the reasoning in one short sentence.
+5. The next-step panel opens mastery.
+
+### Component Usage
+
+- Review board
+- Tool chips
+- Mini decision-tree scenes
+- Mascot speech bubble
+- Next-step panel
+
 ## What you learned
 
 In this chapter, you learned that backtracking means:
@@ -1138,6 +1642,69 @@ Think about backtracking when you see:
 ---
 
 # Mastery Check
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Check whether the learner can read a choice point and decide what to try, keep, or undo with less support.
+
+### Habitat
+
+`Final Branch Challenge`
+
+### Primary Mascot
+
+`Scout the Rabbit`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Final Branch Challenge
+- Screen title: Mastery Check
+- Progress chip: Mastery
+
+Scene:
+- One focused backtracking challenge
+- A visible current path and next choice point
+- A result badge area above the scene
+
+Support strip:
+- "What should you try next?"
+- "If it cannot work, where should you undo?"
+
+Action zone:
+- Predict the next choice
+- Solve one short backtracking challenge
+- Explain why the path stayed valid or had to be undone
+
+Navigation:
+- Replay
+- Hint
+- Finish challenge
+```
+
+### Visual Details
+
+This screen should stay focused on the current path and choice point. The result area should remain simple so the decision process is the main teacher. Undo cues should be visible but calm.
+
+### Interaction Flow
+
+1. Scout presents a final decision-tree challenge with limited guidance.
+2. The learner studies the current path and next branch.
+3. The learner chooses a move or decides to undo.
+4. A short reflection asks what clue made the path valid or invalid.
+5. The mastery result appears.
+
+### Component Usage
+
+- Challenge scene card
+- Current-path ribbon
+- Prediction prompt
+- Reflection prompt
+- Result feedback card
 
 Try these before looking at the answers.
 

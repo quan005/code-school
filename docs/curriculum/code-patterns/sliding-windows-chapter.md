@@ -62,6 +62,69 @@ In this chapter, we will learn:
 
 # Introduction to Sliding Windows
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that a sliding window is a moving frame that shows only one part of an array or string at a time.
+
+### Habitat
+
+`Window Wagon`
+
+### Primary Mascot
+
+`Pip the Bluebird`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Window Wagon
+- Screen title: Introduction to Sliding Windows
+- Progress chip: Intro
+
+Scene:
+- A train car window moving along a row of number tiles
+- A highlighted frame showing the current window
+- Entry and exit arrows for what comes in and out
+
+Support strip:
+- "A window shows one part at a time."
+- "Slide it and only update what changed."
+
+Action zone:
+- Move the frame right one step
+- Watch one item leave and one item enter
+- Toggle fixed window vs dynamic window
+
+Navigation:
+- Replay
+- Hint
+- Start lesson 1
+```
+
+### Visual Details
+
+The train-window metaphor should make movement the star of the screen. Keep the frame large and easy to track, with one clear entry arrow on the right and one exit arrow on the left. The fixed-window mode should look steady and even, while the dynamic-window mode should visibly stretch and shrink.
+
+### Interaction Flow
+
+1. Pip introduces the frame as a moving view.
+2. The learner slides the window one step and sees one value leave while another enters.
+3. The scene compares fixed-size and dynamic windows.
+4. A short helper panel explains why reusing work is faster than starting over.
+5. The intro ends with the key words `left`, `right`, and `window size`.
+
+### Component Usage
+
+- Scene Card
+- Window frame overlay
+- Mode toggle
+- Entry / exit markers
+- Start-lesson CTA
+
 ## Intuition
 
 Suppose you have this array:
@@ -252,6 +315,69 @@ In this chapter:
 
 # Lesson 1: Maximum Sum of Size K
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that for a fixed-size window, we can keep one running sum and update it as the window slides.
+
+### Habitat
+
+`Sun Basket Lane`
+
+### Primary Mascot
+
+`Pip the Bluebird`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Sun Basket Lane
+- Lesson title: Maximum Sum of Size K
+- Progress chip: 1/6
+
+Scene:
+- A row of fruit baskets with a frame covering exactly k baskets
+- A running-sum badge above the frame
+- A best-sum ribbon that updates when a larger total appears
+
+Support strip:
+- "k means how many baskets fit in the frame."
+- "Subtract the old one, add the new one."
+
+Action zone:
+- Build the first sum
+- Slide the frame one step
+- Compare current sum to best sum
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+Use cheerful baskets so `k` feels like "how many fit in this frame" instead of a mysterious variable. The running-sum badge should update with each move, and the best-sum ribbon should only glow when a new maximum appears.
+
+### Interaction Flow
+
+1. Pip builds the first window sum.
+2. The learner slides the frame and watches one value leave and one value enter.
+3. The running sum updates without rebuilding everything.
+4. The best-sum ribbon checks whether the new sum is larger.
+5. The support strip restates that fixed windows keep the same size.
+
+### Component Usage
+
+- Scene Card
+- Fixed window frame
+- Running-sum badge
+- Best-sum ribbon
+- Hint card
+
 ## Problem
 
 Given an array of positive integers `nums` and a number `k`, return the maximum sum of any contiguous subarray of size `k`.
@@ -390,6 +516,69 @@ Why do we subtract one number and add one number?
 
 # Lesson 2: Average of Every Window of Size K
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that once we know each window sum, finding the average is one more simple step.
+
+### Habitat
+
+`Juice Cart Row`
+
+### Primary Mascot
+
+`Pip the Bluebird`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Juice Cart Row
+- Lesson title: Average of Every Window of Size K
+- Progress chip: 2/6
+
+Scene:
+- A row of numbered juice cups
+- A frame covering k cups at a time
+- A recipe card showing sum divided by k
+
+Support strip:
+- "Keep the same running sum."
+- "Then divide by k to get the average."
+
+Action zone:
+- Slide the frame
+- Update the sum
+- Record each average in an answer tray
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The answer tray should fill one average at a time so children see that this lesson produces many outputs, not just one best answer. The recipe card should make division feel like a simple follow-up step after the window sum is ready.
+
+### Interaction Flow
+
+1. Pip starts with the first window sum.
+2. The learner divides that sum by `k` and records the average.
+3. The frame slides one step, and the running sum updates again.
+4. A new average drops into the answer tray.
+5. The lesson emphasizes that the window logic stayed the same from the previous lesson.
+
+### Component Usage
+
+- Scene Card
+- Fixed window frame
+- Recipe card for average
+- Answer tray
+- Hint card
+
 ## Problem
 
 Given an array of numbers `nums` and an integer `k`, return an array containing the average of every contiguous subarray of size `k`.
@@ -515,6 +704,69 @@ That means the window width never changes.
 ---
 
 # Lesson 3: Smallest Subarray with Sum at Least Target
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that a dynamic window grows until it reaches the goal, then shrinks to find the smallest valid section.
+
+### Habitat
+
+`Target Tunnel`
+
+### Primary Mascot
+
+`Pip the Bluebird`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Target Tunnel
+- Lesson title: Smallest Subarray with Sum at Least Target
+- Progress chip: 3/6
+
+Scene:
+- A tunnel of number lanterns
+- A window frame that can stretch and shrink
+- A target sign and current-sum badge
+
+Support strip:
+- "Grow until the sum reaches the goal."
+- "Then shrink to see if you can keep it smaller."
+
+Action zone:
+- Expand right
+- Check current sum against target
+- Shrink left while the goal still holds
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The tunnel should make the expanding and shrinking window easy to see. The target sign needs to stay visible so the learner remembers the goal. The smallest-window badge should update only when a shorter valid section appears.
+
+### Interaction Flow
+
+1. Pip expands the right side until the current sum reaches the target.
+2. The learner sees that the window is now valid.
+3. The left side starts shrinking to test whether the section can be shorter.
+4. The smallest-window badge updates when a better answer appears.
+5. The support strip explains why dynamic windows both grow and shrink.
+
+### Component Usage
+
+- Scene Card
+- Stretching window frame
+- Current-sum badge
+- Smallest-window badge
+- Hint card
 
 ## Problem
 
@@ -656,6 +908,69 @@ When do we shrink the window?
 
 # Lesson 4: Longest Substring Without Repeating Characters
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that we can keep a window of unique letters by shrinking whenever a repeat appears.
+
+### Habitat
+
+`Letter Lantern Parade`
+
+### Primary Mascot
+
+`Pip the Bluebird`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Letter Lantern Parade
+- Lesson title: Longest Substring Without Repeating Characters
+- Progress chip: 4/6
+
+Scene:
+- A string shown as glowing letter lanterns
+- A window frame around the current substring
+- A seen-letter tray that tracks which letters are inside
+
+Support strip:
+- "If a letter repeats, shrink from the left."
+- "Keep the window full of unique letters only."
+
+Action zone:
+- Expand right to add a letter
+- Detect a repeated letter
+- Shrink left until the repeat is gone
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+Letter lanterns should be large and readable, with repeated letters clearly highlighted. The seen-letter tray should act like a small memory shelf so the learner understands why repeats matter. Keep the longest-window badge visible but calm.
+
+### Interaction Flow
+
+1. Pip expands the window across new letters.
+2. A repeated letter lights up to show the rule breaking.
+3. The learner shrinks from the left until the window is unique again.
+4. The longest-window badge checks whether this substring is the best so far.
+5. The scene reinforces that uniqueness is the rule we must protect.
+
+### Component Usage
+
+- Scene Card
+- Dynamic window frame
+- Seen-letter tray
+- Longest-window badge
+- Hint card
+
 ## Problem
 
 Given a string `s`, return the length of the longest substring that has no repeating characters.
@@ -794,6 +1109,69 @@ That is why we use `while`, not `if`.
 
 # Lesson 5: Permutation in a String
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that a fixed-size window can use counts to check whether the current letters match the needed pattern.
+
+### Habitat
+
+`Pattern Post`
+
+### Primary Mascot
+
+`Pip the Bluebird`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Pattern Post
+- Lesson title: Permutation in a String
+- Progress chip: 5/6
+
+Scene:
+- A target word card pinned above a row of letters
+- A same-size window sliding across the main string
+- A count board comparing needed letters to current letters
+
+Support strip:
+- "The window stays the same size as the pattern."
+- "Check whether the counts match."
+
+Action zone:
+- Slide the window
+- Update the letter counts
+- Watch for a full match
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The pattern card should remain fixed so children can compare every new window to the same target. The count board should use easy-to-read tiles, not tiny tables. Full matches should feel satisfying and obvious.
+
+### Interaction Flow
+
+1. Pip shows the target pattern and its letter counts.
+2. The learner slides a same-size window over the main string.
+3. The current window counts update as letters enter and leave.
+4. A match badge appears when every needed count lines up.
+5. The support strip explains that this is still a sliding-window problem, just with counting.
+
+### Component Usage
+
+- Scene Card
+- Pattern card
+- Count board
+- Match badge
+- Hint card
+
 ## Problem
 
 Given two strings `pattern` and `s`, return `true` if any substring of `s` is a permutation of `pattern`.
@@ -927,6 +1305,69 @@ That happens often in substring problems.
 
 # Lesson 6: Longest Repeating Character Replacement
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Teach that we can keep a larger window if only a small number of letters need to be replaced to make it all the same.
+
+### Habitat
+
+`Paint Banner Studio`
+
+### Primary Mascot
+
+`Pip the Bluebird`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Paint Banner Studio
+- Lesson title: Longest Repeating Character Replacement
+- Progress chip: 6/6
+
+Scene:
+- A banner made of colored letter tiles
+- A dynamic window frame
+- A repaint counter showing how many letters would need changing
+
+Support strip:
+- "Keep the window if the repaint count is small enough."
+- "Shrink only when it needs too many changes."
+
+Action zone:
+- Expand right
+- Track the most common letter
+- Shrink left if the repaint count gets too big
+
+Navigation:
+- Replay
+- Hint
+- Check answer
+```
+
+### Visual Details
+
+The banner should make "repainting letters" feel concrete. The repaint counter should clearly show how many tiles would need to change. Use one standout color to mark the most common letter inside the window.
+
+### Interaction Flow
+
+1. Pip expands the banner window across more letters.
+2. The learner sees which letter is most common in the current window.
+3. The repaint counter checks how many tiles would need changing.
+4. If the count is too high, the window shrinks from the left.
+5. The longest-valid badge updates when the window stays allowed.
+
+### Component Usage
+
+- Scene Card
+- Dynamic window frame
+- Repaint counter
+- Most-common marker
+- Hint card
+
 ## Problem
 
 You are given a string `s` and an integer `k`.
@@ -1058,6 +1499,69 @@ That is an important sliding-window skill.
 
 # Chapter Review
 
+## Concrete Screen Design
+
+### Learning Goal
+
+Review fixed windows, dynamic windows, and the main clues that tell us how a window should move.
+
+### Habitat
+
+`Viewfinder Review Station`
+
+### Primary Mascot
+
+`Pip the Bluebird`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Viewfinder Review Station
+- Screen title: Chapter Review
+- Progress chip: Review
+
+Scene:
+- A board with six mini window scenes
+- Two large labels: fixed and dynamic
+- Tiny clue chips for sum, average, unique, target, count, replace
+
+Support strip:
+- "Ask what the window is trying to protect."
+- "Then decide whether it should stay fixed or change size."
+
+Action zone:
+- Sort lessons into fixed or dynamic
+- Match clue chips to the right lesson
+- Explain when the window should shrink
+
+Navigation:
+- Replay
+- Hint
+- Open mastery
+```
+
+### Visual Details
+
+The review board should feel like a camera station full of little viewfinders. Keep each mini-scene simple and recognizable from the chapter lessons. The fixed and dynamic labels should be large enough to anchor the sorting activity.
+
+### Interaction Flow
+
+1. Pip introduces the review as a window-sorting game.
+2. The learner places each mini-scene under fixed or dynamic.
+3. Clue chips snap into the right lesson panels.
+4. A helper line explains why the window grew, shrank, or stayed the same size.
+5. The next-step panel opens mastery.
+
+### Component Usage
+
+- Review board
+- Viewfinder mini-scenes
+- Fixed / dynamic labels
+- Mascot speech bubble
+- Next-step panel
+
 ## What you learned
 
 In this chapter, you learned that a sliding window is a moving section of an array or string.
@@ -1132,6 +1636,69 @@ Think about sliding windows when you see:
 ---
 
 # Mastery Check
+
+## Concrete Screen Design
+
+### Learning Goal
+
+Check whether the learner can decide how to move a window with much less support.
+
+### Habitat
+
+`Sky Window Challenge`
+
+### Primary Mascot
+
+`Pip the Bluebird`
+
+### Screen Composition
+
+```txt
+Header:
+- Back
+- Sky Window Challenge
+- Screen title: Mastery Check
+- Progress chip: Mastery
+
+Scene:
+- One focused array or string challenge
+- A movable window frame already on the data
+- A result badge area and one small clue card
+
+Support strip:
+- "What should the window remember right now?"
+- "Decide whether to grow, shrink, or record the answer."
+
+Action zone:
+- Predict the next window move
+- Solve a short challenge
+- Explain why that move made sense
+
+Navigation:
+- Replay
+- Hint
+- Finish challenge
+```
+
+### Visual Details
+
+This screen should feel calm and focused, with the frame as the main visual object. The clue card should be short and readable. Keep the result area clear so the lesson ends on understanding, not clutter.
+
+### Interaction Flow
+
+1. Pip presents a challenge with a current window already visible.
+2. The learner chooses whether to grow, shrink, or record an answer.
+3. The scene updates to show the effect of that choice.
+4. A short explanation prompt asks what the window was tracking.
+5. The mastery result appears.
+
+### Component Usage
+
+- Challenge scene card
+- Window frame overlay
+- Prediction prompt
+- Reflection prompt
+- Result feedback card
 
 Try these before looking at the answers.
 
