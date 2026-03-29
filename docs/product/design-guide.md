@@ -1415,21 +1415,3 @@ Here is a strong internal brief you could give your team:
 > Build a playful storybook coding school where algorithms feel like physical systems, data types feel like familiar objects, and every lesson is a bright, low-pressure mini adventure designed for kids.
 
 ---
-
-# 28. Recommended next step
-
-The most useful next artifact would be a **full design system** for this concept with:
-
-* color tokens
-* typography styles
-* button specs
-* card specs
-* mascot rules
-* lesson screen wireframes
-* map screen wireframes
-* 3 fully designed sample lessons:
-
-  * Arrays
-  * Stack
-  * Binary Search
-

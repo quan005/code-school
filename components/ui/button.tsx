@@ -1,13 +1,15 @@
 import type { ButtonHTMLAttributes, ReactNode } from "react";
 import { cn } from "@/lib/cn";
 
-type ButtonVariant = "primary" | "secondary" | "ghost";
+type ButtonVariant = "primary" | "secondary" | "ghost" | "success" | "hint";
 type ButtonSize = "sm" | "md" | "lg";
 
 const variantMap: Record<ButtonVariant, string> = {
   primary: "ui-button ui-button-primary",
   secondary: "ui-button ui-button-secondary",
   ghost: "ui-button ui-button-ghost",
+  success: "ui-button ui-button-success",
+  hint: "ui-button ui-button-hint",
 };
 
 const sizeMap: Record<ButtonSize, string> = {
