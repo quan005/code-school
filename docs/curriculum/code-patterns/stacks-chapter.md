@@ -111,6 +111,32 @@ Navigation:
 
 The plate tower should feel stable and readable, with the top plate clearly highlighted. Keep all movement vertical so the learner associates stacks with top-only actions. Push, pop, and peek should be shown as distinct but gentle interactions.
 
+
+
+### Background Design
+
+The background for `Plate Tower Kitchen` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A tall stack of colorful plates, A glowing top marker, and Push, pop, and peek labels near the stack; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A tall stack of colorful plates, A glowing top marker, and Push, pop, and peek labels near the stack already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Mabel the Mouse should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Plate Tower Kitchen` and should visually support the lesson goal: a stack keeps items in last-in, first-out order, and that all the important action happens at the top. The background should establish the world softly, but the foreground should stay centered on A tall stack of colorful plates, A glowing top marker, and Push, pop, and peek labels near the stack. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Mabel the Mouse should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A tall stack of colorful plates, A glowing top marker, and Push, pop, and peek labels near the stack should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "The top is the action spot." and "Last in means first out.", and the action area should invite one clear next step through Add a plate to the top, Remove the top plate, and Peek at the top without removing it. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A tall stack of colorful plates, A glowing top marker, and Push, pop, and peek labels near the stack.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "The top is the action spot." and "Last in means first out.". The action zone should stay tightly focused on Add a plate to the top, Remove the top plate, and Peek at the top without removing it, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Mabel introduces the plate tower and points to the top.
@@ -349,6 +375,32 @@ Navigation:
 
 Keep the array slots big and simple, with the last slot clearly marked as the top. The end-focused movement should feel obvious so children see why arrays can model stacks well. Empty states should be calm and unambiguous.
 
+
+
+### Background Design
+
+The background for `Tray Rack Lab` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo An array tray shown as horizontal slots, A top arrow pointing to the last slot, and Push, pop, peek, and empty-state badges; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If An array tray shown as horizontal slots, A top arrow pointing to the last slot, and Push, pop, peek, and empty-state badges already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Mabel the Mouse should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Tray Rack Lab` and should visually support the lesson goal: the end of an array can act like the top of a stack. The background should establish the world softly, but the foreground should stay centered on An array tray shown as horizontal slots, A top arrow pointing to the last slot, and Push, pop, peek, and empty-state badges. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Mabel the Mouse should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. An array tray shown as horizontal slots, A top arrow pointing to the last slot, and Push, pop, peek, and empty-state badges should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "The last slot is the top of the stack." and "Push and pop happen at the end.", and the action area should invite one clear next step through Push a new value, Pop the last value, Peek at the last value, and Check whether the stack is empty. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through An array tray shown as horizontal slots, A top arrow pointing to the last slot, and Push, pop, peek, and empty-state badges.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "The last slot is the top of the stack." and "Push and pop happen at the end.". The action zone should stay tightly focused on Push a new value, Pop the last value, Peek at the last value, and Check whether the stack is empty, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Mabel starts with an empty tray rack.
@@ -543,6 +595,32 @@ Navigation:
 ### Visual Details
 
 The castle-gate metaphor should make matching feel like opening the correct lock. Each opener should sit visibly in the stack until its matching closer appears. Wrong matches should be explained clearly without feeling punishing.
+
+
+
+### Background Design
+
+The background for `Bracket Castle Gate` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A path of bracket symbols entering a castle gate, An opening-symbol stack beside the path, and A match light that turns on for correct pairs; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A path of bracket symbols entering a castle gate, An opening-symbol stack beside the path, and A match light that turns on for correct pairs already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Mabel the Mouse should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Bracket Castle Gate` and should visually support the lesson goal: a stack can remember opening symbols until the matching closing symbols appear. The background should establish the world softly, but the foreground should stay centered on A path of bracket symbols entering a castle gate, An opening-symbol stack beside the path, and A match light that turns on for correct pairs. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Mabel the Mouse should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A path of bracket symbols entering a castle gate, An opening-symbol stack beside the path, and A match light that turns on for correct pairs should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Push openers." and "When a closer arrives, check the top.", and the action area should invite one clear next step through Push opening symbols, Compare a closer with the stack top, and Decide valid or invalid. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A path of bracket symbols entering a castle gate, An opening-symbol stack beside the path, and A match light that turns on for correct pairs.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Push openers." and "When a closer arrives, check the top.". The action zone should stay tightly focused on Push opening symbols, Compare a closer with the stack top, and Decide valid or invalid, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -754,6 +832,32 @@ Navigation:
 
 The pop-away effect should feel satisfying and easy to track. Keep the current incoming block separate from the stack so the decision point is clear. Matching pairs should vanish in one clean motion.
 
+
+
+### Background Design
+
+The background for `Echo Block Alley` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A stream of letter blocks entering from the right, A stack tower in the middle, and A pop-away effect when two neighbors match; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A stream of letter blocks entering from the right, A stack tower in the middle, and A pop-away effect when two neighbors match already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Mabel the Mouse should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Echo Block Alley` and should visually support the lesson goal: when the new item matches the stack top, both can disappear together. The background should establish the world softly, but the foreground should stay centered on A stream of letter blocks entering from the right, A stack tower in the middle, and A pop-away effect when two neighbors match. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Mabel the Mouse should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A stream of letter blocks entering from the right, A stack tower in the middle, and A pop-away effect when two neighbors match should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Compare the new block with the top block." and "If they match, both disappear.", and the action area should invite one clear next step through Read the next block, Compare it to the stack top, and Push or pop based on the match. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A stream of letter blocks entering from the right, A stack tower in the middle, and A pop-away effect when two neighbors match.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Compare the new block with the top block." and "If they match, both disappear.". The action zone should stay tightly focused on Read the next block, Compare it to the stack top, and Push or pop based on the match, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Mabel reveals the next incoming block.
@@ -941,6 +1045,32 @@ Navigation:
 ### Visual Details
 
 Use large score chips so the operations feel tangible. The stack should show score history clearly, with the newest score on top. The total-score banner should update live but stay secondary to the stack actions.
+
+
+
+### Background Design
+
+The background for `Scoreboard Dugout` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A dugout score board with a stack of round scores, Action cards for number, `C`, `D`, and `+`, and A total-score banner across the top; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A dugout score board with a stack of round scores, Action cards for number, `C`, `D`, and `+`, and A total-score banner across the top already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Mabel the Mouse should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Scoreboard Dugout` and should visually support the lesson goal: a stack can remember recent scores so later rules can look back at them. The background should establish the world softly, but the foreground should stay centered on A dugout score board with a stack of round scores, Action cards for number, `C`, `D`, and `+`, and A total-score banner across the top. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Mabel the Mouse should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A dugout score board with a stack of round scores, Action cards for number, `C`, `D`, and `+`, and A total-score banner across the top should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "The stack remembers recent scores." and "Each special card uses the scores already on top.", and the action area should invite one clear next step through Push a new score, Cancel the last score, Double the last score, and Add the last two scores. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A dugout score board with a stack of round scores, Action cards for number, `C`, `D`, and `+`, and A total-score banner across the top.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "The stack remembers recent scores." and "Each special card uses the scores already on top.". The action zone should stay tightly focused on Push a new score, Cancel the last score, Double the last score, and Add the last two scores, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -1141,6 +1271,32 @@ Navigation:
 ### Visual Details
 
 The waiting stack should feel like a line of hikers watching the path ahead. Discovery flags should appear the moment a bigger value arrives. Keep the comparison movement clear so the learner sees why some values wait longer than others.
+
+
+
+### Background Design
+
+The background for `Hill Watch Path` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A line of numbered hikers on a hill path, A waiting stack of hikers who have not found a bigger value yet, and A discovery flag when a larger number appears; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A line of numbered hikers on a hill path, A waiting stack of hikers who have not found a bigger value yet, and A discovery flag when a larger number appears already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Mabel the Mouse should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Hill Watch Path` and should visually support the lesson goal: a stack can hold waiting values until a bigger value appears and answers them. The background should establish the world softly, but the foreground should stay centered on A line of numbered hikers on a hill path, A waiting stack of hikers who have not found a bigger value yet, and A discovery flag when a larger number appears. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Mabel the Mouse should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A line of numbered hikers on a hill path, A waiting stack of hikers who have not found a bigger value yet, and A discovery flag when a larger number appears should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Some values wait for a bigger one." and "When a bigger value appears, it answers the stack top.", and the action area should invite one clear next step through Read the current value, Compare it to the top waiting value, and Pop solved values and assign their answers. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A line of numbered hikers on a hill path, A waiting stack of hikers who have not found a bigger value yet, and A discovery flag when a larger number appears.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Some values wait for a bigger one." and "When a bigger value appears, it answers the stack top.". The action zone should stay tightly focused on Read the current value, Compare it to the top waiting value, and Pop solved values and assign their answers, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -1346,6 +1502,32 @@ Navigation:
 ### Visual Details
 
 The cauldron should make the combine step feel magical but understandable. Keep the order of the top two numbers visible so children can see why subtraction and division care about position. The result token should clearly return to the stack.
+
+
+
+### Background Design
+
+The background for `Math Cauldron Workshop` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A token row of numbers and operators, A number stack beside a bubbling math cauldron, and An operator card that pulls the top two values into the cauldron; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A token row of numbers and operators, A number stack beside a bubbling math cauldron, and An operator card that pulls the top two values into the cauldron already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Mabel the Mouse should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Math Cauldron Workshop` and should visually support the lesson goal: a stack can hold numbers until an operator arrives and combines the top two values. The background should establish the world softly, but the foreground should stay centered on A token row of numbers and operators, A number stack beside a bubbling math cauldron, and An operator card that pulls the top two values into the cauldron. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Mabel the Mouse should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A token row of numbers and operators, A number stack beside a bubbling math cauldron, and An operator card that pulls the top two values into the cauldron should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Numbers wait on the stack." and "When an operator arrives, use the top two numbers.", and the action area should invite one clear next step through Push number tokens, Pop the top two numbers for an operator, and Push the new result back. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A token row of numbers and operators, A number stack beside a bubbling math cauldron, and An operator card that pulls the top two values into the cauldron.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Numbers wait on the stack." and "When an operator arrives, use the top two numbers.". The action zone should stay tightly focused on Push number tokens, Pop the top two numbers for an operator, and Push the new result back, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -1557,6 +1739,32 @@ Navigation:
 
 The review room should feel like a tidy shelf of recap cards. The top-of-stack legend should stay visible because it anchors the whole chapter. Keep the mini-scenes recognizable from the lessons and avoid overloading the screen with text.
 
+
+
+### Background Design
+
+The background for `Top Shelf Review Room` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A review board with six mini stack scenes, Tool chips for push, pop, peek, match, cancel, combine, and A top-of-stack legend pinned beside the board; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A review board with six mini stack scenes, Tool chips for push, pop, peek, match, cancel, combine, and A top-of-stack legend pinned beside the board already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Mabel the Mouse should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Top Shelf Review Room` and should visually support the lesson goal: review the main stack ideas: top-only actions, unfinished work, matching, canceling, and combining. The background should establish the world softly, but the foreground should stay centered on A review board with six mini stack scenes, Tool chips for push, pop, peek, match, cancel, combine, and A top-of-stack legend pinned beside the board. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Mabel the Mouse should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A review board with six mini stack scenes, Tool chips for push, pop, peek, match, cancel, combine, and A top-of-stack legend pinned beside the board should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Ask what the top item is waiting to do." and "The top usually decides the next move.", and the action area should invite one clear next step through Match each lesson to the right stack idea, Explain why the top matters, and Sort vocabulary cards to the correct mini-scene. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A review board with six mini stack scenes, Tool chips for push, pop, peek, match, cancel, combine, and A top-of-stack legend pinned beside the board.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Ask what the top item is waiting to do." and "The top usually decides the next move.". The action zone should stay tightly focused on Match each lesson to the right stack idea, Explain why the top matters, and Sort vocabulary cards to the correct mini-scene, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Mabel opens the review board of mini stack scenes.
@@ -1676,6 +1884,32 @@ Navigation:
 ### Visual Details
 
 This screen should stay focused and readable, with the highlighted top doing most of the teaching. Keep the result badge calm and clear. The action options should be large enough to tap mentally and compare.
+
+
+
+### Background Design
+
+The background for `Stack Summit Challenge` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo One focused stack challenge, A visible stack with a highlighted top, and A result badge area above the scene; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If One focused stack challenge, A visible stack with a highlighted top, and A result badge area above the scene already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Mabel the Mouse should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Stack Summit Challenge` and should visually support the lesson goal: check whether the learner can decide what the top of the stack should do next with much less support. The background should establish the world softly, but the foreground should stay centered on One focused stack challenge, A visible stack with a highlighted top, and A result badge area above the scene. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Mabel the Mouse should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. One focused stack challenge, A visible stack with a highlighted top, and A result badge area above the scene should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Look at the top first." and "Decide whether to push, pop, match, or combine.", and the action area should invite one clear next step through Predict the next stack move, Solve one short challenge, and Explain why the top item mattered. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through One focused stack challenge, A visible stack with a highlighted top, and A result badge area above the scene.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Look at the top first." and "Decide whether to push, pop, match, or combine.". The action zone should stay tightly focused on Predict the next stack move, Solve one short challenge, and Explain why the top item mattered, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 

@@ -119,6 +119,32 @@ Navigation:
 
 The word tree should feel magical but organized, with each letter node large enough to read. Shared paths should glow clearly so children can see how the trie saves repeated beginnings. Word-end sparkles should feel special without cluttering the tree.
 
+
+
+### Background Design
+
+The background for `Word Tree Grove` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A glowing word tree with letter nodes, Shared prefix paths lit in one color, and A word-end sparkle where a full word finishes; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A glowing word tree with letter nodes, Shared prefix paths lit in one color, and A word-end sparkle where a full word finishes already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Luma the Firefly should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Word Tree Grove` and should visually support the lesson goal: a trie is a word tree where shared beginnings use the same path. The background should establish the world softly, but the foreground should stay centered on A glowing word tree with letter nodes, Shared prefix paths lit in one color, and A word-end sparkle where a full word finishes. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Luma the Firefly should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A glowing word tree with letter nodes, Shared prefix paths lit in one color, and A word-end sparkle where a full word finishes should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "A prefix is the beginning of a word." and "Words that start the same can share the same path.", and the action area should invite one clear next step through Add words into the tree, Watch shared prefix paths light up, and Tap a node to see children and word-end status. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A glowing word tree with letter nodes, Shared prefix paths lit in one color, and A word-end sparkle where a full word finishes.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "A prefix is the beginning of a word." and "Words that start the same can share the same path.". The action zone should stay tightly focused on Add words into the tree, Watch shared prefix paths light up, and Tap a node to see children and word-end status, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Luma introduces the tree as a place where words walk letter by letter.
@@ -377,6 +403,32 @@ Navigation:
 
 The create-node glow should make it obvious when the trie grows. Reused letters should light softly instead, showing that no new node was needed. Keep the root visible to anchor every insertion path.
 
+
+
+### Background Design
+
+The background for `Letter Lantern Arbor` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A root node at the top and branching letter lanterns below, A current-letter token moving through the trie, and A create-node glow for missing letters; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A root node at the top and branching letter lanterns below, A current-letter token moving through the trie, and A create-node glow for missing letters already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Luma the Firefly should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Letter Lantern Arbor` and should visually support the lesson goal: inserting a word means walking letter by letter, creating missing nodes, and marking the end of the word. The background should establish the world softly, but the foreground should stay centered on A root node at the top and branching letter lanterns below, A current-letter token moving through the trie, and A create-node glow for missing letters. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Luma the Firefly should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A root node at the top and branching letter lanterns below, A current-letter token moving through the trie, and A create-node glow for missing letters should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Move one letter at a time." and "Create a node only if it is missing.", and the action area should invite one clear next step through Read the next letter, Reuse or create the next node, and Mark the last node as a whole word. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A root node at the top and branching letter lanterns below, A current-letter token moving through the trie, and A create-node glow for missing letters.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Move one letter at a time." and "Create a node only if it is missing.". The action zone should stay tightly focused on Read the next letter, Reuse or create the next node, and Mark the last node as a whole word, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Luma starts at the root with a word token.
@@ -580,6 +632,32 @@ Navigation:
 
 The ending node needs a clear word-end lantern so children see the difference between "path exists" and "full word exists." The target word badge should stay visible throughout the search. Missing-path moments should be clear but gentle.
 
+
+
+### Background Design
+
+The background for `Exact Match Hollow` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A trie with a glowing search path, A target word badge above the tree, and A final `isWord` lantern at the ending node; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A trie with a glowing search path, A target word badge above the tree, and A final `isWord` lantern at the ending node already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Luma the Firefly should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Exact Match Hollow` and should visually support the lesson goal: exact word search must follow every letter and end on a node marked as a full word. The background should establish the world softly, but the foreground should stay centered on A trie with a glowing search path, A target word badge above the tree, and A final `isWord` lantern at the ending node. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Luma the Firefly should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A trie with a glowing search path, A target word badge above the tree, and A final `isWord` lantern at the ending node should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "You must follow every letter." and "The path is not enough. The last node must end a whole word.", and the action area should invite one clear next step through Walk through the target letters, Check whether each child exists, and Test the ending node's word flag. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A trie with a glowing search path, A target word badge above the tree, and A final `isWord` lantern at the ending node.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "You must follow every letter." and "The path is not enough. The last node must end a whole word.". The action zone should stay tightly focused on Walk through the target letters, Check whether each child exists, and Test the ending node's word flag, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Luma shows the target word above the tree.
@@ -779,6 +857,32 @@ Navigation:
 ### Visual Details
 
 The branch fan-out should visually communicate that many words can continue after the prefix. Keep the prefix badge short and readable. This screen should feel lighter than exact search because the final `isWord` check is not required.
+
+
+
+### Background Design
+
+The background for `Prefix Path Meadow` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A trie with one highlighted beginning path, A prefix badge above the tree, and A branch fan-out showing that more letters may continue afterward; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A trie with one highlighted beginning path, A prefix badge above the tree, and A branch fan-out showing that more letters may continue afterward already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Luma the Firefly should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Prefix Path Meadow` and should visually support the lesson goal: prefix search only needs the path for the beginning letters, not a full word ending. The background should establish the world softly, but the foreground should stay centered on A trie with one highlighted beginning path, A prefix badge above the tree, and A branch fan-out showing that more letters may continue afterward. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Luma the Firefly should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A trie with one highlighted beginning path, A prefix badge above the tree, and A branch fan-out showing that more letters may continue afterward should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "For a prefix, the path is enough." and "You do not need to stop at a full word ending.", and the action area should invite one clear next step through Walk through the prefix letters, Check whether the path exists, and Reveal the possible word branches below. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A trie with one highlighted beginning path, A prefix badge above the tree, and A branch fan-out showing that more letters may continue afterward.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "For a prefix, the path is enough." and "You do not need to stop at a full word ending.". The action zone should stay tightly focused on Walk through the prefix letters, Check whether the path exists, and Reveal the possible word branches below, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -981,6 +1085,32 @@ Navigation:
 
 The split-path star is the most important visual here because it shows branching search. Keep the wildcard dot large and obvious in the search badge. Multiple active paths should stay readable and not become a tangled mess.
 
+
+
+### Background Design
+
+The background for `Mystery Dot Maze` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A trie with one or more search paths glowing, A search badge that may contain a dot wildcard, and A split-path star where the wildcard can try many branches; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A trie with one or more search paths glowing, A search badge that may contain a dot wildcard, and A split-path star where the wildcard can try many branches already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Luma the Firefly should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Mystery Dot Maze` and should visually support the lesson goal: wildcard search may branch into more than one possible letter path. The background should establish the world softly, but the foreground should stay centered on A trie with one or more search paths glowing, A search badge that may contain a dot wildcard, and A split-path star where the wildcard can try many branches. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Luma the Firefly should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A trie with one or more search paths glowing, A search badge that may contain a dot wildcard, and A split-path star where the wildcard can try many branches should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "A dot means any one letter." and "Try every branch that could fit.", and the action area should invite one clear next step through Insert new words into the trie, Search a pattern with or without dots, and Follow one or many branches until a match is found. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A trie with one or more search paths glowing, A search badge that may contain a dot wildcard, and A split-path star where the wildcard can try many branches.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "A dot means any one letter." and "Try every branch that could fit.". The action zone should stay tightly focused on Insert new words into the trie, Search a pattern with or without dots, and Follow one or many branches until a match is found, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Luma inserts a few words into the trie.
@@ -1016,7 +1146,7 @@ Then:
 - search `"pad"` -> `false`
 - search `"bad"` -> `true`
 - search `".ad"` -> `true`
-- search `"b.."` -> `true`
+- search `"b."` -> `true`
 
 ---
 
@@ -1132,7 +1262,7 @@ wd.addWord("mad");
 wd.search("pad") // false
 wd.search("bad") // true
 wd.search(".ad") // true
-wd.search("b..") // true
+wd.search("b.") // true
 ```
 
 ---
@@ -1196,6 +1326,32 @@ Navigation:
 ### Visual Details
 
 The prefix node should act like a doorway into the subtree we need to count. Keep the word-end sparkles distinct from regular nodes. The count bubble should rise one by one as endings are found.
+
+
+
+### Background Design
+
+The background for `Glow Branch Counting Den` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A trie with one prefix node highlighted, Word-end sparkles below that prefix, and A count bubble tallying how many word endings appear in the subtree; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A trie with one prefix node highlighted, Word-end sparkles below that prefix, and A count bubble tallying how many word endings appear in the subtree already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Luma the Firefly should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Glow Branch Counting Den` and should visually support the lesson goal: once we reach a prefix node, we can count how many complete words live below it. The background should establish the world softly, but the foreground should stay centered on A trie with one prefix node highlighted, Word-end sparkles below that prefix, and A count bubble tallying how many word endings appear in the subtree. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Luma the Firefly should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A trie with one prefix node highlighted, Word-end sparkles below that prefix, and A count bubble tallying how many word endings appear in the subtree should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Find the prefix first." and "Then count full words below that point.", and the action area should invite one clear next step through Walk to the prefix node, Explore the subtree below it, and Count the word-end markers. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A trie with one prefix node highlighted, Word-end sparkles below that prefix, and A count bubble tallying how many word endings appear in the subtree.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Find the prefix first." and "Then count full words below that point.". The action zone should stay tightly focused on Walk to the prefix node, Explore the subtree below it, and Count the word-end markers, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -1392,6 +1548,32 @@ Navigation:
 
 The shared trail should feel like a single safe walkway through the trie. The split marker needs to be clear because that is where the common prefix stops. The collected-prefix strip should grow letter by letter as the learner walks.
 
+
+
+### Background Design
+
+The background for `Shared Trail Lookout` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A trie built from several words, One bright shared trail from the root, and A split marker where the words stop agreeing; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A trie built from several words, One bright shared trail from the root, and A split marker where the words stop agreeing already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Luma the Firefly should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Shared Trail Lookout` and should visually support the lesson goal: the longest common prefix is the shared path that all words can follow before splitting. The background should establish the world softly, but the foreground should stay centered on A trie built from several words, One bright shared trail from the root, and A split marker where the words stop agreeing. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Luma the Firefly should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A trie built from several words, One bright shared trail from the root, and A split marker where the words stop agreeing should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Keep walking while there is only one next letter." and "Stop when the paths split or a word ends.", and the action area should invite one clear next step through Follow the shared trail from the root, Watch for a split or word ending, and Record the letters collected so far. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A trie built from several words, One bright shared trail from the root, and A split marker where the words stop agreeing.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Keep walking while there is only one next letter." and "Stop when the paths split or a word ends.". The action zone should stay tightly focused on Follow the shared trail from the root, Watch for a split or word ending, and Record the letters collected so far, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Luma starts at the root with multiple words already inserted.
@@ -1576,6 +1758,32 @@ Navigation:
 
 The review deck should feel like a wall of glowing word trails. Keep the prefix reminder banner visible because shared beginnings are the heart of the chapter. Mini-scenes should be simple and not overcrowded with letters.
 
+
+
+### Background Design
+
+The background for `Word Forest Review Deck` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A review wall with six mini trie scenes, Tool chips for insert, exact, prefix, wildcard, count, common prefix, and A prefix reminder banner across the top; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A review wall with six mini trie scenes, Tool chips for insert, exact, prefix, wildcard, count, common prefix, and A prefix reminder banner across the top already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Luma the Firefly should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Word Forest Review Deck` and should visually support the lesson goal: review insert, exact search, prefix search, wildcard branching, subtree counting, and longest shared beginnings. The background should establish the world softly, but the foreground should stay centered on A review wall with six mini trie scenes, Tool chips for insert, exact, prefix, wildcard, count, common prefix, and A prefix reminder banner across the top. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Luma the Firefly should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A review wall with six mini trie scenes, Tool chips for insert, exact, prefix, wildcard, count, common prefix, and A prefix reminder banner across the top should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Ask what letters must be shared." and "Then decide whether you need a path, a word ending, or a branch search.", and the action area should invite one clear next step through Match each mini-scene to the right trie idea, Sort clue chips to the correct lesson, and Explain what the highlighted node means. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A review wall with six mini trie scenes, Tool chips for insert, exact, prefix, wildcard, count, common prefix, and A prefix reminder banner across the top.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Ask what letters must be shared." and "Then decide whether you need a path, a word ending, or a branch search.". The action zone should stay tightly focused on Match each mini-scene to the right trie idea, Sort clue chips to the correct lesson, and Explain what the highlighted node means, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Luma opens the review wall of trie scenes.
@@ -1697,6 +1905,32 @@ Navigation:
 ### Visual Details
 
 This screen should stay calm and centered on one active path. The target badge should be clear and readable, and the result area should remain simple. Word-end and branch clues need to be visually distinct.
+
+
+
+### Background Design
+
+The background for `Prefix Challenge Lanterns` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo One focused trie challenge, A highlighted active path and target word or prefix badge, and A result badge area above the tree; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If One focused trie challenge, A highlighted active path and target word or prefix badge, and A result badge area above the tree already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Luma the Firefly should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Prefix Challenge Lanterns` and should visually support the lesson goal: check whether the learner can read a trie path and choose the right search or prefix action with less support. The background should establish the world softly, but the foreground should stay centered on One focused trie challenge, A highlighted active path and target word or prefix badge, and A result badge area above the tree. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Luma the Firefly should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. One focused trie challenge, A highlighted active path and target word or prefix badge, and A result badge area above the tree should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "What does this path prove?" and "Choose whether you are checking a word, a prefix, or many possible branches.", and the action area should invite one clear next step through Predict the next path step, Solve one short trie challenge, and Explain what the ending node tells you. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through One focused trie challenge, A highlighted active path and target word or prefix badge, and A result badge area above the tree.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "What does this path prove?" and "Choose whether you are checking a word, a prefix, or many possible branches.". The action zone should stay tightly focused on Predict the next path step, Solve one short trie challenge, and Explain what the ending node tells you, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 

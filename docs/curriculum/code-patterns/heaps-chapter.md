@@ -127,6 +127,32 @@ Navigation:
 
 The heap should look like a prize display tree, not a dense technical diagram. The root or top item needs a clear pedestal so children can immediately see what is special about it. The rest of the items should feel grouped but not fully sorted, reinforcing the main idea.
 
+
+
+### Background Design
+
+The background for `Prize Pile Plaza` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A playful tree-shaped heap of numbered prizes, A glowing top prize pedestal, and A mode switch for min-heap and max-heap; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A playful tree-shaped heap of numbered prizes, A glowing top prize pedestal, and A mode switch for min-heap and max-heap already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Gizmo the Goat should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Prize Pile Plaza` and should visually support the lesson goal: a heap keeps one most-important item easy to reach, even if the whole collection is not fully sorted. The background should establish the world softly, but the foreground should stay centered on A playful tree-shaped heap of numbered prizes, A glowing top prize pedestal, and A mode switch for min-heap and max-heap. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Gizmo the Goat should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A playful tree-shaped heap of numbered prizes, A glowing top prize pedestal, and A mode switch for min-heap and max-heap should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "A heap keeps the top item ready." and "k means how many.", and the action area should invite one clear next step through Toggle min-heap vs max-heap, Push a new prize into the heap, and Pop the top prize and watch the heap fix itself. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A playful tree-shaped heap of numbered prizes, A glowing top prize pedestal, and A mode switch for min-heap and max-heap.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "A heap keeps the top item ready." and "k means how many.". The action zone should stay tightly focused on Toggle min-heap vs max-heap, Push a new prize into the heap, and Pop the top prize and watch the heap fix itself, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Gizmo introduces the heap as a prize pile with one special top spot.
@@ -463,6 +489,32 @@ Navigation:
 
 The basket should make `k` feel like capacity, not abstract notation. The top of the min-heap needs a spotlight showing that it is the smallest of the kept big group. Use clear keep-or-drop moments when a new trophy arrives.
 
+
+
+### Background Design
+
+The background for `Trophy Meadow` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A stream of numbered trophies entering the field, A min-heap basket that can hold only k trophies, and A smallest-in-the-top spotlight inside the basket; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A stream of numbered trophies entering the field, A min-heap basket that can hold only k trophies, and A smallest-in-the-top spotlight inside the basket already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Gizmo the Goat should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Trophy Meadow` and should visually support the lesson goal: keeping only `k` big items in a heap is enough when we only care about the top group. The background should establish the world softly, but the foreground should stay centered on A stream of numbered trophies entering the field, A min-heap basket that can hold only k trophies, and A smallest-in-the-top spotlight inside the basket. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Gizmo the Goat should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A stream of numbered trophies entering the field, A min-heap basket that can hold only k trophies, and A smallest-in-the-top spotlight inside the basket should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Keep only k trophies." and "If a bigger one arrives, the smallest of the kept group may leave.", and the action area should invite one clear next step through Add trophies one by one, Check whether the heap size is over k, and Pop the smallest kept trophy when needed. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A stream of numbered trophies entering the field, A min-heap basket that can hold only k trophies, and A smallest-in-the-top spotlight inside the basket.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Keep only k trophies." and "If a bigger one arrives, the smallest of the kept group may leave.". The action zone should stay tightly focused on Add trophies one by one, Check whether the heap size is over k, and Pop the smallest kept trophy when needed, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Gizmo begins filling the basket with incoming trophies.
@@ -726,6 +778,32 @@ Navigation:
 
 The kth-place ribbon should make the answer feel explicit. Keep the focus on the top of the min-heap and why it represents the cutoff line for the biggest `k` values. The rest of the medals can stay simple.
 
+
+
+### Background Design
+
+The background for `Medal Ladder` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A row of incoming number medals, A min-heap stand holding exactly k medals, and A kth-place ribbon attached to the heap top; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A row of incoming number medals, A min-heap stand holding exactly k medals, and A kth-place ribbon attached to the heap top already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Gizmo the Goat should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Medal Ladder` and should visually support the lesson goal: the top of the kept `k`-sized min-heap tells us the kth largest value. The background should establish the world softly, but the foreground should stay centered on A row of incoming number medals, A min-heap stand holding exactly k medals, and A kth-place ribbon attached to the heap top. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Gizmo the Goat should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A row of incoming number medals, A min-heap stand holding exactly k medals, and A kth-place ribbon attached to the heap top should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "The heap keeps the top k values." and "The smallest of those is the kth largest.", and the action area should invite one clear next step through Fill the heap to size k, Replace smaller kept values when bigger ones arrive, and Read the kth-place ribbon on top. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A row of incoming number medals, A min-heap stand holding exactly k medals, and A kth-place ribbon attached to the heap top.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "The heap keeps the top k values." and "The smallest of those is the kth largest.". The action zone should stay tightly focused on Fill the heap to size k, Replace smaller kept values when bigger ones arrive, and Read the kth-place ribbon on top, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Gizmo fills the min-heap stand with the first `k` medals.
@@ -909,6 +987,32 @@ Navigation:
 ### Visual Details
 
 This screen should have a clear two-stage layout: counting first, heap second. Frequency cards should be easy to read, with the item and its count shown together. The top-`k` podium should feel like a leaderboard.
+
+
+
+### Background Design
+
+The background for `Echo Market` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A market shelf of repeated items, A count board that turns items into frequency cards, and A heap podium keeping the top k frequency cards; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A market shelf of repeated items, A count board that turns items into frequency cards, and A heap podium keeping the top k frequency cards already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Gizmo the Goat should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Echo Market` and should visually support the lesson goal: we can count how often items appear, then use a heap to keep only the top `k` counts. The background should establish the world softly, but the foreground should stay centered on A market shelf of repeated items, A count board that turns items into frequency cards, and A heap podium keeping the top k frequency cards. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Gizmo the Goat should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A market shelf of repeated items, A count board that turns items into frequency cards, and A heap podium keeping the top k frequency cards should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "First count." and "Then keep the top k counts.", and the action area should invite one clear next step through Build the frequency cards, Add cards to the heap podium, and Remove the smallest kept count when needed. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A market shelf of repeated items, A count board that turns items into frequency cards, and A heap podium keeping the top k frequency cards.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "First count." and "Then keep the top k counts.". The action zone should stay tightly focused on Build the frequency cards, Add cards to the heap podium, and Remove the smallest kept count when needed, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -1111,6 +1215,32 @@ Navigation:
 
 The origin should glow clearly at the center of the field, and the rings should help children feel distance visually before relying on formulas. The heap panel should track the currently kept closest points in a simple list.
 
+
+
+### Background Design
+
+The background for `Star Field Center` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A star field with points scattered around a glowing origin, A heap panel keeping the current k closest stars, and Distance rings around the origin; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A star field with points scattered around a glowing origin, A heap panel keeping the current k closest stars, and Distance rings around the origin already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Gizmo the Goat should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Star Field Center` and should visually support the lesson goal: a heap can help keep the `k` closest points while farther points get pushed out. The background should establish the world softly, but the foreground should stay centered on A star field with points scattered around a glowing origin, A heap panel keeping the current k closest stars, and Distance rings around the origin. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Gizmo the Goat should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A star field with points scattered around a glowing origin, A heap panel keeping the current k closest stars, and Distance rings around the origin should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Measure how far each point is from the center." and "Keep only the k closest.", and the action area should invite one clear next step through Read each point, Compare its distance to the farthest kept point, and Replace the farthest kept point when a closer one appears. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A star field with points scattered around a glowing origin, A heap panel keeping the current k closest stars, and Distance rings around the origin.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Measure how far each point is from the center." and "Keep only the k closest.". The action zone should stay tightly focused on Read each point, Compare its distance to the farthest kept point, and Replace the farthest kept point when a closer one appears, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Gizmo shows the center point and the current candidate stars.
@@ -1301,6 +1431,32 @@ Navigation:
 ### Visual Details
 
 The stream layout should make the idea of many sorted sources feel natural. The heap wheel should clearly represent "front values only," not entire lists. The output river should grow steadily so the merged result feels built in order.
+
+
+
+### Background Design
+
+The background for `River Merge Mill` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo Several sorted streams feeding into one merge river, A min-heap wheel holding the front node from each list, and An output river growing one value at a time; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If Several sorted streams feeding into one merge river, A min-heap wheel holding the front node from each list, and An output river growing one value at a time already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Gizmo the Goat should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `River Merge Mill` and should visually support the lesson goal: a min-heap can always tell us which list has the smallest front value next. The background should establish the world softly, but the foreground should stay centered on Several sorted streams feeding into one merge river, A min-heap wheel holding the front node from each list, and An output river growing one value at a time. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Gizmo the Goat should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. Several sorted streams feeding into one merge river, A min-heap wheel holding the front node from each list, and An output river growing one value at a time should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Put the front value from each list into the heap." and "Always take the smallest front value next.", and the action area should invite one clear next step through Pop the smallest front value, Add it to the merged output, and Push the next value from that same list. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through Several sorted streams feeding into one merge river, A min-heap wheel holding the front node from each list, and An output river growing one value at a time.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Put the front value from each list into the heap." and "Always take the smallest front value next.". The action zone should stay tightly focused on Pop the smallest front value, Add it to the merged output, and Push the next value from that same list, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -1530,6 +1686,32 @@ Navigation:
 
 The ropes should be visibly different lengths so the greedy choice is easy to see. The cost meter must update every time two ropes are tied. The new combined rope should look longer and return to the heap bin clearly.
 
+
+
+### Background Design
+
+The background for `Rope Workshop` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A set of rope lengths hanging on hooks, A min-heap bin for the shortest ropes, and A cost meter that increases after each tie; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A set of rope lengths hanging on hooks, A min-heap bin for the shortest ropes, and A cost meter that increases after each tie already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Gizmo the Goat should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Rope Workshop` and should visually support the lesson goal: choosing the two shortest ropes first keeps the total cost as small as possible. The background should establish the world softly, but the foreground should stay centered on A set of rope lengths hanging on hooks, A min-heap bin for the shortest ropes, and A cost meter that increases after each tie. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Gizmo the Goat should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A set of rope lengths hanging on hooks, A min-heap bin for the shortest ropes, and A cost meter that increases after each tie should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Always tie the two shortest ropes first." and "The new combined rope goes back into the heap.", and the action area should invite one clear next step through Pop the two shortest ropes, Add their cost to the meter, and Push the new combined rope back. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A set of rope lengths hanging on hooks, A min-heap bin for the shortest ropes, and A cost meter that increases after each tie.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Always tie the two shortest ropes first." and "The new combined rope goes back into the heap.". The action zone should stay tightly focused on Pop the two shortest ropes, Add their cost to the meter, and Push the new combined rope back, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Gizmo pulls the two shortest ropes from the min-heap bin.
@@ -1732,6 +1914,32 @@ Navigation:
 
 The pavilion should feel like a gallery of priority problems. Min and max choices should be visually distinct but not overwhelming. The banner about the heap top should remain visible because it summarizes the chapter's most important idea.
 
+
+
+### Background Design
+
+The background for `Priority Review Pavilion` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A review board with six heap mini-scenes, Tool chips for min, max, top-k, priority, merge, cheapest, and A reminder banner that says "heap top = most important now"; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A review board with six heap mini-scenes, Tool chips for min, max, top-k, priority, merge, cheapest, and A reminder banner that says "heap top = most important now" already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Gizmo the Goat should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Priority Review Pavilion` and should visually support the lesson goal: review min-heaps, max-heaps, top-`k`, and the main clues that tell us when a heap is the right tool. The background should establish the world softly, but the foreground should stay centered on A review board with six heap mini-scenes, Tool chips for min, max, top-k, priority, merge, cheapest, and A reminder banner that says "heap top = most important now". Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Gizmo the Goat should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A review board with six heap mini-scenes, Tool chips for min, max, top-k, priority, merge, cheapest, and A reminder banner that says "heap top = most important now" should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Ask what item should be easiest to get next." and "Then choose min-heap or max-heap.", and the action area should invite one clear next step through Match each lesson to min-heap or max-heap, Sort clue chips to the right lesson, and Explain what the heap top means. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A review board with six heap mini-scenes, Tool chips for min, max, top-k, priority, merge, cheapest, and A reminder banner that says "heap top = most important now".
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Ask what item should be easiest to get next." and "Then choose min-heap or max-heap.". The action zone should stay tightly focused on Match each lesson to min-heap or max-heap, Sort clue chips to the right lesson, and Explain what the heap top means, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Gizmo opens the review board of mini heap scenes.
@@ -1865,6 +2073,32 @@ Navigation:
 ### Visual Details
 
 This screen should stay focused and readable. The top pedestal should remain the visual center because the learner must reason about what belongs there. Keep the result area calm and clear.
+
+
+
+### Background Design
+
+The background for `Heap Summit Challenge` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo One focused priority challenge, A heap mode choice and a visible top pedestal, and A result badge area above the scene; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If One focused priority challenge, A heap mode choice and a visible top pedestal, and A result badge area above the scene already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Gizmo the Goat should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Heap Summit Challenge` and should visually support the lesson goal: check whether the learner can decide what kind of heap to use and what the top item should represent. The background should establish the world softly, but the foreground should stay centered on One focused priority challenge, A heap mode choice and a visible top pedestal, and A result badge area above the scene. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Gizmo the Goat should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. One focused priority challenge, A heap mode choice and a visible top pedestal, and A result badge area above the scene should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "What should the heap top mean here?" and "Pick the heap that makes the next choice easiest.", and the action area should invite one clear next step through Choose min-heap or max-heap, Solve one short challenge, and Explain why that top item matters. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through One focused priority challenge, A heap mode choice and a visible top pedestal, and A result badge area above the scene.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "What should the heap top mean here?" and "Pick the heap that makes the next choice easiest.". The action zone should stay tightly focused on Choose min-heap or max-heap, Solve one short challenge, and Explain why that top item matters, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 

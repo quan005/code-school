@@ -324,31 +324,22 @@ Avoid:
 
 Mascots are guides, not decorations.
 
-### Core Mascot Set
+For the full canonical mascot roster and per-character design guidance, use [mascot-design-guide.md](/Users/daquanfreeman/Documents/Code%20School/code-school/docs/product/mascot-design-guide.md).
 
-- `Pip the Otter`
-  - Domain: arrays, sorting, organizing
-  - Shape language: rounded oval body, tidy paws
-  - Accent colors: sky blue scarf + leaf green satchel
-  - Emotional role: practical helper
+### Mascot Summary
 
-- `Milo the Fox`
-  - Domain: searching, pathfinding, graph journeys
-  - Shape language: triangle ears, rounded muzzle, sweeping tail
-  - Accent colors: orange pop + soft cream
-  - Emotional role: curious explorer
+The canonical mascot roster now lives in [mascot-design-guide.md](/Users/daquanfreeman/Documents/Code%20School/code-school/docs/product/mascot-design-guide.md).
 
-- `Tango the Turtle`
-  - Domain: step-by-step lessons, two pointers, patience
-  - Shape language: dome shell, stable oval feet
-  - Accent colors: leafy green shell + yellow neckerchief
-  - Emotional role: calm pacing guide
+At the system level, mascot roles still break down into four broad jobs:
 
-- `Nova the Owl`
-  - Domain: trees, recursion, branching ideas
-  - Shape language: wide circular eyes, layered wing shapes
-  - Accent colors: soft purple + warm brown
-  - Emotional role: wise explainer
+- practical helper
+  - supports organizing, sorting, and keeping track of objects or states
+- curious explorer
+  - supports search, paths, maps, and discovery moments
+- calm pacing guide
+  - supports step-by-step movement, comparison, and careful progress
+- wise explainer
+  - supports branching structures, reflection, and concept framing
 
 ### Mascot Behavior Rules
 

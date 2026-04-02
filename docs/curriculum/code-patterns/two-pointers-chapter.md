@@ -109,6 +109,32 @@ Navigation:
 - Active stone: warm orange glow
 - Helpful clue text: short bubbles near the active marker
 
+
+
+### Background Design
+
+The background for `Mirror Meadow` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A row of stepping stones, One turtle marker on the left, One turtle marker on the right, and A bright center path showing where the markers might meet; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A row of stepping stones, One turtle marker on the left, One turtle marker on the right, and A bright center path showing where the markers might meet already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Tango the Turtle should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Mirror Meadow` and should visually support the lesson goal: two pointers means watching two places at the same time and moving with a reason. The background should establish the world softly, but the foreground should stay centered on A row of stepping stones, One turtle marker on the left, One turtle marker on the right, and A bright center path showing where the markers might meet. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Tango the Turtle should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A row of stepping stones, One turtle marker on the left, One turtle marker on the right, and A bright center path showing where the markers might meet should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "A pointer is a finger that points to one spot." and "Two pointers help us compare two spots at once.", and the action area should invite one clear next step through Tap the left marker, Tap the right marker, and Then choose which one should move next. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A row of stepping stones, One turtle marker on the left, One turtle marker on the right, and A bright center path showing where the markers might meet.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "A pointer is a finger that points to one spot." and "Two pointers help us compare two spots at once.". The action zone should stay tightly focused on Tap the left marker, Tap the right marker, and Then choose which one should move next, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Tango says, "Let’s watch two spots at the same time."
@@ -442,6 +468,32 @@ Navigation:
 - Berry stones: rounded circles with clear number labels
 - Target sign: chunky orange badge
 - Correct answer state: green ring around the winning pair
+
+
+
+### Background Design
+
+The background for `Bridge Berry Row` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo Five berry stones in sorted order, One left marker and one right marker, A target sign showing the goal sum, and The active pair lights up when selected; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If Five berry stones in sorted order, One left marker and one right marker, A target sign showing the goal sum, and The active pair lights up when selected already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Tango the Turtle should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Bridge Berry Row` and should visually support the lesson goal: sorted order lets us move the left or right pointer with a reason. The background should establish the world softly, but the foreground should stay centered on Five berry stones in sorted order, One left marker and one right marker, A target sign showing the goal sum, and The active pair lights up when selected. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Tango the Turtle should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. Five berry stones in sorted order, One left marker and one right marker, A target sign showing the goal sum, and The active pair lights up when selected should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "If the sum is too small, move left." and "If the sum is too big, move right.", and the action area should invite one clear next step through Tap "Move left", Tap "Move right", and Then check whether the pair matches the target. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through Five berry stones in sorted order, One left marker and one right marker, A target sign showing the goal sum, and The active pair lights up when selected.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "If the sum is too small, move left." and "If the sum is too big, move right.". The action zone should stay tightly focused on Tap "Move left", Tap "Move right", and Then check whether the pair matches the target, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -779,6 +831,32 @@ Navigation:
 - Search markers: blue and orange explorer chips
 - Remaining target bubble: small yellow helper badge
 
+
+
+### Background Design
+
+The background for `Picnic Path` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A sorted picnic row of number tiles, One fixed flag on the first chosen tile, Two moving markers searching the rest of the row, and A running target bubble for the remaining sum; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A sorted picnic row of number tiles, One fixed flag on the first chosen tile, Two moving markers searching the rest of the row, and A running target bubble for the remaining sum already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Tango the Turtle should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Picnic Path` and should visually support the lesson goal: we can fix one number first, then use two pointers to search for the other two numbers. The background should establish the world softly, but the foreground should stay centered on A sorted picnic row of number tiles, One fixed flag on the first chosen tile, Two moving markers searching the rest of the row, and A running target bubble for the remaining sum. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Tango the Turtle should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A sorted picnic row of number tiles, One fixed flag on the first chosen tile, Two moving markers searching the rest of the row, and A running target bubble for the remaining sum should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Pick one number first." and "Then solve the smaller pair-sum problem.", and the action area should invite one clear next step through Tap a fixed first number, Move the left or right search marker, and Decide whether the triplet works. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A sorted picnic row of number tiles, One fixed flag on the first chosen tile, Two moving markers searching the rest of the row, and A running target bubble for the remaining sum.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Pick one number first." and "Then solve the smaller pair-sum problem.". The action zone should stay tightly focused on Tap a fixed first number, Move the left or right search marker, and Decide whether the triplet works, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Tango says, "Freeze one number first."
@@ -935,7 +1013,7 @@ Done. Return `false`.
 
 ```ts
 function tripletSum(nums: number[], target: number): boolean {
-  nums = [...nums].sort((a, b) => a - b)
+  nums = [..nums].sort((a, b) => a - b)
 
   for (let i = 0; i < nums.length - 2; i++) {
     let left = i + 1
@@ -1107,6 +1185,32 @@ Navigation:
 - Posts: thick rounded bars with height marks
 - Water: transparent blue fill that rises only to the shorter wall
 - Area badge: large yellow circle near the water
+
+
+
+### Background Design
+
+The background for `Harbor Heights` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo Vertical post bars standing on water, One left post and one right post highlighted, A pale blue water fill between them, and A size badge showing current container area; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If Vertical post bars standing on water, One left post and one right post highlighted, A pale blue water fill between them, and A size badge showing current container area already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Tango the Turtle should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Harbor Heights` and should visually support the lesson goal: the shorter side limits the water, so that is the side we should move. The background should establish the world softly, but the foreground should stay centered on Vertical post bars standing on water, One left post and one right post highlighted, A pale blue water fill between them, and A size badge showing current container area. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Tango the Turtle should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. Vertical post bars standing on water, One left post and one right post highlighted, A pale blue water fill between them, and A size badge showing current container area should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "The shorter wall limits the water." and "Move the shorter side, not the taller side.", and the action area should invite one clear next step through Compare the two wall heights, Choose which side should move, and Watch the water area change. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through Vertical post bars standing on water, One left post and one right post highlighted, A pale blue water fill between them, and A size badge showing current container area.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "The shorter wall limits the water." and "Move the shorter side, not the taller side.". The action zone should stay tightly focused on Compare the two wall heights, Choose which side should move, and Watch the water area change, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -1416,6 +1520,32 @@ Navigation:
 - Matching letters: soft green pulse
 - Mismatch state: gentle wiggle and helper note
 
+
+
+### Background Design
+
+The background for `Echo Gate` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A row of letter lanterns, One left marker on the first letter, One right marker on the last letter, and A mirror arch in the middle; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A row of letter lanterns, One left marker on the first letter, One right marker on the last letter, and A mirror arch in the middle already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Tango the Turtle should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Echo Gate` and should visually support the lesson goal: matching from both ends helps us test whether a word or phrase reads the same forward and backward. The background should establish the world softly, but the foreground should stay centered on A row of letter lanterns, One left marker on the first letter, One right marker on the last letter, and A mirror arch in the middle. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Tango the Turtle should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A row of letter lanterns, One left marker on the first letter, One right marker on the last letter, and A mirror arch in the middle should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Compare the outside letters first." and "Skip spaces and punctuation if the rule says to ignore them.", and the action area should invite one clear next step through Tap the next left letter, Tap the next right letter, and Decide if the two letters match. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A row of letter lanterns, One left marker on the first letter, One right marker on the last letter, and A mirror arch in the middle.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Compare the outside letters first." and "Skip spaces and punctuation if the rule says to ignore them.". The action zone should stay tightly focused on Tap the next left letter, Tap the next right letter, and Decide if the two letters match, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Tango says, "Start on the outside."
@@ -1681,6 +1811,32 @@ Navigation:
 - Non-zero crates: full colorful boxes
 - Zero crates: pale empty boxes with a soft gray label
 - Swap motion: quick slide with a calm bounce
+
+
+
+### Background Design
+
+The background for `Supply Shelf` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A row of item crates, One search marker scanning each crate, One storage marker showing the next good spot, and Zero crates shown as faded empty boxes; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A row of item crates, One search marker scanning each crate, One storage marker showing the next good spot, and Zero crates shown as faded empty boxes already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Tango the Turtle should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Supply Shelf` and should visually support the lesson goal: one pointer can search while another pointer tracks the next good spot for a non-zero value. The background should establish the world softly, but the foreground should stay centered on A row of item crates, One search marker scanning each crate, One storage marker showing the next good spot, and Zero crates shown as faded empty boxes. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Tango the Turtle should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A row of item crates, One search marker scanning each crate, One storage marker showing the next good spot, and Zero crates shown as faded empty boxes should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "The search pointer looks at every box." and "The storage pointer marks the next good spot.", and the action area should invite one clear next step through Tap the next non-zero item, Move it to the good spot, and Leave zero crates for the end. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A row of item crates, One search marker scanning each crate, One storage marker showing the next good spot, and Zero crates shown as faded empty boxes.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "The search pointer looks at every box." and "The storage pointer marks the next good spot.". The action zone should stay tightly focused on Tap the next non-zero item, Move it to the good spot, and Leave zero crates for the end, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -1949,6 +2105,32 @@ Navigation:
 ### Visual Details
 
 Use a parade road with confetti dots and soft flag poles so the sequence feels playful instead of abstract. The pivot should get a purple spotlight because it is the special turning point. The tail should have a calm blue outline so children can see which part gets reorganized after the swap.
+
+
+
+### Background Design
+
+The background for `Flag Parade` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A parade road with numbered flags in a row, A purple glow around the pivot flag, A gold swap marker over the next bigger flag, and A pale blue outline around the tail section to fix; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A parade road with numbered flags in a row, A purple glow around the pivot flag, A gold swap marker over the next bigger flag, and A pale blue outline around the tail section to fix already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Tango the Turtle should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Flag Parade` and should visually support the lesson goal: this two-pointer lesson happens in stages: find the pivot, swap with the next bigger value, then reverse the tail. The background should establish the world softly, but the foreground should stay centered on A parade road with numbered flags in a row, A purple glow around the pivot flag, A gold swap marker over the next bigger flag, and A pale blue outline around the tail section to fix. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Tango the Turtle should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A parade road with numbered flags in a row, A purple glow around the pivot flag, A gold swap marker over the next bigger flag, and A pale blue outline around the tail section to fix should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Find the pivot first." and "Then swap and fix the tail.", and the action area should invite one clear next step through Step 1 card: search from the right for the first drop, Step 2 card: pick the next bigger flag, and Step 3 card: reverse the tail. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A parade road with numbered flags in a row, A purple glow around the pivot flag, A gold swap marker over the next bigger flag, and A pale blue outline around the tail section to fix.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Find the pivot first." and "Then swap and fix the tail.". The action zone should stay tightly focused on Step 1 card: search from the right for the first drop, Step 2 card: pick the next bigger flag, and Step 3 card: reverse the tail, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -2319,6 +2501,32 @@ Navigation:
 
 The review board should feel like a meadow classroom wall with pinned recap cards. Each recap card should reuse the chapter colors so children quickly connect style to visual pattern. Green check bursts should feel celebratory but calm, and retry messages should stay gentle.
 
+
+
+### Background Design
+
+The background for `Mirror Meadow Review Board` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A classroom board with three mini-scenes, Mini-scene 1: inward traversal, Mini-scene 2: unidirectional traversal, and Mini-scene 3: staged traversal; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A classroom board with three mini-scenes, Mini-scene 1: inward traversal, Mini-scene 2: unidirectional traversal, and Mini-scene 3: staged traversal already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Tango the Turtle should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Mirror Meadow Review Board` and should visually support the lesson goal: review the three two-pointer styles and help the learner choose the right move from visual clues. The background should establish the world softly, but the foreground should stay centered on A classroom board with three mini-scenes, Mini-scene 1: inward traversal, Mini-scene 2: unidirectional traversal, and Mini-scene 3: staged traversal. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Tango the Turtle should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A classroom board with three mini-scenes, Mini-scene 1: inward traversal, Mini-scene 2: unidirectional traversal, and Mini-scene 3: staged traversal should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Ask which style fits the clue." and "Use the scene before the big vocabulary word.", and the action area should invite one clear next step through Choose the matching two-pointer style, Explain which pointer should move next, and Match a problem card to a scene card. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A classroom board with three mini-scenes, Mini-scene 1: inward traversal, Mini-scene 2: unidirectional traversal, and Mini-scene 3: staged traversal.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Ask which style fits the clue." and "Use the scene before the big vocabulary word.". The action zone should stay tightly focused on Choose the matching two-pointer style, Explain which pointer should move next, and Match a problem card to a scene card, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Tango introduces the review as a style-matching game.
@@ -2488,6 +2696,32 @@ Navigation:
 ### Visual Details
 
 This screen should feel a little calmer and more focused than the walkthrough lessons. Keep the same pointer colors from the chapter so the learner can transfer what they already know. Reserve purple and gold for the mastery result area so success feels special without turning the whole screen into a reward explosion.
+
+
+
+### Background Design
+
+The background for `Mirror Meadow Challenge Trail` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo One focused challenge scene, Two markers already in place, A target card near the scene, and A result badge area for pass or needs-practice; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If One focused challenge scene, Two markers already in place, A target card near the scene, and A result badge area for pass or needs-practice already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Tango the Turtle should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Mirror Meadow Challenge Trail` and should visually support the lesson goal: check whether the learner can choose and use the correct two-pointer move with much less support. The background should establish the world softly, but the foreground should stay centered on One focused challenge scene, Two markers already in place, A target card near the scene, and A result badge area for pass or needs-practice. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Tango the Turtle should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. One focused challenge scene, Two markers already in place, A target card near the scene, and A result badge area for pass or needs-practice should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Use the clue, then choose the move." and "Try to explain why your move works.", and the action area should invite one clear next step through Choose the next move on your own, Solve one challenge with limited hints, and Explain the pattern in one short sentence. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through One focused challenge scene, Two markers already in place, A target card near the scene, and A result badge area for pass or needs-practice.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Use the clue, then choose the move." and "Try to explain why your move works.". The action zone should stay tightly focused on Choose the next move on your own, Solve one challenge with limited hints, and Explain the pattern in one short sentence, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 

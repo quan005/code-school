@@ -107,6 +107,32 @@ Navigation:
 
 The trail should feel direct and confident, unlike a branching backtracking maze. The best-now spotlight should make the local choice visible. The future-flexibility meter should help children understand that greedy is about staying in a good position for what comes next.
 
+
+
+### Background Design
+
+The background for `Best-Now Camp` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A trail of choices with one "best now" spotlight, A current-choice card and a future-flexibility meter, and A path that keeps moving forward instead of exploring every branch; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A trail of choices with one "best now" spotlight, A current-choice card and a future-flexibility meter, and A path that keeps moving forward instead of exploring every branch already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Sunny the Raccoon should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Best-Now Camp` and should visually support the lesson goal: a greedy algorithm makes the best current choice it can and then keeps moving forward. The background should establish the world softly, but the foreground should stay centered on A trail of choices with one "best now" spotlight, A current-choice card and a future-flexibility meter, and A path that keeps moving forward instead of exploring every branch. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Sunny the Raccoon should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A trail of choices with one "best now" spotlight, A current-choice card and a future-flexibility meter, and A path that keeps moving forward instead of exploring every branch should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Pick the best helpful move right now." and "Greedy works when the best-now choice keeps the future in good shape.", and the action area should invite one clear next step through Compare current options, Choose the best-now move, and Watch the trail continue without backtracking. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A trail of choices with one "best now" spotlight, A current-choice card and a future-flexibility meter, and A path that keeps moving forward instead of exploring every branch.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Pick the best helpful move right now." and "Greedy works when the best-now choice keeps the future in good shape.". The action zone should stay tightly focused on Compare current options, Choose the best-now move, and Watch the trail continue without backtracking, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Sunny presents several current options on the trail.
@@ -298,6 +324,32 @@ Navigation:
 
 The sorted rows should make matching feel tidy and deliberate. The current child and cookie need clear focus rings. Happy matches should feel warm and rewarding, while too-small cookies should simply slide past without drama.
 
+
+
+### Background Design
+
+The background for `Cookie Picnic Lane` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A sorted child row with greed badges, A sorted cookie tray with size labels, and A happy-count banner that updates when matches work; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A sorted child row with greed badges, A sorted cookie tray with size labels, and A happy-count banner that updates when matches work already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Sunny the Raccoon should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Cookie Picnic Lane` and should visually support the lesson goal: the best greedy move is to match the smallest cookie that still satisfies the smallest waiting child. The background should establish the world softly, but the foreground should stay centered on A sorted child row with greed badges, A sorted cookie tray with size labels, and A happy-count banner that updates when matches work. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Sunny the Raccoon should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A sorted child row with greed badges, A sorted cookie tray with size labels, and A happy-count banner that updates when matches work should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Start small with small." and "Do not waste a big cookie on a child who needs only a small one.", and the action area should invite one clear next step through Compare the current child and current cookie, Match if the cookie is big enough, and Move to the next child or next cookie. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A sorted child row with greed badges, A sorted cookie tray with size labels, and A happy-count banner that updates when matches work.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Start small with small." and "Do not waste a big cookie on a child who needs only a small one.". The action zone should stay tightly focused on Compare the current child and current cookie, Match if the cookie is big enough, and Move to the next child or next cookie, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Sunny lines up the children and cookies from smallest to largest.
@@ -486,6 +538,32 @@ Navigation:
 
 The price line should make rises and drops instantly visible. Gain ribbons should appear only on upward segments, helping children see that profit comes from collecting climbs. The total-profit jar should grow steadily.
 
+
+
+### Background Design
+
+The background for `Market Hill Board` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A price line moving up and down across days, Green gain ribbons on upward slopes, and A total-profit jar collecting each positive rise; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A price line moving up and down across days, Green gain ribbons on upward slopes, and A total-profit jar collecting each positive rise already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Sunny the Raccoon should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Market Hill Board` and should visually support the lesson goal: every upward price step can be safely collected as profit. The background should establish the world softly, but the foreground should stay centered on A price line moving up and down across days, Green gain ribbons on upward slopes, and A total-profit jar collecting each positive rise. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Sunny the Raccoon should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A price line moving up and down across days, Green gain ribbons on upward slopes, and A total-profit jar collecting each positive rise should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "When the price climbs, take that gain." and "Ignore drops and collect the rising parts.", and the action area should invite one clear next step through Compare today to tomorrow, Add positive changes to the profit jar, and Skip negative changes. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A price line moving up and down across days, Green gain ribbons on upward slopes, and A total-profit jar collecting each positive rise.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "When the price climbs, take that gain." and "Ignore drops and collect the rising parts.". The action zone should stay tightly focused on Compare today to tomorrow, Add positive changes to the profit jar, and Skip negative changes, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Sunny looks at one day-to-day change at a time.
@@ -654,6 +732,32 @@ Navigation:
 ### Visual Details
 
 The farthest-reach banner should be the star of the screen because it represents the greedy state. Each jump stone should show how far it can help extend the banner. Stuck positions should be clear but not harsh.
+
+
+
+### Background Design
+
+The background for `Leap Meadow` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A row of jump stones with reach numbers, A farthest-reach banner extending ahead of the learner, and A finish flag at the end; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A row of jump stones with reach numbers, A farthest-reach banner extending ahead of the learner, and A finish flag at the end already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Sunny the Raccoon should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Leap Meadow` and should visually support the lesson goal: the key greedy idea is tracking the farthest place reachable so far. The background should establish the world softly, but the foreground should stay centered on A row of jump stones with reach numbers, A farthest-reach banner extending ahead of the learner, and A finish flag at the end. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Sunny the Raccoon should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A row of jump stones with reach numbers, A farthest-reach banner extending ahead of the learner, and A finish flag at the end should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Keep the farthest reach you can get so far." and "If you ever fall behind that reach, you are stuck.", and the action area should invite one clear next step through Read the jump value at the current stone, Update the farthest reachable position, and Check whether the finish flag is still possible. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A row of jump stones with reach numbers, A farthest-reach banner extending ahead of the learner, and A finish flag at the end.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Keep the farthest reach you can get so far." and "If you ever fall behind that reach, you are stuck.". The action zone should stay tightly focused on Read the jump value at the current stone, Update the farthest reachable position, and Check whether the finish flag is still possible, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -830,6 +934,32 @@ Navigation:
 ### Visual Details
 
 The register slots should make bill counts easy to scan. Keep the customer line visible so the learner thinks ahead a little about future service. The change-ready meter should help show why one local change choice is smarter than another.
+
+
+
+### Background Design
+
+The background for `Lemon Stand Square` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A lemonade stand register with $5 and $10 bill slots, A line of customers holding bills, and A change-ready meter showing whether the stand can keep serving; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A lemonade stand register with $5 and $10 bill slots, A line of customers holding bills, and A change-ready meter showing whether the stand can keep serving already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Sunny the Raccoon should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Lemon Stand Square` and should visually support the lesson goal: giving the best change now means using the helpful bills that protect future change-making. The background should establish the world softly, but the foreground should stay centered on A lemonade stand register with $5 and $10 bill slots, A line of customers holding bills, and A change-ready meter showing whether the stand can keep serving. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Sunny the Raccoon should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A lemonade stand register with $5 and $10 bill slots, A line of customers holding bills, and A change-ready meter showing whether the stand can keep serving should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Give change in the way that helps the stand stay ready." and "Saving smaller bills can matter for later customers.", and the action area should invite one clear next step through Read the customer's bill, Choose bills for change, and Update the register slots. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A lemonade stand register with $5 and $10 bill slots, A line of customers holding bills, and A change-ready meter showing whether the stand can keep serving.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Give change in the way that helps the stand stay ready." and "Saving smaller bills can matter for later customers.". The action zone should stay tightly focused on Read the customer's bill, Choose bills for change, and Update the register slots, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -1024,6 +1154,32 @@ Navigation:
 
 The partition fence should visually stretch and stop, making the greedy rule easy to see. Last-seen markers should sit above the string so children can understand why the fence sometimes has to grow farther. Completed partitions should feel clean and satisfying.
 
+
+
+### Background Design
+
+The background for `Ribbon Word Fence` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A string shown as colored letter flags, A current partition fence stretching across the flags, and A last-seen marker for each letter's farthest position; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A string shown as colored letter flags, A current partition fence stretching across the flags, and A last-seen marker for each letter's farthest position already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Sunny the Raccoon should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Ribbon Word Fence` and should visually support the lesson goal: a partition should stretch only until every letter inside it has fully finished appearing. The background should establish the world softly, but the foreground should stay centered on A string shown as colored letter flags, A current partition fence stretching across the flags, and A last-seen marker for each letter's farthest position. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Sunny the Raccoon should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A string shown as colored letter flags, A current partition fence stretching across the flags, and A last-seen marker for each letter's farthest position should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Keep extending until every letter in the partition is done." and "Then cut the partition and start a new one.", and the action area should invite one clear next step through Read the current letter, Extend the partition end if needed, and Close the partition when the current index reaches the end. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A string shown as colored letter flags, A current partition fence stretching across the flags, and A last-seen marker for each letter's farthest position.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Keep extending until every letter in the partition is done." and "Then cut the partition and start a new one.". The action zone should stay tightly focused on Read the current letter, Extend the partition end if needed, and Close the partition when the current index reaches the end, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Sunny reads the next letter flag in the string.
@@ -1194,6 +1350,32 @@ Navigation:
 ### Visual Details
 
 The ring-road layout should make the circular trip feel intuitive. The fuel tank meter must stay visible because it explains the greedy reset rule. The reset flag should jump clearly so children can see when the starting point changes.
+
+
+
+### Background Design
+
+The background for `Fuel Ring Road` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A ring road of gas stations with gain and cost badges, A fuel tank meter showing current gas, and A reset flag that jumps to the next station when the path fails; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A ring road of gas stations with gain and cost badges, A fuel tank meter showing current gas, and A reset flag that jumps to the next station when the path fails already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Sunny the Raccoon should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Fuel Ring Road` and should visually support the lesson goal: when the current trip becomes impossible, we can reset the start to the next station. The background should establish the world softly, but the foreground should stay centered on A ring road of gas stations with gain and cost badges, A fuel tank meter showing current gas, and A reset flag that jumps to the next station when the path fails. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Sunny the Raccoon should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A ring road of gas stations with gain and cost badges, A fuel tank meter showing current gas, and A reset flag that jumps to the next station when the path fails should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "If the tank drops below zero, this start cannot work." and "Reset the start to the next station.", and the action area should invite one clear next step through Add gas from the current station, Subtract cost to the next station, and Reset the start when the tank goes negative. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A ring road of gas stations with gain and cost badges, A fuel tank meter showing current gas, and A reset flag that jumps to the next station when the path fails.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "If the tank drops below zero, this start cannot work." and "Reset the start to the next station.". The action zone should stay tightly focused on Add gas from the current station, Subtract cost to the next station, and Reset the start when the tank goes negative, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -1384,6 +1566,32 @@ Navigation:
 
 The review porch should feel like a planning wall of smart local moves. The banner should stay visible because it summarizes the chapter well. Mini-scenes should be simple enough that the greedy action stands out immediately.
 
+
+
+### Background Design
+
+The background for `Greedy Review Porch` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A review wall with six mini greedy scenes, Tool chips for best-now, match, gain, reach, keep-ready, reset, and A banner that says "take the local move that keeps the future possible"; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A review wall with six mini greedy scenes, Tool chips for best-now, match, gain, reach, keep-ready, reset, and A banner that says "take the local move that keeps the future possible" already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Sunny the Raccoon should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Greedy Review Porch` and should visually support the lesson goal: review best-now choices, matching, taking gains, farthest reach, change-making, partition cutting, and start resetting. The background should establish the world softly, but the foreground should stay centered on A review wall with six mini greedy scenes, Tool chips for best-now, match, gain, reach, keep-ready, reset, and A banner that says "take the local move that keeps the future possible". Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Sunny the Raccoon should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A review wall with six mini greedy scenes, Tool chips for best-now, match, gain, reach, keep-ready, reset, and A banner that says "take the local move that keeps the future possible" should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Ask what current choice helps the most right now." and "Then ask whether it keeps later choices in good shape.", and the action area should invite one clear next step through Match each lesson to its greedy idea, Sort clue chips to the right mini-scene, and Explain why the local choice works here. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A review wall with six mini greedy scenes, Tool chips for best-now, match, gain, reach, keep-ready, reset, and A banner that says "take the local move that keeps the future possible".
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Ask what current choice helps the most right now." and "Then ask whether it keeps later choices in good shape.". The action zone should stay tightly focused on Match each lesson to its greedy idea, Sort clue chips to the right mini-scene, and Explain why the local choice works here, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Sunny opens the review wall of greedy scenes.
@@ -1511,6 +1719,32 @@ Navigation:
 ### Visual Details
 
 This screen should stay focused on the current decision point. The highlighted local choice needs to be obvious, and the result area should remain calm and readable. Avoid clutter so the reasoning stays front and center.
+
+
+
+### Background Design
+
+The background for `Smart Choice Ridge` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo One focused greedy challenge, A highlighted current choice point, and A result badge area above the scene; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If One focused greedy challenge, A highlighted current choice point, and A result badge area above the scene already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Sunny the Raccoon should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Smart Choice Ridge` and should visually support the lesson goal: check whether the learner can spot the best-now move and explain why it is safe with less support. The background should establish the world softly, but the foreground should stay centered on One focused greedy challenge, A highlighted current choice point, and A result badge area above the scene. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Sunny the Raccoon should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. One focused greedy challenge, A highlighted current choice point, and A result badge area above the scene should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "What is the best move right now?" and "Why does that move keep the future workable?", and the action area should invite one clear next step through Predict the next greedy move, Solve one short challenge, and Explain why the local choice is trusted here. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through One focused greedy challenge, A highlighted current choice point, and A result badge area above the scene.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "What is the best move right now?" and "Why does that move keep the future workable?". The action zone should stay tightly focused on Predict the next greedy move, Solve one short challenge, and Explain why the local choice is trusted here, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 

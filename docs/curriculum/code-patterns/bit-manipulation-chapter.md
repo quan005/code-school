@@ -121,6 +121,32 @@ Navigation:
 
 The switchboard needs to feel playful and readable, with each bit clearly labeled as `0` or `1`. The place-value ladder should make binary value feel concrete. Operator cards should show simple before-and-after state changes rather than dense truth tables.
 
+
+
+### Background Design
+
+The background for `Switchboard Station` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A row of glowing on/off bit switches, A place-value ladder labeled 1, 2, 4, 8, 16, and Operator cards for AND, OR, XOR, and shifts; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A row of glowing on/off bit switches, A place-value ladder labeled 1, 2, 4, 8, 16, and Operator cards for AND, OR, XOR, and shifts already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Blinky the Robot should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Switchboard Station` and should visually support the lesson goal: numbers are built from tiny on/off bits, and that bit tricks work by changing or comparing those switches. The background should establish the world softly, but the foreground should stay centered on A row of glowing on/off bit switches, A place-value ladder labeled 1, 2, 4, 8, 16, and Operator cards for AND, OR, XOR, and shifts. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Blinky the Robot should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A row of glowing on/off bit switches, A place-value ladder labeled 1, 2, 4, 8, 16, and Operator cards for AND, OR, XOR, and shifts should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "A bit is a tiny off/on switch." and "Many switches together can build a number.", and the action area should invite one clear next step through Toggle bit switches on and off, Watch the number value update, and Test one operator card on two bit rows. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A row of glowing on/off bit switches, A place-value ladder labeled 1, 2, 4, 8, 16, and Operator cards for AND, OR, XOR, and shifts.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "A bit is a tiny off/on switch." and "Many switches together can build a number.". The action zone should stay tightly focused on Toggle bit switches on and off, Watch the number value update, and Test one operator card on two bit rows, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Blinky introduces the bit switches as tiny on/off lights.
@@ -436,6 +462,32 @@ Navigation:
 
 The canceling effect should be visual and satisfying. Matching duplicates should disappear in a soft spark so children can see the pair-cancel rule. The survivor chip should stand clearly at the end of the circuit.
 
+
+
+### Background Design
+
+The background for `Canceling Circuit Lane` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A row of number chips entering an XOR circuit, Matching-pair sparks that cancel duplicate values, and A final survivor chip that remains at the end; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A row of number chips entering an XOR circuit, Matching-pair sparks that cancel duplicate values, and A final survivor chip that remains at the end already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Blinky the Robot should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Canceling Circuit Lane` and should visually support the lesson goal: XOR cancels matching pairs, leaving the single number behind. The background should establish the world softly, but the foreground should stay centered on A row of number chips entering an XOR circuit, Matching-pair sparks that cancel duplicate values, and A final survivor chip that remains at the end. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Blinky the Robot should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A row of number chips entering an XOR circuit, Matching-pair sparks that cancel duplicate values, and A final survivor chip that remains at the end should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Pairs cancel with XOR." and "The number without a pair is what stays.", and the action area should invite one clear next step through Feed numbers into the XOR circuit, Watch duplicates cancel, and Read the surviving value. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A row of number chips entering an XOR circuit, Matching-pair sparks that cancel duplicate values, and A final survivor chip that remains at the end.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Pairs cancel with XOR." and "The number without a pair is what stays.". The action zone should stay tightly focused on Feed numbers into the XOR circuit, Watch duplicates cancel, and Read the surviving value, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Blinky sends the number chips through the XOR circuit one at a time.
@@ -611,6 +663,32 @@ Navigation:
 ### Visual Details
 
 The bit row should make on bits feel bright and off bits feel dim. The glow counter should increase one step at a time. The scan marker should clearly show which bit is being checked now.
+
+
+
+### Background Design
+
+The background for `Glow Bit Counter` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo One binary row of switches, A glow counter that increments for every 1 bit, and A shift marker or scan marker moving across the row; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If One binary row of switches, A glow counter that increments for every 1 bit, and A shift marker or scan marker moving across the row already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Blinky the Robot should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Glow Bit Counter` and should visually support the lesson goal: how to count how many bit switches are turned on in a number. The background should establish the world softly, but the foreground should stay centered on One binary row of switches, A glow counter that increments for every 1 bit, and A shift marker or scan marker moving across the row. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Blinky the Robot should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. One binary row of switches, A glow counter that increments for every 1 bit, and A shift marker or scan marker moving across the row should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Count the switches that are on." and "Each 1 adds one to the total.", and the action area should invite one clear next step through Scan one bit at a time, Add to the glow counter when the bit is 1, and Continue until all bits are checked. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through One binary row of switches, A glow counter that increments for every 1 bit, and A shift marker or scan marker moving across the row.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Count the switches that are on." and "Each 1 adds one to the total.". The action zone should stay tightly focused on Scan one bit at a time, Add to the glow counter when the bit is 1, and Continue until all bits are checked, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -808,6 +886,32 @@ Navigation:
 ### Visual Details
 
 The one-beam badge should immediately communicate the single-on-bit idea. Side-by-side bit rows are helpful here because children can compare valid and invalid examples. The AND-check card should stay simple and visual.
+
+
+
+### Background Design
+
+The background for `Single Beam Tower` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo Several bit rows showing different numbers, A one-beam badge for rows with only one on bit, and An AND-check card showing the famous power-of-two trick; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If Several bit rows showing different numbers, A one-beam badge for rows with only one on bit, and An AND-check card showing the famous power-of-two trick already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Blinky the Robot should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Single Beam Tower` and should visually support the lesson goal: powers of two have exactly one on bit in binary. The background should establish the world softly, but the foreground should stay centered on Several bit rows showing different numbers, A one-beam badge for rows with only one on bit, and An AND-check card showing the famous power-of-two trick. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Blinky the Robot should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. Several bit rows showing different numbers, A one-beam badge for rows with only one on bit, and An AND-check card showing the famous power-of-two trick should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "A power of two has one glowing bit." and "If more than one bit glows, it is not a power of two.", and the action area should invite one clear next step through Count the glowing bits, Test the AND-check card, and Decide power of two or not. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through Several bit rows showing different numbers, A one-beam badge for rows with only one on bit, and An AND-check card showing the famous power-of-two trick.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "A power of two has one glowing bit." and "If more than one bit glows, it is not a power of two.". The action zone should stay tightly focused on Count the glowing bits, Test the AND-check card, and Decide power of two or not, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -1017,6 +1121,32 @@ Navigation:
 
 Using two rows helps children understand what is expected versus what was actually given. Matching cancellations should be visible between the two rows. The missing-slot glow should appear only when every pairable value has vanished.
 
+
+
+### Background Design
+
+The background for `Number Gap Workshop` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo An expected number row and an actual number row, An XOR wire connecting matching values, and A missing-slot glow where the absent number is revealed; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If An expected number row and an actual number row, An XOR wire connecting matching values, and A missing-slot glow where the absent number is revealed already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Blinky the Robot should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Number Gap Workshop` and should visually support the lesson goal: XOR can also reveal which number is missing when every expected value should be present once. The background should establish the world softly, but the foreground should stay centered on An expected number row and an actual number row, An XOR wire connecting matching values, and A missing-slot glow where the absent number is revealed. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Blinky the Robot should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. An expected number row and an actual number row, An XOR wire connecting matching values, and A missing-slot glow where the absent number is revealed should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Match expected numbers with actual numbers." and "The missing one is what does not get canceled.", and the action area should invite one clear next step through XOR expected and actual values, Watch matching numbers cancel, and Reveal the missing value. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through An expected number row and an actual number row, An XOR wire connecting matching values, and A missing-slot glow where the absent number is revealed.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Match expected numbers with actual numbers." and "The missing one is what does not get canceled.". The action zone should stay tightly focused on XOR expected and actual values, Watch matching numbers cancel, and Reveal the missing value, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Blinky lays out the full expected number row.
@@ -1182,6 +1312,32 @@ Navigation:
 ### Visual Details
 
 The number ladder should feel incremental and easy to follow. Count badges should be simple and consistent. The helper arrow should reinforce that this lesson uses saved smaller answers, not full recounting every time.
+
+
+
+### Background Design
+
+The background for `Bit Ladder Lab` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A ladder of numbers from 0 up to n, A count badge under each number, and A helper arrow showing how one smaller answer helps the next; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A ladder of numbers from 0 up to n, A count badge under each number, and A helper arrow showing how one smaller answer helps the next already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Blinky the Robot should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Bit Ladder Lab` and should visually support the lesson goal: we can build the count of 1 bits for many numbers by reusing smaller answers. The background should establish the world softly, but the foreground should stay centered on A ladder of numbers from 0 up to n, A count badge under each number, and A helper arrow showing how one smaller answer helps the next. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Blinky the Robot should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A ladder of numbers from 0 up to n, A count badge under each number, and A helper arrow showing how one smaller answer helps the next should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Smaller bit answers can help build bigger ones." and "Reuse what you already counted.", and the action area should invite one clear next step through Walk up the number ladder, Fill the count badge for each number, and Use the helper arrow from a related smaller number. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A ladder of numbers from 0 up to n, A count badge under each number, and A helper arrow showing how one smaller answer helps the next.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Smaller bit answers can help build bigger ones." and "Reuse what you already counted.". The action zone should stay tightly focused on Walk up the number ladder, Fill the count badge for each number, and Use the helper arrow from a related smaller number, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -1366,6 +1522,32 @@ Navigation:
 
 The mirror-tunnel layout should make reversal intuitive. The input and output rows need clear left/right separation. The rebuild badge should show the new number growing step by step instead of appearing all at once.
 
+
+
+### Background Design
+
+The background for `Mirror Switch Tunnel` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo An input bit row on the left and an output bit row on the right, A shift tunnel moving one bit at a time across, and A rebuild badge showing the growing reversed value; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If An input bit row on the left and an output bit row on the right, A shift tunnel moving one bit at a time across, and A rebuild badge showing the growing reversed value already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Blinky the Robot should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Mirror Switch Tunnel` and should visually support the lesson goal: reversing bits means reading a bit row from one side and rebuilding a new row in the opposite order. The background should establish the world softly, but the foreground should stay centered on An input bit row on the left and an output bit row on the right, A shift tunnel moving one bit at a time across, and A rebuild badge showing the growing reversed value. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Blinky the Robot should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. An input bit row on the left and an output bit row on the right, A shift tunnel moving one bit at a time across, and A rebuild badge showing the growing reversed value should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Take one bit from the input." and "Shift the answer and place that bit into the new row.", and the action area should invite one clear next step through Read the next input bit, Shift the output row, and Add the bit to the reversed result. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through An input bit row on the left and an output bit row on the right, A shift tunnel moving one bit at a time across, and A rebuild badge showing the growing reversed value.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Take one bit from the input." and "Shift the answer and place that bit into the new row.". The action zone should stay tightly focused on Read the next input bit, Shift the output row, and Add the bit to the reversed result, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Blinky reads one bit from the input row.
@@ -1542,6 +1724,32 @@ Navigation:
 
 The review dock should feel like a wall of little switch puzzles. The banner about tiny on/off clues should remain visible because it summarizes the chapter. Mini-scenes should be simple and use the same switchboard language from the lessons.
 
+
+
+### Background Design
+
+The background for `Switch Review Dock` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A review wall with six mini bit scenes, Tool chips for XOR, count, one-bit, missing, build, reverse, and A banner that says "bits are tiny on/off clues"; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A review wall with six mini bit scenes, Tool chips for XOR, count, one-bit, missing, build, reverse, and A banner that says "bits are tiny on/off clues" already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Blinky the Robot should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Switch Review Dock` and should visually support the lesson goal: review on/off bits, XOR canceling, counting 1s, one-bit powers, missing-value XOR, and building answers with shifts. The background should establish the world softly, but the foreground should stay centered on A review wall with six mini bit scenes, Tool chips for XOR, count, one-bit, missing, build, reverse, and A banner that says "bits are tiny on/off clues". Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Blinky the Robot should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A review wall with six mini bit scenes, Tool chips for XOR, count, one-bit, missing, build, reverse, and A banner that says "bits are tiny on/off clues" should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Ask what the bit pattern is trying to tell you." and "Then choose the operator or trick that fits.", and the action area should invite one clear next step through Match each mini-scene to the right bit idea, Sort clue chips to the correct lesson, and Explain what the bits are doing. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A review wall with six mini bit scenes, Tool chips for XOR, count, one-bit, missing, build, reverse, and A banner that says "bits are tiny on/off clues".
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Ask what the bit pattern is trying to tell you." and "Then choose the operator or trick that fits.". The action zone should stay tightly focused on Match each mini-scene to the right bit idea, Sort clue chips to the correct lesson, and Explain what the bits are doing, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Blinky opens the review wall of bit scenes.
@@ -1658,6 +1866,32 @@ Navigation:
 ### Visual Details
 
 This screen should stay focused and uncluttered, with the bit row or operator card as the main object. The result area should stay calm and readable. Keep the switches large enough to reason about quickly.
+
+
+
+### Background Design
+
+The background for `Binary Challenge Bay` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo One focused bit challenge, A visible bit row or operator card, and A result badge area above the scene; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If One focused bit challenge, A visible bit row or operator card, and A result badge area above the scene already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Blinky the Robot should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Binary Challenge Bay` and should visually support the lesson goal: check whether the learner can read a bit pattern and choose the right bit trick with less support. The background should establish the world softly, but the foreground should stay centered on One focused bit challenge, A visible bit row or operator card, and A result badge area above the scene. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Blinky the Robot should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. One focused bit challenge, A visible bit row or operator card, and A result badge area above the scene should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "What does this bit pattern suggest?" and "Choose the operator or rule that fits best.", and the action area should invite one clear next step through Predict the next bit move or answer, Solve one short bit challenge, and Explain what the bit clue meant. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through One focused bit challenge, A visible bit row or operator card, and A result badge area above the scene.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "What does this bit pattern suggest?" and "Choose the operator or rule that fits best.". The action zone should stay tightly focused on Predict the next bit move or answer, Solve one short bit challenge, and Explain what the bit clue meant, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 

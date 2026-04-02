@@ -96,6 +96,32 @@ Navigation:
 
 Use a warm classroom scene with big cubby labels and oversized stickers so the difference between "one copy only" and "save extra information" feels physical. The set area should feel simpler and flatter. The cubby area should feel richer because each label opens to reveal stored details.
 
+
+
+### Background Design
+
+The background for `Cubby Corner` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A classroom wall with labeled cubbies, A sticker board beside the cubbies, and One "seen" tray and one "remember more" tray; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A classroom wall with labeled cubbies, A sticker board beside the cubbies, and One "seen" tray and one "remember more" tray already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Pico the Fox should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Cubby Corner` and should visually support the lesson goal: teach the difference between a set and a hash map by turning "remembering" into a visible sorting-and-labeling activity. The background should establish the world softly, but the foreground should stay centered on A classroom wall with labeled cubbies, A sticker board beside the cubbies, and One "seen" tray and one "remember more" tray. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Pico the Fox should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A classroom wall with labeled cubbies, A sticker board beside the cubbies, and One "seen" tray and one "remember more" tray should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "A set remembers if something is here." and "A hash map remembers extra information too.", and the action area should invite one clear next step through Drag an item to the sticker board for set behavior, Drag an item to a labeled cubby for map behavior, and Tap a callout to compare key and value. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A classroom wall with labeled cubbies, A sticker board beside the cubbies, and One "seen" tray and one "remember more" tray.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "A set remembers if something is here." and "A hash map remembers extra information too.". The action zone should stay tightly focused on Drag an item to the sticker board for set behavior, Drag an item to a labeled cubby for map behavior, and Tap a callout to compare key and value, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Pico introduces the sticker board and cubbies as two different ways to remember.
@@ -372,6 +398,32 @@ Navigation:
 
 The garden board should feel clean and repetitive so the duplicate moment stands out. Each new sticker should land with a small pop. When a duplicate appears, the alert should glow yellow instead of feeling like an error.
 
+
+
+### Background Design
+
+The background for `Sticker Garden` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A row of number stickers moving onto a garden board, A seen basket that holds only one copy of each sticker, and A duplicate alert bubble when a sticker appears again; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A row of number stickers moving onto a garden board, A seen basket that holds only one copy of each sticker, and A duplicate alert bubble when a sticker appears again already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Pico the Fox should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Sticker Garden` and should visually support the lesson goal: a set can answer "Have I seen this before?" quickly. The background should establish the world softly, but the foreground should stay centered on A row of number stickers moving onto a garden board, A seen basket that holds only one copy of each sticker, and A duplicate alert bubble when a sticker appears again. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Pico the Fox should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A row of number stickers moving onto a garden board, A seen basket that holds only one copy of each sticker, and A duplicate alert bubble when a sticker appears again should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Ask: Have I seen this already?" and "The set keeps only one copy.", and the action area should invite one clear next step through Step through each number, Watch the set grow, and Tap when a duplicate appears. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A row of number stickers moving onto a garden board, A seen basket that holds only one copy of each sticker, and A duplicate alert bubble when a sticker appears again.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Ask: Have I seen this already?" and "The set keeps only one copy.". The action zone should stay tightly focused on Step through each number, Watch the set grow, and Tap when a duplicate appears, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Pico places each number sticker into the seen basket.
@@ -578,6 +630,32 @@ Navigation:
 ### Visual Details
 
 Turn the problem into a postal-matching scene so "lookup" feels concrete. The current number should ride in on a package, and the needed value should appear as a stamped label. Matching slots should glow blue when the answer is ready.
+
+
+
+### Background Design
+
+The background for `Pairing Post Office` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo Number packages moving along a post office belt, A target sign above the belt, and Mail slots labeled with needed partner values; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If Number packages moving along a post office belt, A target sign above the belt, and Mail slots labeled with needed partner values already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Pico the Fox should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Pairing Post Office` and should visually support the lesson goal: a hash map can remember what number we still need and where to find its partner. The background should establish the world softly, but the foreground should stay centered on Number packages moving along a post office belt, A target sign above the belt, and Mail slots labeled with needed partner values. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Pico the Fox should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. Number packages moving along a post office belt, A target sign above the belt, and Mail slots labeled with needed partner values should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Ask: What number do I still need?" and "The map helps me look it up fast.", and the action area should invite one clear next step through Reveal the current number, Compute the needed partner, and Check the mail slots for a match. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through Number packages moving along a post office belt, A target sign above the belt, and Mail slots labeled with needed partner values.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Ask: What number do I still need?" and "The map helps me look it up fast.". The action zone should stay tightly focused on Reveal the current number, Compute the needed partner, and Check the mail slots for a match, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -789,6 +867,32 @@ Navigation:
 
 The bakery metaphor makes counting feel friendly. Each letter cookie should be large and readable. The jar board should make increases and decreases obvious so the learner can see balance rather than memorize rules.
 
+
+
+### Background Design
+
+The background for `Letter Bakery` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo Two word trays filled with letter cookies, A counting board with one jar per letter, and A match meter showing whether the jars end balanced; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If Two word trays filled with letter cookies, A counting board with one jar per letter, and A match meter showing whether the jars end balanced already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Pico the Fox should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Letter Bakery` and should visually support the lesson goal: counting letters with a hash map helps us compare whether two words use the same letters the same number of times. The background should establish the world softly, but the foreground should stay centered on Two word trays filled with letter cookies, A counting board with one jar per letter, and A match meter showing whether the jars end balanced. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Pico the Fox should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. Two word trays filled with letter cookies, A counting board with one jar per letter, and A match meter showing whether the jars end balanced should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Count the letters, not just the shapes." and "Both words must use the same letters the same number of times.", and the action area should invite one clear next step through Add cookies from the first tray, Remove cookies using the second tray, and Watch the match meter update. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through Two word trays filled with letter cookies, A counting board with one jar per letter, and A match meter showing whether the jars end balanced.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Count the letters, not just the shapes." and "Both words must use the same letters the same number of times.". The action zone should stay tightly focused on Add cookies from the first tray, Remove cookies using the second tray, and Watch the match meter update, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Pico pours letter cookies from the first word into matching jars.
@@ -993,6 +1097,32 @@ Navigation:
 
 The lantern path should encourage a left-to-right walk so the second pass feels natural. The unique spotlight should arrive only after the count board is ready, making the two-pass strategy visible.
 
+
+
+### Background Design
+
+The background for `Lantern Lane` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A path of glowing letter lanterns, A counting board above the path, and A unique spotlight that lands on the first lantern with count 1; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A path of glowing letter lanterns, A counting board above the path, and A unique spotlight that lands on the first lantern with count 1 already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Pico the Fox should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Lantern Lane` and should visually support the lesson goal: we can count first, then scan again to find the first character that appears only once. The background should establish the world softly, but the foreground should stay centered on A path of glowing letter lanterns, A counting board above the path, and A unique spotlight that lands on the first lantern with count 1. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Pico the Fox should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A path of glowing letter lanterns, A counting board above the path, and A unique spotlight that lands on the first lantern with count 1 should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "First count everything." and "Then walk left to right and find the first count of one.", and the action area should invite one clear next step through Count each letter, Start the second scan, and Tap the first unique lantern. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A path of glowing letter lanterns, A counting board above the path, and A unique spotlight that lands on the first lantern with count 1.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "First count everything." and "Then walk left to right and find the first count of one.". The action zone should stay tightly focused on Count each letter, Start the second scan, and Tap the first unique lantern, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Pico counts all letters into the board.
@@ -1170,6 +1300,32 @@ Navigation:
 
 Use two colorful stalls and one bridge tray in the center so "intersection" feels like a meeting place. Shared items should travel across the bridge when matched. Non-shared items should fade back softly instead of feeling rejected.
 
+
+
+### Background Design
+
+The background for `Bridge Market` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo Two market stalls facing each other, A middle bridge tray for shared items, and A set basket holding the first stall's values; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If Two market stalls facing each other, A middle bridge tray for shared items, and A set basket holding the first stall's values already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Pico the Fox should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Bridge Market` and should visually support the lesson goal: a set can help us find which values appear in both collections. The background should establish the world softly, but the foreground should stay centered on Two market stalls facing each other, A middle bridge tray for shared items, and A set basket holding the first stall's values. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Pico the Fox should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. Two market stalls facing each other, A middle bridge tray for shared items, and A set basket holding the first stall's values should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Remember the first group." and "Check whether the second group has matches.", and the action area should invite one clear next step through Load the first stall into the set basket, Scan the second stall, and Drop shared values onto the bridge tray. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through Two market stalls facing each other, A middle bridge tray for shared items, and A set basket holding the first stall's values.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Remember the first group." and "Check whether the second group has matches.". The action zone should stay tightly focused on Load the first stall into the set basket, Scan the second stall, and Drop shared values onto the bridge tray, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Pico loads all values from the first stall into the set basket.
@@ -1340,6 +1496,32 @@ Navigation:
 ### Visual Details
 
 The tally board should feel neat and rhythmic so frequency-building looks repetitive and learnable. Each count increase should animate as a simple `+1`. Avoid clutter so the learner notices the repeated structure.
+
+
+
+### Background Design
+
+The background for `Bell Tower Board` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A row of item bells ringing one by one, A tally board with labeled count tiles, and A helper ribbon showing "new item" or "add one more"; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A row of item bells ringing one by one, A tally board with labeled count tiles, and A helper ribbon showing "new item" or "add one more" already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Pico the Fox should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Bell Tower Board` and should visually support the lesson goal: how to build a frequency map by increasing the count for each item we see. The background should establish the world softly, but the foreground should stay centered on A row of item bells ringing one by one, A tally board with labeled count tiles, and A helper ribbon showing "new item" or "add one more". Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Pico the Fox should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A row of item bells ringing one by one, A tally board with labeled count tiles, and A helper ribbon showing "new item" or "add one more" should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "If the item is new, start at one." and "If it is already there, add one more.", and the action area should invite one clear next step through Step through the items, Watch counts appear and increase, and Answer what the finished map says. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A row of item bells ringing one by one, A tally board with labeled count tiles, and A helper ribbon showing "new item" or "add one more".
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "If the item is new, start at one." and "If it is already there, add one more.". The action zone should stay tightly focused on Step through the items, Watch counts appear and increase, and Answer what the finished map says, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -1520,6 +1702,32 @@ Navigation:
 
 The review hall should feel organized like a museum of memory tools. Keep the set side visually simpler and the map side more information-rich. Strategy icons should be large enough for children to recognize before reading labels.
 
+
+
+### Background Design
+
+The background for `Memory Meadow Review Hall` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A review wall with six problem cards, Two large zones: set side and hash map side, and Tiny icons for seen-before, counting, lookup, and matching; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A review wall with six problem cards, Two large zones: set side and hash map side, and Tiny icons for seen-before, counting, lookup, and matching already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Pico the Fox should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Memory Meadow Review Hall` and should visually support the lesson goal: review when to choose a set versus a hash map and which strategy fits each problem type. The background should establish the world softly, but the foreground should stay centered on A review wall with six problem cards, Two large zones: set side and hash map side, and Tiny icons for seen-before, counting, lookup, and matching. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Pico the Fox should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A review wall with six problem cards, Two large zones: set side and hash map side, and Tiny icons for seen-before, counting, lookup, and matching should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Pick the memory tool that fits the clue." and "Start with the question the problem is asking.", and the action area should invite one clear next step through Sort each problem card into set or map, Match strategy icons to lessons, and Explain one choice in a short sentence. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A review wall with six problem cards, Two large zones: set side and hash map side, and Tiny icons for seen-before, counting, lookup, and matching.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Pick the memory tool that fits the clue." and "Start with the question the problem is asking.". The action zone should stay tightly focused on Sort each problem card into set or map, Match strategy icons to lessons, and Explain one choice in a short sentence, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Pico introduces the review as a sorting challenge.
@@ -1639,6 +1847,32 @@ Navigation:
 ### Visual Details
 
 The mastery tent should feel focused and slightly special without becoming visually noisy. The set basket and map board should be familiar from earlier screens so the learner can rely on memory rather than fresh instruction. Keep the result area calm and clear.
+
+
+
+### Background Design
+
+The background for `Memory Meadow Challenge Tent` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo One challenge table with mystery cards, A set basket on one side, A map cubby board on the other, and A result badge area above the table; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If One challenge table with mystery cards, A set basket on one side, A map cubby board on the other, and A result badge area above the table already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Pico the Fox should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Memory Meadow Challenge Tent` and should visually support the lesson goal: check whether the learner can independently choose between a set and a hash map and explain why. The background should establish the world softly, but the foreground should stay centered on One challenge table with mystery cards, A set basket on one side, A map cubby board on the other, and A result badge area above the table. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Pico the Fox should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. One challenge table with mystery cards, A set basket on one side, A map cubby board on the other, and A result badge area above the table should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "What do you need to remember?" and "Choose the tool before you solve the whole problem.", and the action area should invite one clear next step through Pick set or map, Solve a short challenge, and Explain the choice in one sentence. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through One challenge table with mystery cards, A set basket on one side, A map cubby board on the other, and A result badge area above the table.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "What do you need to remember?" and "Choose the tool before you solve the whole problem.". The action zone should stay tightly focused on Pick set or map, Solve a short challenge, and Explain the choice in one sentence, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 

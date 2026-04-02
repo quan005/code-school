@@ -114,6 +114,32 @@ Navigation:
 
 The maze should make decision points feel inviting, not stressful. The current path ribbon needs to show the exact choices already made. The undo arrow should feel calm and helpful because backtracking is not failure, it is part of the plan.
 
+
+
+### Background Design
+
+The background for `Maze of Choices` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A branching maze with several decision points, A current path ribbon showing the choices made so far, and An undo arrow returning to the last branch point; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A branching maze with several decision points, A current path ribbon showing the choices made so far, and An undo arrow returning to the last branch point already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Scout the Rabbit should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Maze of Choices` and should visually support the lesson goal: backtracking means choose, explore, undo, and try again when there are many possible paths. The background should establish the world softly, but the foreground should stay centered on A branching maze with several decision points, A current path ribbon showing the choices made so far, and An undo arrow returning to the last branch point. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Scout the Rabbit should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A branching maze with several decision points, A current path ribbon showing the choices made so far, and An undo arrow returning to the last branch point should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Choose one path." and "If it does not work, undo and try another.", and the action area should invite one clear next step through Choose a branch, Explore the path, and Step back with undo and try again. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A branching maze with several decision points, A current path ribbon showing the choices made so far, and An undo arrow returning to the last branch point.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Choose one path." and "If it does not work, undo and try another.". The action zone should stay tightly focused on Choose a branch, Explore the path, and Step back with undo and try again, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Scout introduces the maze and the first choice point.
@@ -169,7 +195,7 @@ That often looks like:
 
 ```ts
 path.push(choice);   // choose
-dfs(...);            // explore
+dfs(..);            // explore
 path.pop();          // undo
 ```
 
@@ -269,7 +295,7 @@ Many backtracking solutions look like this:
 ```ts
 function backtrack(path: number[]): void {
   if (finished) {
-    results.push([...path]);
+    results.push([..path]);
     return;
   }
 
@@ -350,6 +376,32 @@ Navigation:
 ### Visual Details
 
 The take and skip branches should be visually balanced so both feel like real choices. The current subset should stay visible as a growing basket list. The result shelf should fill with finished subsets in a friendly, orderly way.
+
+
+
+### Background Design
+
+The background for `Choice Basket Grove` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A row of number baskets, A branching decision tree with take and skip paths, and A result shelf collecting finished subsets; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A row of number baskets, A branching decision tree with take and skip paths, and A result shelf collecting finished subsets already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Scout the Rabbit should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Choice Basket Grove` and should visually support the lesson goal: each number gives two choices: take it or skip it. The background should establish the world softly, but the foreground should stay centered on A row of number baskets, A branching decision tree with take and skip paths, and A result shelf collecting finished subsets. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Scout the Rabbit should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A row of number baskets, A branching decision tree with take and skip paths, and A result shelf collecting finished subsets should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "For each number, choose take or skip." and "Every full path becomes one subset.", and the action area should invite one clear next step through Take the current number, Skip the current number, and Save the finished subset when choices run out. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A row of number baskets, A branching decision tree with take and skip paths, and A result shelf collecting finished subsets.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "For each number, choose take or skip." and "Every full path becomes one subset.". The action zone should stay tightly focused on Take the current number, Skip the current number, and Save the finished subset when choices run out, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -434,7 +486,7 @@ function subsets(nums: number[]): number[][] {
 
   function backtrack(index: number, path: number[]): void {
     if (index === nums.length) {
-      results.push([...path]);
+      results.push([..path]);
       return;
     }
 
@@ -540,6 +592,32 @@ Navigation:
 
 The empty parade spots should make order matter visually. Used cards should clearly move out of the unused pile and into the current arrangement. Finished permutations should line up neatly on the shelf.
 
+
+
+### Background Design
+
+The background for `Parade Line Plaza` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A row of empty parade spots, A set of unused number cards, and A used-card tray and a finished-parade shelf; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A row of empty parade spots, A set of unused number cards, and A used-card tray and a finished-parade shelf already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Scout the Rabbit should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Parade Line Plaza` and should visually support the lesson goal: permutations are built by choosing which unused number goes in the next spot. The background should establish the world softly, but the foreground should stay centered on A row of empty parade spots, A set of unused number cards, and A used-card tray and a finished-parade shelf. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Scout the Rabbit should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A row of empty parade spots, A set of unused number cards, and A used-card tray and a finished-parade shelf should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Pick one unused card for the next spot." and "Undo the pick so other orders can be tried.", and the action area should invite one clear next step through Choose an unused number, Place it in the next parade spot, and Undo and try a different card. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A row of empty parade spots, A set of unused number cards, and A used-card tray and a finished-parade shelf.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Pick one unused card for the next spot." and "Undo the pick so other orders can be tried.". The action zone should stay tightly focused on Choose an unused number, Place it in the next parade spot, and Undo and try a different card, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Scout starts with all cards unused.
@@ -630,7 +708,7 @@ function permute(nums: number[]): number[][] {
 
   function backtrack(path: number[]): void {
     if (path.length === nums.length) {
-      results.push([...path]);
+      results.push([..path]);
       return;
     }
 
@@ -738,6 +816,32 @@ Navigation:
 ### Visual Details
 
 The letter petals should make the digit-to-letter mapping feel playful and easy to scan. The word vine should grow one letter at a time so the combination feels built, not just listed. Keep the result board visible but secondary.
+
+
+
+### Background Design
+
+The background for `Phone Garden Gate` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A row of phone digits with their letter petals beneath them, A growing word vine showing the current combination, and A result board collecting completed words; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A row of phone digits with their letter petals beneath them, A growing word vine showing the current combination, and A result board collecting completed words already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Scout the Rabbit should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Phone Garden Gate` and should visually support the lesson goal: each phone digit gives a small set of letters, and backtracking tries every letter choice step by step. The background should establish the world softly, but the foreground should stay centered on A row of phone digits with their letter petals beneath them, A growing word vine showing the current combination, and A result board collecting completed words. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Scout the Rabbit should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A row of phone digits with their letter petals beneath them, A growing word vine showing the current combination, and A result board collecting completed words should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Each digit opens a small letter set." and "Pick one letter, then move to the next digit.", and the action area should invite one clear next step through Choose a letter from the current digit, Grow the word vine, and Save a completed combination. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A row of phone digits with their letter petals beneath them, A growing word vine showing the current combination, and A result board collecting completed words.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Each digit opens a small letter set." and "Pick one letter, then move to the next digit.". The action zone should stay tightly focused on Choose a letter from the current digit, Grow the word vine, and Save a completed combination, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -951,6 +1055,32 @@ Navigation:
 ### Visual Details
 
 The grid needs to be large and readable, with the current path easy to trace. Visited cells should be visibly marked so the learner knows they cannot be reused in the same path. Failed-path steps should fade gently when undone.
+
+
+
+### Background Design
+
+The background for `Letter Trail Field` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A letter grid with one active path highlighted, A target word badge above the grid, and A visited-cell trail showing which squares are in the current path; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A letter grid with one active path highlighted, A target word badge above the grid, and A visited-cell trail showing which squares are in the current path already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Scout the Rabbit should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Letter Trail Field` and should visually support the lesson goal: we can search a word in a grid by trying paths and undoing when a path stops working. The background should establish the world softly, but the foreground should stay centered on A letter grid with one active path highlighted, A target word badge above the grid, and A visited-cell trail showing which squares are in the current path. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Scout the Rabbit should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A letter grid with one active path highlighted, A target word badge above the grid, and A visited-cell trail showing which squares are in the current path should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Move to neighboring letters only." and "If the path breaks, step back and try another direction.", and the action area should invite one clear next step through Start from a possible first letter, Explore neighboring cells, and Undo visited cells when the path fails. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A letter grid with one active path highlighted, A target word badge above the grid, and A visited-cell trail showing which squares are in the current path.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Move to neighboring letters only." and "If the path breaks, step back and try another direction.". The action zone should stay tightly focused on Start from a possible first letter, Explore neighboring cells, and Undo visited cells when the path fails, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -1183,6 +1313,32 @@ Navigation:
 
 The open-count and close-count meters should make the rule visible rather than hidden in logic. The validity shield should gently block invalid moves instead of letting the learner wander into broken strings. Finished strings should appear on a neat result banner.
 
+
+
+### Background Design
+
+The background for `Bracket Balance Stage` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A stage showing a growing parentheses string, Open-count and close-count meters, and A validity shield that dims when a move would break the rules; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A stage showing a growing parentheses string, Open-count and close-count meters, and A validity shield that dims when a move would break the rules already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Scout the Rabbit should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Bracket Balance Stage` and should visually support the lesson goal: we build parentheses strings carefully by keeping them valid as we go. The background should establish the world softly, but the foreground should stay centered on A stage showing a growing parentheses string, Open-count and close-count meters, and A validity shield that dims when a move would break the rules. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Scout the Rabbit should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A stage showing a growing parentheses string, Open-count and close-count meters, and A validity shield that dims when a move would break the rules should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "You can only close if there is something open to match." and "Build only valid strings as you go.", and the action area should invite one clear next step through Add an opening parenthesis, Add a closing parenthesis when allowed, and Save a finished valid string. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A stage showing a growing parentheses string, Open-count and close-count meters, and A validity shield that dims when a move would break the rules.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "You can only close if there is something open to match." and "Build only valid strings as you go.". The action zone should stay tightly focused on Add an opening parenthesis, Add a closing parenthesis when allowed, and Save a finished valid string, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Scout begins with an empty string.
@@ -1374,6 +1530,32 @@ Navigation:
 
 The target-sum meter should make progress toward the goal easy to read. The over-limit warning should be informative rather than punishing. The current path basket should show repeated choices clearly because numbers may be reused.
 
+
+
+### Background Design
+
+The background for `Target Trail Market` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A set of number stalls the learner can choose from, A current path basket showing chosen numbers, and A target-sum meter and over-limit warning; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A set of number stalls the learner can choose from, A current path basket showing chosen numbers, and A target-sum meter and over-limit warning already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Scout the Rabbit should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Target Trail Market` and should visually support the lesson goal: we can keep adding choices toward a target sum and backtrack when we go too far. The background should establish the world softly, but the foreground should stay centered on A set of number stalls the learner can choose from, A current path basket showing chosen numbers, and A target-sum meter and over-limit warning. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Scout the Rabbit should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A set of number stalls the learner can choose from, A current path basket showing chosen numbers, and A target-sum meter and over-limit warning should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Keep adding choices toward the goal." and "If the sum gets too big, undo and try another path.", and the action area should invite one clear next step through Pick a number, Update the current sum, and Save or undo based on whether the sum hits, misses, or passes the target. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A set of number stalls the learner can choose from, A current path basket showing chosen numbers, and A target-sum meter and over-limit warning.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Keep adding choices toward the goal." and "If the sum gets too big, undo and try another path.". The action zone should stay tightly focused on Pick a number, Update the current sum, and Save or undo based on whether the sum hits, misses, or passes the target, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Scout chooses a number stall and adds it to the basket.
@@ -1458,7 +1640,7 @@ function combinationSum(candidates: number[], target: number): number[][] {
 
   function backtrack(start: number, remaining: number, path: number[]): void {
     if (remaining === 0) {
-      results.push([...path]);
+      results.push([..path]);
       return;
     }
 
@@ -1565,6 +1747,32 @@ Navigation:
 ### Visual Details
 
 The review wall should feel like a campfire planning board full of branch sketches. The "try, check, undo" banner should stay visible because it summarizes the whole chapter. Mini-scenes should keep one branch highlighted so they stay easy to read.
+
+
+
+### Background Design
+
+The background for `Choice Review Campfire` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A review wall with six mini decision-tree scenes, Tool chips for choose, explore, undo, valid path, stop early, save result, and A reminder banner that says "try, check, undo"; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A review wall with six mini decision-tree scenes, Tool chips for choose, explore, undo, valid path, stop early, save result, and A reminder banner that says "try, check, undo" already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Scout the Rabbit should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Choice Review Campfire` and should visually support the lesson goal: review choose-explore-undo, decision trees, valid partial paths, and when backtracking should stop early. The background should establish the world softly, but the foreground should stay centered on A review wall with six mini decision-tree scenes, Tool chips for choose, explore, undo, valid path, stop early, save result, and A reminder banner that says "try, check, undo". Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Scout the Rabbit should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A review wall with six mini decision-tree scenes, Tool chips for choose, explore, undo, valid path, stop early, save result, and A reminder banner that says "try, check, undo" should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Ask what choice you are making now." and "Then ask whether the partial path can still work.", and the action area should invite one clear next step through Match each mini-scene to the right backtracking idea, Sort clue chips to the correct lesson, and Explain where the undo step happens. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A review wall with six mini decision-tree scenes, Tool chips for choose, explore, undo, valid path, stop early, save result, and A reminder banner that says "try, check, undo".
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Ask what choice you are making now." and "Then ask whether the partial path can still work.". The action zone should stay tightly focused on Match each mini-scene to the right backtracking idea, Sort clue chips to the correct lesson, and Explain where the undo step happens, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -1689,6 +1897,32 @@ Navigation:
 ### Visual Details
 
 This screen should stay focused on the current path and choice point. The result area should remain simple so the decision process is the main teacher. Undo cues should be visible but calm.
+
+
+
+### Background Design
+
+The background for `Final Branch Challenge` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo One focused backtracking challenge, A visible current path and next choice point, and A result badge area above the scene; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If One focused backtracking challenge, A visible current path and next choice point, and A result badge area above the scene already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Scout the Rabbit should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Final Branch Challenge` and should visually support the lesson goal: check whether the learner can read a choice point and decide what to try, keep, or undo with less support. The background should establish the world softly, but the foreground should stay centered on One focused backtracking challenge, A visible current path and next choice point, and A result badge area above the scene. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Scout the Rabbit should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. One focused backtracking challenge, A visible current path and next choice point, and A result badge area above the scene should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "What should you try next?" and "If it cannot work, where should you undo?", and the action area should invite one clear next step through Predict the next choice, Solve one short backtracking challenge, and Explain why the path stayed valid or had to be undone. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through One focused backtracking challenge, A visible current path and next choice point, and A result badge area above the scene.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "What should you try next?" and "If it cannot work, where should you undo?". The action zone should stay tightly focused on Predict the next choice, Solve one short backtracking challenge, and Explain why the path stayed valid or had to be undone, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 

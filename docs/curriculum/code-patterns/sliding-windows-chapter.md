@@ -109,6 +109,32 @@ Navigation:
 
 The train-window metaphor should make movement the star of the screen. Keep the frame large and easy to track, with one clear entry arrow on the right and one exit arrow on the left. The fixed-window mode should look steady and even, while the dynamic-window mode should visibly stretch and shrink.
 
+
+
+### Background Design
+
+The background for `Window Wagon` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A train car window moving along a row of number tiles, A highlighted frame showing the current window, and Entry and exit arrows for what comes in and out; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A train car window moving along a row of number tiles, A highlighted frame showing the current window, and Entry and exit arrows for what comes in and out already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Pip the Bluebird should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Window Wagon` and should visually support the lesson goal: a sliding window is a moving frame that shows only one part of an array or string at a time. The background should establish the world softly, but the foreground should stay centered on A train car window moving along a row of number tiles, A highlighted frame showing the current window, and Entry and exit arrows for what comes in and out. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Pip the Bluebird should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A train car window moving along a row of number tiles, A highlighted frame showing the current window, and Entry and exit arrows for what comes in and out should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "A window shows one part at a time." and "Slide it and only update what changed.", and the action area should invite one clear next step through Move the frame right one step, Watch one item leave and one item enter, and Toggle fixed window vs dynamic window. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A train car window moving along a row of number tiles, A highlighted frame showing the current window, and Entry and exit arrows for what comes in and out.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "A window shows one part at a time." and "Slide it and only update what changed.". The action zone should stay tightly focused on Move the frame right one step, Watch one item leave and one item enter, and Toggle fixed window vs dynamic window, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Pip introduces the frame as a moving view.
@@ -362,6 +388,32 @@ Navigation:
 
 Use cheerful baskets so `k` feels like "how many fit in this frame" instead of a mysterious variable. The running-sum badge should update with each move, and the best-sum ribbon should only glow when a new maximum appears.
 
+
+
+### Background Design
+
+The background for `Sun Basket Lane` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A row of fruit baskets with a frame covering exactly k baskets, A running-sum badge above the frame, and A best-sum ribbon that updates when a larger total appears; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A row of fruit baskets with a frame covering exactly k baskets, A running-sum badge above the frame, and A best-sum ribbon that updates when a larger total appears already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Pip the Bluebird should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Sun Basket Lane` and should visually support the lesson goal: for a fixed-size window, we can keep one running sum and update it as the window slides. The background should establish the world softly, but the foreground should stay centered on A row of fruit baskets with a frame covering exactly k baskets, A running-sum badge above the frame, and A best-sum ribbon that updates when a larger total appears. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Pip the Bluebird should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A row of fruit baskets with a frame covering exactly k baskets, A running-sum badge above the frame, and A best-sum ribbon that updates when a larger total appears should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "k means how many baskets fit in the frame." and "Subtract the old one, add the new one.", and the action area should invite one clear next step through Build the first sum, Slide the frame one step, and Compare current sum to best sum. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A row of fruit baskets with a frame covering exactly k baskets, A running-sum badge above the frame, and A best-sum ribbon that updates when a larger total appears.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "k means how many baskets fit in the frame." and "Subtract the old one, add the new one.". The action zone should stay tightly focused on Build the first sum, Slide the frame one step, and Compare current sum to best sum, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Pip builds the first window sum.
@@ -563,6 +615,32 @@ Navigation:
 
 The answer tray should fill one average at a time so children see that this lesson produces many outputs, not just one best answer. The recipe card should make division feel like a simple follow-up step after the window sum is ready.
 
+
+
+### Background Design
+
+The background for `Juice Cart Row` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A row of numbered juice cups, A frame covering k cups at a time, and A recipe card showing sum divided by k; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A row of numbered juice cups, A frame covering k cups at a time, and A recipe card showing sum divided by k already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Pip the Bluebird should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Juice Cart Row` and should visually support the lesson goal: once we know each window sum, finding the average is one more simple step. The background should establish the world softly, but the foreground should stay centered on A row of numbered juice cups, A frame covering k cups at a time, and A recipe card showing sum divided by k. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Pip the Bluebird should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A row of numbered juice cups, A frame covering k cups at a time, and A recipe card showing sum divided by k should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Keep the same running sum." and "Then divide by k to get the average.", and the action area should invite one clear next step through Slide the frame, Update the sum, and Record each average in an answer tray. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A row of numbered juice cups, A frame covering k cups at a time, and A recipe card showing sum divided by k.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Keep the same running sum." and "Then divide by k to get the average.". The action zone should stay tightly focused on Slide the frame, Update the sum, and Record each average in an answer tray, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Pip starts with the first window sum.
@@ -751,6 +829,32 @@ Navigation:
 ### Visual Details
 
 The tunnel should make the expanding and shrinking window easy to see. The target sign needs to stay visible so the learner remembers the goal. The smallest-window badge should update only when a shorter valid section appears.
+
+
+
+### Background Design
+
+The background for `Target Tunnel` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A tunnel of number lanterns, A window frame that can stretch and shrink, and A target sign and current-sum badge; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A tunnel of number lanterns, A window frame that can stretch and shrink, and A target sign and current-sum badge already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Pip the Bluebird should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Target Tunnel` and should visually support the lesson goal: a dynamic window grows until it reaches the goal, then shrinks to find the smallest valid section. The background should establish the world softly, but the foreground should stay centered on A tunnel of number lanterns, A window frame that can stretch and shrink, and A target sign and current-sum badge. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Pip the Bluebird should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A tunnel of number lanterns, A window frame that can stretch and shrink, and A target sign and current-sum badge should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Grow until the sum reaches the goal." and "Then shrink to see if you can keep it smaller.", and the action area should invite one clear next step through Expand right, Check current sum against target, and Shrink left while the goal still holds. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A tunnel of number lanterns, A window frame that can stretch and shrink, and A target sign and current-sum badge.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Grow until the sum reaches the goal." and "Then shrink to see if you can keep it smaller.". The action zone should stay tightly focused on Expand right, Check current sum against target, and Shrink left while the goal still holds, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -955,6 +1059,32 @@ Navigation:
 
 Letter lanterns should be large and readable, with repeated letters clearly highlighted. The seen-letter tray should act like a small memory shelf so the learner understands why repeats matter. Keep the longest-window badge visible but calm.
 
+
+
+### Background Design
+
+The background for `Letter Lantern Parade` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A string shown as glowing letter lanterns, A window frame around the current substring, and A seen-letter tray that tracks which letters are inside; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A string shown as glowing letter lanterns, A window frame around the current substring, and A seen-letter tray that tracks which letters are inside already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Pip the Bluebird should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Letter Lantern Parade` and should visually support the lesson goal: we can keep a window of unique letters by shrinking whenever a repeat appears. The background should establish the world softly, but the foreground should stay centered on A string shown as glowing letter lanterns, A window frame around the current substring, and A seen-letter tray that tracks which letters are inside. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Pip the Bluebird should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A string shown as glowing letter lanterns, A window frame around the current substring, and A seen-letter tray that tracks which letters are inside should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "If a letter repeats, shrink from the left." and "Keep the window full of unique letters only.", and the action area should invite one clear next step through Expand right to add a letter, Detect a repeated letter, and Shrink left until the repeat is gone. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A string shown as glowing letter lanterns, A window frame around the current substring, and A seen-letter tray that tracks which letters are inside.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "If a letter repeats, shrink from the left." and "Keep the window full of unique letters only.". The action zone should stay tightly focused on Expand right to add a letter, Detect a repeated letter, and Shrink left until the repeat is gone, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Pip expands the window across new letters.
@@ -1156,6 +1286,32 @@ Navigation:
 
 The pattern card should remain fixed so children can compare every new window to the same target. The count board should use easy-to-read tiles, not tiny tables. Full matches should feel satisfying and obvious.
 
+
+
+### Background Design
+
+The background for `Pattern Post` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A target word card pinned above a row of letters, A same-size window sliding across the main string, and A count board comparing needed letters to current letters; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A target word card pinned above a row of letters, A same-size window sliding across the main string, and A count board comparing needed letters to current letters already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Pip the Bluebird should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Pattern Post` and should visually support the lesson goal: a fixed-size window can use counts to check whether the current letters match the needed pattern. The background should establish the world softly, but the foreground should stay centered on A target word card pinned above a row of letters, A same-size window sliding across the main string, and A count board comparing needed letters to current letters. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Pip the Bluebird should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A target word card pinned above a row of letters, A same-size window sliding across the main string, and A count board comparing needed letters to current letters should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "The window stays the same size as the pattern." and "Check whether the counts match.", and the action area should invite one clear next step through Slide the window, Update the letter counts, and Watch for a full match. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A target word card pinned above a row of letters, A same-size window sliding across the main string, and A count board comparing needed letters to current letters.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "The window stays the same size as the pattern." and "Check whether the counts match.". The action zone should stay tightly focused on Slide the window, Update the letter counts, and Watch for a full match, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Pip shows the target pattern and its letter counts.
@@ -1352,6 +1508,32 @@ Navigation:
 
 The banner should make "repainting letters" feel concrete. The repaint counter should clearly show how many tiles would need to change. Use one standout color to mark the most common letter inside the window.
 
+
+
+### Background Design
+
+The background for `Paint Banner Studio` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A banner made of colored letter tiles, A dynamic window frame, and A repaint counter showing how many letters would need changing; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A banner made of colored letter tiles, A dynamic window frame, and A repaint counter showing how many letters would need changing already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Pip the Bluebird should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Paint Banner Studio` and should visually support the lesson goal: we can keep a larger window if only a small number of letters need to be replaced to make it all the same. The background should establish the world softly, but the foreground should stay centered on A banner made of colored letter tiles, A dynamic window frame, and A repaint counter showing how many letters would need changing. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Pip the Bluebird should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A banner made of colored letter tiles, A dynamic window frame, and A repaint counter showing how many letters would need changing should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Keep the window if the repaint count is small enough." and "Shrink only when it needs too many changes.", and the action area should invite one clear next step through Expand right, Track the most common letter, and Shrink left if the repaint count gets too big. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A banner made of colored letter tiles, A dynamic window frame, and A repaint counter showing how many letters would need changing.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Keep the window if the repaint count is small enough." and "Shrink only when it needs too many changes.". The action zone should stay tightly focused on Expand right, Track the most common letter, and Shrink left if the repaint count gets too big, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Pip expands the banner window across more letters.
@@ -1546,6 +1728,32 @@ Navigation:
 
 The review board should feel like a camera station full of little viewfinders. Keep each mini-scene simple and recognizable from the chapter lessons. The fixed and dynamic labels should be large enough to anchor the sorting activity.
 
+
+
+### Background Design
+
+The background for `Viewfinder Review Station` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A board with six mini window scenes, Two large labels: fixed and dynamic, and Tiny clue chips for sum, average, unique, target, count, replace; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A board with six mini window scenes, Two large labels: fixed and dynamic, and Tiny clue chips for sum, average, unique, target, count, replace already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Pip the Bluebird should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Viewfinder Review Station` and should visually support the lesson goal: review fixed windows, dynamic windows, and the main clues that tell us how a window should move. The background should establish the world softly, but the foreground should stay centered on A board with six mini window scenes, Two large labels: fixed and dynamic, and Tiny clue chips for sum, average, unique, target, count, replace. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Pip the Bluebird should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A board with six mini window scenes, Two large labels: fixed and dynamic, and Tiny clue chips for sum, average, unique, target, count, replace should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Ask what the window is trying to protect." and "Then decide whether it should stay fixed or change size.", and the action area should invite one clear next step through Sort lessons into fixed or dynamic, Match clue chips to the right lesson, and Explain when the window should shrink. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A board with six mini window scenes, Two large labels: fixed and dynamic, and Tiny clue chips for sum, average, unique, target, count, replace.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Ask what the window is trying to protect." and "Then decide whether it should stay fixed or change size.". The action zone should stay tightly focused on Sort lessons into fixed or dynamic, Match clue chips to the right lesson, and Explain when the window should shrink, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Pip introduces the review as a window-sorting game.
@@ -1683,6 +1891,32 @@ Navigation:
 ### Visual Details
 
 This screen should feel calm and focused, with the frame as the main visual object. The clue card should be short and readable. Keep the result area clear so the lesson ends on understanding, not clutter.
+
+
+
+### Background Design
+
+The background for `Sky Window Challenge` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo One focused array or string challenge, A movable window frame already on the data, and A result badge area and one small clue card; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If One focused array or string challenge, A movable window frame already on the data, and A result badge area and one small clue card already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Pip the Bluebird should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Sky Window Challenge` and should visually support the lesson goal: check whether the learner can decide how to move a window with much less support. The background should establish the world softly, but the foreground should stay centered on One focused array or string challenge, A movable window frame already on the data, and A result badge area and one small clue card. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Pip the Bluebird should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. One focused array or string challenge, A movable window frame already on the data, and A result badge area and one small clue card should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "What should the window remember right now?" and "Decide whether to grow, shrink, or record the answer.", and the action area should invite one clear next step through Predict the next window move, Solve a short challenge, and Explain why that move made sense. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through One focused array or string challenge, A movable window frame already on the data, and A result badge area and one small clue card.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "What should the window remember right now?" and "Decide whether to grow, shrink, or record the answer.". The action zone should stay tightly focused on Predict the next window move, Solve a short challenge, and Explain why that move made sense, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 

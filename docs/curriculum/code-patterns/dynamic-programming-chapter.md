@@ -113,6 +113,32 @@ Navigation:
 
 The lab should feel constructive and calm. Base cases need their own special shelf so children see that DP has to start somewhere known. The DP row should fill one slot at a time so saving answers feels visual and concrete.
 
+
+
+### Background Design
+
+The background for `Block Builder Lab` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A staircase or number path built from small answer blocks, A base-case shelf holding the first known answers, and A DP row that fills from left to right; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A staircase or number path built from small answer blocks, A base-case shelf holding the first known answers, and A DP row that fills from left to right already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Dot the Beaver should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Block Builder Lab` and should visually support the lesson goal: dynamic programming solves big problems by saving small answers and building upward from base cases. The background should establish the world softly, but the foreground should stay centered on A staircase or number path built from small answer blocks, A base-case shelf holding the first known answers, and A DP row that fills from left to right. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Dot the Beaver should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A staircase or number path built from small answer blocks, A base-case shelf holding the first known answers, and A DP row that fills from left to right should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Start with the tiny answers you already know." and "Build the next answer from saved smaller ones.", and the action area should invite one clear next step through Place the base cases, Fill the next DP slot, and Compare repeated work vs saved work. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A staircase or number path built from small answer blocks, A base-case shelf holding the first known answers, and A DP row that fills from left to right.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Start with the tiny answers you already know." and "Build the next answer from saved smaller ones.". The action zone should stay tightly focused on Place the base cases, Fill the next DP slot, and Compare repeated work vs saved work, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Dot places the base-case blocks first.
@@ -322,6 +348,32 @@ Navigation:
 
 Keep the path clean and repetitive so the pattern is obvious. The two helper arrows should always point from `i - 1` and `i - 2` into the next DP stone. Base cases should stay highlighted the whole time.
 
+
+
+### Background Design
+
+The background for `Rabbit Number Run` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A number path with DP stones from 0 up to n, Base-case stones for 0 and 1, and Two helper arrows feeding into the next Fibonacci stone; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A number path with DP stones from 0 up to n, Base-case stones for 0 and 1, and Two helper arrows feeding into the next Fibonacci stone already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Dot the Beaver should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Rabbit Number Run` and should visually support the lesson goal: each Fibonacci number is built from the two answers right before it. The background should establish the world softly, but the foreground should stay centered on A number path with DP stones from 0 up to n, Base-case stones for 0 and 1, and Two helper arrows feeding into the next Fibonacci stone. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Dot the Beaver should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A number path with DP stones from 0 up to n, Base-case stones for 0 and 1, and Two helper arrows feeding into the next Fibonacci stone should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Each new number uses the two before it." and "Save the old answers so you can build the next one.", and the action area should invite one clear next step through Read the two previous values, Add them to fill the next slot, and Continue until n is reached. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A number path with DP stones from 0 up to n, Base-case stones for 0 and 1, and Two helper arrows feeding into the next Fibonacci stone.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Each new number uses the two before it." and "Save the old answers so you can build the next one.". The action zone should stay tightly focused on Read the two previous values, Add them to fill the next slot, and Continue until n is reached, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Dot starts with `F(0)` and `F(1)` on the base shelf.
@@ -502,6 +554,32 @@ Navigation:
 ### Visual Details
 
 The staircase should make the one-step and two-step moves obvious. Each stair badge should display the number of ways to get there. Keep the motion playful so the counting feels like a path-building activity.
+
+
+
+### Background Design
+
+The background for `Step Count Hill` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A staircase with one- and two-step hop arrows, A DP badge on each stair showing ways to reach it, and Base-case signs at the first steps; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A staircase with one- and two-step hop arrows, A DP badge on each stair showing ways to reach it, and Base-case signs at the first steps already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Dot the Beaver should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Step Count Hill` and should visually support the lesson goal: the number of ways to reach one stair comes from the ways to reach the one-step-below and two-steps-below stairs. The background should establish the world softly, but the foreground should stay centered on A staircase with one- and two-step hop arrows, A DP badge on each stair showing ways to reach it, and Base-case signs at the first steps. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Dot the Beaver should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A staircase with one- and two-step hop arrows, A DP badge on each stair showing ways to reach it, and Base-case signs at the first steps should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "To reach this stair, you came from one step below or two steps below." and "Add those saved counts together.", and the action area should invite one clear next step through Read the previous two stair counts, Fill the next stair badge, and Continue climbing to the top. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A staircase with one- and two-step hop arrows, A DP badge on each stair showing ways to reach it, and Base-case signs at the first steps.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "To reach this stair, you came from one step below or two steps below." and "Add those saved counts together.". The action zone should stay tightly focused on Read the previous two stair counts, Fill the next stair badge, and Continue climbing to the top, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -691,6 +769,32 @@ Navigation:
 
 The coin costs should be easy to compare at a glance. Keep the DP badge visually different from the raw step cost so children understand "cost on the step" versus "best total cost so far." The smaller path should glow green.
 
+
+
+### Background Design
+
+The background for `Coin Step Trail` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A staircase with coin costs on each step, A DP cost badge for the cheapest way to each step, and Two incoming arrows showing the possible previous steps; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A staircase with coin costs on each step, A DP cost badge for the cheapest way to each step, and Two incoming arrows showing the possible previous steps already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Dot the Beaver should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Coin Step Trail` and should visually support the lesson goal: DP can also choose the smaller cost instead of counting ways. The background should establish the world softly, but the foreground should stay centered on A staircase with coin costs on each step, A DP cost badge for the cheapest way to each step, and Two incoming arrows showing the possible previous steps. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Dot the Beaver should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A staircase with coin costs on each step, A DP cost badge for the cheapest way to each step, and Two incoming arrows showing the possible previous steps should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Ask which previous path is cheaper." and "Save the smaller total cost.", and the action area should invite one clear next step through Read the two previous total costs, Choose the smaller one plus the current step cost, and Fill the next cost badge. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A staircase with coin costs on each step, A DP cost badge for the cheapest way to each step, and Two incoming arrows showing the possible previous steps.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Ask which previous path is cheaper." and "Save the smaller total cost.". The action zone should stay tightly focused on Read the two previous total costs, Choose the smaller one plus the current step cost, and Fill the next cost badge, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Dot shows the cost on each stair.
@@ -871,6 +975,32 @@ Navigation:
 ### Visual Details
 
 The houses should clearly show their money values, and neighboring houses should feel linked so the no-adjacent rule is visible. The take-or-skip card must make both options readable. Avoid crime-heavy visuals; keep it abstract and child-safe.
+
+
+
+### Background Design
+
+The background for `Lantern Street` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A line of houses with money bags, A take-or-skip decision card at each house, and A best-total badge showing the safest highest amount so far; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A line of houses with money bags, A take-or-skip decision card at each house, and A best-total badge showing the safest highest amount so far already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Dot the Beaver should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Lantern Street` and should visually support the lesson goal: at each house we choose between taking this house or skipping it and keeping the better saved total. The background should establish the world softly, but the foreground should stay centered on A line of houses with money bags, A take-or-skip decision card at each house, and A best-total badge showing the safest highest amount so far. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Dot the Beaver should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A line of houses with money bags, A take-or-skip decision card at each house, and A best-total badge showing the safest highest amount so far should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "If you take this house, you must skip the neighbor." and "Save the better of take or skip.", and the action area should invite one clear next step through Compare take vs skip totals, Choose the larger saved answer, and Move to the next house. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A line of houses with money bags, A take-or-skip decision card at each house, and A best-total badge showing the safest highest amount so far.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "If you take this house, you must skip the neighbor." and "Save the better of take or skip.". The action zone should stay tightly focused on Compare take vs skip totals, Choose the larger saved answer, and Move to the next house, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -1070,6 +1200,32 @@ Navigation:
 
 The grid should be simple and bright, with movement arrows only to the right and down. Base cases in the first row and first column should be highlighted. Each cell's DP count should be large enough to read easily.
 
+
+
+### Background Design
+
+The background for `Garden Grid Path` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A garden grid with movement allowed right and down, A DP count in each cell, and Top and left helper arrows feeding into the current cell; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A garden grid with movement allowed right and down, A DP count in each cell, and Top and left helper arrows feeding into the current cell already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Dot the Beaver should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Garden Grid Path` and should visually support the lesson goal: each grid cell can inherit its number of paths from the top and left cells. The background should establish the world softly, but the foreground should stay centered on A garden grid with movement allowed right and down, A DP count in each cell, and Top and left helper arrows feeding into the current cell. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Dot the Beaver should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A garden grid with movement allowed right and down, A DP count in each cell, and Top and left helper arrows feeding into the current cell should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "This cell gets paths from above and from the left." and "Add the saved path counts together.", and the action area should invite one clear next step through Fill the first row and first column base cases, Add top and left counts for each new cell, and Continue until the bottom-right goal. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A garden grid with movement allowed right and down, A DP count in each cell, and Top and left helper arrows feeding into the current cell.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "This cell gets paths from above and from the left." and "Add the saved path counts together.". The action zone should stay tightly focused on Fill the first row and first column base cases, Add top and left counts for each new cell, and Continue until the bottom-right goal, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Dot fills the easy base-case cells on the top row and left column.
@@ -1260,6 +1416,32 @@ Navigation:
 ### Visual Details
 
 The amount row should feel like a workshop bench of target boxes. Coin tools should be clearly labeled by value. The DP badge for impossible or not-yet-solved amounts should stay visually distinct from solved ones.
+
+
+
+### Background Design
+
+The background for `Coin Forge Bench` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A row of amounts from 0 up to the target, Coin tools showing allowed denominations, and A DP badge on each amount showing the fewest coins found so far; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A row of amounts from 0 up to the target, Coin tools showing allowed denominations, and A DP badge on each amount showing the fewest coins found so far already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Dot the Beaver should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Coin Forge Bench` and should visually support the lesson goal: DP can build the fewest coins needed for each amount from smaller amounts below it. The background should establish the world softly, but the foreground should stay centered on A row of amounts from 0 up to the target, Coin tools showing allowed denominations, and A DP badge on each amount showing the fewest coins found so far. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Dot the Beaver should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A row of amounts from 0 up to the target, Coin tools showing allowed denominations, and A DP badge on each amount showing the fewest coins found so far should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Build the best answer for each smaller amount first." and "Try each coin and keep the smallest result.", and the action area should invite one clear next step through Pick a target amount cell, Try each coin tool, and Save the minimum coin count. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A row of amounts from 0 up to the target, Coin tools showing allowed denominations, and A DP badge on each amount showing the fewest coins found so far.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Build the best answer for each smaller amount first." and "Try each coin and keep the smallest result.". The action zone should stay tightly focused on Pick a target amount cell, Try each coin tool, and Save the minimum coin count, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -1462,6 +1644,32 @@ Navigation:
 
 The review workshop should feel like a wall of construction plans. The "build small, reuse often" banner should stay visible because it summarizes the chapter well. Mini-scenes should show just enough structure to trigger recognition.
 
+
+
+### Background Design
+
+The background for `Builder Review Workshop` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A review wall with six mini DP build scenes, Tool chips for base case, save, count, minimum, take-or-skip, grid, and A banner that says "build small, reuse often"; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A review wall with six mini DP build scenes, Tool chips for base case, save, count, minimum, take-or-skip, grid, and A banner that says "build small, reuse often" already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Dot the Beaver should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Builder Review Workshop` and should visually support the lesson goal: review base cases, repeated subproblems, saved answers, counting DP, minimum DP, and grid DP. The background should establish the world softly, but the foreground should stay centered on A review wall with six mini DP build scenes, Tool chips for base case, save, count, minimum, take-or-skip, grid, and A banner that says "build small, reuse often". Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Dot the Beaver should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A review wall with six mini DP build scenes, Tool chips for base case, save, count, minimum, take-or-skip, grid, and A banner that says "build small, reuse often" should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Ask what small answers are needed first." and "Then ask how those saved answers build the bigger one.", and the action area should invite one clear next step through Match each lesson to its DP idea, Sort clue chips to the right mini-scene, and Explain what was saved and reused. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A review wall with six mini DP build scenes, Tool chips for base case, save, count, minimum, take-or-skip, grid, and A banner that says "build small, reuse often".
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Ask what small answers are needed first." and "Then ask how those saved answers build the bigger one.". The action zone should stay tightly focused on Match each lesson to its DP idea, Sort clue chips to the right mini-scene, and Explain what was saved and reused, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Dot opens the review wall of DP scenes.
@@ -1578,6 +1786,32 @@ Navigation:
 ### Visual Details
 
 This screen should stay clear and instructional, with the base-case area and the partially filled DP structure as the main visual anchors. The result badge should be simple and calm. Avoid crowding the scene with too many numbers at once.
+
+
+
+### Background Design
+
+The background for `Final Build Ridge` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo One focused DP challenge, A visible base-case area and a partially filled DP row or grid, and A result badge area above the scene; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If One focused DP challenge, A visible base-case area and a partially filled DP row or grid, and A result badge area above the scene already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Dot the Beaver should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Final Build Ridge` and should visually support the lesson goal: check whether the learner can identify the base cases and the build rule for a new DP-style problem with less support. The background should establish the world softly, but the foreground should stay centered on One focused DP challenge, A visible base-case area and a partially filled DP row or grid, and A result badge area above the scene. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Dot the Beaver should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. One focused DP challenge, A visible base-case area and a partially filled DP row or grid, and A result badge area above the scene should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "What tiny answers do you know already?" and "What rule builds the next answer?", and the action area should invite one clear next step through Predict the base cases, Fill one or more DP states, and Explain the build rule in one sentence. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through One focused DP challenge, A visible base-case area and a partially filled DP row or grid, and A result badge area above the scene.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "What tiny answers do you know already?" and "What rule builds the next answer?". The action zone should stay tightly focused on Predict the base cases, Fill one or more DP states, and Explain the build rule in one sentence, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 

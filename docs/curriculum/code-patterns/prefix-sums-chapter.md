@@ -113,6 +113,32 @@ Navigation:
 
 The two-row layout should make it obvious that the prefix row is built from the original row. Running-total lanterns should brighten one by one as the sum grows. The subtraction bridge should visually connect "total up to right" and "total before left."
 
+
+
+### Background Design
+
+The background for `Running Total Trail` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A row of stepping-stone numbers, A second row of running-total lanterns building from left to right, and A subtraction bridge showing how one range answer is found; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A row of stepping-stone numbers, A second row of running-total lanterns building from left to right, and A subtraction bridge showing how one range answer is found already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Poppy the Squirrel should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Running Total Trail` and should visually support the lesson goal: a prefix sum is a running total from the start, and that these stored totals can answer later questions quickly. The background should establish the world softly, but the foreground should stay centered on A row of stepping-stone numbers, A second row of running-total lanterns building from left to right, and A subtraction bridge showing how one range answer is found. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Poppy the Squirrel should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A row of stepping-stone numbers, A second row of running-total lanterns building from left to right, and A subtraction bridge showing how one range answer is found should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Build the totals once." and "Then answer later questions with subtraction.", and the action area should invite one clear next step through Step through the array from left to right, Watch the running total grow, and Test one range-sum question with the subtraction bridge. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A row of stepping-stone numbers, A second row of running-total lanterns building from left to right, and A subtraction bridge showing how one range answer is found.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Build the totals once." and "Then answer later questions with subtraction.". The action zone should stay tightly focused on Step through the array from left to right, Watch the running total grow, and Test one range-sum question with the subtraction bridge, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Poppy introduces the idea of saving totals as you walk.
@@ -373,6 +399,32 @@ Navigation:
 
 Keep the query range bright and easy to see. The subtraction card should sit between the two chosen prefix totals so the operation feels physical, not abstract. The `left = 0` shortcut should appear as a small helper note rather than a separate distraction.
 
+
+
+### Background Design
+
+The background for `Question Bridge` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo An array row and a matching prefix row, A highlighted query range from left to right, and Two selected prefix totals with a subtraction card between them; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If An array row and a matching prefix row, A highlighted query range from left to right, and Two selected prefix totals with a subtraction card between them already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Poppy the Squirrel should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Question Bridge` and should visually support the lesson goal: teach the core prefix-sum trick: use two stored totals to answer a range-sum question fast. The background should establish the world softly, but the foreground should stay centered on An array row and a matching prefix row, A highlighted query range from left to right, and Two selected prefix totals with a subtraction card between them. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Poppy the Squirrel should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. An array row and a matching prefix row, A highlighted query range from left to right, and Two selected prefix totals with a subtraction card between them should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "The range answer hides inside two stored totals." and "Take the big total and subtract what came before.", and the action area should invite one clear next step through Build or reveal the prefix row, Choose left and right for the query, and Subtract the right pair of totals. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through An array row and a matching prefix row, A highlighted query range from left to right, and Two selected prefix totals with a subtraction card between them.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "The range answer hides inside two stored totals." and "Take the big total and subtract what came before.". The action zone should stay tightly focused on Build or reveal the prefix row, Choose left and right for the query, and Subtract the right pair of totals, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Poppy highlights the query range on the original array.
@@ -578,6 +630,32 @@ Navigation:
 
 This screen should feel rhythmic and repetitive in a good way. The basket should visually carry the current total from one stone to the next. The result row should grow steadily so the learner sees the pattern.
 
+
+
+### Background Design
+
+The background for `Acorn Counter Path` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A path of daily number stones, A basket that carries the current total forward, and A result row filling with running totals; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A path of daily number stones, A basket that carries the current total forward, and A result row filling with running totals already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Poppy the Squirrel should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Acorn Counter Path` and should visually support the lesson goal: how to build cumulative totals step by step from left to right. The background should establish the world softly, but the foreground should stay centered on A path of daily number stones, A basket that carries the current total forward, and A result row filling with running totals. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Poppy the Squirrel should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A path of daily number stones, A basket that carries the current total forward, and A result row filling with running totals should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Keep carrying the total forward." and "Each new total includes everything before it.", and the action area should invite one clear next step through Add the next number to the basket total, Place the new running total in the result row, and Compare original numbers to cumulative totals. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A path of daily number stones, A basket that carries the current total forward, and A result row filling with running totals.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Keep carrying the total forward." and "Each new total includes everything before it.". The action zone should stay tightly focused on Add the next number to the basket total, Place the new running total in the result row, and Compare original numbers to cumulative totals, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Poppy starts the basket with the first number.
@@ -743,6 +821,32 @@ Navigation:
 ### Visual Details
 
 The balance board should make equality feel visual and immediate. The left and right bowls should fill with the sums on each side of the pivot. A balanced glow should appear only when both sides match.
+
+
+
+### Background Design
+
+The background for `Balance Board Grove` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A number row above a seesaw balance board, A current pivot marker on one position, and Left-sum and right-sum bowls on each side of the board; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A number row above a seesaw balance board, A current pivot marker on one position, and Left-sum and right-sum bowls on each side of the board already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Poppy the Squirrel should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Balance Board Grove` and should visually support the lesson goal: a pivot index is a balancing point where the left sum and right sum are equal. The background should establish the world softly, but the foreground should stay centered on A number row above a seesaw balance board, A current pivot marker on one position, and Left-sum and right-sum bowls on each side of the board. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Poppy the Squirrel should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A number row above a seesaw balance board, A current pivot marker on one position, and Left-sum and right-sum bowls on each side of the board should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "A pivot balances the left side and right side." and "Use stored totals so you do not recount everything.", and the action area should invite one clear next step through Move the pivot marker, Compute left sum and right sum, and Check whether the board balances. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A number row above a seesaw balance board, A current pivot marker on one position, and Left-sum and right-sum bowls on each side of the board.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "A pivot balances the left side and right side." and "Use stored totals so you do not recount everything.". The action zone should stay tightly focused on Move the pivot marker, Compute left sum and right sum, and Check whether the board balances, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -954,6 +1058,32 @@ Navigation:
 ### Visual Details
 
 This is one of the trickier lessons, so the scene should keep the math visible and concrete. The memory board should look like labeled forest signs storing earlier totals. The `current - k` clue should appear as a friendly helper bubble, not a heavy formula wall.
+
+
+
+### Background Design
+
+The background for `Echo Sum Forest` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A path of prefix-total markers through a forest, A target sign for k, and A memory board that remembers earlier prefix sums; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A path of prefix-total markers through a forest, A target sign for k, and A memory board that remembers earlier prefix sums already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Poppy the Squirrel should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Echo Sum Forest` and should visually support the lesson goal: prefix sums plus a hash map can count how many earlier totals make the current total differ by `k`. The background should establish the world softly, but the foreground should stay centered on A path of prefix-total markers through a forest, A target sign for k, and A memory board that remembers earlier prefix sums. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Poppy the Squirrel should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A path of prefix-total markers through a forest, A target sign for k, and A memory board that remembers earlier prefix sums should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "k means the goal sum." and "Ask whether an earlier total is exactly current minus k.", and the action area should invite one clear next step through Walk to the next prefix total, Compute current minus k, and Check the memory board for matching earlier totals. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A path of prefix-total markers through a forest, A target sign for k, and A memory board that remembers earlier prefix sums.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "k means the goal sum." and "Ask whether an earlier total is exactly current minus k.". The action zone should stay tightly focused on Walk to the next prefix total, Compute current minus k, and Check the memory board for matching earlier totals, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -1169,6 +1299,32 @@ Navigation:
 
 The mountain line should make the cumulative idea feel natural: each step changes the current height rather than replacing it. Gains and losses should use simple up and down arrows. The highest-peak flag should move only when a new maximum appears.
 
+
+
+### Background Design
+
+The background for `Mountain Glide Path` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A trail of height-change arrows, A mountain line rising and falling with the running total, and A highest-peak flag marking the best altitude so far; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A trail of height-change arrows, A mountain line rising and falling with the running total, and A highest-peak flag marking the best altitude so far already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Poppy the Squirrel should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Mountain Glide Path` and should visually support the lesson goal: running totals can track height changes and reveal the highest point reached. The background should establish the world softly, but the foreground should stay centered on A trail of height-change arrows, A mountain line rising and falling with the running total, and A highest-peak flag marking the best altitude so far. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Poppy the Squirrel should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A trail of height-change arrows, A mountain line rising and falling with the running total, and A highest-peak flag marking the best altitude so far should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Add each height change to the current altitude." and "Keep the highest altitude you ever reach.", and the action area should invite one clear next step through Apply each gain or loss, Update the altitude line, and Move the highest-peak flag when needed. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A trail of height-change arrows, A mountain line rising and falling with the running total, and A highest-peak flag marking the best altitude so far.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Add each height change to the current altitude." and "Keep the highest altitude you ever reach.". The action zone should stay tightly focused on Apply each gain or loss, Update the altitude line, and Move the highest-peak flag when needed, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Poppy starts at altitude zero.
@@ -1348,6 +1504,32 @@ Navigation:
 ### Visual Details
 
 This lesson is more advanced, so the left and right ribbons need strong visual separation. The current gear should be clearly skipped while the two ribbons feed into the answer tile. Keep the explanation concrete and avoid overloading the screen with formulas.
+
+
+
+### Background Design
+
+The background for `Mirror Mill Workshop` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A row of number gears, A left-product ribbon and a right-product ribbon, and A center answer tile for the current position; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A row of number gears, A left-product ribbon and a right-product ribbon, and A center answer tile for the current position already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Poppy the Squirrel should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Mirror Mill Workshop` and should visually support the lesson goal: we can build left products and right products so each answer uses everything except the current position. The background should establish the world softly, but the foreground should stay centered on A row of number gears, A left-product ribbon and a right-product ribbon, and A center answer tile for the current position. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Poppy the Squirrel should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A row of number gears, A left-product ribbon and a right-product ribbon, and A center answer tile for the current position should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Use everything to the left and everything to the right." and "Skip the current gear itself.", and the action area should invite one clear next step through Build left products, Build right products, and Combine them for each answer slot. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A row of number gears, A left-product ribbon and a right-product ribbon, and A center answer tile for the current position.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Use everything to the left and everything to the right." and "Skip the current gear itself.". The action zone should stay tightly focused on Build left products, Build right products, and Combine them for each answer slot, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -1549,6 +1731,32 @@ Navigation:
 
 The review camp should feel like a planning board for saved work. Keep the precompute banner visible because it summarizes the whole chapter. Each mini-scene should reuse the simple two-row or helper-ribbon visuals from the lessons.
 
+
+
+### Background Design
+
+The background for `Precompute Review Camp` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A review board with six mini running-total scenes, Tool chips for range, running total, pivot, k, altitude, product, and A banner that says "build once, answer faster"; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A review board with six mini running-total scenes, Tool chips for range, running total, pivot, k, altitude, product, and A banner that says "build once, answer faster" already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Poppy the Squirrel should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Precompute Review Camp` and should visually support the lesson goal: review running totals, range subtraction, balancing, `k`-difference matching, altitude tracking, and left/right product building. The background should establish the world softly, but the foreground should stay centered on A review board with six mini running-total scenes, Tool chips for range, running total, pivot, k, altitude, product, and A banner that says "build once, answer faster". Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Poppy the Squirrel should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A review board with six mini running-total scenes, Tool chips for range, running total, pivot, k, altitude, product, and A banner that says "build once, answer faster" should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Ask what you can save ahead of time." and "Then use the saved totals or products to answer quickly.", and the action area should invite one clear next step through Match each lesson to its saved-information idea, Sort clue chips to the right mini-scene, and Explain what was precomputed. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A review board with six mini running-total scenes, Tool chips for range, running total, pivot, k, altitude, product, and A banner that says "build once, answer faster".
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Ask what you can save ahead of time." and "Then use the saved totals or products to answer quickly.". The action zone should stay tightly focused on Match each lesson to its saved-information idea, Sort clue chips to the right mini-scene, and Explain what was precomputed, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Poppy opens the review board of saved-work scenes.
@@ -1664,6 +1872,32 @@ Navigation:
 ### Visual Details
 
 This screen should stay focused and clear, with the helper structure as the most important design element. The result area should stay calm and readable. Keep the original row and helper row visually linked.
+
+
+
+### Background Design
+
+The background for `Swift Answer Ridge` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo One focused range or running-total challenge, A visible original row and one helper row or board, and A result badge area above the challenge; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If One focused range or running-total challenge, A visible original row and one helper row or board, and A result badge area above the challenge already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Poppy the Squirrel should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Swift Answer Ridge` and should visually support the lesson goal: check whether the learner can spot what should be precomputed and how to use it with less support. The background should establish the world softly, but the foreground should stay centered on One focused range or running-total challenge, A visible original row and one helper row or board, and A result badge area above the challenge. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Poppy the Squirrel should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. One focused range or running-total challenge, A visible original row and one helper row or board, and A result badge area above the challenge should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "What should be saved first?" and "How will that saved information answer the question faster?", and the action area should invite one clear next step through Predict the helper structure, Solve one short challenge, and Explain why the saved information helped. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through One focused range or running-total challenge, A visible original row and one helper row or board, and A result badge area above the challenge.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "What should be saved first?" and "How will that saved information answer the question faster?". The action zone should stay tightly focused on Predict the helper structure, Solve one short challenge, and Explain why the saved information helped, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 

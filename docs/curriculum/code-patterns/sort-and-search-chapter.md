@@ -109,6 +109,32 @@ Navigation:
 
 The contrast between messy and ordered rows should be immediate. The search spotlight should feel direct and focused, while the sort wand should animate the rearrangement into order. Keep the helper panel short and concrete.
 
+
+
+### Background Design
+
+The background for `Card Cabinet Room` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A messy row of number cards above a neat sorted row, A search spotlight and a sort wand toggle, and A helper panel showing what gets easier after sorting; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A messy row of number cards above a neat sorted row, A search spotlight and a sort wand toggle, and A helper panel showing what gets easier after sorting already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Piper the Otter should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Card Cabinet Room` and should visually support the lesson goal: teach the difference between finding something and putting things in order, and show how order can help later work. The background should establish the world softly, but the foreground should stay centered on A messy row of number cards above a neat sorted row, A search spotlight and a sort wand toggle, and A helper panel showing what gets easier after sorting. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Piper the Otter should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A messy row of number cards above a neat sorted row, A search spotlight and a sort wand toggle, and A helper panel showing what gets easier after sorting should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Searching means find it." and "Sorting means put it in order.", and the action area should invite one clear next step through Search for one target card in the messy row, Sort the cards into order, and Compare what becomes easier after sorting. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A messy row of number cards above a neat sorted row, A search spotlight and a sort wand toggle, and A helper panel showing what gets easier after sorting.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Searching means find it." and "Sorting means put it in order.". The action zone should stay tightly focused on Search for one target card in the messy row, Sort the cards into order, and Compare what becomes easier after sorting, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Piper highlights one target in the messy row and shows direct searching.
@@ -290,6 +316,32 @@ Navigation:
 
 The scanning marker should be the main moving element, so the one-by-one nature of linear search feels obvious. The target badge needs to stay fixed and readable. Found and not-found states should be clear but calm.
 
+
+
+### Background Design
+
+The background for `Scan Shelf` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A row of unsorted number cards, A target badge above the shelf, and A scanning marker moving one slot at a time; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A row of unsorted number cards, A target badge above the shelf, and A scanning marker moving one slot at a time already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Piper the Otter should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Scan Shelf` and should visually support the lesson goal: linear search checks one item at a time from left to right until it finds the target or runs out. The background should establish the world softly, but the foreground should stay centered on A row of unsorted number cards, A target badge above the shelf, and A scanning marker moving one slot at a time. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Piper the Otter should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A row of unsorted number cards, A target badge above the shelf, and A scanning marker moving one slot at a time should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Check one card, then the next." and "Stop when you find the target or reach the end.", and the action area should invite one clear next step through Compare the current card to the target, Move the scan marker right, and Decide found or not found. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A row of unsorted number cards, A target badge above the shelf, and A scanning marker moving one slot at a time.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Check one card, then the next." and "Stop when you find the target or reach the end.". The action zone should stay tightly focused on Compare the current card to the target, Move the scan marker right, and Decide found or not found, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Piper shows the target badge above the row.
@@ -451,6 +503,32 @@ Navigation:
 
 The sorted and unsorted sections should have different background tones so the boundary is easy to see. The smallest-item spotlight should travel through the unsorted section as the learner scans. The swap arrow should make each placement feel deliberate.
 
+
+
+### Background Design
+
+The background for `Line-Up Stage` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A row split into sorted and unsorted sections, A smallest-item spotlight in the unsorted section, and A swap arrow placing the smallest item into the next sorted slot; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A row split into sorted and unsorted sections, A smallest-item spotlight in the unsorted section, and A swap arrow placing the smallest item into the next sorted slot already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Piper the Otter should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Line-Up Stage` and should visually support the lesson goal: selection sort finds the smallest remaining item and places it into the next correct spot. The background should establish the world softly, but the foreground should stay centered on A row split into sorted and unsorted sections, A smallest-item spotlight in the unsorted section, and A swap arrow placing the smallest item into the next sorted slot. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Piper the Otter should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A row split into sorted and unsorted sections, A smallest-item spotlight in the unsorted section, and A swap arrow placing the smallest item into the next sorted slot should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Find the smallest remaining item." and "Put it into the next sorted place.", and the action area should invite one clear next step through Scan the unsorted section, Mark the smallest item, and Swap it into the next sorted slot. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A row split into sorted and unsorted sections, A smallest-item spotlight in the unsorted section, and A swap arrow placing the smallest item into the next sorted slot.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Find the smallest remaining item." and "Put it into the next sorted place.". The action zone should stay tightly focused on Scan the unsorted section, Mark the smallest item, and Swap it into the next sorted slot, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Piper marks the first unsorted position.
@@ -528,7 +606,7 @@ Continue:
 
 ```ts
 function selectionSort(nums: number[]): number[] {
-  const arr = [...nums];
+  const arr = [..nums];
 
   for (let i = 0; i < arr.length; i++) {
     let minIndex = i;
@@ -629,6 +707,32 @@ Navigation:
 
 The lifted current card should hover above the row so the insertion action is unmistakable. Shift arrows should appear only when larger cards need to move. The insertion gap should glow softly to invite placement.
 
+
+
+### Background Design
+
+The background for `Sliding Card Bench` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A row where the left side is already sorted, A lifted current card ready to insert, and Shift arrows showing bigger cards sliding right; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A row where the left side is already sorted, A lifted current card ready to insert, and Shift arrows showing bigger cards sliding right already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Piper the Otter should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Sliding Card Bench` and should visually support the lesson goal: insertion sort takes one card at a time and slides it left until it reaches the correct place. The background should establish the world softly, but the foreground should stay centered on A row where the left side is already sorted, A lifted current card ready to insert, and Shift arrows showing bigger cards sliding right. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Piper the Otter should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A row where the left side is already sorted, A lifted current card ready to insert, and Shift arrows showing bigger cards sliding right should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Take one new card." and "Slide it left until it fits.", and the action area should invite one clear next step through Lift the current card, Shift larger cards right, and Drop the card into the correct gap. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A row where the left side is already sorted, A lifted current card ready to insert, and Shift arrows showing bigger cards sliding right.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Take one new card." and "Slide it left until it fits.". The action zone should stay tightly focused on Lift the current card, Shift larger cards right, and Drop the card into the correct gap, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Piper lifts the next unsorted card.
@@ -707,7 +811,7 @@ Continue:
 
 ```ts
 function insertionSort(nums: number[]): number[] {
-  const arr = [...nums];
+  const arr = [..nums];
 
   for (let i = 1; i < arr.length; i++) {
     const current = arr[i];
@@ -809,6 +913,32 @@ Navigation:
 ### Visual Details
 
 The twin-row layout should make the side-by-side comparison easy. Front-card markers need strong visual emphasis. The result row should grow steadily so the learner sees the merge building in sorted order.
+
+
+
+### Background Design
+
+The background for `Twin River Merge` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo Two sorted rows feeding into one result row, Front-card markers on both inputs, and A merge tray building in sorted order; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If Two sorted rows feeding into one result row, Front-card markers on both inputs, and A merge tray building in sorted order already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Piper the Otter should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Twin River Merge` and should visually support the lesson goal: two sorted arrays can be combined by always taking the smaller front item next. The background should establish the world softly, but the foreground should stay centered on Two sorted rows feeding into one result row, Front-card markers on both inputs, and A merge tray building in sorted order. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Piper the Otter should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. Two sorted rows feeding into one result row, Front-card markers on both inputs, and A merge tray building in sorted order should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Look at the front of both rows." and "Take the smaller one next.", and the action area should invite one clear next step through Compare the two front cards, Move the smaller card into the result row, and Advance the pointer for that row. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through Two sorted rows feeding into one result row, Front-card markers on both inputs, and A merge tray building in sorted order.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Look at the front of both rows." and "Take the smaller one next.". The action zone should stay tightly focused on Compare the two front cards, Move the smaller card into the result row, and Advance the pointer for that row, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -987,6 +1117,32 @@ Navigation:
 ### Visual Details
 
 The three-zone layout should make this lesson feel like sorting into buckets. The current marker needs to stay very clear so the learner knows which chip is being processed. Swaps should look quick and purposeful.
+
+
+
+### Background Design
+
+The background for `Paint Bucket Lane` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A row of red, white, and blue paint chips, Three zone markers: red zone, current zone, blue zone, and Swap arrows that move chips into the correct side; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A row of red, white, and blue paint chips, Three zone markers: red zone, current zone, blue zone, and Swap arrows that move chips into the correct side already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Piper the Otter should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Paint Bucket Lane` and should visually support the lesson goal: teach the special in-place sorting pattern that groups colors into the correct zones. The background should establish the world softly, but the foreground should stay centered on A row of red, white, and blue paint chips, Three zone markers: red zone, current zone, blue zone, and Swap arrows that move chips into the correct side. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Piper the Otter should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A row of red, white, and blue paint chips, Three zone markers: red zone, current zone, blue zone, and Swap arrows that move chips into the correct side should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Place reds on the left and blues on the right." and "Keep the middle for what is still being checked.", and the action area should invite one clear next step through Read the current color, Swap into the left or right zone when needed, and Move the current marker forward. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A row of red, white, and blue paint chips, Three zone markers: red zone, current zone, blue zone, and Swap arrows that move chips into the correct side.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Place reds on the left and blues on the right." and "Keep the middle for what is still being checked.". The action zone should stay tightly focused on Read the current color, Swap into the left or right zone when needed, and Move the current marker forward, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -1177,6 +1333,32 @@ Navigation:
 ### Visual Details
 
 The rotation should be visually noticeable, but the ordered half still needs to be easy to see once highlighted. The left, right, and middle markers should work just like in binary search. Keep the target badge visible throughout.
+
+
+
+### Background Design
+
+The background for `Twist Shelf Quest` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A shelf of cards that was once sorted but is now rotated, Left, right, and middle markers, and A sorted-half highlight showing which side is still ordered; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A shelf of cards that was once sorted but is now rotated, Left, right, and middle markers, and A sorted-half highlight showing which side is still ordered already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Piper the Otter should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Twist Shelf Quest` and should visually support the lesson goal: even when a sorted array is rotated, one half is still ordered and can help us decide where to search. The background should establish the world softly, but the foreground should stay centered on A shelf of cards that was once sorted but is now rotated, Left, right, and middle markers, and A sorted-half highlight showing which side is still ordered. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Piper the Otter should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A shelf of cards that was once sorted but is now rotated, Left, right, and middle markers, and A sorted-half highlight showing which side is still ordered should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Even after the twist, one side is still in order." and "Use the ordered half to decide where the target can live.", and the action area should invite one clear next step through Check the middle card, Identify the ordered half, and Choose the half that could contain the target. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A shelf of cards that was once sorted but is now rotated, Left, right, and middle markers, and A sorted-half highlight showing which side is still ordered.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Even after the twist, one side is still in order." and "Use the ordered half to decide where the target can live.". The action zone should stay tightly focused on Check the middle card, Identify the ordered half, and Choose the half that could contain the target, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -1392,6 +1574,32 @@ Navigation:
 
 The review studio should feel like a wall of sorting and searching demos. The banner about order should remain visible because it summarizes the chapter well. Keep each mini-scene simple and familiar.
 
+
+
+### Background Design
+
+The background for `Order Review Studio` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A review wall with six mini card and row scenes, Tool chips for scan, select, insert, merge, zone, ordered-half, and A banner that says "order can make later work easier"; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A review wall with six mini card and row scenes, Tool chips for scan, select, insert, merge, zone, ordered-half, and A banner that says "order can make later work easier" already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Piper the Otter should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Order Review Studio` and should visually support the lesson goal: review scanning, selecting minimums, inserting into order, merging, color partitioning, and searching with ordered structure. The background should establish the world softly, but the foreground should stay centered on A review wall with six mini card and row scenes, Tool chips for scan, select, insert, merge, zone, ordered-half, and A banner that says "order can make later work easier". Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Piper the Otter should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A review wall with six mini card and row scenes, Tool chips for scan, select, insert, merge, zone, ordered-half, and A banner that says "order can make later work easier" should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Ask whether you should search directly or create order first." and "Then choose the move that uses that structure best.", and the action area should invite one clear next step through Match each mini-scene to the right idea, Sort clue chips to the correct lesson, and Explain what order is helping with. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A review wall with six mini card and row scenes, Tool chips for scan, select, insert, merge, zone, ordered-half, and A banner that says "order can make later work easier".
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Ask whether you should search directly or create order first." and "Then choose the move that uses that structure best.". The action zone should stay tightly focused on Match each mini-scene to the right idea, Sort clue chips to the correct lesson, and Explain what order is helping with, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Piper opens the review wall of search and sort scenes.
@@ -1509,6 +1717,32 @@ Navigation:
 ### Visual Details
 
 This screen should stay focused on the row and the active marker or boundary. The result area should be simple and readable. Avoid extra decoration so the learner can think clearly about the next move.
+
+
+
+### Background Design
+
+The background for `Order Challenge Shelf` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo One focused sort-or-search challenge, A visible row of cards and one active marker or boundary, and A result badge area above the shelf; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If One focused sort-or-search challenge, A visible row of cards and one active marker or boundary, and A result badge area above the shelf already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Piper the Otter should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Order Challenge Shelf` and should visually support the lesson goal: check whether the learner can choose between direct searching and order-based work with less support. The background should establish the world softly, but the foreground should stay centered on One focused sort-or-search challenge, A visible row of cards and one active marker or boundary, and A result badge area above the shelf. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Piper the Otter should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. One focused sort-or-search challenge, A visible row of cards and one active marker or boundary, and A result badge area above the shelf should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Do you need to search now or build order first?" and "Use the structure that makes the next move easiest.", and the action area should invite one clear next step through Predict the next move, Solve one short challenge, and Explain why that move fit the row. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through One focused sort-or-search challenge, A visible row of cards and one active marker or boundary, and A result badge area above the shelf.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Do you need to search now or build order first?" and "Use the structure that makes the next move easiest.". The action zone should stay tightly focused on Predict the next move, Solve one short challenge, and Explain why that move fit the row, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 

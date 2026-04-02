@@ -112,6 +112,32 @@ Navigation:
 
 The tree should feel warm and storybook-like, with thick branches and large readable node circles. Root and leaf labels need to be especially clear because they anchor the rest of the vocabulary. Keep the compare panel simple so the branching shape stays the focus.
 
+
+
+### Background Design
+
+The background for `Canopy Clearing` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A branching tree with node circles at each branch point, Labels for root, parent, child, and leaf, and A glowing path highlight from the root down one branch; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A branching tree with node circles at each branch point, Labels for root, parent, child, and leaf, and A glowing path highlight from the root down one branch already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Birch the Owl should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Canopy Clearing` and should visually support the lesson goal: a tree starts at one root and branches into children, leaves, and paths below it. The background should establish the world softly, but the foreground should stay centered on A branching tree with node circles at each branch point, Labels for root, parent, child, and leaf, and A glowing path highlight from the root down one branch. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Birch the Owl should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A branching tree with node circles at each branch point, Labels for root, parent, child, and leaf, and A glowing path highlight from the root down one branch should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "A node is one spot in the tree." and "The root is the top starter.", and the action area should invite one clear next step through Tap nodes to reveal their tree role, Highlight one path from root to leaf, and Compare a tree shape to a linked-list shape. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A branching tree with node circles at each branch point, Labels for root, parent, child, and leaf, and A glowing path highlight from the root down one branch.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "A node is one spot in the tree." and "The root is the top starter.". The action zone should stay tightly focused on Tap nodes to reveal their tree role, Highlight one path from root to leaf, and Compare a tree shape to a linked-list shape, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Birch introduces the tree from the top root downward.
@@ -425,6 +451,32 @@ Navigation:
 
 The same tree should support both modes so the difference comes from movement, not layout changes. DFS should highlight one path at a time. BFS should light up entire levels more evenly. The visit-order strip should stay visible throughout.
 
+
+
+### Background Design
+
+The background for `Trail Choice Tree` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo One tree with visible levels, A DFS trail marker and a BFS queue tray, and An order strip that records visited nodes; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If One tree with visible levels, A DFS trail marker and a BFS queue tray, and An order strip that records visited nodes already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Birch the Owl should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Trail Choice Tree` and should visually support the lesson goal: DFS goes deep down one branch first, while BFS visits nodes row by row. The background should establish the world softly, but the foreground should stay centered on One tree with visible levels, A DFS trail marker and a BFS queue tray, and An order strip that records visited nodes. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Birch the Owl should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. One tree with visible levels, A DFS trail marker and a BFS queue tray, and An order strip that records visited nodes should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "DFS goes down first." and "BFS looks across a whole row first.", and the action area should invite one clear next step through Toggle DFS or BFS mode, Step through node visits, and Watch the visit order fill in. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through One tree with visible levels, A DFS trail marker and a BFS queue tray, and An order strip that records visited nodes.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "DFS goes down first." and "BFS looks across a whole row first.". The action zone should stay tightly focused on Toggle DFS or BFS mode, Step through node visits, and Watch the visit order fill in, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Birch starts at the root.
@@ -684,6 +736,32 @@ Navigation:
 
 The level lines and depth ruler should make height feel measurable, not mysterious. The deepest-leaf badge should land on the lowest leaf that matters. Keep the tree shape simple enough that the learner can compare left and right depth visually.
 
+
+
+### Background Design
+
+The background for `Tall Pine Ridge` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A tall layered tree with numbered levels, A depth ruler running down the side, and A deepest-leaf badge at the lowest level; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A tall layered tree with numbered levels, A depth ruler running down the side, and A deepest-leaf badge at the lowest level already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Birch the Owl should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Tall Pine Ridge` and should visually support the lesson goal: the depth or height of a tree is how many levels it reaches from top to bottom. The background should establish the world softly, but the foreground should stay centered on A tall layered tree with numbered levels, A depth ruler running down the side, and A deepest-leaf badge at the lowest level. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Birch the Owl should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A tall layered tree with numbered levels, A depth ruler running down the side, and A deepest-leaf badge at the lowest level should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Count how far the deepest leaf is from the root." and "The tallest branch decides the answer.", and the action area should invite one clear next step through Explore left and right subtrees, Compare their depths, and Mark the deepest leaf. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A tall layered tree with numbered levels, A depth ruler running down the side, and A deepest-leaf badge at the lowest level.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Count how far the deepest leaf is from the root." and "The tallest branch decides the answer.". The action zone should stay tightly focused on Explore left and right subtrees, Compare their depths, and Mark the deepest leaf, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Birch marks the root as level one.
@@ -857,6 +935,32 @@ Navigation:
 ### Visual Details
 
 The side-by-side layout should make correspondence obvious. Comparison beams should connect equal positions in the two trees. Mismatch sparks should show either a value difference or a missing child clearly.
+
+
+
+### Background Design
+
+The background for `Mirror Grove` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo Two trees side by side, Pairwise comparison beams connecting matching positions, and A mismatch spark where values or shapes differ; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If Two trees side by side, Pairwise comparison beams connecting matching positions, and A mismatch spark where values or shapes differ already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Birch the Owl should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Mirror Grove` and should visually support the lesson goal: two trees are the same only if their shapes and values match in every corresponding spot. The background should establish the world softly, but the foreground should stay centered on Two trees side by side, Pairwise comparison beams connecting matching positions, and A mismatch spark where values or shapes differ. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Birch the Owl should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. Two trees side by side, Pairwise comparison beams connecting matching positions, and A mismatch spark where values or shapes differ should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Match the same spot in both trees." and "Both the value and the shape must agree.", and the action area should invite one clear next step through Compare root to root, Move through both trees together, and Stop at the first mismatch. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through Two trees side by side, Pairwise comparison beams connecting matching positions, and A mismatch spark where values or shapes differ.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Match the same spot in both trees." and "Both the value and the shape must agree.". The action zone should stay tightly focused on Compare root to root, Move through both trees together, and Stop at the first mismatch, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -1045,6 +1149,32 @@ Navigation:
 
 The swap action needs to be unmistakable, so left and right branches should use contrasting colors. The before-and-after preview helps children understand the transformation without losing the whole-tree view. Keep the animation slow enough to follow.
 
+
+
+### Background Design
+
+The background for `Windmill Orchard` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A tree with left and right branches marked in different colors, A swap spinner at each node, and A before-and-after preview panel; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A tree with left and right branches marked in different colors, A swap spinner at each node, and A before-and-after preview panel already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Birch the Owl should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Windmill Orchard` and should visually support the lesson goal: inverting a binary tree means swapping every node's left and right children. The background should establish the world softly, but the foreground should stay centered on A tree with left and right branches marked in different colors, A swap spinner at each node, and A before-and-after preview panel. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Birch the Owl should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A tree with left and right branches marked in different colors, A swap spinner at each node, and A before-and-after preview panel should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "At each node, swap left and right." and "Then keep going through the whole tree.", and the action area should invite one clear next step through Visit a node, Swap its left and right children, and Repeat across the whole tree. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A tree with left and right branches marked in different colors, A swap spinner at each node, and A before-and-after preview panel.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "At each node, swap left and right." and "Then keep going through the whole tree.". The action zone should stay tightly focused on Visit a node, Swap its left and right children, and Repeat across the whole tree, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Birch starts at the root and opens the swap spinner.
@@ -1228,6 +1358,32 @@ Navigation:
 ### Visual Details
 
 The level bands should be very clear so "row by row" is visible before any code explanation. The queue basket should feel like a holding place for the next layer of nodes. The result board should build one row at a time.
+
+
+
+### Background Design
+
+The background for `Level Lantern Grove` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A tree with clear horizontal level bands, A queue basket holding nodes to visit next, and A result board collecting one row per level; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A tree with clear horizontal level bands, A queue basket holding nodes to visit next, and A result board collecting one row per level already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Birch the Owl should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Level Lantern Grove` and should visually support the lesson goal: level order traversal visits the tree one row at a time from top to bottom. The background should establish the world softly, but the foreground should stay centered on A tree with clear horizontal level bands, A queue basket holding nodes to visit next, and A result board collecting one row per level. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Birch the Owl should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A tree with clear horizontal level bands, A queue basket holding nodes to visit next, and A result board collecting one row per level should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Use a queue to remember the next row." and "Finish one level before moving lower.", and the action area should invite one clear next step through Visit all nodes in the current level, Fill the queue basket with the next level, and Record one row at a time. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A tree with clear horizontal level bands, A queue basket holding nodes to visit next, and A result board collecting one row per level.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Use a queue to remember the next row." and "Finish one level before moving lower.". The action zone should stay tightly focused on Visit all nodes in the current level, Fill the queue basket with the next level, and Record one row at a time, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -1440,6 +1596,32 @@ Navigation:
 
 The BST rule should be visible in the scene, with small values on the left and large values on the right. The target fruit badge should stay fixed so the learner always knows what is being searched for. The chosen branch should glow while the unused branch fades back.
 
+
+
+### Background Design
+
+The background for `Search Orchard` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A binary search tree with smaller values on the left and larger on the right, A target fruit badge, and A search path highlight that chooses only one branch at a time; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A binary search tree with smaller values on the left and larger on the right, A target fruit badge, and A search path highlight that chooses only one branch at a time already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Birch the Owl should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Search Orchard` and should visually support the lesson goal: BST order lets us choose left or right instead of searching every branch. The background should establish the world softly, but the foreground should stay centered on A binary search tree with smaller values on the left and larger on the right, A target fruit badge, and A search path highlight that chooses only one branch at a time. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Birch the Owl should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A binary search tree with smaller values on the left and larger on the right, A target fruit badge, and A search path highlight that chooses only one branch at a time should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Smaller goes left." and "Larger goes right.", and the action area should invite one clear next step through Compare the current node to the target, Choose left or right branch, and Stop when found or when the path ends. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A binary search tree with smaller values on the left and larger on the right, A target fruit badge, and A search path highlight that chooses only one branch at a time.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Smaller goes left." and "Larger goes right.". The action zone should stay tightly focused on Compare the current node to the target, Choose left or right branch, and Stop when found or when the path ends, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Birch places the target fruit badge above the tree.
@@ -1632,6 +1814,32 @@ Navigation:
 
 The review deck should feel like a naturalist's wall of tree sketches. Keep mini-scenes simple and readable, and keep the root-to-leaf legend visible because it grounds the chapter vocabulary. Avoid crowding the wall with too much text.
 
+
+
+### Background Design
+
+The background for `Forest Review Deck` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A review wall with six mini tree scenes, Tool chips for DFS, BFS, depth, compare, swap, search, and A root-to-leaf legend pinned to the side; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A review wall with six mini tree scenes, Tool chips for DFS, BFS, depth, compare, swap, search, and A root-to-leaf legend pinned to the side already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Birch the Owl should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Forest Review Deck` and should visually support the lesson goal: review root, child, leaf, DFS, BFS, depth, comparison, inversion, level order, and BST search. The background should establish the world softly, but the foreground should stay centered on A review wall with six mini tree scenes, Tool chips for DFS, BFS, depth, compare, swap, search, and A root-to-leaf legend pinned to the side. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Birch the Owl should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A review wall with six mini tree scenes, Tool chips for DFS, BFS, depth, compare, swap, search, and A root-to-leaf legend pinned to the side should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Ask what the tree shape is trying to show." and "Then choose the traversal or tree rule that fits.", and the action area should invite one clear next step through Match each mini-scene to the right tree idea, Sort vocabulary chips to the correct example, and Explain how the tree is being explored or changed. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A review wall with six mini tree scenes, Tool chips for DFS, BFS, depth, compare, swap, search, and A root-to-leaf legend pinned to the side.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Ask what the tree shape is trying to show." and "Then choose the traversal or tree rule that fits.". The action zone should stay tightly focused on Match each mini-scene to the right tree idea, Sort vocabulary chips to the correct example, and Explain how the tree is being explored or changed, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Birch opens the review wall of tree scenes.
@@ -1752,6 +1960,32 @@ Navigation:
 ### Visual Details
 
 This screen should stay calm and centered on one tree. The active node should be very clear. The result badge should feel special but not distracting, and the helper text should stay short.
+
+
+
+### Background Design
+
+The background for `Root Challenge Hollow` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo One focused tree challenge, A visible root and highlighted active node, and A result badge area above the tree; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If One focused tree challenge, A visible root and highlighted active node, and A result badge area above the tree already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Birch the Owl should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Root Challenge Hollow` and should visually support the lesson goal: check whether the learner can read a tree and choose the right traversal or transformation with less support. The background should establish the world softly, but the foreground should stay centered on One focused tree challenge, A visible root and highlighted active node, and A result badge area above the tree. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Birch the Owl should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. One focused tree challenge, A visible root and highlighted active node, and A result badge area above the tree should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "What should happen at this node or level?" and "Choose the path, level, or swap that fits.", and the action area should invite one clear next step through Predict the next move or answer, Solve one short tree challenge, and Explain why that traversal or rule fits. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through One focused tree challenge, A visible root and highlighted active node, and A result badge area above the tree.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "What should happen at this node or level?" and "Choose the path, level, or swap that fits.". The action zone should stay tightly focused on Predict the next move or answer, Solve one short tree challenge, and Explain why that traversal or rule fits, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 

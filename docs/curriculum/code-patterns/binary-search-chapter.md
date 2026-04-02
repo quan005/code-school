@@ -113,6 +113,32 @@ Navigation:
 
 The library metaphor should make ordered searching feel calm and smart. Left, right, and middle bookmarks must stay visible the whole time. When a half gets removed, fade it softly rather than making it disappear abruptly so children can still understand what was discarded.
 
+
+
+### Background Design
+
+The background for `Maple Library` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A long sorted bookshelf of numbered books, Left, right, and middle bookmarks, and A faded overlay on the half we can throw away; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A long sorted bookshelf of numbered books, Left, right, and middle bookmarks, and A faded overlay on the half we can throw away already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Milo the Owl should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Maple Library` and should visually support the lesson goal: sorted order lets us check the middle and throw away half of the remaining choices. The background should establish the world softly, but the foreground should stay centered on A long sorted bookshelf of numbered books, Left, right, and middle bookmarks, and A faded overlay on the half we can throw away. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Milo the Owl should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A long sorted bookshelf of numbered books, Left, right, and middle bookmarks, and A faded overlay on the half we can throw away should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Because it is sorted, the middle gives us a clue." and "After one check, we can ignore half.", and the action area should invite one clear next step through Jump to the middle book, Compare it to the target, and Fade out the half that cannot contain the answer. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A long sorted bookshelf of numbered books, Left, right, and middle bookmarks, and A faded overlay on the half we can throw away.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Because it is sorted, the middle gives us a clue." and "After one check, we can ignore half.". The action zone should stay tightly focused on Jump to the middle book, Compare it to the target, and Fade out the half that cannot contain the answer, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Milo introduces a sorted shelf and a target book.
@@ -369,6 +395,32 @@ Navigation:
 
 This screen should keep the shelf simple so the changing search range is easy to follow. The target badge should stay pinned at the top. Each new middle choice should glow briefly before the discarded side fades.
 
+
+
+### Background Design
+
+The background for `Target Shelf` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A sorted shelf of number books, A target badge above the shelf, and Left, right, and middle markers; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A sorted shelf of number books, A target badge above the shelf, and Left, right, and middle markers already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Milo the Owl should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Target Shelf` and should visually support the lesson goal: teach the classic binary search move: check the middle and search only the half that still makes sense. The background should establish the world softly, but the foreground should stay centered on A sorted shelf of number books, A target badge above the shelf, and Left, right, and middle markers. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Milo the Owl should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A sorted shelf of number books, A target badge above the shelf, and Left, right, and middle markers should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Middle first." and "Then choose left half or right half.", and the action area should invite one clear next step through Compute the middle, Compare the middle to the target, and Move left or right inward. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A sorted shelf of number books, A target badge above the shelf, and Left, right, and middle markers.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Middle first." and "Then choose left half or right half.". The action zone should stay tightly focused on Compute the middle, Compare the middle to the target, and Move left or right inward, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Milo places the target badge above the sorted shelf.
@@ -548,6 +600,32 @@ Navigation:
 ### Visual Details
 
 The row should make "where does it belong?" feel visible by showing subtle insertion gaps. The final insert slot should glow gently at the moment the search ends. Keep the tone helpful, not like a miss or failure.
+
+
+
+### Background Design
+
+The background for `Bookmark Row` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A sorted row of books with open gaps between them, Left, right, and middle markers, and A glowing insert slot when the target is not found; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A sorted row of books with open gaps between them, Left, right, and middle markers, and A glowing insert slot when the target is not found already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Milo the Owl should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Bookmark Row` and should visually support the lesson goal: when the target is missing, binary search can still show where it belongs. The background should establish the world softly, but the foreground should stay centered on A sorted row of books with open gaps between them, Left, right, and middle markers, and A glowing insert slot when the target is not found. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Milo the Owl should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A sorted row of books with open gaps between them, Left, right, and middle markers, and A glowing insert slot when the target is not found should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "If the number is missing, ask where it should go." and "The answer is the first place that fits.", and the action area should invite one clear next step through Search as usual, Narrow the range, and Reveal the insert slot. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A sorted row of books with open gaps between them, Left, right, and middle markers, and A glowing insert slot when the target is not found.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "If the number is missing, ask where it should go." and "The answer is the first place that fits.". The action zone should stay tightly focused on Search as usual, Narrow the range, and Reveal the insert slot, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -742,6 +820,32 @@ Navigation:
 ### Visual Details
 
 The repeated books should make duplicates obvious. The candidate badge should stay on the best answer found so far while the active middle keeps moving. The left-search arrow should gently remind the learner why the search continues.
+
+
+
+### Background Design
+
+The background for `Echo Shelf Left` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A sorted shelf with repeated matching books, A candidate badge on one found match, and A left-search arrow showing we should keep checking earlier copies; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A sorted shelf with repeated matching books, A candidate badge on one found match, and A left-search arrow showing we should keep checking earlier copies already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Milo the Owl should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Echo Shelf Left` and should visually support the lesson goal: after finding a matching value, we may still need to keep searching left to find the first copy. The background should establish the world softly, but the foreground should stay centered on A sorted shelf with repeated matching books, A candidate badge on one found match, and A left-search arrow showing we should keep checking earlier copies. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Milo the Owl should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A sorted shelf with repeated matching books, A candidate badge on one found match, and A left-search arrow showing we should keep checking earlier copies should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "A match does not always mean stop." and "For the first copy, keep searching left.", and the action area should invite one clear next step through Find a match, Save it as a candidate, and Move right inward to the left half. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A sorted shelf with repeated matching books, A candidate badge on one found match, and A left-search arrow showing we should keep checking earlier copies.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "A match does not always mean stop." and "For the first copy, keep searching left.". The action zone should stay tightly focused on Find a match, Save it as a candidate, and Move right inward to the left half, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -939,6 +1043,32 @@ Navigation:
 
 This screen should mirror the previous lesson closely so the difference between first and last is easy to compare. The right-search arrow needs to be the main change. Repeated copies should stay clearly visible.
 
+
+
+### Background Design
+
+The background for `Echo Shelf Right` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A sorted shelf with repeated matching books, A candidate badge on one found match, and A right-search arrow showing we should keep checking later copies; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A sorted shelf with repeated matching books, A candidate badge on one found match, and A right-search arrow showing we should keep checking later copies already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Milo the Owl should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Echo Shelf Right` and should visually support the lesson goal: after finding a match, we may need to keep searching right to find the last copy. The background should establish the world softly, but the foreground should stay centered on A sorted shelf with repeated matching books, A candidate badge on one found match, and A right-search arrow showing we should keep checking later copies. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Milo the Owl should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A sorted shelf with repeated matching books, A candidate badge on one found match, and A right-search arrow showing we should keep checking later copies should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "A match is only the start." and "For the last copy, keep searching right.", and the action area should invite one clear next step through Find a match, Save it as a candidate, and Move left inward to the right half. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A sorted shelf with repeated matching books, A candidate badge on one found match, and A right-search arrow showing we should keep checking later copies.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "A match is only the start." and "For the last copy, keep searching right.". The action zone should stay tightly focused on Find a match, Save it as a candidate, and Move left inward to the right half, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Milo finds a matching middle value.
@@ -1115,6 +1245,32 @@ Navigation:
 ### Visual Details
 
 The square tile board should make `mid × mid` visual, not just numeric. This helps children understand why the comparison matters. The range path should be simple and evenly spaced so number binary search feels familiar.
+
+
+
+### Background Design
+
+The background for `Square Garden` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A number path from 1 up to the target range, A middle guess marker, and A square tile board that shows mid × mid; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A number path from 1 up to the target range, A middle guess marker, and A square tile board that shows mid × mid already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Milo the Owl should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Square Garden` and should visually support the lesson goal: binary search can work on a number range, not just on an array of values. The background should establish the world softly, but the foreground should stay centered on A number path from 1 up to the target range, A middle guess marker, and A square tile board that shows mid × mid. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Milo the Owl should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A number path from 1 up to the target range, A middle guess marker, and A square tile board that shows mid × mid should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Guess the middle number." and "Check whether its square is too small or too large.", and the action area should invite one clear next step through Pick the middle guess, Compute mid times mid, and Move the range left or right. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A number path from 1 up to the target range, A middle guess marker, and A square tile board that shows mid × mid.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Guess the middle number." and "Check whether its square is too small or too large.". The action zone should stay tightly focused on Pick the middle guess, Compute mid times mid, and Move the range left or right, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -1329,6 +1485,32 @@ Navigation:
 
 This screen should feel game-like and inviting. The higher/lower clue sign should be large and instant. As ranges shrink, faded cloud doors should make the disappearing choices easy to understand.
 
+
+
+### Background Design
+
+The background for `Cloud Guess Tower` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A tower of numbered cloud doors, A current guess badge in the middle, and A helper sign that says higher, lower, or correct; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A tower of numbered cloud doors, A current guess badge in the middle, and A helper sign that says higher, lower, or correct already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Milo the Owl should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Cloud Guess Tower` and should visually support the lesson goal: teach binary search as a playful guessing game where each clue removes half the choices. The background should establish the world softly, but the foreground should stay centered on A tower of numbered cloud doors, A current guess badge in the middle, and A helper sign that says higher, lower, or correct. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Milo the Owl should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A tower of numbered cloud doors, A current guess badge in the middle, and A helper sign that says higher, lower, or correct should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Always guess near the middle." and "Use each clue to throw away half.", and the action area should invite one clear next step through Make the middle guess, Read the higher/lower clue, and Narrow the range. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A tower of numbered cloud doors, A current guess badge in the middle, and A helper sign that says higher, lower, or correct.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Always guess near the middle." and "Use each clue to throw away half.". The action zone should stay tightly focused on Make the middle guess, Read the higher/lower clue, and Narrow the range, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Milo starts with the full guessing range.
@@ -1530,6 +1712,32 @@ Navigation:
 
 The review desk should feel organized and scholarly without becoming dense. The sorted-order banner should stay visible because it is the most important clue of the whole chapter. Keep mini-scenes simple and familiar.
 
+
+
+### Background Design
+
+The background for `Library Review Desk` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A review desk with six mini shelf and range scenes, Tool chips for target, insert, first, last, square root, guess, and A sorted-order reminder banner; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A review desk with six mini shelf and range scenes, Tool chips for target, insert, first, last, square root, guess, and A sorted-order reminder banner already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Milo the Owl should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Library Review Desk` and should visually support the lesson goal: review the main binary-search clues: sorted order, middle check, and how to decide left vs right. The background should establish the world softly, but the foreground should stay centered on A review desk with six mini shelf and range scenes, Tool chips for target, insert, first, last, square root, guess, and A sorted-order reminder banner. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Milo the Owl should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A review desk with six mini shelf and range scenes, Tool chips for target, insert, first, last, square root, guess, and A sorted-order reminder banner should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Ask what the middle tells you." and "Then decide which half still makes sense.", and the action area should invite one clear next step through Match each mini-scene to its goal, Choose left or right for each clue, and Explain why sorted order matters. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A review desk with six mini shelf and range scenes, Tool chips for target, insert, first, last, square root, guess, and A sorted-order reminder banner.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Ask what the middle tells you." and "Then decide which half still makes sense.". The action zone should stay tightly focused on Match each mini-scene to its goal, Choose left or right for each clue, and Explain why sorted order matters, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Milo opens the review desk with six mini binary-search scenes.
@@ -1670,6 +1878,32 @@ Navigation:
 ### Visual Details
 
 This screen should stay calm and focused, with the sorted shelf doing most of the teaching. The result area should be clear and not overly celebratory. The ignored half should fade gently after the learner chooses.
+
+
+
+### Background Design
+
+The background for `Halfway Challenge Shelf` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo One focused sorted search challenge, Left, right, and middle markers already placed, and A result badge area above the shelf; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If One focused sorted search challenge, Left, right, and middle markers already placed, and A result badge area above the shelf already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Milo the Owl should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Halfway Challenge Shelf` and should visually support the lesson goal: check whether the learner can use the middle clue to make the next binary-search move independently. The background should establish the world softly, but the foreground should stay centered on One focused sorted search challenge, Left, right, and middle markers already placed, and A result badge area above the shelf. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Milo the Owl should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. One focused sorted search challenge, Left, right, and middle markers already placed, and A result badge area above the shelf should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Read the middle, then choose the half." and "Explain why the other half can be ignored.", and the action area should invite one clear next step through Predict the next move, Solve one short search challenge, and Explain the reason in one sentence. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through One focused sorted search challenge, Left, right, and middle markers already placed, and A result badge area above the shelf.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Read the middle, then choose the half." and "Explain why the other half can be ignored.". The action zone should stay tightly focused on Predict the next move, Solve one short search challenge, and Explain the reason in one sentence, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 

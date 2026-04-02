@@ -111,6 +111,32 @@ Navigation:
 
 The track should make the speed difference obvious at a glance. Use one consistent color for `slow` and one for `fast` across the whole chapter. The straight-path finish sign and the loop-path meet badge should help children see why the same movement rule answers different questions.
 
+
+
+### Background Design
+
+The background for `Loop Track` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A race track that can switch between straight and looped, A blue slow marker and an orange fast marker, and A finish sign on the straight path and a meet badge on the loop; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A race track that can switch between straight and looped, A blue slow marker and an orange fast marker, and A finish sign on the straight path and a meet badge on the loop already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Dash the Rabbit should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Loop Track` and should visually support the lesson goal: one marker can move slowly and another can move quickly, and that their different speeds reveal useful patterns. The background should establish the world softly, but the foreground should stay centered on A race track that can switch between straight and looped, A blue slow marker and an orange fast marker, and A finish sign on the straight path and a meet badge on the loop. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Dash the Rabbit should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A race track that can switch between straight and looped, A blue slow marker and an orange fast marker, and A finish sign on the straight path and a meet badge on the loop should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Slow moves one step." and "Fast moves two steps.", and the action area should invite one clear next step through Toggle between straight path and loop path, Step both racers forward, and Watch what their positions tell us. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A race track that can switch between straight and looped, A blue slow marker and an orange fast marker, and A finish sign on the straight path and a meet badge on the loop.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Slow moves one step." and "Fast moves two steps.". The action zone should stay tightly focused on Toggle between straight path and loop path, Step both racers forward, and Watch what their positions tell us, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Dash introduces the slow and fast racers.
@@ -346,6 +372,32 @@ Navigation:
 
 Keep the hallway simple so the learner focuses on movement. The null sign at the end should be clear, and the middle badge should appear calmly when fast finishes. The second-middle rule for even-length lists should be shown with a gentle side note.
 
+
+
+### Background Design
+
+The background for `Hallway Halfway` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A straight hallway of linked-list stepping stones, A slow marker and a fast marker starting together, and A glowing middle badge that appears when fast reaches the end; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A straight hallway of linked-list stepping stones, A slow marker and a fast marker starting together, and A glowing middle badge that appears when fast reaches the end already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Dash the Rabbit should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Hallway Halfway` and should visually support the lesson goal: when fast reaches the end, slow lands in the middle. The background should establish the world softly, but the foreground should stay centered on A straight hallway of linked-list stepping stones, A slow marker and a fast marker starting together, and A glowing middle badge that appears when fast reaches the end. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Dash the Rabbit should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A straight hallway of linked-list stepping stones, A slow marker and a fast marker starting together, and A glowing middle badge that appears when fast reaches the end should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Fast moves twice as quickly." and "When fast reaches the end, slow is near the middle.", and the action area should invite one clear next step through Step both markers, Watch fast approach null, and Tap the middle node when it is revealed. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A straight hallway of linked-list stepping stones, A slow marker and a fast marker starting together, and A glowing middle badge that appears when fast reaches the end.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Fast moves twice as quickly." and "When fast reaches the end, slow is near the middle.". The action zone should stay tightly focused on Step both markers, Watch fast approach null, and Tap the middle node when it is revealed, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Dash places both markers on the head node.
@@ -555,6 +607,32 @@ Navigation:
 
 The looping part of the list should be visually obvious without becoming messy. Use a bright meet spark when both markers land on the same node. The no-cycle version should still feel complete and not like a failure state.
 
+
+
+### Background Design
+
+The background for `Carousel Chain` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A linked-list path that can loop back into a carousel, A slow marker and a fast marker moving on the chain, and A meet spark where both land on the same node; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A linked-list path that can loop back into a carousel, A slow marker and a fast marker moving on the chain, and A meet spark where both land on the same node already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Dash the Rabbit should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Carousel Chain` and should visually support the lesson goal: if fast and slow ever meet again, the list must have a cycle. The background should establish the world softly, but the foreground should stay centered on A linked-list path that can loop back into a carousel, A slow marker and a fast marker moving on the chain, and A meet spark where both land on the same node. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Dash the Rabbit should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A linked-list path that can loop back into a carousel, A slow marker and a fast marker moving on the chain, and A meet spark where both land on the same node should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "If the path loops, fast can catch slow." and "A meeting means there is a cycle.", and the action area should invite one clear next step through Run the markers step by step, Watch for a meeting, and Decide cycle or no cycle. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A linked-list path that can loop back into a carousel, A slow marker and a fast marker moving on the chain, and A meet spark where both land on the same node.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "If the path loops, fast can catch slow." and "A meeting means there is a cycle.". The action zone should stay tightly focused on Run the markers step by step, Watch for a meeting, and Decide cycle or no cycle, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Dash starts the two markers on the list.
@@ -751,6 +829,32 @@ Navigation:
 
 The counting route should be clean and circular so the learner sees that only the loop is being measured. The counter board should increase one by one with each move. The meeting point should remain highlighted the whole time.
 
+
+
+### Background Design
+
+The background for `Loop Measure Garden` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A looped chain with a highlighted meeting point, A counting marker walking one step at a time around the loop, and A cycle-length counter board; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A looped chain with a highlighted meeting point, A counting marker walking one step at a time around the loop, and A cycle-length counter board already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Dash the Rabbit should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Loop Measure Garden` and should visually support the lesson goal: once fast and slow meet, we can walk around the loop and count how many nodes are inside it. The background should establish the world softly, but the foreground should stay centered on A looped chain with a highlighted meeting point, A counting marker walking one step at a time around the loop, and A cycle-length counter board. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Dash the Rabbit should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A looped chain with a highlighted meeting point, A counting marker walking one step at a time around the loop, and A cycle-length counter board should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Start at the meeting point." and "Walk until you return, and count each step.", and the action area should invite one clear next step through Begin counting from the meet node, Advance one step at a time, and Stop when the marker returns to the start. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A looped chain with a highlighted meeting point, A counting marker walking one step at a time around the loop, and A cycle-length counter board.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Start at the meeting point." and "Walk until you return, and count each step.". The action zone should stay tightly focused on Begin counting from the meet node, Advance one step at a time, and Stop when the marker returns to the start, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Dash marks the meeting point found by fast and slow.
@@ -935,6 +1039,32 @@ Navigation:
 ### Visual Details
 
 This screen should emphasize the mystery of the cycle entrance while still staying readable. The cycle start gate should not glow until the final meeting happens. Keep the two markers distinct so the reset rule is easy to follow.
+
+
+
+### Background Design
+
+The background for `Secret Loop Gate` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A linked path entering a hidden loop, One marker at head and one marker at the meeting point, and A glowing gate at the cycle start; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A linked path entering a hidden loop, One marker at head and one marker at the meeting point, and A glowing gate at the cycle start already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Dash the Rabbit should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Secret Loop Gate` and should visually support the lesson goal: how one pointer from head and one pointer from the meeting point can meet at the start of the cycle. The background should establish the world softly, but the foreground should stay centered on A linked path entering a hidden loop, One marker at head and one marker at the meeting point, and A glowing gate at the cycle start. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Dash the Rabbit should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A linked path entering a hidden loop, One marker at head and one marker at the meeting point, and A glowing gate at the cycle start should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Reset one pointer to head." and "Move both one step at a time.", and the action area should invite one clear next step through Place one marker back at head, Move both pointers together, and Watch where they meet. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A linked path entering a hidden loop, One marker at head and one marker at the meeting point, and A glowing gate at the cycle start.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Reset one pointer to head." and "Move both one step at a time.". The action zone should stay tightly focused on Place one marker back at head, Move both pointers together, and Watch where they meet, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -1131,6 +1261,32 @@ Navigation:
 ### Visual Details
 
 The number machine should feel magical but structured. Each transformed number should appear in a cloud bubble so the repeated process is easy to track. The `1` ending should feel bright and calm, while looped outcomes should look informative rather than scary.
+
+
+
+### Background Design
+
+The background for `Number Cloud Mill` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A number machine that turns one number into the next, A slow bubble and a fast bubble following the number trail, and A happy sun badge for 1 and a loop cloud for repeated cycles; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A number machine that turns one number into the next, A slow bubble and a fast bubble following the number trail, and A happy sun badge for 1 and a loop cloud for repeated cycles already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Dash the Rabbit should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Number Cloud Mill` and should visually support the lesson goal: fast and slow pointers can also track repeating number processes, not just linked lists. The background should establish the world softly, but the foreground should stay centered on A number machine that turns one number into the next, A slow bubble and a fast bubble following the number trail, and A happy sun badge for 1 and a loop cloud for repeated cycles. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Dash the Rabbit should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A number machine that turns one number into the next, A slow bubble and a fast bubble following the number trail, and A happy sun badge for 1 and a loop cloud for repeated cycles should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "This is still a loop, even without nodes." and "Fast and slow can track repeated number changes.", and the action area should invite one clear next step through Compute the next number, Move slow once and fast twice, and Decide happy or stuck in a loop. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A number machine that turns one number into the next, A slow bubble and a fast bubble following the number trail, and A happy sun badge for 1 and a loop cloud for repeated cycles.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "This is still a loop, even without nodes." and "Fast and slow can track repeated number changes.". The action zone should stay tightly focused on Compute the next number, Move slow once and fast twice, and Decide happy or stuck in a loop, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -1340,6 +1496,32 @@ Navigation:
 ### Visual Details
 
 The mirror-river metaphor should reinforce the idea of matching halves. Keep the middle marker clear and the reversed half visually distinct. Comparison glows should light up in pairs so children can see the reflection idea.
+
+
+
+### Background Design
+
+The background for `Mirror River Chain` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A linked chain crossing a mirror river, A middle marker, a reversed second-half section, and compare glows, and A reflection badge when both halves match; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A linked chain crossing a mirror river, A middle marker, a reversed second-half section, and compare glows, and A reflection badge when both halves match already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Dash the Rabbit should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Mirror River Chain` and should visually support the lesson goal: we can find the middle, reverse part of the list, and then compare both halves to test for a palindrome. The background should establish the world softly, but the foreground should stay centered on A linked chain crossing a mirror river, A middle marker, a reversed second-half section, and compare glows, and A reflection badge when both halves match. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Dash the Rabbit should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A linked chain crossing a mirror river, A middle marker, a reversed second-half section, and compare glows, and A reflection badge when both halves match should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Find the middle first." and "Reverse one side, then compare step by step.", and the action area should invite one clear next step through Locate the middle, Reverse the second half, and Compare both sides. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A linked chain crossing a mirror river, A middle marker, a reversed second-half section, and compare glows, and A reflection badge when both halves match.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Find the middle first." and "Reverse one side, then compare step by step.". The action zone should stay tightly focused on Locate the middle, Reverse the second half, and Compare both sides, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -1573,6 +1755,32 @@ Navigation:
 
 The review board should look like a coach's planning wall with clean mini diagrams and strong marker colors. Keep the speed legend visible so the movement rule stays anchored. Use tiny scene snapshots rather than dense text.
 
+
+
+### Background Design
+
+The background for `Speed Strategy Board` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A board with six mini race-track and linked-list scenes, Tool chips for middle, cycle, length, start, loop, palindrome, and A speed legend for slow = 1 and fast = 2; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A board with six mini race-track and linked-list scenes, Tool chips for middle, cycle, length, start, loop, palindrome, and A speed legend for slow = 1 and fast = 2 already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Dash the Rabbit should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Speed Strategy Board` and should visually support the lesson goal: review the core fast-and-slow pointer clues: middle, meeting, cycle, loop length, cycle start, and repeated number processes. The background should establish the world softly, but the foreground should stay centered on A board with six mini race-track and linked-list scenes, Tool chips for middle, cycle, length, start, loop, palindrome, and A speed legend for slow = 1 and fast = 2. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Dash the Rabbit should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A board with six mini race-track and linked-list scenes, Tool chips for middle, cycle, length, start, loop, palindrome, and A speed legend for slow = 1 and fast = 2 should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Ask what the different speeds will reveal." and "Look for middle or loop clues.", and the action area should invite one clear next step through Match each mini-scene to the right goal, Explain what the meeting means, and Sort clue cards to the correct pattern. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A board with six mini race-track and linked-list scenes, Tool chips for middle, cycle, length, start, loop, palindrome, and A speed legend for slow = 1 and fast = 2.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Ask what the different speeds will reveal." and "Look for middle or loop clues.". The action zone should stay tightly focused on Match each mini-scene to the right goal, Explain what the meeting means, and Sort clue cards to the correct pattern, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Dash introduces the review as a pattern-matching challenge.
@@ -1694,6 +1902,32 @@ Navigation:
 ### Visual Details
 
 The mastery arena should feel focused and slightly special without becoming loud. Keep the slow and fast colors consistent with the chapter so the learner relies on recognition. The result area should stay clean and readable.
+
+
+
+### Background Design
+
+The background for `Champion Loop Arena` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo One focused linked-list or number-loop challenge, Slow and fast markers already in place, and A result badge area above the arena; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If One focused linked-list or number-loop challenge, Slow and fast markers already in place, and A result badge area above the arena already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Dash the Rabbit should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Champion Loop Arena` and should visually support the lesson goal: check whether the learner can choose and use fast and slow pointers with less guidance. The background should establish the world softly, but the foreground should stay centered on One focused linked-list or number-loop challenge, Slow and fast markers already in place, and A result badge area above the arena. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Dash the Rabbit should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. One focused linked-list or number-loop challenge, Slow and fast markers already in place, and A result badge area above the arena should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "What will the speed difference show here?" and "Choose the next move before the answer appears.", and the action area should invite one clear next step through Predict what happens next, Solve one short challenge, and Explain why the pattern works. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through One focused linked-list or number-loop challenge, Slow and fast markers already in place, and A result badge area above the arena.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "What will the speed difference show here?" and "Choose the next move before the answer appears.". The action zone should stay tightly focused on Predict what happens next, Solve one short challenge, and Explain why the pattern works, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 

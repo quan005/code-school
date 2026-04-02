@@ -122,6 +122,32 @@ Navigation:
 
 The timeline ribbon should make start and end points feel physical. Keep the strips thick and colorful so overlap is easy to notice. The sorted-order toggle should visually rearrange the strips from messy to clean left-to-right order.
 
+
+
+### Background Design
+
+The background for `Ribbon Timeline Hall` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A long number-line ribbon with colored interval strips, Start and end pins on each strip, and An overlap glow where two strips share space; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A long number-line ribbon with colored interval strips, Start and end pins on each strip, and An overlap glow where two strips share space already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Tilda the Deer should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Ribbon Timeline Hall` and should visually support the lesson goal: an interval is a start-to-end range and that interval problems are mostly about overlap, gaps, and fitting ranges together. The background should establish the world softly, but the foreground should stay centered on A long number-line ribbon with colored interval strips, Start and end pins on each strip, and An overlap glow where two strips share space. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Tilda the Deer should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A long number-line ribbon with colored interval strips, Start and end pins on each strip, and An overlap glow where two strips share space should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "An interval has a start and an end." and "Look for overlap or gaps.", and the action area should invite one clear next step through Drag interval strips onto the timeline, Compare overlapping and separate strips, and Toggle unsorted vs sorted order. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A long number-line ribbon with colored interval strips, Start and end pins on each strip, and An overlap glow where two strips share space.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "An interval has a start and an end." and "Look for overlap or gaps.". The action zone should stay tightly focused on Drag interval strips onto the timeline, Compare overlapping and separate strips, and Toggle unsorted vs sorted order, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Tilda introduces the timeline and interval strips.
@@ -352,6 +378,32 @@ Navigation:
 
 Use soft paint ribbons so merging feels like blending one continuous strip. The result tray should collect finished merged intervals clearly. Stretch animations should make it obvious that the end point is being updated.
 
+
+
+### Background Design
+
+The background for `Paint Ribbon Studio` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A sorted row of colored interval ribbons, A current merged ribbon, and A result tray collecting finished merged ranges; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A sorted row of colored interval ribbons, A current merged ribbon, and A result tray collecting finished merged ranges already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Tilda the Deer should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Paint Ribbon Studio` and should visually support the lesson goal: when intervals overlap, we can stretch one merged interval to cover them both. The background should establish the world softly, but the foreground should stay centered on A sorted row of colored interval ribbons, A current merged ribbon, and A result tray collecting finished merged ranges. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Tilda the Deer should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A sorted row of colored interval ribbons, A current merged ribbon, and A result tray collecting finished merged ranges should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "If the next interval starts before the current one ends, they overlap." and "Stretch the current ribbon instead of making a new one.", and the action area should invite one clear next step through Compare current and next interval, Extend the current ribbon when they overlap, and Save the current ribbon when a gap appears. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A sorted row of colored interval ribbons, A current merged ribbon, and A result tray collecting finished merged ranges.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "If the next interval starts before the current one ends, they overlap." and "Stretch the current ribbon instead of making a new one.". The action zone should stay tightly focused on Compare current and next interval, Extend the current ribbon when they overlap, and Save the current ribbon when a gap appears, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Tilda starts with the first interval as the current ribbon.
@@ -546,6 +598,32 @@ Navigation:
 
 The new interval card should stand out as the active piece being placed. Use a fit-slot glow for no-overlap cases and the same merge glow from the previous lesson for overlap cases. Keep the timeline sorted and calm.
 
+
+
+### Background Design
+
+The background for `Schedule Slot Garden` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A sorted schedule timeline with existing interval cards, A new interval card hovering above the line, and A fit slot or merge glow depending on what happens; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A sorted schedule timeline with existing interval cards, A new interval card hovering above the line, and A fit slot or merge glow depending on what happens already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Tilda the Deer should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Schedule Slot Garden` and should visually support the lesson goal: a new interval can be inserted by finding where it fits and merging if it overlaps nearby intervals. The background should establish the world softly, but the foreground should stay centered on A sorted schedule timeline with existing interval cards, A new interval card hovering above the line, and A fit slot or merge glow depending on what happens. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Tilda the Deer should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A sorted schedule timeline with existing interval cards, A new interval card hovering above the line, and A fit slot or merge glow depending on what happens should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "First find where the new interval belongs." and "If it overlaps, merge as you place it.", and the action area should invite one clear next step through Scan intervals from left to right, Find the insertion zone, and Merge with overlapping neighbors if needed. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A sorted schedule timeline with existing interval cards, A new interval card hovering above the line, and A fit slot or merge glow depending on what happens.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "First find where the new interval belongs." and "If it overlaps, merge as you place it.". The action zone should stay tightly focused on Scan intervals from left to right, Find the insertion zone, and Merge with overlapping neighbors if needed, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Tilda shows the new interval card above the schedule.
@@ -725,6 +803,32 @@ Navigation:
 
 The calendar strip should feel familiar and readable, like a school schedule. The conflict bell should activate only when overlap happens. No-conflict scenes should stay positive and not feel empty.
 
+
+
+### Background Design
+
+The background for `School Bell Calendar` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A daily calendar strip with meeting cards, A conflict bell that rings when two meetings overlap, and A no-conflict path when meetings stay separate; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A daily calendar strip with meeting cards, A conflict bell that rings when two meetings overlap, and A no-conflict path when meetings stay separate already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Tilda the Deer should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `School Bell Calendar` and should visually support the lesson goal: if any two meeting intervals overlap, one person cannot attend them all. The background should establish the world softly, but the foreground should stay centered on A daily calendar strip with meeting cards, A conflict bell that rings when two meetings overlap, and A no-conflict path when meetings stay separate. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Tilda the Deer should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A daily calendar strip with meeting cards, A conflict bell that rings when two meetings overlap, and A no-conflict path when meetings stay separate should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Sort the meetings first." and "If one starts before the last one ends, there is a conflict.", and the action area should invite one clear next step through Walk through the meetings in order, Compare each start time to the previous end, and Decide attend all or conflict. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A daily calendar strip with meeting cards, A conflict bell that rings when two meetings overlap, and A no-conflict path when meetings stay separate.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Sort the meetings first." and "If one starts before the last one ends, there is a conflict.". The action zone should stay tightly focused on Walk through the meetings in order, Compare each start time to the previous end, and Decide attend all or conflict, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Tilda sorts the meeting cards by start time.
@@ -892,6 +996,32 @@ Navigation:
 ### Visual Details
 
 The room lanterns should make room usage feel visible and countable. Keep the current-rooms meter and max-rooms badge distinct so children understand present overlap versus final answer. The timeline should remain orderly.
+
+
+
+### Background Design
+
+The background for `Room Lantern Court` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A timeline of meeting cards, A row of room lanterns that turn on when rooms are needed, and A current-rooms meter showing how many meetings overlap now; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A timeline of meeting cards, A row of room lanterns that turn on when rooms are needed, and A current-rooms meter showing how many meetings overlap now already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Tilda the Deer should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Room Lantern Court` and should visually support the lesson goal: we need a new room whenever meetings overlap at the same time. The background should establish the world softly, but the foreground should stay centered on A timeline of meeting cards, A row of room lanterns that turn on when rooms are needed, and A current-rooms meter showing how many meetings overlap now. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Tilda the Deer should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A timeline of meeting cards, A row of room lanterns that turn on when rooms are needed, and A current-rooms meter showing how many meetings overlap now should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "A new room is needed only when another meeting is still going." and "Turn a room lantern off when a meeting ends.", and the action area should invite one clear next step through Add meetings in start-time order, Release rooms when end times pass, and Track the highest number of rooms needed. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A timeline of meeting cards, A row of room lanterns that turn on when rooms are needed, and A current-rooms meter showing how many meetings overlap now.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "A new room is needed only when another meeting is still going." and "Turn a room lantern off when a meeting ends.". The action zone should stay tightly focused on Add meetings in start-time order, Release rooms when end times pass, and Track the highest number of rooms needed, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -1168,6 +1298,32 @@ Navigation:
 
 The two rows should stay aligned so the overlap is easy to see vertically. The shared strip should appear only when there is common space. Pointer markers should clearly indicate which interval from each list is active.
 
+
+
+### Background Design
+
+The background for `Bridge Overlap Walk` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo Two timeline rows, one above the other, A shared overlap strip appearing in the middle, and Two list pointers showing which intervals are being compared; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If Two timeline rows, one above the other, A shared overlap strip appearing in the middle, and Two list pointers showing which intervals are being compared already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Tilda the Deer should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Bridge Overlap Walk` and should visually support the lesson goal: when two interval lists overlap, the shared part becomes the intersection. The background should establish the world softly, but the foreground should stay centered on Two timeline rows, one above the other, A shared overlap strip appearing in the middle, and Two list pointers showing which intervals are being compared. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Tilda the Deer should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. Two timeline rows, one above the other, A shared overlap strip appearing in the middle, and Two list pointers showing which intervals are being compared should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Compare one interval from each list." and "The shared middle part is the intersection.", and the action area should invite one clear next step through Compare the current pair of intervals, Record the shared overlap if it exists, and Move the pointer whose interval ends first. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through Two timeline rows, one above the other, A shared overlap strip appearing in the middle, and Two list pointers showing which intervals are being compared.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Compare one interval from each list." and "The shared middle part is the intersection.". The action zone should stay tightly focused on Compare the current pair of intervals, Record the shared overlap if it exists, and Move the pointer whose interval ends first, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Tilda places one pointer on each list.
@@ -1359,6 +1515,32 @@ Navigation:
 
 The cover shadow should make "inside" obvious without extra explanation. Use a calm fade for covered intervals so removal feels like simplification, not punishment. The keep tray should show the useful intervals that remain visible.
 
+
+
+### Background Design
+
+The background for `Shadow Ribbon Path` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A sorted set of interval ribbons on one line, A cover shadow showing when one ribbon fully contains another, and A keep tray for intervals that remain; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A sorted set of interval ribbons on one line, A cover shadow showing when one ribbon fully contains another, and A keep tray for intervals that remain already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Tilda the Deer should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Shadow Ribbon Path` and should visually support the lesson goal: some intervals are completely hidden inside bigger ones and can be removed. The background should establish the world softly, but the foreground should stay centered on A sorted set of interval ribbons on one line, A cover shadow showing when one ribbon fully contains another, and A keep tray for intervals that remain. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Tilda the Deer should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A sorted set of interval ribbons on one line, A cover shadow showing when one ribbon fully contains another, and A keep tray for intervals that remain should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "If one interval is completely inside another, it is covered." and "Keep only the intervals that still add something new.", and the action area should invite one clear next step through Compare the current ribbon to the farthest end seen so far, Mark covered ribbons, and Keep uncovered ribbons. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A sorted set of interval ribbons on one line, A cover shadow showing when one ribbon fully contains another, and A keep tray for intervals that remain.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "If one interval is completely inside another, it is covered." and "Keep only the intervals that still add something new.". The action zone should stay tightly focused on Compare the current ribbon to the farthest end seen so far, Mark covered ribbons, and Keep uncovered ribbons, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Tilda processes the sorted ribbons from left to right.
@@ -1549,6 +1731,32 @@ Navigation:
 
 The review gallery should feel like a wall of small timeline posters. Keep the sorting reminder banner visible because it is a central strategy in the chapter. Each mini-scene should reuse the same interval-strip look from the lessons.
 
+
+
+### Background Design
+
+The background for `Timeline Review Gallery` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A gallery wall with six mini timeline scenes, Tool chips for overlap, merge, insert, conflict, rooms, intersection, covered, and A sorting reminder banner at the top; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A gallery wall with six mini timeline scenes, Tool chips for overlap, merge, insert, conflict, rooms, intersection, covered, and A sorting reminder banner at the top already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Tilda the Deer should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Timeline Review Gallery` and should visually support the lesson goal: review overlap, gaps, merge, insert, conflict, room count, intersection, and covered ranges. The background should establish the world softly, but the foreground should stay centered on A gallery wall with six mini timeline scenes, Tool chips for overlap, merge, insert, conflict, rooms, intersection, covered, and A sorting reminder banner at the top. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Tilda the Deer should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A gallery wall with six mini timeline scenes, Tool chips for overlap, merge, insert, conflict, rooms, intersection, covered, and A sorting reminder banner at the top should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Ask what the intervals are doing to each other." and "Sorting usually makes the picture clearer.", and the action area should invite one clear next step through Match each mini-scene to the right interval idea, Sort clue chips to the right lesson, and Explain whether the active intervals overlap or stay apart. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A gallery wall with six mini timeline scenes, Tool chips for overlap, merge, insert, conflict, rooms, intersection, covered, and A sorting reminder banner at the top.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Ask what the intervals are doing to each other." and "Sorting usually makes the picture clearer.". The action zone should stay tightly focused on Match each mini-scene to the right interval idea, Sort clue chips to the right lesson, and Explain whether the active intervals overlap or stay apart, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Tilda opens the gallery of recap scenes.
@@ -1669,6 +1877,32 @@ Navigation:
 ### Visual Details
 
 This screen should stay clean and focused, with the timeline doing most of the teaching. The result area should be calm and readable. Keep interval strips large enough that overlaps and gaps are instantly visible.
+
+
+
+### Background Design
+
+The background for `Overlap Challenge Lane` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo One focused timeline challenge, A pair or list of intervals already placed on the line, and A result badge area above the timeline; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If One focused timeline challenge, A pair or list of intervals already placed on the line, and A result badge area above the timeline already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Tilda the Deer should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Overlap Challenge Lane` and should visually support the lesson goal: check whether the learner can read interval behavior and choose the correct action with less support. The background should establish the world softly, but the foreground should stay centered on One focused timeline challenge, A pair or list of intervals already placed on the line, and A result badge area above the timeline. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Tilda the Deer should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. One focused timeline challenge, A pair or list of intervals already placed on the line, and A result badge area above the timeline should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "What are these intervals doing right now?" and "Choose the action: merge, insert, count, keep, or remove.", and the action area should invite one clear next step through Predict the next interval action, Solve one short timeline challenge, and Explain why that action fits. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through One focused timeline challenge, A pair or list of intervals already placed on the line, and A result badge area above the timeline.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "What are these intervals doing right now?" and "Choose the action: merge, insert, count, keep, or remove.". The action zone should stay tightly focused on Predict the next interval action, Solve one short timeline challenge, and Explain why that action fits, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 

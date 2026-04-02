@@ -116,6 +116,32 @@ Navigation:
 
 The map should feel playful and clear, like a camp map with cabins and paths. Nodes need to be large and labeled, and edges should be easy to trace visually. Directed mode should add arrowheads without making the map too busy.
 
+
+
+### Background Design
+
+The background for `Connection Map Camp` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A map of connected cabins as graph nodes, Visible path lines as edges, and A mode switch for directed and undirected arrows; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A map of connected cabins as graph nodes, Visible path lines as edges, and A mode switch for directed and undirected arrows already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Nova the Fox should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Connection Map Camp` and should visually support the lesson goal: a graph is a network of nodes and edges, and that graph problems are really questions about connection. The background should establish the world softly, but the foreground should stay centered on A map of connected cabins as graph nodes, Visible path lines as edges, and A mode switch for directed and undirected arrows. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Nova the Fox should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A map of connected cabins as graph nodes, Visible path lines as edges, and A mode switch for directed and undirected arrows should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "A node is a place or thing." and "An edge is the line that connects two nodes.", and the action area should invite one clear next step through Tap nodes and edges to reveal their roles, Toggle directed vs undirected mode, and Highlight one route through the graph. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A map of connected cabins as graph nodes, Visible path lines as edges, and A mode switch for directed and undirected arrows.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "A node is a place or thing." and "An edge is the line that connects two nodes.". The action zone should stay tightly focused on Tap nodes and edges to reveal their roles, Toggle directed vs undirected mode, and Highlight one route through the graph, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Nova introduces the map of cabins and paths.
@@ -391,6 +417,32 @@ Navigation:
 
 Keep the same graph visible in both modes so the difference comes from traversal behavior. The visited badge should always be present because it is central to safe graph traversal. DFS path highlights should look like one adventurous route, while BFS should light outward layer by layer.
 
+
+
+### Background Design
+
+The background for `Trail Network Board` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A connected graph of trail stops, A DFS path marker and a BFS queue tray, and A visited set badge and visit-order strip; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A connected graph of trail stops, A DFS path marker and a BFS queue tray, and A visited set badge and visit-order strip already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Nova the Fox should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Trail Network Board` and should visually support the lesson goal: DFS goes deep down one route first, while BFS explores nearby nodes first. The background should establish the world softly, but the foreground should stay centered on A connected graph of trail stops, A DFS path marker and a BFS queue tray, and A visited set badge and visit-order strip. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Nova the Fox should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A connected graph of trail stops, A DFS path marker and a BFS queue tray, and A visited set badge and visit-order strip should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Use visited so you do not loop forever." and "DFS goes deep. BFS goes wide.", and the action area should invite one clear next step through Toggle DFS or BFS mode, Step through the graph, and Watch the visit order build. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A connected graph of trail stops, A DFS path marker and a BFS queue tray, and A visited set badge and visit-order strip.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Use visited so you do not loop forever." and "DFS goes deep. BFS goes wide.". The action zone should stay tightly focused on Toggle DFS or BFS mode, Step through the graph, and Watch the visit order build, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Nova starts at one node with an empty visited set.
@@ -635,6 +687,32 @@ Navigation:
 
 The start and target flags need to stand out immediately so the question is concrete. The route highlight should make progress feel visible. A blocked result should show disconnected space, not just a red failure message.
 
+
+
+### Background Design
+
+The background for `Bridge Route Quest` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A graph map with a start flag and a target flag, A current route highlight through connected nodes, and A reachable / blocked result banner; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A graph map with a start flag and a target flag, A current route highlight through connected nodes, and A reachable / blocked result banner already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Nova the Fox should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Bridge Route Quest` and should visually support the lesson goal: a path exists if we can travel through connected nodes from the start to the goal. The background should establish the world softly, but the foreground should stay centered on A graph map with a start flag and a target flag, A current route highlight through connected nodes, and A reachable / blocked result banner. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Nova the Fox should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A graph map with a start flag and a target flag, A current route highlight through connected nodes, and A reachable / blocked result banner should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Can you travel from start to target through the connections?" and "Keep exploring connected nodes until you find the goal or run out.", and the action area should invite one clear next step through Start from the source node, Explore connected neighbors, and Decide reachable or not reachable. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A graph map with a start flag and a target flag, A current route highlight through connected nodes, and A reachable / blocked result banner.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Can you travel from start to target through the connections?" and "Keep exploring connected nodes until you find the goal or run out.". The action zone should stay tightly focused on Start from the source node, Explore connected neighbors, and Decide reachable or not reachable, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Nova places a start flag and a target flag on the map.
@@ -829,6 +907,32 @@ Navigation:
 ### Visual Details
 
 Disconnected clusters should be visually separated enough that the idea of separate groups becomes obvious. The color fill should sweep through one component fully before the next count begins. Keep the component counter visible and steady.
+
+
+
+### Background Design
+
+The background for `Friendship Island Board` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A graph with several disconnected clusters, A color fill spreading through one component at a time, and A component counter banner; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A graph with several disconnected clusters, A color fill spreading through one component at a time, and A component counter banner already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Nova the Fox should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Friendship Island Board` and should visually support the lesson goal: connected components are separate groups of nodes that cannot reach each other. The background should establish the world softly, but the foreground should stay centered on A graph with several disconnected clusters, A color fill spreading through one component at a time, and A component counter banner. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Nova the Fox should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A graph with several disconnected clusters, A color fill spreading through one component at a time, and A component counter banner should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "One component is one connected group." and "Start a new count when you find an unvisited group.", and the action area should invite one clear next step through Find an unvisited node, Traverse its full component, and Increase the component counter. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A graph with several disconnected clusters, A color fill spreading through one component at a time, and A component counter banner.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "One component is one connected group." and "Start a new count when you find an unvisited group.". The action zone should stay tightly focused on Find an unvisited node, Traverse its full component, and Increase the component counter, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -1027,6 +1131,32 @@ Navigation:
 ### Visual Details
 
 The grid should look like a little bay map, with land and water easy to distinguish. The flood-fill highlight should spread across one island at a time. Keep the island counter calm and readable.
+
+
+
+### Background Design
+
+The background for `Tide Grid Bay` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A grid of water and land tiles, A flood-fill highlight spreading across one island, and An island counter badge; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A grid of water and land tiles, A flood-fill highlight spreading across one island, and An island counter badge already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Nova the Fox should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Tide Grid Bay` and should visually support the lesson goal: groups of connected land cells form islands, while water keeps them separated. The background should establish the world softly, but the foreground should stay centered on A grid of water and land tiles, A flood-fill highlight spreading across one island, and An island counter badge. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Nova the Fox should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A grid of water and land tiles, A flood-fill highlight spreading across one island, and An island counter badge should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Land cells that touch belong to the same island." and "Water stops the island from growing.", and the action area should invite one clear next step through Pick an unvisited land tile, Explore all touching land tiles, and Count one island and continue. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A grid of water and land tiles, A flood-fill highlight spreading across one island, and An island counter badge.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Land cells that touch belong to the same island." and "Water stops the island from growing.". The action zone should stay tightly focused on Pick an unvisited land tile, Explore all touching land tiles, and Count one island and continue, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -1243,6 +1373,32 @@ Navigation:
 
 The side-by-side original and clone layout is important for clarity. The copy map board should make the old-to-new pairing visible. Connection beams need to show that the structure is being rebuilt, not shared.
 
+
+
+### Background Design
+
+The background for `Mirror Network Workshop` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo An original graph on the left and a clone graph on the right, A copy map board linking old nodes to new nodes, and Connection beams recreating edges in the clone; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If An original graph on the left and a clone graph on the right, A copy map board linking old nodes to new nodes, and Connection beams recreating edges in the clone already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Nova the Fox should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Mirror Network Workshop` and should visually support the lesson goal: cloning a graph means making new nodes and reconnecting them in the same pattern without reusing the old nodes. The background should establish the world softly, but the foreground should stay centered on An original graph on the left and a clone graph on the right, A copy map board linking old nodes to new nodes, and Connection beams recreating edges in the clone. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Nova the Fox should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. An original graph on the left and a clone graph on the right, A copy map board linking old nodes to new nodes, and Connection beams recreating edges in the clone should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Make a new node for each old node." and "Use a map so you do not copy the same node twice.", and the action area should invite one clear next step through Visit an original node, Create its clone if needed, and Rebuild its neighbor connections on the clone side. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through An original graph on the left and a clone graph on the right, A copy map board linking old nodes to new nodes, and Connection beams recreating edges in the clone.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Make a new node for each old node." and "Use a map so you do not copy the same node twice.". The action zone should stay tightly focused on Visit an original node, Create its clone if needed, and Rebuild its neighbor connections on the clone side, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Nova selects one original node.
@@ -1454,6 +1610,32 @@ Navigation:
 ### Visual Details
 
 Directed arrows need to be clear and readable because they are the core rule of the lesson. The cycle alert loop should be visually distinct without becoming alarming. The class cards should feel like a real school plan.
+
+
+
+### Background Design
+
+The background for `Class Arrow Academy` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A directed graph of class cards connected by arrow lines, A cycle alert loop if prerequisites circle back, and A finish path banner if the graph stays valid; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A directed graph of class cards connected by arrow lines, A cycle alert loop if prerequisites circle back, and A finish path banner if the graph stays valid already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Nova the Fox should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Class Arrow Academy` and should visually support the lesson goal: course prerequisites form a directed graph, and a cycle means the schedule cannot be completed. The background should establish the world softly, but the foreground should stay centered on A directed graph of class cards connected by arrow lines, A cycle alert loop if prerequisites circle back, and A finish path banner if the graph stays valid. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Nova the Fox should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A directed graph of class cards connected by arrow lines, A cycle alert loop if prerequisites circle back, and A finish path banner if the graph stays valid should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Arrows mean this class comes first." and "A cycle means the plan loops forever.", and the action area should invite one clear next step through Follow prerequisite arrows, Detect whether arrows circle back, and Decide finishable or not finishable. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A directed graph of class cards connected by arrow lines, A cycle alert loop if prerequisites circle back, and A finish path banner if the graph stays valid.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Arrows mean this class comes first." and "A cycle means the plan loops forever.". The action zone should stay tightly focused on Follow prerequisite arrows, Detect whether arrows circle back, and Decide finishable or not finishable, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
@@ -1676,6 +1858,32 @@ Navigation:
 
 The review lodge should feel like a map room full of connection sketches. Keep the reminder banner visible because it anchors the whole chapter. Mini-scenes should reuse the same visual language from the lessons to stay familiar.
 
+
+
+### Background Design
+
+The background for `Network Review Lodge` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo A review wall with six mini graph scenes, Tool chips for traverse, path, component, island, clone, cycle, and A reminder banner that says "graphs are about connections"; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If A review wall with six mini graph scenes, Tool chips for traverse, path, component, island, clone, cycle, and A reminder banner that says "graphs are about connections" already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Nova the Fox should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Network Review Lodge` and should visually support the lesson goal: review nodes, edges, DFS, BFS, paths, components, islands, graph cloning, and directed dependency cycles. The background should establish the world softly, but the foreground should stay centered on A review wall with six mini graph scenes, Tool chips for traverse, path, component, island, clone, cycle, and A reminder banner that says "graphs are about connections". Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Nova the Fox should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. A review wall with six mini graph scenes, Tool chips for traverse, path, component, island, clone, cycle, and A reminder banner that says "graphs are about connections" should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "Ask what is connected, reachable, or looping." and "Then choose the graph idea that matches.", and the action area should invite one clear next step through Match each mini-scene to the right graph idea, Sort clue chips to the correct lesson, and Explain what the edges are telling you. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through A review wall with six mini graph scenes, Tool chips for traverse, path, component, island, clone, cycle, and A reminder banner that says "graphs are about connections".
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "Ask what is connected, reachable, or looping." and "Then choose the graph idea that matches.". The action zone should stay tightly focused on Match each mini-scene to the right graph idea, Sort clue chips to the correct lesson, and Explain what the edges are telling you, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
+
 ### Interaction Flow
 
 1. Nova opens the review wall of graph scenes.
@@ -1794,6 +2002,32 @@ Navigation:
 ### Visual Details
 
 This screen should stay clean and centered on one graph. The active node or start point must stand out clearly. Keep the result area calm so the graph itself remains the main teacher.
+
+
+
+### Background Design
+
+The background for `Route Challenge Camp` should follow the core product art direction: light neutral foundations, soft storybook vector shapes, rounded forms, and bright accents used only where they help the learner focus. Build the habitat in three clear depth layers. The far layer should establish place with a pale sky, wall, canopy, hill, or horizon wash; the middle layer should add simplified environmental props that echo One focused graph challenge, A highlighted start point or active node, and A result badge area above the graph; and the near-ground layer should create a clean stage plane where the active lesson objects can sit without visual clutter.
+
+The environmental props in the background should feel related to the lesson world, but they should always be quieter than the interactive foreground. That means broader silhouettes, lower contrast, fewer details, and softer edges than the tappable objects. If One focused graph challenge, A highlighted start point or active node, and A result badge area above the graph already carries the teaching idea, the background should support it through atmosphere and metaphor rather than duplicating it with extra busy decoration. Nova the Fox should still have a clean visual lane near the teaching edge, so background objects should never crowd the mascot bubble or the central interaction corridor.
+
+Use the design-system palette logic consistently: soft cream, pale sky, misty blue, meadow green, warm sand, and light stone as the base; brighter orange, blue, green, or yellow only as restrained accents that reinforce progress, focus, or delight. Motion in the background should stay gentle and secondary, such as drifting clouds, swaying grass, tiny sparkles, or slow machine twinkles depending on the habitat. The background should make the lesson world feel alive, but it should never compete with the scene model, the support strip, or the child’s next interaction.
+
+### Detailed Scene Design
+
+The scene should immediately read as `Route Challenge Camp` and should visually support the lesson goal: check whether the learner can read a graph and choose the right connection-based action with less support. The background should establish the world softly, but the foreground should stay centered on One focused graph challenge, A highlighted start point or active node, and A result badge area above the graph. Those objects should be oversized, well spaced, and easy to touch, with the most important interactive pieces getting the strongest contrast, glow, and motion. Nova the Fox should sit near the teaching edge of the scene, acting like a guide who points attention toward the current rule without covering the active object.
+
+Every major scene object should do double duty as both world-building and lesson logic. One focused graph challenge, A highlighted start point or active node, and A result badge area above the graph should feel like playful props inside the habitat, but they should also physically represent the data, positions, or choices the child is learning to reason about. The scene should never feel decorative-only. If a child can point at an object, they should also be able to explain what lesson job that object is doing.
+
+As the learner interacts, the world should answer right away with gentle motion, small highlights, and short helper copy. The support strip should stay tied to what is happening on screen through lines like "What does this graph say about connection?" and "Choose the path, group, copy, or cycle answer that fits.", and the action area should invite one clear next step through Predict the next graph move or answer, Solve one short graph challenge, and Explain what connection clue mattered most. Correct actions should visibly advance the world state, while incorrect actions should pause the scene, point back to the relevant object, and offer one calm clue instead of a loud error state.
+
+### Overall Interaction Design
+
+The interaction should follow a consistent learning loop: look at the scene, identify the active object, make one small move, then watch the scene explain why that move mattered. This keeps the world and the concept aligned, because the learner is not only reading about the rule but also seeing it happen through One focused graph challenge, A highlighted start point or active node, and A result badge area above the graph.
+
+The support strip should act like a translator between the visual world and the lesson vocabulary. It should stay short, concrete, and synchronized with the scene state, especially when it reinforces ideas such as "What does this graph say about connection?" and "Choose the path, group, copy, or cycle answer that fits.". The action zone should stay tightly focused on Predict the next graph move or answer, Solve one short graph challenge, and Explain what connection clue mattered most, so the child always knows what to do next and never has to hunt across the screen for the primary interaction.
+
+Most importantly, the scene should coincide with the lesson by making the algorithm feel like a visible cause-and-effect story. The objects in the world stand in for the data structure, the movement in the world stands in for the algorithm step, and the learner choice stands in for the reasoning the algorithm is using. When those three things stay aligned, the child can understand the concept through action instead of only through explanation.
 
 ### Interaction Flow
 
